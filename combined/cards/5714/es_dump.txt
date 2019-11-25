@@ -1,0 +1,46 @@
+#5714  - 大空レイ＆８００つばめ
+True : use_new_ai
+3 : starting/max counter
+0 : counter increment
+
+ESPreemptive(49:318) -> ESPreemptive
+Enable preempt if level 1
+
+SkillSet:
+	Condition: One-time use (ai:100 rnd:0) (one-time: 2)
+	[0] ESStatusShield(20:15236) -> 僕に任せてください！
+	Voids status ailments for 999 turns
+	[1] ESAbsorbAttribute(53:15237) -> シンカリオン８００つばめリフトオフ！
+	Absorb Water damage for 3 turns
+
+ESBranchHP(28:18) -> ESBranchHP
+Branch on hp < 50, target rnd 7
+
+ESBindRandom(1:15239) -> 逃がさないッス！
+	Condition: One-time use (ai:100 rnd:0) (one-time: 1)
+Bind 1 random cards for 1 turns, Deal 100% damage
+
+ESPoisonChangeRandom(60:15238) -> すぐ片づけるッス！
+Change Random 3 to Poison, Deal 100% damage
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 1, target rnd 11
+
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b1
+
+ESOrbLock(94:15240) -> ロックオン完了！
+Lock all Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESRowSpawnMulti(79:15241) -> パンタグラフアロー
+Change 1st, 5th row to Fire orbs, 3rd row to Wood orbs, Deal 100% damage
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+

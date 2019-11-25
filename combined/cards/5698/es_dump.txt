@@ -1,0 +1,51 @@
+#5698  - 男鹿アキタ＆Ｅ５＋Ｅ６
+True : use_new_ai
+2 : starting/max counter
+0 : counter increment
+
+ESPreemptive(49:318) -> ESPreemptive
+Enable preempt if level 1
+
+SkillSet:
+	Condition: One-time use (ai:100 rnd:0) (one-time: 2)
+	[0] ESDamageShield(74:15216) -> リンク、シンカリオン！
+	Reduce damage from all sources by 50% for 3 turns
+	[1] ESAbsorbCombo(67:15217) -> 行くぞ
+	Absorb combo <= 4 damage for 5 turns
+
+ESBranchHP(28:18) -> ESBranchHP
+Branch on hp < 50, target rnd 8
+
+ESBlind(5:15220) -> 話は読めてる
+	Condition: 34% chance (ai:0 rnd:34)
+Blind all orbs on the board
+
+ESOrbChangeAttackBits(108:15221) -> くらえ！
+	Condition: 33% chance (ai:0 rnd:33)
+Change Fire, Water, Wood to Fire, Deal 80% damage
+
+ESAttackMultihit(15:15218) -> Ｅ６の機動性を見せてやる！
+	Condition: 33% chance (ai:0 rnd:33)
+Deal 120% damage (2 hits, 60% each)
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESBranchCounter(32:22) -> ESBranchCounter
+Branch on counter > 1, target rnd 12
+
+ESSetCounter(26:16) -> ESSetCounter
+counter + 1
+
+ESAttributeBlock(107:15219) -> 舐めるな！
+Unable to match Water orbs for 3 turns
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESRowSpawnMulti(79:15222) -> グランクロス！
+Change 2nd row to Fire orbs, 3rd row to Wood orbs, 4th row to Fire orbs, Deal 125% damage
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+

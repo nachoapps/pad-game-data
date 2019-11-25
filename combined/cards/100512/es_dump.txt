@@ -1,0 +1,56 @@
+#100512  - Alt. Red Giant Gigas
+True : use_new_ai
+0 : starting/max counter
+0 : counter increment
+
+ESPreemptive(49:318) -> ESPreemptive
+Enable preempt if level 1
+
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 1, target rnd 6
+
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b1
+
+ESInactivity(66:5580) -> Here I come!!
+Do nothing
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 2, target rnd 9
+
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b11
+
+ESOrbSealColumn(99:5581) -> Countdown Pose [3]
+Seal 6th column for 1 turns
+
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 4, target rnd 12
+
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b111
+
+ESAbsorbCombo(67:5582) -> Countdown Pose [2]
+Absorb combo <= 5 damage for 1 turns
+
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 8, target rnd 15
+
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b1111
+
+ESBindAwoken(88:5583) -> Countdown Pose [1]
+Bind awoken skills for 1 turns
+
+ESFlagOperation(24:14) -> ESFlagOperation
+flag UNSET 0b1110
+
+ESAttackMultihit(15:5584) -> Fiiiiiiire!!
+Deal 900% damage (3 hits, 300% each)
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+

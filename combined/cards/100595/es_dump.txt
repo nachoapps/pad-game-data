@@ -1,0 +1,23 @@
+#100595  - Deviling
+True : use_new_ai
+1 : starting/max counter
+0 : counter increment
+
+ESPreemptive(49:318) -> ESPreemptive
+Enable preempt if level 1
+
+ESOrbLock(94:10706) -> Imp's Mischief
+	Condition: One-time use (ai:100 rnd:0) (one-time: 1)
+Lock 12 random Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs
+
+ESAttackUPRemainingEnemies(17:270) -> Lone Force
+	Condition: when <= 1 enemies remain (ai:100 rnd:0)
+Increase damage to 300% for the next 999 turns
+
+ESAttackMultihit(15:101) -> Double Strike
+	Condition: 40% chance when < 75% hp (ai:40 rnd:0)
+Deal 140% damage (2 hits, 70% each)
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+

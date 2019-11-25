@@ -1,0 +1,37 @@
+#100650  - Alt. Zeus-Dios
+True : use_new_ai
+7 : starting/max counter
+0 : counter increment
+
+ESPreemptive(49:318) -> ESPreemptive
+Enable preempt if level 1
+
+SkillSet:
+	Condition: One-time use (ai:100 rnd:0) (one-time: 4)
+	[0] ESBoardChangeAttackBits(85:9324) -> Baptism of the Almighty Divinities
+	Change all orbs to Wood, Deal 120% damage
+	[1] ESStatusShield(20:9325) -> Protection of the Gods
+	Voids status ailments for 999 turns
+
+SkillSet:
+	Condition: When < 50% hp , one-time use (ai:100 rnd:0) (one-time: 2)
+	[0] ESBindAwoken(88:9327) -> Jupiter Power
+	Bind awoken skills for 1 turns
+	[1] ESAttackMultihit(15:9328) -> Dios Blade
+	Deal 120%~180% damage (4~6 hits, 30% each)
+
+ESBindTyping(3:9330) -> Glare of Zeus
+	Condition: When < 50% hp , one-time use (ai:100 rnd:0) (one-time: 1)
+Bind God cards for 2~4 turns
+
+ESAttackMultihit(15:9331) -> Jupiter Genesis
+	Condition: 80% chance when < 30% hp (ai:80 rnd:0)
+Deal 200% damage
+
+ESAttackMultihit(15:9328) -> Dios Blade
+	Condition: When < 70% hp (ai:100 rnd:0)
+Deal 120%~180% damage (4~6 hits, 30% each)
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+

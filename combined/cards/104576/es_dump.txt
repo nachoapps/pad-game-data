@@ -1,0 +1,39 @@
+#104576  - Guardian of the Water City, Athena
+True : use_new_ai
+3 : starting/max counter
+0 : counter increment
+
+ESPreemptive(49:318) -> ESPreemptive
+Enable preempt if level 1
+
+SkillSet:
+	Condition: One-time use (ai:100 rnd:0) (one-time: 2)
+	[0] ESSkillDelay(89:13580) -> Oath of Aegis
+	Delay active skills by 5 turns
+	[1] ESDebuffMovetime(39:13581) -> Protection of Nike
+	Movetime -4s for 5 turns
+
+ESBranchHP(28:18) -> ESBranchHP
+Branch on hp < 15, target rnd 7
+
+ESRandomSpawn(92:13582) -> Aqua Spear
+	Condition: 50% chance & when Fire, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs are on the board (ai:0 rnd:50)
+Spawn random 6 Water orbs, Deal 100% damage
+
+ESAttackMultihit(15:13583) -> Stream Punisher
+	Condition: 50% chance (ai:0 rnd:50)
+Deal 110% damage (5 hits, 22% each)
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESInactivity(66:13584) -> I'll finish this...
+	Condition: One-time use (ai:100 rnd:0) (one-time: 1)
+Do nothing
+
+ESAttackMultihit(15:13585) -> Aquamarine Burst
+Deal 500% damage (10 hits, 50% each)
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+

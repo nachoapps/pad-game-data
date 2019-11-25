@@ -1,0 +1,84 @@
+#3931  - Curse Inclined Dragon Caller, Ideal
+True : use_new_ai
+1 : starting/max counter
+0 : counter increment
+
+ESPreemptive(49:318) -> ESPreemptive
+Enable preempt if level 1
+
+ESBranchCard(90:13848) -> ESBranchCard
+Branch on player_cards HAS [3942, 3943], target rnd 4
+
+SkillSet:
+	Condition: One-time use (ai:100 rnd:0) (one-time: 1)
+	[0] ESStatusShield(20:13917) -> Intruders Detected
+	Voids status ailments for 999 turns
+	[1] ESDamageShield(74:13918) -> Eliminating Targets
+	Reduce damage from all sources by 50% for 3 turns
+
+SkillSet:
+	Condition: One-time use (ai:100 rnd:0) (one-time: 1)
+	[0] ESStatusShield(20:13919) -> ... What is this feeling?
+	Voids status ailments for 999 turns
+	[1] ESDamageShield(74:13918) -> Eliminating Targets
+	Reduce damage from all sources by 50% for 3 turns
+
+ESBranchHP(28:18) -> ESBranchHP
+Branch on hp < 10, target rnd 17
+
+ESBranchHP(28:18) -> ESBranchHP
+Branch on hp < 50, target rnd 13
+
+ESBranchCounter(32:22) -> ESBranchCounter
+Branch on counter > 3, target rnd 13
+
+ESSetCounter(26:16) -> ESSetCounter
+counter + 1
+
+ESBranchCounter(32:22) -> ESBranchCounter
+Branch on counter > 3, target rnd 19
+
+ESOrbLock(94:13922) -> Shield Chain
+	Condition: 50% chance (ai:0 rnd:50)
+Lock 15 random Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs, Deal 100% damage
+
+ESAttackMultihit(15:13923) -> Absolute Destruction
+	Condition: 50% chance (ai:0 rnd:50)
+Deal 120% damage (6 hits, 20% each)
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 2, target rnd 10
+
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b11
+
+SkillSet:
+	[0] ESAbsorbCombo(67:13921) -> Destroy
+	Absorb combo <= 7 damage for 5 turns
+	[1] ESAttackUPRemainingEnemies(17:13910) -> Summoning Dragon's Guidance
+	Increase damage to 150% for the next 999 turns
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESAttackMultihit(15:13924) -> Glorious Anihilation
+Deal 500% damage (5 hits, 100% each)
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 1, target rnd 10
+
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b1
+
+ESAttackMultihit(15:13924) -> Glorious Anihilation
+Deal 500% damage (5 hits, 100% each)
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+

@@ -1,0 +1,42 @@
+#5665  - クルツ・ウェーバー
+True : use_new_ai
+3 : starting/max counter
+0 : counter increment
+
+ESPreemptive(49:318) -> ESPreemptive
+Enable preempt if level 1
+
+ESBlindStickyRandom(97:14893) -> うわ　来ちまった
+	Condition: One-time use (ai:100 rnd:0) (one-time: 2)
+Blind random 10 orbs for 4 turns
+
+ESBranchHP(28:18) -> ESBranchHP
+Branch on hp < 50, target rnd 7
+
+ESAttackMultihit(15:14894) -> もらった！
+	Condition: 50% chance (ai:0 rnd:50)
+Deal 70% damage
+
+ESFixedStart(101:14895) -> 照準が狂ってんじゃねぇのか
+	Condition: 50% chance (ai:0 rnd:50)
+Fix orb movement starting point to random position on the board, Deal 65% damage
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESAttackUPRemainingEnemies(17:14896) -> やってみるか……
+	Condition: One-time use, when <= 1 enemies remain (ai:100 rnd:0) (one-time: 1)
+Increase damage to 150% for the next 999 turns
+
+ESBranchHP(29:19) -> ESBranchHP
+Branch on hp > 21, target rnd 4
+
+ESAttackMultihit(15:14897) -> 撃発
+Deal 100% damage
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESTypeResist(118:14960) -> 体力マシン半減
+Reduce damage from Physical, Machine by 50%
+

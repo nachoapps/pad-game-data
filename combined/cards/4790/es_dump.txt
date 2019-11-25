@@ -1,0 +1,38 @@
+#4790  - Witch of Escaping the Summer, Werewolfie
+True : use_new_ai
+3 : starting/max counter
+0 : counter increment
+
+ESPreemptive(49:3402) -> ESPreemptive
+Enable preempt if level 4
+
+ESBranchLevel(35:25) -> ESBranchLevel
+Branch on level > 4, target rnd 4
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESOrbChangeAttack(48:10864) -> You want some too?!
+	Condition: One-time use (ai:100 rnd:0) (one-time: 2)
+Change Random to Dark, Deal 120% damage
+
+ESRandomSpawn(92:10865) -> I'll give you only one!
+	Condition: One-time use & when Fire, Water, Wood, Light, Dark, Jammer, Poison, Mortal Poison orbs are on the board (ai:100 rnd:0) (one-time: 1)
+Spawn random 1 Heal orbs, Deal 100% damage
+
+ESBranchHP(28:18) -> ESBranchHP
+Branch on hp < 20, target rnd 9
+
+ESRandomSpawn(92:10866) -> I said only one!
+	Condition: When fire, water, wood, light, dark, heal, poison, mortal poison orbs are on the board (ai:100 rnd:0)
+Spawn random 3 Jammer orbs, Deal 100% damage
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESAttackMultihit(15:10867) -> Coconut Slash
+Deal 120% damage (3 hits, 40% each)
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+

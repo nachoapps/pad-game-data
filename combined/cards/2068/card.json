@@ -1,0 +1,5556 @@
+{
+    "active_skill": {
+        "en_text": "Recover 4000 HP; Reduce binds by 4 turns",
+        "jp_skill": {
+            "awoken_bind": 0,
+            "card_bind": 4,
+            "hp": 4000,
+            "levels": 11,
+            "name": "スイーツパフューム",
+            "percentage_max_hp": 0.0,
+            "raw_description": "HPが4000回復、バインド状態を4ターン回復。",
+            "rcv_multiplier_as_hp": 0.0,
+            "skill_id": 1886,
+            "skill_type": 117,
+            "turn_max": 18,
+            "turn_min": 8
+        },
+        "kr_skill": {
+            "awoken_bind": 0,
+            "card_bind": 4,
+            "hp": 4000,
+            "levels": 11,
+            "name": "스위트 퍼퓸",
+            "percentage_max_hp": 0.0,
+            "raw_description": "HP를 4000 회복, 바인드 상태를 4턴 회복",
+            "rcv_multiplier_as_hp": 0.0,
+            "skill_id": 1886,
+            "skill_type": 117,
+            "turn_max": 18,
+            "turn_min": 8
+        },
+        "na_skill": {
+            "awoken_bind": 0,
+            "card_bind": 4,
+            "hp": 4000,
+            "levels": 11,
+            "name": "Sweet Perfume",
+            "percentage_max_hp": 0.0,
+            "raw_description": "Recovers 4000 HP; reduces bind status by 4 turns",
+            "rcv_multiplier_as_hp": 0.0,
+            "skill_id": 1886,
+            "skill_type": 117,
+            "turn_max": 18,
+            "turn_min": 8
+        },
+        "skill_id": 1886,
+        "skill_type_tags": [
+            "AsCondition.HEAL",
+            "AsCondition.RECOVER_BIND",
+            "AsCondition.HEAL_BIND_RECOVERY"
+        ]
+    },
+    "en_as_text": "Recover 4000 HP; Reduce binds by 4 turns",
+    "en_ls_text": "5x ATK if [208, 210] is on the team",
+    "enemy_behavior": [
+        {
+            "behavior": {
+                "_name": "※先制コマンドLV1",
+                "enemy_skill_id": 318,
+                "extra_description": null,
+                "level": 1,
+                "params": [
+                    null,
+                    1,
+                    100,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null
+                ],
+                "type": 49
+            },
+            "condition": null,
+            "enemy_skill_id": 318,
+            "extra_description": null
+        },
+        {
+            "behavior": {
+                "_name": "＿先制",
+                "attack": null,
+                "enemy_skill_id": 15051,
+                "extra_description": null,
+                "params": [
+                    null,
+                    15052,
+                    15053,
+                    15054,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    8,
+                    null,
+                    null
+                ],
+                "skill_ids": [
+                    15052,
+                    15053,
+                    15054
+                ],
+                "skills": [
+                    {
+                        "_name": "たくさんのコンボを見せてよ",
+                        "attack": null,
+                        "enemy_skill_id": 15052,
+                        "extra_description": null,
+                        "params": [
+                            "2ターンの間、落ちコンしなくなる",
+                            null,
+                            2,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null
+                        ],
+                        "turns": 2,
+                        "type": 127
+                    },
+                    {
+                        "_name": "そうだなぁ…",
+                        "amount": 240,
+                        "attack": null,
+                        "debuff_type": "movetime",
+                        "enemy_skill_id": 15053,
+                        "extra_description": null,
+                        "params": [
+                            "2ターンの間、持ち時間が増加",
+                            2,
+                            null,
+                            240,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null
+                        ],
+                        "turns": 2,
+                        "type": 39,
+                        "unit": "%"
+                    },
+                    {
+                        "_name": "4ターン合計40コンボだ！",
+                        "attack": null,
+                        "attributes": [
+                            0,
+                            1,
+                            2,
+                            3,
+                            4,
+                            5,
+                            6
+                        ],
+                        "condition_attributes": null,
+                        "count": 6,
+                        "enemy_skill_id": 15054,
+                        "extra_description": null,
+                        "params": [
+                            null,
+                            6,
+                            127,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null
+                        ],
+                        "type": 92
+                    }
+                ],
+                "type": 83
+            },
+            "condition": {
+                "_ai": 100,
+                "_rnd": 0,
+                "condition_attributes": null,
+                "enemies_remaining": null,
+                "forced_one_time": null,
+                "hp_threshold": null,
+                "on_death": null,
+                "one_time": 8
+            },
+            "enemy_skill_id": 15051,
+            "extra_description": null
+        },
+        {
+            "behavior": {
+                "_name": "※前ターンでaiコンボ以上の時、rndに分岐",
+                "branch_condition": "combo",
+                "branch_value": 14,
+                "compare": ">=",
+                "enemy_skill_id": 6528,
+                "extra_description": null,
+                "params": [
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    1,
+                    null,
+                    null
+                ],
+                "target_round": 18,
+                "type": 113
+            },
+            "condition": null,
+            "enemy_skill_id": 6528,
+            "extra_description": null
+        },
+        {
+            "behavior": {
+                "_name": "※前ターンでaiコンボ以上の時、rndに分岐",
+                "branch_condition": "combo",
+                "branch_value": 13,
+                "compare": ">=",
+                "enemy_skill_id": 6528,
+                "extra_description": null,
+                "params": [
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    1,
+                    null,
+                    null
+                ],
+                "target_round": 19,
+                "type": 113
+            },
+            "condition": null,
+            "enemy_skill_id": 6528,
+            "extra_description": null
+        },
+        {
+            "behavior": {
+                "_name": "※前ターンでaiコンボ以上の時、rndに分岐",
+                "branch_condition": "combo",
+                "branch_value": 12,
+                "compare": ">=",
+                "enemy_skill_id": 6528,
+                "extra_description": null,
+                "params": [
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    1,
+                    null,
+                    null
+                ],
+                "target_round": 20,
+                "type": 113
+            },
+            "condition": null,
+            "enemy_skill_id": 6528,
+            "extra_description": null
+        },
+        {
+            "behavior": {
+                "_name": "※前ターンでaiコンボ以上の時、rndに分岐",
+                "branch_condition": "combo",
+                "branch_value": 11,
+                "compare": ">=",
+                "enemy_skill_id": 6528,
+                "extra_description": null,
+                "params": [
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    1,
+                    null,
+                    null
+                ],
+                "target_round": 21,
+                "type": 113
+            },
+            "condition": null,
+            "enemy_skill_id": 6528,
+            "extra_description": null
+        },
+        {
+            "behavior": {
+                "_name": "※前ターンでaiコンボ以上の時、rndに分岐",
+                "branch_condition": "combo",
+                "branch_value": 10,
+                "compare": ">=",
+                "enemy_skill_id": 6528,
+                "extra_description": null,
+                "params": [
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    1,
+                    null,
+                    null
+                ],
+                "target_round": 22,
+                "type": 113
+            },
+            "condition": null,
+            "enemy_skill_id": 6528,
+            "extra_description": null
+        },
+        {
+            "behavior": {
+                "_name": "※前ターンでaiコンボ以上の時、rndに分岐",
+                "branch_condition": "combo",
+                "branch_value": 9,
+                "compare": ">=",
+                "enemy_skill_id": 6528,
+                "extra_description": null,
+                "params": [
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    1,
+                    null,
+                    null
+                ],
+                "target_round": 23,
+                "type": 113
+            },
+            "condition": null,
+            "enemy_skill_id": 6528,
+            "extra_description": null
+        },
+        {
+            "behavior": {
+                "_name": "※前ターンでaiコンボ以上の時、rndに分岐",
+                "branch_condition": "combo",
+                "branch_value": 8,
+                "compare": ">=",
+                "enemy_skill_id": 6528,
+                "extra_description": null,
+                "params": [
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    1,
+                    null,
+                    null
+                ],
+                "target_round": 24,
+                "type": 113
+            },
+            "condition": null,
+            "enemy_skill_id": 6528,
+            "extra_description": null
+        },
+        {
+            "behavior": {
+                "_name": "※前ターンでaiコンボ以上の時、rndに分岐",
+                "branch_condition": "combo",
+                "branch_value": 7,
+                "compare": ">=",
+                "enemy_skill_id": 6528,
+                "extra_description": null,
+                "params": [
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    1,
+                    null,
+                    null
+                ],
+                "target_round": 25,
+                "type": 113
+            },
+            "condition": null,
+            "enemy_skill_id": 6528,
+            "extra_description": null
+        },
+        {
+            "behavior": {
+                "_name": "※前ターンでaiコンボ以上の時、rndに分岐",
+                "branch_condition": "combo",
+                "branch_value": 6,
+                "compare": ">=",
+                "enemy_skill_id": 6528,
+                "extra_description": null,
+                "params": [
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    1,
+                    null,
+                    null
+                ],
+                "target_round": 26,
+                "type": 113
+            },
+            "condition": null,
+            "enemy_skill_id": 6528,
+            "extra_description": null
+        },
+        {
+            "behavior": {
+                "_name": "※前ターンでaiコンボ以上の時、rndに分岐",
+                "branch_condition": "combo",
+                "branch_value": 5,
+                "compare": ">=",
+                "enemy_skill_id": 6528,
+                "extra_description": null,
+                "params": [
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    1,
+                    null,
+                    null
+                ],
+                "target_round": 27,
+                "type": 113
+            },
+            "condition": null,
+            "enemy_skill_id": 6528,
+            "extra_description": null
+        },
+        {
+            "behavior": {
+                "_name": "※前ターンでaiコンボ以上の時、rndに分岐",
+                "branch_condition": "combo",
+                "branch_value": 4,
+                "compare": ">=",
+                "enemy_skill_id": 6528,
+                "extra_description": null,
+                "params": [
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    1,
+                    null,
+                    null
+                ],
+                "target_round": 28,
+                "type": 113
+            },
+            "condition": null,
+            "enemy_skill_id": 6528,
+            "extra_description": null
+        },
+        {
+            "behavior": {
+                "_name": "※前ターンでaiコンボ以上の時、rndに分岐",
+                "branch_condition": "combo",
+                "branch_value": 3,
+                "compare": ">=",
+                "enemy_skill_id": 6528,
+                "extra_description": null,
+                "params": [
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    1,
+                    null,
+                    null
+                ],
+                "target_round": 29,
+                "type": 113
+            },
+            "condition": null,
+            "enemy_skill_id": 6528,
+            "extra_description": null
+        },
+        {
+            "behavior": {
+                "_name": "※前ターンでaiコンボ以上の時、rndに分岐",
+                "branch_condition": "combo",
+                "branch_value": 2,
+                "compare": ">=",
+                "enemy_skill_id": 6528,
+                "extra_description": null,
+                "params": [
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    1,
+                    null,
+                    null
+                ],
+                "target_round": 30,
+                "type": 113
+            },
+            "condition": null,
+            "enemy_skill_id": 6528,
+            "extra_description": null
+        },
+        {
+            "behavior": {
+                "_name": "※前ターンでaiコンボ以上の時、rndに分岐",
+                "branch_condition": "combo",
+                "branch_value": 1,
+                "compare": ">=",
+                "enemy_skill_id": 6528,
+                "extra_description": null,
+                "params": [
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    1,
+                    null,
+                    null
+                ],
+                "target_round": 31,
+                "type": 113
+            },
+            "condition": null,
+            "enemy_skill_id": 6528,
+            "extra_description": null
+        },
+        {
+            "behavior": {
+                "_name": "※前ターンでaiコンボ以上の時、rndに分岐",
+                "branch_condition": "combo",
+                "branch_value": 0,
+                "compare": ">=",
+                "enemy_skill_id": 6528,
+                "extra_description": null,
+                "params": [
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    1,
+                    null,
+                    null
+                ],
+                "target_round": 32,
+                "type": 113
+            },
+            "condition": null,
+            "enemy_skill_id": 6528,
+            "extra_description": null
+        },
+        {
+            "behavior": {
+                "_name": "※カウンターを１＋",
+                "counter": 1,
+                "enemy_skill_id": 16,
+                "extra_description": null,
+                "params": [
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    4,
+                    null,
+                    null,
+                    null
+                ],
+                "set": "+",
+                "type": 26
+            },
+            "condition": null,
+            "enemy_skill_id": 16,
+            "extra_description": null
+        },
+        {
+            "behavior": {
+                "_name": "※カウンターを１＋",
+                "counter": 1,
+                "enemy_skill_id": 16,
+                "extra_description": null,
+                "params": [
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    4,
+                    null,
+                    null,
+                    null
+                ],
+                "set": "+",
+                "type": 26
+            },
+            "condition": null,
+            "enemy_skill_id": 16,
+            "extra_description": null
+        },
+        {
+            "behavior": {
+                "_name": "※カウンターを１＋",
+                "counter": 1,
+                "enemy_skill_id": 16,
+                "extra_description": null,
+                "params": [
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    4,
+                    null,
+                    null,
+                    null
+                ],
+                "set": "+",
+                "type": 26
+            },
+            "condition": null,
+            "enemy_skill_id": 16,
+            "extra_description": null
+        },
+        {
+            "behavior": {
+                "_name": "※カウンターを１＋",
+                "counter": 1,
+                "enemy_skill_id": 16,
+                "extra_description": null,
+                "params": [
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    4,
+                    null,
+                    null,
+                    null
+                ],
+                "set": "+",
+                "type": 26
+            },
+            "condition": null,
+            "enemy_skill_id": 16,
+            "extra_description": null
+        },
+        {
+            "behavior": {
+                "_name": "※カウンターを１＋",
+                "counter": 1,
+                "enemy_skill_id": 16,
+                "extra_description": null,
+                "params": [
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    4,
+                    null,
+                    null,
+                    null
+                ],
+                "set": "+",
+                "type": 26
+            },
+            "condition": null,
+            "enemy_skill_id": 16,
+            "extra_description": null
+        },
+        {
+            "behavior": {
+                "_name": "※カウンターを１＋",
+                "counter": 1,
+                "enemy_skill_id": 16,
+                "extra_description": null,
+                "params": [
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    4,
+                    null,
+                    null,
+                    null
+                ],
+                "set": "+",
+                "type": 26
+            },
+            "condition": null,
+            "enemy_skill_id": 16,
+            "extra_description": null
+        },
+        {
+            "behavior": {
+                "_name": "※カウンターを１＋",
+                "counter": 1,
+                "enemy_skill_id": 16,
+                "extra_description": null,
+                "params": [
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    4,
+                    null,
+                    null,
+                    null
+                ],
+                "set": "+",
+                "type": 26
+            },
+            "condition": null,
+            "enemy_skill_id": 16,
+            "extra_description": null
+        },
+        {
+            "behavior": {
+                "_name": "※カウンターを１＋",
+                "counter": 1,
+                "enemy_skill_id": 16,
+                "extra_description": null,
+                "params": [
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    4,
+                    null,
+                    null,
+                    null
+                ],
+                "set": "+",
+                "type": 26
+            },
+            "condition": null,
+            "enemy_skill_id": 16,
+            "extra_description": null
+        },
+        {
+            "behavior": {
+                "_name": "※カウンターを１＋",
+                "counter": 1,
+                "enemy_skill_id": 16,
+                "extra_description": null,
+                "params": [
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    4,
+                    null,
+                    null,
+                    null
+                ],
+                "set": "+",
+                "type": 26
+            },
+            "condition": null,
+            "enemy_skill_id": 16,
+            "extra_description": null
+        },
+        {
+            "behavior": {
+                "_name": "※カウンターを１＋",
+                "counter": 1,
+                "enemy_skill_id": 16,
+                "extra_description": null,
+                "params": [
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    4,
+                    null,
+                    null,
+                    null
+                ],
+                "set": "+",
+                "type": 26
+            },
+            "condition": null,
+            "enemy_skill_id": 16,
+            "extra_description": null
+        },
+        {
+            "behavior": {
+                "_name": "※カウンターを１＋",
+                "counter": 1,
+                "enemy_skill_id": 16,
+                "extra_description": null,
+                "params": [
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    4,
+                    null,
+                    null,
+                    null
+                ],
+                "set": "+",
+                "type": 26
+            },
+            "condition": null,
+            "enemy_skill_id": 16,
+            "extra_description": null
+        },
+        {
+            "behavior": {
+                "_name": "※カウンターを１＋",
+                "counter": 1,
+                "enemy_skill_id": 16,
+                "extra_description": null,
+                "params": [
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    4,
+                    null,
+                    null,
+                    null
+                ],
+                "set": "+",
+                "type": 26
+            },
+            "condition": null,
+            "enemy_skill_id": 16,
+            "extra_description": null
+        },
+        {
+            "behavior": {
+                "_name": "※カウンターを１＋",
+                "counter": 1,
+                "enemy_skill_id": 16,
+                "extra_description": null,
+                "params": [
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    4,
+                    null,
+                    null,
+                    null
+                ],
+                "set": "+",
+                "type": 26
+            },
+            "condition": null,
+            "enemy_skill_id": 16,
+            "extra_description": null
+        },
+        {
+            "behavior": {
+                "_name": "※カウンターを１＋",
+                "counter": 1,
+                "enemy_skill_id": 16,
+                "extra_description": null,
+                "params": [
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    4,
+                    null,
+                    null,
+                    null
+                ],
+                "set": "+",
+                "type": 26
+            },
+            "condition": null,
+            "enemy_skill_id": 16,
+            "extra_description": null
+        },
+        {
+            "behavior": {
+                "_name": "ほら綺麗だろ？",
+                "attack": null,
+                "attributes": [
+                    0,
+                    1
+                ],
+                "desc_arr": [
+                    "1st, 5th row to Fire orbs",
+                    "2nd, 4th row to Water orbs"
+                ],
+                "enemy_skill_id": 15055,
+                "extra_description": null,
+                "params": [
+                    null,
+                    17,
+                    1,
+                    10,
+                    2,
+                    4,
+                    4,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    4,
+                    null,
+                    null
+                ],
+                "position_type": "row",
+                "positions": [
+                    1,
+                    5,
+                    2,
+                    4
+                ],
+                "type": 78
+            },
+            "condition": {
+                "_ai": 100,
+                "_rnd": 0,
+                "condition_attributes": null,
+                "enemies_remaining": null,
+                "forced_one_time": null,
+                "hp_threshold": null,
+                "on_death": null,
+                "one_time": 4
+            },
+            "enemy_skill_id": 15055,
+            "extra_description": null
+        },
+        {
+            "behavior": {
+                "_name": "急いで出来るかい？",
+                "attack": null,
+                "attributes": [
+                    0,
+                    1
+                ],
+                "desc_arr": [
+                    "1st, 6th column to Fire orbs",
+                    "2nd, 5th column to Water orbs"
+                ],
+                "enemy_skill_id": 15056,
+                "extra_description": null,
+                "params": [
+                    null,
+                    33,
+                    1,
+                    18,
+                    2,
+                    12,
+                    4,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    2,
+                    null,
+                    null
+                ],
+                "position_type": "column",
+                "positions": [
+                    1,
+                    6,
+                    2,
+                    5
+                ],
+                "type": 76
+            },
+            "condition": {
+                "_ai": 100,
+                "_rnd": 0,
+                "condition_attributes": null,
+                "enemies_remaining": null,
+                "forced_one_time": null,
+                "hp_threshold": null,
+                "on_death": null,
+                "one_time": 2
+            },
+            "enemy_skill_id": 15056,
+            "extra_description": null
+        },
+        {
+            "behavior": {
+                "_name": "＿4回行動",
+                "attack": null,
+                "enemy_skill_id": 15057,
+                "extra_description": null,
+                "params": [
+                    null,
+                    15058,
+                    15059,
+                    15060,
+                    15061,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    1,
+                    null,
+                    null
+                ],
+                "skill_ids": [
+                    15058,
+                    15059,
+                    15060,
+                    15061
+                ],
+                "skills": [
+                    {
+                        "_name": "さぁ見せてくれよ",
+                        "attack": null,
+                        "attributes": [
+                            0
+                        ],
+                        "enemy_skill_id": 15058,
+                        "extra_description": null,
+                        "params": [
+                            null,
+                            1,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null
+                        ],
+                        "type": 84
+                    },
+                    {
+                        "_name": "こうして…",
+                        "attack": null,
+                        "attributes": [
+                            1
+                        ],
+                        "desc_arr": [
+                            "2nd, 5th column to Water orbs"
+                        ],
+                        "enemy_skill_id": 15059,
+                        "extra_description": null,
+                        "params": [
+                            null,
+                            18,
+                            2,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null
+                        ],
+                        "position_type": "column",
+                        "positions": [
+                            2,
+                            5
+                        ],
+                        "type": 76
+                    },
+                    {
+                        "_name": "こうだ！",
+                        "attack": null,
+                        "attributes": [
+                            2
+                        ],
+                        "desc_arr": [
+                            "2nd, 4th row to Wood orbs"
+                        ],
+                        "enemy_skill_id": 15060,
+                        "extra_description": null,
+                        "params": [
+                            null,
+                            10,
+                            4,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null
+                        ],
+                        "position_type": "row",
+                        "positions": [
+                            2,
+                            4
+                        ],
+                        "type": 78
+                    },
+                    {
+                        "_name": "こんなもの必要ないよね？",
+                        "amount": -5.0,
+                        "attack": null,
+                        "debuff_type": "movetime",
+                        "enemy_skill_id": 15061,
+                        "extra_description": null,
+                        "params": [
+                            "1ターンの間、持ち時間が5秒減少",
+                            1,
+                            50,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null
+                        ],
+                        "turns": 1,
+                        "type": 39,
+                        "unit": "s"
+                    }
+                ],
+                "type": 83
+            },
+            "condition": {
+                "_ai": 100,
+                "_rnd": 0,
+                "condition_attributes": null,
+                "enemies_remaining": null,
+                "forced_one_time": null,
+                "hp_threshold": null,
+                "on_death": null,
+                "one_time": 1
+            },
+            "enemy_skill_id": 15057,
+            "extra_description": null
+        },
+        {
+            "behavior": {
+                "_name": "※カウンターが ai 以上の時 rnd に分岐",
+                "branch_condition": "counter",
+                "branch_value": 40,
+                "compare": ">",
+                "enemy_skill_id": 22,
+                "extra_description": null,
+                "params": [
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    4,
+                    null,
+                    null,
+                    null
+                ],
+                "target_round": 37,
+                "type": 32
+            },
+            "condition": null,
+            "enemy_skill_id": 22,
+            "extra_description": null
+        },
+        {
+            "behavior": {
+                "_name": "＿失敗",
+                "attack": null,
+                "enemy_skill_id": 15063,
+                "extra_description": null,
+                "params": [
+                    null,
+                    15064,
+                    15066,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null
+                ],
+                "skill_ids": [
+                    15064,
+                    15066
+                ],
+                "skills": [
+                    {
+                        "_name": "さて合計コンボは…",
+                        "attack": null,
+                        "enemy_skill_id": 15064,
+                        "extra_description": null,
+                        "params": [
+                            "す、す、す…",
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null
+                        ],
+                        "type": 66
+                    },
+                    {
+                        "_name": "すくな～～～い！",
+                        "attack": {
+                            "atk_multiplier": 200,
+                            "max_hits": 5,
+                            "min_hits": 5
+                        },
+                        "enemy_skill_id": 15066,
+                        "extra_description": null,
+                        "params": [
+                            null,
+                            5,
+                            5,
+                            200,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null
+                        ],
+                        "type": 15
+                    }
+                ],
+                "type": 83
+            },
+            "condition": {
+                "_ai": 100,
+                "_rnd": 0,
+                "condition_attributes": null,
+                "enemies_remaining": null,
+                "forced_one_time": null,
+                "hp_threshold": null,
+                "on_death": null,
+                "one_time": null
+            },
+            "enemy_skill_id": 15063,
+            "extra_description": null
+        },
+        {
+            "behavior": {
+                "_name": "＿成功",
+                "attack": null,
+                "enemy_skill_id": 15062,
+                "extra_description": null,
+                "params": [
+                    null,
+                    15064,
+                    15065,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null
+                ],
+                "skill_ids": [
+                    15064,
+                    15065
+                ],
+                "skills": [
+                    {
+                        "_name": "さて合計コンボは…",
+                        "attack": null,
+                        "enemy_skill_id": 15064,
+                        "extra_description": null,
+                        "params": [
+                            "す、す、す…",
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null
+                        ],
+                        "type": 66
+                    },
+                    {
+                        "_name": "すば～らし～い！",
+                        "attack": null,
+                        "enemy_skill_id": 15065,
+                        "extra_description": null,
+                        "params": [
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null
+                        ],
+                        "type": 40
+                    }
+                ],
+                "type": 83
+            },
+            "condition": {
+                "_ai": 100,
+                "_rnd": 0,
+                "condition_attributes": null,
+                "enemies_remaining": null,
+                "forced_one_time": null,
+                "hp_threshold": null,
+                "on_death": null,
+                "one_time": null
+            },
+            "enemy_skill_id": 15062,
+            "extra_description": null
+        },
+        {
+            "behavior": {
+                "_name": "※パース終了",
+                "enemy_skill_id": 26,
+                "extra_description": null,
+                "params": [
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    4,
+                    null,
+                    null,
+                    null
+                ],
+                "type": 36
+            },
+            "condition": null,
+            "enemy_skill_id": 26,
+            "extra_description": null
+        }
+    ],
+    "enemy_behavior_jp": [
+        {
+            "behavior": {
+                "_name": "※先制コマンドLV1",
+                "enemy_skill_id": 318,
+                "extra_description": null,
+                "level": 1,
+                "params": [
+                    null,
+                    1,
+                    100,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null
+                ],
+                "type": 49
+            },
+            "condition": null,
+            "enemy_skill_id": 318,
+            "extra_description": null
+        },
+        {
+            "behavior": {
+                "_name": "＿先制",
+                "attack": null,
+                "enemy_skill_id": 15051,
+                "extra_description": null,
+                "params": [
+                    null,
+                    15052,
+                    15053,
+                    15054,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    8,
+                    null,
+                    null
+                ],
+                "skill_ids": [
+                    15052,
+                    15053,
+                    15054
+                ],
+                "skills": [
+                    {
+                        "_name": "たくさんのコンボを見せてよ",
+                        "attack": null,
+                        "enemy_skill_id": 15052,
+                        "extra_description": null,
+                        "params": [
+                            "2ターンの間、落ちコンしなくなる",
+                            null,
+                            2,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null
+                        ],
+                        "turns": 2,
+                        "type": 127
+                    },
+                    {
+                        "_name": "そうだなぁ…",
+                        "amount": 240,
+                        "attack": null,
+                        "debuff_type": "movetime",
+                        "enemy_skill_id": 15053,
+                        "extra_description": null,
+                        "params": [
+                            "2ターンの間、持ち時間が増加",
+                            2,
+                            null,
+                            240,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null
+                        ],
+                        "turns": 2,
+                        "type": 39,
+                        "unit": "%"
+                    },
+                    {
+                        "_name": "4ターン合計40コンボだ！",
+                        "attack": null,
+                        "attributes": [
+                            0,
+                            1,
+                            2,
+                            3,
+                            4,
+                            5,
+                            6
+                        ],
+                        "condition_attributes": null,
+                        "count": 6,
+                        "enemy_skill_id": 15054,
+                        "extra_description": null,
+                        "params": [
+                            null,
+                            6,
+                            127,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null
+                        ],
+                        "type": 92
+                    }
+                ],
+                "type": 83
+            },
+            "condition": {
+                "_ai": 100,
+                "_rnd": 0,
+                "condition_attributes": null,
+                "enemies_remaining": null,
+                "forced_one_time": null,
+                "hp_threshold": null,
+                "on_death": null,
+                "one_time": 8
+            },
+            "enemy_skill_id": 15051,
+            "extra_description": null
+        },
+        {
+            "behavior": {
+                "_name": "※前ターンでaiコンボ以上の時、rndに分岐",
+                "branch_condition": "combo",
+                "branch_value": 14,
+                "compare": ">=",
+                "enemy_skill_id": 6528,
+                "extra_description": null,
+                "params": [
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    1,
+                    null,
+                    null
+                ],
+                "target_round": 18,
+                "type": 113
+            },
+            "condition": null,
+            "enemy_skill_id": 6528,
+            "extra_description": null
+        },
+        {
+            "behavior": {
+                "_name": "※前ターンでaiコンボ以上の時、rndに分岐",
+                "branch_condition": "combo",
+                "branch_value": 13,
+                "compare": ">=",
+                "enemy_skill_id": 6528,
+                "extra_description": null,
+                "params": [
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    1,
+                    null,
+                    null
+                ],
+                "target_round": 19,
+                "type": 113
+            },
+            "condition": null,
+            "enemy_skill_id": 6528,
+            "extra_description": null
+        },
+        {
+            "behavior": {
+                "_name": "※前ターンでaiコンボ以上の時、rndに分岐",
+                "branch_condition": "combo",
+                "branch_value": 12,
+                "compare": ">=",
+                "enemy_skill_id": 6528,
+                "extra_description": null,
+                "params": [
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    1,
+                    null,
+                    null
+                ],
+                "target_round": 20,
+                "type": 113
+            },
+            "condition": null,
+            "enemy_skill_id": 6528,
+            "extra_description": null
+        },
+        {
+            "behavior": {
+                "_name": "※前ターンでaiコンボ以上の時、rndに分岐",
+                "branch_condition": "combo",
+                "branch_value": 11,
+                "compare": ">=",
+                "enemy_skill_id": 6528,
+                "extra_description": null,
+                "params": [
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    1,
+                    null,
+                    null
+                ],
+                "target_round": 21,
+                "type": 113
+            },
+            "condition": null,
+            "enemy_skill_id": 6528,
+            "extra_description": null
+        },
+        {
+            "behavior": {
+                "_name": "※前ターンでaiコンボ以上の時、rndに分岐",
+                "branch_condition": "combo",
+                "branch_value": 10,
+                "compare": ">=",
+                "enemy_skill_id": 6528,
+                "extra_description": null,
+                "params": [
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    1,
+                    null,
+                    null
+                ],
+                "target_round": 22,
+                "type": 113
+            },
+            "condition": null,
+            "enemy_skill_id": 6528,
+            "extra_description": null
+        },
+        {
+            "behavior": {
+                "_name": "※前ターンでaiコンボ以上の時、rndに分岐",
+                "branch_condition": "combo",
+                "branch_value": 9,
+                "compare": ">=",
+                "enemy_skill_id": 6528,
+                "extra_description": null,
+                "params": [
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    1,
+                    null,
+                    null
+                ],
+                "target_round": 23,
+                "type": 113
+            },
+            "condition": null,
+            "enemy_skill_id": 6528,
+            "extra_description": null
+        },
+        {
+            "behavior": {
+                "_name": "※前ターンでaiコンボ以上の時、rndに分岐",
+                "branch_condition": "combo",
+                "branch_value": 8,
+                "compare": ">=",
+                "enemy_skill_id": 6528,
+                "extra_description": null,
+                "params": [
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    1,
+                    null,
+                    null
+                ],
+                "target_round": 24,
+                "type": 113
+            },
+            "condition": null,
+            "enemy_skill_id": 6528,
+            "extra_description": null
+        },
+        {
+            "behavior": {
+                "_name": "※前ターンでaiコンボ以上の時、rndに分岐",
+                "branch_condition": "combo",
+                "branch_value": 7,
+                "compare": ">=",
+                "enemy_skill_id": 6528,
+                "extra_description": null,
+                "params": [
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    1,
+                    null,
+                    null
+                ],
+                "target_round": 25,
+                "type": 113
+            },
+            "condition": null,
+            "enemy_skill_id": 6528,
+            "extra_description": null
+        },
+        {
+            "behavior": {
+                "_name": "※前ターンでaiコンボ以上の時、rndに分岐",
+                "branch_condition": "combo",
+                "branch_value": 6,
+                "compare": ">=",
+                "enemy_skill_id": 6528,
+                "extra_description": null,
+                "params": [
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    1,
+                    null,
+                    null
+                ],
+                "target_round": 26,
+                "type": 113
+            },
+            "condition": null,
+            "enemy_skill_id": 6528,
+            "extra_description": null
+        },
+        {
+            "behavior": {
+                "_name": "※前ターンでaiコンボ以上の時、rndに分岐",
+                "branch_condition": "combo",
+                "branch_value": 5,
+                "compare": ">=",
+                "enemy_skill_id": 6528,
+                "extra_description": null,
+                "params": [
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    1,
+                    null,
+                    null
+                ],
+                "target_round": 27,
+                "type": 113
+            },
+            "condition": null,
+            "enemy_skill_id": 6528,
+            "extra_description": null
+        },
+        {
+            "behavior": {
+                "_name": "※前ターンでaiコンボ以上の時、rndに分岐",
+                "branch_condition": "combo",
+                "branch_value": 4,
+                "compare": ">=",
+                "enemy_skill_id": 6528,
+                "extra_description": null,
+                "params": [
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    1,
+                    null,
+                    null
+                ],
+                "target_round": 28,
+                "type": 113
+            },
+            "condition": null,
+            "enemy_skill_id": 6528,
+            "extra_description": null
+        },
+        {
+            "behavior": {
+                "_name": "※前ターンでaiコンボ以上の時、rndに分岐",
+                "branch_condition": "combo",
+                "branch_value": 3,
+                "compare": ">=",
+                "enemy_skill_id": 6528,
+                "extra_description": null,
+                "params": [
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    1,
+                    null,
+                    null
+                ],
+                "target_round": 29,
+                "type": 113
+            },
+            "condition": null,
+            "enemy_skill_id": 6528,
+            "extra_description": null
+        },
+        {
+            "behavior": {
+                "_name": "※前ターンでaiコンボ以上の時、rndに分岐",
+                "branch_condition": "combo",
+                "branch_value": 2,
+                "compare": ">=",
+                "enemy_skill_id": 6528,
+                "extra_description": null,
+                "params": [
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    1,
+                    null,
+                    null
+                ],
+                "target_round": 30,
+                "type": 113
+            },
+            "condition": null,
+            "enemy_skill_id": 6528,
+            "extra_description": null
+        },
+        {
+            "behavior": {
+                "_name": "※前ターンでaiコンボ以上の時、rndに分岐",
+                "branch_condition": "combo",
+                "branch_value": 1,
+                "compare": ">=",
+                "enemy_skill_id": 6528,
+                "extra_description": null,
+                "params": [
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    1,
+                    null,
+                    null
+                ],
+                "target_round": 31,
+                "type": 113
+            },
+            "condition": null,
+            "enemy_skill_id": 6528,
+            "extra_description": null
+        },
+        {
+            "behavior": {
+                "_name": "※前ターンでaiコンボ以上の時、rndに分岐",
+                "branch_condition": "combo",
+                "branch_value": 0,
+                "compare": ">=",
+                "enemy_skill_id": 6528,
+                "extra_description": null,
+                "params": [
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    1,
+                    null,
+                    null
+                ],
+                "target_round": 32,
+                "type": 113
+            },
+            "condition": null,
+            "enemy_skill_id": 6528,
+            "extra_description": null
+        },
+        {
+            "behavior": {
+                "_name": "※カウンターを１＋",
+                "counter": 1,
+                "enemy_skill_id": 16,
+                "extra_description": null,
+                "params": [
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    4,
+                    null,
+                    null,
+                    null
+                ],
+                "set": "+",
+                "type": 26
+            },
+            "condition": null,
+            "enemy_skill_id": 16,
+            "extra_description": null
+        },
+        {
+            "behavior": {
+                "_name": "※カウンターを１＋",
+                "counter": 1,
+                "enemy_skill_id": 16,
+                "extra_description": null,
+                "params": [
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    4,
+                    null,
+                    null,
+                    null
+                ],
+                "set": "+",
+                "type": 26
+            },
+            "condition": null,
+            "enemy_skill_id": 16,
+            "extra_description": null
+        },
+        {
+            "behavior": {
+                "_name": "※カウンターを１＋",
+                "counter": 1,
+                "enemy_skill_id": 16,
+                "extra_description": null,
+                "params": [
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    4,
+                    null,
+                    null,
+                    null
+                ],
+                "set": "+",
+                "type": 26
+            },
+            "condition": null,
+            "enemy_skill_id": 16,
+            "extra_description": null
+        },
+        {
+            "behavior": {
+                "_name": "※カウンターを１＋",
+                "counter": 1,
+                "enemy_skill_id": 16,
+                "extra_description": null,
+                "params": [
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    4,
+                    null,
+                    null,
+                    null
+                ],
+                "set": "+",
+                "type": 26
+            },
+            "condition": null,
+            "enemy_skill_id": 16,
+            "extra_description": null
+        },
+        {
+            "behavior": {
+                "_name": "※カウンターを１＋",
+                "counter": 1,
+                "enemy_skill_id": 16,
+                "extra_description": null,
+                "params": [
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    4,
+                    null,
+                    null,
+                    null
+                ],
+                "set": "+",
+                "type": 26
+            },
+            "condition": null,
+            "enemy_skill_id": 16,
+            "extra_description": null
+        },
+        {
+            "behavior": {
+                "_name": "※カウンターを１＋",
+                "counter": 1,
+                "enemy_skill_id": 16,
+                "extra_description": null,
+                "params": [
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    4,
+                    null,
+                    null,
+                    null
+                ],
+                "set": "+",
+                "type": 26
+            },
+            "condition": null,
+            "enemy_skill_id": 16,
+            "extra_description": null
+        },
+        {
+            "behavior": {
+                "_name": "※カウンターを１＋",
+                "counter": 1,
+                "enemy_skill_id": 16,
+                "extra_description": null,
+                "params": [
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    4,
+                    null,
+                    null,
+                    null
+                ],
+                "set": "+",
+                "type": 26
+            },
+            "condition": null,
+            "enemy_skill_id": 16,
+            "extra_description": null
+        },
+        {
+            "behavior": {
+                "_name": "※カウンターを１＋",
+                "counter": 1,
+                "enemy_skill_id": 16,
+                "extra_description": null,
+                "params": [
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    4,
+                    null,
+                    null,
+                    null
+                ],
+                "set": "+",
+                "type": 26
+            },
+            "condition": null,
+            "enemy_skill_id": 16,
+            "extra_description": null
+        },
+        {
+            "behavior": {
+                "_name": "※カウンターを１＋",
+                "counter": 1,
+                "enemy_skill_id": 16,
+                "extra_description": null,
+                "params": [
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    4,
+                    null,
+                    null,
+                    null
+                ],
+                "set": "+",
+                "type": 26
+            },
+            "condition": null,
+            "enemy_skill_id": 16,
+            "extra_description": null
+        },
+        {
+            "behavior": {
+                "_name": "※カウンターを１＋",
+                "counter": 1,
+                "enemy_skill_id": 16,
+                "extra_description": null,
+                "params": [
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    4,
+                    null,
+                    null,
+                    null
+                ],
+                "set": "+",
+                "type": 26
+            },
+            "condition": null,
+            "enemy_skill_id": 16,
+            "extra_description": null
+        },
+        {
+            "behavior": {
+                "_name": "※カウンターを１＋",
+                "counter": 1,
+                "enemy_skill_id": 16,
+                "extra_description": null,
+                "params": [
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    4,
+                    null,
+                    null,
+                    null
+                ],
+                "set": "+",
+                "type": 26
+            },
+            "condition": null,
+            "enemy_skill_id": 16,
+            "extra_description": null
+        },
+        {
+            "behavior": {
+                "_name": "※カウンターを１＋",
+                "counter": 1,
+                "enemy_skill_id": 16,
+                "extra_description": null,
+                "params": [
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    4,
+                    null,
+                    null,
+                    null
+                ],
+                "set": "+",
+                "type": 26
+            },
+            "condition": null,
+            "enemy_skill_id": 16,
+            "extra_description": null
+        },
+        {
+            "behavior": {
+                "_name": "※カウンターを１＋",
+                "counter": 1,
+                "enemy_skill_id": 16,
+                "extra_description": null,
+                "params": [
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    4,
+                    null,
+                    null,
+                    null
+                ],
+                "set": "+",
+                "type": 26
+            },
+            "condition": null,
+            "enemy_skill_id": 16,
+            "extra_description": null
+        },
+        {
+            "behavior": {
+                "_name": "※カウンターを１＋",
+                "counter": 1,
+                "enemy_skill_id": 16,
+                "extra_description": null,
+                "params": [
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    4,
+                    null,
+                    null,
+                    null
+                ],
+                "set": "+",
+                "type": 26
+            },
+            "condition": null,
+            "enemy_skill_id": 16,
+            "extra_description": null
+        },
+        {
+            "behavior": {
+                "_name": "ほら綺麗だろ？",
+                "attack": null,
+                "attributes": [
+                    0,
+                    1
+                ],
+                "desc_arr": [
+                    "1st, 5th row to Fire orbs",
+                    "2nd, 4th row to Water orbs"
+                ],
+                "enemy_skill_id": 15055,
+                "extra_description": null,
+                "params": [
+                    null,
+                    17,
+                    1,
+                    10,
+                    2,
+                    4,
+                    4,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    4,
+                    null,
+                    null
+                ],
+                "position_type": "row",
+                "positions": [
+                    1,
+                    5,
+                    2,
+                    4
+                ],
+                "type": 78
+            },
+            "condition": {
+                "_ai": 100,
+                "_rnd": 0,
+                "condition_attributes": null,
+                "enemies_remaining": null,
+                "forced_one_time": null,
+                "hp_threshold": null,
+                "on_death": null,
+                "one_time": 4
+            },
+            "enemy_skill_id": 15055,
+            "extra_description": null
+        },
+        {
+            "behavior": {
+                "_name": "急いで出来るかい？",
+                "attack": null,
+                "attributes": [
+                    0,
+                    1
+                ],
+                "desc_arr": [
+                    "1st, 6th column to Fire orbs",
+                    "2nd, 5th column to Water orbs"
+                ],
+                "enemy_skill_id": 15056,
+                "extra_description": null,
+                "params": [
+                    null,
+                    33,
+                    1,
+                    18,
+                    2,
+                    12,
+                    4,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    2,
+                    null,
+                    null
+                ],
+                "position_type": "column",
+                "positions": [
+                    1,
+                    6,
+                    2,
+                    5
+                ],
+                "type": 76
+            },
+            "condition": {
+                "_ai": 100,
+                "_rnd": 0,
+                "condition_attributes": null,
+                "enemies_remaining": null,
+                "forced_one_time": null,
+                "hp_threshold": null,
+                "on_death": null,
+                "one_time": 2
+            },
+            "enemy_skill_id": 15056,
+            "extra_description": null
+        },
+        {
+            "behavior": {
+                "_name": "＿4回行動",
+                "attack": null,
+                "enemy_skill_id": 15057,
+                "extra_description": null,
+                "params": [
+                    null,
+                    15058,
+                    15059,
+                    15060,
+                    15061,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    1,
+                    null,
+                    null
+                ],
+                "skill_ids": [
+                    15058,
+                    15059,
+                    15060,
+                    15061
+                ],
+                "skills": [
+                    {
+                        "_name": "さぁ見せてくれよ",
+                        "attack": null,
+                        "attributes": [
+                            0
+                        ],
+                        "enemy_skill_id": 15058,
+                        "extra_description": null,
+                        "params": [
+                            null,
+                            1,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null
+                        ],
+                        "type": 84
+                    },
+                    {
+                        "_name": "こうして…",
+                        "attack": null,
+                        "attributes": [
+                            1
+                        ],
+                        "desc_arr": [
+                            "2nd, 5th column to Water orbs"
+                        ],
+                        "enemy_skill_id": 15059,
+                        "extra_description": null,
+                        "params": [
+                            null,
+                            18,
+                            2,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null
+                        ],
+                        "position_type": "column",
+                        "positions": [
+                            2,
+                            5
+                        ],
+                        "type": 76
+                    },
+                    {
+                        "_name": "こうだ！",
+                        "attack": null,
+                        "attributes": [
+                            2
+                        ],
+                        "desc_arr": [
+                            "2nd, 4th row to Wood orbs"
+                        ],
+                        "enemy_skill_id": 15060,
+                        "extra_description": null,
+                        "params": [
+                            null,
+                            10,
+                            4,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null
+                        ],
+                        "position_type": "row",
+                        "positions": [
+                            2,
+                            4
+                        ],
+                        "type": 78
+                    },
+                    {
+                        "_name": "こんなもの必要ないよね？",
+                        "amount": -5.0,
+                        "attack": null,
+                        "debuff_type": "movetime",
+                        "enemy_skill_id": 15061,
+                        "extra_description": null,
+                        "params": [
+                            "1ターンの間、持ち時間が5秒減少",
+                            1,
+                            50,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null
+                        ],
+                        "turns": 1,
+                        "type": 39,
+                        "unit": "s"
+                    }
+                ],
+                "type": 83
+            },
+            "condition": {
+                "_ai": 100,
+                "_rnd": 0,
+                "condition_attributes": null,
+                "enemies_remaining": null,
+                "forced_one_time": null,
+                "hp_threshold": null,
+                "on_death": null,
+                "one_time": 1
+            },
+            "enemy_skill_id": 15057,
+            "extra_description": null
+        },
+        {
+            "behavior": {
+                "_name": "※カウンターが ai 以上の時 rnd に分岐",
+                "branch_condition": "counter",
+                "branch_value": 40,
+                "compare": ">",
+                "enemy_skill_id": 22,
+                "extra_description": null,
+                "params": [
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    4,
+                    null,
+                    null,
+                    null
+                ],
+                "target_round": 37,
+                "type": 32
+            },
+            "condition": null,
+            "enemy_skill_id": 22,
+            "extra_description": null
+        },
+        {
+            "behavior": {
+                "_name": "＿失敗",
+                "attack": null,
+                "enemy_skill_id": 15063,
+                "extra_description": null,
+                "params": [
+                    null,
+                    15064,
+                    15066,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null
+                ],
+                "skill_ids": [
+                    15064,
+                    15066
+                ],
+                "skills": [
+                    {
+                        "_name": "さて合計コンボは…",
+                        "attack": null,
+                        "enemy_skill_id": 15064,
+                        "extra_description": null,
+                        "params": [
+                            "す、す、す…",
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null
+                        ],
+                        "type": 66
+                    },
+                    {
+                        "_name": "すくな～～～い！",
+                        "attack": {
+                            "atk_multiplier": 200,
+                            "max_hits": 5,
+                            "min_hits": 5
+                        },
+                        "enemy_skill_id": 15066,
+                        "extra_description": null,
+                        "params": [
+                            null,
+                            5,
+                            5,
+                            200,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null
+                        ],
+                        "type": 15
+                    }
+                ],
+                "type": 83
+            },
+            "condition": {
+                "_ai": 100,
+                "_rnd": 0,
+                "condition_attributes": null,
+                "enemies_remaining": null,
+                "forced_one_time": null,
+                "hp_threshold": null,
+                "on_death": null,
+                "one_time": null
+            },
+            "enemy_skill_id": 15063,
+            "extra_description": null
+        },
+        {
+            "behavior": {
+                "_name": "＿成功",
+                "attack": null,
+                "enemy_skill_id": 15062,
+                "extra_description": null,
+                "params": [
+                    null,
+                    15064,
+                    15065,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null
+                ],
+                "skill_ids": [
+                    15064,
+                    15065
+                ],
+                "skills": [
+                    {
+                        "_name": "さて合計コンボは…",
+                        "attack": null,
+                        "enemy_skill_id": 15064,
+                        "extra_description": null,
+                        "params": [
+                            "す、す、す…",
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null
+                        ],
+                        "type": 66
+                    },
+                    {
+                        "_name": "すば～らし～い！",
+                        "attack": null,
+                        "enemy_skill_id": 15065,
+                        "extra_description": null,
+                        "params": [
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null
+                        ],
+                        "type": 40
+                    }
+                ],
+                "type": 83
+            },
+            "condition": {
+                "_ai": 100,
+                "_rnd": 0,
+                "condition_attributes": null,
+                "enemies_remaining": null,
+                "forced_one_time": null,
+                "hp_threshold": null,
+                "on_death": null,
+                "one_time": null
+            },
+            "enemy_skill_id": 15062,
+            "extra_description": null
+        },
+        {
+            "behavior": {
+                "_name": "※パース終了",
+                "enemy_skill_id": 26,
+                "extra_description": null,
+                "params": [
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    4,
+                    null,
+                    null,
+                    null
+                ],
+                "type": 36
+            },
+            "condition": null,
+            "enemy_skill_id": 26,
+            "extra_description": null
+        }
+    ],
+    "has_animation": false,
+    "has_hqimage": false,
+    "jp_card": {
+        "active_skill": {
+            "awoken_bind": 0,
+            "card_bind": 4,
+            "hp": 4000,
+            "levels": 11,
+            "name": "スイーツパフューム",
+            "percentage_max_hp": 0.0,
+            "raw_description": "HPが4000回復、バインド状態を4ターン回復。",
+            "rcv_multiplier_as_hp": 0.0,
+            "skill_id": 1886,
+            "skill_type": 117,
+            "turn_max": 18,
+            "turn_min": 8
+        },
+        "active_skill_id": 1886,
+        "card": {
+            "active_skill_id": 1886,
+            "ancestor_id": 0,
+            "atk_scale": 1.0,
+            "attr_id": 4,
+            "awakenings": [],
+            "base_id": 2068,
+            "collab_id": 0,
+            "cost": 30,
+            "enemy_atk_max": 100,
+            "enemy_atk_min": 100,
+            "enemy_atk_scale": 1.0,
+            "enemy_coins_per_level": 600,
+            "enemy_def_max": 10000,
+            "enemy_def_min": 10000,
+            "enemy_def_scale": 1.0,
+            "enemy_hp_max": 177750,
+            "enemy_hp_min": 5925,
+            "enemy_hp_scale": 1.0,
+            "enemy_max_level": 10,
+            "enemy_skill_counter_increment": 0,
+            "enemy_skill_max_counter": 15,
+            "enemy_skill_refs": [
+                {
+                    "enemy_ai": 0,
+                    "enemy_rnd": 0,
+                    "enemy_skill_id": 318
+                },
+                {
+                    "enemy_ai": 100,
+                    "enemy_rnd": 0,
+                    "enemy_skill_id": 15051
+                },
+                {
+                    "enemy_ai": 14,
+                    "enemy_rnd": 18,
+                    "enemy_skill_id": 6528
+                },
+                {
+                    "enemy_ai": 13,
+                    "enemy_rnd": 19,
+                    "enemy_skill_id": 6528
+                },
+                {
+                    "enemy_ai": 12,
+                    "enemy_rnd": 20,
+                    "enemy_skill_id": 6528
+                },
+                {
+                    "enemy_ai": 11,
+                    "enemy_rnd": 21,
+                    "enemy_skill_id": 6528
+                },
+                {
+                    "enemy_ai": 10,
+                    "enemy_rnd": 22,
+                    "enemy_skill_id": 6528
+                },
+                {
+                    "enemy_ai": 9,
+                    "enemy_rnd": 23,
+                    "enemy_skill_id": 6528
+                },
+                {
+                    "enemy_ai": 8,
+                    "enemy_rnd": 24,
+                    "enemy_skill_id": 6528
+                },
+                {
+                    "enemy_ai": 7,
+                    "enemy_rnd": 25,
+                    "enemy_skill_id": 6528
+                },
+                {
+                    "enemy_ai": 6,
+                    "enemy_rnd": 26,
+                    "enemy_skill_id": 6528
+                },
+                {
+                    "enemy_ai": 5,
+                    "enemy_rnd": 27,
+                    "enemy_skill_id": 6528
+                },
+                {
+                    "enemy_ai": 4,
+                    "enemy_rnd": 28,
+                    "enemy_skill_id": 6528
+                },
+                {
+                    "enemy_ai": 3,
+                    "enemy_rnd": 29,
+                    "enemy_skill_id": 6528
+                },
+                {
+                    "enemy_ai": 2,
+                    "enemy_rnd": 30,
+                    "enemy_skill_id": 6528
+                },
+                {
+                    "enemy_ai": 1,
+                    "enemy_rnd": 31,
+                    "enemy_skill_id": 6528
+                },
+                {
+                    "enemy_ai": 0,
+                    "enemy_rnd": 32,
+                    "enemy_skill_id": 6528
+                },
+                {
+                    "enemy_ai": 0,
+                    "enemy_rnd": 0,
+                    "enemy_skill_id": 16
+                },
+                {
+                    "enemy_ai": 0,
+                    "enemy_rnd": 0,
+                    "enemy_skill_id": 16
+                },
+                {
+                    "enemy_ai": 0,
+                    "enemy_rnd": 0,
+                    "enemy_skill_id": 16
+                },
+                {
+                    "enemy_ai": 0,
+                    "enemy_rnd": 0,
+                    "enemy_skill_id": 16
+                },
+                {
+                    "enemy_ai": 0,
+                    "enemy_rnd": 0,
+                    "enemy_skill_id": 16
+                },
+                {
+                    "enemy_ai": 0,
+                    "enemy_rnd": 0,
+                    "enemy_skill_id": 16
+                },
+                {
+                    "enemy_ai": 0,
+                    "enemy_rnd": 0,
+                    "enemy_skill_id": 16
+                },
+                {
+                    "enemy_ai": 0,
+                    "enemy_rnd": 0,
+                    "enemy_skill_id": 16
+                },
+                {
+                    "enemy_ai": 0,
+                    "enemy_rnd": 0,
+                    "enemy_skill_id": 16
+                },
+                {
+                    "enemy_ai": 0,
+                    "enemy_rnd": 0,
+                    "enemy_skill_id": 16
+                },
+                {
+                    "enemy_ai": 0,
+                    "enemy_rnd": 0,
+                    "enemy_skill_id": 16
+                },
+                {
+                    "enemy_ai": 0,
+                    "enemy_rnd": 0,
+                    "enemy_skill_id": 16
+                },
+                {
+                    "enemy_ai": 0,
+                    "enemy_rnd": 0,
+                    "enemy_skill_id": 16
+                },
+                {
+                    "enemy_ai": 0,
+                    "enemy_rnd": 0,
+                    "enemy_skill_id": 16
+                },
+                {
+                    "enemy_ai": 100,
+                    "enemy_rnd": 0,
+                    "enemy_skill_id": 15055
+                },
+                {
+                    "enemy_ai": 100,
+                    "enemy_rnd": 0,
+                    "enemy_skill_id": 15056
+                },
+                {
+                    "enemy_ai": 100,
+                    "enemy_rnd": 0,
+                    "enemy_skill_id": 15057
+                },
+                {
+                    "enemy_ai": 40,
+                    "enemy_rnd": 37,
+                    "enemy_skill_id": 22
+                },
+                {
+                    "enemy_ai": 100,
+                    "enemy_rnd": 0,
+                    "enemy_skill_id": 15063
+                },
+                {
+                    "enemy_ai": 100,
+                    "enemy_rnd": 0,
+                    "enemy_skill_id": 15062
+                },
+                {
+                    "enemy_ai": 0,
+                    "enemy_rnd": 0,
+                    "enemy_skill_id": 26
+                }
+            ],
+            "enemy_turns": 1,
+            "enemy_turns_alt": 0,
+            "enemy_xp_per_level": 378,
+            "evo_mat_id_1": 0,
+            "evo_mat_id_2": 0,
+            "evo_mat_id_3": 0,
+            "evo_mat_id_4": 0,
+            "evo_mat_id_5": 0,
+            "feed_xp_per_level": 1312,
+            "furigana": "",
+            "group_id": 26,
+            "hp_scale": 1.0,
+            "inheritable": false,
+            "is_collab": false,
+            "is_ult": false,
+            "latent_on_feed": 0,
+            "leader_skill_id": 2595,
+            "limit_mult": 0,
+            "max_atk": 450,
+            "max_hp": 1152,
+            "max_level": 50,
+            "max_rcv": 270,
+            "min_atk": 100,
+            "min_hp": 256,
+            "min_rcv": 60,
+            "monster_no": 2068,
+            "name": "アーミル",
+            "orb_skin_id": 0,
+            "other_fields": [
+                ""
+            ],
+            "random_flags": 2,
+            "rarity": 5,
+            "rcv_scale": 1.0,
+            "released_status": true,
+            "sell_gold_per_level": 555,
+            "sell_mp": 20,
+            "sub_attr_id": 2,
+            "super_awakenings": [],
+            "type_1_id": 7,
+            "type_2_id": -1,
+            "type_3_id": -1,
+            "un_evo_mat_1": 155,
+            "un_evo_mat_2": 156,
+            "un_evo_mat_3": 157,
+            "un_evo_mat_4": 158,
+            "un_evo_mat_5": 159,
+            "unknown_009": 5,
+            "unknown_055": 0,
+            "unknown_056": 0,
+            "use_new_ai": true,
+            "voice_id": 0,
+            "xp_max": 4000000,
+            "xp_scale": 2.5
+        },
+        "critical_failures": [],
+        "enemy_skills": [
+            {
+                "behavior": {
+                    "_name": "※先制コマンドLV1",
+                    "enemy_skill_id": 318,
+                    "extra_description": null,
+                    "level": 1,
+                    "params": [
+                        null,
+                        1,
+                        100,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null
+                    ],
+                    "type": 49
+                },
+                "condition": null,
+                "enemy_skill_id": 318,
+                "extra_description": null
+            },
+            {
+                "behavior": {
+                    "_name": "＿先制",
+                    "attack": null,
+                    "enemy_skill_id": 15051,
+                    "extra_description": null,
+                    "params": [
+                        null,
+                        15052,
+                        15053,
+                        15054,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        8,
+                        null,
+                        null
+                    ],
+                    "skill_ids": [
+                        15052,
+                        15053,
+                        15054
+                    ],
+                    "skills": [
+                        {
+                            "_name": "たくさんのコンボを見せてよ",
+                            "attack": null,
+                            "enemy_skill_id": 15052,
+                            "extra_description": null,
+                            "params": [
+                                "2ターンの間、落ちコンしなくなる",
+                                null,
+                                2,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null
+                            ],
+                            "turns": 2,
+                            "type": 127
+                        },
+                        {
+                            "_name": "そうだなぁ…",
+                            "amount": 240,
+                            "attack": null,
+                            "debuff_type": "movetime",
+                            "enemy_skill_id": 15053,
+                            "extra_description": null,
+                            "params": [
+                                "2ターンの間、持ち時間が増加",
+                                2,
+                                null,
+                                240,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null
+                            ],
+                            "turns": 2,
+                            "type": 39,
+                            "unit": "%"
+                        },
+                        {
+                            "_name": "4ターン合計40コンボだ！",
+                            "attack": null,
+                            "attributes": [
+                                0,
+                                1,
+                                2,
+                                3,
+                                4,
+                                5,
+                                6
+                            ],
+                            "condition_attributes": null,
+                            "count": 6,
+                            "enemy_skill_id": 15054,
+                            "extra_description": null,
+                            "params": [
+                                null,
+                                6,
+                                127,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null
+                            ],
+                            "type": 92
+                        }
+                    ],
+                    "type": 83
+                },
+                "condition": {
+                    "_ai": 100,
+                    "_rnd": 0,
+                    "condition_attributes": null,
+                    "enemies_remaining": null,
+                    "forced_one_time": null,
+                    "hp_threshold": null,
+                    "on_death": null,
+                    "one_time": 8
+                },
+                "enemy_skill_id": 15051,
+                "extra_description": null
+            },
+            {
+                "behavior": {
+                    "_name": "※前ターンでaiコンボ以上の時、rndに分岐",
+                    "branch_condition": "combo",
+                    "branch_value": 14,
+                    "compare": ">=",
+                    "enemy_skill_id": 6528,
+                    "extra_description": null,
+                    "params": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        1,
+                        null,
+                        null
+                    ],
+                    "target_round": 18,
+                    "type": 113
+                },
+                "condition": null,
+                "enemy_skill_id": 6528,
+                "extra_description": null
+            },
+            {
+                "behavior": {
+                    "_name": "※前ターンでaiコンボ以上の時、rndに分岐",
+                    "branch_condition": "combo",
+                    "branch_value": 13,
+                    "compare": ">=",
+                    "enemy_skill_id": 6528,
+                    "extra_description": null,
+                    "params": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        1,
+                        null,
+                        null
+                    ],
+                    "target_round": 19,
+                    "type": 113
+                },
+                "condition": null,
+                "enemy_skill_id": 6528,
+                "extra_description": null
+            },
+            {
+                "behavior": {
+                    "_name": "※前ターンでaiコンボ以上の時、rndに分岐",
+                    "branch_condition": "combo",
+                    "branch_value": 12,
+                    "compare": ">=",
+                    "enemy_skill_id": 6528,
+                    "extra_description": null,
+                    "params": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        1,
+                        null,
+                        null
+                    ],
+                    "target_round": 20,
+                    "type": 113
+                },
+                "condition": null,
+                "enemy_skill_id": 6528,
+                "extra_description": null
+            },
+            {
+                "behavior": {
+                    "_name": "※前ターンでaiコンボ以上の時、rndに分岐",
+                    "branch_condition": "combo",
+                    "branch_value": 11,
+                    "compare": ">=",
+                    "enemy_skill_id": 6528,
+                    "extra_description": null,
+                    "params": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        1,
+                        null,
+                        null
+                    ],
+                    "target_round": 21,
+                    "type": 113
+                },
+                "condition": null,
+                "enemy_skill_id": 6528,
+                "extra_description": null
+            },
+            {
+                "behavior": {
+                    "_name": "※前ターンでaiコンボ以上の時、rndに分岐",
+                    "branch_condition": "combo",
+                    "branch_value": 10,
+                    "compare": ">=",
+                    "enemy_skill_id": 6528,
+                    "extra_description": null,
+                    "params": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        1,
+                        null,
+                        null
+                    ],
+                    "target_round": 22,
+                    "type": 113
+                },
+                "condition": null,
+                "enemy_skill_id": 6528,
+                "extra_description": null
+            },
+            {
+                "behavior": {
+                    "_name": "※前ターンでaiコンボ以上の時、rndに分岐",
+                    "branch_condition": "combo",
+                    "branch_value": 9,
+                    "compare": ">=",
+                    "enemy_skill_id": 6528,
+                    "extra_description": null,
+                    "params": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        1,
+                        null,
+                        null
+                    ],
+                    "target_round": 23,
+                    "type": 113
+                },
+                "condition": null,
+                "enemy_skill_id": 6528,
+                "extra_description": null
+            },
+            {
+                "behavior": {
+                    "_name": "※前ターンでaiコンボ以上の時、rndに分岐",
+                    "branch_condition": "combo",
+                    "branch_value": 8,
+                    "compare": ">=",
+                    "enemy_skill_id": 6528,
+                    "extra_description": null,
+                    "params": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        1,
+                        null,
+                        null
+                    ],
+                    "target_round": 24,
+                    "type": 113
+                },
+                "condition": null,
+                "enemy_skill_id": 6528,
+                "extra_description": null
+            },
+            {
+                "behavior": {
+                    "_name": "※前ターンでaiコンボ以上の時、rndに分岐",
+                    "branch_condition": "combo",
+                    "branch_value": 7,
+                    "compare": ">=",
+                    "enemy_skill_id": 6528,
+                    "extra_description": null,
+                    "params": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        1,
+                        null,
+                        null
+                    ],
+                    "target_round": 25,
+                    "type": 113
+                },
+                "condition": null,
+                "enemy_skill_id": 6528,
+                "extra_description": null
+            },
+            {
+                "behavior": {
+                    "_name": "※前ターンでaiコンボ以上の時、rndに分岐",
+                    "branch_condition": "combo",
+                    "branch_value": 6,
+                    "compare": ">=",
+                    "enemy_skill_id": 6528,
+                    "extra_description": null,
+                    "params": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        1,
+                        null,
+                        null
+                    ],
+                    "target_round": 26,
+                    "type": 113
+                },
+                "condition": null,
+                "enemy_skill_id": 6528,
+                "extra_description": null
+            },
+            {
+                "behavior": {
+                    "_name": "※前ターンでaiコンボ以上の時、rndに分岐",
+                    "branch_condition": "combo",
+                    "branch_value": 5,
+                    "compare": ">=",
+                    "enemy_skill_id": 6528,
+                    "extra_description": null,
+                    "params": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        1,
+                        null,
+                        null
+                    ],
+                    "target_round": 27,
+                    "type": 113
+                },
+                "condition": null,
+                "enemy_skill_id": 6528,
+                "extra_description": null
+            },
+            {
+                "behavior": {
+                    "_name": "※前ターンでaiコンボ以上の時、rndに分岐",
+                    "branch_condition": "combo",
+                    "branch_value": 4,
+                    "compare": ">=",
+                    "enemy_skill_id": 6528,
+                    "extra_description": null,
+                    "params": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        1,
+                        null,
+                        null
+                    ],
+                    "target_round": 28,
+                    "type": 113
+                },
+                "condition": null,
+                "enemy_skill_id": 6528,
+                "extra_description": null
+            },
+            {
+                "behavior": {
+                    "_name": "※前ターンでaiコンボ以上の時、rndに分岐",
+                    "branch_condition": "combo",
+                    "branch_value": 3,
+                    "compare": ">=",
+                    "enemy_skill_id": 6528,
+                    "extra_description": null,
+                    "params": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        1,
+                        null,
+                        null
+                    ],
+                    "target_round": 29,
+                    "type": 113
+                },
+                "condition": null,
+                "enemy_skill_id": 6528,
+                "extra_description": null
+            },
+            {
+                "behavior": {
+                    "_name": "※前ターンでaiコンボ以上の時、rndに分岐",
+                    "branch_condition": "combo",
+                    "branch_value": 2,
+                    "compare": ">=",
+                    "enemy_skill_id": 6528,
+                    "extra_description": null,
+                    "params": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        1,
+                        null,
+                        null
+                    ],
+                    "target_round": 30,
+                    "type": 113
+                },
+                "condition": null,
+                "enemy_skill_id": 6528,
+                "extra_description": null
+            },
+            {
+                "behavior": {
+                    "_name": "※前ターンでaiコンボ以上の時、rndに分岐",
+                    "branch_condition": "combo",
+                    "branch_value": 1,
+                    "compare": ">=",
+                    "enemy_skill_id": 6528,
+                    "extra_description": null,
+                    "params": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        1,
+                        null,
+                        null
+                    ],
+                    "target_round": 31,
+                    "type": 113
+                },
+                "condition": null,
+                "enemy_skill_id": 6528,
+                "extra_description": null
+            },
+            {
+                "behavior": {
+                    "_name": "※前ターンでaiコンボ以上の時、rndに分岐",
+                    "branch_condition": "combo",
+                    "branch_value": 0,
+                    "compare": ">=",
+                    "enemy_skill_id": 6528,
+                    "extra_description": null,
+                    "params": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        1,
+                        null,
+                        null
+                    ],
+                    "target_round": 32,
+                    "type": 113
+                },
+                "condition": null,
+                "enemy_skill_id": 6528,
+                "extra_description": null
+            },
+            {
+                "behavior": {
+                    "_name": "※カウンターを１＋",
+                    "counter": 1,
+                    "enemy_skill_id": 16,
+                    "extra_description": null,
+                    "params": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        4,
+                        null,
+                        null,
+                        null
+                    ],
+                    "set": "+",
+                    "type": 26
+                },
+                "condition": null,
+                "enemy_skill_id": 16,
+                "extra_description": null
+            },
+            {
+                "behavior": {
+                    "_name": "※カウンターを１＋",
+                    "counter": 1,
+                    "enemy_skill_id": 16,
+                    "extra_description": null,
+                    "params": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        4,
+                        null,
+                        null,
+                        null
+                    ],
+                    "set": "+",
+                    "type": 26
+                },
+                "condition": null,
+                "enemy_skill_id": 16,
+                "extra_description": null
+            },
+            {
+                "behavior": {
+                    "_name": "※カウンターを１＋",
+                    "counter": 1,
+                    "enemy_skill_id": 16,
+                    "extra_description": null,
+                    "params": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        4,
+                        null,
+                        null,
+                        null
+                    ],
+                    "set": "+",
+                    "type": 26
+                },
+                "condition": null,
+                "enemy_skill_id": 16,
+                "extra_description": null
+            },
+            {
+                "behavior": {
+                    "_name": "※カウンターを１＋",
+                    "counter": 1,
+                    "enemy_skill_id": 16,
+                    "extra_description": null,
+                    "params": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        4,
+                        null,
+                        null,
+                        null
+                    ],
+                    "set": "+",
+                    "type": 26
+                },
+                "condition": null,
+                "enemy_skill_id": 16,
+                "extra_description": null
+            },
+            {
+                "behavior": {
+                    "_name": "※カウンターを１＋",
+                    "counter": 1,
+                    "enemy_skill_id": 16,
+                    "extra_description": null,
+                    "params": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        4,
+                        null,
+                        null,
+                        null
+                    ],
+                    "set": "+",
+                    "type": 26
+                },
+                "condition": null,
+                "enemy_skill_id": 16,
+                "extra_description": null
+            },
+            {
+                "behavior": {
+                    "_name": "※カウンターを１＋",
+                    "counter": 1,
+                    "enemy_skill_id": 16,
+                    "extra_description": null,
+                    "params": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        4,
+                        null,
+                        null,
+                        null
+                    ],
+                    "set": "+",
+                    "type": 26
+                },
+                "condition": null,
+                "enemy_skill_id": 16,
+                "extra_description": null
+            },
+            {
+                "behavior": {
+                    "_name": "※カウンターを１＋",
+                    "counter": 1,
+                    "enemy_skill_id": 16,
+                    "extra_description": null,
+                    "params": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        4,
+                        null,
+                        null,
+                        null
+                    ],
+                    "set": "+",
+                    "type": 26
+                },
+                "condition": null,
+                "enemy_skill_id": 16,
+                "extra_description": null
+            },
+            {
+                "behavior": {
+                    "_name": "※カウンターを１＋",
+                    "counter": 1,
+                    "enemy_skill_id": 16,
+                    "extra_description": null,
+                    "params": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        4,
+                        null,
+                        null,
+                        null
+                    ],
+                    "set": "+",
+                    "type": 26
+                },
+                "condition": null,
+                "enemy_skill_id": 16,
+                "extra_description": null
+            },
+            {
+                "behavior": {
+                    "_name": "※カウンターを１＋",
+                    "counter": 1,
+                    "enemy_skill_id": 16,
+                    "extra_description": null,
+                    "params": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        4,
+                        null,
+                        null,
+                        null
+                    ],
+                    "set": "+",
+                    "type": 26
+                },
+                "condition": null,
+                "enemy_skill_id": 16,
+                "extra_description": null
+            },
+            {
+                "behavior": {
+                    "_name": "※カウンターを１＋",
+                    "counter": 1,
+                    "enemy_skill_id": 16,
+                    "extra_description": null,
+                    "params": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        4,
+                        null,
+                        null,
+                        null
+                    ],
+                    "set": "+",
+                    "type": 26
+                },
+                "condition": null,
+                "enemy_skill_id": 16,
+                "extra_description": null
+            },
+            {
+                "behavior": {
+                    "_name": "※カウンターを１＋",
+                    "counter": 1,
+                    "enemy_skill_id": 16,
+                    "extra_description": null,
+                    "params": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        4,
+                        null,
+                        null,
+                        null
+                    ],
+                    "set": "+",
+                    "type": 26
+                },
+                "condition": null,
+                "enemy_skill_id": 16,
+                "extra_description": null
+            },
+            {
+                "behavior": {
+                    "_name": "※カウンターを１＋",
+                    "counter": 1,
+                    "enemy_skill_id": 16,
+                    "extra_description": null,
+                    "params": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        4,
+                        null,
+                        null,
+                        null
+                    ],
+                    "set": "+",
+                    "type": 26
+                },
+                "condition": null,
+                "enemy_skill_id": 16,
+                "extra_description": null
+            },
+            {
+                "behavior": {
+                    "_name": "※カウンターを１＋",
+                    "counter": 1,
+                    "enemy_skill_id": 16,
+                    "extra_description": null,
+                    "params": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        4,
+                        null,
+                        null,
+                        null
+                    ],
+                    "set": "+",
+                    "type": 26
+                },
+                "condition": null,
+                "enemy_skill_id": 16,
+                "extra_description": null
+            },
+            {
+                "behavior": {
+                    "_name": "※カウンターを１＋",
+                    "counter": 1,
+                    "enemy_skill_id": 16,
+                    "extra_description": null,
+                    "params": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        4,
+                        null,
+                        null,
+                        null
+                    ],
+                    "set": "+",
+                    "type": 26
+                },
+                "condition": null,
+                "enemy_skill_id": 16,
+                "extra_description": null
+            },
+            {
+                "behavior": {
+                    "_name": "ほら綺麗だろ？",
+                    "attack": null,
+                    "attributes": [
+                        0,
+                        1
+                    ],
+                    "desc_arr": [
+                        "1st, 5th row to Fire orbs",
+                        "2nd, 4th row to Water orbs"
+                    ],
+                    "enemy_skill_id": 15055,
+                    "extra_description": null,
+                    "params": [
+                        null,
+                        17,
+                        1,
+                        10,
+                        2,
+                        4,
+                        4,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        4,
+                        null,
+                        null
+                    ],
+                    "position_type": "row",
+                    "positions": [
+                        1,
+                        5,
+                        2,
+                        4
+                    ],
+                    "type": 78
+                },
+                "condition": {
+                    "_ai": 100,
+                    "_rnd": 0,
+                    "condition_attributes": null,
+                    "enemies_remaining": null,
+                    "forced_one_time": null,
+                    "hp_threshold": null,
+                    "on_death": null,
+                    "one_time": 4
+                },
+                "enemy_skill_id": 15055,
+                "extra_description": null
+            },
+            {
+                "behavior": {
+                    "_name": "急いで出来るかい？",
+                    "attack": null,
+                    "attributes": [
+                        0,
+                        1
+                    ],
+                    "desc_arr": [
+                        "1st, 6th column to Fire orbs",
+                        "2nd, 5th column to Water orbs"
+                    ],
+                    "enemy_skill_id": 15056,
+                    "extra_description": null,
+                    "params": [
+                        null,
+                        33,
+                        1,
+                        18,
+                        2,
+                        12,
+                        4,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        2,
+                        null,
+                        null
+                    ],
+                    "position_type": "column",
+                    "positions": [
+                        1,
+                        6,
+                        2,
+                        5
+                    ],
+                    "type": 76
+                },
+                "condition": {
+                    "_ai": 100,
+                    "_rnd": 0,
+                    "condition_attributes": null,
+                    "enemies_remaining": null,
+                    "forced_one_time": null,
+                    "hp_threshold": null,
+                    "on_death": null,
+                    "one_time": 2
+                },
+                "enemy_skill_id": 15056,
+                "extra_description": null
+            },
+            {
+                "behavior": {
+                    "_name": "＿4回行動",
+                    "attack": null,
+                    "enemy_skill_id": 15057,
+                    "extra_description": null,
+                    "params": [
+                        null,
+                        15058,
+                        15059,
+                        15060,
+                        15061,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        1,
+                        null,
+                        null
+                    ],
+                    "skill_ids": [
+                        15058,
+                        15059,
+                        15060,
+                        15061
+                    ],
+                    "skills": [
+                        {
+                            "_name": "さぁ見せてくれよ",
+                            "attack": null,
+                            "attributes": [
+                                0
+                            ],
+                            "enemy_skill_id": 15058,
+                            "extra_description": null,
+                            "params": [
+                                null,
+                                1,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null
+                            ],
+                            "type": 84
+                        },
+                        {
+                            "_name": "こうして…",
+                            "attack": null,
+                            "attributes": [
+                                1
+                            ],
+                            "desc_arr": [
+                                "2nd, 5th column to Water orbs"
+                            ],
+                            "enemy_skill_id": 15059,
+                            "extra_description": null,
+                            "params": [
+                                null,
+                                18,
+                                2,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null
+                            ],
+                            "position_type": "column",
+                            "positions": [
+                                2,
+                                5
+                            ],
+                            "type": 76
+                        },
+                        {
+                            "_name": "こうだ！",
+                            "attack": null,
+                            "attributes": [
+                                2
+                            ],
+                            "desc_arr": [
+                                "2nd, 4th row to Wood orbs"
+                            ],
+                            "enemy_skill_id": 15060,
+                            "extra_description": null,
+                            "params": [
+                                null,
+                                10,
+                                4,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null
+                            ],
+                            "position_type": "row",
+                            "positions": [
+                                2,
+                                4
+                            ],
+                            "type": 78
+                        },
+                        {
+                            "_name": "こんなもの必要ないよね？",
+                            "amount": -5.0,
+                            "attack": null,
+                            "debuff_type": "movetime",
+                            "enemy_skill_id": 15061,
+                            "extra_description": null,
+                            "params": [
+                                "1ターンの間、持ち時間が5秒減少",
+                                1,
+                                50,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null
+                            ],
+                            "turns": 1,
+                            "type": 39,
+                            "unit": "s"
+                        }
+                    ],
+                    "type": 83
+                },
+                "condition": {
+                    "_ai": 100,
+                    "_rnd": 0,
+                    "condition_attributes": null,
+                    "enemies_remaining": null,
+                    "forced_one_time": null,
+                    "hp_threshold": null,
+                    "on_death": null,
+                    "one_time": 1
+                },
+                "enemy_skill_id": 15057,
+                "extra_description": null
+            },
+            {
+                "behavior": {
+                    "_name": "※カウンターが ai 以上の時 rnd に分岐",
+                    "branch_condition": "counter",
+                    "branch_value": 40,
+                    "compare": ">",
+                    "enemy_skill_id": 22,
+                    "extra_description": null,
+                    "params": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        4,
+                        null,
+                        null,
+                        null
+                    ],
+                    "target_round": 37,
+                    "type": 32
+                },
+                "condition": null,
+                "enemy_skill_id": 22,
+                "extra_description": null
+            },
+            {
+                "behavior": {
+                    "_name": "＿失敗",
+                    "attack": null,
+                    "enemy_skill_id": 15063,
+                    "extra_description": null,
+                    "params": [
+                        null,
+                        15064,
+                        15066,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null
+                    ],
+                    "skill_ids": [
+                        15064,
+                        15066
+                    ],
+                    "skills": [
+                        {
+                            "_name": "さて合計コンボは…",
+                            "attack": null,
+                            "enemy_skill_id": 15064,
+                            "extra_description": null,
+                            "params": [
+                                "す、す、す…",
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null
+                            ],
+                            "type": 66
+                        },
+                        {
+                            "_name": "すくな～～～い！",
+                            "attack": {
+                                "atk_multiplier": 200,
+                                "max_hits": 5,
+                                "min_hits": 5
+                            },
+                            "enemy_skill_id": 15066,
+                            "extra_description": null,
+                            "params": [
+                                null,
+                                5,
+                                5,
+                                200,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null
+                            ],
+                            "type": 15
+                        }
+                    ],
+                    "type": 83
+                },
+                "condition": {
+                    "_ai": 100,
+                    "_rnd": 0,
+                    "condition_attributes": null,
+                    "enemies_remaining": null,
+                    "forced_one_time": null,
+                    "hp_threshold": null,
+                    "on_death": null,
+                    "one_time": null
+                },
+                "enemy_skill_id": 15063,
+                "extra_description": null
+            },
+            {
+                "behavior": {
+                    "_name": "＿成功",
+                    "attack": null,
+                    "enemy_skill_id": 15062,
+                    "extra_description": null,
+                    "params": [
+                        null,
+                        15064,
+                        15065,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null
+                    ],
+                    "skill_ids": [
+                        15064,
+                        15065
+                    ],
+                    "skills": [
+                        {
+                            "_name": "さて合計コンボは…",
+                            "attack": null,
+                            "enemy_skill_id": 15064,
+                            "extra_description": null,
+                            "params": [
+                                "す、す、す…",
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null
+                            ],
+                            "type": 66
+                        },
+                        {
+                            "_name": "すば～らし～い！",
+                            "attack": null,
+                            "enemy_skill_id": 15065,
+                            "extra_description": null,
+                            "params": [
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null
+                            ],
+                            "type": 40
+                        }
+                    ],
+                    "type": 83
+                },
+                "condition": {
+                    "_ai": 100,
+                    "_rnd": 0,
+                    "condition_attributes": null,
+                    "enemies_remaining": null,
+                    "forced_one_time": null,
+                    "hp_threshold": null,
+                    "on_death": null,
+                    "one_time": null
+                },
+                "enemy_skill_id": 15062,
+                "extra_description": null
+            },
+            {
+                "behavior": {
+                    "_name": "※パース終了",
+                    "enemy_skill_id": 26,
+                    "extra_description": null,
+                    "params": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        4,
+                        null,
+                        null,
+                        null
+                    ],
+                    "type": 36
+                },
+                "condition": null,
+                "enemy_skill_id": 26,
+                "extra_description": null
+            }
+        ],
+        "leader_skill": {
+            "_atk": 5.0,
+            "_hp": 1.0,
+            "_rcv": 1.0,
+            "_shield": 0,
+            "monster_ids": [
+                208,
+                210
+            ],
+            "name": "魅惑のソナタ",
+            "raw_description": "チームにムーンライトカーバンクルと アースライトカーバンクルがいると攻撃力が5倍。",
+            "skill_id": 2595,
+            "skill_type": 125
+        },
+        "leader_skill_id": 2595,
+        "monster_id": 2068,
+        "monster_no": 2068,
+        "server": "Server.jp"
+    },
+    "kr_card": {
+        "active_skill": {
+            "awoken_bind": 0,
+            "card_bind": 4,
+            "hp": 4000,
+            "levels": 11,
+            "name": "스위트 퍼퓸",
+            "percentage_max_hp": 0.0,
+            "raw_description": "HP를 4000 회복, 바인드 상태를 4턴 회복",
+            "rcv_multiplier_as_hp": 0.0,
+            "skill_id": 1886,
+            "skill_type": 117,
+            "turn_max": 18,
+            "turn_min": 8
+        },
+        "active_skill_id": 1886,
+        "card": {
+            "active_skill_id": 1886,
+            "ancestor_id": 0,
+            "atk_scale": 1.0,
+            "attr_id": 4,
+            "awakenings": [],
+            "base_id": 2068,
+            "collab_id": 0,
+            "cost": 30,
+            "enemy_atk_max": 6990,
+            "enemy_atk_min": 233,
+            "enemy_atk_scale": 1.0,
+            "enemy_coins_per_level": 600,
+            "enemy_def_max": 700,
+            "enemy_def_min": 70,
+            "enemy_def_scale": 1.0,
+            "enemy_hp_max": 177750,
+            "enemy_hp_min": 5925,
+            "enemy_hp_scale": 1.0,
+            "enemy_max_level": 10,
+            "enemy_skill_counter_increment": 0,
+            "enemy_skill_max_counter": 0,
+            "enemy_skill_refs": [],
+            "enemy_turns": 2,
+            "enemy_turns_alt": 0,
+            "enemy_xp_per_level": 378,
+            "evo_mat_id_1": 0,
+            "evo_mat_id_2": 0,
+            "evo_mat_id_3": 0,
+            "evo_mat_id_4": 0,
+            "evo_mat_id_5": 0,
+            "feed_xp_per_level": 1312,
+            "furigana": "",
+            "group_id": 26,
+            "hp_scale": 1.0,
+            "inheritable": false,
+            "is_collab": false,
+            "is_ult": false,
+            "latent_on_feed": 0,
+            "leader_skill_id": 2595,
+            "limit_mult": 0,
+            "max_atk": 450,
+            "max_hp": 1152,
+            "max_level": 50,
+            "max_rcv": 270,
+            "min_atk": 100,
+            "min_hp": 256,
+            "min_rcv": 60,
+            "monster_no": 2068,
+            "name": "아미르",
+            "orb_skin_id": 0,
+            "other_fields": [
+                ""
+            ],
+            "random_flags": 2,
+            "rarity": 5,
+            "rcv_scale": 1.0,
+            "released_status": true,
+            "sell_gold_per_level": 555,
+            "sell_mp": 20,
+            "sub_attr_id": 2,
+            "super_awakenings": [],
+            "type_1_id": 7,
+            "type_2_id": -1,
+            "type_3_id": -1,
+            "un_evo_mat_1": 155,
+            "un_evo_mat_2": 156,
+            "un_evo_mat_3": 157,
+            "un_evo_mat_4": 158,
+            "un_evo_mat_5": 159,
+            "unknown_009": 5,
+            "unknown_055": 0,
+            "unknown_056": 0,
+            "use_new_ai": false,
+            "voice_id": 0,
+            "xp_max": 4000000,
+            "xp_scale": 2.5
+        },
+        "critical_failures": [],
+        "enemy_skills": [],
+        "leader_skill": {
+            "_atk": 5.0,
+            "_hp": 1.0,
+            "_rcv": 1.0,
+            "_shield": 0,
+            "monster_ids": [
+                208,
+                210
+            ],
+            "name": "매혹의 소나타",
+            "raw_description": "팀 내에 달빛 카벙클과 대지의 빛 카벙클이 있으면 공격력이 5배가 됨",
+            "skill_id": 2595,
+            "skill_type": 125
+        },
+        "leader_skill_id": 2595,
+        "monster_id": 2068,
+        "monster_no": 2068,
+        "server": "Server.kr"
+    },
+    "leader_skill": {
+        "en_text": "5x ATK if [208, 210] is on the team",
+        "jp_skill": {
+            "_atk": 5.0,
+            "_hp": 1.0,
+            "_rcv": 1.0,
+            "_shield": 0,
+            "monster_ids": [
+                208,
+                210
+            ],
+            "name": "魅惑のソナタ",
+            "raw_description": "チームにムーンライトカーバンクルと アースライトカーバンクルがいると攻撃力が5倍。",
+            "skill_id": 2595,
+            "skill_type": 125
+        },
+        "kr_skill": {
+            "_atk": 5.0,
+            "_hp": 1.0,
+            "_rcv": 1.0,
+            "_shield": 0,
+            "monster_ids": [
+                208,
+                210
+            ],
+            "name": "매혹의 소나타",
+            "raw_description": "팀 내에 달빛 카벙클과 대지의 빛 카벙클이 있으면 공격력이 5배가 됨",
+            "skill_id": 2595,
+            "skill_type": 125
+        },
+        "na_skill": {
+            "_atk": 5.0,
+            "_hp": 1.0,
+            "_rcv": 1.0,
+            "_shield": 0,
+            "monster_ids": [
+                208,
+                210
+            ],
+            "name": "Alluring Sonata",
+            "raw_description": "5x ATK when Moonlight Carbuncle & Earth Light Carbuncle are on your team",
+            "skill_id": 2595,
+            "skill_type": 125
+        },
+        "skill_id": 2595,
+        "skill_type_tags": [
+            "LsCondition.ENHANCED_ATK"
+        ]
+    },
+    "monster_id": 2068,
+    "na_card": {
+        "active_skill": {
+            "awoken_bind": 0,
+            "card_bind": 4,
+            "hp": 4000,
+            "levels": 11,
+            "name": "Sweet Perfume",
+            "percentage_max_hp": 0.0,
+            "raw_description": "Recovers 4000 HP; reduces bind status by 4 turns",
+            "rcv_multiplier_as_hp": 0.0,
+            "skill_id": 1886,
+            "skill_type": 117,
+            "turn_max": 18,
+            "turn_min": 8
+        },
+        "active_skill_id": 1886,
+        "card": {
+            "active_skill_id": 1886,
+            "ancestor_id": 0,
+            "atk_scale": 1.0,
+            "attr_id": 4,
+            "awakenings": [],
+            "base_id": 2068,
+            "collab_id": 0,
+            "cost": 30,
+            "enemy_atk_max": 6990,
+            "enemy_atk_min": 233,
+            "enemy_atk_scale": 1.0,
+            "enemy_coins_per_level": 600,
+            "enemy_def_max": 700,
+            "enemy_def_min": 70,
+            "enemy_def_scale": 1.0,
+            "enemy_hp_max": 177750,
+            "enemy_hp_min": 5925,
+            "enemy_hp_scale": 1.0,
+            "enemy_max_level": 10,
+            "enemy_skill_counter_increment": 0,
+            "enemy_skill_max_counter": 0,
+            "enemy_skill_refs": [],
+            "enemy_turns": 2,
+            "enemy_turns_alt": 0,
+            "enemy_xp_per_level": 378,
+            "evo_mat_id_1": 0,
+            "evo_mat_id_2": 0,
+            "evo_mat_id_3": 0,
+            "evo_mat_id_4": 0,
+            "evo_mat_id_5": 0,
+            "feed_xp_per_level": 1312,
+            "furigana": "",
+            "group_id": 26,
+            "hp_scale": 1.0,
+            "inheritable": false,
+            "is_collab": false,
+            "is_ult": false,
+            "latent_on_feed": 0,
+            "leader_skill_id": 2595,
+            "limit_mult": 0,
+            "max_atk": 450,
+            "max_hp": 1152,
+            "max_level": 50,
+            "max_rcv": 270,
+            "min_atk": 100,
+            "min_hp": 256,
+            "min_rcv": 60,
+            "monster_no": 2068,
+            "name": "Aamir",
+            "orb_skin_id": 0,
+            "other_fields": [
+                ""
+            ],
+            "random_flags": 2,
+            "rarity": 5,
+            "rcv_scale": 1.0,
+            "released_status": true,
+            "sell_gold_per_level": 555,
+            "sell_mp": 20,
+            "sub_attr_id": 2,
+            "super_awakenings": [],
+            "type_1_id": 7,
+            "type_2_id": -1,
+            "type_3_id": -1,
+            "un_evo_mat_1": 155,
+            "un_evo_mat_2": 156,
+            "un_evo_mat_3": 157,
+            "un_evo_mat_4": 158,
+            "un_evo_mat_5": 159,
+            "unknown_009": 5,
+            "unknown_055": 0,
+            "unknown_056": 0,
+            "use_new_ai": false,
+            "voice_id": 0,
+            "xp_max": 4000000,
+            "xp_scale": 2.5
+        },
+        "critical_failures": [],
+        "enemy_skills": [],
+        "leader_skill": {
+            "_atk": 5.0,
+            "_hp": 1.0,
+            "_rcv": 1.0,
+            "_shield": 0,
+            "monster_ids": [
+                208,
+                210
+            ],
+            "name": "Alluring Sonata",
+            "raw_description": "5x ATK when Moonlight Carbuncle & Earth Light Carbuncle are on your team",
+            "skill_id": 2595,
+            "skill_type": 125
+        },
+        "leader_skill_id": 2595,
+        "monster_id": 2068,
+        "monster_no": 2068,
+        "server": "Server.na"
+    }
+}

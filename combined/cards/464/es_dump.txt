@@ -1,0 +1,34 @@
+#464  - モルボルキング
+False : use_new_ai
+1 : starting/max counter
+0 : counter increment
+
+ESPreemptive(49:355) -> ESPreemptive
+Enable preempt if level 5
+
+ESBranchLevel(35:25) -> ESBranchLevel
+Branch on level > 5, target rnd 4
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 1, target rnd 8
+
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b1
+
+ESPoisonChangeRandom(60:1931) -> 消化液
+Change Random 3 to Poison
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESBindRandom(1:184) -> Bad Breath
+	Condition: When < 30% hp , one-time use (ai:100 rnd:0) (one-time: 1)
+Bind 6 random cards for 1~3 turns
+
+ESAttackUPRemainingEnemies(17:185) -> Malboro Song
+	Condition: When < 75% hp, when <= 1 enemies remain (ai:100 rnd:0)
+Increase damage to 200% for the next 5 turns
+

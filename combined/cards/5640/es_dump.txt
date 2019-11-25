@@ -1,0 +1,41 @@
+#5640  - 魔を滅する者・リナ＝インバース
+True : use_new_ai
+0 : starting/max counter
+0 : counter increment
+
+ESPreemptive(49:318) -> ESPreemptive
+Enable preempt if level 1
+
+ESSetCounter(26:16) -> ESSetCounter
+counter + 1
+
+ESBranchCounter(32:22) -> ESBranchCounter
+Branch on counter > 4, target rnd 9
+
+ESBranchCounter(32:22) -> ESBranchCounter
+Branch on counter > 3, target rnd 8
+
+ESBranchCounter(32:22) -> ESBranchCounter
+Branch on counter > 2, target rnd 7
+
+ESInactivity(66:14956) -> ――悪夢の王の一片よ
+Do nothing
+
+ESInactivity(66:14957) -> 凍れる黒き虚無の刃よ
+Do nothing
+
+ESInactivity(66:14958) -> 共に滅びの道を歩まん
+Do nothing
+
+ESSetCounter(25:15) -> ESSetCounter
+counter = 0
+
+ESGravity(50:14959) -> 神滅斬！
+Player -500% HP
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESTypeResist(118:14955) -> 悪魔半減
+Reduce damage from Devil by 50%
+

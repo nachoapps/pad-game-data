@@ -1,0 +1,92 @@
+#2410  - Moonlit Prowler, Vampire Lord
+True : use_new_ai
+1 : starting/max counter
+1 : counter increment
+
+ESPreemptive(49:318) -> ESPreemptive
+Enable preempt if level 1
+
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 1, target rnd 6
+
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b1
+
+SkillSet:
+	[0] ESStatusShield(20:11351) -> Haughty
+	Voids status ailments for 999 turns
+	[1] ESSkillDelay(89:11352) -> Bow before me
+	Delay active skills by 3 turns, Deal 120% damage
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESBranchHP(28:18) -> ESBranchHP
+Branch on hp < 1, target rnd 23
+
+ESBranchHP(28:18) -> ESBranchHP
+Branch on hp < 20, target rnd 17
+
+ESBranchHP(28:18) -> ESBranchHP
+Branch on hp < 50, target rnd 13
+
+ESRecoverEnemy(86:11355) -> Bloody Fangs
+	Condition: One-time use (ai:50 rnd:0) (one-time: 1)
+Enemy recover 10% hp, Deal 110% damage
+
+ESOrbChangeAttack(48:11353) -> Blood Pain
+	Condition: 50% chance (ai:50 rnd:0)
+Change Random to Dark, Deal 115% damage
+
+ESAttackMultihit(15:11354) -> Nightmare Raid
+Deal 130% damage (2 hits, 65% each)
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 2, target rnd 9
+
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b11
+
+SkillSet:
+	[0] ESAbsorbCombo(67:11357) -> Gleam of the Red Moon
+	Absorb combo <= 6 damage for 99 turns
+	[1] ESDamageShield(74:11358) -> Stand in awe of my power
+	Reduce damage from all sources by 50% for 10 turns
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 4, target rnd 21
+
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b111
+
+ESAttackUPRemainingEnemies(17:11359) -> Let me finish this
+	Condition: when <= 1 enemies remain (ai:100 rnd:0)
+Increase damage to 150% for the next 99 turns
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESAttackMultihit(15:11360) -> Infinity Claws
+Deal 400% damage (8 hits, 50% each)
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+SkillSet:
+	[0] ESRecoverEnemy(86:11362) -> I can't be defeated
+	Enemy recover 100% hp
+	[1] ESSkyfall(68:11363) -> Don't underestimate me
+	Mortal Poison skyfall +20% for 1 turns
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESResolve(73:11349) -> Resolve
+Survive attacks with 1 HP when HP > 50%
+

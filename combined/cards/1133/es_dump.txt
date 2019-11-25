@@ -1,0 +1,27 @@
+#1133  - Dark Blue Skydragon, Nirai Kanai
+True : use_new_ai
+0 : starting/max counter
+0 : counter increment
+
+ESPreemptive(49:318) -> ESPreemptive
+Enable preempt if level 1
+
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 1, target rnd 6
+
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b1
+
+ESAttackMultihit(15:794) -> Dark Skydragon Flight
+Deal 85% damage
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESRowSpawnMulti(79:864) -> Exa-Freeze Breath
+	Condition: When < 50% hp (ai:100 rnd:0)
+Change 4th, 5th row to Water orbs, Deal 150% damage
+
+ESAttackMultihit(15:474) -> Breath of the Blue Sky
+Deal 80%~120% damage (2~3 hits, 40% each)
+

@@ -1,0 +1,80 @@
+#2701  - Squad 12 Captain, Mayuri Kurotsuchi
+True : use_new_ai
+1 : starting/max counter
+1 : counter increment
+
+ESPreemptive(49:318) -> ESPreemptive
+Enable preempt if level 1
+
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 1, target rnd 6
+
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b1
+
+SkillSet:
+	[0] ESInactivity(66:2778) -> I'm the Captain of Squad 12,
+Mayuri Kurotsuchi.
+	Do nothing
+	[1] ESSkillDelay(89:2779) -> because soon you will
+no longer know anything.
+	Delay active skills by 2 turns
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESBranchHP(28:18) -> ESBranchHP
+Branch on hp < 50, target rnd 12
+
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 2, target rnd 10
+
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b11
+
+ESBindAttack(63:2781) -> Claw out! Ashisogijizo.
+Bind 1 random subs for 3 turns, Deal 90% damage
+
+ESAttackMultihit(15:2782) -> Here!
+	Condition: One-time use (ai:100 rnd:0) (one-time: 1)
+Deal 90% damage
+
+ESAttackMultihit(15:2783) -> And here! And here!
+Deal 100% damage (2 hits, 50% each)
+
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 4, target rnd 17
+
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b111
+
+ESBranchCard(90:2790) -> ESBranchCard
+Branch on player_cards HAS [2682, 2683], target rnd 16
+
+SkillSet:
+	[0] ESInactivity(66:2862) -> Bankai
+	Do nothing
+	[1] ESRandomSpawn(92:2784) -> Konjiki Ashisogijizo
+	Spawn random 6 Poison orbs
+
+SkillSet:
+	[0] ESInactivity(66:2789) -> Don't get carried away!!!!
+	Do nothing
+	[1] ESInactivity(66:2862) -> Bankai
+	Do nothing
+	[2] ESRandomSpawn(92:2784) -> Konjiki Ashisogijizo
+	Spawn random 6 Poison orbs
+
+ESAttackMultihit(15:2786) -> Aaarrgghh!
+	Condition: When < 15% hp (ai:100 rnd:0)
+Deal 200% damage (2 hits, 100% each)
+
+ESRandomSpawn(92:2785) -> Hya Ha!!
+	Condition: When fire, water, wood, light, dark, heal, jammer, mortal poison orbs are on the board (ai:100 rnd:0)
+Spawn random 1 Poison orbs, Deal 120% damage
+
+SkillSet:
+	Condition: On death (ai:100 rnd:0)
+	[0] ESRowSpawnMulti(78:2787) -> That was a close one... Goodbye.
+	Change 5th row to Water orbs
+

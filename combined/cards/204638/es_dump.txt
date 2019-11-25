@@ -1,0 +1,101 @@
+#204638  - Holy Inferno Companion Dragon, Harnis
+True : use_new_ai
+1 : starting/max counter
+1 : counter increment
+
+ESPreemptive(49:3402) -> ESPreemptive
+Enable preempt if level 4
+
+ESBranchLevel(35:25) -> ESBranchLevel
+Branch on level > 4, target rnd 4
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 1, target rnd 8
+
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b1
+
+ESAttributeBlock(107:10310) -> Green Exception
+Unable to match Wood orbs for 3 turns
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 2, target rnd 12
+
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b11
+
+ESBombFixedSpawn(103:10311) -> Affliction Bombing
+Spawn Bomb orbs in the specified positions
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESBranchHP(28:18) -> ESBranchHP
+Branch on hp < 15, target rnd 24
+
+ESBranchRemainingEnemies(120:8595) -> ESBranchRemainingEnemies
+Branch on remaining enemies <= 1, target rnd 20
+
+ESSetCounter(26:16) -> ESSetCounter
+counter + 1
+
+ESBranchCounter(32:22) -> ESBranchCounter
+Branch on counter > 3, target rnd 26
+
+ESOrbChangeAttack(48:10314) -> Soppy Flame
+	Condition: 33% chance (ai:0 rnd:33)
+Change Random to Fire, Deal 110% damage
+
+ESAttackMultihit(15:10315) -> Flame Rush
+	Condition: 33% chance (ai:0 rnd:33)
+Deal 120% damage (3 hits, 40% each)
+
+ESBombRandomSpawn(102:10316) -> Affliction Bombing
+	Condition: 34% chance (ai:0 rnd:34)
+Spawn random 3 Bomb orbs
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 4, target rnd 14
+
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b111
+
+SkillSet:
+	[0] ESGravity(50:10317) -> Burning Affliction
+	Player -99% HP
+	[1] ESAttackUPRemainingEnemies(17:10318) -> Blazing Fire
+	Increase damage to 200% for the next 99 turns
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESAttackMultihit(15:10320) -> Blaze Rush
+Deal 200% damage (4 hits, 50% each)
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESSetCounter(25:15) -> ESSetCounter
+counter = 0
+
+ESBranchRemainingEnemies(120:8595) -> ESBranchRemainingEnemies
+Branch on remaining enemies <= 2, target rnd 29
+
+ESBoardChangeAttackBits(85:10313) -> Flame Enclosure
+Change all orbs to Fire, Wood, Light, Heal, Deal 120% damage
+
+ESBombRandomSpawn(102:10312) -> Affliction Bombing
+Spawn random 1 locked Bomb orbs
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+

@@ -1,0 +1,54 @@
+#100226  - Alt. Great Valkyrie
+True : use_new_ai
+1 : starting/max counter
+0 : counter increment
+
+ESPreemptive(49:318) -> ESPreemptive
+Enable preempt if level 1
+
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 1, target rnd 6
+
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b1
+
+SkillSet:
+	[0] ESStatusShield(20:9356) -> White Valkyrie Shield
+	Voids status ailments for 10 turns
+	[1] ESLeaderSwap(75:9357) -> Valkyrie Dance
+	Leader changes to random sub for 3 turns
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESBranchCounter(32:22) -> ESBranchCounter
+Branch on counter > 1, target rnd 10
+
+ESRecoverEnemy(86:9363) -> Resurrection
+	Condition: When < 50% hp (ai:100 rnd:0)
+Enemy recover 100% hp
+
+ESSetCounter(26:16) -> ESSetCounter
+counter + 1
+
+SkillSet:
+	Condition: One-time use (ai:100 rnd:0) (one-time: 1)
+	[0] ESBindRandom(1:9359) -> Gleipnir
+	Bind 2 random cards for 5 turns
+	[1] ESAbsorbCombo(67:9360) -> Fylgja's Protection
+	Absorb combo <= 6 damage for 10 turns
+
+ESAttackMultihit(15:9364) -> Valkyrie Blade
+	Condition: 90% chance when < 30% hp (ai:90 rnd:0)
+Deal 360%~450% damage (4~5 hits, 90% each)
+
+ESAttackMultihit(15:9362) -> Double Slash
+	Condition: 50% chance (ai:50 rnd:0)
+Deal 200% damage (2 hits, 100% each)
+
+ESFixedStart(101:9365) -> Sword of Fate
+Fix orb movement starting point to random position on the board, Deal 150% damage
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+

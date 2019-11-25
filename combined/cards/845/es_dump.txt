@@ -1,0 +1,19 @@
+#845  - DD・ドラゴニュート
+False : use_new_ai
+1 : starting/max counter
+0 : counter increment
+
+ESBranchLevel(35:25) -> ESBranchLevel
+Branch on level > 5, target rnd 3
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESBindAttribute(2:573) -> Water Pistol
+	Condition: When < 75% hp , one-time use (ai:70 rnd:0) (one-time: 1)
+Bind Fire cards for 2~4 turns
+
+ESAttackMultihit(15:575) -> Thrusting stab
+	Condition: 70% chance when < 50% hp (ai:70 rnd:0)
+Deal 150% damage
+

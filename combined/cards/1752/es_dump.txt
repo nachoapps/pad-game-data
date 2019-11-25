@@ -1,0 +1,58 @@
+#1752  - Blue Time Sorceress, Ars Paulina
+False : use_new_ai
+1 : starting/max counter
+1 : counter increment
+
+ESPreemptive(49:318) -> ESPreemptive
+Enable preempt if level 1
+
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 1, target rnd 6
+
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b1
+
+ESStatusShield(20:1724) -> Lesser Key of Solomon
+Voids status ailments for 999 turns
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESBranchHP(28:18) -> ESBranchHP
+Branch on hp < 50, target rnd 12
+
+ESOrbChangeAttack(48:1733) -> Tidal Hurricane
+	Condition: 50% chance when < 30% hp (ai:50 rnd:0)
+Change Random to Water, Deal 200% damage
+
+ESOrbChangeAttack(48:1734) -> Tidal Hurricane
+	Condition: When < 30% hp (ai:100 rnd:0)
+Change Random to Wood, Deal 200% damage
+
+ESOrbChangeAttack(48:1731) -> Grimoire of Water
+	Condition: 30% chance (ai:30 rnd:0)
+Change Heal to Water, Deal 50% damage
+
+ESPoisonChangeRandomAttack(64:1732) -> Poison Rain
+	Condition: When < 75% hp , one-time use (ai:100 rnd:0) (one-time: 1)
+Change Random 5 to Poison, Deal 25% damage
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 2, target rnd 7
+
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b11
+
+ESSkyfall(68:1730) -> Aqua Evocation
+	Condition: When < 50% hp (ai:100 rnd:0)
+Water skyfall +25% for 99 turns
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESAttributeResist(72:1740) -> Light & Dark Resistance
+Reduce damage from Light, Dark by 50%
+

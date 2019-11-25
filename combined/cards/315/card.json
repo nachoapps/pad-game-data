@@ -1,0 +1,1254 @@
+{
+    "active_skill": {
+        "en_text": "Deal 35000 Water damage to all Fire Att. enemies",
+        "jp_skill": {
+            "attack_attribute": 1,
+            "damage": 35000,
+            "enemy_attribute": 0,
+            "levels": 6,
+            "name": "フリーズストライク",
+            "raw_description": "火属性の敵に水属性の35000ダメージ。",
+            "skill_id": 164,
+            "skill_type": 42,
+            "turn_max": 15,
+            "turn_min": 10
+        },
+        "kr_skill": {
+            "attack_attribute": 1,
+            "damage": 35000,
+            "enemy_attribute": 0,
+            "levels": 6,
+            "name": "프리즈 스트라이크",
+            "raw_description": "불속성의 몬스터에게 물속성의 35000 대미지로 공격",
+            "skill_id": 164,
+            "skill_type": 42,
+            "turn_max": 15,
+            "turn_min": 10
+        },
+        "na_skill": {
+            "attack_attribute": 1,
+            "damage": 35000,
+            "enemy_attribute": 0,
+            "levels": 6,
+            "name": "Freeze Strike",
+            "raw_description": "Inflicts 35,000 Water damage attack on Fire Att. enemies",
+            "skill_id": 164,
+            "skill_type": 42,
+            "turn_max": 15,
+            "turn_min": 10
+        },
+        "skill_id": 164,
+        "skill_type_tags": [
+            "AsCondition.ATTRIBUTE_ATTACK"
+        ]
+    },
+    "en_as_text": "Deal 35000 Water damage to all Fire Att. enemies",
+    "en_ls_text": "May survive when HP is reduced to 0 (HP>70%)",
+    "enemy_behavior": [
+        {
+            "behavior": {
+                "_name": "ERROR18",
+                "branch_condition": "hp",
+                "branch_value": 50,
+                "compare": "<",
+                "enemy_skill_id": 18,
+                "extra_description": null,
+                "params": [
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    4,
+                    null,
+                    null,
+                    null
+                ],
+                "target_round": 4,
+                "type": 28
+            },
+            "condition": null,
+            "enemy_skill_id": 18,
+            "extra_description": null
+        },
+        {
+            "behavior": {
+                "_name": "Water Bind",
+                "attack": null,
+                "enemy_skill_id": 366,
+                "extra_description": null,
+                "max_turns": 4,
+                "min_turns": 2,
+                "params": [
+                    "Binds Water Att. allies for a number of turns",
+                    1,
+                    2,
+                    4,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    1,
+                    null,
+                    null
+                ],
+                "target_attribute": 1,
+                "target_count": null,
+                "targets": [
+                    "TargetType.attributes"
+                ],
+                "type": 2
+            },
+            "condition": {
+                "_ai": 100,
+                "_rnd": 0,
+                "condition_attributes": null,
+                "enemies_remaining": null,
+                "forced_one_time": null,
+                "hp_threshold": null,
+                "on_death": null,
+                "one_time": 1
+            },
+            "enemy_skill_id": 366,
+            "extra_description": null
+        },
+        {
+            "behavior": {
+                "_name": "ERROR26",
+                "enemy_skill_id": 26,
+                "extra_description": null,
+                "params": [
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    4,
+                    null,
+                    null,
+                    null
+                ],
+                "type": 36
+            },
+            "condition": null,
+            "enemy_skill_id": 26,
+            "extra_description": null
+        },
+        {
+            "behavior": {
+                "_name": "Freeze Strike",
+                "attack": {
+                    "atk_multiplier": 150,
+                    "max_hits": 1,
+                    "min_hits": 1
+                },
+                "enemy_skill_id": 422,
+                "extra_description": null,
+                "params": [
+                    null,
+                    1,
+                    1,
+                    150,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null
+                ],
+                "type": 15
+            },
+            "condition": {
+                "_ai": 100,
+                "_rnd": 0,
+                "condition_attributes": null,
+                "enemies_remaining": null,
+                "forced_one_time": null,
+                "hp_threshold": null,
+                "on_death": null,
+                "one_time": null
+            },
+            "enemy_skill_id": 422,
+            "extra_description": null
+        }
+    ],
+    "enemy_behavior_jp": [
+        {
+            "behavior": {
+                "_name": "※HPが ai %以下の時 rnd に分岐",
+                "branch_condition": "hp",
+                "branch_value": 50,
+                "compare": "<",
+                "enemy_skill_id": 18,
+                "extra_description": null,
+                "params": [
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    4,
+                    null,
+                    null,
+                    null
+                ],
+                "target_round": 4,
+                "type": 28
+            },
+            "condition": null,
+            "enemy_skill_id": 18,
+            "extra_description": null
+        },
+        {
+            "behavior": {
+                "_name": "ウォーターバインド",
+                "attack": null,
+                "enemy_skill_id": 366,
+                "extra_description": null,
+                "max_turns": 4,
+                "min_turns": 2,
+                "params": [
+                    "水属性が数ターンの間、行動不能",
+                    1,
+                    2,
+                    4,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    1,
+                    null,
+                    null
+                ],
+                "target_attribute": 1,
+                "target_count": null,
+                "targets": [
+                    "TargetType.attributes"
+                ],
+                "type": 2
+            },
+            "condition": {
+                "_ai": 100,
+                "_rnd": 0,
+                "condition_attributes": null,
+                "enemies_remaining": null,
+                "forced_one_time": null,
+                "hp_threshold": null,
+                "on_death": null,
+                "one_time": 1
+            },
+            "enemy_skill_id": 366,
+            "extra_description": null
+        },
+        {
+            "behavior": {
+                "_name": "※パース終了",
+                "enemy_skill_id": 26,
+                "extra_description": null,
+                "params": [
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    4,
+                    null,
+                    null,
+                    null
+                ],
+                "type": 36
+            },
+            "condition": null,
+            "enemy_skill_id": 26,
+            "extra_description": null
+        },
+        {
+            "behavior": {
+                "_name": "フリーズストライク",
+                "attack": {
+                    "atk_multiplier": 150,
+                    "max_hits": 1,
+                    "min_hits": 1
+                },
+                "enemy_skill_id": 422,
+                "extra_description": null,
+                "params": [
+                    null,
+                    1,
+                    1,
+                    150,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null
+                ],
+                "type": 15
+            },
+            "condition": {
+                "_ai": 100,
+                "_rnd": 0,
+                "condition_attributes": null,
+                "enemies_remaining": null,
+                "forced_one_time": null,
+                "hp_threshold": null,
+                "on_death": null,
+                "one_time": null
+            },
+            "enemy_skill_id": 422,
+            "extra_description": null
+        }
+    ],
+    "has_animation": false,
+    "has_hqimage": false,
+    "jp_card": {
+        "active_skill": {
+            "attack_attribute": 1,
+            "damage": 35000,
+            "enemy_attribute": 0,
+            "levels": 6,
+            "name": "フリーズストライク",
+            "raw_description": "火属性の敵に水属性の35000ダメージ。",
+            "skill_id": 164,
+            "skill_type": 42,
+            "turn_max": 15,
+            "turn_min": 10
+        },
+        "active_skill_id": 164,
+        "card": {
+            "active_skill_id": 164,
+            "ancestor_id": 67,
+            "atk_scale": 1.0,
+            "attr_id": 2,
+            "awakenings": [
+                21,
+                21
+            ],
+            "base_id": 66,
+            "collab_id": 0,
+            "cost": 11,
+            "enemy_atk_max": 12840,
+            "enemy_atk_min": 428,
+            "enemy_atk_scale": 1.0,
+            "enemy_coins_per_level": 176,
+            "enemy_def_max": 1500,
+            "enemy_def_min": 150,
+            "enemy_def_scale": 1.0,
+            "enemy_hp_max": 414750,
+            "enemy_hp_min": 13825,
+            "enemy_hp_scale": 1.0,
+            "enemy_max_level": 10,
+            "enemy_skill_counter_increment": 0,
+            "enemy_skill_max_counter": 1,
+            "enemy_skill_refs": [
+                {
+                    "enemy_ai": 50,
+                    "enemy_rnd": 4,
+                    "enemy_skill_id": 18
+                },
+                {
+                    "enemy_ai": 100,
+                    "enemy_rnd": 0,
+                    "enemy_skill_id": 366
+                },
+                {
+                    "enemy_ai": 0,
+                    "enemy_rnd": 0,
+                    "enemy_skill_id": 26
+                },
+                {
+                    "enemy_ai": 100,
+                    "enemy_rnd": 0,
+                    "enemy_skill_id": 422
+                }
+            ],
+            "enemy_turns": 3,
+            "enemy_turns_alt": 0,
+            "enemy_xp_per_level": 91,
+            "evo_mat_id_1": 160,
+            "evo_mat_id_2": 156,
+            "evo_mat_id_3": 156,
+            "evo_mat_id_4": 156,
+            "evo_mat_id_5": 148,
+            "feed_xp_per_level": 562,
+            "furigana": "",
+            "group_id": 100,
+            "hp_scale": 1.0,
+            "inheritable": false,
+            "is_collab": false,
+            "is_ult": true,
+            "latent_on_feed": 0,
+            "leader_skill_id": 63,
+            "limit_mult": 0,
+            "max_atk": 856,
+            "max_hp": 1938,
+            "max_level": 50,
+            "max_rcv": 8,
+            "min_atk": 266,
+            "min_hp": 492,
+            "min_rcv": 5,
+            "monster_no": 315,
+            "name": "氷のアーマーオーガ",
+            "orb_skin_id": 0,
+            "other_fields": [
+                ""
+            ],
+            "random_flags": 2,
+            "rarity": 4,
+            "rcv_scale": 1.0,
+            "released_status": true,
+            "sell_gold_per_level": 255,
+            "sell_mp": 1,
+            "sub_attr_id": 1,
+            "super_awakenings": [],
+            "type_1_id": 2,
+            "type_2_id": 7,
+            "type_3_id": -1,
+            "un_evo_mat_1": 155,
+            "un_evo_mat_2": 156,
+            "un_evo_mat_3": 157,
+            "un_evo_mat_4": 158,
+            "un_evo_mat_5": 159,
+            "unknown_009": 4,
+            "unknown_055": 0,
+            "unknown_056": 0,
+            "use_new_ai": false,
+            "voice_id": 0,
+            "xp_max": 1500000,
+            "xp_scale": 2.5
+        },
+        "critical_failures": [],
+        "enemy_skills": [
+            {
+                "behavior": {
+                    "_name": "※HPが ai %以下の時 rnd に分岐",
+                    "branch_condition": "hp",
+                    "branch_value": 50,
+                    "compare": "<",
+                    "enemy_skill_id": 18,
+                    "extra_description": null,
+                    "params": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        4,
+                        null,
+                        null,
+                        null
+                    ],
+                    "target_round": 4,
+                    "type": 28
+                },
+                "condition": null,
+                "enemy_skill_id": 18,
+                "extra_description": null
+            },
+            {
+                "behavior": {
+                    "_name": "ウォーターバインド",
+                    "attack": null,
+                    "enemy_skill_id": 366,
+                    "extra_description": null,
+                    "max_turns": 4,
+                    "min_turns": 2,
+                    "params": [
+                        "水属性が数ターンの間、行動不能",
+                        1,
+                        2,
+                        4,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        1,
+                        null,
+                        null
+                    ],
+                    "target_attribute": 1,
+                    "target_count": null,
+                    "targets": [
+                        "TargetType.attributes"
+                    ],
+                    "type": 2
+                },
+                "condition": {
+                    "_ai": 100,
+                    "_rnd": 0,
+                    "condition_attributes": null,
+                    "enemies_remaining": null,
+                    "forced_one_time": null,
+                    "hp_threshold": null,
+                    "on_death": null,
+                    "one_time": 1
+                },
+                "enemy_skill_id": 366,
+                "extra_description": null
+            },
+            {
+                "behavior": {
+                    "_name": "※パース終了",
+                    "enemy_skill_id": 26,
+                    "extra_description": null,
+                    "params": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        4,
+                        null,
+                        null,
+                        null
+                    ],
+                    "type": 36
+                },
+                "condition": null,
+                "enemy_skill_id": 26,
+                "extra_description": null
+            },
+            {
+                "behavior": {
+                    "_name": "フリーズストライク",
+                    "attack": {
+                        "atk_multiplier": 150,
+                        "max_hits": 1,
+                        "min_hits": 1
+                    },
+                    "enemy_skill_id": 422,
+                    "extra_description": null,
+                    "params": [
+                        null,
+                        1,
+                        1,
+                        150,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null
+                    ],
+                    "type": 15
+                },
+                "condition": {
+                    "_ai": 100,
+                    "_rnd": 0,
+                    "condition_attributes": null,
+                    "enemies_remaining": null,
+                    "forced_one_time": null,
+                    "hp_threshold": null,
+                    "on_death": null,
+                    "one_time": null
+                },
+                "enemy_skill_id": 422,
+                "extra_description": null
+            }
+        ],
+        "leader_skill": {
+            "_atk": 1,
+            "_hp": 1,
+            "_rcv": 1,
+            "_shield": 0,
+            "name": "根性",
+            "raw_description": "HPが0になる攻撃を受けてもふんばることがある。",
+            "skill_id": 63,
+            "skill_type": 14,
+            "threshold": 0.7
+        },
+        "leader_skill_id": 63,
+        "monster_id": 315,
+        "monster_no": 315,
+        "server": "Server.jp"
+    },
+    "kr_card": {
+        "active_skill": {
+            "attack_attribute": 1,
+            "damage": 35000,
+            "enemy_attribute": 0,
+            "levels": 6,
+            "name": "프리즈 스트라이크",
+            "raw_description": "불속성의 몬스터에게 물속성의 35000 대미지로 공격",
+            "skill_id": 164,
+            "skill_type": 42,
+            "turn_max": 15,
+            "turn_min": 10
+        },
+        "active_skill_id": 164,
+        "card": {
+            "active_skill_id": 164,
+            "ancestor_id": 67,
+            "atk_scale": 1.0,
+            "attr_id": 2,
+            "awakenings": [
+                21,
+                21
+            ],
+            "base_id": 66,
+            "collab_id": 0,
+            "cost": 11,
+            "enemy_atk_max": 12840,
+            "enemy_atk_min": 428,
+            "enemy_atk_scale": 1.0,
+            "enemy_coins_per_level": 176,
+            "enemy_def_max": 1500,
+            "enemy_def_min": 150,
+            "enemy_def_scale": 1.0,
+            "enemy_hp_max": 414750,
+            "enemy_hp_min": 13825,
+            "enemy_hp_scale": 1.0,
+            "enemy_max_level": 10,
+            "enemy_skill_counter_increment": 0,
+            "enemy_skill_max_counter": 1,
+            "enemy_skill_refs": [
+                {
+                    "enemy_ai": 50,
+                    "enemy_rnd": 4,
+                    "enemy_skill_id": 18
+                },
+                {
+                    "enemy_ai": 100,
+                    "enemy_rnd": 0,
+                    "enemy_skill_id": 366
+                },
+                {
+                    "enemy_ai": 0,
+                    "enemy_rnd": 0,
+                    "enemy_skill_id": 26
+                },
+                {
+                    "enemy_ai": 100,
+                    "enemy_rnd": 0,
+                    "enemy_skill_id": 422
+                }
+            ],
+            "enemy_turns": 3,
+            "enemy_turns_alt": 0,
+            "enemy_xp_per_level": 91,
+            "evo_mat_id_1": 160,
+            "evo_mat_id_2": 156,
+            "evo_mat_id_3": 156,
+            "evo_mat_id_4": 156,
+            "evo_mat_id_5": 148,
+            "feed_xp_per_level": 562,
+            "furigana": "",
+            "group_id": 100,
+            "hp_scale": 1.0,
+            "inheritable": false,
+            "is_collab": false,
+            "is_ult": true,
+            "latent_on_feed": 0,
+            "leader_skill_id": 63,
+            "limit_mult": 0,
+            "max_atk": 856,
+            "max_hp": 1938,
+            "max_level": 50,
+            "max_rcv": 8,
+            "min_atk": 266,
+            "min_hp": 492,
+            "min_rcv": 5,
+            "monster_no": 315,
+            "name": "아이스 아머 오거",
+            "orb_skin_id": 0,
+            "other_fields": [
+                ""
+            ],
+            "random_flags": 2,
+            "rarity": 4,
+            "rcv_scale": 1.0,
+            "released_status": true,
+            "sell_gold_per_level": 255,
+            "sell_mp": 1,
+            "sub_attr_id": 1,
+            "super_awakenings": [],
+            "type_1_id": 2,
+            "type_2_id": 7,
+            "type_3_id": -1,
+            "un_evo_mat_1": 155,
+            "un_evo_mat_2": 156,
+            "un_evo_mat_3": 157,
+            "un_evo_mat_4": 158,
+            "un_evo_mat_5": 159,
+            "unknown_009": 4,
+            "unknown_055": 0,
+            "unknown_056": 0,
+            "use_new_ai": false,
+            "voice_id": 0,
+            "xp_max": 1500000,
+            "xp_scale": 2.5
+        },
+        "critical_failures": [],
+        "enemy_skills": [
+            {
+                "behavior": {
+                    "_name": "테스트예비",
+                    "branch_condition": "hp",
+                    "branch_value": 50,
+                    "compare": "<",
+                    "enemy_skill_id": 18,
+                    "extra_description": null,
+                    "params": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        4,
+                        null,
+                        null,
+                        null
+                    ],
+                    "target_round": 4,
+                    "type": 28
+                },
+                "condition": null,
+                "enemy_skill_id": 18,
+                "extra_description": null
+            },
+            {
+                "behavior": {
+                    "_name": "워터 바인드",
+                    "attack": null,
+                    "enemy_skill_id": 366,
+                    "extra_description": null,
+                    "max_turns": 4,
+                    "min_turns": 2,
+                    "params": [
+                        "물속성이 몇 턴 동안 행동불능",
+                        1,
+                        2,
+                        4,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        1,
+                        null,
+                        null
+                    ],
+                    "target_attribute": 1,
+                    "target_count": null,
+                    "targets": [
+                        "TargetType.attributes"
+                    ],
+                    "type": 2
+                },
+                "condition": {
+                    "_ai": 100,
+                    "_rnd": 0,
+                    "condition_attributes": null,
+                    "enemies_remaining": null,
+                    "forced_one_time": null,
+                    "hp_threshold": null,
+                    "on_death": null,
+                    "one_time": 1
+                },
+                "enemy_skill_id": 366,
+                "extra_description": null
+            },
+            {
+                "behavior": {
+                    "_name": "테스트예비",
+                    "enemy_skill_id": 26,
+                    "extra_description": null,
+                    "params": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        4,
+                        null,
+                        null,
+                        null
+                    ],
+                    "type": 36
+                },
+                "condition": null,
+                "enemy_skill_id": 26,
+                "extra_description": null
+            },
+            {
+                "behavior": {
+                    "_name": "프리즈 스트라이크",
+                    "attack": {
+                        "atk_multiplier": 150,
+                        "max_hits": 1,
+                        "min_hits": 1
+                    },
+                    "enemy_skill_id": 422,
+                    "extra_description": null,
+                    "params": [
+                        null,
+                        1,
+                        1,
+                        150,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null
+                    ],
+                    "type": 15
+                },
+                "condition": {
+                    "_ai": 100,
+                    "_rnd": 0,
+                    "condition_attributes": null,
+                    "enemies_remaining": null,
+                    "forced_one_time": null,
+                    "hp_threshold": null,
+                    "on_death": null,
+                    "one_time": null
+                },
+                "enemy_skill_id": 422,
+                "extra_description": null
+            }
+        ],
+        "leader_skill": {
+            "_atk": 1,
+            "_hp": 1,
+            "_rcv": 1,
+            "_shield": 0,
+            "name": "근성",
+            "raw_description": "HP가 0이 되는 공격을 받아도 버틸 때가 있다 ",
+            "skill_id": 63,
+            "skill_type": 14,
+            "threshold": 0.7
+        },
+        "leader_skill_id": 63,
+        "monster_id": 315,
+        "monster_no": 315,
+        "server": "Server.kr"
+    },
+    "leader_skill": {
+        "en_text": "May survive when HP is reduced to 0 (HP>70%)",
+        "jp_skill": {
+            "_atk": 1,
+            "_hp": 1,
+            "_rcv": 1,
+            "_shield": 0,
+            "name": "根性",
+            "raw_description": "HPが0になる攻撃を受けてもふんばることがある。",
+            "skill_id": 63,
+            "skill_type": 14,
+            "threshold": 0.7
+        },
+        "kr_skill": {
+            "_atk": 1,
+            "_hp": 1,
+            "_rcv": 1,
+            "_shield": 0,
+            "name": "근성",
+            "raw_description": "HP가 0이 되는 공격을 받아도 버틸 때가 있다 ",
+            "skill_id": 63,
+            "skill_type": 14,
+            "threshold": 0.7
+        },
+        "na_skill": {
+            "_atk": 1,
+            "_hp": 1,
+            "_rcv": 1,
+            "_shield": 0,
+            "name": "Resolve",
+            "raw_description": "May survive when HP is reduced to 0",
+            "skill_id": 63,
+            "skill_type": 14,
+            "threshold": 0.7
+        },
+        "skill_id": 63,
+        "skill_type_tags": [
+            "LsCondition.RESOLVE"
+        ]
+    },
+    "monster_id": 315,
+    "na_card": {
+        "active_skill": {
+            "attack_attribute": 1,
+            "damage": 35000,
+            "enemy_attribute": 0,
+            "levels": 6,
+            "name": "Freeze Strike",
+            "raw_description": "Inflicts 35,000 Water damage attack on Fire Att. enemies",
+            "skill_id": 164,
+            "skill_type": 42,
+            "turn_max": 15,
+            "turn_min": 10
+        },
+        "active_skill_id": 164,
+        "card": {
+            "active_skill_id": 164,
+            "ancestor_id": 67,
+            "atk_scale": 1.0,
+            "attr_id": 2,
+            "awakenings": [
+                21,
+                21
+            ],
+            "base_id": 66,
+            "collab_id": 0,
+            "cost": 11,
+            "enemy_atk_max": 12840,
+            "enemy_atk_min": 428,
+            "enemy_atk_scale": 1.0,
+            "enemy_coins_per_level": 176,
+            "enemy_def_max": 1500,
+            "enemy_def_min": 150,
+            "enemy_def_scale": 1.0,
+            "enemy_hp_max": 414750,
+            "enemy_hp_min": 13825,
+            "enemy_hp_scale": 1.0,
+            "enemy_max_level": 10,
+            "enemy_skill_counter_increment": 0,
+            "enemy_skill_max_counter": 1,
+            "enemy_skill_refs": [
+                {
+                    "enemy_ai": 50,
+                    "enemy_rnd": 4,
+                    "enemy_skill_id": 18
+                },
+                {
+                    "enemy_ai": 100,
+                    "enemy_rnd": 0,
+                    "enemy_skill_id": 366
+                },
+                {
+                    "enemy_ai": 0,
+                    "enemy_rnd": 0,
+                    "enemy_skill_id": 26
+                },
+                {
+                    "enemy_ai": 100,
+                    "enemy_rnd": 0,
+                    "enemy_skill_id": 422
+                }
+            ],
+            "enemy_turns": 3,
+            "enemy_turns_alt": 0,
+            "enemy_xp_per_level": 91,
+            "evo_mat_id_1": 160,
+            "evo_mat_id_2": 156,
+            "evo_mat_id_3": 156,
+            "evo_mat_id_4": 156,
+            "evo_mat_id_5": 148,
+            "feed_xp_per_level": 562,
+            "furigana": "",
+            "group_id": 100,
+            "hp_scale": 1.0,
+            "inheritable": false,
+            "is_collab": false,
+            "is_ult": true,
+            "latent_on_feed": 0,
+            "leader_skill_id": 63,
+            "limit_mult": 0,
+            "max_atk": 856,
+            "max_hp": 1938,
+            "max_level": 50,
+            "max_rcv": 8,
+            "min_atk": 266,
+            "min_hp": 492,
+            "min_rcv": 5,
+            "monster_no": 315,
+            "name": "Ice Armor Ogre",
+            "orb_skin_id": 0,
+            "other_fields": [
+                ""
+            ],
+            "random_flags": 2,
+            "rarity": 4,
+            "rcv_scale": 1.0,
+            "released_status": true,
+            "sell_gold_per_level": 255,
+            "sell_mp": 1,
+            "sub_attr_id": 1,
+            "super_awakenings": [],
+            "type_1_id": 2,
+            "type_2_id": 7,
+            "type_3_id": -1,
+            "un_evo_mat_1": 155,
+            "un_evo_mat_2": 156,
+            "un_evo_mat_3": 157,
+            "un_evo_mat_4": 158,
+            "un_evo_mat_5": 159,
+            "unknown_009": 4,
+            "unknown_055": 0,
+            "unknown_056": 0,
+            "use_new_ai": false,
+            "voice_id": 0,
+            "xp_max": 1500000,
+            "xp_scale": 2.5
+        },
+        "critical_failures": [],
+        "enemy_skills": [
+            {
+                "behavior": {
+                    "_name": "ERROR18",
+                    "branch_condition": "hp",
+                    "branch_value": 50,
+                    "compare": "<",
+                    "enemy_skill_id": 18,
+                    "extra_description": null,
+                    "params": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        4,
+                        null,
+                        null,
+                        null
+                    ],
+                    "target_round": 4,
+                    "type": 28
+                },
+                "condition": null,
+                "enemy_skill_id": 18,
+                "extra_description": null
+            },
+            {
+                "behavior": {
+                    "_name": "Water Bind",
+                    "attack": null,
+                    "enemy_skill_id": 366,
+                    "extra_description": null,
+                    "max_turns": 4,
+                    "min_turns": 2,
+                    "params": [
+                        "Binds Water Att. allies for a number of turns",
+                        1,
+                        2,
+                        4,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        1,
+                        null,
+                        null
+                    ],
+                    "target_attribute": 1,
+                    "target_count": null,
+                    "targets": [
+                        "TargetType.attributes"
+                    ],
+                    "type": 2
+                },
+                "condition": {
+                    "_ai": 100,
+                    "_rnd": 0,
+                    "condition_attributes": null,
+                    "enemies_remaining": null,
+                    "forced_one_time": null,
+                    "hp_threshold": null,
+                    "on_death": null,
+                    "one_time": 1
+                },
+                "enemy_skill_id": 366,
+                "extra_description": null
+            },
+            {
+                "behavior": {
+                    "_name": "ERROR26",
+                    "enemy_skill_id": 26,
+                    "extra_description": null,
+                    "params": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        4,
+                        null,
+                        null,
+                        null
+                    ],
+                    "type": 36
+                },
+                "condition": null,
+                "enemy_skill_id": 26,
+                "extra_description": null
+            },
+            {
+                "behavior": {
+                    "_name": "Freeze Strike",
+                    "attack": {
+                        "atk_multiplier": 150,
+                        "max_hits": 1,
+                        "min_hits": 1
+                    },
+                    "enemy_skill_id": 422,
+                    "extra_description": null,
+                    "params": [
+                        null,
+                        1,
+                        1,
+                        150,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null
+                    ],
+                    "type": 15
+                },
+                "condition": {
+                    "_ai": 100,
+                    "_rnd": 0,
+                    "condition_attributes": null,
+                    "enemies_remaining": null,
+                    "forced_one_time": null,
+                    "hp_threshold": null,
+                    "on_death": null,
+                    "one_time": null
+                },
+                "enemy_skill_id": 422,
+                "extra_description": null
+            }
+        ],
+        "leader_skill": {
+            "_atk": 1,
+            "_hp": 1,
+            "_rcv": 1,
+            "_shield": 0,
+            "name": "Resolve",
+            "raw_description": "May survive when HP is reduced to 0",
+            "skill_id": 63,
+            "skill_type": 14,
+            "threshold": 0.7
+        },
+        "leader_skill_id": 63,
+        "monster_id": 315,
+        "monster_no": 315,
+        "server": "Server.na"
+    }
+}

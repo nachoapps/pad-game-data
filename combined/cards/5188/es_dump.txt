@@ -1,0 +1,85 @@
+#5188  - Gore Magala
+True : use_new_ai
+2 : starting/max counter
+1 : counter increment
+
+ESPreemptive(49:318) -> ESPreemptive
+Enable preempt if level 1
+
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 1, target rnd 6
+
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b1
+
+ESGravity(50:13039) -> Charge
+	Condition: One-time use (ai:100 rnd:0) (one-time: 2)
+Player -50% HP
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESSetCounter(26:16) -> ESSetCounter
+counter + 1
+
+ESBranchCounter(32:22) -> ESBranchCounter
+Branch on counter > 3, target rnd 12
+
+ESGravity(50:13039) -> Charge
+	Condition: One-time use (ai:0 rnd:33) (one-time: 2)
+Player -50% HP
+
+ESRandomSpawn(92:13040) -> Radial Strike
+	Condition: 33% chance & when Fire, Water, Wood, Light, Heal, Jammer, Poison, Mortal Poison orbs are on the board (ai:0 rnd:33)
+Spawn random 4 Dark orbs, Deal 95% damage
+
+ESAttackMultihit(15:13038) -> Multibites
+	Condition: 34% chance (ai:0 rnd:34)
+Deal 110% damage (2 hits, 55% each)
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 2, target rnd 16
+
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b11
+
+ESAttackUPRemainingEnemies(17:13041) -> Frenzy
+	Condition: when <= 1 enemies remain (ai:100 rnd:0)
+Increase damage to 150% for the next 3 turns
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESBranchCounter(32:22) -> ESBranchCounter
+Branch on counter > 7, target rnd 21
+
+ESBindAttack(63:13044) -> Binding Attack
+	Condition: One-time use (ai:0 rnd:33) (one-time: 2)
+Bind 1 random subs for 2 turns, Deal 100% damage
+
+ESOrbSealRow(100:13042) -> Wing Combo Strike
+	Condition: 33% chance (ai:0 rnd:33)
+Seal 5th row for 1 turns, Deal 110% damage
+
+ESDebuffRCV(105:13043) -> Frenzied Wyrm's Breath
+	Condition: 34% chance (ai:0 rnd:34)
+Rcv 50% for 1 turns, Deal 95% damage
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b1
+
+ESSetCounter(25:15) -> ESSetCounter
+counter = 1
+
+ESBranchCounter(32:22) -> ESBranchCounter
+Branch on counter > 0, target rnd 8
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+

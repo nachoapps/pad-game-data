@@ -1,0 +1,64 @@
+#4859  - Lightning Flash, Asuna
+True : use_new_ai
+2 : starting/max counter
+1 : counter increment
+
+ESPreemptive(49:318) -> ESPreemptive
+Enable preempt if level 1
+
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 1, target rnd 6
+
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b1
+
+SkillSet:
+	[0] ESBindRandomSub(65:11494) -> There's just the feeling
+getting knocked off from your feet.
+	Bind 3 random subs for 2 turns
+	[1] ESGravity(50:11495) -> A fight with me will still scare
+the hell out of you.
+	Player -99% HP
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESBranchHP(28:18) -> ESBranchHP
+Branch on hp < 50, target rnd 11
+
+ESLeaderSwap(75:11497) -> Switch with me!
+	Condition: One-time use (ai:100 rnd:0) (one-time: 2)
+Leader changes to random sub for 1 turns, Deal 90% damage
+
+ESOrbChangeAttack(48:11498) -> Fire!
+	Condition: 50% chance (ai:0 rnd:50)
+Change Random to Light, Deal 100% damage
+
+ESRandomSpawn(92:11499) -> Yaa!
+	Condition: 50% chance & when Water, Wood, Dark, Heal, Jammer, Poison, Mortal Poison orbs are on the board (ai:0 rnd:50)
+Spawn random 3 Fire, Light orbs, Deal 100% damage
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 2, target rnd 15
+
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b11
+
+ESBindSkill(14:11496) -> Our plan worked!
+Bind active skills for 3 turns
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESBranchHP(29:19) -> ESBranchHP
+Branch on hp > 16, target rnd 7
+
+ESAttackMultihit(15:11500) -> I know what skill to use.
+Deal 200% damage (8 hits, 25% each)
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+

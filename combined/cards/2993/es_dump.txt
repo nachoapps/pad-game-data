@@ -1,0 +1,63 @@
+#2993  - Desiring Princess of Hell, Sitri
+True : use_new_ai
+31 : starting/max counter
+0 : counter increment
+
+ESPreemptive(49:318) -> ESPreemptive
+Enable preempt if level 1
+
+SkillSet:
+	Condition: One-time use (ai:100 rnd:0) (one-time: 16)
+	[0] ESBindAwoken(88:14792) -> うふっ♪
+	Bind awoken skills for 1 turns
+	[1] ESLeaderAlter(125:14793) -> かわいくしてあ・げ・る
+	Change leader to [44] for 99 turns
+	[2] ESSkillDelay(89:14794) -> 頑張って生き抜いて
+	Delay active skills by 99 turns
+	[3] ESRandomSpawn(92:14795) -> はいどうぞ♪
+	Spawn random 15 Heal, Mortal Poison orbs
+	[4] ESRandomSpawn(92:14813) -> これはプレゼントよ♪
+	Spawn random 3 Fire orbs
+
+ESOrbChangeAttackBits(108:14811) -> はい、ダ～メ！
+Change Jammer, Poison, Mortal Poison to Water, Deal 100% damage
+
+SkillSet:
+	Condition: One-time use (ai:100 rnd:0) (one-time: 8)
+	[0] ESBindTarget(54:14797) -> あなたは少し黙ってて
+	Bind 1 friend leader for 99 turns
+	[1] ESBoardChange(84:14798) -> そ～れ！
+	Change all orbs to Mortal Poison
+	[2] ESRandomSpawn(92:14799) -> がんばってね～
+	Spawn random 10 Heal orbs
+
+SkillSet:
+	Condition: One-time use (ai:100 rnd:0) (one-time: 4)
+	[0] ESBindAwoken(88:14790) -> うふっ♪
+	Bind awoken skills for 2 turns
+	[1] ESMaxHPChange(111:14801) -> これはどう？
+	Change player HP to 100000 for 1 turns
+	[2] ESRandomSpawn(92:14802) -> さすがに厳しいかな？
+	Spawn random 10 Heal, Jammer, Poison orbs
+	[3] ESDebuffRCV(105:14803) -> これで元気になってね
+	Rcv 500% for 1 turns
+
+SkillSet:
+	Condition: One-time use (ai:100 rnd:0) (one-time: 2)
+	[0] ESBoardChange(84:14805) -> そ～れ
+	Change all orbs to Heal
+	[1] ESBombFixedSpawn(103:14806) -> 危ないよ～
+	Spawn Bomb orbs in the specified positions
+	[2] ESDebuffMovetime(39:14807) -> ほらほら急いで～♪
+	Movetime -4s for 1 turns
+
+SkillSet:
+	Condition: One-time use (ai:100 rnd:0) (one-time: 1)
+	[0] ESBoardChange(84:14809) -> ここまでやるなんて
+	Change all orbs to Poison
+	[1] ESOrbLock(94:14810) -> これで最後よ！
+	Lock all Poison orbs
+
+ESEndBattle(40:14812) -> あなた凄いのね
+Reduce self HP to 0
+

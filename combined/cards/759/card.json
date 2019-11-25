@@ -1,0 +1,3496 @@
+{
+    "active_skill": {
+        "en_text": "Change Water orbs to Heal orbs",
+        "jp_skill": {
+            "from_1": 1,
+            "levels": 7,
+            "name": "防御態勢・木",
+            "raw_description": "水ドロップを回復ドロップに変化。",
+            "skill_id": 161,
+            "skill_type": 9,
+            "to_1": 5,
+            "turn_max": 11,
+            "turn_min": 5
+        },
+        "kr_skill": {
+            "from_1": 1,
+            "levels": 7,
+            "name": "방어태세 - 나무",
+            "raw_description": "물드롭을 회복드롭으로 변화",
+            "skill_id": 161,
+            "skill_type": 9,
+            "to_1": 5,
+            "turn_max": 11,
+            "turn_min": 5
+        },
+        "na_skill": {
+            "from_1": 1,
+            "levels": 7,
+            "name": "Guard Stance - Wood",
+            "raw_description": "Changes Water Orbs to Heal Orbs",
+            "skill_id": 161,
+            "skill_type": 9,
+            "to_1": 5,
+            "turn_max": 11,
+            "turn_min": 5
+        },
+        "skill_id": 161,
+        "skill_type_tags": [
+            "AsCondition.GUARD_STANCE",
+            "AsCondition.ORB_CONVERT"
+        ]
+    },
+    "en_as_text": "Change Water orbs to Heal orbs",
+    "en_ls_text": "Reduce damage taken from wood, water att. by 50%",
+    "enemy_behavior": [
+        {
+            "behavior": {
+                "_name": "*Preemptive Command LV1",
+                "enemy_skill_id": 318,
+                "extra_description": null,
+                "level": 1,
+                "params": [
+                    null,
+                    1,
+                    100,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null
+                ],
+                "type": 49
+            },
+            "condition": null,
+            "enemy_skill_id": 318,
+            "extra_description": null
+        },
+        {
+            "behavior": {
+                "_name": "ERROR10",
+                "branch_condition": "flag",
+                "branch_value": 1,
+                "compare": "&",
+                "enemy_skill_id": 10,
+                "extra_description": null,
+                "params": [
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    50,
+                    4,
+                    null,
+                    null,
+                    null
+                ],
+                "target_round": 6,
+                "type": 43
+            },
+            "condition": null,
+            "enemy_skill_id": 10,
+            "extra_description": null
+        },
+        {
+            "behavior": {
+                "_name": "ERROR12",
+                "enemy_skill_id": 12,
+                "extra_description": null,
+                "flag": 1,
+                "flag_bin": "0b1",
+                "operation": "SET",
+                "params": [
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    4,
+                    null,
+                    null,
+                    null
+                ],
+                "type": 22
+            },
+            "condition": null,
+            "enemy_skill_id": 12,
+            "extra_description": null
+        },
+        {
+            "behavior": {
+                "_name": "Defending",
+                "attack": null,
+                "enemy_skill_id": 3768,
+                "extra_description": null,
+                "params": [
+                    "Voids status ailments for a number of turns",
+                    999,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null
+                ],
+                "turns": 999,
+                "type": 20
+            },
+            "condition": {
+                "_ai": 100,
+                "_rnd": 0,
+                "condition_attributes": null,
+                "enemies_remaining": null,
+                "forced_one_time": null,
+                "hp_threshold": null,
+                "on_death": null,
+                "one_time": null
+            },
+            "enemy_skill_id": 3768,
+            "extra_description": null
+        },
+        {
+            "behavior": {
+                "_name": "ERROR26",
+                "enemy_skill_id": 26,
+                "extra_description": null,
+                "params": [
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    4,
+                    null,
+                    null,
+                    null
+                ],
+                "type": 36
+            },
+            "condition": null,
+            "enemy_skill_id": 26,
+            "extra_description": null
+        },
+        {
+            "behavior": {
+                "_name": "ERROR18",
+                "branch_condition": "hp",
+                "branch_value": 50,
+                "compare": "<",
+                "enemy_skill_id": 18,
+                "extra_description": null,
+                "params": [
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    4,
+                    null,
+                    null,
+                    null
+                ],
+                "target_round": 10,
+                "type": 28
+            },
+            "condition": null,
+            "enemy_skill_id": 18,
+            "extra_description": null
+        },
+        {
+            "behavior": {
+                "_name": "ERROR18",
+                "branch_condition": "hp",
+                "branch_value": 30,
+                "compare": "<",
+                "enemy_skill_id": 18,
+                "extra_description": null,
+                "params": [
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    4,
+                    null,
+                    null,
+                    null
+                ],
+                "target_round": 13,
+                "type": 28
+            },
+            "condition": null,
+            "enemy_skill_id": 18,
+            "extra_description": null
+        },
+        {
+            "behavior": {
+                "_name": "Super Horn",
+                "attack": {
+                    "atk_multiplier": 120,
+                    "max_hits": 1,
+                    "min_hits": 1
+                },
+                "enemy_skill_id": 3769,
+                "extra_description": null,
+                "params": [
+                    null,
+                    1,
+                    1,
+                    120,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null
+                ],
+                "type": 15
+            },
+            "condition": {
+                "_ai": 50,
+                "_rnd": 0,
+                "condition_attributes": null,
+                "enemies_remaining": null,
+                "forced_one_time": null,
+                "hp_threshold": null,
+                "on_death": null,
+                "one_time": null
+            },
+            "enemy_skill_id": 3769,
+            "extra_description": null
+        },
+        {
+            "behavior": {
+                "_name": "Grand Rush",
+                "attack": {
+                    "atk_multiplier": 100,
+                    "max_hits": 1,
+                    "min_hits": 1
+                },
+                "attributes": [
+                    6
+                ],
+                "condition_attributes": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    7,
+                    8
+                ],
+                "count": 6,
+                "enemy_skill_id": 3770,
+                "extra_description": null,
+                "params": [
+                    null,
+                    6,
+                    64,
+                    64,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    100,
+                    null
+                ],
+                "type": 92
+            },
+            "condition": {
+                "_ai": 100,
+                "_rnd": 0,
+                "condition_attributes": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    7,
+                    8
+                ],
+                "enemies_remaining": null,
+                "forced_one_time": null,
+                "hp_threshold": null,
+                "on_death": null,
+                "one_time": null
+            },
+            "enemy_skill_id": 3770,
+            "extra_description": null
+        },
+        {
+            "behavior": {
+                "_name": "ERROR10",
+                "branch_condition": "flag",
+                "branch_value": 2,
+                "compare": "&",
+                "enemy_skill_id": 10,
+                "extra_description": null,
+                "params": [
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    50,
+                    4,
+                    null,
+                    null,
+                    null
+                ],
+                "target_round": 7,
+                "type": 43
+            },
+            "condition": null,
+            "enemy_skill_id": 10,
+            "extra_description": null
+        },
+        {
+            "behavior": {
+                "_name": "ERROR29",
+                "enemy_skill_id": 29,
+                "extra_description": null,
+                "flag": 3,
+                "flag_bin": "0b11",
+                "operation": "OR",
+                "params": [
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    50,
+                    4,
+                    null,
+                    null,
+                    null
+                ],
+                "type": 44
+            },
+            "condition": null,
+            "enemy_skill_id": 29,
+            "extra_description": null
+        },
+        {
+            "behavior": {
+                "_name": "Absolute Guard",
+                "attack": null,
+                "enemy_skill_id": 3771,
+                "extra_description": null,
+                "params": [
+                    "Damage greatly reduced for 1 turn",
+                    1,
+                    75,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null
+                ],
+                "shield_percent": 75,
+                "turns": 1,
+                "type": 74
+            },
+            "condition": {
+                "_ai": 100,
+                "_rnd": 0,
+                "condition_attributes": null,
+                "enemies_remaining": null,
+                "forced_one_time": null,
+                "hp_threshold": null,
+                "on_death": null,
+                "one_time": null
+            },
+            "enemy_skill_id": 3771,
+            "extra_description": null
+        },
+        {
+            "behavior": {
+                "_name": "Death Crash",
+                "attack": {
+                    "atk_multiplier": 200,
+                    "max_hits": 1,
+                    "min_hits": 1
+                },
+                "enemy_skill_id": 3772,
+                "extra_description": null,
+                "max_turns": 10,
+                "min_turns": 10,
+                "params": [
+                    "Skills are unusable for 10 turns",
+                    10,
+                    10,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    200,
+                    null
+                ],
+                "type": 14
+            },
+            "condition": {
+                "_ai": 100,
+                "_rnd": 0,
+                "condition_attributes": null,
+                "enemies_remaining": null,
+                "forced_one_time": null,
+                "hp_threshold": null,
+                "on_death": null,
+                "one_time": null
+            },
+            "enemy_skill_id": 3772,
+            "extra_description": null
+        },
+        {
+            "behavior": {
+                "_name": "Death Crash",
+                "attack": {
+                    "atk_multiplier": 100,
+                    "max_hits": 6,
+                    "min_hits": 6
+                },
+                "enemy_skill_id": 3810,
+                "extra_description": null,
+                "params": [
+                    null,
+                    6,
+                    6,
+                    100,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null
+                ],
+                "type": 15
+            },
+            "condition": {
+                "_ai": 100,
+                "_rnd": 0,
+                "condition_attributes": null,
+                "enemies_remaining": null,
+                "forced_one_time": null,
+                "hp_threshold": null,
+                "on_death": null,
+                "one_time": null
+            },
+            "enemy_skill_id": 3810,
+            "extra_description": null
+        },
+        {
+            "behavior": {
+                "_name": "ERROR26",
+                "enemy_skill_id": 26,
+                "extra_description": null,
+                "params": [
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    4,
+                    null,
+                    null,
+                    null
+                ],
+                "type": 36
+            },
+            "condition": null,
+            "enemy_skill_id": 26,
+            "extra_description": null
+        }
+    ],
+    "enemy_behavior_jp": [
+        {
+            "behavior": {
+                "_name": "※先制コマンドLV1",
+                "enemy_skill_id": 318,
+                "extra_description": null,
+                "level": 1,
+                "params": [
+                    null,
+                    1,
+                    100,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null
+                ],
+                "type": 49
+            },
+            "condition": null,
+            "enemy_skill_id": 318,
+            "extra_description": null
+        },
+        {
+            "behavior": {
+                "_name": "※ai フラグが立っていたら rnd の数値に分岐",
+                "branch_condition": "flag",
+                "branch_value": 1,
+                "compare": "&",
+                "enemy_skill_id": 10,
+                "extra_description": null,
+                "params": [
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    50,
+                    4,
+                    null,
+                    null,
+                    null
+                ],
+                "target_round": 6,
+                "type": 43
+            },
+            "condition": null,
+            "enemy_skill_id": 10,
+            "extra_description": null
+        },
+        {
+            "behavior": {
+                "_name": "※フラグを ai にセット",
+                "enemy_skill_id": 12,
+                "extra_description": null,
+                "flag": 1,
+                "flag_bin": "0b1",
+                "operation": "SET",
+                "params": [
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    4,
+                    null,
+                    null,
+                    null
+                ],
+                "type": 22
+            },
+            "condition": null,
+            "enemy_skill_id": 12,
+            "extra_description": null
+        },
+        {
+            "behavior": {
+                "_name": "ディフェンディング",
+                "attack": null,
+                "enemy_skill_id": 3768,
+                "extra_description": null,
+                "params": [
+                    "しばらくの間、状態異常を無効化する",
+                    999,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null
+                ],
+                "turns": 999,
+                "type": 20
+            },
+            "condition": {
+                "_ai": 100,
+                "_rnd": 0,
+                "condition_attributes": null,
+                "enemies_remaining": null,
+                "forced_one_time": null,
+                "hp_threshold": null,
+                "on_death": null,
+                "one_time": null
+            },
+            "enemy_skill_id": 3768,
+            "extra_description": null
+        },
+        {
+            "behavior": {
+                "_name": "※パース終了",
+                "enemy_skill_id": 26,
+                "extra_description": null,
+                "params": [
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    4,
+                    null,
+                    null,
+                    null
+                ],
+                "type": 36
+            },
+            "condition": null,
+            "enemy_skill_id": 26,
+            "extra_description": null
+        },
+        {
+            "behavior": {
+                "_name": "※HPが ai %以下の時 rnd に分岐",
+                "branch_condition": "hp",
+                "branch_value": 50,
+                "compare": "<",
+                "enemy_skill_id": 18,
+                "extra_description": null,
+                "params": [
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    4,
+                    null,
+                    null,
+                    null
+                ],
+                "target_round": 10,
+                "type": 28
+            },
+            "condition": null,
+            "enemy_skill_id": 18,
+            "extra_description": null
+        },
+        {
+            "behavior": {
+                "_name": "※HPが ai %以下の時 rnd に分岐",
+                "branch_condition": "hp",
+                "branch_value": 30,
+                "compare": "<",
+                "enemy_skill_id": 18,
+                "extra_description": null,
+                "params": [
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    4,
+                    null,
+                    null,
+                    null
+                ],
+                "target_round": 13,
+                "type": 28
+            },
+            "condition": null,
+            "enemy_skill_id": 18,
+            "extra_description": null
+        },
+        {
+            "behavior": {
+                "_name": "スーパーホーン",
+                "attack": {
+                    "atk_multiplier": 120,
+                    "max_hits": 1,
+                    "min_hits": 1
+                },
+                "enemy_skill_id": 3769,
+                "extra_description": null,
+                "params": [
+                    null,
+                    1,
+                    1,
+                    120,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null
+                ],
+                "type": 15
+            },
+            "condition": {
+                "_ai": 50,
+                "_rnd": 0,
+                "condition_attributes": null,
+                "enemies_remaining": null,
+                "forced_one_time": null,
+                "hp_threshold": null,
+                "on_death": null,
+                "one_time": null
+            },
+            "enemy_skill_id": 3769,
+            "extra_description": null
+        },
+        {
+            "behavior": {
+                "_name": "グランドラッシュ",
+                "attack": {
+                    "atk_multiplier": 100,
+                    "max_hits": 1,
+                    "min_hits": 1
+                },
+                "attributes": [
+                    6
+                ],
+                "condition_attributes": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    7,
+                    8
+                ],
+                "count": 6,
+                "enemy_skill_id": 3770,
+                "extra_description": null,
+                "params": [
+                    null,
+                    6,
+                    64,
+                    64,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    100,
+                    null
+                ],
+                "type": 92
+            },
+            "condition": {
+                "_ai": 100,
+                "_rnd": 0,
+                "condition_attributes": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    7,
+                    8
+                ],
+                "enemies_remaining": null,
+                "forced_one_time": null,
+                "hp_threshold": null,
+                "on_death": null,
+                "one_time": null
+            },
+            "enemy_skill_id": 3770,
+            "extra_description": null
+        },
+        {
+            "behavior": {
+                "_name": "※ai フラグが立っていたら rnd の数値に分岐",
+                "branch_condition": "flag",
+                "branch_value": 2,
+                "compare": "&",
+                "enemy_skill_id": 10,
+                "extra_description": null,
+                "params": [
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    50,
+                    4,
+                    null,
+                    null,
+                    null
+                ],
+                "target_round": 7,
+                "type": 43
+            },
+            "condition": null,
+            "enemy_skill_id": 10,
+            "extra_description": null
+        },
+        {
+            "behavior": {
+                "_name": "※ai フラグOR",
+                "enemy_skill_id": 29,
+                "extra_description": null,
+                "flag": 3,
+                "flag_bin": "0b11",
+                "operation": "OR",
+                "params": [
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    50,
+                    4,
+                    null,
+                    null,
+                    null
+                ],
+                "type": 44
+            },
+            "condition": null,
+            "enemy_skill_id": 29,
+            "extra_description": null
+        },
+        {
+            "behavior": {
+                "_name": "アブソリュートガード",
+                "attack": null,
+                "enemy_skill_id": 3771,
+                "extra_description": null,
+                "params": [
+                    "1ターンの間、ダメージを激減する",
+                    1,
+                    75,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null
+                ],
+                "shield_percent": 75,
+                "turns": 1,
+                "type": 74
+            },
+            "condition": {
+                "_ai": 100,
+                "_rnd": 0,
+                "condition_attributes": null,
+                "enemies_remaining": null,
+                "forced_one_time": null,
+                "hp_threshold": null,
+                "on_death": null,
+                "one_time": null
+            },
+            "enemy_skill_id": 3771,
+            "extra_description": null
+        },
+        {
+            "behavior": {
+                "_name": "デスクラッシュ",
+                "attack": {
+                    "atk_multiplier": 200,
+                    "max_hits": 1,
+                    "min_hits": 1
+                },
+                "enemy_skill_id": 3772,
+                "extra_description": null,
+                "max_turns": 10,
+                "min_turns": 10,
+                "params": [
+                    "10ターンの間、スキル使用不能",
+                    10,
+                    10,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    200,
+                    null
+                ],
+                "type": 14
+            },
+            "condition": {
+                "_ai": 100,
+                "_rnd": 0,
+                "condition_attributes": null,
+                "enemies_remaining": null,
+                "forced_one_time": null,
+                "hp_threshold": null,
+                "on_death": null,
+                "one_time": null
+            },
+            "enemy_skill_id": 3772,
+            "extra_description": null
+        },
+        {
+            "behavior": {
+                "_name": "デスクラッシュ",
+                "attack": {
+                    "atk_multiplier": 100,
+                    "max_hits": 6,
+                    "min_hits": 6
+                },
+                "enemy_skill_id": 3810,
+                "extra_description": null,
+                "params": [
+                    null,
+                    6,
+                    6,
+                    100,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null
+                ],
+                "type": 15
+            },
+            "condition": {
+                "_ai": 100,
+                "_rnd": 0,
+                "condition_attributes": null,
+                "enemies_remaining": null,
+                "forced_one_time": null,
+                "hp_threshold": null,
+                "on_death": null,
+                "one_time": null
+            },
+            "enemy_skill_id": 3810,
+            "extra_description": null
+        },
+        {
+            "behavior": {
+                "_name": "※パース終了",
+                "enemy_skill_id": 26,
+                "extra_description": null,
+                "params": [
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    4,
+                    null,
+                    null,
+                    null
+                ],
+                "type": 36
+            },
+            "condition": null,
+            "enemy_skill_id": 26,
+            "extra_description": null
+        }
+    ],
+    "has_animation": false,
+    "has_hqimage": false,
+    "jp_card": {
+        "active_skill": {
+            "from_1": 1,
+            "levels": 7,
+            "name": "防御態勢・木",
+            "raw_description": "水ドロップを回復ドロップに変化。",
+            "skill_id": 161,
+            "skill_type": 9,
+            "to_1": 5,
+            "turn_max": 11,
+            "turn_min": 5
+        },
+        "active_skill_id": 161,
+        "card": {
+            "active_skill_id": 161,
+            "ancestor_id": 296,
+            "atk_scale": 1.0,
+            "attr_id": 2,
+            "awakenings": [
+                5,
+                5,
+                10,
+                10,
+                20
+            ],
+            "base_id": 294,
+            "collab_id": 0,
+            "cost": 30,
+            "enemy_atk_max": 17910,
+            "enemy_atk_min": 597,
+            "enemy_atk_scale": 1.0,
+            "enemy_coins_per_level": 720,
+            "enemy_def_max": 100000,
+            "enemy_def_min": 200,
+            "enemy_def_scale": 1.0,
+            "enemy_hp_max": 8090400,
+            "enemy_hp_min": 269680,
+            "enemy_hp_scale": 1.0,
+            "enemy_max_level": 10,
+            "enemy_skill_counter_increment": 0,
+            "enemy_skill_max_counter": 0,
+            "enemy_skill_refs": [
+                {
+                    "enemy_ai": 0,
+                    "enemy_rnd": 0,
+                    "enemy_skill_id": 318
+                },
+                {
+                    "enemy_ai": 1,
+                    "enemy_rnd": 6,
+                    "enemy_skill_id": 10
+                },
+                {
+                    "enemy_ai": 1,
+                    "enemy_rnd": 0,
+                    "enemy_skill_id": 12
+                },
+                {
+                    "enemy_ai": 100,
+                    "enemy_rnd": 0,
+                    "enemy_skill_id": 3768
+                },
+                {
+                    "enemy_ai": 0,
+                    "enemy_rnd": 0,
+                    "enemy_skill_id": 26
+                },
+                {
+                    "enemy_ai": 50,
+                    "enemy_rnd": 10,
+                    "enemy_skill_id": 18
+                },
+                {
+                    "enemy_ai": 30,
+                    "enemy_rnd": 13,
+                    "enemy_skill_id": 18
+                },
+                {
+                    "enemy_ai": 50,
+                    "enemy_rnd": 0,
+                    "enemy_skill_id": 3769
+                },
+                {
+                    "enemy_ai": 100,
+                    "enemy_rnd": 0,
+                    "enemy_skill_id": 3770
+                },
+                {
+                    "enemy_ai": 2,
+                    "enemy_rnd": 7,
+                    "enemy_skill_id": 10
+                },
+                {
+                    "enemy_ai": 3,
+                    "enemy_rnd": 0,
+                    "enemy_skill_id": 29
+                },
+                {
+                    "enemy_ai": 100,
+                    "enemy_rnd": 0,
+                    "enemy_skill_id": 3771
+                },
+                {
+                    "enemy_ai": 100,
+                    "enemy_rnd": 0,
+                    "enemy_skill_id": 3772
+                },
+                {
+                    "enemy_ai": 100,
+                    "enemy_rnd": 0,
+                    "enemy_skill_id": 3810
+                },
+                {
+                    "enemy_ai": 0,
+                    "enemy_rnd": 0,
+                    "enemy_skill_id": 26
+                }
+            ],
+            "enemy_turns": 1,
+            "enemy_turns_alt": 0,
+            "enemy_xp_per_level": 543,
+            "evo_mat_id_1": 227,
+            "evo_mat_id_2": 227,
+            "evo_mat_id_3": 247,
+            "evo_mat_id_4": 248,
+            "evo_mat_id_5": 251,
+            "feed_xp_per_level": 1350,
+            "furigana": "",
+            "group_id": 100,
+            "hp_scale": 1.0,
+            "inheritable": true,
+            "is_collab": false,
+            "is_ult": true,
+            "latent_on_feed": 0,
+            "leader_skill_id": 306,
+            "limit_mult": 0,
+            "max_atk": 980,
+            "max_hp": 2501,
+            "max_level": 99,
+            "max_rcv": 478,
+            "min_atk": 324,
+            "min_hp": 649,
+            "min_rcv": 324,
+            "monster_no": 759,
+            "name": "角砦龍・フォートトイトプス",
+            "orb_skin_id": 0,
+            "other_fields": [
+                ""
+            ],
+            "random_flags": 3,
+            "rarity": 6,
+            "rcv_scale": 1.0,
+            "released_status": true,
+            "sell_gold_per_level": 570,
+            "sell_mp": 1,
+            "sub_attr_id": 1,
+            "super_awakenings": [],
+            "type_1_id": 4,
+            "type_2_id": 1,
+            "type_3_id": -1,
+            "un_evo_mat_1": 155,
+            "un_evo_mat_2": 156,
+            "un_evo_mat_3": 157,
+            "un_evo_mat_4": 158,
+            "un_evo_mat_5": 159,
+            "unknown_009": 2,
+            "unknown_055": 0,
+            "unknown_056": 0,
+            "use_new_ai": true,
+            "voice_id": 0,
+            "xp_max": 3000000,
+            "xp_scale": 2.5
+        },
+        "critical_failures": [],
+        "enemy_skills": [
+            {
+                "behavior": {
+                    "_name": "※先制コマンドLV1",
+                    "enemy_skill_id": 318,
+                    "extra_description": null,
+                    "level": 1,
+                    "params": [
+                        null,
+                        1,
+                        100,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null
+                    ],
+                    "type": 49
+                },
+                "condition": null,
+                "enemy_skill_id": 318,
+                "extra_description": null
+            },
+            {
+                "behavior": {
+                    "_name": "※ai フラグが立っていたら rnd の数値に分岐",
+                    "branch_condition": "flag",
+                    "branch_value": 1,
+                    "compare": "&",
+                    "enemy_skill_id": 10,
+                    "extra_description": null,
+                    "params": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        50,
+                        4,
+                        null,
+                        null,
+                        null
+                    ],
+                    "target_round": 6,
+                    "type": 43
+                },
+                "condition": null,
+                "enemy_skill_id": 10,
+                "extra_description": null
+            },
+            {
+                "behavior": {
+                    "_name": "※フラグを ai にセット",
+                    "enemy_skill_id": 12,
+                    "extra_description": null,
+                    "flag": 1,
+                    "flag_bin": "0b1",
+                    "operation": "SET",
+                    "params": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        4,
+                        null,
+                        null,
+                        null
+                    ],
+                    "type": 22
+                },
+                "condition": null,
+                "enemy_skill_id": 12,
+                "extra_description": null
+            },
+            {
+                "behavior": {
+                    "_name": "ディフェンディング",
+                    "attack": null,
+                    "enemy_skill_id": 3768,
+                    "extra_description": null,
+                    "params": [
+                        "しばらくの間、状態異常を無効化する",
+                        999,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null
+                    ],
+                    "turns": 999,
+                    "type": 20
+                },
+                "condition": {
+                    "_ai": 100,
+                    "_rnd": 0,
+                    "condition_attributes": null,
+                    "enemies_remaining": null,
+                    "forced_one_time": null,
+                    "hp_threshold": null,
+                    "on_death": null,
+                    "one_time": null
+                },
+                "enemy_skill_id": 3768,
+                "extra_description": null
+            },
+            {
+                "behavior": {
+                    "_name": "※パース終了",
+                    "enemy_skill_id": 26,
+                    "extra_description": null,
+                    "params": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        4,
+                        null,
+                        null,
+                        null
+                    ],
+                    "type": 36
+                },
+                "condition": null,
+                "enemy_skill_id": 26,
+                "extra_description": null
+            },
+            {
+                "behavior": {
+                    "_name": "※HPが ai %以下の時 rnd に分岐",
+                    "branch_condition": "hp",
+                    "branch_value": 50,
+                    "compare": "<",
+                    "enemy_skill_id": 18,
+                    "extra_description": null,
+                    "params": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        4,
+                        null,
+                        null,
+                        null
+                    ],
+                    "target_round": 10,
+                    "type": 28
+                },
+                "condition": null,
+                "enemy_skill_id": 18,
+                "extra_description": null
+            },
+            {
+                "behavior": {
+                    "_name": "※HPが ai %以下の時 rnd に分岐",
+                    "branch_condition": "hp",
+                    "branch_value": 30,
+                    "compare": "<",
+                    "enemy_skill_id": 18,
+                    "extra_description": null,
+                    "params": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        4,
+                        null,
+                        null,
+                        null
+                    ],
+                    "target_round": 13,
+                    "type": 28
+                },
+                "condition": null,
+                "enemy_skill_id": 18,
+                "extra_description": null
+            },
+            {
+                "behavior": {
+                    "_name": "スーパーホーン",
+                    "attack": {
+                        "atk_multiplier": 120,
+                        "max_hits": 1,
+                        "min_hits": 1
+                    },
+                    "enemy_skill_id": 3769,
+                    "extra_description": null,
+                    "params": [
+                        null,
+                        1,
+                        1,
+                        120,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null
+                    ],
+                    "type": 15
+                },
+                "condition": {
+                    "_ai": 50,
+                    "_rnd": 0,
+                    "condition_attributes": null,
+                    "enemies_remaining": null,
+                    "forced_one_time": null,
+                    "hp_threshold": null,
+                    "on_death": null,
+                    "one_time": null
+                },
+                "enemy_skill_id": 3769,
+                "extra_description": null
+            },
+            {
+                "behavior": {
+                    "_name": "グランドラッシュ",
+                    "attack": {
+                        "atk_multiplier": 100,
+                        "max_hits": 1,
+                        "min_hits": 1
+                    },
+                    "attributes": [
+                        6
+                    ],
+                    "condition_attributes": [
+                        0,
+                        1,
+                        2,
+                        3,
+                        4,
+                        5,
+                        7,
+                        8
+                    ],
+                    "count": 6,
+                    "enemy_skill_id": 3770,
+                    "extra_description": null,
+                    "params": [
+                        null,
+                        6,
+                        64,
+                        64,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        100,
+                        null
+                    ],
+                    "type": 92
+                },
+                "condition": {
+                    "_ai": 100,
+                    "_rnd": 0,
+                    "condition_attributes": [
+                        0,
+                        1,
+                        2,
+                        3,
+                        4,
+                        5,
+                        7,
+                        8
+                    ],
+                    "enemies_remaining": null,
+                    "forced_one_time": null,
+                    "hp_threshold": null,
+                    "on_death": null,
+                    "one_time": null
+                },
+                "enemy_skill_id": 3770,
+                "extra_description": null
+            },
+            {
+                "behavior": {
+                    "_name": "※ai フラグが立っていたら rnd の数値に分岐",
+                    "branch_condition": "flag",
+                    "branch_value": 2,
+                    "compare": "&",
+                    "enemy_skill_id": 10,
+                    "extra_description": null,
+                    "params": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        50,
+                        4,
+                        null,
+                        null,
+                        null
+                    ],
+                    "target_round": 7,
+                    "type": 43
+                },
+                "condition": null,
+                "enemy_skill_id": 10,
+                "extra_description": null
+            },
+            {
+                "behavior": {
+                    "_name": "※ai フラグOR",
+                    "enemy_skill_id": 29,
+                    "extra_description": null,
+                    "flag": 3,
+                    "flag_bin": "0b11",
+                    "operation": "OR",
+                    "params": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        50,
+                        4,
+                        null,
+                        null,
+                        null
+                    ],
+                    "type": 44
+                },
+                "condition": null,
+                "enemy_skill_id": 29,
+                "extra_description": null
+            },
+            {
+                "behavior": {
+                    "_name": "アブソリュートガード",
+                    "attack": null,
+                    "enemy_skill_id": 3771,
+                    "extra_description": null,
+                    "params": [
+                        "1ターンの間、ダメージを激減する",
+                        1,
+                        75,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null
+                    ],
+                    "shield_percent": 75,
+                    "turns": 1,
+                    "type": 74
+                },
+                "condition": {
+                    "_ai": 100,
+                    "_rnd": 0,
+                    "condition_attributes": null,
+                    "enemies_remaining": null,
+                    "forced_one_time": null,
+                    "hp_threshold": null,
+                    "on_death": null,
+                    "one_time": null
+                },
+                "enemy_skill_id": 3771,
+                "extra_description": null
+            },
+            {
+                "behavior": {
+                    "_name": "デスクラッシュ",
+                    "attack": {
+                        "atk_multiplier": 200,
+                        "max_hits": 1,
+                        "min_hits": 1
+                    },
+                    "enemy_skill_id": 3772,
+                    "extra_description": null,
+                    "max_turns": 10,
+                    "min_turns": 10,
+                    "params": [
+                        "10ターンの間、スキル使用不能",
+                        10,
+                        10,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        200,
+                        null
+                    ],
+                    "type": 14
+                },
+                "condition": {
+                    "_ai": 100,
+                    "_rnd": 0,
+                    "condition_attributes": null,
+                    "enemies_remaining": null,
+                    "forced_one_time": null,
+                    "hp_threshold": null,
+                    "on_death": null,
+                    "one_time": null
+                },
+                "enemy_skill_id": 3772,
+                "extra_description": null
+            },
+            {
+                "behavior": {
+                    "_name": "デスクラッシュ",
+                    "attack": {
+                        "atk_multiplier": 100,
+                        "max_hits": 6,
+                        "min_hits": 6
+                    },
+                    "enemy_skill_id": 3810,
+                    "extra_description": null,
+                    "params": [
+                        null,
+                        6,
+                        6,
+                        100,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null
+                    ],
+                    "type": 15
+                },
+                "condition": {
+                    "_ai": 100,
+                    "_rnd": 0,
+                    "condition_attributes": null,
+                    "enemies_remaining": null,
+                    "forced_one_time": null,
+                    "hp_threshold": null,
+                    "on_death": null,
+                    "one_time": null
+                },
+                "enemy_skill_id": 3810,
+                "extra_description": null
+            },
+            {
+                "behavior": {
+                    "_name": "※パース終了",
+                    "enemy_skill_id": 26,
+                    "extra_description": null,
+                    "params": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        4,
+                        null,
+                        null,
+                        null
+                    ],
+                    "type": 36
+                },
+                "condition": null,
+                "enemy_skill_id": 26,
+                "extra_description": null
+            }
+        ],
+        "leader_skill": {
+            "_atk": 1,
+            "_hp": 1,
+            "_rcv": 1,
+            "_shield": 0.5,
+            "name": "樹氷の防壁",
+            "raw_description": "木、水属性の敵から受けるダメージを半減。",
+            "reduction_attributes": [
+                2,
+                1
+            ],
+            "skill_id": 306,
+            "skill_type": 36
+        },
+        "leader_skill_id": 306,
+        "monster_id": 759,
+        "monster_no": 759,
+        "server": "Server.jp"
+    },
+    "kr_card": {
+        "active_skill": {
+            "from_1": 1,
+            "levels": 7,
+            "name": "방어태세 - 나무",
+            "raw_description": "물드롭을 회복드롭으로 변화",
+            "skill_id": 161,
+            "skill_type": 9,
+            "to_1": 5,
+            "turn_max": 11,
+            "turn_min": 5
+        },
+        "active_skill_id": 161,
+        "card": {
+            "active_skill_id": 161,
+            "ancestor_id": 296,
+            "atk_scale": 1.0,
+            "attr_id": 2,
+            "awakenings": [
+                5,
+                5,
+                10,
+                10,
+                20
+            ],
+            "base_id": 294,
+            "collab_id": 0,
+            "cost": 30,
+            "enemy_atk_max": 17910,
+            "enemy_atk_min": 597,
+            "enemy_atk_scale": 1.0,
+            "enemy_coins_per_level": 720,
+            "enemy_def_max": 100000,
+            "enemy_def_min": 200,
+            "enemy_def_scale": 1.0,
+            "enemy_hp_max": 8090400,
+            "enemy_hp_min": 269680,
+            "enemy_hp_scale": 1.0,
+            "enemy_max_level": 10,
+            "enemy_skill_counter_increment": 0,
+            "enemy_skill_max_counter": 0,
+            "enemy_skill_refs": [
+                {
+                    "enemy_ai": 0,
+                    "enemy_rnd": 0,
+                    "enemy_skill_id": 318
+                },
+                {
+                    "enemy_ai": 1,
+                    "enemy_rnd": 6,
+                    "enemy_skill_id": 10
+                },
+                {
+                    "enemy_ai": 1,
+                    "enemy_rnd": 0,
+                    "enemy_skill_id": 12
+                },
+                {
+                    "enemy_ai": 100,
+                    "enemy_rnd": 0,
+                    "enemy_skill_id": 3768
+                },
+                {
+                    "enemy_ai": 0,
+                    "enemy_rnd": 0,
+                    "enemy_skill_id": 26
+                },
+                {
+                    "enemy_ai": 50,
+                    "enemy_rnd": 10,
+                    "enemy_skill_id": 18
+                },
+                {
+                    "enemy_ai": 30,
+                    "enemy_rnd": 13,
+                    "enemy_skill_id": 18
+                },
+                {
+                    "enemy_ai": 50,
+                    "enemy_rnd": 0,
+                    "enemy_skill_id": 3769
+                },
+                {
+                    "enemy_ai": 100,
+                    "enemy_rnd": 0,
+                    "enemy_skill_id": 3770
+                },
+                {
+                    "enemy_ai": 2,
+                    "enemy_rnd": 7,
+                    "enemy_skill_id": 10
+                },
+                {
+                    "enemy_ai": 3,
+                    "enemy_rnd": 0,
+                    "enemy_skill_id": 29
+                },
+                {
+                    "enemy_ai": 100,
+                    "enemy_rnd": 0,
+                    "enemy_skill_id": 3771
+                },
+                {
+                    "enemy_ai": 100,
+                    "enemy_rnd": 0,
+                    "enemy_skill_id": 3772
+                },
+                {
+                    "enemy_ai": 100,
+                    "enemy_rnd": 0,
+                    "enemy_skill_id": 3810
+                },
+                {
+                    "enemy_ai": 0,
+                    "enemy_rnd": 0,
+                    "enemy_skill_id": 26
+                }
+            ],
+            "enemy_turns": 1,
+            "enemy_turns_alt": 0,
+            "enemy_xp_per_level": 543,
+            "evo_mat_id_1": 227,
+            "evo_mat_id_2": 227,
+            "evo_mat_id_3": 247,
+            "evo_mat_id_4": 248,
+            "evo_mat_id_5": 251,
+            "feed_xp_per_level": 1350,
+            "furigana": "",
+            "group_id": 100,
+            "hp_scale": 1.0,
+            "inheritable": true,
+            "is_collab": false,
+            "is_ult": true,
+            "latent_on_feed": 0,
+            "leader_skill_id": 306,
+            "limit_mult": 0,
+            "max_atk": 980,
+            "max_hp": 2501,
+            "max_level": 99,
+            "max_rcv": 478,
+            "min_atk": 324,
+            "min_hp": 649,
+            "min_rcv": 324,
+            "monster_no": 759,
+            "name": "각채용 포토 토이톱스",
+            "orb_skin_id": 0,
+            "other_fields": [
+                ""
+            ],
+            "random_flags": 3,
+            "rarity": 6,
+            "rcv_scale": 1.0,
+            "released_status": true,
+            "sell_gold_per_level": 570,
+            "sell_mp": 1,
+            "sub_attr_id": 1,
+            "super_awakenings": [],
+            "type_1_id": 4,
+            "type_2_id": 1,
+            "type_3_id": -1,
+            "un_evo_mat_1": 155,
+            "un_evo_mat_2": 156,
+            "un_evo_mat_3": 157,
+            "un_evo_mat_4": 158,
+            "un_evo_mat_5": 159,
+            "unknown_009": 2,
+            "unknown_055": 0,
+            "unknown_056": 0,
+            "use_new_ai": true,
+            "voice_id": 0,
+            "xp_max": 3000000,
+            "xp_scale": 2.5
+        },
+        "critical_failures": [],
+        "enemy_skills": [
+            {
+                "behavior": {
+                    "_name": "선제커맨드Lv1",
+                    "enemy_skill_id": 318,
+                    "extra_description": null,
+                    "level": 1,
+                    "params": [
+                        null,
+                        1,
+                        100,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null
+                    ],
+                    "type": 49
+                },
+                "condition": null,
+                "enemy_skill_id": 318,
+                "extra_description": null
+            },
+            {
+                "behavior": {
+                    "_name": "※ai 일 경우 rnd수치로 분기",
+                    "branch_condition": "flag",
+                    "branch_value": 1,
+                    "compare": "&",
+                    "enemy_skill_id": 10,
+                    "extra_description": null,
+                    "params": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        50,
+                        4,
+                        null,
+                        null,
+                        null
+                    ],
+                    "target_round": 6,
+                    "type": 43
+                },
+                "condition": null,
+                "enemy_skill_id": 10,
+                "extra_description": null
+            },
+            {
+                "behavior": {
+                    "_name": "방해 드롭",
+                    "enemy_skill_id": 12,
+                    "extra_description": null,
+                    "flag": 1,
+                    "flag_bin": "0b1",
+                    "operation": "SET",
+                    "params": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        4,
+                        null,
+                        null,
+                        null
+                    ],
+                    "type": 22
+                },
+                "condition": null,
+                "enemy_skill_id": 12,
+                "extra_description": null
+            },
+            {
+                "behavior": {
+                    "_name": "디펜딩",
+                    "attack": null,
+                    "enemy_skill_id": 3768,
+                    "extra_description": null,
+                    "params": [
+                        "한동안 상태이상을 무효화",
+                        999,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null
+                    ],
+                    "turns": 999,
+                    "type": 20
+                },
+                "condition": {
+                    "_ai": 100,
+                    "_rnd": 0,
+                    "condition_attributes": null,
+                    "enemies_remaining": null,
+                    "forced_one_time": null,
+                    "hp_threshold": null,
+                    "on_death": null,
+                    "one_time": null
+                },
+                "enemy_skill_id": 3768,
+                "extra_description": null
+            },
+            {
+                "behavior": {
+                    "_name": "테스트예비",
+                    "enemy_skill_id": 26,
+                    "extra_description": null,
+                    "params": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        4,
+                        null,
+                        null,
+                        null
+                    ],
+                    "type": 36
+                },
+                "condition": null,
+                "enemy_skill_id": 26,
+                "extra_description": null
+            },
+            {
+                "behavior": {
+                    "_name": "테스트예비",
+                    "branch_condition": "hp",
+                    "branch_value": 50,
+                    "compare": "<",
+                    "enemy_skill_id": 18,
+                    "extra_description": null,
+                    "params": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        4,
+                        null,
+                        null,
+                        null
+                    ],
+                    "target_round": 10,
+                    "type": 28
+                },
+                "condition": null,
+                "enemy_skill_id": 18,
+                "extra_description": null
+            },
+            {
+                "behavior": {
+                    "_name": "테스트예비",
+                    "branch_condition": "hp",
+                    "branch_value": 30,
+                    "compare": "<",
+                    "enemy_skill_id": 18,
+                    "extra_description": null,
+                    "params": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        4,
+                        null,
+                        null,
+                        null
+                    ],
+                    "target_round": 13,
+                    "type": 28
+                },
+                "condition": null,
+                "enemy_skill_id": 18,
+                "extra_description": null
+            },
+            {
+                "behavior": {
+                    "_name": "슈퍼 혼",
+                    "attack": {
+                        "atk_multiplier": 120,
+                        "max_hits": 1,
+                        "min_hits": 1
+                    },
+                    "enemy_skill_id": 3769,
+                    "extra_description": null,
+                    "params": [
+                        null,
+                        1,
+                        1,
+                        120,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null
+                    ],
+                    "type": 15
+                },
+                "condition": {
+                    "_ai": 50,
+                    "_rnd": 0,
+                    "condition_attributes": null,
+                    "enemies_remaining": null,
+                    "forced_one_time": null,
+                    "hp_threshold": null,
+                    "on_death": null,
+                    "one_time": null
+                },
+                "enemy_skill_id": 3769,
+                "extra_description": null
+            },
+            {
+                "behavior": {
+                    "_name": "그랜드 러쉬",
+                    "attack": {
+                        "atk_multiplier": 100,
+                        "max_hits": 1,
+                        "min_hits": 1
+                    },
+                    "attributes": [
+                        6
+                    ],
+                    "condition_attributes": [
+                        0,
+                        1,
+                        2,
+                        3,
+                        4,
+                        5,
+                        7,
+                        8
+                    ],
+                    "count": 6,
+                    "enemy_skill_id": 3770,
+                    "extra_description": null,
+                    "params": [
+                        null,
+                        6,
+                        64,
+                        64,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        100,
+                        null
+                    ],
+                    "type": 92
+                },
+                "condition": {
+                    "_ai": 100,
+                    "_rnd": 0,
+                    "condition_attributes": [
+                        0,
+                        1,
+                        2,
+                        3,
+                        4,
+                        5,
+                        7,
+                        8
+                    ],
+                    "enemies_remaining": null,
+                    "forced_one_time": null,
+                    "hp_threshold": null,
+                    "on_death": null,
+                    "one_time": null
+                },
+                "enemy_skill_id": 3770,
+                "extra_description": null
+            },
+            {
+                "behavior": {
+                    "_name": "※ai 일 경우 rnd수치로 분기",
+                    "branch_condition": "flag",
+                    "branch_value": 2,
+                    "compare": "&",
+                    "enemy_skill_id": 10,
+                    "extra_description": null,
+                    "params": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        50,
+                        4,
+                        null,
+                        null,
+                        null
+                    ],
+                    "target_round": 7,
+                    "type": 43
+                },
+                "condition": null,
+                "enemy_skill_id": 10,
+                "extra_description": null
+            },
+            {
+                "behavior": {
+                    "_name": "※ai フラグOR",
+                    "enemy_skill_id": 29,
+                    "extra_description": null,
+                    "flag": 3,
+                    "flag_bin": "0b11",
+                    "operation": "OR",
+                    "params": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        50,
+                        4,
+                        null,
+                        null,
+                        null
+                    ],
+                    "type": 44
+                },
+                "condition": null,
+                "enemy_skill_id": 29,
+                "extra_description": null
+            },
+            {
+                "behavior": {
+                    "_name": "앱솔루트 가드",
+                    "attack": null,
+                    "enemy_skill_id": 3771,
+                    "extra_description": null,
+                    "params": [
+                        "1턴 동안 대미지를 격감",
+                        1,
+                        75,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null
+                    ],
+                    "shield_percent": 75,
+                    "turns": 1,
+                    "type": 74
+                },
+                "condition": {
+                    "_ai": 100,
+                    "_rnd": 0,
+                    "condition_attributes": null,
+                    "enemies_remaining": null,
+                    "forced_one_time": null,
+                    "hp_threshold": null,
+                    "on_death": null,
+                    "one_time": null
+                },
+                "enemy_skill_id": 3771,
+                "extra_description": null
+            },
+            {
+                "behavior": {
+                    "_name": "데스 크래쉬",
+                    "attack": {
+                        "atk_multiplier": 200,
+                        "max_hits": 1,
+                        "min_hits": 1
+                    },
+                    "enemy_skill_id": 3772,
+                    "extra_description": null,
+                    "max_turns": 10,
+                    "min_turns": 10,
+                    "params": [
+                        "10턴 동안 스킬 사용불가",
+                        10,
+                        10,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        200,
+                        null
+                    ],
+                    "type": 14
+                },
+                "condition": {
+                    "_ai": 100,
+                    "_rnd": 0,
+                    "condition_attributes": null,
+                    "enemies_remaining": null,
+                    "forced_one_time": null,
+                    "hp_threshold": null,
+                    "on_death": null,
+                    "one_time": null
+                },
+                "enemy_skill_id": 3772,
+                "extra_description": null
+            },
+            {
+                "behavior": {
+                    "_name": "데스 크래쉬",
+                    "attack": {
+                        "atk_multiplier": 100,
+                        "max_hits": 6,
+                        "min_hits": 6
+                    },
+                    "enemy_skill_id": 3810,
+                    "extra_description": null,
+                    "params": [
+                        null,
+                        6,
+                        6,
+                        100,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null
+                    ],
+                    "type": 15
+                },
+                "condition": {
+                    "_ai": 100,
+                    "_rnd": 0,
+                    "condition_attributes": null,
+                    "enemies_remaining": null,
+                    "forced_one_time": null,
+                    "hp_threshold": null,
+                    "on_death": null,
+                    "one_time": null
+                },
+                "enemy_skill_id": 3810,
+                "extra_description": null
+            },
+            {
+                "behavior": {
+                    "_name": "테스트예비",
+                    "enemy_skill_id": 26,
+                    "extra_description": null,
+                    "params": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        4,
+                        null,
+                        null,
+                        null
+                    ],
+                    "type": 36
+                },
+                "condition": null,
+                "enemy_skill_id": 26,
+                "extra_description": null
+            }
+        ],
+        "leader_skill": {
+            "_atk": 1,
+            "_hp": 1,
+            "_rcv": 1,
+            "_shield": 0.5,
+            "name": "나무와 얼음의 방어벽",
+            "raw_description": "나무속성과 물속성의 적에게서 받는  대미지가 반감",
+            "reduction_attributes": [
+                2,
+                1
+            ],
+            "skill_id": 306,
+            "skill_type": 36
+        },
+        "leader_skill_id": 306,
+        "monster_id": 759,
+        "monster_no": 759,
+        "server": "Server.kr"
+    },
+    "leader_skill": {
+        "en_text": "Reduce damage taken from wood, water att. by 50%",
+        "jp_skill": {
+            "_atk": 1,
+            "_hp": 1,
+            "_rcv": 1,
+            "_shield": 0.5,
+            "name": "樹氷の防壁",
+            "raw_description": "木、水属性の敵から受けるダメージを半減。",
+            "reduction_attributes": [
+                2,
+                1
+            ],
+            "skill_id": 306,
+            "skill_type": 36
+        },
+        "kr_skill": {
+            "_atk": 1,
+            "_hp": 1,
+            "_rcv": 1,
+            "_shield": 0.5,
+            "name": "나무와 얼음의 방어벽",
+            "raw_description": "나무속성과 물속성의 적에게서 받는  대미지가 반감",
+            "reduction_attributes": [
+                2,
+                1
+            ],
+            "skill_id": 306,
+            "skill_type": 36
+        },
+        "na_skill": {
+            "_atk": 1,
+            "_hp": 1,
+            "_rcv": 1,
+            "_shield": 0.5,
+            "name": "Frost Forest Barrier",
+            "raw_description": "Halves Wood & Water Att. damage",
+            "reduction_attributes": [
+                2,
+                1
+            ],
+            "skill_id": 306,
+            "skill_type": 36
+        },
+        "skill_id": 306,
+        "skill_type_tags": [
+            "LsCondition.REDUCE_DAMAGE"
+        ]
+    },
+    "monster_id": 759,
+    "na_card": {
+        "active_skill": {
+            "from_1": 1,
+            "levels": 7,
+            "name": "Guard Stance - Wood",
+            "raw_description": "Changes Water Orbs to Heal Orbs",
+            "skill_id": 161,
+            "skill_type": 9,
+            "to_1": 5,
+            "turn_max": 11,
+            "turn_min": 5
+        },
+        "active_skill_id": 161,
+        "card": {
+            "active_skill_id": 161,
+            "ancestor_id": 296,
+            "atk_scale": 1.0,
+            "attr_id": 2,
+            "awakenings": [
+                5,
+                5,
+                10,
+                10,
+                20
+            ],
+            "base_id": 294,
+            "collab_id": 0,
+            "cost": 30,
+            "enemy_atk_max": 17910,
+            "enemy_atk_min": 597,
+            "enemy_atk_scale": 1.0,
+            "enemy_coins_per_level": 720,
+            "enemy_def_max": 100000,
+            "enemy_def_min": 200,
+            "enemy_def_scale": 1.0,
+            "enemy_hp_max": 8090400,
+            "enemy_hp_min": 269680,
+            "enemy_hp_scale": 1.0,
+            "enemy_max_level": 10,
+            "enemy_skill_counter_increment": 0,
+            "enemy_skill_max_counter": 0,
+            "enemy_skill_refs": [
+                {
+                    "enemy_ai": 0,
+                    "enemy_rnd": 0,
+                    "enemy_skill_id": 318
+                },
+                {
+                    "enemy_ai": 1,
+                    "enemy_rnd": 6,
+                    "enemy_skill_id": 10
+                },
+                {
+                    "enemy_ai": 1,
+                    "enemy_rnd": 0,
+                    "enemy_skill_id": 12
+                },
+                {
+                    "enemy_ai": 100,
+                    "enemy_rnd": 0,
+                    "enemy_skill_id": 3768
+                },
+                {
+                    "enemy_ai": 0,
+                    "enemy_rnd": 0,
+                    "enemy_skill_id": 26
+                },
+                {
+                    "enemy_ai": 50,
+                    "enemy_rnd": 10,
+                    "enemy_skill_id": 18
+                },
+                {
+                    "enemy_ai": 30,
+                    "enemy_rnd": 13,
+                    "enemy_skill_id": 18
+                },
+                {
+                    "enemy_ai": 50,
+                    "enemy_rnd": 0,
+                    "enemy_skill_id": 3769
+                },
+                {
+                    "enemy_ai": 100,
+                    "enemy_rnd": 0,
+                    "enemy_skill_id": 3770
+                },
+                {
+                    "enemy_ai": 2,
+                    "enemy_rnd": 7,
+                    "enemy_skill_id": 10
+                },
+                {
+                    "enemy_ai": 3,
+                    "enemy_rnd": 0,
+                    "enemy_skill_id": 29
+                },
+                {
+                    "enemy_ai": 100,
+                    "enemy_rnd": 0,
+                    "enemy_skill_id": 3771
+                },
+                {
+                    "enemy_ai": 100,
+                    "enemy_rnd": 0,
+                    "enemy_skill_id": 3772
+                },
+                {
+                    "enemy_ai": 100,
+                    "enemy_rnd": 0,
+                    "enemy_skill_id": 3810
+                },
+                {
+                    "enemy_ai": 0,
+                    "enemy_rnd": 0,
+                    "enemy_skill_id": 26
+                }
+            ],
+            "enemy_turns": 1,
+            "enemy_turns_alt": 0,
+            "enemy_xp_per_level": 543,
+            "evo_mat_id_1": 227,
+            "evo_mat_id_2": 227,
+            "evo_mat_id_3": 247,
+            "evo_mat_id_4": 248,
+            "evo_mat_id_5": 251,
+            "feed_xp_per_level": 1350,
+            "furigana": "",
+            "group_id": 100,
+            "hp_scale": 1.0,
+            "inheritable": true,
+            "is_collab": false,
+            "is_ult": true,
+            "latent_on_feed": 0,
+            "leader_skill_id": 306,
+            "limit_mult": 0,
+            "max_atk": 980,
+            "max_hp": 2501,
+            "max_level": 99,
+            "max_rcv": 478,
+            "min_atk": 324,
+            "min_hp": 649,
+            "min_rcv": 324,
+            "monster_no": 759,
+            "name": "Horned Fort Dragon, Fortoytops",
+            "orb_skin_id": 0,
+            "other_fields": [
+                ""
+            ],
+            "random_flags": 3,
+            "rarity": 6,
+            "rcv_scale": 1.0,
+            "released_status": true,
+            "sell_gold_per_level": 570,
+            "sell_mp": 1,
+            "sub_attr_id": 1,
+            "super_awakenings": [],
+            "type_1_id": 4,
+            "type_2_id": 1,
+            "type_3_id": -1,
+            "un_evo_mat_1": 155,
+            "un_evo_mat_2": 156,
+            "un_evo_mat_3": 157,
+            "un_evo_mat_4": 158,
+            "un_evo_mat_5": 159,
+            "unknown_009": 2,
+            "unknown_055": 0,
+            "unknown_056": 0,
+            "use_new_ai": true,
+            "voice_id": 0,
+            "xp_max": 3000000,
+            "xp_scale": 2.5
+        },
+        "critical_failures": [],
+        "enemy_skills": [
+            {
+                "behavior": {
+                    "_name": "*Preemptive Command LV1",
+                    "enemy_skill_id": 318,
+                    "extra_description": null,
+                    "level": 1,
+                    "params": [
+                        null,
+                        1,
+                        100,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null
+                    ],
+                    "type": 49
+                },
+                "condition": null,
+                "enemy_skill_id": 318,
+                "extra_description": null
+            },
+            {
+                "behavior": {
+                    "_name": "ERROR10",
+                    "branch_condition": "flag",
+                    "branch_value": 1,
+                    "compare": "&",
+                    "enemy_skill_id": 10,
+                    "extra_description": null,
+                    "params": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        50,
+                        4,
+                        null,
+                        null,
+                        null
+                    ],
+                    "target_round": 6,
+                    "type": 43
+                },
+                "condition": null,
+                "enemy_skill_id": 10,
+                "extra_description": null
+            },
+            {
+                "behavior": {
+                    "_name": "ERROR12",
+                    "enemy_skill_id": 12,
+                    "extra_description": null,
+                    "flag": 1,
+                    "flag_bin": "0b1",
+                    "operation": "SET",
+                    "params": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        4,
+                        null,
+                        null,
+                        null
+                    ],
+                    "type": 22
+                },
+                "condition": null,
+                "enemy_skill_id": 12,
+                "extra_description": null
+            },
+            {
+                "behavior": {
+                    "_name": "Defending",
+                    "attack": null,
+                    "enemy_skill_id": 3768,
+                    "extra_description": null,
+                    "params": [
+                        "Voids status ailments for a number of turns",
+                        999,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null
+                    ],
+                    "turns": 999,
+                    "type": 20
+                },
+                "condition": {
+                    "_ai": 100,
+                    "_rnd": 0,
+                    "condition_attributes": null,
+                    "enemies_remaining": null,
+                    "forced_one_time": null,
+                    "hp_threshold": null,
+                    "on_death": null,
+                    "one_time": null
+                },
+                "enemy_skill_id": 3768,
+                "extra_description": null
+            },
+            {
+                "behavior": {
+                    "_name": "ERROR26",
+                    "enemy_skill_id": 26,
+                    "extra_description": null,
+                    "params": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        4,
+                        null,
+                        null,
+                        null
+                    ],
+                    "type": 36
+                },
+                "condition": null,
+                "enemy_skill_id": 26,
+                "extra_description": null
+            },
+            {
+                "behavior": {
+                    "_name": "ERROR18",
+                    "branch_condition": "hp",
+                    "branch_value": 50,
+                    "compare": "<",
+                    "enemy_skill_id": 18,
+                    "extra_description": null,
+                    "params": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        4,
+                        null,
+                        null,
+                        null
+                    ],
+                    "target_round": 10,
+                    "type": 28
+                },
+                "condition": null,
+                "enemy_skill_id": 18,
+                "extra_description": null
+            },
+            {
+                "behavior": {
+                    "_name": "ERROR18",
+                    "branch_condition": "hp",
+                    "branch_value": 30,
+                    "compare": "<",
+                    "enemy_skill_id": 18,
+                    "extra_description": null,
+                    "params": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        4,
+                        null,
+                        null,
+                        null
+                    ],
+                    "target_round": 13,
+                    "type": 28
+                },
+                "condition": null,
+                "enemy_skill_id": 18,
+                "extra_description": null
+            },
+            {
+                "behavior": {
+                    "_name": "Super Horn",
+                    "attack": {
+                        "atk_multiplier": 120,
+                        "max_hits": 1,
+                        "min_hits": 1
+                    },
+                    "enemy_skill_id": 3769,
+                    "extra_description": null,
+                    "params": [
+                        null,
+                        1,
+                        1,
+                        120,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null
+                    ],
+                    "type": 15
+                },
+                "condition": {
+                    "_ai": 50,
+                    "_rnd": 0,
+                    "condition_attributes": null,
+                    "enemies_remaining": null,
+                    "forced_one_time": null,
+                    "hp_threshold": null,
+                    "on_death": null,
+                    "one_time": null
+                },
+                "enemy_skill_id": 3769,
+                "extra_description": null
+            },
+            {
+                "behavior": {
+                    "_name": "Grand Rush",
+                    "attack": {
+                        "atk_multiplier": 100,
+                        "max_hits": 1,
+                        "min_hits": 1
+                    },
+                    "attributes": [
+                        6
+                    ],
+                    "condition_attributes": [
+                        0,
+                        1,
+                        2,
+                        3,
+                        4,
+                        5,
+                        7,
+                        8
+                    ],
+                    "count": 6,
+                    "enemy_skill_id": 3770,
+                    "extra_description": null,
+                    "params": [
+                        null,
+                        6,
+                        64,
+                        64,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        100,
+                        null
+                    ],
+                    "type": 92
+                },
+                "condition": {
+                    "_ai": 100,
+                    "_rnd": 0,
+                    "condition_attributes": [
+                        0,
+                        1,
+                        2,
+                        3,
+                        4,
+                        5,
+                        7,
+                        8
+                    ],
+                    "enemies_remaining": null,
+                    "forced_one_time": null,
+                    "hp_threshold": null,
+                    "on_death": null,
+                    "one_time": null
+                },
+                "enemy_skill_id": 3770,
+                "extra_description": null
+            },
+            {
+                "behavior": {
+                    "_name": "ERROR10",
+                    "branch_condition": "flag",
+                    "branch_value": 2,
+                    "compare": "&",
+                    "enemy_skill_id": 10,
+                    "extra_description": null,
+                    "params": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        50,
+                        4,
+                        null,
+                        null,
+                        null
+                    ],
+                    "target_round": 7,
+                    "type": 43
+                },
+                "condition": null,
+                "enemy_skill_id": 10,
+                "extra_description": null
+            },
+            {
+                "behavior": {
+                    "_name": "ERROR29",
+                    "enemy_skill_id": 29,
+                    "extra_description": null,
+                    "flag": 3,
+                    "flag_bin": "0b11",
+                    "operation": "OR",
+                    "params": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        50,
+                        4,
+                        null,
+                        null,
+                        null
+                    ],
+                    "type": 44
+                },
+                "condition": null,
+                "enemy_skill_id": 29,
+                "extra_description": null
+            },
+            {
+                "behavior": {
+                    "_name": "Absolute Guard",
+                    "attack": null,
+                    "enemy_skill_id": 3771,
+                    "extra_description": null,
+                    "params": [
+                        "Damage greatly reduced for 1 turn",
+                        1,
+                        75,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null
+                    ],
+                    "shield_percent": 75,
+                    "turns": 1,
+                    "type": 74
+                },
+                "condition": {
+                    "_ai": 100,
+                    "_rnd": 0,
+                    "condition_attributes": null,
+                    "enemies_remaining": null,
+                    "forced_one_time": null,
+                    "hp_threshold": null,
+                    "on_death": null,
+                    "one_time": null
+                },
+                "enemy_skill_id": 3771,
+                "extra_description": null
+            },
+            {
+                "behavior": {
+                    "_name": "Death Crash",
+                    "attack": {
+                        "atk_multiplier": 200,
+                        "max_hits": 1,
+                        "min_hits": 1
+                    },
+                    "enemy_skill_id": 3772,
+                    "extra_description": null,
+                    "max_turns": 10,
+                    "min_turns": 10,
+                    "params": [
+                        "Skills are unusable for 10 turns",
+                        10,
+                        10,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        200,
+                        null
+                    ],
+                    "type": 14
+                },
+                "condition": {
+                    "_ai": 100,
+                    "_rnd": 0,
+                    "condition_attributes": null,
+                    "enemies_remaining": null,
+                    "forced_one_time": null,
+                    "hp_threshold": null,
+                    "on_death": null,
+                    "one_time": null
+                },
+                "enemy_skill_id": 3772,
+                "extra_description": null
+            },
+            {
+                "behavior": {
+                    "_name": "Death Crash",
+                    "attack": {
+                        "atk_multiplier": 100,
+                        "max_hits": 6,
+                        "min_hits": 6
+                    },
+                    "enemy_skill_id": 3810,
+                    "extra_description": null,
+                    "params": [
+                        null,
+                        6,
+                        6,
+                        100,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null
+                    ],
+                    "type": 15
+                },
+                "condition": {
+                    "_ai": 100,
+                    "_rnd": 0,
+                    "condition_attributes": null,
+                    "enemies_remaining": null,
+                    "forced_one_time": null,
+                    "hp_threshold": null,
+                    "on_death": null,
+                    "one_time": null
+                },
+                "enemy_skill_id": 3810,
+                "extra_description": null
+            },
+            {
+                "behavior": {
+                    "_name": "ERROR26",
+                    "enemy_skill_id": 26,
+                    "extra_description": null,
+                    "params": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        4,
+                        null,
+                        null,
+                        null
+                    ],
+                    "type": 36
+                },
+                "condition": null,
+                "enemy_skill_id": 26,
+                "extra_description": null
+            }
+        ],
+        "leader_skill": {
+            "_atk": 1,
+            "_hp": 1,
+            "_rcv": 1,
+            "_shield": 0.5,
+            "name": "Frost Forest Barrier",
+            "raw_description": "Halves Wood & Water Att. damage",
+            "reduction_attributes": [
+                2,
+                1
+            ],
+            "skill_id": 306,
+            "skill_type": 36
+        },
+        "leader_skill_id": 306,
+        "monster_id": 759,
+        "monster_no": 759,
+        "server": "Server.na"
+    }
+}

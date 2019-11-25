@@ -1,0 +1,47 @@
+#104789  - Business Trip Patissiere, Minotauria
+True : use_new_ai
+1 : starting/max counter
+0 : counter increment
+
+ESBranchLevel(35:25) -> ESBranchLevel
+Branch on level > 4, target rnd 3
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESBranchHP(28:18) -> ESBranchHP
+Branch on hp < 50, target rnd 8
+
+ESBranchHP(28:18) -> ESBranchHP
+Branch on hp < 20, target rnd 12
+
+ESBindAttack(63:10860) -> Great, right?
+	Condition: 50% chance (ai:0 rnd:50)
+Bind 1 random subs for 1 turns, Deal 100% damage
+
+ESBlindStickyRandom(97:10861) -> How many scoops?
+	Condition: 50% chance (ai:0 rnd:50)
+Blind random 1~9 orbs for 1 turns, Deal 100% damage
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 1, target rnd 4
+
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b1
+
+ESAttackUPCooldown(19:10862) -> It melted!
+	Condition: One-time use (ai:100 rnd:0) (one-time: 1)
+Increase damage to 150% for the next 999 turns
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESAttackMultihit(15:10863) -> Ice Sting
+Deal 120% damage
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+

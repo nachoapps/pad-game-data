@@ -1,0 +1,71 @@
+#5455  - 地上最強の生物・範馬勇次郎
+True : use_new_ai
+7 : starting/max counter
+0 : counter increment
+
+ESPreemptive(49:318) -> ESPreemptive
+Enable preempt if level 1
+
+ESNoSkyfall(127:14031) -> 闘いこそが至上のコミュニケーション…
+	Condition: One-time use (ai:100 rnd:0) (one-time: 4)
+No skyfall for 10 turns
+
+ESBranchHP(29:19) -> ESBranchHP
+Branch on hp > 51, target rnd 8
+
+SkillSet:
+	Condition: One-time use (ai:100 rnd:0) (one-time: 2)
+	[0] ESDamageShield(74:14036) -> キサマのその克己心に愛すら感じる…！
+	Reduce damage from all sources by 50% for 10 turns
+	[1] ESInactivity(66:14037) -> 多くの屍を築きし鬼の正体…
+	Do nothing
+	[2] ESAbsorbCombo(67:14038) -> 今こそ見せてやろう
+	Absorb combo <= 5 damage for 10 turns
+
+ESBranchHP(29:19) -> ESBranchHP
+Branch on hp > 21, target rnd 8
+
+ESAttackUPRemainingEnemies(17:14045) -> ちょうしこかせてもらうぜ!!!
+	Condition: One-time use, when <= 1 enemies remain (ai:100 rnd:0) (one-time: 1)
+Increase damage to 150% for the next 99 turns
+
+ESAttackMultihit(15:14039) -> まだやらせてくれると言うのか…感謝!!!
+Deal 300% damage
+
+ESBranchCounter(32:22) -> ESBranchCounter
+Branch on counter > 2, target rnd 13
+
+ESSetCounter(26:16) -> ESSetCounter
+counter + 1
+
+SkillSet:
+	Condition: 50% chance (ai:0 rnd:50)
+	[0] ESInactivity(66:14033) -> 猛獣の連撃――
+	Do nothing
+	[1] ESAttackMultihit(15:14034) -> 味わってみるかいッッッッッ
+	Deal 108% damage (6 hits, 18% each)
+
+ESRandomSpawn(92:14041) -> 十秒で倒してのけるわッッ
+	Condition: 50% chance & when Fire, Water, Wood, Light, Heal, Jammer, Poison, Mortal Poison orbs are on the board (ai:0 rnd:50)
+Spawn random 5 Dark orbs, Deal 100% damage
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESSetCounter(25:15) -> ESSetCounter
+counter = 0
+
+ESOrbLock(94:14040) -> 本物の闘争というものを見せてやるッッ
+	Condition: 50% chance (ai:0 rnd:50)
+Lock all Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs, Deal 100% damage
+
+SkillSet:
+	Condition: 50% chance (ai:0 rnd:50)
+	[0] ESInactivity(66:14043) -> 力みなくして
+	Do nothing
+	[1] ESGravity(50:14044) -> 解放のカタルシスはありえねェ
+	Player -99% HP
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+

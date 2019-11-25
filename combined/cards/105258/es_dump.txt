@@ -1,0 +1,56 @@
+#105258  - Joco
+True : use_new_ai
+1 : starting/max counter
+0 : counter increment
+
+ESPreemptive(49:3402) -> ESPreemptive
+Enable preempt if level 4
+
+ESBranchLevel(35:25) -> ESBranchLevel
+Branch on level > 4, target rnd 4
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESAbsorbCombo(67:13257) -> I guess it's time for me to do my trick.
+	Condition: One-time use (ai:100 rnd:0) (one-time: 1)
+Absorb combo <= 5 damage for 10 turns
+
+ESBranchCounter(32:22) -> ESBranchCounter
+Branch on counter > 2, target rnd 10
+
+ESSetCounter(26:16) -> ESSetCounter
+counter + 1
+
+ESBlind(62:13216) -> I am the Jaguar!
+	Condition: 50% chance (ai:0 rnd:50)
+Blind all orbs on the board, Deal 100% damage
+
+ESAttackMultihit(15:13217) -> SLICE
+	Condition: 50% chance (ai:0 rnd:50)
+Deal 105% damage (3 hits, 35% each)
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESBranchCounter(32:22) -> ESBranchCounter
+Branch on counter > 3, target rnd 13
+
+ESSetCounter(26:16) -> ESSetCounter
+counter + 1
+
+ESSkillDelay(89:13218) -> C'mon
+Delay active skills by 3 turns
+
+ESSetCounter(25:15) -> ESSetCounter
+counter = 0
+
+SkillSet:
+	[0] ESInactivity(66:13219) -> Over Soul
+	Do nothing
+	[1] ESRowSpawnMulti(79:13320) -> Ayers Rock!!!
+	Change 4th, 5th row to Light orbs, Deal 250% damage
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+

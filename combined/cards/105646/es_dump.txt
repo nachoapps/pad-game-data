@@ -1,0 +1,40 @@
+#105646  - オーフェン
+True : use_new_ai
+31 : starting/max counter
+0 : counter increment
+
+ESPreemptive(49:3402) -> ESPreemptive
+Enable preempt if level 4
+
+ESBranchLevel(35:25) -> ESBranchLevel
+Branch on level > 4, target rnd 4
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESDebuffMovetime(39:15009) -> 俺はお前を止める
+	Condition: One-time use (ai:100 rnd:0) (one-time: 16)
+Movetime -4s for 5 turns
+
+ESDamageShield(74:14973) -> 我は紡ぐ光輪の鎧！
+	Condition: One-time use (ai:100 rnd:0) (one-time: 8)
+Reduce damage from all sources by 50% for 4 turns
+
+ESAbsorbCombo(67:14974) -> 我は踊る天の楼閣！
+	Condition: One-time use (ai:100 rnd:0) (one-time: 4)
+Absorb combo <= 4 damage for 3 turns
+
+ESBindRandomSub(65:14975) -> 我は生む小さき精霊
+	Condition: One-time use (ai:100 rnd:0) (one-time: 2)
+Bind 1 random subs for 2 turns
+
+ESAttackUPRemainingEnemies(17:14976) -> 我掲げるは降魔の剣！
+	Condition: One-time use, when <= 1 enemies remain (ai:100 rnd:0) (one-time: 1)
+Increase damage to 200% for the next 1 turns
+
+ESAttackMultihit(15:14977) -> 遅ぇっ！
+Deal 120% damage
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+

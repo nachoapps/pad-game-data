@@ -1,0 +1,25 @@
+#1856  - Ken-Oh, Raoh
+True : use_new_ai
+1 : starting/max counter
+0 : counter increment
+
+ESPreemptive(49:318) -> ESPreemptive
+Enable preempt if level 1
+
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 1, target rnd 5
+
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b1
+
+ESInactivity(66:5299) -> As you wish, I'll be your opponent
+Do nothing
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+SkillSet:
+	Condition: On death (ai:0 rnd:0)
+	[0] ESInactivity(66:2264) -> I have no regrets in my life!
+	Do nothing
+

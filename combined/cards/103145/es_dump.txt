@@ -1,0 +1,72 @@
+#103145  - God of Technique, Kinnikuman Zebra
+True : use_new_ai
+7 : starting/max counter
+0 : counter increment
+
+ESPreemptive(49:3402) -> ESPreemptive
+Enable preempt if level 4
+
+ESBranchLevel(35:25) -> ESBranchLevel
+Branch on level > 4, target rnd 4
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 1, target rnd 10
+
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b1
+
+ESBranchCard(90:5447) -> ESBranchCard
+Branch on player_cards HAS [3124, 3125, 3132, 3133, 3850], target rnd 8
+
+ESDamageShield(74:5438) -> Shadow Cloak
+Reduce damage from all sources by 50% for 3 turns
+
+ESDamageShield(74:5439) -> Hehehe...
+Reduce damage from all sources by 50% for 3 turns
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESBindAttack(63:5443) -> Flying Headbutt
+	Condition: When < 50% hp , one-time use (ai:100 rnd:0) (one-time: 4)
+Bind own leader for 1 turns, Deal 100% damage
+
+ESBlindStickyFixed(98:5444) -> Flying Headbutt
+	Condition: When < 50% hp , one-time use (ai:100 rnd:0) (one-time: 2)
+Blind orbs in specific positions for 1 turns
+
+ESBindAttack(63:5445) -> Brutal Art: Canvas Presser
+	Condition: When < 50% hp , one-time use (ai:100 rnd:0) (one-time: 1)
+Bind 2 both leaders for 1 turns, Deal 100% damage
+
+ESRowSpawnMulti(79:5446) -> Muscle Inferno
+	Condition: When < 50% hp (ai:100 rnd:0)
+Change 3rd row to Fire orbs, Deal 250% damage
+
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 2, target rnd 17
+
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b11
+
+ESOrbChangeAttack(48:5440) -> Savanna Punch
+Change Random to Jammer, Deal 100% damage
+
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 4, target rnd 20
+
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b111
+
+ESOrbLock(94:5441) -> Thoroughbred Hook
+Lock 10 random Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs, Deal 80% damage
+
+ESFlagOperation(24:14) -> ESFlagOperation
+flag UNSET 0b110
+
+ESGravity(50:5442) -> Thoroughbred Upper
+Player -99% HP
+

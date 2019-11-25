@@ -1,0 +1,57 @@
+#1223  - Awoken Gaia
+False : use_new_ai
+1 : starting/max counter
+1 : counter increment
+
+ESPreemptive(49:318) -> ESPreemptive
+Enable preempt if level 1
+
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 1, target rnd 6
+
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b1
+
+ESAbsorbAttribute(53:970) -> Earth's Core
+Absorb Fire damage for 5 turns
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESBranchHP(28:18) -> ESBranchHP
+Branch on hp < 30, target rnd 16
+
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 2, target rnd 10
+
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b11
+
+ESOrbChangeAttack(48:971) -> Clod of Blessing
+Change Random to Heal, Deal 100% damage
+
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 4, target rnd 13
+
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b111
+
+ESGravity(50:972) -> Earth Gravity
+Player -99% HP
+
+ESFlagOperation(24:14) -> ESFlagOperation
+flag UNSET 0b110
+
+ESAttackMultihit(15:973) -> Stone Grave
+Deal 60% damage (2 hits, 30% each)
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESBindAttack(63:974) -> Megalithic Seal
+	Condition: One-time use (ai:100 rnd:0) (one-time: 1)
+Bind 1 random cards for 2 turns, Deal 75% damage
+
+ESAttackMultihit(15:975) -> Ground Revenge
+Deal 120% damage (3 hits, 40% each)
+

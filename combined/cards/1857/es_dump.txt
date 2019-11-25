@@ -1,0 +1,65 @@
+#1857  - Ruler of the Century's End, Raoh
+True : use_new_ai
+1 : starting/max counter
+0 : counter increment
+
+ESPreemptive(49:318) -> ESPreemptive
+Enable preempt if level 1
+
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 1, target rnd 6
+
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b1
+
+ESStatusShield(20:1861) -> Very well, I'll fight you!
+Voids status ailments for 999 turns
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESBranchLevel(35:25) -> ESBranchLevel
+Branch on level > 5, target rnd 9
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESBranchHP(28:18) -> ESBranchHP
+Branch on hp < 30, target rnd 13
+
+ESOrbChangeAttack(48:1863) -> Hah!!
+	Condition: 50% chance (ai:50 rnd:0)
+Change Random to Jammer, Deal 125% damage
+
+ESGravity(50:1862) -> Hmph!!
+	Condition: One-time use (ai:60 rnd:0) (one-time: 1)
+Player -99% HP
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 2, target rnd 16
+
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b11
+
+ESBindRandom(1:1864) -> I'll finish you here and now!!
+	Condition: When < 30% hp (ai:100 rnd:0)
+Bind 6 random cards for 1~2 turns
+
+ESAttackMultihit(15:1865) -> Mwah!!
+	Condition: When < 30% hp (ai:100 rnd:0)
+Deal 600% damage (3 hits, 200% each)
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+SkillSet:
+	Condition: On death (ai:0 rnd:0)
+	[0] ESInactivity(66:2264) -> I have no regrets in my life!
+	Do nothing
+

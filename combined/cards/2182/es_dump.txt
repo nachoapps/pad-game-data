@@ -1,0 +1,52 @@
+#2182  - Liusha River Mystic, Sha Wujing
+True : use_new_ai
+1 : starting/max counter
+0 : counter increment
+
+ESPreemptive(49:318) -> ESPreemptive
+Enable preempt if level 1
+
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 1, target rnd 6
+
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b1
+
+ESAttackMultihit(15:2525) -> Liushahe Whirlwind
+Deal 75% damage
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+SkillSet:
+	Condition: When < 1% hp (ai:100 rnd:0)
+	[0] ESGravity(50:2531) -> Mystic Curse
+	Player -99% HP
+	[1] ESAttackMultihit(15:2532) -> Chomp
+	Deal 120% damage (2 hits, 60% each)
+
+ESAbsorbCombo(67:2526) -> General of the Sacred Mountain
+Absorb combo <= 4 damage for 99 turns
+
+ESBindSkill(14:2527) -> Nine Ill Winds
+	Condition: When < 50% hp , one-time use (ai:100 rnd:0) (one-time: 1)
+Bind active skills for 3 turns
+
+ESRandomSpawn(92:2528) -> Crescent Moon Staff
+	Condition: 30% chance & when Fire, Water, Wood, Light, Heal, Jammer, Poison, Mortal Poison orbs are on the board (ai:0 rnd:30)
+Spawn random 5 Dark orbs, Deal 85% damage
+
+ESAttackMultihit(15:2532) -> Chomp
+	Condition: 30% chance (ai:0 rnd:30)
+Deal 120% damage (2 hits, 60% each)
+
+ESAttackSinglehit(82:1) -> Disable Skill
+	Condition: 30% chance (ai:0 rnd:30)
+Deal 100% damage
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESResolve(73:2530) -> 沙悟浄・根性
+Survive attacks with 1 HP when HP > 75%
+

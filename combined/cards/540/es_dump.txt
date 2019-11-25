@@ -1,0 +1,37 @@
+#540  - Fire Samurai Dragon, Shingen
+False : use_new_ai
+1 : starting/max counter
+0 : counter increment
+
+ESPreemptive(49:355) -> ESPreemptive
+Enable preempt if level 5
+
+ESBranchLevel(35:25) -> ESBranchLevel
+Branch on level > 5, target rnd 4
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 1, target rnd 8
+
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b1
+
+ESAttackMultihit(15:1133) -> Swift Like the Wind
+Deal 50% damage
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESStatusShield(20:275) -> Quiet as Woods
+Voids status ailments for 999 turns
+
+ESStorePower(8:277) -> Immovable as a Mountain
+	Condition: When < 30% hp , one-time use (ai:100 rnd:0) (one-time: 1)
+Increase damage to 200% for the next attack
+
+ESAttackMultihit(15:276) -> Attack like Wildfire
+	Condition: 50% chance when < 60% hp (ai:50 rnd:0)
+Deal 150% damage (5 hits, 30% each)
+

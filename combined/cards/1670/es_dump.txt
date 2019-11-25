@@ -1,0 +1,152 @@
+#1670  - Norn of the Past, Urd
+True : use_new_ai
+0 : starting/max counter
+0 : counter increment
+
+ESPreemptive(49:3402) -> ESPreemptive
+Enable preempt if level 4
+
+ESBranchLevel(35:25) -> ESBranchLevel
+Branch on level > 4, target rnd 4
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 1, target rnd 8
+
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b1
+
+SkillSet:
+	[0] ESAbsorbCombo(67:9242) -> Norn's Trace
+	Absorb combo <= 5 damage for 99 turns
+	[1] ESVoidShield(71:9243) -> Space-Time Barrier
+	Void damage >= 10000000 for 6 turns
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESBranchHP(28:18) -> ESBranchHP
+Branch on hp < 10, target rnd 29
+
+ESBranchHP(28:18) -> ESBranchHP
+Branch on hp < 50, target rnd 21
+
+ESBranchHP(28:18) -> ESBranchHP
+Branch on hp < 60, target rnd 15
+
+ESBlindStickyFixed(98:9252) -> Bridenir
+	Condition: 33% chance (ai:33 rnd:0)
+Blind orbs in specific positions for 2 turns, Deal 170% damage
+
+SkillSet:
+	Condition: 50% chance (ai:50 rnd:0)
+	[0] ESColumnSpawnMulti(77:9253) -> Bifröst Fate
+	Change 1st column to Fire orbs, 6th column to Water orbs, Deal 155% damage
+	[1] ESBombFixedSpawn(103:9254) -> Norn's Dropped Item
+	Spawn Bomb orbs in the specified positions
+
+SkillSet:
+	[0] ESSkyfall(68:9256) -> Bonds of the Past
+	Jammer skyfall +15% for 1 turns
+	[1] ESBoardChangeAttackBits(85:9257) -> Norn Slave
+	Change all orbs to Fire, Water, Heal, Deal 180% damage
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 2, target rnd 19
+
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b11
+
+ESOrbSealColumn(99:9245) -> Time Stasis
+Seal 1st column for 2 turns
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESAttackMultihit(15:9266) -> Fimbulvetr Weaving
+Deal 600% damage (6 hits, 100% each)
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 4, target rnd 25
+
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b111
+
+SkillSet:
+	[0] ESStatusShield(20:9246) -> The cogs of fate are now in motion
+	Voids status ailments for 999 turns
+	[1] ESDebuffMovetime(39:9247) -> Nornil Curse
+	Movetime 50% for 12 turns
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+SkillSet:
+	Condition: 33% chance (ai:33 rnd:0)
+	[0] ESRowSpawnMulti(79:9259) -> Bifröst Fate
+	Change 1st row to Fire orbs, 5th row to Water orbs, Deal 110% damage
+	[1] ESDebuffRCV(105:9260) -> Norn Resistance
+	Rcv 50% for 1 turns
+
+SkillSet:
+	Condition: 50% chance (ai:50 rnd:0)
+	[0] ESBoardChangeAttackBits(85:9262) -> Norn Slave
+	Change all orbs to Fire, Water, Jammer, Deal 90% damage
+	[1] ESSkillDelay(89:9263) -> Reverse time!
+	Delay active skills by 2 turns
+
+ESAttackMultihit(15:9265) -> Weave Tein
+Deal 120% damage (3 hits, 40% each)
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESBranchHP(28:18) -> ESBranchHP
+Branch on hp < 1, target rnd 34
+
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 8, target rnd 19
+
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b1111
+
+ESBindAwoken(88:9251) -> End of Time
+Bind awoken skills for 1 turns
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 4, target rnd 30
+
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b111
+
+SkillSet:
+	[0] ESRecoverEnemy(86:9249) -> Healing Scratch
+	Enemy recover 50% hp
+	[1] ESStatusShield(20:9246) -> The cogs of fate are now in motion
+	Voids status ailments for 999 turns
+	[2] ESDebuffMovetime(39:9247) -> Nornil Curse
+	Movetime 50% for 12 turns
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESResolve(73:9241) -> Resolve
+Survive attacks with 1 HP when HP > 51%
+
+ESAttributeResist(72:9240) -> Light & Dark Resistance
+Reduce damage from Light, Dark by 50%
+
+ESTurnChangePassive(106:9239) -> The flow of time has changed
+Enemy turn counter change to 1 when HP <= 50%
+

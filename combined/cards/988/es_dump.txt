@@ -1,0 +1,51 @@
+#988  - Dancing Light, Amaterasu Ohkami
+True : use_new_ai
+1 : starting/max counter
+1 : counter increment
+
+ESNone(0:0) -> ESNone
+nothing
+
+ESNone(0:0) -> ESNone
+nothing
+
+ESNone(0:0) -> ESNone
+nothing
+
+ESNone(0:0) -> ESNone
+nothing
+
+ESNone(0:0) -> ESNone
+nothing
+
+ESBranchHP(28:18) -> ESBranchHP
+Branch on hp < 40, target rnd 10
+
+ESOrbChangeAttack(48:1962) -> Sacred Mirror of Yata
+	Condition: One-time use (ai:100 rnd:0) (one-time: 1)
+Change Dark to Light, Deal 50% damage
+
+ESRowSpawnMulti(79:1961) -> Sacred Fertility Dance
+Change 5th row to Heal orbs, Deal 100% damage
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 1, target rnd 14
+
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b1
+
+ESRecoverEnemy(86:1963) -> Shower of Healing
+Enemy recover 100% hp
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESBlind(62:1964) -> Cave of the Sun Goddess
+Blind all orbs on the board, Deal 350% damage
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+

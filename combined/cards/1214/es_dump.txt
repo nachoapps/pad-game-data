@@ -1,0 +1,27 @@
+#1214  - Underworld Guard Dog, Cerberus
+False : use_new_ai
+0 : starting/max counter
+0 : counter increment
+
+ESPreemptive(49:318) -> ESPreemptive
+Enable preempt if level 1
+
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 1, target rnd 6
+
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b1
+
+ESJammerChangeRandom(13:1307) -> Hell Howl
+Change Random 2 to Jammer
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESAttackMultihit(15:1309) -> Trinity Fang
+	Condition: When < 25% hp (ai:100 rnd:0)
+Deal 150% damage (3 hits, 50% each)
+
+ESPoisonChangeRandomAttack(64:1308) -> Death Bite
+Change Random 3 to Poison, Deal 25% damage
+

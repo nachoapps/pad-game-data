@@ -1,0 +1,84 @@
+#1166  - Red Flower Dragon, Barbados
+False : use_new_ai
+1 : starting/max counter
+1 : counter increment
+
+ESPreemptive(49:355) -> ESPreemptive
+Enable preempt if level 5
+
+ESBranchLevel(35:25) -> ESBranchLevel
+Branch on level > 5, target rnd 4
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 1, target rnd 8
+
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b1
+
+ESStatusShield(20:205) -> Fertile Guard
+Voids status ailments for 999 turns
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESBranchHP(29:19) -> ESBranchHP
+Branch on hp > 50, target rnd 25
+
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 2, target rnd 12
+
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b11
+
+ESBindRandomSub(65:915) -> Plant Net
+Bind 4 random subs for 3 turns
+
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 4, target rnd 15
+
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b111
+
+ESAttackMultihit(15:916) -> Rage of the Earth
+Deal 75% damage
+
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 8, target rnd 18
+
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b1111
+
+ESAttackMultihit(15:917) -> Rage of the Earth
+Deal 150% damage
+
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 16, target rnd 21
+
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b11111
+
+ESAttackMultihit(15:918) -> Rage of the Earth
+Deal 300% damage
+
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 32, target rnd 23
+
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b111111
+
+ESFlagOperation(24:14) -> ESFlagOperation
+flag UNSET 0b111110
+
+ESAttackMultihit(15:919) -> Rage of the Earth
+Deal 600% damage
+
+ESOrbChangeAttack(48:902) -> Flower Tail
+	Condition: One-time use (ai:100 rnd:0) (one-time: 1)
+Change Random to Heal, Deal 100% damage
+
+ESOrbChangeAttack(48:914) -> Volcano Rally
+Change Random to Fire, Deal 75% damage
+

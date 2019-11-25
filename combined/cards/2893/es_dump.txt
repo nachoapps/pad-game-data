@@ -1,0 +1,79 @@
+#2893  - Soul Binding Princess of Darkness, Hel
+True : use_new_ai
+1 : starting/max counter
+0 : counter increment
+
+ESPreemptive(49:318) -> ESPreemptive
+Enable preempt if level 1
+
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 1, target rnd 6
+
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b1
+
+SkillSet:
+	[0] ESSpinnersFixed(110:7964) -> Determine your own destiny!
+	Specific orbs change every 1.0s for 10 turns
+	[1] ESStatusShield(20:7965) -> Half-Demon
+	Voids status ailments for 999 turns
+	[2] ESPoisonChangeRandomAttack(64:7966) -> Double Pain
+	Change Random 8 to Poison, Deal 200% damage
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESPoisonChangeRandomAttack(64:7979) -> Grief of Helheim
+	Condition: When < 10% hp (ai:100 rnd:0)
+Change Random 10 to Poison, Deal 3000% damage
+
+SkillSet:
+	Condition: One-time use (ai:100 rnd:0) (one-time: 1)
+	[0] ESSkyfall(68:7968) -> Eternal Suffering
+	Poison skyfall +20% for 99 turns
+	[1] ESAttackMultihit(15:7969) -> Garm's Rotten Fangs
+	Deal 165% damage (3 hits, 55% each)
+
+ESBranchHP(28:18) -> ESBranchHP
+Branch on hp < 50, target rnd 13
+
+ESSetCounter(26:16) -> ESSetCounter
+counter + 1
+
+ESOrbLock(94:7977) -> Dead Judgment
+	Condition: 50% chance (ai:50 rnd:0)
+Lock 1 random Poison, Mortal Poison orbs, Deal 160% damage
+
+ESPoisonChangeRandomAttack(64:7978) -> Poison Thorn
+Change Random 6 to Poison, Deal 160% damage
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 2, target rnd 10
+
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b11
+
+ESBranchCounter(32:22) -> ESBranchCounter
+Branch on counter > 2, target rnd 17
+
+SkillSet:
+	[0] ESRecoverEnemy(86:7971) -> Color of Life
+	Enemy recover 100% hp
+	[1] ESDamageShield(74:7972) -> Naglfar
+	Reduce damage from all sources by 75% for 10 turns
+
+SkillSet:
+	[0] ESGravity(50:7974) -> Color of Death
+	Player -99% HP
+	[1] ESSkillDelay(89:7975) -> Nightmare
+	Delay active skills by 2~6 turns
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESAttributeResist(72:7980) -> Light Dark Halved
+Reduce damage from Light, Dark by 50%
+

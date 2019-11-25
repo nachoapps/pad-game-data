@@ -1,0 +1,38 @@
+#961  - AB Dashing Wingman
+False : use_new_ai
+1 : starting/max counter
+0 : counter increment
+
+ESPreemptive(49:355) -> ESPreemptive
+Enable preempt if level 5
+
+ESBranchLevel(35:25) -> ESBranchLevel
+Branch on level > 5, target rnd 4
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 1, target rnd 8
+
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b1
+
+ESStorePower(8:732) -> Charge!!
+Increase damage to 200% for the next attack
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESBindAttribute(2:734) -> Just Heart
+	Condition: When < 50% hp , one-time use (ai:100 rnd:0) (one-time: 1)
+Bind Dark cards for 3~5 turns
+
+ESAttackMultihit(15:733) -> Heroic Combo
+	Condition: 70% chance when < 40% hp (ai:70 rnd:0)
+Deal 160% damage (4 hits, 40% each)
+
+ESAttackMultihit(15:731) -> Slingshot
+	Condition: 50% chance when < 75% hp (ai:50 rnd:0)
+Deal 125% damage
+

@@ -1,0 +1,54 @@
+#4083  - Invincible Iron Arm, Ryo Sakazaki
+True : use_new_ai
+3 : starting/max counter
+1 : counter increment
+
+ESPreemptive(49:3402) -> ESPreemptive
+Enable preempt if level 4
+
+ESBranchLevel(35:25) -> ESBranchLevel
+Branch on level > 4, target rnd 4
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 1, target rnd 8
+
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b1
+
+ESDebuffMovetime(39:8629) -> Come! Come!
+Movetime -1s for 3 turns
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESBranchHP(28:18) -> ESBranchHP
+Branch on hp < 15, target rnd 13
+
+ESDamageShield(74:8631) -> Mouko Raijin Gou
+	Condition: One-time use (ai:100 rnd:0) (one-time: 3)
+Reduce damage from all sources by 50% for 1 turns, Deal 80% damage
+
+ESRowSpawnMulti(79:8630) -> Ko-Ou Ken
+	Condition: 30% chance (ai:30 rnd:0)
+Change 3rd row to Light orbs, Deal 100% damage
+
+ESAttackMultihit(15:8632) -> Hien Shippuu Kyaku
+Deal 90% damage (3 hits, 30% each)
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESAttackMultihit(15:8633) -> Haoh Shoukou Ken
+Deal 150% damage
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+SkillSet:
+	Condition: On death (ai:0 rnd:0)
+	[0] ESInactivity(66:8634) -> I've failed!
+	Do nothing
+

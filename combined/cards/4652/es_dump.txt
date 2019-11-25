@@ -1,0 +1,244 @@
+#4652  - Malice Dracosnake of the Blazehorns, Nidhogg
+True : use_new_ai
+1 : starting/max counter
+1 : counter increment
+
+ESPreemptive(49:318) -> ESPreemptive
+Enable preempt if level 1
+
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 1, target rnd 6
+
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b1
+
+SkillSet:
+	[0] ESVoidShield(71:10800) -> Heat Armor
+	Void damage >= 40000000 for 99 turns
+	[1] ESSkillDelay(89:10801) -> Form Collapse
+	Delay active skills by 7 turns
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESBranchHP(28:18) -> ESBranchHP
+Branch on hp < 50, target rnd 12
+
+SkillSet:
+	Condition: 25% chance (ai:0 rnd:25)
+	[0] ESBoardChange(84:10803) -> Breath of Decay
+	Change all orbs to Jammer
+	[1] ESBindAttack(63:10804) -> Liberation from Freedom
+	Bind 3 random cards for 2 turns, Deal 115% damage
+
+SkillSet:
+	Condition: 25% chance (ai:0 rnd:25)
+	[0] ESBoardChange(84:10803) -> Breath of Decay
+	Change all orbs to Jammer
+	[1] ESRowSpawnMulti(79:10805) -> Abundant Maliciousness
+	Change 3rd row to Poison orbs, Deal 100% damage
+
+SkillSet:
+	Condition: 25% chance (ai:0 rnd:25)
+	[0] ESBoardChange(84:10803) -> Breath of Decay
+	Change all orbs to Jammer
+	[1] ESSkyfall(68:10806) -> Corrosive Dust
+	Jammer skyfall +20% for 1 turns, Deal 110% damage
+
+SkillSet:
+	Condition: 25% chance (ai:0 rnd:25)
+	[0] ESBoardChange(84:10803) -> Breath of Decay
+	Change all orbs to Jammer
+	[1] ESAttackMultihit(15:10807) -> Gnaw Away
+	Deal 120% damage (5 hits, 24% each)
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESBranchHP(28:18) -> ESBranchHP
+Branch on hp < 5, target rnd 60
+
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 2, target rnd 36
+
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b11
+
+ESBranchHP(28:18) -> ESBranchHP
+Branch on hp < 20, target rnd 33
+
+ESBranchHP(28:18) -> ESBranchHP
+Branch on hp < 25, target rnd 31
+
+ESBranchHP(28:18) -> ESBranchHP
+Branch on hp < 30, target rnd 29
+
+ESBranchHP(28:18) -> ESBranchHP
+Branch on hp < 35, target rnd 27
+
+ESBranchHP(28:18) -> ESBranchHP
+Branch on hp < 40, target rnd 25
+
+ESBranchHP(28:18) -> ESBranchHP
+Branch on hp < 45, target rnd 23
+
+ESSetCounter(25:15) -> ESSetCounter
+counter = 1
+
+SkillSet:
+	[0] ESStatusShield(20:10813) -> Blazing Dragon Scales
+	Voids status ailments for 999 turns
+	[1] ESDamageShield(74:10814) -> Flames are gathering in the mouth
+	Reduce damage from all sources by 75% for 1 turns
+
+ESSetCounter(25:15) -> ESSetCounter
+counter = 2
+
+SkillSet:
+	[0] ESStatusShield(20:10813) -> Blazing Dragon Scales
+	Voids status ailments for 999 turns
+	[1] ESDamageShield(74:10814) -> Flames are gathering in the mouth
+	Reduce damage from all sources by 75% for 1 turns
+
+ESSetCounter(25:15) -> ESSetCounter
+counter = 3
+
+SkillSet:
+	[0] ESStatusShield(20:10813) -> Blazing Dragon Scales
+	Voids status ailments for 999 turns
+	[1] ESDamageShield(74:10814) -> Flames are gathering in the mouth
+	Reduce damage from all sources by 75% for 1 turns
+
+ESSetCounter(25:15) -> ESSetCounter
+counter = 4
+
+SkillSet:
+	[0] ESStatusShield(20:10813) -> Blazing Dragon Scales
+	Voids status ailments for 999 turns
+	[1] ESDamageShield(74:10814) -> Flames are gathering in the mouth
+	Reduce damage from all sources by 75% for 1 turns
+
+ESSetCounter(25:15) -> ESSetCounter
+counter = 5
+
+SkillSet:
+	[0] ESStatusShield(20:10813) -> Blazing Dragon Scales
+	Voids status ailments for 999 turns
+	[1] ESDamageShield(74:10814) -> Flames are gathering in the mouth
+	Reduce damage from all sources by 75% for 1 turns
+
+ESSetCounter(25:15) -> ESSetCounter
+counter = 6
+
+SkillSet:
+	[0] ESStatusShield(20:10813) -> Blazing Dragon Scales
+	Voids status ailments for 999 turns
+	[1] ESDamageShield(74:10814) -> Flames are gathering in the mouth
+	Reduce damage from all sources by 75% for 1 turns
+
+ESSetCounter(25:15) -> ESSetCounter
+counter = 7
+
+SkillSet:
+	[0] ESStatusShield(20:10813) -> Blazing Dragon Scales
+	Voids status ailments for 999 turns
+	[1] ESDamageShield(74:10814) -> Flames are gathering in the mouth
+	Reduce damage from all sources by 75% for 1 turns
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 4, target rnd 55
+
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b111
+
+ESBranchCounter(32:22) -> ESBranchCounter
+Branch on counter > 7, target rnd 60
+
+ESBranchCounter(32:22) -> ESBranchCounter
+Branch on counter > 6, target rnd 50
+
+ESBranchCounter(32:22) -> ESBranchCounter
+Branch on counter > 5, target rnd 49
+
+ESBranchCounter(32:22) -> ESBranchCounter
+Branch on counter > 4, target rnd 48
+
+ESBranchCounter(32:22) -> ESBranchCounter
+Branch on counter > 3, target rnd 47
+
+ESBranchCounter(32:22) -> ESBranchCounter
+Branch on counter > 2, target rnd 46
+
+ESBranchCounter(32:22) -> ESBranchCounter
+Branch on counter > 1, target rnd 45
+
+ESBranchHP(28:18) -> ESBranchHP
+Branch on hp < 35, target rnd 53
+
+ESBranchHP(28:18) -> ESBranchHP
+Branch on hp < 30, target rnd 53
+
+ESBranchHP(28:18) -> ESBranchHP
+Branch on hp < 25, target rnd 53
+
+ESBranchHP(28:18) -> ESBranchHP
+Branch on hp < 20, target rnd 53
+
+ESBranchHP(28:18) -> ESBranchHP
+Branch on hp < 15, target rnd 53
+
+ESBranchHP(28:18) -> ESBranchHP
+Branch on hp < 10, target rnd 53
+
+SkillSet:
+	[0] ESChangeAttribute(46:10816) -> Its flames changed
+	Change own attribute to Fire
+	[1] ESBoardChangeAttackBits(85:10817) -> Scorching Firelands
+	Change all orbs to Fire, Deal 500% damage
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+SkillSet:
+	[0] ESInactivity(66:10799) -> Broken Stance
+	Do nothing
+	[1] ESColumnSpawnMulti(77:10819) -> Symmetrical Destruction Flames
+	Change 5th, 6th column to Fire orbs, Deal 100% damage
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESDebuffMovetime(39:10821) -> Lamplight of the Echoing Sphere
+	Condition: One-time use (ai:50 rnd:0) (one-time: 1)
+Movetime -3s for 1 turns, Deal 100% damage
+
+ESBindAwoken(88:10822) -> Withering Darkflame
+	Condition: One-time use (ai:100 rnd:0) (one-time: 1)
+Bind awoken skills for 1 turns, Deal 100% damage
+
+ESCloud(104:10823) -> Enshrouding Miasma
+	Condition: 50% chance (ai:50 rnd:0)
+3x3 cloud appear for 1 turns at random location, Deal 108% damage
+
+ESRandomSpawn(92:10824) -> Rotting Desire
+	Condition: When fire, water, wood, light, dark, heal, poison, mortal poison orbs are on the board (ai:100 rnd:0)
+Spawn random 8 Jammer orbs, Deal 108% damage
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+SkillSet:
+	[0] ESChangeAttribute(46:10825) -> Spiral Flames
+	Change own attribute to random one of Dark, Fire
+	[1] ESAttackMultihit(15:10826) -> Devastating Flames
+	Deal 1000% damage (5 hits, 200% each)
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESTurnChangePassive(106:10812) -> It spread its wings wide
+Enemy turn counter change to 1 when HP <= 50%
+

@@ -1,0 +1,22 @@
+#1780  - Purple Bowl Demon, Sukibowl
+False : use_new_ai
+1 : starting/max counter
+1 : counter increment
+
+ESBranchLevel(35:25) -> ESBranchLevel
+Branch on level > 5, target rnd 3
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESAttackMultihit(15:1757) -> Taste Stinger
+	Condition: When < 50% hp , one-time use (ai:100 rnd:0) (one-time: 1)
+Deal 200% damage
+
+ESRecoverEnemy(7:1758) -> Munching Time
+	Condition: When < 50% hp (ai:100 rnd:0)
+Enemy recover 50% hp
+
+ESOrbChangeAttack(48:1756) -> Dark Meat Smash
+Change Dark to Jammer, Deal 100% damage
+

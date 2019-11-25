@@ -1,0 +1,30 @@
+#403  - Griffin, the Hunter of Tempests
+False : use_new_ai
+0 : starting/max counter
+0 : counter increment
+
+ESPreemptive(49:538) -> ESPreemptive
+Enable preempt if level 10
+
+ESBranchLevel(35:25) -> ESBranchLevel
+Branch on level > 10, target rnd 4
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 1, target rnd 8
+
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b1
+
+ESAttackMultihit(15:853) -> Divine Speed
+Deal 50% damage
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESAttackMultihit(15:321) -> Kamikaze
+	Condition: When < 30% hp (ai:100 rnd:0)
+Deal 400% damage (4 hits, 100% each)
+

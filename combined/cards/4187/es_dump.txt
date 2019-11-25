@@ -1,0 +1,54 @@
+#4187  - Wandering Spirit Dragonbound, Lajoa
+True : use_new_ai
+1 : starting/max counter
+0 : counter increment
+
+ESPreemptive(49:318) -> ESPreemptive
+Enable preempt if level 1
+
+SkillSet:
+	Condition: One-time use (ai:20 rnd:0) (one-time: 1)
+	[0] ESAbsorbCombo(67:14016) -> Destroying Dragon's Desire
+	Absorb combo <= 6 damage for 1 turns
+	[1] ESAttributeBlock(107:14017) -> Destroying Color
+	Unable to match Fire, Water orbs for 1 turns
+
+SkillSet:
+	Condition: One-time use (ai:25 rnd:0) (one-time: 1)
+	[0] ESAbsorbCombo(67:14016) -> Destroying Dragon's Desire
+	Absorb combo <= 6 damage for 1 turns
+	[1] ESAttributeBlock(107:14023) -> Destroying Color
+	Unable to match Water, Wood orbs for 1 turns
+
+SkillSet:
+	Condition: One-time use (ai:33 rnd:0) (one-time: 1)
+	[0] ESAbsorbCombo(67:14016) -> Destroying Dragon's Desire
+	Absorb combo <= 6 damage for 1 turns
+	[1] ESAttributeBlock(107:14025) -> Destroying Color
+	Unable to match Wood, Light orbs for 1 turns
+
+SkillSet:
+	Condition: One-time use (ai:50 rnd:0) (one-time: 1)
+	[0] ESAbsorbCombo(67:14016) -> Destroying Dragon's Desire
+	Absorb combo <= 6 damage for 1 turns
+	[1] ESAttributeBlock(107:14027) -> Destroying Color
+	Unable to match Light, Dark orbs for 1 turns
+
+SkillSet:
+	Condition: One-time use (ai:100 rnd:0) (one-time: 1)
+	[0] ESAbsorbCombo(67:14016) -> Destroying Dragon's Desire
+	Absorb combo <= 6 damage for 1 turns
+	[1] ESAttributeBlock(107:14029) -> Destroying Color
+	Unable to match Fire, Dark orbs for 1 turns
+
+ESRandomSpawn(92:14018) -> Shadow of Imagination
+	Condition: 50% chance & when Fire, Water, Wood, Light, Heal, Jammer, Poison, Mortal Poison orbs are on the board (ai:0 rnd:50)
+Spawn random 5 Dark orbs, Deal 95% damage
+
+ESBlind(62:14019) -> Field of Darkness
+	Condition: 50% chance (ai:0 rnd:50)
+Blind all orbs on the board, Deal 100% damage
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+

@@ -1,0 +1,1284 @@
+{
+    "active_skill": {
+        "en_text": "Deal 50x ATK Fire damage to an enemy",
+        "jp_skill": {
+            "attribute": 0,
+            "levels": 16,
+            "mass_attack": false,
+            "multiplier": 50.0,
+            "name": "クリムゾンボム",
+            "raw_description": "敵1体に自分の攻撃力×50倍の火属性攻撃",
+            "skill_id": 637,
+            "skill_type": 37,
+            "turn_max": 30,
+            "turn_min": 15
+        },
+        "kr_skill": {
+            "attribute": 0,
+            "levels": 16,
+            "mass_attack": false,
+            "multiplier": 50.0,
+            "name": "크림슨 폭탄",
+            "raw_description": "하나의 적에게 자신의 공격력x50배의 불속성 공격",
+            "skill_id": 637,
+            "skill_type": 37,
+            "turn_max": 30,
+            "turn_min": 15
+        },
+        "na_skill": {
+            "attribute": 0,
+            "levels": 16,
+            "mass_attack": false,
+            "multiplier": 50.0,
+            "name": "Crimson Bomb",
+            "raw_description": "Inflicts 50x ATK Fire Att. attack on 1 enemy",
+            "skill_id": 637,
+            "skill_type": 37,
+            "turn_max": 30,
+            "turn_min": 15
+        },
+        "skill_id": 637,
+        "skill_type_tags": [
+            "AsCondition.SINGLE_TARGET_ATTACK"
+        ]
+    },
+    "en_as_text": "Deal 50x ATK Fire damage to an enemy",
+    "en_ls_text": "2x ATK for Dragon type and Fire Att.",
+    "enemy_behavior": [
+        {
+            "behavior": {
+                "_name": "ERROR25",
+                "branch_condition": "level",
+                "branch_value": 5,
+                "compare": ">",
+                "enemy_skill_id": 25,
+                "extra_description": null,
+                "params": [
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    4,
+                    null,
+                    null,
+                    null
+                ],
+                "target_round": 3,
+                "type": 35
+            },
+            "condition": null,
+            "enemy_skill_id": 25,
+            "extra_description": null
+        },
+        {
+            "behavior": {
+                "_name": "ERROR26",
+                "enemy_skill_id": 26,
+                "extra_description": null,
+                "params": [
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    4,
+                    null,
+                    null,
+                    null
+                ],
+                "type": 36
+            },
+            "condition": null,
+            "enemy_skill_id": 26,
+            "extra_description": null
+        },
+        {
+            "behavior": {
+                "_name": "Leaf Bind",
+                "attack": null,
+                "enemy_skill_id": 404,
+                "extra_description": null,
+                "max_turns": 4,
+                "min_turns": 2,
+                "params": [
+                    "Binds Wood Att. allies for a number of turns",
+                    2,
+                    2,
+                    4,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    1,
+                    null,
+                    null
+                ],
+                "target_attribute": 2,
+                "target_count": null,
+                "targets": [
+                    "TargetType.attributes"
+                ],
+                "type": 2
+            },
+            "condition": {
+                "_ai": 100,
+                "_rnd": 0,
+                "condition_attributes": null,
+                "enemies_remaining": null,
+                "forced_one_time": null,
+                "hp_threshold": null,
+                "on_death": null,
+                "one_time": 1
+            },
+            "enemy_skill_id": 404,
+            "extra_description": null
+        },
+        {
+            "behavior": {
+                "_name": "Fire Breath",
+                "attack": {
+                    "atk_multiplier": 70,
+                    "max_hits": 2,
+                    "min_hits": 2
+                },
+                "enemy_skill_id": 403,
+                "extra_description": null,
+                "params": [
+                    null,
+                    2,
+                    2,
+                    70,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    75,
+                    null,
+                    null,
+                    null,
+                    null
+                ],
+                "type": 15
+            },
+            "condition": {
+                "_ai": 100,
+                "_rnd": 0,
+                "condition_attributes": null,
+                "enemies_remaining": null,
+                "forced_one_time": null,
+                "hp_threshold": 75,
+                "on_death": null,
+                "one_time": null
+            },
+            "enemy_skill_id": 403,
+            "extra_description": null
+        }
+    ],
+    "enemy_behavior_jp": [
+        {
+            "behavior": {
+                "_name": "※自分のレベルが ai 以上の時 rnd に分岐",
+                "branch_condition": "level",
+                "branch_value": 5,
+                "compare": ">",
+                "enemy_skill_id": 25,
+                "extra_description": null,
+                "params": [
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    4,
+                    null,
+                    null,
+                    null
+                ],
+                "target_round": 3,
+                "type": 35
+            },
+            "condition": null,
+            "enemy_skill_id": 25,
+            "extra_description": null
+        },
+        {
+            "behavior": {
+                "_name": "※パース終了",
+                "enemy_skill_id": 26,
+                "extra_description": null,
+                "params": [
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    4,
+                    null,
+                    null,
+                    null
+                ],
+                "type": 36
+            },
+            "condition": null,
+            "enemy_skill_id": 26,
+            "extra_description": null
+        },
+        {
+            "behavior": {
+                "_name": "リーフバインド",
+                "attack": null,
+                "enemy_skill_id": 404,
+                "extra_description": null,
+                "max_turns": 4,
+                "min_turns": 2,
+                "params": [
+                    "木属性が数ターンの間、行動不能",
+                    2,
+                    2,
+                    4,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    1,
+                    null,
+                    null
+                ],
+                "target_attribute": 2,
+                "target_count": null,
+                "targets": [
+                    "TargetType.attributes"
+                ],
+                "type": 2
+            },
+            "condition": {
+                "_ai": 100,
+                "_rnd": 0,
+                "condition_attributes": null,
+                "enemies_remaining": null,
+                "forced_one_time": null,
+                "hp_threshold": null,
+                "on_death": null,
+                "one_time": 1
+            },
+            "enemy_skill_id": 404,
+            "extra_description": null
+        },
+        {
+            "behavior": {
+                "_name": "ファイアブレス",
+                "attack": {
+                    "atk_multiplier": 70,
+                    "max_hits": 2,
+                    "min_hits": 2
+                },
+                "enemy_skill_id": 403,
+                "extra_description": null,
+                "params": [
+                    null,
+                    2,
+                    2,
+                    70,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    75,
+                    null,
+                    null,
+                    null,
+                    null
+                ],
+                "type": 15
+            },
+            "condition": {
+                "_ai": 100,
+                "_rnd": 0,
+                "condition_attributes": null,
+                "enemies_remaining": null,
+                "forced_one_time": null,
+                "hp_threshold": 75,
+                "on_death": null,
+                "one_time": null
+            },
+            "enemy_skill_id": 403,
+            "extra_description": null
+        }
+    ],
+    "has_animation": false,
+    "has_hqimage": false,
+    "jp_card": {
+        "active_skill": {
+            "attribute": 0,
+            "levels": 16,
+            "mass_attack": false,
+            "multiplier": 50.0,
+            "name": "クリムゾンボム",
+            "raw_description": "敵1体に自分の攻撃力×50倍の火属性攻撃",
+            "skill_id": 637,
+            "skill_type": 37,
+            "turn_max": 30,
+            "turn_min": 15
+        },
+        "active_skill_id": 637,
+        "card": {
+            "active_skill_id": 637,
+            "ancestor_id": 728,
+            "atk_scale": 1.0,
+            "attr_id": 0,
+            "awakenings": [
+                22,
+                21
+            ],
+            "base_id": 728,
+            "collab_id": 16,
+            "cost": 20,
+            "enemy_atk_max": 7440,
+            "enemy_atk_min": 248,
+            "enemy_atk_scale": 1.0,
+            "enemy_coins_per_level": 400,
+            "enemy_def_max": 500,
+            "enemy_def_min": 50,
+            "enemy_def_scale": 1.0,
+            "enemy_hp_max": 903750,
+            "enemy_hp_min": 30125,
+            "enemy_hp_scale": 1.0,
+            "enemy_max_level": 10,
+            "enemy_skill_counter_increment": 0,
+            "enemy_skill_max_counter": 1,
+            "enemy_skill_refs": [
+                {
+                    "enemy_ai": 5,
+                    "enemy_rnd": 3,
+                    "enemy_skill_id": 25
+                },
+                {
+                    "enemy_ai": 0,
+                    "enemy_rnd": 0,
+                    "enemy_skill_id": 26
+                },
+                {
+                    "enemy_ai": 100,
+                    "enemy_rnd": 0,
+                    "enemy_skill_id": 404
+                },
+                {
+                    "enemy_ai": 100,
+                    "enemy_rnd": 0,
+                    "enemy_skill_id": 403
+                }
+            ],
+            "enemy_turns": 1,
+            "enemy_turns_alt": 0,
+            "enemy_xp_per_level": 500,
+            "evo_mat_id_1": 171,
+            "evo_mat_id_2": 153,
+            "evo_mat_id_3": 154,
+            "evo_mat_id_4": 227,
+            "evo_mat_id_5": 227,
+            "feed_xp_per_level": 937,
+            "furigana": "クラッシュ・オブ・クラン|くらくら|COC",
+            "group_id": 126,
+            "hp_scale": 1.0,
+            "inheritable": false,
+            "is_collab": true,
+            "is_ult": false,
+            "latent_on_feed": 0,
+            "leader_skill_id": 706,
+            "limit_mult": 0,
+            "max_atk": 1328,
+            "max_hp": 3168,
+            "max_level": 99,
+            "max_rcv": 44,
+            "min_atk": 531,
+            "min_hp": 1267,
+            "min_rcv": 21,
+            "monster_no": 729,
+            "name": "CoC・クリムゾンドラゴン",
+            "orb_skin_id": 0,
+            "other_fields": [
+                ""
+            ],
+            "random_flags": 6,
+            "rarity": 5,
+            "rcv_scale": 1.0,
+            "released_status": true,
+            "sell_gold_per_level": 405,
+            "sell_mp": 10,
+            "sub_attr_id": -1,
+            "super_awakenings": [],
+            "type_1_id": 4,
+            "type_2_id": -1,
+            "type_3_id": -1,
+            "un_evo_mat_1": 155,
+            "un_evo_mat_2": 156,
+            "un_evo_mat_3": 157,
+            "un_evo_mat_4": 158,
+            "un_evo_mat_5": 159,
+            "unknown_009": 5,
+            "unknown_055": 0,
+            "unknown_056": 0,
+            "use_new_ai": false,
+            "voice_id": 0,
+            "xp_max": 3000000,
+            "xp_scale": 2.5
+        },
+        "critical_failures": [],
+        "enemy_skills": [
+            {
+                "behavior": {
+                    "_name": "※自分のレベルが ai 以上の時 rnd に分岐",
+                    "branch_condition": "level",
+                    "branch_value": 5,
+                    "compare": ">",
+                    "enemy_skill_id": 25,
+                    "extra_description": null,
+                    "params": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        4,
+                        null,
+                        null,
+                        null
+                    ],
+                    "target_round": 3,
+                    "type": 35
+                },
+                "condition": null,
+                "enemy_skill_id": 25,
+                "extra_description": null
+            },
+            {
+                "behavior": {
+                    "_name": "※パース終了",
+                    "enemy_skill_id": 26,
+                    "extra_description": null,
+                    "params": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        4,
+                        null,
+                        null,
+                        null
+                    ],
+                    "type": 36
+                },
+                "condition": null,
+                "enemy_skill_id": 26,
+                "extra_description": null
+            },
+            {
+                "behavior": {
+                    "_name": "リーフバインド",
+                    "attack": null,
+                    "enemy_skill_id": 404,
+                    "extra_description": null,
+                    "max_turns": 4,
+                    "min_turns": 2,
+                    "params": [
+                        "木属性が数ターンの間、行動不能",
+                        2,
+                        2,
+                        4,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        1,
+                        null,
+                        null
+                    ],
+                    "target_attribute": 2,
+                    "target_count": null,
+                    "targets": [
+                        "TargetType.attributes"
+                    ],
+                    "type": 2
+                },
+                "condition": {
+                    "_ai": 100,
+                    "_rnd": 0,
+                    "condition_attributes": null,
+                    "enemies_remaining": null,
+                    "forced_one_time": null,
+                    "hp_threshold": null,
+                    "on_death": null,
+                    "one_time": 1
+                },
+                "enemy_skill_id": 404,
+                "extra_description": null
+            },
+            {
+                "behavior": {
+                    "_name": "ファイアブレス",
+                    "attack": {
+                        "atk_multiplier": 70,
+                        "max_hits": 2,
+                        "min_hits": 2
+                    },
+                    "enemy_skill_id": 403,
+                    "extra_description": null,
+                    "params": [
+                        null,
+                        2,
+                        2,
+                        70,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        75,
+                        null,
+                        null,
+                        null,
+                        null
+                    ],
+                    "type": 15
+                },
+                "condition": {
+                    "_ai": 100,
+                    "_rnd": 0,
+                    "condition_attributes": null,
+                    "enemies_remaining": null,
+                    "forced_one_time": null,
+                    "hp_threshold": 75,
+                    "on_death": null,
+                    "one_time": null
+                },
+                "enemy_skill_id": 403,
+                "extra_description": null
+            }
+        ],
+        "leader_skill": {
+            "_atk": 2.0,
+            "_hp": 1,
+            "_rcv": 1,
+            "_shield": 0,
+            "attributes": [
+                0
+            ],
+            "name": "ファイアスケイル",
+            "raw_description": "火属性とドラゴンタイプの攻撃力が2倍。",
+            "skill_id": 706,
+            "skill_type": 69,
+            "types": [
+                4
+            ]
+        },
+        "leader_skill_id": 706,
+        "monster_id": 729,
+        "monster_no": 729,
+        "server": "Server.jp"
+    },
+    "kr_card": {
+        "active_skill": {
+            "attribute": 0,
+            "levels": 16,
+            "mass_attack": false,
+            "multiplier": 50.0,
+            "name": "크림슨 폭탄",
+            "raw_description": "하나의 적에게 자신의 공격력x50배의 불속성 공격",
+            "skill_id": 637,
+            "skill_type": 37,
+            "turn_max": 30,
+            "turn_min": 15
+        },
+        "active_skill_id": 637,
+        "card": {
+            "active_skill_id": 637,
+            "ancestor_id": 728,
+            "atk_scale": 1.0,
+            "attr_id": 0,
+            "awakenings": [
+                22,
+                21
+            ],
+            "base_id": 728,
+            "collab_id": 16,
+            "cost": 20,
+            "enemy_atk_max": 7440,
+            "enemy_atk_min": 248,
+            "enemy_atk_scale": 1.0,
+            "enemy_coins_per_level": 400,
+            "enemy_def_max": 500,
+            "enemy_def_min": 50,
+            "enemy_def_scale": 1.0,
+            "enemy_hp_max": 903750,
+            "enemy_hp_min": 30125,
+            "enemy_hp_scale": 1.0,
+            "enemy_max_level": 10,
+            "enemy_skill_counter_increment": 0,
+            "enemy_skill_max_counter": 1,
+            "enemy_skill_refs": [
+                {
+                    "enemy_ai": 5,
+                    "enemy_rnd": 3,
+                    "enemy_skill_id": 25
+                },
+                {
+                    "enemy_ai": 0,
+                    "enemy_rnd": 0,
+                    "enemy_skill_id": 26
+                },
+                {
+                    "enemy_ai": 100,
+                    "enemy_rnd": 0,
+                    "enemy_skill_id": 404
+                },
+                {
+                    "enemy_ai": 100,
+                    "enemy_rnd": 0,
+                    "enemy_skill_id": 403
+                }
+            ],
+            "enemy_turns": 1,
+            "enemy_turns_alt": 0,
+            "enemy_xp_per_level": 500,
+            "evo_mat_id_1": 171,
+            "evo_mat_id_2": 153,
+            "evo_mat_id_3": 154,
+            "evo_mat_id_4": 227,
+            "evo_mat_id_5": 227,
+            "feed_xp_per_level": 937,
+            "furigana": "",
+            "group_id": 126,
+            "hp_scale": 1.0,
+            "inheritable": false,
+            "is_collab": true,
+            "is_ult": false,
+            "latent_on_feed": 0,
+            "leader_skill_id": 706,
+            "limit_mult": 0,
+            "max_atk": 1328,
+            "max_hp": 3168,
+            "max_level": 99,
+            "max_rcv": 44,
+            "min_atk": 531,
+            "min_hp": 1267,
+            "min_rcv": 21,
+            "monster_no": 729,
+            "name": "CoC 붉은 드래곤",
+            "orb_skin_id": 0,
+            "other_fields": [
+                ""
+            ],
+            "random_flags": 6,
+            "rarity": 5,
+            "rcv_scale": 1.0,
+            "released_status": true,
+            "sell_gold_per_level": 405,
+            "sell_mp": 10,
+            "sub_attr_id": -1,
+            "super_awakenings": [],
+            "type_1_id": 4,
+            "type_2_id": -1,
+            "type_3_id": -1,
+            "un_evo_mat_1": 155,
+            "un_evo_mat_2": 156,
+            "un_evo_mat_3": 157,
+            "un_evo_mat_4": 158,
+            "un_evo_mat_5": 159,
+            "unknown_009": 5,
+            "unknown_055": 0,
+            "unknown_056": 0,
+            "use_new_ai": false,
+            "voice_id": 0,
+            "xp_max": 3000000,
+            "xp_scale": 2.5
+        },
+        "critical_failures": [],
+        "enemy_skills": [
+            {
+                "behavior": {
+                    "_name": "테스트예비",
+                    "branch_condition": "level",
+                    "branch_value": 5,
+                    "compare": ">",
+                    "enemy_skill_id": 25,
+                    "extra_description": null,
+                    "params": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        4,
+                        null,
+                        null,
+                        null
+                    ],
+                    "target_round": 3,
+                    "type": 35
+                },
+                "condition": null,
+                "enemy_skill_id": 25,
+                "extra_description": null
+            },
+            {
+                "behavior": {
+                    "_name": "테스트예비",
+                    "enemy_skill_id": 26,
+                    "extra_description": null,
+                    "params": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        4,
+                        null,
+                        null,
+                        null
+                    ],
+                    "type": 36
+                },
+                "condition": null,
+                "enemy_skill_id": 26,
+                "extra_description": null
+            },
+            {
+                "behavior": {
+                    "_name": "리프 바인드",
+                    "attack": null,
+                    "enemy_skill_id": 404,
+                    "extra_description": null,
+                    "max_turns": 4,
+                    "min_turns": 2,
+                    "params": [
+                        "나무속성이 몇 턴 동안 행동불능",
+                        2,
+                        2,
+                        4,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        1,
+                        null,
+                        null
+                    ],
+                    "target_attribute": 2,
+                    "target_count": null,
+                    "targets": [
+                        "TargetType.attributes"
+                    ],
+                    "type": 2
+                },
+                "condition": {
+                    "_ai": 100,
+                    "_rnd": 0,
+                    "condition_attributes": null,
+                    "enemies_remaining": null,
+                    "forced_one_time": null,
+                    "hp_threshold": null,
+                    "on_death": null,
+                    "one_time": 1
+                },
+                "enemy_skill_id": 404,
+                "extra_description": null
+            },
+            {
+                "behavior": {
+                    "_name": "파이어 브레스",
+                    "attack": {
+                        "atk_multiplier": 70,
+                        "max_hits": 2,
+                        "min_hits": 2
+                    },
+                    "enemy_skill_id": 403,
+                    "extra_description": null,
+                    "params": [
+                        null,
+                        2,
+                        2,
+                        70,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        75,
+                        null,
+                        null,
+                        null,
+                        null
+                    ],
+                    "type": 15
+                },
+                "condition": {
+                    "_ai": 100,
+                    "_rnd": 0,
+                    "condition_attributes": null,
+                    "enemies_remaining": null,
+                    "forced_one_time": null,
+                    "hp_threshold": 75,
+                    "on_death": null,
+                    "one_time": null
+                },
+                "enemy_skill_id": 403,
+                "extra_description": null
+            }
+        ],
+        "leader_skill": {
+            "_atk": 2.0,
+            "_hp": 1,
+            "_rcv": 1,
+            "_shield": 0,
+            "attributes": [
+                0
+            ],
+            "name": "파이어 스케일",
+            "raw_description": "불속성과 드래곤타입의 공격력이 2배",
+            "skill_id": 706,
+            "skill_type": 69,
+            "types": [
+                4
+            ]
+        },
+        "leader_skill_id": 706,
+        "monster_id": 729,
+        "monster_no": 729,
+        "server": "Server.kr"
+    },
+    "leader_skill": {
+        "en_text": "2x ATK for Dragon type and Fire Att.",
+        "jp_skill": {
+            "_atk": 2.0,
+            "_hp": 1,
+            "_rcv": 1,
+            "_shield": 0,
+            "attributes": [
+                0
+            ],
+            "name": "ファイアスケイル",
+            "raw_description": "火属性とドラゴンタイプの攻撃力が2倍。",
+            "skill_id": 706,
+            "skill_type": 69,
+            "types": [
+                4
+            ]
+        },
+        "kr_skill": {
+            "_atk": 2.0,
+            "_hp": 1,
+            "_rcv": 1,
+            "_shield": 0,
+            "attributes": [
+                0
+            ],
+            "name": "파이어 스케일",
+            "raw_description": "불속성과 드래곤타입의 공격력이 2배",
+            "skill_id": 706,
+            "skill_type": 69,
+            "types": [
+                4
+            ]
+        },
+        "na_skill": {
+            "_atk": 2.0,
+            "_hp": 1,
+            "_rcv": 1,
+            "_shield": 0,
+            "attributes": [
+                0
+            ],
+            "name": "Fire Scale",
+            "raw_description": "2x ATK for Fire Att. and Dragon Type",
+            "skill_id": 706,
+            "skill_type": 69,
+            "types": [
+                4
+            ]
+        },
+        "skill_id": 706,
+        "skill_type_tags": [
+            "LsCondition.ENHANCED_ATK"
+        ]
+    },
+    "monster_id": 729,
+    "na_card": {
+        "active_skill": {
+            "attribute": 0,
+            "levels": 16,
+            "mass_attack": false,
+            "multiplier": 50.0,
+            "name": "Crimson Bomb",
+            "raw_description": "Inflicts 50x ATK Fire Att. attack on 1 enemy",
+            "skill_id": 637,
+            "skill_type": 37,
+            "turn_max": 30,
+            "turn_min": 15
+        },
+        "active_skill_id": 637,
+        "card": {
+            "active_skill_id": 637,
+            "ancestor_id": 728,
+            "atk_scale": 1.0,
+            "attr_id": 0,
+            "awakenings": [
+                22,
+                21
+            ],
+            "base_id": 728,
+            "collab_id": 16,
+            "cost": 20,
+            "enemy_atk_max": 7440,
+            "enemy_atk_min": 248,
+            "enemy_atk_scale": 1.0,
+            "enemy_coins_per_level": 400,
+            "enemy_def_max": 500,
+            "enemy_def_min": 50,
+            "enemy_def_scale": 1.0,
+            "enemy_hp_max": 903750,
+            "enemy_hp_min": 30125,
+            "enemy_hp_scale": 1.0,
+            "enemy_max_level": 10,
+            "enemy_skill_counter_increment": 0,
+            "enemy_skill_max_counter": 1,
+            "enemy_skill_refs": [
+                {
+                    "enemy_ai": 5,
+                    "enemy_rnd": 3,
+                    "enemy_skill_id": 25
+                },
+                {
+                    "enemy_ai": 0,
+                    "enemy_rnd": 0,
+                    "enemy_skill_id": 26
+                },
+                {
+                    "enemy_ai": 100,
+                    "enemy_rnd": 0,
+                    "enemy_skill_id": 404
+                },
+                {
+                    "enemy_ai": 100,
+                    "enemy_rnd": 0,
+                    "enemy_skill_id": 403
+                }
+            ],
+            "enemy_turns": 1,
+            "enemy_turns_alt": 0,
+            "enemy_xp_per_level": 500,
+            "evo_mat_id_1": 171,
+            "evo_mat_id_2": 153,
+            "evo_mat_id_3": 154,
+            "evo_mat_id_4": 227,
+            "evo_mat_id_5": 227,
+            "feed_xp_per_level": 937,
+            "furigana": "",
+            "group_id": 126,
+            "hp_scale": 1.0,
+            "inheritable": false,
+            "is_collab": true,
+            "is_ult": false,
+            "latent_on_feed": 0,
+            "leader_skill_id": 706,
+            "limit_mult": 0,
+            "max_atk": 1328,
+            "max_hp": 3168,
+            "max_level": 99,
+            "max_rcv": 44,
+            "min_atk": 531,
+            "min_hp": 1267,
+            "min_rcv": 21,
+            "monster_no": 729,
+            "name": "CoC Crimson Dragon",
+            "orb_skin_id": 0,
+            "other_fields": [
+                ""
+            ],
+            "random_flags": 6,
+            "rarity": 5,
+            "rcv_scale": 1.0,
+            "released_status": true,
+            "sell_gold_per_level": 405,
+            "sell_mp": 10,
+            "sub_attr_id": -1,
+            "super_awakenings": [],
+            "type_1_id": 4,
+            "type_2_id": -1,
+            "type_3_id": -1,
+            "un_evo_mat_1": 155,
+            "un_evo_mat_2": 156,
+            "un_evo_mat_3": 157,
+            "un_evo_mat_4": 158,
+            "un_evo_mat_5": 159,
+            "unknown_009": 5,
+            "unknown_055": 0,
+            "unknown_056": 0,
+            "use_new_ai": false,
+            "voice_id": 0,
+            "xp_max": 3000000,
+            "xp_scale": 2.5
+        },
+        "critical_failures": [],
+        "enemy_skills": [
+            {
+                "behavior": {
+                    "_name": "ERROR25",
+                    "branch_condition": "level",
+                    "branch_value": 5,
+                    "compare": ">",
+                    "enemy_skill_id": 25,
+                    "extra_description": null,
+                    "params": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        4,
+                        null,
+                        null,
+                        null
+                    ],
+                    "target_round": 3,
+                    "type": 35
+                },
+                "condition": null,
+                "enemy_skill_id": 25,
+                "extra_description": null
+            },
+            {
+                "behavior": {
+                    "_name": "ERROR26",
+                    "enemy_skill_id": 26,
+                    "extra_description": null,
+                    "params": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        4,
+                        null,
+                        null,
+                        null
+                    ],
+                    "type": 36
+                },
+                "condition": null,
+                "enemy_skill_id": 26,
+                "extra_description": null
+            },
+            {
+                "behavior": {
+                    "_name": "Leaf Bind",
+                    "attack": null,
+                    "enemy_skill_id": 404,
+                    "extra_description": null,
+                    "max_turns": 4,
+                    "min_turns": 2,
+                    "params": [
+                        "Binds Wood Att. allies for a number of turns",
+                        2,
+                        2,
+                        4,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        1,
+                        null,
+                        null
+                    ],
+                    "target_attribute": 2,
+                    "target_count": null,
+                    "targets": [
+                        "TargetType.attributes"
+                    ],
+                    "type": 2
+                },
+                "condition": {
+                    "_ai": 100,
+                    "_rnd": 0,
+                    "condition_attributes": null,
+                    "enemies_remaining": null,
+                    "forced_one_time": null,
+                    "hp_threshold": null,
+                    "on_death": null,
+                    "one_time": 1
+                },
+                "enemy_skill_id": 404,
+                "extra_description": null
+            },
+            {
+                "behavior": {
+                    "_name": "Fire Breath",
+                    "attack": {
+                        "atk_multiplier": 70,
+                        "max_hits": 2,
+                        "min_hits": 2
+                    },
+                    "enemy_skill_id": 403,
+                    "extra_description": null,
+                    "params": [
+                        null,
+                        2,
+                        2,
+                        70,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        75,
+                        null,
+                        null,
+                        null,
+                        null
+                    ],
+                    "type": 15
+                },
+                "condition": {
+                    "_ai": 100,
+                    "_rnd": 0,
+                    "condition_attributes": null,
+                    "enemies_remaining": null,
+                    "forced_one_time": null,
+                    "hp_threshold": 75,
+                    "on_death": null,
+                    "one_time": null
+                },
+                "enemy_skill_id": 403,
+                "extra_description": null
+            }
+        ],
+        "leader_skill": {
+            "_atk": 2.0,
+            "_hp": 1,
+            "_rcv": 1,
+            "_shield": 0,
+            "attributes": [
+                0
+            ],
+            "name": "Fire Scale",
+            "raw_description": "2x ATK for Fire Att. and Dragon Type",
+            "skill_id": 706,
+            "skill_type": 69,
+            "types": [
+                4
+            ]
+        },
+        "leader_skill_id": 706,
+        "monster_id": 729,
+        "monster_no": 729,
+        "server": "Server.na"
+    }
+}

@@ -1,0 +1,33 @@
+#3599  - Enoch
+True : use_new_ai
+3 : starting/max counter
+0 : counter increment
+
+ESPreemptive(49:318) -> ESPreemptive
+Enable preempt if level 1
+
+SkillSet:
+	Condition: One-time use (ai:100 rnd:0) (one-time: 2)
+	[0] ESStatusShield(20:14478) -> Saint's Robes
+	Voids status ailments for 999 turns
+	[1] ESLeaderAlter(125:14479) -> Heaven's Will
+	Change leader to [4264] for 1 turns
+	[2] ESRandomSpawn(92:14493) -> Spear of Destiny
+	Spawn random 6 Fire, Water, Wood, Light, Dark, Heal, Mortal Poison orbs
+
+ESDamageShield(74:14480) -> Sanctuary
+	Condition: One-time use (ai:100 rnd:0) (one-time: 1)
+Reduce damage from all sources by 75% for 99 turns
+
+ESSetCounterIf(38:177) -> ESSetCounterIf
+set counter = 6 if counter == 0
+
+ESCountdown(37:178) -> ESCountdown
+countdown
+
+ESAttackMultihit(15:14481) -> Rizentbard
+Deal 100000% damage (10 hits, 10000% each)
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+

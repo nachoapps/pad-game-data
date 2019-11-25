@@ -1,0 +1,26 @@
+#2829  - Assault Superman Soldier (Film)
+True : use_new_ai
+1 : starting/max counter
+0 : counter increment
+
+ESBranchLevel(35:25) -> ESBranchLevel
+Branch on level > 4, target rnd 3
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESAttackUPRemainingEnemies(17:4117) -> Advance
+	Condition: when <= 1 enemies remain (ai:100 rnd:0)
+Increase damage to 120% for the next 999 turns
+
+ESSkillDelay(89:4118) -> Tackle
+	Condition: When < 20% hp (ai:100 rnd:0)
+Delay active skills by 1 turns, Deal 120% damage
+
+ESStorePower(8:4115) -> Encircle
+	Condition: When < 50% hp , one-time use (ai:100 rnd:0) (one-time: 1)
+Increase damage to 200% for the next attack
+
+ESAttackMultihit(15:4114) -> Full Auto
+Deal 100% damage (2 hits, 50% each)
+

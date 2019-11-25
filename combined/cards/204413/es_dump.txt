@@ -1,0 +1,37 @@
+#204413  - Great Witch of the Ice Flowers, Reeche
+True : use_new_ai
+3 : starting/max counter
+0 : counter increment
+
+ESPreemptive(49:318) -> ESPreemptive
+Enable preempt if level 1
+
+ESVoidShield(71:14446) -> Magic Circle's Counter Strike
+	Condition: One-time use (ai:100 rnd:0) (one-time: 2)
+Void damage >= 90000000 for 999 turns
+
+ESBranchHP(28:18) -> ESBranchHP
+Branch on hp < 10, target rnd 8
+
+ESBranchHP(29:19) -> ESBranchHP
+Branch on hp > 51, target rnd 6
+
+ESSkyfall(68:14468) -> Large Ice Mana
+	Condition: One-time use (ai:100 rnd:0) (one-time: 1)
+Water skyfall +15% for 10 turns
+
+ESAttackMultihit(15:14449) -> Snow Flower
+Deal 100% damage
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESBoardChangeAttackBits(85:14450) -> Absolute Zero Ice Wall
+Change all orbs to Water, Deal 1000% damage
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESTurnChangePassive(106:14445) -> Magical Power Boost
+Enemy turn counter change to 1 when HP <= 50%
+

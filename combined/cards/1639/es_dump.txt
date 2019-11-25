@@ -1,0 +1,18 @@
+#1639  - ABE Priest Matilda
+False : use_new_ai
+1 : starting/max counter
+0 : counter increment
+
+ESBranchLevel(35:25) -> ESBranchLevel
+Branch on level > 5, target rnd 3
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESRecoverEnemy(7:1575) -> Matilda's Medicine
+	Condition: When < 50% hp , one-time use (ai:100 rnd:0) (one-time: 1)
+Enemy recover 50% hp
+
+ESOrbChangeAttack(48:1576) -> Healing Strike
+Change Random to Heal, Deal 150% damage
+

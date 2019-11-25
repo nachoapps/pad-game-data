@@ -1,0 +1,74 @@
+#104615  - Llanowar Elves
+True : use_new_ai
+1 : starting/max counter
+1 : counter increment
+
+ESPreemptive(49:3402) -> ESPreemptive
+Enable preempt if level 4
+
+ESBranchLevel(35:25) -> ESBranchLevel
+Branch on level > 4, target rnd 4
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 1, target rnd 8
+
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b1
+
+ESOrbChangeAttack(48:10247) -> Nature's Knowledge
+Change Random to Wood, Deal 100% damage
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESBranchHP(28:18) -> ESBranchHP
+Branch on hp < 20, target rnd 17
+
+ESSetCounter(26:16) -> ESSetCounter
+counter + 1
+
+ESBranchCounter(32:22) -> ESBranchCounter
+Branch on counter > 3, target rnd 14
+
+ESDispel(6:10248) -> Naturalize
+	Condition: One-time use (ai:100 rnd:0) (one-time: 1)
+Voids player buff effects
+
+ESOrbChangeAttack(48:10247) -> Nature's Knowledge
+Change Random to Wood, Deal 100% damage
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESSetCounter(25:15) -> ESSetCounter
+counter = 0
+
+ESAttackUPRemainingEnemies(17:10249) -> Giant Growth
+	Condition: when <= 1 enemies remain (ai:100 rnd:0)
+Increase damage to 300% for the next 1 turns
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 2, target rnd 21
+
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b11
+
+ESRandomSpawn(92:10250) -> Animist's Awakening
+	Condition: When fire, water, light, dark, heal, jammer, poison, mortal poison orbs are on the board (ai:100 rnd:0)
+Spawn random 8 Wood orbs
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESAttackMultihit(15:10251) -> Pierce the Sky
+Deal 240% damage (4 hits, 60% each)
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+

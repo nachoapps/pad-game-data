@@ -1,0 +1,40 @@
+#100422  - Alt. Kano, the Daughter of Nature
+True : use_new_ai
+0 : starting/max counter
+0 : counter increment
+
+ESPreemptive(49:318) -> ESPreemptive
+Enable preempt if level 1
+
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 1, target rnd 6
+
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b1
+
+ESSpinnersFixed(110:11413) -> Autumn's Gentle Breeze
+Specific orbs change every 1.0s for 2 turns
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESBranchHP(29:19) -> ESBranchHP
+Branch on hp > 100, target rnd 11
+
+ESAttackUPRemainingEnemies(17:643) -> How mean! Now I'm angry!
+	Condition: when <= 1 enemies remain (ai:100 rnd:0)
+Increase damage to 1000% for the next 999 turns
+
+ESAttackMultihit(15:644) -> Favorite Japanese Umbrella
+	Condition: 40% chance (ai:40 rnd:0)
+Deal 200% damage (2 hits, 100% each)
+
+ESOrbChangeAttack(48:645) -> Autumn Leave Dance
+Change Random to Wood, Deal 175% damage
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESInactivity(16:642) -> Happily Smiling
+Do nothing
+

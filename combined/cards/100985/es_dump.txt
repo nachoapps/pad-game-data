@@ -1,0 +1,51 @@
+#100985  - Alt. Divine Queen Hera
+False : use_new_ai
+1 : starting/max counter
+0 : counter increment
+
+ESPreemptive(49:318) -> ESPreemptive
+Enable preempt if level 1
+
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 1, target rnd 6
+
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b1
+
+ESBindAttack(63:8251) -> Divine Queen's Time Seal
+Bind 1 random cards for 3 turns, Deal 400% damage
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESBindTyping(3:1241) -> Divine Queen's Breath
+	Condition: When < 50% hp , one-time use (ai:100 rnd:0) (one-time: 1)
+Bind God cards for 5 turns
+
+ESBranchHP(28:18) -> ESBranchHP
+Branch on hp < 30, target rnd 10
+
+ESOrbChangeAttack(48:1240) -> Black Nightmare
+Change Light to Jammer, Deal 90% damage
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 2, target rnd 14
+
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b11
+
+ESGravity(50:1242) -> Ultra Gravity
+Player -99% HP
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESAttackMultihit(15:1243) -> Ultra Graviton Bomb
+Deal 500% damage
+
+ESResolve(73:8254) -> Alt. Hera Normal Resolve
+Survive attacks with 1 HP when HP > 90%
+

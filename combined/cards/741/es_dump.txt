@@ -1,0 +1,38 @@
+#741  - Purple Stone Dragon, Damascus
+False : use_new_ai
+1 : starting/max counter
+0 : counter increment
+
+ESPreemptive(49:318) -> ESPreemptive
+Enable preempt if level 1
+
+ESStatusShield(20:406) -> Mystic Armor
+Voids status ailments for 20 turns
+
+ESBranchHP(28:18) -> ESBranchHP
+Branch on hp < 10, target rnd 10
+
+ESBranchHP(28:18) -> ESBranchHP
+Branch on hp < 50, target rnd 7
+
+ESAttackMultihit(15:412) -> Black Claw
+	Condition: 70% chance (ai:70 rnd:0)
+Deal 160% damage (4 hits, 40% each)
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESBindAttribute(2:366) -> Water Bind
+	Condition: One-time use (ai:100 rnd:0) (one-time: 1)
+Bind Water cards for 2~4 turns
+
+ESAttackMultihit(15:408) -> Red Tail
+	Condition: 70% chance (ai:70 rnd:0)
+Deal 150% damage
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESAttackMultihit(15:413) -> Metal Burst
+Deal 250% damage (5 hits, 50% each)
+

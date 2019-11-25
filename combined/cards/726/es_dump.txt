@@ -1,0 +1,15 @@
+#726  - CoC Healer
+False : use_new_ai
+4 : starting/max counter
+0 : counter increment
+
+ESBranchLevel(35:25) -> ESBranchLevel
+Branch on level > 5, target rnd 3
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESRecoverEnemy(7:82) -> Cure
+	Condition: When < 30% hp , one-time use (ai:100 rnd:0) (one-time: 4)
+Enemy recover 50% hp
+

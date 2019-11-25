@@ -1,0 +1,36 @@
+#5662  - マジク・リン
+True : use_new_ai
+15 : starting/max counter
+0 : counter increment
+
+ESPreemptive(49:318) -> ESPreemptive
+Enable preempt if level 1
+
+ESSkyfall(68:14910) -> 僕だって魔術士なんだ
+	Condition: One-time use (ai:100 rnd:0) (one-time: 8)
+Jammer, Poison skyfall +10% for 4 turns
+
+ESSpinnersFixed(110:14911) -> 我は乱す光列の檻！
+	Condition: One-time use (ai:100 rnd:0) (one-time: 4)
+Specific orbs change every 1.0s for 4 turns
+
+ESAbsorbCombo(67:14912) -> 我は跳ぶ――天の銀嶺！
+	Condition: One-time use (ai:100 rnd:0) (one-time: 2)
+Absorb combo <= 6 damage for 15 turns
+
+ESGravity(50:14913) -> 全力で撃ち込んでやる
+	Condition: One-time use (ai:100 rnd:0) (one-time: 1)
+Player -99% HP
+
+SkillSet:
+	[0] ESInactivity(66:14915) -> わ、我は放つ光の――
+	Do nothing
+	[1] ESOrbChangeAttack(48:14916) -> 光の白刃！
+	Change Random to Light, Deal 150% damage
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESTypeResist(118:14963) -> バランス回復半減
+Reduce damage from Balanced, Healer by 50%
+

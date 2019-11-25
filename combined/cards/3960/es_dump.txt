@@ -1,0 +1,25 @@
+#3960  - Black Book Dragon
+True : use_new_ai
+1 : starting/max counter
+0 : counter increment
+
+ESBranchLevel(35:25) -> ESBranchLevel
+Branch on level > 4, target rnd 3
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESRecoverEnemy(7:8284) -> Food Supply
+	Condition: When < 50% hp , one-time use (ai:100 rnd:0) (one-time: 1)
+Enemy recover 100% hp
+
+ESRandomSpawn(92:8283) -> Dark Pit
+	Condition: 40% chance & when Dark orbs are on the board (ai:40 rnd:0)
+Change all orbs to Jammer, Deal 100% damage
+
+ESAttackMultihit(15:8278) -> Bite
+Deal 150% damage (3 hits, 50% each)
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+

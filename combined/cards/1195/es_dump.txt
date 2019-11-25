@@ -1,0 +1,54 @@
+#1195  - Moonlit Shadow, Hattori Hanzo
+True : use_new_ai
+1 : starting/max counter
+1 : counter increment
+
+ESPreemptive(49:318) -> ESPreemptive
+Enable preempt if level 1
+
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 1, target rnd 6
+
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b1
+
+ESStatusShield(20:1965) -> Intruder...
+	Condition: One-time use (ai:100 rnd:0) (one-time: 1)
+Voids status ailments for 3 turns
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESAttackUPRemainingEnemies(17:1968) -> Blood of Iga
+	Condition: When < 50% hp, when <= 1 enemies remain (ai:100 rnd:0)
+Increase damage to 200% for the next 999 turns
+
+ESBranchHP(28:18) -> ESBranchHP
+Branch on hp < 50, target rnd 13
+
+ESBoardChange(84:1967) -> Shadow Concealment Technique
+	Condition: One-time use (ai:100 rnd:0) (one-time: 1)
+Change all orbs to Jammer
+
+ESRowSpawnMulti(79:1966) -> Slash
+Change 3rd row to Dark orbs, Deal 120% damage
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESAttributeResist(72:1774) -> Halve Light
+Reduce damage from Light by 50%
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESRowSpawnMulti(79:1969) -> Moon Cutting Circle
+	Condition: When < 20% hp (ai:100 rnd:0)
+Change 2nd row to Dark orbs, 4th row to Dark orbs, Deal 300% damage
+
+ESRowSpawnMulti(79:1966) -> Slash
+Change 3rd row to Dark orbs, Deal 120% damage
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+

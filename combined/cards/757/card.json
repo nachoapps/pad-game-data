@@ -1,0 +1,2856 @@
+{
+    "active_skill": {
+        "en_text": "Change Wood orbs to Heal orbs",
+        "jp_skill": {
+            "from_1": 2,
+            "levels": 7,
+            "name": "防御態勢・火",
+            "raw_description": "木ドロップを回復ドロップに変化。",
+            "skill_id": 160,
+            "skill_type": 9,
+            "to_1": 5,
+            "turn_max": 11,
+            "turn_min": 5
+        },
+        "kr_skill": {
+            "from_1": 2,
+            "levels": 7,
+            "name": "방어태세 - 불",
+            "raw_description": "나무드롭을 회복드롭으로 변화",
+            "skill_id": 160,
+            "skill_type": 9,
+            "to_1": 5,
+            "turn_max": 11,
+            "turn_min": 5
+        },
+        "na_skill": {
+            "from_1": 2,
+            "levels": 7,
+            "name": "Guard Stance - Fire",
+            "raw_description": "Changes Wood Orbs to Heal Orbs",
+            "skill_id": 160,
+            "skill_type": 9,
+            "to_1": 5,
+            "turn_max": 11,
+            "turn_min": 5
+        },
+        "skill_id": 160,
+        "skill_type_tags": [
+            "AsCondition.GUARD_STANCE",
+            "AsCondition.ORB_CONVERT"
+        ]
+    },
+    "en_as_text": "Change Wood orbs to Heal orbs",
+    "en_ls_text": "Reduce damage taken from fire, wood att. by 50%",
+    "enemy_behavior": [
+        {
+            "behavior": {
+                "_name": "*Preemptive Command LV1",
+                "enemy_skill_id": 318,
+                "extra_description": null,
+                "level": 1,
+                "params": [
+                    null,
+                    1,
+                    100,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null
+                ],
+                "type": 49
+            },
+            "condition": null,
+            "enemy_skill_id": 318,
+            "extra_description": null
+        },
+        {
+            "behavior": {
+                "_name": "ERROR10",
+                "branch_condition": "flag",
+                "branch_value": 1,
+                "compare": "&",
+                "enemy_skill_id": 10,
+                "extra_description": null,
+                "params": [
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    50,
+                    4,
+                    null,
+                    null,
+                    null
+                ],
+                "target_round": 6,
+                "type": 43
+            },
+            "condition": null,
+            "enemy_skill_id": 10,
+            "extra_description": null
+        },
+        {
+            "behavior": {
+                "_name": "ERROR12",
+                "enemy_skill_id": 12,
+                "extra_description": null,
+                "flag": 1,
+                "flag_bin": "0b1",
+                "operation": "SET",
+                "params": [
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    4,
+                    null,
+                    null,
+                    null
+                ],
+                "type": 22
+            },
+            "condition": null,
+            "enemy_skill_id": 12,
+            "extra_description": null
+        },
+        {
+            "behavior": {
+                "_name": "Dash",
+                "attack": null,
+                "enemy_skill_id": 1812,
+                "extra_description": null,
+                "params": [
+                    null,
+                    80,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null
+                ],
+                "percent": 80,
+                "type": 50
+            },
+            "condition": {
+                "_ai": 100,
+                "_rnd": 0,
+                "condition_attributes": null,
+                "enemies_remaining": null,
+                "forced_one_time": null,
+                "hp_threshold": null,
+                "on_death": null,
+                "one_time": null
+            },
+            "enemy_skill_id": 1812,
+            "extra_description": null
+        },
+        {
+            "behavior": {
+                "_name": "ERROR26",
+                "enemy_skill_id": 26,
+                "extra_description": null,
+                "params": [
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    4,
+                    null,
+                    null,
+                    null
+                ],
+                "type": 36
+            },
+            "condition": null,
+            "enemy_skill_id": 26,
+            "extra_description": null
+        },
+        {
+            "behavior": {
+                "_name": "Union Claw",
+                "attack": {
+                    "atk_multiplier": 150,
+                    "max_hits": 1,
+                    "min_hits": 1
+                },
+                "attributes": [
+                    0,
+                    2
+                ],
+                "desc_arr": [
+                    "1st, 2nd column to Fire orbs",
+                    "5th, 6th column to Wood orbs"
+                ],
+                "enemy_skill_id": 1811,
+                "extra_description": null,
+                "params": [
+                    null,
+                    3,
+                    1,
+                    48,
+                    4,
+                    null,
+                    null,
+                    150,
+                    null,
+                    null,
+                    null,
+                    30,
+                    null,
+                    1,
+                    null,
+                    null
+                ],
+                "position_type": "column",
+                "positions": [
+                    1,
+                    2,
+                    5,
+                    6
+                ],
+                "type": 77
+            },
+            "condition": {
+                "_ai": 100,
+                "_rnd": 0,
+                "condition_attributes": null,
+                "enemies_remaining": null,
+                "forced_one_time": null,
+                "hp_threshold": 30,
+                "on_death": null,
+                "one_time": 1
+            },
+            "enemy_skill_id": 1811,
+            "extra_description": null
+        },
+        {
+            "behavior": {
+                "_name": "Storm Claw",
+                "attack": {
+                    "atk_multiplier": 100,
+                    "max_hits": 1,
+                    "min_hits": 1
+                },
+                "attributes": [
+                    2,
+                    2
+                ],
+                "desc_arr": [
+                    "2nd column to Wood orbs",
+                    "5th column to Wood orbs"
+                ],
+                "enemy_skill_id": 1810,
+                "extra_description": null,
+                "params": [
+                    null,
+                    2,
+                    4,
+                    16,
+                    4,
+                    null,
+                    null,
+                    100,
+                    null,
+                    null,
+                    null,
+                    50,
+                    null,
+                    1,
+                    null,
+                    null
+                ],
+                "position_type": "column",
+                "positions": [
+                    2,
+                    5
+                ],
+                "type": 77
+            },
+            "condition": {
+                "_ai": 100,
+                "_rnd": 0,
+                "condition_attributes": null,
+                "enemies_remaining": null,
+                "forced_one_time": null,
+                "hp_threshold": 50,
+                "on_death": null,
+                "one_time": 1
+            },
+            "enemy_skill_id": 1810,
+            "extra_description": null
+        },
+        {
+            "behavior": {
+                "_name": "Flare Claw",
+                "attack": {
+                    "atk_multiplier": 100,
+                    "max_hits": 1,
+                    "min_hits": 1
+                },
+                "attributes": [
+                    0,
+                    0
+                ],
+                "desc_arr": [
+                    "2nd column to Fire orbs",
+                    "5th column to Fire orbs"
+                ],
+                "enemy_skill_id": 1809,
+                "extra_description": null,
+                "params": [
+                    null,
+                    2,
+                    1,
+                    16,
+                    1,
+                    null,
+                    null,
+                    100,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    1,
+                    null,
+                    null
+                ],
+                "position_type": "column",
+                "positions": [
+                    2,
+                    5
+                ],
+                "type": 77
+            },
+            "condition": {
+                "_ai": 100,
+                "_rnd": 0,
+                "condition_attributes": null,
+                "enemies_remaining": null,
+                "forced_one_time": null,
+                "hp_threshold": null,
+                "on_death": null,
+                "one_time": 1
+            },
+            "enemy_skill_id": 1809,
+            "extra_description": null
+        },
+        {
+            "behavior": {
+                "_name": "Dash",
+                "attack": null,
+                "enemy_skill_id": 1812,
+                "extra_description": null,
+                "params": [
+                    null,
+                    80,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null
+                ],
+                "percent": 80,
+                "type": 50
+            },
+            "condition": {
+                "_ai": 60,
+                "_rnd": 0,
+                "condition_attributes": null,
+                "enemies_remaining": null,
+                "forced_one_time": null,
+                "hp_threshold": null,
+                "on_death": null,
+                "one_time": null
+            },
+            "enemy_skill_id": 1812,
+            "extra_description": null
+        },
+        {
+            "behavior": {
+                "_name": "ERROR26",
+                "enemy_skill_id": 26,
+                "extra_description": null,
+                "params": [
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    4,
+                    null,
+                    null,
+                    null
+                ],
+                "type": 36
+            },
+            "condition": null,
+            "enemy_skill_id": 26,
+            "extra_description": null
+        },
+        {
+            "behavior": {
+                "_name": "Flame/Tree Barrier",
+                "attributes": [
+                    0,
+                    2
+                ],
+                "enemy_skill_id": 1808,
+                "extra_description": null,
+                "params": [
+                    "Halves Fire & Wood Att. damage",
+                    5,
+                    50,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null
+                ],
+                "shield_percent": 50,
+                "type": 72
+            },
+            "condition": {
+                "_ai": 100,
+                "_rnd": 0,
+                "condition_attributes": null,
+                "enemies_remaining": null,
+                "forced_one_time": null,
+                "hp_threshold": null,
+                "on_death": null,
+                "one_time": null
+            },
+            "enemy_skill_id": 1808,
+            "extra_description": null
+        }
+    ],
+    "enemy_behavior_jp": [
+        {
+            "behavior": {
+                "_name": "※先制コマンドLV1",
+                "enemy_skill_id": 318,
+                "extra_description": null,
+                "level": 1,
+                "params": [
+                    null,
+                    1,
+                    100,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null
+                ],
+                "type": 49
+            },
+            "condition": null,
+            "enemy_skill_id": 318,
+            "extra_description": null
+        },
+        {
+            "behavior": {
+                "_name": "※ai フラグが立っていたら rnd の数値に分岐",
+                "branch_condition": "flag",
+                "branch_value": 1,
+                "compare": "&",
+                "enemy_skill_id": 10,
+                "extra_description": null,
+                "params": [
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    50,
+                    4,
+                    null,
+                    null,
+                    null
+                ],
+                "target_round": 6,
+                "type": 43
+            },
+            "condition": null,
+            "enemy_skill_id": 10,
+            "extra_description": null
+        },
+        {
+            "behavior": {
+                "_name": "※フラグを ai にセット",
+                "enemy_skill_id": 12,
+                "extra_description": null,
+                "flag": 1,
+                "flag_bin": "0b1",
+                "operation": "SET",
+                "params": [
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    4,
+                    null,
+                    null,
+                    null
+                ],
+                "type": 22
+            },
+            "condition": null,
+            "enemy_skill_id": 12,
+            "extra_description": null
+        },
+        {
+            "behavior": {
+                "_name": "突進",
+                "attack": null,
+                "enemy_skill_id": 1812,
+                "extra_description": null,
+                "params": [
+                    null,
+                    80,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null
+                ],
+                "percent": 80,
+                "type": 50
+            },
+            "condition": {
+                "_ai": 100,
+                "_rnd": 0,
+                "condition_attributes": null,
+                "enemies_remaining": null,
+                "forced_one_time": null,
+                "hp_threshold": null,
+                "on_death": null,
+                "one_time": null
+            },
+            "enemy_skill_id": 1812,
+            "extra_description": null
+        },
+        {
+            "behavior": {
+                "_name": "※パース終了",
+                "enemy_skill_id": 26,
+                "extra_description": null,
+                "params": [
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    4,
+                    null,
+                    null,
+                    null
+                ],
+                "type": 36
+            },
+            "condition": null,
+            "enemy_skill_id": 26,
+            "extra_description": null
+        },
+        {
+            "behavior": {
+                "_name": "ユニオンクロー",
+                "attack": {
+                    "atk_multiplier": 150,
+                    "max_hits": 1,
+                    "min_hits": 1
+                },
+                "attributes": [
+                    0,
+                    2
+                ],
+                "desc_arr": [
+                    "1st, 2nd column to Fire orbs",
+                    "5th, 6th column to Wood orbs"
+                ],
+                "enemy_skill_id": 1811,
+                "extra_description": null,
+                "params": [
+                    null,
+                    3,
+                    1,
+                    48,
+                    4,
+                    null,
+                    null,
+                    150,
+                    null,
+                    null,
+                    null,
+                    30,
+                    null,
+                    1,
+                    null,
+                    null
+                ],
+                "position_type": "column",
+                "positions": [
+                    1,
+                    2,
+                    5,
+                    6
+                ],
+                "type": 77
+            },
+            "condition": {
+                "_ai": 100,
+                "_rnd": 0,
+                "condition_attributes": null,
+                "enemies_remaining": null,
+                "forced_one_time": null,
+                "hp_threshold": 30,
+                "on_death": null,
+                "one_time": 1
+            },
+            "enemy_skill_id": 1811,
+            "extra_description": null
+        },
+        {
+            "behavior": {
+                "_name": "ストームクロー",
+                "attack": {
+                    "atk_multiplier": 100,
+                    "max_hits": 1,
+                    "min_hits": 1
+                },
+                "attributes": [
+                    2,
+                    2
+                ],
+                "desc_arr": [
+                    "2nd column to Wood orbs",
+                    "5th column to Wood orbs"
+                ],
+                "enemy_skill_id": 1810,
+                "extra_description": null,
+                "params": [
+                    null,
+                    2,
+                    4,
+                    16,
+                    4,
+                    null,
+                    null,
+                    100,
+                    null,
+                    null,
+                    null,
+                    50,
+                    null,
+                    1,
+                    null,
+                    null
+                ],
+                "position_type": "column",
+                "positions": [
+                    2,
+                    5
+                ],
+                "type": 77
+            },
+            "condition": {
+                "_ai": 100,
+                "_rnd": 0,
+                "condition_attributes": null,
+                "enemies_remaining": null,
+                "forced_one_time": null,
+                "hp_threshold": 50,
+                "on_death": null,
+                "one_time": 1
+            },
+            "enemy_skill_id": 1810,
+            "extra_description": null
+        },
+        {
+            "behavior": {
+                "_name": "フレアクロー",
+                "attack": {
+                    "atk_multiplier": 100,
+                    "max_hits": 1,
+                    "min_hits": 1
+                },
+                "attributes": [
+                    0,
+                    0
+                ],
+                "desc_arr": [
+                    "2nd column to Fire orbs",
+                    "5th column to Fire orbs"
+                ],
+                "enemy_skill_id": 1809,
+                "extra_description": null,
+                "params": [
+                    null,
+                    2,
+                    1,
+                    16,
+                    1,
+                    null,
+                    null,
+                    100,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    1,
+                    null,
+                    null
+                ],
+                "position_type": "column",
+                "positions": [
+                    2,
+                    5
+                ],
+                "type": 77
+            },
+            "condition": {
+                "_ai": 100,
+                "_rnd": 0,
+                "condition_attributes": null,
+                "enemies_remaining": null,
+                "forced_one_time": null,
+                "hp_threshold": null,
+                "on_death": null,
+                "one_time": 1
+            },
+            "enemy_skill_id": 1809,
+            "extra_description": null
+        },
+        {
+            "behavior": {
+                "_name": "突進",
+                "attack": null,
+                "enemy_skill_id": 1812,
+                "extra_description": null,
+                "params": [
+                    null,
+                    80,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null
+                ],
+                "percent": 80,
+                "type": 50
+            },
+            "condition": {
+                "_ai": 60,
+                "_rnd": 0,
+                "condition_attributes": null,
+                "enemies_remaining": null,
+                "forced_one_time": null,
+                "hp_threshold": null,
+                "on_death": null,
+                "one_time": null
+            },
+            "enemy_skill_id": 1812,
+            "extra_description": null
+        },
+        {
+            "behavior": {
+                "_name": "※パース終了",
+                "enemy_skill_id": 26,
+                "extra_description": null,
+                "params": [
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    4,
+                    null,
+                    null,
+                    null
+                ],
+                "type": 36
+            },
+            "condition": null,
+            "enemy_skill_id": 26,
+            "extra_description": null
+        },
+        {
+            "behavior": {
+                "_name": "炎樹の防壁",
+                "attributes": [
+                    0,
+                    2
+                ],
+                "enemy_skill_id": 1808,
+                "extra_description": null,
+                "params": [
+                    "火木半減",
+                    5,
+                    50,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null
+                ],
+                "shield_percent": 50,
+                "type": 72
+            },
+            "condition": {
+                "_ai": 100,
+                "_rnd": 0,
+                "condition_attributes": null,
+                "enemies_remaining": null,
+                "forced_one_time": null,
+                "hp_threshold": null,
+                "on_death": null,
+                "one_time": null
+            },
+            "enemy_skill_id": 1808,
+            "extra_description": null
+        }
+    ],
+    "has_animation": false,
+    "has_hqimage": false,
+    "jp_card": {
+        "active_skill": {
+            "from_1": 2,
+            "levels": 7,
+            "name": "防御態勢・火",
+            "raw_description": "木ドロップを回復ドロップに変化。",
+            "skill_id": 160,
+            "skill_type": 9,
+            "to_1": 5,
+            "turn_max": 11,
+            "turn_min": 5
+        },
+        "active_skill_id": 160,
+        "card": {
+            "active_skill_id": 160,
+            "ancestor_id": 290,
+            "atk_scale": 1.0,
+            "attr_id": 0,
+            "awakenings": [
+                6,
+                6,
+                10,
+                10,
+                20
+            ],
+            "base_id": 288,
+            "collab_id": 0,
+            "cost": 30,
+            "enemy_atk_max": 26610,
+            "enemy_atk_min": 887,
+            "enemy_atk_scale": 1.0,
+            "enemy_coins_per_level": 720,
+            "enemy_def_max": 720,
+            "enemy_def_min": 72,
+            "enemy_def_scale": 1.0,
+            "enemy_hp_max": 3755400,
+            "enemy_hp_min": 125180,
+            "enemy_hp_scale": 1.0,
+            "enemy_max_level": 10,
+            "enemy_skill_counter_increment": 1,
+            "enemy_skill_max_counter": 1,
+            "enemy_skill_refs": [
+                {
+                    "enemy_ai": 0,
+                    "enemy_rnd": 0,
+                    "enemy_skill_id": 318
+                },
+                {
+                    "enemy_ai": 1,
+                    "enemy_rnd": 6,
+                    "enemy_skill_id": 10
+                },
+                {
+                    "enemy_ai": 1,
+                    "enemy_rnd": 0,
+                    "enemy_skill_id": 12
+                },
+                {
+                    "enemy_ai": 100,
+                    "enemy_rnd": 0,
+                    "enemy_skill_id": 1812
+                },
+                {
+                    "enemy_ai": 0,
+                    "enemy_rnd": 0,
+                    "enemy_skill_id": 26
+                },
+                {
+                    "enemy_ai": 100,
+                    "enemy_rnd": 0,
+                    "enemy_skill_id": 1811
+                },
+                {
+                    "enemy_ai": 100,
+                    "enemy_rnd": 0,
+                    "enemy_skill_id": 1810
+                },
+                {
+                    "enemy_ai": 100,
+                    "enemy_rnd": 0,
+                    "enemy_skill_id": 1809
+                },
+                {
+                    "enemy_ai": 60,
+                    "enemy_rnd": 0,
+                    "enemy_skill_id": 1812
+                },
+                {
+                    "enemy_ai": 0,
+                    "enemy_rnd": 0,
+                    "enemy_skill_id": 26
+                },
+                {
+                    "enemy_ai": 100,
+                    "enemy_rnd": 0,
+                    "enemy_skill_id": 1808
+                }
+            ],
+            "enemy_turns": 1,
+            "enemy_turns_alt": 0,
+            "enemy_xp_per_level": 543,
+            "evo_mat_id_1": 227,
+            "evo_mat_id_2": 227,
+            "evo_mat_id_3": 246,
+            "evo_mat_id_4": 248,
+            "evo_mat_id_5": 251,
+            "feed_xp_per_level": 1350,
+            "furigana": "",
+            "group_id": 100,
+            "hp_scale": 1.0,
+            "inheritable": true,
+            "is_collab": false,
+            "is_ult": true,
+            "latent_on_feed": 0,
+            "leader_skill_id": 302,
+            "limit_mult": 0,
+            "max_atk": 1190,
+            "max_hp": 2196,
+            "max_level": 99,
+            "max_rcv": 454,
+            "min_atk": 336,
+            "min_hp": 580,
+            "min_rcv": 162,
+            "monster_no": 757,
+            "name": "灼爪龍・フレアドラール",
+            "orb_skin_id": 0,
+            "other_fields": [
+                ""
+            ],
+            "random_flags": 3,
+            "rarity": 6,
+            "rcv_scale": 1.0,
+            "released_status": true,
+            "sell_gold_per_level": 570,
+            "sell_mp": 1,
+            "sub_attr_id": 2,
+            "super_awakenings": [],
+            "type_1_id": 4,
+            "type_2_id": 6,
+            "type_3_id": -1,
+            "un_evo_mat_1": 155,
+            "un_evo_mat_2": 156,
+            "un_evo_mat_3": 157,
+            "un_evo_mat_4": 158,
+            "un_evo_mat_5": 159,
+            "unknown_009": 2,
+            "unknown_055": 0,
+            "unknown_056": 0,
+            "use_new_ai": false,
+            "voice_id": 0,
+            "xp_max": 3000000,
+            "xp_scale": 2.5
+        },
+        "critical_failures": [],
+        "enemy_skills": [
+            {
+                "behavior": {
+                    "_name": "※先制コマンドLV1",
+                    "enemy_skill_id": 318,
+                    "extra_description": null,
+                    "level": 1,
+                    "params": [
+                        null,
+                        1,
+                        100,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null
+                    ],
+                    "type": 49
+                },
+                "condition": null,
+                "enemy_skill_id": 318,
+                "extra_description": null
+            },
+            {
+                "behavior": {
+                    "_name": "※ai フラグが立っていたら rnd の数値に分岐",
+                    "branch_condition": "flag",
+                    "branch_value": 1,
+                    "compare": "&",
+                    "enemy_skill_id": 10,
+                    "extra_description": null,
+                    "params": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        50,
+                        4,
+                        null,
+                        null,
+                        null
+                    ],
+                    "target_round": 6,
+                    "type": 43
+                },
+                "condition": null,
+                "enemy_skill_id": 10,
+                "extra_description": null
+            },
+            {
+                "behavior": {
+                    "_name": "※フラグを ai にセット",
+                    "enemy_skill_id": 12,
+                    "extra_description": null,
+                    "flag": 1,
+                    "flag_bin": "0b1",
+                    "operation": "SET",
+                    "params": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        4,
+                        null,
+                        null,
+                        null
+                    ],
+                    "type": 22
+                },
+                "condition": null,
+                "enemy_skill_id": 12,
+                "extra_description": null
+            },
+            {
+                "behavior": {
+                    "_name": "突進",
+                    "attack": null,
+                    "enemy_skill_id": 1812,
+                    "extra_description": null,
+                    "params": [
+                        null,
+                        80,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null
+                    ],
+                    "percent": 80,
+                    "type": 50
+                },
+                "condition": {
+                    "_ai": 100,
+                    "_rnd": 0,
+                    "condition_attributes": null,
+                    "enemies_remaining": null,
+                    "forced_one_time": null,
+                    "hp_threshold": null,
+                    "on_death": null,
+                    "one_time": null
+                },
+                "enemy_skill_id": 1812,
+                "extra_description": null
+            },
+            {
+                "behavior": {
+                    "_name": "※パース終了",
+                    "enemy_skill_id": 26,
+                    "extra_description": null,
+                    "params": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        4,
+                        null,
+                        null,
+                        null
+                    ],
+                    "type": 36
+                },
+                "condition": null,
+                "enemy_skill_id": 26,
+                "extra_description": null
+            },
+            {
+                "behavior": {
+                    "_name": "ユニオンクロー",
+                    "attack": {
+                        "atk_multiplier": 150,
+                        "max_hits": 1,
+                        "min_hits": 1
+                    },
+                    "attributes": [
+                        0,
+                        2
+                    ],
+                    "desc_arr": [
+                        "1st, 2nd column to Fire orbs",
+                        "5th, 6th column to Wood orbs"
+                    ],
+                    "enemy_skill_id": 1811,
+                    "extra_description": null,
+                    "params": [
+                        null,
+                        3,
+                        1,
+                        48,
+                        4,
+                        null,
+                        null,
+                        150,
+                        null,
+                        null,
+                        null,
+                        30,
+                        null,
+                        1,
+                        null,
+                        null
+                    ],
+                    "position_type": "column",
+                    "positions": [
+                        1,
+                        2,
+                        5,
+                        6
+                    ],
+                    "type": 77
+                },
+                "condition": {
+                    "_ai": 100,
+                    "_rnd": 0,
+                    "condition_attributes": null,
+                    "enemies_remaining": null,
+                    "forced_one_time": null,
+                    "hp_threshold": 30,
+                    "on_death": null,
+                    "one_time": 1
+                },
+                "enemy_skill_id": 1811,
+                "extra_description": null
+            },
+            {
+                "behavior": {
+                    "_name": "ストームクロー",
+                    "attack": {
+                        "atk_multiplier": 100,
+                        "max_hits": 1,
+                        "min_hits": 1
+                    },
+                    "attributes": [
+                        2,
+                        2
+                    ],
+                    "desc_arr": [
+                        "2nd column to Wood orbs",
+                        "5th column to Wood orbs"
+                    ],
+                    "enemy_skill_id": 1810,
+                    "extra_description": null,
+                    "params": [
+                        null,
+                        2,
+                        4,
+                        16,
+                        4,
+                        null,
+                        null,
+                        100,
+                        null,
+                        null,
+                        null,
+                        50,
+                        null,
+                        1,
+                        null,
+                        null
+                    ],
+                    "position_type": "column",
+                    "positions": [
+                        2,
+                        5
+                    ],
+                    "type": 77
+                },
+                "condition": {
+                    "_ai": 100,
+                    "_rnd": 0,
+                    "condition_attributes": null,
+                    "enemies_remaining": null,
+                    "forced_one_time": null,
+                    "hp_threshold": 50,
+                    "on_death": null,
+                    "one_time": 1
+                },
+                "enemy_skill_id": 1810,
+                "extra_description": null
+            },
+            {
+                "behavior": {
+                    "_name": "フレアクロー",
+                    "attack": {
+                        "atk_multiplier": 100,
+                        "max_hits": 1,
+                        "min_hits": 1
+                    },
+                    "attributes": [
+                        0,
+                        0
+                    ],
+                    "desc_arr": [
+                        "2nd column to Fire orbs",
+                        "5th column to Fire orbs"
+                    ],
+                    "enemy_skill_id": 1809,
+                    "extra_description": null,
+                    "params": [
+                        null,
+                        2,
+                        1,
+                        16,
+                        1,
+                        null,
+                        null,
+                        100,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        1,
+                        null,
+                        null
+                    ],
+                    "position_type": "column",
+                    "positions": [
+                        2,
+                        5
+                    ],
+                    "type": 77
+                },
+                "condition": {
+                    "_ai": 100,
+                    "_rnd": 0,
+                    "condition_attributes": null,
+                    "enemies_remaining": null,
+                    "forced_one_time": null,
+                    "hp_threshold": null,
+                    "on_death": null,
+                    "one_time": 1
+                },
+                "enemy_skill_id": 1809,
+                "extra_description": null
+            },
+            {
+                "behavior": {
+                    "_name": "突進",
+                    "attack": null,
+                    "enemy_skill_id": 1812,
+                    "extra_description": null,
+                    "params": [
+                        null,
+                        80,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null
+                    ],
+                    "percent": 80,
+                    "type": 50
+                },
+                "condition": {
+                    "_ai": 60,
+                    "_rnd": 0,
+                    "condition_attributes": null,
+                    "enemies_remaining": null,
+                    "forced_one_time": null,
+                    "hp_threshold": null,
+                    "on_death": null,
+                    "one_time": null
+                },
+                "enemy_skill_id": 1812,
+                "extra_description": null
+            },
+            {
+                "behavior": {
+                    "_name": "※パース終了",
+                    "enemy_skill_id": 26,
+                    "extra_description": null,
+                    "params": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        4,
+                        null,
+                        null,
+                        null
+                    ],
+                    "type": 36
+                },
+                "condition": null,
+                "enemy_skill_id": 26,
+                "extra_description": null
+            },
+            {
+                "behavior": {
+                    "_name": "炎樹の防壁",
+                    "attributes": [
+                        0,
+                        2
+                    ],
+                    "enemy_skill_id": 1808,
+                    "extra_description": null,
+                    "params": [
+                        "火木半減",
+                        5,
+                        50,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null
+                    ],
+                    "shield_percent": 50,
+                    "type": 72
+                },
+                "condition": {
+                    "_ai": 100,
+                    "_rnd": 0,
+                    "condition_attributes": null,
+                    "enemies_remaining": null,
+                    "forced_one_time": null,
+                    "hp_threshold": null,
+                    "on_death": null,
+                    "one_time": null
+                },
+                "enemy_skill_id": 1808,
+                "extra_description": null
+            }
+        ],
+        "leader_skill": {
+            "_atk": 1,
+            "_hp": 1,
+            "_rcv": 1,
+            "_shield": 0.5,
+            "name": "炎樹の防壁",
+            "raw_description": "火、木属性の敵から受けるダメージを半減。",
+            "reduction_attributes": [
+                0,
+                2
+            ],
+            "skill_id": 302,
+            "skill_type": 36
+        },
+        "leader_skill_id": 302,
+        "monster_id": 757,
+        "monster_no": 757,
+        "server": "Server.jp"
+    },
+    "kr_card": {
+        "active_skill": {
+            "from_1": 2,
+            "levels": 7,
+            "name": "방어태세 - 불",
+            "raw_description": "나무드롭을 회복드롭으로 변화",
+            "skill_id": 160,
+            "skill_type": 9,
+            "to_1": 5,
+            "turn_max": 11,
+            "turn_min": 5
+        },
+        "active_skill_id": 160,
+        "card": {
+            "active_skill_id": 160,
+            "ancestor_id": 290,
+            "atk_scale": 1.0,
+            "attr_id": 0,
+            "awakenings": [
+                6,
+                6,
+                10,
+                10,
+                20
+            ],
+            "base_id": 288,
+            "collab_id": 0,
+            "cost": 30,
+            "enemy_atk_max": 26610,
+            "enemy_atk_min": 887,
+            "enemy_atk_scale": 1.0,
+            "enemy_coins_per_level": 720,
+            "enemy_def_max": 720,
+            "enemy_def_min": 72,
+            "enemy_def_scale": 1.0,
+            "enemy_hp_max": 3755400,
+            "enemy_hp_min": 125180,
+            "enemy_hp_scale": 1.0,
+            "enemy_max_level": 10,
+            "enemy_skill_counter_increment": 1,
+            "enemy_skill_max_counter": 1,
+            "enemy_skill_refs": [
+                {
+                    "enemy_ai": 0,
+                    "enemy_rnd": 0,
+                    "enemy_skill_id": 318
+                },
+                {
+                    "enemy_ai": 1,
+                    "enemy_rnd": 6,
+                    "enemy_skill_id": 10
+                },
+                {
+                    "enemy_ai": 1,
+                    "enemy_rnd": 0,
+                    "enemy_skill_id": 12
+                },
+                {
+                    "enemy_ai": 100,
+                    "enemy_rnd": 0,
+                    "enemy_skill_id": 1812
+                },
+                {
+                    "enemy_ai": 0,
+                    "enemy_rnd": 0,
+                    "enemy_skill_id": 26
+                },
+                {
+                    "enemy_ai": 100,
+                    "enemy_rnd": 0,
+                    "enemy_skill_id": 1811
+                },
+                {
+                    "enemy_ai": 100,
+                    "enemy_rnd": 0,
+                    "enemy_skill_id": 1810
+                },
+                {
+                    "enemy_ai": 100,
+                    "enemy_rnd": 0,
+                    "enemy_skill_id": 1809
+                },
+                {
+                    "enemy_ai": 60,
+                    "enemy_rnd": 0,
+                    "enemy_skill_id": 1812
+                },
+                {
+                    "enemy_ai": 0,
+                    "enemy_rnd": 0,
+                    "enemy_skill_id": 26
+                },
+                {
+                    "enemy_ai": 100,
+                    "enemy_rnd": 0,
+                    "enemy_skill_id": 1808
+                }
+            ],
+            "enemy_turns": 1,
+            "enemy_turns_alt": 0,
+            "enemy_xp_per_level": 543,
+            "evo_mat_id_1": 227,
+            "evo_mat_id_2": 227,
+            "evo_mat_id_3": 246,
+            "evo_mat_id_4": 248,
+            "evo_mat_id_5": 251,
+            "feed_xp_per_level": 1350,
+            "furigana": "",
+            "group_id": 100,
+            "hp_scale": 1.0,
+            "inheritable": true,
+            "is_collab": false,
+            "is_ult": true,
+            "latent_on_feed": 0,
+            "leader_skill_id": 302,
+            "limit_mult": 0,
+            "max_atk": 1190,
+            "max_hp": 2196,
+            "max_level": 99,
+            "max_rcv": 454,
+            "min_atk": 336,
+            "min_hp": 580,
+            "min_rcv": 162,
+            "monster_no": 757,
+            "name": "작조용 플레어 드랄",
+            "orb_skin_id": 0,
+            "other_fields": [
+                ""
+            ],
+            "random_flags": 3,
+            "rarity": 6,
+            "rcv_scale": 1.0,
+            "released_status": true,
+            "sell_gold_per_level": 570,
+            "sell_mp": 1,
+            "sub_attr_id": 2,
+            "super_awakenings": [],
+            "type_1_id": 4,
+            "type_2_id": 6,
+            "type_3_id": -1,
+            "un_evo_mat_1": 155,
+            "un_evo_mat_2": 156,
+            "un_evo_mat_3": 157,
+            "un_evo_mat_4": 158,
+            "un_evo_mat_5": 159,
+            "unknown_009": 2,
+            "unknown_055": 0,
+            "unknown_056": 0,
+            "use_new_ai": false,
+            "voice_id": 0,
+            "xp_max": 3000000,
+            "xp_scale": 2.5
+        },
+        "critical_failures": [],
+        "enemy_skills": [
+            {
+                "behavior": {
+                    "_name": "선제커맨드Lv1",
+                    "enemy_skill_id": 318,
+                    "extra_description": null,
+                    "level": 1,
+                    "params": [
+                        null,
+                        1,
+                        100,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null
+                    ],
+                    "type": 49
+                },
+                "condition": null,
+                "enemy_skill_id": 318,
+                "extra_description": null
+            },
+            {
+                "behavior": {
+                    "_name": "※ai 일 경우 rnd수치로 분기",
+                    "branch_condition": "flag",
+                    "branch_value": 1,
+                    "compare": "&",
+                    "enemy_skill_id": 10,
+                    "extra_description": null,
+                    "params": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        50,
+                        4,
+                        null,
+                        null,
+                        null
+                    ],
+                    "target_round": 6,
+                    "type": 43
+                },
+                "condition": null,
+                "enemy_skill_id": 10,
+                "extra_description": null
+            },
+            {
+                "behavior": {
+                    "_name": "방해 드롭",
+                    "enemy_skill_id": 12,
+                    "extra_description": null,
+                    "flag": 1,
+                    "flag_bin": "0b1",
+                    "operation": "SET",
+                    "params": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        4,
+                        null,
+                        null,
+                        null
+                    ],
+                    "type": 22
+                },
+                "condition": null,
+                "enemy_skill_id": 12,
+                "extra_description": null
+            },
+            {
+                "behavior": {
+                    "_name": "돌진",
+                    "attack": null,
+                    "enemy_skill_id": 1812,
+                    "extra_description": null,
+                    "params": [
+                        null,
+                        80,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null
+                    ],
+                    "percent": 80,
+                    "type": 50
+                },
+                "condition": {
+                    "_ai": 100,
+                    "_rnd": 0,
+                    "condition_attributes": null,
+                    "enemies_remaining": null,
+                    "forced_one_time": null,
+                    "hp_threshold": null,
+                    "on_death": null,
+                    "one_time": null
+                },
+                "enemy_skill_id": 1812,
+                "extra_description": null
+            },
+            {
+                "behavior": {
+                    "_name": "테스트예비",
+                    "enemy_skill_id": 26,
+                    "extra_description": null,
+                    "params": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        4,
+                        null,
+                        null,
+                        null
+                    ],
+                    "type": 36
+                },
+                "condition": null,
+                "enemy_skill_id": 26,
+                "extra_description": null
+            },
+            {
+                "behavior": {
+                    "_name": "유니온 클로",
+                    "attack": {
+                        "atk_multiplier": 150,
+                        "max_hits": 1,
+                        "min_hits": 1
+                    },
+                    "attributes": [
+                        0,
+                        2
+                    ],
+                    "desc_arr": [
+                        "1st, 2nd column to Fire orbs",
+                        "5th, 6th column to Wood orbs"
+                    ],
+                    "enemy_skill_id": 1811,
+                    "extra_description": null,
+                    "params": [
+                        null,
+                        3,
+                        1,
+                        48,
+                        4,
+                        null,
+                        null,
+                        150,
+                        null,
+                        null,
+                        null,
+                        30,
+                        null,
+                        1,
+                        null,
+                        null
+                    ],
+                    "position_type": "column",
+                    "positions": [
+                        1,
+                        2,
+                        5,
+                        6
+                    ],
+                    "type": 77
+                },
+                "condition": {
+                    "_ai": 100,
+                    "_rnd": 0,
+                    "condition_attributes": null,
+                    "enemies_remaining": null,
+                    "forced_one_time": null,
+                    "hp_threshold": 30,
+                    "on_death": null,
+                    "one_time": 1
+                },
+                "enemy_skill_id": 1811,
+                "extra_description": null
+            },
+            {
+                "behavior": {
+                    "_name": "스톰 클로",
+                    "attack": {
+                        "atk_multiplier": 100,
+                        "max_hits": 1,
+                        "min_hits": 1
+                    },
+                    "attributes": [
+                        2,
+                        2
+                    ],
+                    "desc_arr": [
+                        "2nd column to Wood orbs",
+                        "5th column to Wood orbs"
+                    ],
+                    "enemy_skill_id": 1810,
+                    "extra_description": null,
+                    "params": [
+                        null,
+                        2,
+                        4,
+                        16,
+                        4,
+                        null,
+                        null,
+                        100,
+                        null,
+                        null,
+                        null,
+                        50,
+                        null,
+                        1,
+                        null,
+                        null
+                    ],
+                    "position_type": "column",
+                    "positions": [
+                        2,
+                        5
+                    ],
+                    "type": 77
+                },
+                "condition": {
+                    "_ai": 100,
+                    "_rnd": 0,
+                    "condition_attributes": null,
+                    "enemies_remaining": null,
+                    "forced_one_time": null,
+                    "hp_threshold": 50,
+                    "on_death": null,
+                    "one_time": 1
+                },
+                "enemy_skill_id": 1810,
+                "extra_description": null
+            },
+            {
+                "behavior": {
+                    "_name": "플레어 클로",
+                    "attack": {
+                        "atk_multiplier": 100,
+                        "max_hits": 1,
+                        "min_hits": 1
+                    },
+                    "attributes": [
+                        0,
+                        0
+                    ],
+                    "desc_arr": [
+                        "2nd column to Fire orbs",
+                        "5th column to Fire orbs"
+                    ],
+                    "enemy_skill_id": 1809,
+                    "extra_description": null,
+                    "params": [
+                        null,
+                        2,
+                        1,
+                        16,
+                        1,
+                        null,
+                        null,
+                        100,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        1,
+                        null,
+                        null
+                    ],
+                    "position_type": "column",
+                    "positions": [
+                        2,
+                        5
+                    ],
+                    "type": 77
+                },
+                "condition": {
+                    "_ai": 100,
+                    "_rnd": 0,
+                    "condition_attributes": null,
+                    "enemies_remaining": null,
+                    "forced_one_time": null,
+                    "hp_threshold": null,
+                    "on_death": null,
+                    "one_time": 1
+                },
+                "enemy_skill_id": 1809,
+                "extra_description": null
+            },
+            {
+                "behavior": {
+                    "_name": "돌진",
+                    "attack": null,
+                    "enemy_skill_id": 1812,
+                    "extra_description": null,
+                    "params": [
+                        null,
+                        80,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null
+                    ],
+                    "percent": 80,
+                    "type": 50
+                },
+                "condition": {
+                    "_ai": 60,
+                    "_rnd": 0,
+                    "condition_attributes": null,
+                    "enemies_remaining": null,
+                    "forced_one_time": null,
+                    "hp_threshold": null,
+                    "on_death": null,
+                    "one_time": null
+                },
+                "enemy_skill_id": 1812,
+                "extra_description": null
+            },
+            {
+                "behavior": {
+                    "_name": "테스트예비",
+                    "enemy_skill_id": 26,
+                    "extra_description": null,
+                    "params": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        4,
+                        null,
+                        null,
+                        null
+                    ],
+                    "type": 36
+                },
+                "condition": null,
+                "enemy_skill_id": 26,
+                "extra_description": null
+            },
+            {
+                "behavior": {
+                    "_name": "염수의 방벽",
+                    "attributes": [
+                        0,
+                        2
+                    ],
+                    "enemy_skill_id": 1808,
+                    "extra_description": null,
+                    "params": [
+                        "불목반감",
+                        5,
+                        50,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null
+                    ],
+                    "shield_percent": 50,
+                    "type": 72
+                },
+                "condition": {
+                    "_ai": 100,
+                    "_rnd": 0,
+                    "condition_attributes": null,
+                    "enemies_remaining": null,
+                    "forced_one_time": null,
+                    "hp_threshold": null,
+                    "on_death": null,
+                    "one_time": null
+                },
+                "enemy_skill_id": 1808,
+                "extra_description": null
+            }
+        ],
+        "leader_skill": {
+            "_atk": 1,
+            "_hp": 1,
+            "_rcv": 1,
+            "_shield": 0.5,
+            "name": "불과 나무의 방어벽",
+            "raw_description": "불속성과 나무속성의 적에게서 받는  대미지가 반감",
+            "reduction_attributes": [
+                0,
+                2
+            ],
+            "skill_id": 302,
+            "skill_type": 36
+        },
+        "leader_skill_id": 302,
+        "monster_id": 757,
+        "monster_no": 757,
+        "server": "Server.kr"
+    },
+    "leader_skill": {
+        "en_text": "Reduce damage taken from fire, wood att. by 50%",
+        "jp_skill": {
+            "_atk": 1,
+            "_hp": 1,
+            "_rcv": 1,
+            "_shield": 0.5,
+            "name": "炎樹の防壁",
+            "raw_description": "火、木属性の敵から受けるダメージを半減。",
+            "reduction_attributes": [
+                0,
+                2
+            ],
+            "skill_id": 302,
+            "skill_type": 36
+        },
+        "kr_skill": {
+            "_atk": 1,
+            "_hp": 1,
+            "_rcv": 1,
+            "_shield": 0.5,
+            "name": "불과 나무의 방어벽",
+            "raw_description": "불속성과 나무속성의 적에게서 받는  대미지가 반감",
+            "reduction_attributes": [
+                0,
+                2
+            ],
+            "skill_id": 302,
+            "skill_type": 36
+        },
+        "na_skill": {
+            "_atk": 1,
+            "_hp": 1,
+            "_rcv": 1,
+            "_shield": 0.5,
+            "name": "Blazing Forest Barrier",
+            "raw_description": "Halves Fire & Wood Att. damage",
+            "reduction_attributes": [
+                0,
+                2
+            ],
+            "skill_id": 302,
+            "skill_type": 36
+        },
+        "skill_id": 302,
+        "skill_type_tags": [
+            "LsCondition.REDUCE_DAMAGE"
+        ]
+    },
+    "monster_id": 757,
+    "na_card": {
+        "active_skill": {
+            "from_1": 2,
+            "levels": 7,
+            "name": "Guard Stance - Fire",
+            "raw_description": "Changes Wood Orbs to Heal Orbs",
+            "skill_id": 160,
+            "skill_type": 9,
+            "to_1": 5,
+            "turn_max": 11,
+            "turn_min": 5
+        },
+        "active_skill_id": 160,
+        "card": {
+            "active_skill_id": 160,
+            "ancestor_id": 290,
+            "atk_scale": 1.0,
+            "attr_id": 0,
+            "awakenings": [
+                6,
+                6,
+                10,
+                10,
+                20
+            ],
+            "base_id": 288,
+            "collab_id": 0,
+            "cost": 30,
+            "enemy_atk_max": 26610,
+            "enemy_atk_min": 887,
+            "enemy_atk_scale": 1.0,
+            "enemy_coins_per_level": 720,
+            "enemy_def_max": 720,
+            "enemy_def_min": 72,
+            "enemy_def_scale": 1.0,
+            "enemy_hp_max": 3755400,
+            "enemy_hp_min": 125180,
+            "enemy_hp_scale": 1.0,
+            "enemy_max_level": 10,
+            "enemy_skill_counter_increment": 1,
+            "enemy_skill_max_counter": 1,
+            "enemy_skill_refs": [
+                {
+                    "enemy_ai": 0,
+                    "enemy_rnd": 0,
+                    "enemy_skill_id": 318
+                },
+                {
+                    "enemy_ai": 1,
+                    "enemy_rnd": 6,
+                    "enemy_skill_id": 10
+                },
+                {
+                    "enemy_ai": 1,
+                    "enemy_rnd": 0,
+                    "enemy_skill_id": 12
+                },
+                {
+                    "enemy_ai": 100,
+                    "enemy_rnd": 0,
+                    "enemy_skill_id": 1812
+                },
+                {
+                    "enemy_ai": 0,
+                    "enemy_rnd": 0,
+                    "enemy_skill_id": 26
+                },
+                {
+                    "enemy_ai": 100,
+                    "enemy_rnd": 0,
+                    "enemy_skill_id": 1811
+                },
+                {
+                    "enemy_ai": 100,
+                    "enemy_rnd": 0,
+                    "enemy_skill_id": 1810
+                },
+                {
+                    "enemy_ai": 100,
+                    "enemy_rnd": 0,
+                    "enemy_skill_id": 1809
+                },
+                {
+                    "enemy_ai": 60,
+                    "enemy_rnd": 0,
+                    "enemy_skill_id": 1812
+                },
+                {
+                    "enemy_ai": 0,
+                    "enemy_rnd": 0,
+                    "enemy_skill_id": 26
+                },
+                {
+                    "enemy_ai": 100,
+                    "enemy_rnd": 0,
+                    "enemy_skill_id": 1808
+                }
+            ],
+            "enemy_turns": 1,
+            "enemy_turns_alt": 0,
+            "enemy_xp_per_level": 543,
+            "evo_mat_id_1": 227,
+            "evo_mat_id_2": 227,
+            "evo_mat_id_3": 246,
+            "evo_mat_id_4": 248,
+            "evo_mat_id_5": 251,
+            "feed_xp_per_level": 1350,
+            "furigana": "",
+            "group_id": 100,
+            "hp_scale": 1.0,
+            "inheritable": true,
+            "is_collab": false,
+            "is_ult": true,
+            "latent_on_feed": 0,
+            "leader_skill_id": 302,
+            "limit_mult": 0,
+            "max_atk": 1190,
+            "max_hp": 2196,
+            "max_level": 99,
+            "max_rcv": 454,
+            "min_atk": 336,
+            "min_hp": 580,
+            "min_rcv": 162,
+            "monster_no": 757,
+            "name": "Scorched Claw Dragon, Flare Drall",
+            "orb_skin_id": 0,
+            "other_fields": [
+                ""
+            ],
+            "random_flags": 3,
+            "rarity": 6,
+            "rcv_scale": 1.0,
+            "released_status": true,
+            "sell_gold_per_level": 570,
+            "sell_mp": 1,
+            "sub_attr_id": 2,
+            "super_awakenings": [],
+            "type_1_id": 4,
+            "type_2_id": 6,
+            "type_3_id": -1,
+            "un_evo_mat_1": 155,
+            "un_evo_mat_2": 156,
+            "un_evo_mat_3": 157,
+            "un_evo_mat_4": 158,
+            "un_evo_mat_5": 159,
+            "unknown_009": 2,
+            "unknown_055": 0,
+            "unknown_056": 0,
+            "use_new_ai": false,
+            "voice_id": 0,
+            "xp_max": 3000000,
+            "xp_scale": 2.5
+        },
+        "critical_failures": [],
+        "enemy_skills": [
+            {
+                "behavior": {
+                    "_name": "*Preemptive Command LV1",
+                    "enemy_skill_id": 318,
+                    "extra_description": null,
+                    "level": 1,
+                    "params": [
+                        null,
+                        1,
+                        100,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null
+                    ],
+                    "type": 49
+                },
+                "condition": null,
+                "enemy_skill_id": 318,
+                "extra_description": null
+            },
+            {
+                "behavior": {
+                    "_name": "ERROR10",
+                    "branch_condition": "flag",
+                    "branch_value": 1,
+                    "compare": "&",
+                    "enemy_skill_id": 10,
+                    "extra_description": null,
+                    "params": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        50,
+                        4,
+                        null,
+                        null,
+                        null
+                    ],
+                    "target_round": 6,
+                    "type": 43
+                },
+                "condition": null,
+                "enemy_skill_id": 10,
+                "extra_description": null
+            },
+            {
+                "behavior": {
+                    "_name": "ERROR12",
+                    "enemy_skill_id": 12,
+                    "extra_description": null,
+                    "flag": 1,
+                    "flag_bin": "0b1",
+                    "operation": "SET",
+                    "params": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        4,
+                        null,
+                        null,
+                        null
+                    ],
+                    "type": 22
+                },
+                "condition": null,
+                "enemy_skill_id": 12,
+                "extra_description": null
+            },
+            {
+                "behavior": {
+                    "_name": "Dash",
+                    "attack": null,
+                    "enemy_skill_id": 1812,
+                    "extra_description": null,
+                    "params": [
+                        null,
+                        80,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null
+                    ],
+                    "percent": 80,
+                    "type": 50
+                },
+                "condition": {
+                    "_ai": 100,
+                    "_rnd": 0,
+                    "condition_attributes": null,
+                    "enemies_remaining": null,
+                    "forced_one_time": null,
+                    "hp_threshold": null,
+                    "on_death": null,
+                    "one_time": null
+                },
+                "enemy_skill_id": 1812,
+                "extra_description": null
+            },
+            {
+                "behavior": {
+                    "_name": "ERROR26",
+                    "enemy_skill_id": 26,
+                    "extra_description": null,
+                    "params": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        4,
+                        null,
+                        null,
+                        null
+                    ],
+                    "type": 36
+                },
+                "condition": null,
+                "enemy_skill_id": 26,
+                "extra_description": null
+            },
+            {
+                "behavior": {
+                    "_name": "Union Claw",
+                    "attack": {
+                        "atk_multiplier": 150,
+                        "max_hits": 1,
+                        "min_hits": 1
+                    },
+                    "attributes": [
+                        0,
+                        2
+                    ],
+                    "desc_arr": [
+                        "1st, 2nd column to Fire orbs",
+                        "5th, 6th column to Wood orbs"
+                    ],
+                    "enemy_skill_id": 1811,
+                    "extra_description": null,
+                    "params": [
+                        null,
+                        3,
+                        1,
+                        48,
+                        4,
+                        null,
+                        null,
+                        150,
+                        null,
+                        null,
+                        null,
+                        30,
+                        null,
+                        1,
+                        null,
+                        null
+                    ],
+                    "position_type": "column",
+                    "positions": [
+                        1,
+                        2,
+                        5,
+                        6
+                    ],
+                    "type": 77
+                },
+                "condition": {
+                    "_ai": 100,
+                    "_rnd": 0,
+                    "condition_attributes": null,
+                    "enemies_remaining": null,
+                    "forced_one_time": null,
+                    "hp_threshold": 30,
+                    "on_death": null,
+                    "one_time": 1
+                },
+                "enemy_skill_id": 1811,
+                "extra_description": null
+            },
+            {
+                "behavior": {
+                    "_name": "Storm Claw",
+                    "attack": {
+                        "atk_multiplier": 100,
+                        "max_hits": 1,
+                        "min_hits": 1
+                    },
+                    "attributes": [
+                        2,
+                        2
+                    ],
+                    "desc_arr": [
+                        "2nd column to Wood orbs",
+                        "5th column to Wood orbs"
+                    ],
+                    "enemy_skill_id": 1810,
+                    "extra_description": null,
+                    "params": [
+                        null,
+                        2,
+                        4,
+                        16,
+                        4,
+                        null,
+                        null,
+                        100,
+                        null,
+                        null,
+                        null,
+                        50,
+                        null,
+                        1,
+                        null,
+                        null
+                    ],
+                    "position_type": "column",
+                    "positions": [
+                        2,
+                        5
+                    ],
+                    "type": 77
+                },
+                "condition": {
+                    "_ai": 100,
+                    "_rnd": 0,
+                    "condition_attributes": null,
+                    "enemies_remaining": null,
+                    "forced_one_time": null,
+                    "hp_threshold": 50,
+                    "on_death": null,
+                    "one_time": 1
+                },
+                "enemy_skill_id": 1810,
+                "extra_description": null
+            },
+            {
+                "behavior": {
+                    "_name": "Flare Claw",
+                    "attack": {
+                        "atk_multiplier": 100,
+                        "max_hits": 1,
+                        "min_hits": 1
+                    },
+                    "attributes": [
+                        0,
+                        0
+                    ],
+                    "desc_arr": [
+                        "2nd column to Fire orbs",
+                        "5th column to Fire orbs"
+                    ],
+                    "enemy_skill_id": 1809,
+                    "extra_description": null,
+                    "params": [
+                        null,
+                        2,
+                        1,
+                        16,
+                        1,
+                        null,
+                        null,
+                        100,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        1,
+                        null,
+                        null
+                    ],
+                    "position_type": "column",
+                    "positions": [
+                        2,
+                        5
+                    ],
+                    "type": 77
+                },
+                "condition": {
+                    "_ai": 100,
+                    "_rnd": 0,
+                    "condition_attributes": null,
+                    "enemies_remaining": null,
+                    "forced_one_time": null,
+                    "hp_threshold": null,
+                    "on_death": null,
+                    "one_time": 1
+                },
+                "enemy_skill_id": 1809,
+                "extra_description": null
+            },
+            {
+                "behavior": {
+                    "_name": "Dash",
+                    "attack": null,
+                    "enemy_skill_id": 1812,
+                    "extra_description": null,
+                    "params": [
+                        null,
+                        80,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null
+                    ],
+                    "percent": 80,
+                    "type": 50
+                },
+                "condition": {
+                    "_ai": 60,
+                    "_rnd": 0,
+                    "condition_attributes": null,
+                    "enemies_remaining": null,
+                    "forced_one_time": null,
+                    "hp_threshold": null,
+                    "on_death": null,
+                    "one_time": null
+                },
+                "enemy_skill_id": 1812,
+                "extra_description": null
+            },
+            {
+                "behavior": {
+                    "_name": "ERROR26",
+                    "enemy_skill_id": 26,
+                    "extra_description": null,
+                    "params": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        4,
+                        null,
+                        null,
+                        null
+                    ],
+                    "type": 36
+                },
+                "condition": null,
+                "enemy_skill_id": 26,
+                "extra_description": null
+            },
+            {
+                "behavior": {
+                    "_name": "Flame/Tree Barrier",
+                    "attributes": [
+                        0,
+                        2
+                    ],
+                    "enemy_skill_id": 1808,
+                    "extra_description": null,
+                    "params": [
+                        "Halves Fire & Wood Att. damage",
+                        5,
+                        50,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null
+                    ],
+                    "shield_percent": 50,
+                    "type": 72
+                },
+                "condition": {
+                    "_ai": 100,
+                    "_rnd": 0,
+                    "condition_attributes": null,
+                    "enemies_remaining": null,
+                    "forced_one_time": null,
+                    "hp_threshold": null,
+                    "on_death": null,
+                    "one_time": null
+                },
+                "enemy_skill_id": 1808,
+                "extra_description": null
+            }
+        ],
+        "leader_skill": {
+            "_atk": 1,
+            "_hp": 1,
+            "_rcv": 1,
+            "_shield": 0.5,
+            "name": "Blazing Forest Barrier",
+            "raw_description": "Halves Fire & Wood Att. damage",
+            "reduction_attributes": [
+                0,
+                2
+            ],
+            "skill_id": 302,
+            "skill_type": 36
+        },
+        "leader_skill_id": 302,
+        "monster_id": 757,
+        "monster_no": 757,
+        "server": "Server.na"
+    }
+}

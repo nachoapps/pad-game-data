@@ -1,0 +1,30 @@
+#100910  - Alt. Black Baron
+True : use_new_ai
+1 : starting/max counter
+0 : counter increment
+
+ESPreemptive(49:318) -> ESPreemptive
+Enable preempt if level 1
+
+SkillSet:
+	Condition: One-time use (ai:100 rnd:0) (one-time: 1)
+	[0] ESSkyfall(68:8795) -> Summon Poison Orbs!...
+	Poison skyfall +15% for 7 turns
+	[1] ESSpinnersFixed(110:8796) -> If you don't want to die
+	Specific orbs change every 1.0s for 7 turns
+
+ESAttackUpStatus(18:8800) -> Resentment
+Increase damage to 200% for the next 999 turns
+
+ESOrbChangeAttackBits(108:8798) -> Dark Slash
+Change Poison to Dark, Deal 290% damage
+
+ESAttackMultihit(15:8799) -> Death Edge
+Deal 1050% damage (7 hits, 150% each)
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESTypeResist(118:8801) -> Healer & Attacker Type Halved
+Reduce damage from Healer, Attacker by 50%
+

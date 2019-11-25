@@ -1,0 +1,22 @@
+#837  - Mystery of Toyama Bay, Firefly Squid
+False : use_new_ai
+1 : starting/max counter
+1 : counter increment
+
+ESBranchLevel(35:25) -> ESBranchLevel
+Branch on level > 5, target rnd 4
+
+ESNone(0:0) -> ESNone
+nothing
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESOrbChangeAttack(48:609) -> Illuminate
+	Condition: When < 70% hp , one-time use (ai:70 rnd:0) (one-time: 1)
+Change Random to Jammer, Deal 80% damage
+
+ESBlind(5:608) -> Squid Ink
+	Condition: 40% chance (ai:40 rnd:0)
+Blind all orbs on the board
+

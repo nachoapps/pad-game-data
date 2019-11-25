@@ -1,0 +1,69 @@
+#2739  - Reincarnated Burning Phoenix Knight, Homura
+True : use_new_ai
+0 : starting/max counter
+0 : counter increment
+
+ESPreemptive(49:318) -> ESPreemptive
+Enable preempt if level 1
+
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 1, target rnd 6
+
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b1
+
+SkillSet:
+	[0] ESAbsorbCombo(67:4799) -> Phoenix Knight's Soul
+	Absorb combo <= 4 damage for 99 turns
+	[1] ESStatusShield(20:4800) -> Blazing Armor
+	Voids status ailments for 999 turns
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESBranchHP(28:18) -> ESBranchHP
+Branch on hp < 1, target rnd 16
+
+ESBranchHP(28:18) -> ESBranchHP
+Branch on hp < 75, target rnd 9
+
+ESAttackMultihit(15:4802) -> Blazing Cutting Dance
+Deal 150% damage (3 hits, 50% each)
+
+ESBranchHP(28:18) -> ESBranchHP
+Branch on hp < 50, target rnd 12
+
+SkillSet:
+	[0] ESRecoverEnemy(86:4803) -> Flame Eating Net
+	Enemy recover 10% hp
+	[1] ESGravity(50:4804) -> Scold
+	Player -99% HP
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 2, target rnd 15
+
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b11
+
+ESDamageShield(74:4806) -> High Temperature
+Reduce damage from all sources by 75% for 3 turns
+
+ESRandomSpawn(92:4807) -> Ash followed by Flare
+	Condition: When water, wood, light, dark, heal, poison, mortal poison orbs are on the board (ai:100 rnd:0)
+Spawn random 5 Jammer orbs, Deal 50% damage
+
+ESBindAwoken(88:4808) -> Suppression Flames
+Bind awoken skills for 3 turns
+
+ESGravity(50:4809) -> Burnout
+Player -300% HP
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESResolve(73:4798) -> Resolve Homura
+Survive attacks with 1 HP when HP > 76%
+

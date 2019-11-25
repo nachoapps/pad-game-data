@@ -1,0 +1,85 @@
+#4185  - Dark Moon Goddess of Serenity, Arianrhod
+True : use_new_ai
+3 : starting/max counter
+0 : counter increment
+
+ESPreemptive(49:318) -> ESPreemptive
+Enable preempt if level 1
+
+SkillSet:
+	Condition: One-time use (ai:100 rnd:0) (one-time: 2)
+	[0] ESStatusShield(20:13615) -> Moonlight Barrier
+	Voids status ailments for 999 turns
+	[1] ESSpinnersFixed(110:13616) -> Wheel of Detestation
+	Specific orbs change every 1.0s for 5 turns
+
+ESBranchHP(28:18) -> ESBranchHP
+Branch on hp < 1, target rnd 14
+
+ESBranchHP(28:18) -> ESBranchHP
+Branch on hp < 20, target rnd 15
+
+ESBranchHP(28:18) -> ESBranchHP
+Branch on hp < 50, target rnd 10
+
+ESBombRandomSpawn(102:13617) -> Gift Bomb
+	Condition: 33% chance (ai:0 rnd:33)
+Spawn random 1 Bomb orbs, Deal 105% damage
+
+ESRandomSpawn(92:13618) -> Poison Assortment
+	Condition: 33% chance & when Fire, Water, Wood, Light, Dark, Heal, Jammer orbs are on the board (ai:0 rnd:33)
+Spawn random 3 Poison, Mortal Poison orbs, Deal 100% damage
+
+ESAttackMultihit(15:13619) -> Curse Rod
+	Condition: 34% chance (ai:0 rnd:34)
+Deal 120% damage (3 hits, 40% each)
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 1, target rnd 6
+
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b1
+
+SkillSet:
+	[0] ESBoardChangeAttackBits(85:13621) -> Coffin Inviting the Unneeded
+	Change all orbs to Dark, Deal 120% damage
+	[1] ESSkyfall(96:13622) -> Everlasting Restraints
+	Locked random skyfall +50% for 10 turns
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+SkillSet:
+	Condition: One-time use (ai:100 rnd:0) (one-time: 1)
+	[0] ESRecoverEnemy(86:13628) -> Condensed Moonlight
+	Enemy recover 30% hp
+	[1] ESSkyfall(68:13629) -> Guidance of the Cursed Poison
+	Mortal Poison skyfall +20% for 5 turns
+
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 2, target rnd 19
+
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b11
+
+SkillSet:
+	[0] ESDamageShield(74:13624) -> Silver Disk Divine Protection
+	Reduce damage from all sources by 75% for 1 turns
+	[1] ESDebuffMovetime(39:13625) -> Magic Wand's Sealing Power
+	Movetime 50% for 1 turns
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESBoardChangeAttackBits(85:13626) -> Breaking of a Taboo
+Change all orbs to Dark, Deal 300% damage
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESResolve(73:13630) -> Resolve
+Survive attacks with 1 HP when HP > 50%
+

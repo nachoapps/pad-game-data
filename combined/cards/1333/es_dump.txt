@@ -1,0 +1,80 @@
+#1333  - Blessed River Goddess, Sarasvati
+True : use_new_ai
+3 : starting/max counter
+0 : counter increment
+
+ESPreemptive(49:318) -> ESPreemptive
+Enable preempt if level 1
+
+SkillSet:
+	Condition: One-time use (ai:100 rnd:0) (one-time: 2)
+	[0] ESBindAwoken(88:11864) -> Disappearing Mist
+	Bind awoken skills for 5 turns
+	[1] ESSkyfall(96:11865) -> Stone Rain
+	Locked random skyfall +30% for 20 turns
+
+ESBranchHP(28:18) -> ESBranchHP
+Branch on hp < 1, target rnd 18
+
+ESBranchHP(28:18) -> ESBranchHP
+Branch on hp < 30, target rnd 11
+
+SkillSet:
+	Condition: One-time use (ai:100 rnd:0) (one-time: 1)
+	[0] ESGravity(50:11867) -> Drought
+	Player -99% HP
+	[1] ESDebuffRCV(105:11868) -> Lost Water of Life
+	Rcv 50% for 10 turns
+
+ESBindRandomSub(65:11869) -> Torrential Downpour
+	Condition: 25% chance (ai:0 rnd:25)
+Bind 1 random subs for 2~3 turns, Deal 95% damage
+
+ESSkillDelay(89:11870) -> Overflow
+	Condition: 25% chance (ai:0 rnd:25)
+Delay active skills by 2 turns, Deal 100% damage
+
+ESOrbChangeAttack(48:11871) -> High Water
+	Condition: 25% chance (ai:0 rnd:25)
+Change Random to Water, Deal 95% damage
+
+ESAttackMultihit(15:11872) -> Overflowing
+	Condition: 25% chance (ai:0 rnd:25)
+Deal 105% damage (3 hits, 35% each)
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 1, target rnd 16
+
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b1
+
+ESBindAwoken(88:11873) -> Disappearing Mist
+Bind awoken skills for 1 turns
+
+ESBindRandomSub(65:11874) -> Torrential Downpour
+Bind 4 random subs for 1 turns
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESBoardChangeAttackBits(85:11875) -> Muddy Stream
+Change all orbs to Water, Deal 300% damage
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+SkillSet:
+	[0] ESRecoverEnemy(86:11877) -> Spring of Life
+	Enemy recover 100% hp
+	[1] ESOrbLock(94:11878) -> Arrested
+	Lock all Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs, Deal 100% damage
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESResolve(73:11862) -> Resolve
+Survive attacks with 1 HP when HP > 31%
+

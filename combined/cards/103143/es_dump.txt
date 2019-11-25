@@ -1,0 +1,67 @@
+#103143  - God of Brute Strength, Kinnikuman Big Body
+True : use_new_ai
+0 : starting/max counter
+0 : counter increment
+
+ESPreemptive(49:3402) -> ESPreemptive
+Enable preempt if level 4
+
+ESBranchLevel(35:25) -> ESBranchLevel
+Branch on level > 4, target rnd 4
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 1, target rnd 10
+
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b1
+
+ESBranchCard(90:5437) -> ESBranchCard
+Branch on player_cards HAS [3146, 3147], target rnd 8
+
+ESAttackUPRemainingEnemies(17:5431) -> God of Brute Strength's Protection
+	Condition: when <= 4 enemies remain (ai:100 rnd:0)
+Increase damage to 200% for the next 4 turns
+
+ESAttackUPRemainingEnemies(17:5432) -> Brains over brawn?! Says who!
+	Condition: when <= 4 enemies remain (ai:100 rnd:0)
+Increase damage to 200% for the next 4 turns
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 2, target rnd 13
+
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b11
+
+ESBoardChangeAttackBits(85:5434) -> Mighty Swing
+Change all orbs to Fire, Dark, Heal, Jammer, Deal 40% damage
+
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 4, target rnd 16
+
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b111
+
+ESOrbLock(94:5433) -> Mighty Spear
+Lock 6 random Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs, Deal 50% damage
+
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 8, target rnd 19
+
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b1111
+
+ESAttackMultihit(15:5435) -> Muscle Impact
+Deal 100% damage
+
+ESFlagOperation(24:14) -> ESFlagOperation
+flag UNSET 0b1110
+
+ESGravity(50:5436) -> Maple Leaf Clutch
+Player -100% HP
+

@@ -1,0 +1,43 @@
+#104726  - Green Sprite
+True : use_new_ai
+1 : starting/max counter
+1 : counter increment
+
+ESPreemptive(49:3402) -> ESPreemptive
+Enable preempt if level 4
+
+ESBranchLevel(35:25) -> ESBranchLevel
+Branch on level > 4, target rnd 4
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 1, target rnd 9
+
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b1
+
+ESAttackMultihit(15:10693) -> Strike
+Deal 100% damage
+
+ESAttackMultihit(15:10693) -> Strike
+Deal 100% damage
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESColumnSpawnMulti(76:10648) -> Club Rewrite
+	Condition: One-time use (ai:10 rnd:0) (one-time: 1)
+Change 5th column to Wood orbs
+
+ESColumnSpawnMulti(76:10649) -> Club Rewrite
+	Condition: One-time use (ai:10 rnd:0) (one-time: 1)
+Change 6th column to Wood orbs
+
+ESAttackMultihit(15:10693) -> Strike
+Deal 100% damage
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+

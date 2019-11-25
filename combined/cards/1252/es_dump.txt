@@ -1,0 +1,34 @@
+#1252  - Awoken Zeus Vulcan
+False : use_new_ai
+1 : starting/max counter
+1 : counter increment
+
+ESPreemptive(49:697) -> ESPreemptive
+Enable preempt if level 3
+
+ESBranchLevel(35:25) -> ESBranchLevel
+Branch on level > 3, target rnd 4
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 1, target rnd 8
+
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b1
+
+ESAbsorbCombo(67:1170) -> God-King's Test
+Absorb combo <= 4 damage for 999 turns
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESAttackMultihit(15:1173) -> Mars Daylight
+	Condition: When < 30% hp (ai:100 rnd:0)
+Deal 150% damage (3 hits, 50% each)
+
+ESOrbChangeAttack(48:1171) -> Draconic Blade
+	Condition: One-time use (ai:100 rnd:0) (one-time: 1)
+Change Water to Fire, Deal 120% damage
+

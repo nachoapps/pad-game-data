@@ -1,0 +1,104 @@
+#3866  - Island REMDra
+True : use_new_ai
+1 : starting/max counter
+0 : counter increment
+
+ESPreemptive(49:318) -> ESPreemptive
+Enable preempt if level 1
+
+ESBranchLevel(35:25) -> ESBranchLevel
+Branch on level > 2, target rnd 5
+
+ESDamageShield(74:7939) -> Let's enjoy the beach!
+	Condition: One-time use (ai:100 rnd:0) (one-time: 1)
+Reduce damage from all sources by 50% for 99 turns
+
+ESAttackMultihit(15:7940) -> Island REM Punch!
+Deal 130% damage
+
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 1, target rnd 9
+
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b1
+
+SkillSet:
+	[0] ESBlindStickyFixed(98:7921) -> Let's enjoy the beach!
+	Blind orbs in specific positions for 1 turns
+	[1] ESStatusShield(20:7922) -> Island Getaway Aura
+	Voids status ailments for 5 turns
+	[2] ESDamageShield(74:7923) -> Pull!
+	Reduce damage from all sources by 75% for 1 turns
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESBranchHP(28:18) -> ESBranchHP
+Branch on hp < 80, target rnd 15
+
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 2, target rnd 13
+
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b11
+
+ESDamageShield(74:7925) -> Pull it!
+Reduce damage from all sources by 50% for 1 turns, Deal 100% damage
+
+ESDamageShield(74:7926) -> Come on! Pull!
+Reduce damage from all sources by 50% for 1 turns, Deal 120% damage
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESBranchHP(28:18) -> ESBranchHP
+Branch on hp < 15, target rnd 22
+
+SkillSet:
+	Condition: 20% chance (ai:0 rnd:20)
+	[0] ESInactivity(66:7927) -> It's putting some back into it
+	Do nothing
+	[1] ESOrbChangeAttack(48:7928) -> Sundial
+	Change Random to Heal, Deal 150% damage
+
+SkillSet:
+	Condition: 20% chance (ai:0 rnd:20)
+	[0] ESInactivity(66:7927) -> It's putting some back into it
+	Do nothing
+	[1] ESBoardChangeAttackBits(85:7929) -> Sea Draco Summon-Wt & Wd
+	Change all orbs to Water, Wood, Deal 150% damage
+
+SkillSet:
+	Condition: 20% chance (ai:0 rnd:20)
+	[0] ESInactivity(66:7927) -> It's putting some back into it
+	Do nothing
+	[1] ESColumnSpawnMulti(77:7930) -> Summer Paradise - Aqua
+	Change 3rd, 4th column to Water orbs, Deal 150% damage
+
+SkillSet:
+	Condition: 20% chance (ai:0 rnd:20)
+	[0] ESInactivity(66:7927) -> It's putting some back into it
+	Do nothing
+	[1] ESBoardChangeAttackBits(85:7931) -> Summer Sea Seven-Star Formation
+	Change all orbs to Water, Wood, Light, Deal 150% damage
+
+SkillSet:
+	Condition: 20% chance (ai:0 rnd:20)
+	[0] ESInactivity(66:7927) -> It's putting some back into it
+	Do nothing
+	[1] ESAbsorbAttribute(53:7932) -> Lunatic Shot
+	Absorb Water, Light damage for 1 turns, Deal 150% damage
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESAttackMultihit(15:7938) -> Throw me some more Magic Stones!
+Deal 900% damage (3 hits, 300% each)
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESDeathCry(69:6388) -> REMDra death performance
+	Condition: On death (ai:100 rnd:0)
+Show death effect
+

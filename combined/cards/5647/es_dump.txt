@@ -1,0 +1,39 @@
+#5647  - 鋼の後継・オーフェン
+True : use_new_ai
+15 : starting/max counter
+0 : counter increment
+
+ESPreemptive(49:318) -> ESPreemptive
+Enable preempt if level 1
+
+SkillSet:
+	Condition: One-time use (ai:100 rnd:0) (one-time: 8)
+	[0] ESDebuffMovetime(39:14939) -> 決着をつけてやるぜ！
+	Movetime -2s for 5 turns
+	[1] ESStatusShield(20:14940) -> 我が指先に琥珀の盾！
+	Voids status ailments for 999 turns
+
+ESGravity(50:14941) -> 我導くは死呼ぶ椋鳥！
+	Condition: One-time use (ai:100 rnd:0) (one-time: 4)
+Player -99% HP
+
+SkillSet:
+	Condition: One-time use (ai:100 rnd:0) (one-time: 2)
+	[0] ESSkillDelay(89:14943) -> 全部吹き飛ばす！
+	Delay active skills by 5 turns
+	[1] ESColumnSpawnMulti(77:14944) -> 我は築く太陽の尖塔！
+	Change 3rd, 4th column to Fire orbs, Deal 90% damage
+
+ESBindAwoken(88:14945) -> 最後の－－勝負！
+	Condition: One-time use (ai:100 rnd:0) (one-time: 1)
+Bind awoken skills for 3 turns
+
+ESRandomSpawn(92:14946) -> 我は放つ光の白刃！
+Spawn random 10 Light orbs, Deal 150% damage
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESTypeResist(118:14996) -> 体力神半減
+Reduce damage from Physical, God by 50%
+

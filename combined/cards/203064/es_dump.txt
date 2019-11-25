@@ -1,0 +1,33 @@
+#203064  - Endless Blue Dragon Caller, Sonia TAMADRA
+True : use_new_ai
+1 : starting/max counter
+0 : counter increment
+
+ESPreemptive(49:318) -> ESPreemptive
+Enable preempt if level 1
+
+ESStatusShield(20:5056) -> Protect TAMA!
+	Condition: One-time use (ai:100 rnd:0) (one-time: 1)
+Voids status ailments for 999 turns
+
+ESBranchHP(28:18) -> ESBranchHP
+Branch on hp < 40, target rnd 6
+
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 1, target rnd 9
+
+ESOrbChangeAttack(48:5057) -> Blue Sphere
+Change Random to Water, Deal 100% damage
+
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 1, target rnd 9
+
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b1
+
+ESInactivity(66:5062) -> Draco Summon TAMA!
+Do nothing
+
+ESColumnSpawnMulti(77:5058) -> Crystal Fang
+Change 2nd, 5th column to Water orbs, Deal 500% damage
+

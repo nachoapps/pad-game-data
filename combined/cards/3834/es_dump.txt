@@ -1,0 +1,134 @@
+#3834  - Guardian Deity of the Sky City, Athena Helios
+True : use_new_ai
+127 : starting/max counter
+0 : counter increment
+
+ESPreemptive(49:318) -> ESPreemptive
+Enable preempt if level 1
+
+SkillSet:
+	Condition: One-time use (ai:100 rnd:0) (one-time: 64)
+	[0] ESStatusShield(20:7875) -> Wonderful! I've been waiting for you!
+	Voids status ailments for 999 turns
+	[1] ESVoidShield(71:7876) -> Just a warning: I won't hold back!
+	Void damage >= 35000000 for 999 turns
+
+ESBranchCounter(32:22) -> ESBranchCounter
+Branch on counter > 2, target rnd 8
+
+ESSetCounter(26:16) -> ESSetCounter
+counter + 1
+
+ESBranchHP(29:19) -> ESBranchHP
+Branch on hp > 40, target rnd 8
+
+SkillSet:
+	Condition: One-time use (ai:100 rnd:0) (one-time: 60)
+	[0] ESRecoverEnemy(86:7878) -> I'm no pushover, you know. Scared yet?
+	Enemy recover 30% hp
+	[1] ESOrbLock(94:7879) -> Well, let's continue!
+	Lock all Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs
+
+ESBranchCounter(32:22) -> ESBranchCounter
+Branch on counter > 1, target rnd 8
+
+ESBranchHP(28:18) -> ESBranchHP
+Branch on hp < 5, target rnd 28
+
+ESBranchHP(28:18) -> ESBranchHP
+Branch on hp < 50, target rnd 25
+
+ESGravity(50:7881) -> Have at you!
+	Condition: One-time use (ai:100 rnd:0) (one-time: 32)
+Player -99% HP
+
+ESAttackMultihit(15:7882) -> Think again!
+	Condition: One-time use (ai:100 rnd:0) (one-time: 16)
+Deal 200% damage (2 hits, 100% each)
+
+ESBindAttack(63:7883) -> How's this?
+	Condition: One-time use (ai:100 rnd:0) (one-time: 8)
+Bind 2 random subs for 3 turns, Deal 180% damage
+
+ESDamageShield(74:7884) -> Barrier!
+	Condition: One-time use (ai:100 rnd:0) (one-time: 4)
+Reduce damage from all sources by 75% for 1 turns
+
+ESSpinnersRandom(109:7885) -> Hah!
+	Condition: One-time use (ai:100 rnd:0) (one-time: 2)
+Random 2 orbs change every 1.0s for 1 turns, Deal 180% damage
+
+ESCloud(104:7886) -> Hmph!
+	Condition: One-time use (ai:100 rnd:0) (one-time: 1)
+2x1 cloud appear for 1 turns at random location, Deal 190% damage
+
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 2, target rnd 19
+
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b11
+
+SkillSet:
+	[0] ESInactivity(66:7887) -> Whoa...
+	Do nothing
+	[1] ESRecoverPlayer(55:7888) -> Tough guy, huh!
+	Player recover 100% hp
+	[2] ESAttackUPRemainingEnemies(17:7889) -> Now we're getting somewhere!
+	Increase damage to 150% for the next 999 turns
+
+ESOrbLock(94:7891) -> Left yourself wide open!
+Lock all Jammer orbs, Deal 250% damage
+
+ESRandomSpawn(92:7892) -> Burn!
+	Condition: 50% chance & when Fire, Water, Wood, Light, Dark, Jammer, Poison, Mortal Poison orbs are on the board (ai:50 rnd:0)
+Spawn random 5 Jammer orbs, Deal 200% damage
+
+ESGravity(50:7893) -> Once again!
+	Condition: 25% chance (ai:25 rnd:0)
+Player -99% HP
+
+ESDamageShield(74:7894) -> Barrier!
+	Condition: 33% chance (ai:33 rnd:0)
+Reduce damage from all sources by 75% for 1 turns
+
+ESSpinnersRandom(109:7895) -> Hyah!
+	Condition: 50% chance (ai:50 rnd:0)
+Random 2 orbs change every 1.0s for 1 turns, Deal 180% damage
+
+ESCloud(104:7896) -> I don't think so!
+2x1 cloud appear for 1 turns at random location, Deal 190% damage
+
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 2, target rnd 10
+
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b11
+
+SkillSet:
+	[0] ESInactivity(66:7887) -> Whoa...
+	Do nothing
+	[1] ESRecoverPlayer(55:7888) -> Tough guy, huh!
+	Player recover 100% hp
+	[2] ESAttackUPRemainingEnemies(17:7889) -> Now we're getting somewhere!
+	Increase damage to 150% for the next 999 turns
+
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 4, target rnd 31
+
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b111
+
+SkillSet:
+	[0] ESInactivity(66:7897) -> Uh-oh... Not good...
+	Do nothing
+	[1] ESBindAwoken(88:7898) -> Let's end this!
+	Bind awoken skills for 2 turns
+
+ESAttackMultihit(15:7900) -> Pyro Starburst!!
+Deal 20000% damage (10 hits, 2000% each)
+
+SkillSet:
+	Condition: On death (ai:0 rnd:0)
+	[0] ESInactivity(66:7901) -> I'm...finished...
+	Do nothing
+

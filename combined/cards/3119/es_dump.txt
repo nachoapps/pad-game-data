@@ -1,0 +1,73 @@
+#3119  - Cool Evening Sorceress, Almadel
+True : use_new_ai
+1 : starting/max counter
+1 : counter increment
+
+ESPreemptive(49:3402) -> ESPreemptive
+Enable preempt if level 4
+
+ESBranchLevel(35:25) -> ESBranchLevel
+Branch on level > 4, target rnd 4
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 1, target rnd 8
+
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b1
+
+ESRandomSpawn(92:10868) -> Why don't you cool off too?
+	Condition: When fire, water, wood, light, dark, jammer, poison, mortal poison orbs are on the board (ai:100 rnd:0)
+Spawn random 6 Heal orbs, Deal 100% damage
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESBranchHP(28:18) -> ESBranchHP
+Branch on hp < 30, target rnd 17
+
+ESBranchHP(28:18) -> ESBranchHP
+Branch on hp < 50, target rnd 13
+
+ESOrbChangeAttackBits(108:10869) -> Grimoire Summer
+	Condition: One-time use (ai:50 rnd:0) (one-time: 1)
+Change Heal to Wood, Deal 80% damage
+
+ESBindAttack(63:10870) -> Sunset Cage
+Bind 1 random subs for 1~2 turns, Deal 80% damage
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 2, target rnd 10
+
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b11
+
+ESOrbLock(94:10871) -> Glimmering Beach
+Lock all Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs, Deal 100% damage
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 4, target rnd 21
+
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b111
+
+ESInactivity(66:10872) -> She closed her book
+Do nothing
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESOrbChangeAttack(48:10873) -> Summer Explosion
+Change Random to Wood, Deal 500% damage
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+

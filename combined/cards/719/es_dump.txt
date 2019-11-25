@@ -1,0 +1,26 @@
+#719  - Green Skydragon, Elysium
+False : use_new_ai
+1 : starting/max counter
+0 : counter increment
+
+ESPreemptive(49:499) -> ESPreemptive
+Enable preempt if level 8
+
+ESBranchLevel(35:25) -> ESBranchLevel
+Branch on level > 8, target rnd 5
+
+ESAttackMultihit(15:486) -> Rock Breath
+	Condition: 75% chance (ai:75 rnd:0)
+Deal 180% damage (4 hits, 45% each)
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESAttackMultihit(15:500) -> Skydragon Flight
+	Condition: One-time use (ai:100 rnd:0) (one-time: 1)
+Deal 40% damage
+
+ESAttackMultihit(15:486) -> Rock Breath
+	Condition: 75% chance (ai:75 rnd:0)
+Deal 180% damage (4 hits, 45% each)
+

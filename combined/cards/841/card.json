@@ -1,0 +1,1830 @@
+{
+    "active_skill": {
+        "en_text": "Change Fire orbs to Wood orbs; Change Dark orbs to Heal orbs",
+        "jp_skill": {
+            "from_1": 0,
+            "from_2": 4,
+            "levels": 6,
+            "name": "ほほえみの掌",
+            "raw_description": "火ドロップを木に、闇ドロップを回復に変化。",
+            "skill_id": 659,
+            "skill_type": 20,
+            "to_1": 2,
+            "to_2": 5,
+            "turn_max": 13,
+            "turn_min": 8
+        },
+        "kr_skill": {
+            "from_1": 0,
+            "from_2": 4,
+            "levels": 6,
+            "name": "미소짓는 손바닥",
+            "raw_description": "불드롭을 나무로, 어둠드롭을 회복으로 변화",
+            "skill_id": 659,
+            "skill_type": 20,
+            "to_1": 2,
+            "to_2": 5,
+            "turn_max": 13,
+            "turn_min": 8
+        },
+        "na_skill": {
+            "from_1": 0,
+            "from_2": 4,
+            "levels": 6,
+            "name": "Smiling Palm",
+            "raw_description": "Changes Fire Orbs to Wood Orbs & Dark Orbs to Heal Orbs",
+            "skill_id": 659,
+            "skill_type": 20,
+            "to_1": 2,
+            "to_2": 5,
+            "turn_max": 13,
+            "turn_min": 8
+        },
+        "skill_id": 659,
+        "skill_type_tags": [
+            "AsCondition.GUARD_STANCE",
+            "AsCondition.ORB_CONVERT",
+            "AsCondition.DOUBLE_ORBS_CONVERT"
+        ]
+    },
+    "en_as_text": "Change Fire orbs to Wood orbs; Change Dark orbs to Heal orbs",
+    "en_ls_text": "3x RCV additional heal when matching orbs",
+    "enemy_behavior": [
+        {
+            "behavior": {
+                "_name": "*Preemptive Command LV1",
+                "enemy_skill_id": 318,
+                "extra_description": null,
+                "level": 1,
+                "params": [
+                    null,
+                    1,
+                    100,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null
+                ],
+                "type": 49
+            },
+            "condition": null,
+            "enemy_skill_id": 318,
+            "extra_description": null
+        },
+        {
+            "behavior": {
+                "_name": "ERROR10",
+                "branch_condition": "flag",
+                "branch_value": 1,
+                "compare": "&",
+                "enemy_skill_id": 10,
+                "extra_description": null,
+                "params": [
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    50,
+                    4,
+                    null,
+                    null,
+                    null
+                ],
+                "target_round": 6,
+                "type": 43
+            },
+            "condition": null,
+            "enemy_skill_id": 10,
+            "extra_description": null
+        },
+        {
+            "behavior": {
+                "_name": "ERROR12",
+                "enemy_skill_id": 12,
+                "extra_description": null,
+                "flag": 1,
+                "flag_bin": "0b1",
+                "operation": "SET",
+                "params": [
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    4,
+                    null,
+                    null,
+                    null
+                ],
+                "type": 22
+            },
+            "condition": null,
+            "enemy_skill_id": 12,
+            "extra_description": null
+        },
+        {
+            "behavior": {
+                "_name": "Blessings of Toyama",
+                "attack": null,
+                "enemy_skill_id": 611,
+                "extra_description": null,
+                "max_amount": 100,
+                "min_amount": 100,
+                "params": [
+                    "HP fully recovered",
+                    100,
+                    100,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null
+                ],
+                "target": "player",
+                "type": 55
+            },
+            "condition": {
+                "_ai": 100,
+                "_rnd": 0,
+                "condition_attributes": null,
+                "enemies_remaining": null,
+                "forced_one_time": null,
+                "hp_threshold": null,
+                "on_death": null,
+                "one_time": null
+            },
+            "enemy_skill_id": 611,
+            "extra_description": null
+        },
+        {
+            "behavior": {
+                "_name": "ERROR26",
+                "enemy_skill_id": 26,
+                "extra_description": null,
+                "params": [
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    4,
+                    null,
+                    null,
+                    null
+                ],
+                "type": 36
+            },
+            "condition": null,
+            "enemy_skill_id": 26,
+            "extra_description": null
+        },
+        {
+            "behavior": {
+                "_name": "Toyama Whirlwind",
+                "attack": {
+                    "atk_multiplier": 40,
+                    "max_hits": 4,
+                    "min_hits": 4
+                },
+                "enemy_skill_id": 613,
+                "extra_description": null,
+                "params": [
+                    null,
+                    4,
+                    4,
+                    40,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    30,
+                    null,
+                    null,
+                    null,
+                    null
+                ],
+                "type": 15
+            },
+            "condition": {
+                "_ai": 100,
+                "_rnd": 0,
+                "condition_attributes": null,
+                "enemies_remaining": null,
+                "forced_one_time": null,
+                "hp_threshold": 30,
+                "on_death": null,
+                "one_time": null
+            },
+            "enemy_skill_id": 613,
+            "extra_description": null
+        },
+        {
+            "behavior": {
+                "_name": "Cherry Blossom Storm",
+                "attack": {
+                    "atk_multiplier": 120,
+                    "max_hits": 1,
+                    "min_hits": 1
+                },
+                "enemy_skill_id": 612,
+                "extra_description": null,
+                "orb_from": -1,
+                "orb_to": 2,
+                "params": [
+                    null,
+                    120,
+                    -1,
+                    2,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    70,
+                    null,
+                    1,
+                    null,
+                    null
+                ],
+                "random_count": null,
+                "type": 48
+            },
+            "condition": {
+                "_ai": 100,
+                "_rnd": 0,
+                "condition_attributes": null,
+                "enemies_remaining": null,
+                "forced_one_time": null,
+                "hp_threshold": 70,
+                "on_death": null,
+                "one_time": 1
+            },
+            "enemy_skill_id": 612,
+            "extra_description": null
+        }
+    ],
+    "enemy_behavior_jp": [
+        {
+            "behavior": {
+                "_name": "※先制コマンドLV1",
+                "enemy_skill_id": 318,
+                "extra_description": null,
+                "level": 1,
+                "params": [
+                    null,
+                    1,
+                    100,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null
+                ],
+                "type": 49
+            },
+            "condition": null,
+            "enemy_skill_id": 318,
+            "extra_description": null
+        },
+        {
+            "behavior": {
+                "_name": "※ai フラグが立っていたら rnd の数値に分岐",
+                "branch_condition": "flag",
+                "branch_value": 1,
+                "compare": "&",
+                "enemy_skill_id": 10,
+                "extra_description": null,
+                "params": [
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    50,
+                    4,
+                    null,
+                    null,
+                    null
+                ],
+                "target_round": 6,
+                "type": 43
+            },
+            "condition": null,
+            "enemy_skill_id": 10,
+            "extra_description": null
+        },
+        {
+            "behavior": {
+                "_name": "※フラグを ai にセット",
+                "enemy_skill_id": 12,
+                "extra_description": null,
+                "flag": 1,
+                "flag_bin": "0b1",
+                "operation": "SET",
+                "params": [
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    4,
+                    null,
+                    null,
+                    null
+                ],
+                "type": 22
+            },
+            "condition": null,
+            "enemy_skill_id": 12,
+            "extra_description": null
+        },
+        {
+            "behavior": {
+                "_name": "富山の恵み",
+                "attack": null,
+                "enemy_skill_id": 611,
+                "extra_description": null,
+                "max_amount": 100,
+                "min_amount": 100,
+                "params": [
+                    "HPが全回復した",
+                    100,
+                    100,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null
+                ],
+                "target": "player",
+                "type": 55
+            },
+            "condition": {
+                "_ai": 100,
+                "_rnd": 0,
+                "condition_attributes": null,
+                "enemies_remaining": null,
+                "forced_one_time": null,
+                "hp_threshold": null,
+                "on_death": null,
+                "one_time": null
+            },
+            "enemy_skill_id": 611,
+            "extra_description": null
+        },
+        {
+            "behavior": {
+                "_name": "※パース終了",
+                "enemy_skill_id": 26,
+                "extra_description": null,
+                "params": [
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    4,
+                    null,
+                    null,
+                    null
+                ],
+                "type": 36
+            },
+            "condition": null,
+            "enemy_skill_id": 26,
+            "extra_description": null
+        },
+        {
+            "behavior": {
+                "_name": "富山旋風",
+                "attack": {
+                    "atk_multiplier": 40,
+                    "max_hits": 4,
+                    "min_hits": 4
+                },
+                "enemy_skill_id": 613,
+                "extra_description": null,
+                "params": [
+                    null,
+                    4,
+                    4,
+                    40,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    30,
+                    null,
+                    null,
+                    null,
+                    null
+                ],
+                "type": 15
+            },
+            "condition": {
+                "_ai": 100,
+                "_rnd": 0,
+                "condition_attributes": null,
+                "enemies_remaining": null,
+                "forced_one_time": null,
+                "hp_threshold": 30,
+                "on_death": null,
+                "one_time": null
+            },
+            "enemy_skill_id": 613,
+            "extra_description": null
+        },
+        {
+            "behavior": {
+                "_name": "花吹雪",
+                "attack": {
+                    "atk_multiplier": 120,
+                    "max_hits": 1,
+                    "min_hits": 1
+                },
+                "enemy_skill_id": 612,
+                "extra_description": null,
+                "orb_from": -1,
+                "orb_to": 2,
+                "params": [
+                    null,
+                    120,
+                    -1,
+                    2,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    70,
+                    null,
+                    1,
+                    null,
+                    null
+                ],
+                "random_count": null,
+                "type": 48
+            },
+            "condition": {
+                "_ai": 100,
+                "_rnd": 0,
+                "condition_attributes": null,
+                "enemies_remaining": null,
+                "forced_one_time": null,
+                "hp_threshold": 70,
+                "on_death": null,
+                "one_time": 1
+            },
+            "enemy_skill_id": 612,
+            "extra_description": null
+        }
+    ],
+    "has_animation": false,
+    "has_hqimage": false,
+    "jp_card": {
+        "active_skill": {
+            "from_1": 0,
+            "from_2": 4,
+            "levels": 6,
+            "name": "ほほえみの掌",
+            "raw_description": "火ドロップを木に、闇ドロップを回復に変化。",
+            "skill_id": 659,
+            "skill_type": 20,
+            "to_1": 2,
+            "to_2": 5,
+            "turn_max": 13,
+            "turn_min": 8
+        },
+        "active_skill_id": 659,
+        "card": {
+            "active_skill_id": 659,
+            "ancestor_id": 840,
+            "atk_scale": 1.0,
+            "attr_id": 2,
+            "awakenings": [
+                24,
+                9,
+                21
+            ],
+            "base_id": 840,
+            "collab_id": 20,
+            "cost": 25,
+            "enemy_atk_max": 13110,
+            "enemy_atk_min": 437,
+            "enemy_atk_scale": 1.0,
+            "enemy_coins_per_level": 1200,
+            "enemy_def_max": 3100,
+            "enemy_def_min": 310,
+            "enemy_def_scale": 1.0,
+            "enemy_hp_max": 2254650,
+            "enemy_hp_min": 75155,
+            "enemy_hp_scale": 1.0,
+            "enemy_max_level": 10,
+            "enemy_skill_counter_increment": 1,
+            "enemy_skill_max_counter": 1,
+            "enemy_skill_refs": [
+                {
+                    "enemy_ai": 0,
+                    "enemy_rnd": 0,
+                    "enemy_skill_id": 318
+                },
+                {
+                    "enemy_ai": 1,
+                    "enemy_rnd": 6,
+                    "enemy_skill_id": 10
+                },
+                {
+                    "enemy_ai": 1,
+                    "enemy_rnd": 0,
+                    "enemy_skill_id": 12
+                },
+                {
+                    "enemy_ai": 100,
+                    "enemy_rnd": 0,
+                    "enemy_skill_id": 611
+                },
+                {
+                    "enemy_ai": 0,
+                    "enemy_rnd": 0,
+                    "enemy_skill_id": 26
+                },
+                {
+                    "enemy_ai": 100,
+                    "enemy_rnd": 0,
+                    "enemy_skill_id": 613
+                },
+                {
+                    "enemy_ai": 100,
+                    "enemy_rnd": 0,
+                    "enemy_skill_id": 612
+                }
+            ],
+            "enemy_turns": 2,
+            "enemy_turns_alt": 0,
+            "enemy_xp_per_level": 453,
+            "evo_mat_id_1": 149,
+            "evo_mat_id_2": 150,
+            "evo_mat_id_3": 321,
+            "evo_mat_id_4": 173,
+            "evo_mat_id_5": 251,
+            "feed_xp_per_level": 1162,
+            "furigana": "富山県高岡市あみたん娘|とやまけんたかおかしあみたんむすめ|あみたかかのんせしる",
+            "group_id": 130,
+            "hp_scale": 1.0,
+            "inheritable": false,
+            "is_collab": false,
+            "is_ult": false,
+            "latent_on_feed": 0,
+            "leader_skill_id": 767,
+            "limit_mult": 0,
+            "max_atk": 963,
+            "max_hp": 2603,
+            "max_level": 99,
+            "max_rcv": 426,
+            "min_atk": 385,
+            "min_hp": 1041,
+            "min_rcv": 203,
+            "monster_no": 841,
+            "name": "阿弥貴＆カノン＆セシル",
+            "orb_skin_id": 0,
+            "other_fields": [
+                ""
+            ],
+            "random_flags": 2,
+            "rarity": 6,
+            "rcv_scale": 1.0,
+            "released_status": true,
+            "sell_gold_per_level": 495,
+            "sell_mp": 10,
+            "sub_attr_id": 3,
+            "super_awakenings": [],
+            "type_1_id": 5,
+            "type_2_id": -1,
+            "type_3_id": -1,
+            "un_evo_mat_1": 155,
+            "un_evo_mat_2": 156,
+            "un_evo_mat_3": 157,
+            "un_evo_mat_4": 158,
+            "un_evo_mat_5": 159,
+            "unknown_009": 5,
+            "unknown_055": 0,
+            "unknown_056": 0,
+            "use_new_ai": false,
+            "voice_id": 0,
+            "xp_max": 4000000,
+            "xp_scale": 2.5
+        },
+        "critical_failures": [],
+        "enemy_skills": [
+            {
+                "behavior": {
+                    "_name": "※先制コマンドLV1",
+                    "enemy_skill_id": 318,
+                    "extra_description": null,
+                    "level": 1,
+                    "params": [
+                        null,
+                        1,
+                        100,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null
+                    ],
+                    "type": 49
+                },
+                "condition": null,
+                "enemy_skill_id": 318,
+                "extra_description": null
+            },
+            {
+                "behavior": {
+                    "_name": "※ai フラグが立っていたら rnd の数値に分岐",
+                    "branch_condition": "flag",
+                    "branch_value": 1,
+                    "compare": "&",
+                    "enemy_skill_id": 10,
+                    "extra_description": null,
+                    "params": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        50,
+                        4,
+                        null,
+                        null,
+                        null
+                    ],
+                    "target_round": 6,
+                    "type": 43
+                },
+                "condition": null,
+                "enemy_skill_id": 10,
+                "extra_description": null
+            },
+            {
+                "behavior": {
+                    "_name": "※フラグを ai にセット",
+                    "enemy_skill_id": 12,
+                    "extra_description": null,
+                    "flag": 1,
+                    "flag_bin": "0b1",
+                    "operation": "SET",
+                    "params": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        4,
+                        null,
+                        null,
+                        null
+                    ],
+                    "type": 22
+                },
+                "condition": null,
+                "enemy_skill_id": 12,
+                "extra_description": null
+            },
+            {
+                "behavior": {
+                    "_name": "富山の恵み",
+                    "attack": null,
+                    "enemy_skill_id": 611,
+                    "extra_description": null,
+                    "max_amount": 100,
+                    "min_amount": 100,
+                    "params": [
+                        "HPが全回復した",
+                        100,
+                        100,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null
+                    ],
+                    "target": "player",
+                    "type": 55
+                },
+                "condition": {
+                    "_ai": 100,
+                    "_rnd": 0,
+                    "condition_attributes": null,
+                    "enemies_remaining": null,
+                    "forced_one_time": null,
+                    "hp_threshold": null,
+                    "on_death": null,
+                    "one_time": null
+                },
+                "enemy_skill_id": 611,
+                "extra_description": null
+            },
+            {
+                "behavior": {
+                    "_name": "※パース終了",
+                    "enemy_skill_id": 26,
+                    "extra_description": null,
+                    "params": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        4,
+                        null,
+                        null,
+                        null
+                    ],
+                    "type": 36
+                },
+                "condition": null,
+                "enemy_skill_id": 26,
+                "extra_description": null
+            },
+            {
+                "behavior": {
+                    "_name": "富山旋風",
+                    "attack": {
+                        "atk_multiplier": 40,
+                        "max_hits": 4,
+                        "min_hits": 4
+                    },
+                    "enemy_skill_id": 613,
+                    "extra_description": null,
+                    "params": [
+                        null,
+                        4,
+                        4,
+                        40,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        30,
+                        null,
+                        null,
+                        null,
+                        null
+                    ],
+                    "type": 15
+                },
+                "condition": {
+                    "_ai": 100,
+                    "_rnd": 0,
+                    "condition_attributes": null,
+                    "enemies_remaining": null,
+                    "forced_one_time": null,
+                    "hp_threshold": 30,
+                    "on_death": null,
+                    "one_time": null
+                },
+                "enemy_skill_id": 613,
+                "extra_description": null
+            },
+            {
+                "behavior": {
+                    "_name": "花吹雪",
+                    "attack": {
+                        "atk_multiplier": 120,
+                        "max_hits": 1,
+                        "min_hits": 1
+                    },
+                    "enemy_skill_id": 612,
+                    "extra_description": null,
+                    "orb_from": -1,
+                    "orb_to": 2,
+                    "params": [
+                        null,
+                        120,
+                        -1,
+                        2,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        70,
+                        null,
+                        1,
+                        null,
+                        null
+                    ],
+                    "random_count": null,
+                    "type": 48
+                },
+                "condition": {
+                    "_ai": 100,
+                    "_rnd": 0,
+                    "condition_attributes": null,
+                    "enemies_remaining": null,
+                    "forced_one_time": null,
+                    "hp_threshold": 70,
+                    "on_death": null,
+                    "one_time": 1
+                },
+                "enemy_skill_id": 612,
+                "extra_description": null
+            }
+        ],
+        "leader_skill": {
+            "_atk": 1,
+            "_hp": 1,
+            "_rcv": 1,
+            "_shield": 0,
+            "multiplier": 3.0,
+            "name": "あみたんの御加護",
+            "raw_description": "ドロップを消した時、回復力×3倍のHPを回復。",
+            "skill_id": 767,
+            "skill_type": 13
+        },
+        "leader_skill_id": 767,
+        "monster_id": 841,
+        "monster_no": 841,
+        "server": "Server.jp"
+    },
+    "kr_card": {
+        "active_skill": {
+            "from_1": 0,
+            "from_2": 4,
+            "levels": 6,
+            "name": "미소짓는 손바닥",
+            "raw_description": "불드롭을 나무로, 어둠드롭을 회복으로 변화",
+            "skill_id": 659,
+            "skill_type": 20,
+            "to_1": 2,
+            "to_2": 5,
+            "turn_max": 13,
+            "turn_min": 8
+        },
+        "active_skill_id": 659,
+        "card": {
+            "active_skill_id": 659,
+            "ancestor_id": 840,
+            "atk_scale": 1.0,
+            "attr_id": 2,
+            "awakenings": [
+                24,
+                9,
+                21
+            ],
+            "base_id": 840,
+            "collab_id": 20,
+            "cost": 25,
+            "enemy_atk_max": 13110,
+            "enemy_atk_min": 437,
+            "enemy_atk_scale": 1.0,
+            "enemy_coins_per_level": 1200,
+            "enemy_def_max": 3100,
+            "enemy_def_min": 310,
+            "enemy_def_scale": 1.0,
+            "enemy_hp_max": 2254650,
+            "enemy_hp_min": 75155,
+            "enemy_hp_scale": 1.0,
+            "enemy_max_level": 10,
+            "enemy_skill_counter_increment": 1,
+            "enemy_skill_max_counter": 1,
+            "enemy_skill_refs": [
+                {
+                    "enemy_ai": 0,
+                    "enemy_rnd": 0,
+                    "enemy_skill_id": 318
+                },
+                {
+                    "enemy_ai": 1,
+                    "enemy_rnd": 6,
+                    "enemy_skill_id": 10
+                },
+                {
+                    "enemy_ai": 1,
+                    "enemy_rnd": 0,
+                    "enemy_skill_id": 12
+                },
+                {
+                    "enemy_ai": 100,
+                    "enemy_rnd": 0,
+                    "enemy_skill_id": 611
+                },
+                {
+                    "enemy_ai": 0,
+                    "enemy_rnd": 0,
+                    "enemy_skill_id": 26
+                },
+                {
+                    "enemy_ai": 100,
+                    "enemy_rnd": 0,
+                    "enemy_skill_id": 613
+                },
+                {
+                    "enemy_ai": 100,
+                    "enemy_rnd": 0,
+                    "enemy_skill_id": 612
+                }
+            ],
+            "enemy_turns": 2,
+            "enemy_turns_alt": 0,
+            "enemy_xp_per_level": 453,
+            "evo_mat_id_1": 149,
+            "evo_mat_id_2": 150,
+            "evo_mat_id_3": 321,
+            "evo_mat_id_4": 173,
+            "evo_mat_id_5": 251,
+            "feed_xp_per_level": 1162,
+            "furigana": "",
+            "group_id": 130,
+            "hp_scale": 1.0,
+            "inheritable": false,
+            "is_collab": false,
+            "is_ult": false,
+            "latent_on_feed": 0,
+            "leader_skill_id": 767,
+            "limit_mult": 0,
+            "max_atk": 963,
+            "max_hp": 2603,
+            "max_level": 99,
+            "max_rcv": 426,
+            "min_atk": 385,
+            "min_hp": 1041,
+            "min_rcv": 203,
+            "monster_no": 841,
+            "name": "아미타카&카논&세실",
+            "orb_skin_id": 0,
+            "other_fields": [
+                ""
+            ],
+            "random_flags": 2,
+            "rarity": 6,
+            "rcv_scale": 1.0,
+            "released_status": true,
+            "sell_gold_per_level": 495,
+            "sell_mp": 10,
+            "sub_attr_id": 3,
+            "super_awakenings": [],
+            "type_1_id": 5,
+            "type_2_id": -1,
+            "type_3_id": -1,
+            "un_evo_mat_1": 155,
+            "un_evo_mat_2": 156,
+            "un_evo_mat_3": 157,
+            "un_evo_mat_4": 158,
+            "un_evo_mat_5": 159,
+            "unknown_009": 5,
+            "unknown_055": 0,
+            "unknown_056": 0,
+            "use_new_ai": false,
+            "voice_id": 0,
+            "xp_max": 4000000,
+            "xp_scale": 2.5
+        },
+        "critical_failures": [],
+        "enemy_skills": [
+            {
+                "behavior": {
+                    "_name": "선제커맨드Lv1",
+                    "enemy_skill_id": 318,
+                    "extra_description": null,
+                    "level": 1,
+                    "params": [
+                        null,
+                        1,
+                        100,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null
+                    ],
+                    "type": 49
+                },
+                "condition": null,
+                "enemy_skill_id": 318,
+                "extra_description": null
+            },
+            {
+                "behavior": {
+                    "_name": "※ai 일 경우 rnd수치로 분기",
+                    "branch_condition": "flag",
+                    "branch_value": 1,
+                    "compare": "&",
+                    "enemy_skill_id": 10,
+                    "extra_description": null,
+                    "params": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        50,
+                        4,
+                        null,
+                        null,
+                        null
+                    ],
+                    "target_round": 6,
+                    "type": 43
+                },
+                "condition": null,
+                "enemy_skill_id": 10,
+                "extra_description": null
+            },
+            {
+                "behavior": {
+                    "_name": "방해 드롭",
+                    "enemy_skill_id": 12,
+                    "extra_description": null,
+                    "flag": 1,
+                    "flag_bin": "0b1",
+                    "operation": "SET",
+                    "params": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        4,
+                        null,
+                        null,
+                        null
+                    ],
+                    "type": 22
+                },
+                "condition": null,
+                "enemy_skill_id": 12,
+                "extra_description": null
+            },
+            {
+                "behavior": {
+                    "_name": "도야마의 은혜",
+                    "attack": null,
+                    "enemy_skill_id": 611,
+                    "extra_description": null,
+                    "max_amount": 100,
+                    "min_amount": 100,
+                    "params": [
+                        "HP를 모두 회복했다",
+                        100,
+                        100,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null
+                    ],
+                    "target": "player",
+                    "type": 55
+                },
+                "condition": {
+                    "_ai": 100,
+                    "_rnd": 0,
+                    "condition_attributes": null,
+                    "enemies_remaining": null,
+                    "forced_one_time": null,
+                    "hp_threshold": null,
+                    "on_death": null,
+                    "one_time": null
+                },
+                "enemy_skill_id": 611,
+                "extra_description": null
+            },
+            {
+                "behavior": {
+                    "_name": "테스트예비",
+                    "enemy_skill_id": 26,
+                    "extra_description": null,
+                    "params": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        4,
+                        null,
+                        null,
+                        null
+                    ],
+                    "type": 36
+                },
+                "condition": null,
+                "enemy_skill_id": 26,
+                "extra_description": null
+            },
+            {
+                "behavior": {
+                    "_name": "토야마선풍",
+                    "attack": {
+                        "atk_multiplier": 40,
+                        "max_hits": 4,
+                        "min_hits": 4
+                    },
+                    "enemy_skill_id": 613,
+                    "extra_description": null,
+                    "params": [
+                        null,
+                        4,
+                        4,
+                        40,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        30,
+                        null,
+                        null,
+                        null,
+                        null
+                    ],
+                    "type": 15
+                },
+                "condition": {
+                    "_ai": 100,
+                    "_rnd": 0,
+                    "condition_attributes": null,
+                    "enemies_remaining": null,
+                    "forced_one_time": null,
+                    "hp_threshold": 30,
+                    "on_death": null,
+                    "one_time": null
+                },
+                "enemy_skill_id": 613,
+                "extra_description": null
+            },
+            {
+                "behavior": {
+                    "_name": "꽃보라",
+                    "attack": {
+                        "atk_multiplier": 120,
+                        "max_hits": 1,
+                        "min_hits": 1
+                    },
+                    "enemy_skill_id": 612,
+                    "extra_description": null,
+                    "orb_from": -1,
+                    "orb_to": 2,
+                    "params": [
+                        null,
+                        120,
+                        -1,
+                        2,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        70,
+                        null,
+                        1,
+                        null,
+                        null
+                    ],
+                    "random_count": null,
+                    "type": 48
+                },
+                "condition": {
+                    "_ai": 100,
+                    "_rnd": 0,
+                    "condition_attributes": null,
+                    "enemies_remaining": null,
+                    "forced_one_time": null,
+                    "hp_threshold": 70,
+                    "on_death": null,
+                    "one_time": 1
+                },
+                "enemy_skill_id": 612,
+                "extra_description": null
+            }
+        ],
+        "leader_skill": {
+            "_atk": 1,
+            "_hp": 1,
+            "_rcv": 1,
+            "_shield": 0,
+            "multiplier": 3.0,
+            "name": "아미탄의 가호",
+            "raw_description": "드롭을 지운 턴에서 회복력x3배의 HP를 회복",
+            "skill_id": 767,
+            "skill_type": 13
+        },
+        "leader_skill_id": 767,
+        "monster_id": 841,
+        "monster_no": 841,
+        "server": "Server.kr"
+    },
+    "leader_skill": {
+        "en_text": "3x RCV additional heal when matching orbs",
+        "jp_skill": {
+            "_atk": 1,
+            "_hp": 1,
+            "_rcv": 1,
+            "_shield": 0,
+            "multiplier": 3.0,
+            "name": "あみたんの御加護",
+            "raw_description": "ドロップを消した時、回復力×3倍のHPを回復。",
+            "skill_id": 767,
+            "skill_type": 13
+        },
+        "kr_skill": {
+            "_atk": 1,
+            "_hp": 1,
+            "_rcv": 1,
+            "_shield": 0,
+            "multiplier": 3.0,
+            "name": "아미탄의 가호",
+            "raw_description": "드롭을 지운 턴에서 회복력x3배의 HP를 회복",
+            "skill_id": 767,
+            "skill_type": 13
+        },
+        "na_skill": {
+            "_atk": 1,
+            "_hp": 1,
+            "_rcv": 1,
+            "_shield": 0,
+            "multiplier": 3.0,
+            "name": "Amitan's Protection",
+            "raw_description": "Heals HP equal to 3x RCV when matching Orbs",
+            "skill_id": 767,
+            "skill_type": 13
+        },
+        "skill_id": 767,
+        "skill_type_tags": [
+            "LsCondition.AUTO_HEAL"
+        ]
+    },
+    "monster_id": 841,
+    "na_card": {
+        "active_skill": {
+            "from_1": 0,
+            "from_2": 4,
+            "levels": 6,
+            "name": "Smiling Palm",
+            "raw_description": "Changes Fire Orbs to Wood Orbs & Dark Orbs to Heal Orbs",
+            "skill_id": 659,
+            "skill_type": 20,
+            "to_1": 2,
+            "to_2": 5,
+            "turn_max": 13,
+            "turn_min": 8
+        },
+        "active_skill_id": 659,
+        "card": {
+            "active_skill_id": 659,
+            "ancestor_id": 840,
+            "atk_scale": 1.0,
+            "attr_id": 2,
+            "awakenings": [
+                24,
+                9,
+                21
+            ],
+            "base_id": 840,
+            "collab_id": 20,
+            "cost": 25,
+            "enemy_atk_max": 13110,
+            "enemy_atk_min": 437,
+            "enemy_atk_scale": 1.0,
+            "enemy_coins_per_level": 1200,
+            "enemy_def_max": 3100,
+            "enemy_def_min": 310,
+            "enemy_def_scale": 1.0,
+            "enemy_hp_max": 2254650,
+            "enemy_hp_min": 75155,
+            "enemy_hp_scale": 1.0,
+            "enemy_max_level": 10,
+            "enemy_skill_counter_increment": 1,
+            "enemy_skill_max_counter": 1,
+            "enemy_skill_refs": [
+                {
+                    "enemy_ai": 0,
+                    "enemy_rnd": 0,
+                    "enemy_skill_id": 318
+                },
+                {
+                    "enemy_ai": 1,
+                    "enemy_rnd": 6,
+                    "enemy_skill_id": 10
+                },
+                {
+                    "enemy_ai": 1,
+                    "enemy_rnd": 0,
+                    "enemy_skill_id": 12
+                },
+                {
+                    "enemy_ai": 100,
+                    "enemy_rnd": 0,
+                    "enemy_skill_id": 611
+                },
+                {
+                    "enemy_ai": 0,
+                    "enemy_rnd": 0,
+                    "enemy_skill_id": 26
+                },
+                {
+                    "enemy_ai": 100,
+                    "enemy_rnd": 0,
+                    "enemy_skill_id": 613
+                },
+                {
+                    "enemy_ai": 100,
+                    "enemy_rnd": 0,
+                    "enemy_skill_id": 612
+                }
+            ],
+            "enemy_turns": 2,
+            "enemy_turns_alt": 0,
+            "enemy_xp_per_level": 453,
+            "evo_mat_id_1": 149,
+            "evo_mat_id_2": 150,
+            "evo_mat_id_3": 321,
+            "evo_mat_id_4": 173,
+            "evo_mat_id_5": 251,
+            "feed_xp_per_level": 1162,
+            "furigana": "",
+            "group_id": 130,
+            "hp_scale": 1.0,
+            "inheritable": false,
+            "is_collab": false,
+            "is_ult": false,
+            "latent_on_feed": 0,
+            "leader_skill_id": 767,
+            "limit_mult": 0,
+            "max_atk": 963,
+            "max_hp": 2603,
+            "max_level": 99,
+            "max_rcv": 426,
+            "min_atk": 385,
+            "min_hp": 1041,
+            "min_rcv": 203,
+            "monster_no": 841,
+            "name": "Amitaka & Kanon & Cecil",
+            "orb_skin_id": 0,
+            "other_fields": [
+                ""
+            ],
+            "random_flags": 2,
+            "rarity": 6,
+            "rcv_scale": 1.0,
+            "released_status": true,
+            "sell_gold_per_level": 495,
+            "sell_mp": 10,
+            "sub_attr_id": 3,
+            "super_awakenings": [],
+            "type_1_id": 5,
+            "type_2_id": -1,
+            "type_3_id": -1,
+            "un_evo_mat_1": 155,
+            "un_evo_mat_2": 156,
+            "un_evo_mat_3": 157,
+            "un_evo_mat_4": 158,
+            "un_evo_mat_5": 159,
+            "unknown_009": 5,
+            "unknown_055": 0,
+            "unknown_056": 0,
+            "use_new_ai": false,
+            "voice_id": 0,
+            "xp_max": 4000000,
+            "xp_scale": 2.5
+        },
+        "critical_failures": [],
+        "enemy_skills": [
+            {
+                "behavior": {
+                    "_name": "*Preemptive Command LV1",
+                    "enemy_skill_id": 318,
+                    "extra_description": null,
+                    "level": 1,
+                    "params": [
+                        null,
+                        1,
+                        100,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null
+                    ],
+                    "type": 49
+                },
+                "condition": null,
+                "enemy_skill_id": 318,
+                "extra_description": null
+            },
+            {
+                "behavior": {
+                    "_name": "ERROR10",
+                    "branch_condition": "flag",
+                    "branch_value": 1,
+                    "compare": "&",
+                    "enemy_skill_id": 10,
+                    "extra_description": null,
+                    "params": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        50,
+                        4,
+                        null,
+                        null,
+                        null
+                    ],
+                    "target_round": 6,
+                    "type": 43
+                },
+                "condition": null,
+                "enemy_skill_id": 10,
+                "extra_description": null
+            },
+            {
+                "behavior": {
+                    "_name": "ERROR12",
+                    "enemy_skill_id": 12,
+                    "extra_description": null,
+                    "flag": 1,
+                    "flag_bin": "0b1",
+                    "operation": "SET",
+                    "params": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        4,
+                        null,
+                        null,
+                        null
+                    ],
+                    "type": 22
+                },
+                "condition": null,
+                "enemy_skill_id": 12,
+                "extra_description": null
+            },
+            {
+                "behavior": {
+                    "_name": "Blessings of Toyama",
+                    "attack": null,
+                    "enemy_skill_id": 611,
+                    "extra_description": null,
+                    "max_amount": 100,
+                    "min_amount": 100,
+                    "params": [
+                        "HP fully recovered",
+                        100,
+                        100,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null
+                    ],
+                    "target": "player",
+                    "type": 55
+                },
+                "condition": {
+                    "_ai": 100,
+                    "_rnd": 0,
+                    "condition_attributes": null,
+                    "enemies_remaining": null,
+                    "forced_one_time": null,
+                    "hp_threshold": null,
+                    "on_death": null,
+                    "one_time": null
+                },
+                "enemy_skill_id": 611,
+                "extra_description": null
+            },
+            {
+                "behavior": {
+                    "_name": "ERROR26",
+                    "enemy_skill_id": 26,
+                    "extra_description": null,
+                    "params": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        4,
+                        null,
+                        null,
+                        null
+                    ],
+                    "type": 36
+                },
+                "condition": null,
+                "enemy_skill_id": 26,
+                "extra_description": null
+            },
+            {
+                "behavior": {
+                    "_name": "Toyama Whirlwind",
+                    "attack": {
+                        "atk_multiplier": 40,
+                        "max_hits": 4,
+                        "min_hits": 4
+                    },
+                    "enemy_skill_id": 613,
+                    "extra_description": null,
+                    "params": [
+                        null,
+                        4,
+                        4,
+                        40,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        30,
+                        null,
+                        null,
+                        null,
+                        null
+                    ],
+                    "type": 15
+                },
+                "condition": {
+                    "_ai": 100,
+                    "_rnd": 0,
+                    "condition_attributes": null,
+                    "enemies_remaining": null,
+                    "forced_one_time": null,
+                    "hp_threshold": 30,
+                    "on_death": null,
+                    "one_time": null
+                },
+                "enemy_skill_id": 613,
+                "extra_description": null
+            },
+            {
+                "behavior": {
+                    "_name": "Cherry Blossom Storm",
+                    "attack": {
+                        "atk_multiplier": 120,
+                        "max_hits": 1,
+                        "min_hits": 1
+                    },
+                    "enemy_skill_id": 612,
+                    "extra_description": null,
+                    "orb_from": -1,
+                    "orb_to": 2,
+                    "params": [
+                        null,
+                        120,
+                        -1,
+                        2,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        70,
+                        null,
+                        1,
+                        null,
+                        null
+                    ],
+                    "random_count": null,
+                    "type": 48
+                },
+                "condition": {
+                    "_ai": 100,
+                    "_rnd": 0,
+                    "condition_attributes": null,
+                    "enemies_remaining": null,
+                    "forced_one_time": null,
+                    "hp_threshold": 70,
+                    "on_death": null,
+                    "one_time": 1
+                },
+                "enemy_skill_id": 612,
+                "extra_description": null
+            }
+        ],
+        "leader_skill": {
+            "_atk": 1,
+            "_hp": 1,
+            "_rcv": 1,
+            "_shield": 0,
+            "multiplier": 3.0,
+            "name": "Amitan's Protection",
+            "raw_description": "Heals HP equal to 3x RCV when matching Orbs",
+            "skill_id": 767,
+            "skill_type": 13
+        },
+        "leader_skill_id": 767,
+        "monster_id": 841,
+        "monster_no": 841,
+        "server": "Server.na"
+    }
+}

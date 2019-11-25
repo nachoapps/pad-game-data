@@ -1,0 +1,58 @@
+#991  - モルボルワースト
+False : use_new_ai
+1 : starting/max counter
+0 : counter increment
+
+ESPreemptive(49:355) -> ESPreemptive
+Enable preempt if level 5
+
+ESBranchLevel(35:25) -> ESBranchLevel
+Branch on level > 7, target rnd 12
+
+ESBranchLevel(35:25) -> ESBranchLevel
+Branch on level > 5, target rnd 5
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 1, target rnd 9
+
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b1
+
+ESPoisonChangeRandom(60:1931) -> 消化液
+Change Random 3 to Poison
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESBindRandom(1:184) -> Bad Breath
+	Condition: When < 30% hp , one-time use (ai:100 rnd:0) (one-time: 1)
+Bind 6 random cards for 1~3 turns
+
+ESPoisonChangeRandomAttack(64:1932) -> モルボル菌
+Change Random 2 to Poison, Deal 75% damage
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 1, target rnd 16
+
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b1
+
+ESPoisonChangeRandom(60:1934) -> みだれ消化液
+Change Random 12 to Poison
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESBindRandom(1:184) -> Bad Breath
+	Condition: When < 30% hp , one-time use (ai:100 rnd:0) (one-time: 1)
+Bind 6 random cards for 1~3 turns
+
+ESPoisonChangeRandomAttack(64:1932) -> モルボル菌
+Change Random 2 to Poison, Deal 75% damage
+

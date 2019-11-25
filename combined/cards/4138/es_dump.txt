@@ -1,0 +1,121 @@
+#4138  - Nergigante
+True : use_new_ai
+1 : starting/max counter
+1 : counter increment
+
+ESPreemptive(49:3402) -> ESPreemptive
+Enable preempt if level 4
+
+ESBranchLevel(35:25) -> ESBranchLevel
+Branch on level > 4, target rnd 4
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 1, target rnd 8
+
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b1
+
+SkillSet:
+	[0] ESDamageShield(74:8831) -> Extinction Dragon's Force
+	Reduce damage from all sources by 50% for 5 turns
+	[1] ESBindRandom(1:8830) -> Roar
+	Bind 6 random cards for 1 turns
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESBranchHP(28:18) -> ESBranchHP
+Branch on hp < 10, target rnd 29
+
+ESBranchHP(28:18) -> ESBranchHP
+Branch on hp < 50, target rnd 25
+
+ESBranchHP(28:18) -> ESBranchHP
+Branch on hp < 75, target rnd 15
+
+ESRowSpawnMulti(78:8835) -> Spread Wing Attack
+	Condition: One-time use (ai:100 rnd:0) (one-time: 1)
+Change 3rd row to Jammer orbs
+
+ESAttackMultihit(15:8833) -> Heavy Slam
+	Condition: 50% chance (ai:50 rnd:0)
+Deal 70% damage
+
+ESAttackMultihit(15:8834) -> Headbutt
+Deal 90% damage
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESSetCounter(26:16) -> ESSetCounter
+counter + 1
+
+ESBranchCounter(32:22) -> ESBranchCounter
+Branch on counter > 4, target rnd 22
+
+ESBranchCounter(32:22) -> ESBranchCounter
+Branch on counter > 3, target rnd 21
+
+ESBranchCounter(32:22) -> ESBranchCounter
+Branch on counter > 2, target rnd 20
+
+ESAttackUPRemainingEnemies(17:8836) -> Destruction Impulse
+	Condition: when <= 1 enemies remain (ai:100 rnd:0)
+Increase damage to 150% for the next 3 turns
+
+SkillSet:
+	[0] ESAttackMultihit(15:8837) -> Tail Scythe
+	Deal 70% damage
+	[1] ESOrbSealRow(100:8838) -> Annihilation Spike Whirl
+	Seal 1st row for 4 turns
+
+ESSkillDelay(89:8840) -> Foreleg Uppercut
+Delay active skills by 1 turns, Deal 90% damage
+
+ESSetCounter(25:15) -> ESSetCounter
+counter = 0
+
+SkillSet:
+	[0] ESGravity(50:8841) -> Head Strike
+	Player -50% HP
+	[1] ESAttackMultihit(15:8842) -> Spike Shot
+	Deal 60% damage (2 hits, 30% each)
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+SkillSet:
+	Condition: One-time use (ai:50 rnd:0) (one-time: 1)
+	[0] ESBindAwoken(88:8844) -> Roar
+	Bind awoken skills for 1 turns
+	[1] ESOrbChangeAttackBits(108:8845) -> Pounce Attack
+	Change Light to Jammer, Deal 110% damage
+
+SkillSet:
+	Condition: One-time use (ai:100 rnd:0) (one-time: 1)
+	[0] ESOrbChangeAttackBits(108:8847) -> Tail Strike
+	Change Fire to Jammer, Deal 90% damage
+	[1] ESBindTarget(54:8848) -> Binding Attack
+	Bind 1 own leader for 1 turns, Deal 30% damage
+
+SkillSet:
+	[0] ESRecoverEnemy(86:8850) -> Spike Regeneration
+	Enemy recover 10% hp
+	[1] ESAttackMultihit(15:8851) -> Annihilation Fist
+	Deal 130% damage
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESAttackMultihit(15:8853) -> Aerial Annihilation Spike Whirl
+Deal 600% damage (3 hits, 200% each)
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESAttributeResist(72:8829) -> ネルギガンテ・パッシブ
+Reduce damage from Fire, Water by 50%
+

@@ -1,0 +1,37 @@
+#1663  - Osiris
+False : use_new_ai
+1 : starting/max counter
+1 : counter increment
+
+ESPreemptive(49:318) -> ESPreemptive
+Enable preempt if level 1
+
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 1, target rnd 6
+
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b1
+
+ESSkyfall(68:1792) -> Monarchy of Dark Riches
+Wood, Dark skyfall +25% for 99 turns
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESAttackMultihit(15:1795) -> Invisible Protection
+	Condition: When < 30% hp (ai:100 rnd:0)
+Deal 200% damage (2 hits, 100% each)
+
+ESRowSpawnMulti(79:1794) -> Switch of Judgement
+	Condition: One-time use (ai:100 rnd:0) (one-time: 1)
+Change 3rd row to Jammer orbs, Deal 50% damage
+
+ESColumnSpawnMulti(77:1793) -> Firm Staff of Blessing
+Change 2nd column to Heal orbs, 5th column to Heal orbs, Deal 100% damage
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESAttributeResist(72:1740) -> Light & Dark Resistance
+Reduce damage from Light, Dark by 50%
+

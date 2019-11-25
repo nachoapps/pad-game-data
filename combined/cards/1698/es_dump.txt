@@ -1,0 +1,18 @@
+#1698  - Master Toxicologist, Poison Ivy (Comics)
+False : use_new_ai
+1 : starting/max counter
+0 : counter increment
+
+ESBranchLevel(35:25) -> ESBranchLevel
+Branch on level > 5, target rnd 3
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESBindAttribute(2:1630) -> Chlorokinesis
+	Condition: When < 50% hp , one-time use (ai:100 rnd:0) (one-time: 1)
+Bind Water cards for 3 turns
+
+ESPoisonChangeRandomAttack(64:1631) -> Poison Kiss
+Change Random 7 to Poison, Deal 100% damage
+

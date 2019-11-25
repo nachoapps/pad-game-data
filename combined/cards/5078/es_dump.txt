@@ -1,0 +1,97 @@
+#5078  - Ryu
+True : use_new_ai
+3 : starting/max counter
+0 : counter increment
+
+ESPreemptive(49:318) -> ESPreemptive
+Enable preempt if level 1
+
+ESOrbLock(94:12572) -> This is the path of my destiny!
+	Condition: One-time use (ai:100 rnd:0) (one-time: 2)
+Lock all Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs
+
+ESBranchHP(28:18) -> ESBranchHP
+Branch on hp < 50, target rnd 10
+
+ESBranchCounter(32:22) -> ESBranchCounter
+Branch on counter > 9, target rnd 17
+
+ESSetCounter(26:16) -> ESSetCounter
+counter + 1
+
+SkillSet:
+	Condition: 33% chance (ai:0 rnd:33)
+	[0] ESAttackMultihit(15:12576) -> Collarbone Breaker
+	Deal 50% damage (2 hits, 25% each)
+	[1] ESAttackSinglehit(82:1) -> Disable Skill
+	Deal 100% damage
+	[2] ESAttackMultihit(15:12579) -> Hadoken
+	Deal 45% damage
+
+SkillSet:
+	Condition: 33% chance (ai:0 rnd:33)
+	[0] ESBindAttack(63:12577) -> Solar Plexus Strike
+	Bind 1 random subs for 1~2 turns, Deal 45% damage
+	[1] ESAttackSinglehit(82:1) -> Disable Skill
+	Deal 100% damage
+	[2] ESAttackMultihit(15:12580) -> Shoryuken
+	Deal 50% damage
+
+SkillSet:
+	Condition: 34% chance (ai:0 rnd:34)
+	[0] ESGravity(50:12578) -> Axe Kick
+	Player -25% HP
+	[1] ESAttackSinglehit(82:1) -> Disable Skill
+	Deal 100% damage
+	[2] ESAbsorbCombo(67:12581) -> Tatsumaki Senpukyaku
+	Absorb combo <= 5 damage for 1 turns, Deal 40% damage
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+SkillSet:
+	Condition: One-time use (ai:100 rnd:0) (one-time: 1)
+	[0] ESAttackUPRemainingEnemies(17:12582) -> Denjin Renki
+	Increase damage to 150% for the next 10 turns
+	[1] ESInactivity(66:12670) -> Now the fight's begun!
+	Do nothing
+
+ESBranchHP(28:18) -> ESBranchHP
+Branch on hp < 15, target rnd 15
+
+SkillSet:
+	Condition: 50% chance (ai:0 rnd:50)
+	[0] ESAttackMultihit(15:12576) -> Collarbone Breaker
+	Deal 50% damage (2 hits, 25% each)
+	[1] ESAttackSinglehit(82:1) -> Disable Skill
+	Deal 100% damage
+	[2] ESRowSpawnMulti(79:12585) -> Ooo!
+	Change 3rd row to Light orbs, Deal 45% damage
+
+SkillSet:
+	Condition: 50% chance (ai:0 rnd:50)
+	[0] ESBindAttack(63:12577) -> Solar Plexus Strike
+	Bind 1 random subs for 1~2 turns, Deal 45% damage
+	[1] ESAttackSinglehit(82:1) -> Disable Skill
+	Deal 100% damage
+	[2] ESColumnSpawnMulti(77:12586) -> Shoryuken
+	Change 4th column to Light orbs, Deal 50% damage
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESColumnSpawnMulti(77:12588) -> Denjin Hadoken
+Change 4th, 5th column to Light orbs, Deal 400% damage
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESSetCounter(25:15) -> ESSetCounter
+counter = 0
+
+ESAttackMultihit(15:12587) -> Shinku Hadoken
+Deal 350% damage
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+

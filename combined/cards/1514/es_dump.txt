@@ -1,0 +1,89 @@
+#1514  - Nomadic Dancer, Fuu
+True : use_new_ai
+1 : starting/max counter
+0 : counter increment
+
+ESPreemptive(49:318) -> ESPreemptive
+Enable preempt if level 1
+
+SkillSet:
+	Condition: One-time use (ai:100 rnd:0) (one-time: 1)
+	[0] ESStatusShield(20:10210) -> I'm here!
+	Voids status ailments for 999 turns
+	[1] ESAbsorbCombo(67:10211) -> Are you ready?
+	Absorb combo <= 4 damage for 999 turns
+	[2] ESCloud(104:10212) -> Run, run, run!
+	6x3 cloud appear for 1 turns at 2nd row, 1st column, Deal 120% damage
+
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 1, target rnd 9
+
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b1
+
+ESBranchCombo(113:6528) -> ESBranchCombo
+Branch on combo >= 5, target rnd 7
+
+ESDebuffMovetime(39:10215) -> Hehe! You give up?
+Movetime 25% for 1 turns
+
+ESSpinnersFixed(110:10214) -> Hum! What about this?
+Specific orbs change every 1.0s for 1 turns
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 2, target rnd 13
+
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b11
+
+ESCloud(104:10216) -> Run more!
+4x5 cloud appear for 1 turns at 1st row, 2nd column, Deal 100% damage
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 4, target rnd 19
+
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b111
+
+ESBranchCombo(113:6528) -> ESBranchCombo
+Branch on combo >= 5, target rnd 17
+
+ESDebuffMovetime(39:10215) -> Hehe! You give up?
+Movetime 25% for 1 turns
+
+ESSpinnersFixed(110:10214) -> Hum! What about this?
+Specific orbs change every 1.0s for 1 turns
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 8, target rnd 23
+
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b1111
+
+ESAttackMultihit(15:10217) -> Let's attack together!
+Deal 200% damage (5 hits, 40% each)
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b0
+
+ESCloud(104:10212) -> Run, run, run!
+6x3 cloud appear for 1 turns at 2nd row, 1st column, Deal 120% damage
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESTypeResist(118:10209) -> Heal Attack Types Halved
+Reduce damage from Healer, Attacker by 50%
+

@@ -1,0 +1,55 @@
+#3629  - 時代の終わりを告げる黒き竜・アクノロギア
+True : use_new_ai
+7 : starting/max counter
+0 : counter increment
+
+ESPreemptive(49:318) -> ESPreemptive
+Enable preempt if level 1
+
+SkillSet:
+	Condition: One-time use (ai:100 rnd:0) (one-time: 4)
+	[0] ESBlindStickyFixed(98:6723) -> I am the true Dragon King!
+	Blind orbs in specific positions for 1 turns
+	[1] ESStatusShield(20:6724) -> Acnologia Transformation
+	Voids status ailments for 999 turns
+
+SkillSet:
+	Condition: One-time use (ai:100 rnd:0) (one-time: 2)
+	[0] ESFixedStart(101:6726) -> I recognize you as my enemy
+	Fix orb movement starting point to random position on the board
+	[1] ESAttackMultihit(15:6727) -> GWAAAH-
+	Deal 150% damage (3 hits, 50% each)
+
+ESDebuffMovetime(39:6728) -> You can't escape
+	Condition: One-time use (ai:100 rnd:0) (one-time: 1)
+Movetime -1s for 3 turns
+
+ESBranchHP(28:18) -> ESBranchHP
+Branch on hp < 35, target rnd 8
+
+ESAttackMultihit(15:6727) -> GWAAAH-
+	Condition: 50% chance (ai:50 rnd:0)
+Deal 150% damage (3 hits, 50% each)
+
+ESAttackMultihit(15:6730) -> DESTROY!!! DESTROY!!!
+Deal 120% damage (2 hits, 60% each)
+
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 1, target rnd 12
+
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b1
+
+ESAttackUPRemainingEnemies(17:6729) -> Total Annihilation is what I seek!
+	Condition: when <= 1 enemies remain (ai:100 rnd:0)
+Increase damage to 200% for the next 999 turns
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESBoardChangeAttackBits(85:6731) -> Howl
+Change all orbs to Fire, Deal 500% damage
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+

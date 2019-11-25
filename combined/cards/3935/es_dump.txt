@@ -1,0 +1,49 @@
+#3935  - Thorn Protection Dragon Caller, Weld
+True : use_new_ai
+1 : starting/max counter
+0 : counter increment
+
+ESPreemptive(49:318) -> ESPreemptive
+Enable preempt if level 1
+
+ESBranchCard(90:13848) -> ESBranchCard
+Branch on player_cards HAS [3942, 3943], target rnd 4
+
+ESAbsorbCombo(67:13853) -> What business do you have in this place?
+	Condition: One-time use (ai:100 rnd:0) (one-time: 1)
+Absorb combo <= 7 damage for 3 turns
+
+ESAbsorbCombo(67:13854) -> I see you're here as expected
+	Condition: One-time use (ai:100 rnd:0) (one-time: 1)
+Absorb combo <= 7 damage for 3 turns
+
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 1, target rnd 9
+
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b1
+
+ESBindAwoken(88:13855) -> I'll tie you up if you make a scene here
+Bind awoken skills for 1 turns
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 2, target rnd 13
+
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b11
+
+ESBindRandomSub(65:13856) -> Thorn Fang's Detainment
+Bind 4 random subs for 3 turns
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESBoardChangeAttackBits(85:13857) -> Hydrosnake
+Change all orbs to Fire, Water, Heal, Deal 200% damage
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+

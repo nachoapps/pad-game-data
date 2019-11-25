@@ -1,0 +1,34 @@
+#5262  - Marco
+True : use_new_ai
+1 : starting/max counter
+0 : counter increment
+
+ESPreemptive(49:318) -> ESPreemptive
+Enable preempt if level 1
+
+ESStatusShield(20:13282) -> You will face me.
+	Condition: One-time use (ai:100 rnd:0) (one-time: 1)
+Voids status ailments for 5 turns
+
+ESBranchHP(29:19) -> ESBranchHP
+Branch on hp > 51, target rnd 5
+
+ESAttackMultihit(15:13286) -> I entrust the future in their hands!
+	Condition: 50% chance (ai:50 rnd:0)
+Deal 120% damage (4 hits, 30% each)
+
+ESSkillDelay(89:13283) -> I am the most serious now.
+	Condition: 33% chance (ai:0 rnd:33)
+Delay active skills by 2 turns, Deal 100% damage
+
+ESOrbChangeAttack(48:13284) -> Witness my justice!!!
+	Condition: 33% chance (ai:0 rnd:33)
+Change Random to Light, Deal 90% damage
+
+ESRowSpawnMulti(79:13285) -> I'm not finished yet!
+	Condition: 34% chance (ai:0 rnd:34)
+Change 2nd row to Light orbs, Deal 95% damage
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+

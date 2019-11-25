@@ -1,0 +1,56 @@
+#5653  - 相良宗介
+True : use_new_ai
+3 : starting/max counter
+0 : counter increment
+
+ESPreemptive(49:3402) -> ESPreemptive
+Enable preempt if level 4
+
+ESBranchLevel(35:25) -> ESBranchLevel
+Branch on level > 4, target rnd 4
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESCloud(104:14966) -> 戦闘開始だ
+	Condition: One-time use (ai:100 rnd:0) (one-time: 2)
+2x2 cloud appear for 3 turns at random location
+
+ESBranchHP(28:18) -> ESBranchHP
+Branch on hp < 50, target rnd 12
+
+ESBranchHP(29:19) -> ESBranchHP
+Branch on hp > 76, target rnd 8
+
+ESSpinnersRandom(109:14969) -> 次は貴様を撃つ
+	Condition: One-time use (ai:100 rnd:0) (one-time: 1)
+Random 2 orbs change every 1.0s for 5 turns
+
+ESRandomSpawn(92:14967) -> 安心するのはまだ早い
+	Condition: 33% chance (ai:0 rnd:33)
+Spawn random 5 Dark orbs, Deal 95% damage
+
+ESAttackMultihit(15:14968) -> くそっ
+	Condition: 33% chance (ai:0 rnd:33)
+Deal 100% damage
+
+ESAttackMultihit(15:14971) -> くたばれ……！
+	Condition: 34% chance (ai:0 rnd:34)
+Deal 105% damage (3 hits, 35% each)
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 1, target rnd 6
+
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b1
+
+ESAttackUPRemainingEnemies(17:14970) -> やってみるしかない
+	Condition: when <= 1 enemies remain (ai:100 rnd:0)
+Increase damage to 150% for the next 5 turns
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+

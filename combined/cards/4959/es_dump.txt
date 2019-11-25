@@ -1,0 +1,88 @@
+#4959  - ぬらりひょん
+True : use_new_ai
+1 : starting/max counter
+1 : counter increment
+
+ESPreemptive(49:318) -> ESPreemptive
+Enable preempt if level 1
+
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 1, target rnd 6
+
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b1
+
+SkillSet:
+	[0] ESOrbLock(94:12033) -> 貴様に　妖魔界のなにが分かる！
+	Lock all Fire, Water, Wood, Dark, Heal orbs
+	[1] ESGravity(50:12034) -> ここを通すわけにはいかん！
+	Player -75% HP
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESBranchHP(28:18) -> ESBranchHP
+Branch on hp < 15, target rnd 18
+
+ESBranchHP(28:18) -> ESBranchHP
+Branch on hp < 50, target rnd 14
+
+ESBindRandomSub(65:12035) -> そこを動くなっ！
+	Condition: 20% chance (ai:0 rnd:20)
+Bind 1 random subs for 2 turns, Deal 85% damage
+
+ESRecoverEnemy(86:12036) -> ぬるいぞ！
+	Condition: 20% chance (ai:0 rnd:20)
+Enemy recover 5% hp, Deal 90% damage
+
+ESAttackMultihit(15:12037) -> フンッ！
+	Condition: 20% chance (ai:0 rnd:20)
+Deal 100% damage
+
+ESOrbChangeAttack(48:12038) -> 闇に染まるがいい！
+	Condition: 20% chance (ai:0 rnd:20)
+Change Random to Dark, Deal 95% damage
+
+ESRowSpawnMulti(79:12039) -> 我が妖術を受けよ！
+	Condition: One-time use (ai:0 rnd:20) (one-time: 1)
+Change 5th row to Poison orbs, Deal 80% damage
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 2, target rnd 8
+
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b11
+
+SkillSet:
+	[0] ESDebuffMovetime(39:12041) -> 貴様を甘く見ていたようだな…
+	Movetime 50% for 5 turns
+	[1] ESDebuffRCV(105:12042) -> 全力でいかせてもらう！
+	Rcv 50% for 5 turns
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 4, target rnd 22
+
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b111
+
+ESRecoverEnemy(86:12043) -> ここまで追いつめられるとは…
+Enemy recover 50% hp
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESAttackMultihit(15:12044) -> 裁きの超波動
+Deal 200% damage
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESTurnChangePassive(106:12031) -> 遅いッ！
+Enemy turn counter change to 1 when HP <= 50%
+

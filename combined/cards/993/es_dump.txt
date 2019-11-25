@@ -1,0 +1,35 @@
+#993  - 極滅召喚・ダークフレアバハムート
+False : use_new_ai
+0 : starting/max counter
+0 : counter increment
+
+ESBranchHP(28:179) -> ESBranchHP
+Branch on hp < 50, target rnd 8
+
+ESStatusShield(20:188) -> Mighty Guard
+Voids status ailments for 999 turns
+
+ESNone(0:0) -> ESNone
+nothing
+
+ESNone(0:0) -> ESNone
+nothing
+
+ESNone(0:0) -> ESNone
+nothing
+
+ESNone(0:0) -> ESNone
+nothing
+
+ESEndPath(36:180) -> ESEndPath
+end_turn
+
+ESSetCounterIf(38:177) -> ESSetCounterIf
+set counter = 4 if counter == 0
+
+ESCountdown(37:178) -> ESCountdown
+countdown
+
+ESAttackMultihit(15:187) -> Mega Flare
+Deal 2000% damage (10 hits, 200% each)
+

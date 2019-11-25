@@ -1,0 +1,29 @@
+#2157  - シェル・ファクトリーγ
+True : use_new_ai
+0 : starting/max counter
+0 : counter increment
+
+ESBranchLevel(35:25) -> ESBranchLevel
+Branch on level > 5, target rnd 3
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 1, target rnd 7
+
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b1
+
+ESDamageShield(74:2487) -> サバイバー大増殖
+Reduce damage from all sources by 50% for 2 turns
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESFlagOperation(24:14) -> ESFlagOperation
+flag UNSET 0b11111
+
+ESAttackMultihit(15:2488) -> サバイバー総攻撃
+Deal 500% damage (5 hits, 100% each)
+

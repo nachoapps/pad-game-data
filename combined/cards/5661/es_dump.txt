@@ -1,0 +1,48 @@
+#5661  - アメリア＝ウィル＝テスラ＝セイルーン
+True : use_new_ai
+3 : starting/max counter
+0 : counter increment
+
+ESPreemptive(49:318) -> ESPreemptive
+Enable preempt if level 1
+
+ESAttackMultihit(15:14918) -> 正義の鉄槌を下しますっ！
+	Condition: One-time use (ai:100 rnd:0) (one-time: 2)
+Deal 100% damage
+
+ESBranchHP(28:18) -> ESBranchHP
+Branch on hp < 1, target rnd 8
+
+ESBranchHP(28:18) -> ESBranchHP
+Branch on hp < 10, target rnd 9
+
+SkillSet:
+	Condition: 50% chance (ai:0 rnd:50)
+	[0] ESRowSpawnMulti(79:14920) -> 烈閃槍
+	Change 3rd row to Light orbs, Deal 25% damage
+	[1] ESAttackMultihit(15:14921) -> ブレイク！
+	Deal 35% damage
+
+ESAttackMultihit(15:14922) -> 霊王結魔弾
+	Condition: 50% chance (ai:0 rnd:50)
+Deal 70% damage (2 hits, 35% each)
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESRecoverEnemy(86:14923) -> 復活
+	Condition: One-time use (ai:100 rnd:0) (one-time: 1)
+Enemy recover 100% hp
+
+ESColumnSpawnMulti(77:14924) -> 崩霊裂
+Change 3rd, 4th column to Light orbs, Deal 200% damage
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESResolve(73:14917) -> 根性
+Survive attacks with 1 HP when HP > 50%
+
+ESTypeResist(118:14964) -> 攻撃悪魔半減
+Reduce damage from Attacker, Devil by 50%
+

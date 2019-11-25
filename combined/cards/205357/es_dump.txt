@@ -1,0 +1,43 @@
+#205357  - ヤミフエドラ
+True : use_new_ai
+3 : starting/max counter
+0 : counter increment
+
+ESPreemptive(49:3402) -> ESPreemptive
+Enable preempt if level 4
+
+ESBranchLevel(35:25) -> ESBranchLevel
+Branch on level > 4, target rnd 4
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESRandomSpawn(92:13447) -> 魔龍のメロディー
+	Condition: One-time use & when Fire, Water, Wood, Light, Dark, Jammer, Poison, Mortal Poison orbs are on the board (ai:100 rnd:0) (one-time: 2)
+Spawn random 10 Poison orbs
+
+ESAbsorbCombo(67:13448) -> カデンツァグルービー
+	Condition: One-time use (ai:100 rnd:0) (one-time: 1)
+Absorb combo <= 5 damage for 3 turns
+
+ESBranchHP(28:18) -> ESBranchHP
+Branch on hp < 20, target rnd 10
+
+ESAttackMultihit(15:13449) -> モルトクレッシェンド
+	Condition: 50% chance (ai:0 rnd:50)
+Deal 105% damage (3 hits, 35% each)
+
+ESBombRandomSpawn(102:13450) -> ビートロック
+	Condition: 50% chance (ai:0 rnd:50)
+Spawn random 3 locked Bomb orbs, Deal 95% damage
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESRandomSpawn(92:13451) -> アラルガンドマルカート
+	Condition: When fire, water, wood, light, dark, heal, jammer, mortal poison orbs are on the board (ai:100 rnd:0)
+Spawn random 5 Poison orbs, Deal 150% damage
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+

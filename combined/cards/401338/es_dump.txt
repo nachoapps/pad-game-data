@@ -1,0 +1,126 @@
+#401338  - Alt. Durga
+True : use_new_ai
+2 : starting/max counter
+1 : counter increment
+
+ESPreemptive(49:318) -> ESPreemptive
+Enable preempt if level 1
+
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 1, target rnd 6
+
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b1
+
+SkillSet:
+	[0] ESBindTarget(54:10220) -> What do you want?
+	Bind 1 both leaders for 4 turns
+	[1] ESAbsorbThreshold(87:10221) -> I don't like you
+	Absorb damage >= 5000000 damage for 10 turns
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESBranchHP(28:18) -> ESBranchHP
+Branch on hp < 1, target rnd 27
+
+ESBranchHP(29:19) -> ESBranchHP
+Branch on hp > 100, target rnd 25
+
+ESBranchHP(28:18) -> ESBranchHP
+Branch on hp < 10, target rnd 31
+
+ESBranchHP(28:18) -> ESBranchHP
+Branch on hp < 50, target rnd 16
+
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 2, target rnd 14
+
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b11
+
+SkillSet:
+	[0] ESBindSkill(14:10223) -> Hey!
+	Bind active skills for 5 turns
+	[1] ESGravity(50:10224) -> You're OK with this, right?
+	Player -99% HP
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESRandomSpawn(92:10236) -> You're useless!
+	Condition: When fire, water, wood, light, dark, heal, poison, mortal poison orbs are on the board (ai:100 rnd:0)
+Spawn random 3 Jammer orbs, Deal 150% damage
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 4, target rnd 20
+
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b111
+
+SkillSet:
+	[0] ESDamageShield(74:10227) -> Protect me!
+	Reduce damage from all sources by 50% for 999 turns
+	[1] ESOrbChangeAttackBits(108:10228) -> Let me get rid of these!
+	Change Dark to Jammer, Deal 100% damage
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESOrbChangeAttackBits(108:10230) -> It suits you!
+Change Jammer to Mortal Poison, Deal 100% damage
+
+ESOrbChangeAttackBits(108:10228) -> Let me get rid of these!
+	Condition: 33% chance (ai:0 rnd:33)
+Change Dark to Jammer, Deal 100% damage
+
+ESGravity(50:10224) -> You're OK with this, right?
+	Condition: 33% chance (ai:0 rnd:33)
+Player -99% HP
+
+ESAttackMultihit(15:10231) -> Hey now, what's up with you?
+	Condition: 34% chance (ai:0 rnd:34)
+Deal 120% damage (2 hits, 60% each)
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESBindAwoken(88:10226) -> How about that?
+	Condition: One-time use (ai:100 rnd:0) (one-time: 2)
+Bind awoken skills for 2 turns
+
+ESBranchRemainingEnemies(120:8595) -> ESBranchRemainingEnemies
+Branch on remaining enemies <= 1, target rnd 10
+
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 8, target rnd 31
+
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b1111
+
+SkillSet:
+	[0] ESBindAwoken(88:13722) -> How about that?
+	Bind awoken skills for 2 turns
+	[1] ESAbsorbCombo(67:13723) -> Something's missing...
+	Absorb combo <= 6 damage for 99 turns
+	[2] ESBindRandomSub(65:13724) -> Just sleep already!
+	Bind 4 random subs for 2 turns
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESAttackMultihit(15:10235) -> You're not that good...
+Deal 300% damage (3 hits, 100% each)
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESResolve(73:10218) -> Resolve
+Survive attacks with 1 HP when HP > 75%
+
+ESTurnChangePassive(106:13721) -> Pick up the pace!
+Enemy turn counter change to 1 when HP <= 99%
+

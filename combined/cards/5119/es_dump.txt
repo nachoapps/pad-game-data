@@ -1,0 +1,227 @@
+#5119  - Righteous Warblade, Qilin
+True : use_new_ai
+0 : starting/max counter
+0 : counter increment
+
+ESPreemptive(49:318) -> ESPreemptive
+Enable preempt if level 1
+
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 1, target rnd 6
+
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b1
+
+ESInvulnerableOn(119:12352) -> Okay, let's go!
+Immune to damage from all sources for 999 turns
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESBranchRemainingEnemies(120:8595) -> ESBranchRemainingEnemies
+Branch on remaining enemies <= 1, target rnd 16
+
+ESBranchHP(28:18) -> ESBranchHP
+Branch on hp < 25, target rnd 38
+
+ESBranchHP(28:18) -> ESBranchHP
+Branch on hp < 50, target rnd 34
+
+ESBranchHP(28:18) -> ESBranchHP
+Branch on hp < 75, target rnd 30
+
+ESBranchCounter(31:21) -> ESBranchCounter
+Branch on counter = 0, target rnd 12
+
+ESDamageShield(74:12356) -> Protective Impact
+	Condition: 50% chance (ai:50 rnd:0)
+Reduce damage from all sources by 50% for 1 turns, Deal 65% damage
+
+ESAttackMultihit(15:12353) -> Light Sword Dance Strike
+	Condition: 33% chance (ai:0 rnd:33)
+Deal 68% damage (4 hits, 17% each)
+
+ESGravity(50:12354) -> Hah!!
+	Condition: 33% chance (ai:0 rnd:33)
+Player -77% HP
+
+ESSkillDelay(89:12355) -> Double Sword Wave
+	Condition: 34% chance (ai:0 rnd:34)
+Delay active skills by 2 turns, Deal 60% damage
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 2, target rnd 21
+
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b11
+
+ESSetCounter(26:16) -> ESSetCounter
+counter + 1
+
+SkillSet:
+	[0] ESInvulnerableOff(121:12358) -> Okay, get ready to rumble!
+	Remove damage immunity effect
+	[1] ESStatusShield(20:12359) -> Now I'm serious!
+	Voids status ailments for 999 turns
+	[2] ESVoidShield(71:12360) -> Are you ready?
+	Void damage >= 25000000 for 999 turns
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESBranchHP(28:18) -> ESBranchHP
+Branch on hp < 25, target rnd 56
+
+ESBranchCounter(32:22) -> ESBranchCounter
+Branch on counter > 7, target rnd 45
+
+ESSetCounter(26:16) -> ESSetCounter
+counter + 1
+
+ESBranchHP(28:18) -> ESBranchHP
+Branch on hp < 50, target rnd 52
+
+ESBranchHP(28:18) -> ESBranchHP
+Branch on hp < 75, target rnd 48
+
+SkillSet:
+	Condition: 33% chance (ai:0 rnd:33)
+	[0] ESAttackMultihit(15:12353) -> Light Sword Dance Strike
+	Deal 68% damage (4 hits, 17% each)
+	[1] ESOrbLock(94:12367) -> Immovable Flash
+	Lock 12 random Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs, Deal 40% damage
+
+SkillSet:
+	Condition: 33% chance (ai:0 rnd:33)
+	[0] ESAttackMultihit(15:12353) -> Light Sword Dance Strike
+	Deal 68% damage (4 hits, 17% each)
+	[1] ESBlindStickyRandom(97:12368) -> Dark Strike
+	Blind random 7 orbs for 1 turns, Deal 36% damage
+
+SkillSet:
+	Condition: 34% chance (ai:0 rnd:34)
+	[0] ESAttackMultihit(15:12353) -> Light Sword Dance Strike
+	Deal 68% damage (4 hits, 17% each)
+	[1] ESSpinnersRandom(109:12369) -> Furious Cut
+	Random 2 orbs change every 1.0s for 1 turns, Deal 38% damage
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 4, target rnd 10
+
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b111
+
+ESDebuffRCV(105:12371) -> Here I come!
+Rcv 50% for 10 turns
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 8, target rnd 10
+
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b1111
+
+ESDebuffMovetime(39:12373) -> I'm hungry...
+Movetime 50% for 5 turns
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 16, target rnd 42
+
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b11111
+
+ESSkillDelay(89:12376) -> I won't forgive you anymore!
+Delay active skills by 12 turns
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESBranchHP(29:19) -> ESBranchHP
+Branch on hp > 11, target rnd 11
+
+ESAttackMultihit(15:12379) -> Strong Blade Boisterous Dance
+Deal 1000% damage (10 hits, 100% each)
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESSetCounter(25:15) -> ESSetCounter
+counter = 1
+
+SkillSet:
+	[0] ESBindAwoken(88:12362) -> Destructive Fighting Spririt
+	Bind awoken skills for 5 turns
+	[1] ESRecoverEnemyAlly(52:12363) -> Seven-Star Regeneration
+	Enemy ally recover 100% hp
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 4, target rnd 26
+
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b111
+
+SkillSet:
+	[0] ESDebuffRCV(105:12371) -> Here I come!
+	Rcv 50% for 10 turns
+	[1] ESGravity(50:12354) -> Hah!!
+	Player -77% HP
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 8, target rnd 26
+
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b1111
+
+SkillSet:
+	[0] ESDebuffMovetime(39:12373) -> I'm hungry...
+	Movetime 50% for 5 turns
+	[1] ESDispel(6:12374) -> Chomp!
+	Voids player buff effects
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 16, target rnd 60
+
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b11111
+
+SkillSet:
+	[0] ESSkillDelay(89:12376) -> I won't forgive you anymore!
+	Delay active skills by 12 turns
+	[1] ESDispel(6:12374) -> Chomp!
+	Voids player buff effects
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESBranchHP(29:19) -> ESBranchHP
+Branch on hp > 11, target rnd 22
+
+SkillSet:
+	[0] ESChangeAttribute(46:12378) -> Changing Armor
+	Change own attribute to random one of Fire, Water, Wood, Light, Dark
+	[1] ESAttackMultihit(15:12379) -> Strong Blade Boisterous Dance
+	Deal 1000% damage (10 hits, 100% each)
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+

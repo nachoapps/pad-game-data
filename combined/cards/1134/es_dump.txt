@@ -1,0 +1,27 @@
+#1134  - Dark Holy Skydragon, Shangri-La
+True : use_new_ai
+1 : starting/max counter
+1 : counter increment
+
+ESPreemptive(49:318) -> ESPreemptive
+Enable preempt if level 1
+
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 1, target rnd 6
+
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b1
+
+ESAttackMultihit(15:794) -> Dark Skydragon Flight
+Deal 85% damage
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESBindAttack(63:1625) -> Gigavolt Breath
+	Condition: When < 50% hp , one-time use (ai:100 rnd:0) (one-time: 1)
+Bind 6 random cards for 1 turns, Deal 150% damage
+
+ESAttackMultihit(15:476) -> Breath of the Holy Sky
+Deal 100%~120% damage (5~6 hits, 20% each)
+

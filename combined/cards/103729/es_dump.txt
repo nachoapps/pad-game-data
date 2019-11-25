@@ -1,0 +1,73 @@
+#103729  - Alt. Yangshi
+True : use_new_ai
+1 : starting/max counter
+0 : counter increment
+
+ESPreemptive(49:3402) -> ESPreemptive
+Enable preempt if level 4
+
+ESBranchLevel(35:25) -> ESBranchLevel
+Branch on level > 4, target rnd 4
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 1, target rnd 10
+
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b1
+
+ESBranchLevel(34:24) -> ESBranchLevel
+Branch on level = 4, target rnd 8
+
+ESAbsorbAttribute(53:8203) -> Guanghushenfu
+Absorb Light damage for 2~6 turns
+
+ESStatusShield(20:7376) -> Hushenfu
+Voids status ailments for 1 turns
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESOrbLock(94:7380) -> Guangshufu
+	Condition: When < 50% hp , one-time use (ai:100 rnd:0) (one-time: 1)
+Lock all Light orbs, Deal 50% damage
+
+ESAttackUPRemainingEnemies(17:7353) -> Fennu
+	Condition: when <= 1 enemies remain (ai:100 rnd:0)
+Increase damage to 150% for the next 999 turns
+
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 2, target rnd 16
+
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b11
+
+ESDamageShield(74:7350) -> Shandian
+Reduce damage from all sources by 35% for 2 turns, Deal 80% damage
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 4, target rnd 20
+
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b111
+
+ESAttackMultihit(15:7352) -> Gongji
+Deal 100% damage (2 hits, 50% each)
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESFlagOperation(24:14) -> ESFlagOperation
+flag UNSET 0b110
+
+ESInactivity(66:7360) -> Jumping, jumping
+Do nothing
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+

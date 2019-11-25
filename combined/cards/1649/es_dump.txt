@@ -1,0 +1,37 @@
+#1649  - Red Knight, Nim
+True : use_new_ai
+3 : starting/max counter
+0 : counter increment
+
+ESPreemptive(49:318) -> ESPreemptive
+Enable preempt if level 1
+
+SkillSet:
+	Condition: One-time use (ai:100 rnd:0) (one-time: 2)
+	[0] ESStatusShield(20:14730) -> Knight Armor
+	Voids status ailments for 5 turns
+	[1] ESDamageShield(74:14295) -> Knight's Pride
+	Reduce damage from all sources by 99% for 3 turns
+
+ESBranchCounter(32:22) -> ESBranchCounter
+Branch on counter > 2, target rnd 6
+
+ESSetCounter(26:16) -> ESSetCounter
+counter + 1
+
+ESAttackMultihit(15:8426) -> Quadruple Shot
+Deal 400% damage (4 hits, 100% each)
+
+SkillSet:
+	Condition: One-time use (ai:100 rnd:0) (one-time: 1)
+	[0] ESSpinnersRandom(109:8422) -> Pinpoint
+	Random 1 orbs change every 1.0s for 10 turns
+	[1] ESAttackMultihit(15:8426) -> Quadruple Shot
+	Deal 400% damage (4 hits, 100% each)
+
+ESAttackMultihit(15:8426) -> Quadruple Shot
+Deal 400% damage (4 hits, 100% each)
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+

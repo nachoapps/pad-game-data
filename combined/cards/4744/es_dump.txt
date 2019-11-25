@@ -1,0 +1,120 @@
+#4744  - Glowing Celestial Divinities, Sól & Máni
+True : use_new_ai
+1 : starting/max counter
+1 : counter increment
+
+ESPreemptive(49:318) -> ESPreemptive
+Enable preempt if level 1
+
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 1, target rnd 6
+
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b1
+
+SkillSet:
+	[0] ESStatusShield(20:10549) -> Here I go, Máni!
+	Voids status ailments for 999 turns
+	[1] ESSkyfall(96:10550) -> OK, Sól!
+	Locked random skyfall +10% for 15 turns
+	[2] ESOrbLock(94:10551) -> Inseparable Sides
+	Lock all Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESBranchHP(28:18) -> ESBranchHP
+Branch on hp < 50, target rnd 12
+
+SkillSet:
+	Condition: 25% chance (ai:0 rnd:25)
+	[0] ESOrbChangeAttack(48:10555) -> Noctilucence
+	Change Random to Heal, Deal 90% damage
+	[1] ESBlind(62:10553) -> Gloom
+	Blind all orbs on the board, Deal 60% damage
+
+SkillSet:
+	Condition: 25% chance (ai:0 rnd:25)
+	[0] ESPoisonChangeRandomAttack(64:10556) -> Rotting Heat
+	Change Random 3 to Poison, Deal 65% damage
+	[1] ESBlind(62:10553) -> Gloom
+	Blind all orbs on the board, Deal 60% damage
+
+SkillSet:
+	Condition: 25% chance (ai:0 rnd:25)
+	[0] ESOrbChangeAttack(48:10555) -> Noctilucence
+	Change Random to Heal, Deal 90% damage
+	[1] ESBindAttack(63:10554) -> Drought
+	Bind 1 random subs for 1 turns, Deal 60% damage
+
+SkillSet:
+	Condition: 25% chance (ai:0 rnd:25)
+	[0] ESPoisonChangeRandomAttack(64:10556) -> Rotting Heat
+	Change Random 3 to Poison, Deal 65% damage
+	[1] ESBindAttack(63:10554) -> Drought
+	Bind 1 random subs for 1 turns, Deal 60% damage
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 2, target rnd 16
+
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b11
+
+SkillSet:
+	[0] ESSkillDelay(89:10561) -> Rúro Pari
+	Delay active skills by 3 turns
+	[1] ESAttackMultihit(15:10562) -> Synchronized Burst
+	Deal 80% damage (4 hits, 20% each)
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESBranchHP(28:18) -> ESBranchHP
+Branch on hp < 10, target rnd 22
+
+SkillSet:
+	Condition: One-time use (ai:0 rnd:25) (one-time: 1)
+	[0] ESAttackMultihit(15:10562) -> Synchronized Burst
+	Deal 80% damage (4 hits, 20% each)
+	[1] ESBlind(62:10553) -> Gloom
+	Blind all orbs on the board, Deal 60% damage
+
+SkillSet:
+	Condition: One-time use (ai:0 rnd:25) (one-time: 1)
+	[0] ESAttackMultihit(15:10562) -> Synchronized Burst
+	Deal 80% damage (4 hits, 20% each)
+	[1] ESBindAttack(63:10554) -> Drought
+	Bind 1 random subs for 1 turns, Deal 60% damage
+
+SkillSet:
+	Condition: 25% chance (ai:0 rnd:25)
+	[0] ESGravity(50:10564) -> Deteri
+	Player -75% HP
+	[1] ESBlind(62:10553) -> Gloom
+	Blind all orbs on the board, Deal 60% damage
+
+SkillSet:
+	Condition: 25% chance (ai:0 rnd:25)
+	[0] ESGravity(50:10564) -> Deteri
+	Player -75% HP
+	[1] ESBindAttack(63:10554) -> Drought
+	Bind 1 random subs for 1 turns, Deal 60% damage
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+SkillSet:
+	[0] ESChangeAttribute(46:10569) -> Dusk
+	Change own attribute to random one of Fire, Water, Wood, Light, Dark
+	[1] ESAttackMultihit(15:10570) -> Demina Miracle
+	Deal 2500% damage (5 hits, 500% each)
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESAttributeResist(72:10548) -> Light & Wood Resistance
+Reduce damage from Wood, Light by 50%
+

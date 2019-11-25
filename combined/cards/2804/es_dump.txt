@@ -1,0 +1,85 @@
+#2804  - Shuten-doji
+True : use_new_ai
+1 : starting/max counter
+0 : counter increment
+
+ESPreemptive(49:318) -> ESPreemptive
+Enable preempt if level 1
+
+SkillSet:
+	Condition: One-time use (ai:100 rnd:0) (one-time: 1)
+	[0] ESSkyfall(68:15102) -> 楽しませてもらうぞ
+	Jammer skyfall +100% for 4 turns
+	[1] ESRandomSpawn(92:15104) -> 酒の肴に丁度いい
+	Spawn random 6 Fire, Water, Wood, Light, Jammer orbs
+	[2] ESAttributeBlock(107:15103) -> お邪魔以外全て消すのだ
+	Unable to match Jammer orbs for 4 turns
+	[3] ESDebuffMovetime(39:15105) -> まぁ頑張ってみろ
+	Movetime 200% for 4 turns
+
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 1, target rnd 10
+
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b1
+
+ESOrbChangeAttackBits(108:15120) -> 酒がまずくなるわ
+Change Fire, Water, Wood, Light, Dark, Heal to Jammer, Deal 1000% damage
+
+ESBranchHP(28:18) -> ESBranchHP
+Branch on hp < 75, target rnd 8
+
+ESAttackMultihit(15:15123) -> ちゃんと戦えいっ！
+Deal 1000% damage (5 hits, 200% each)
+
+SkillSet:
+	[0] ESRandomSpawn(92:15109) -> 次はどうかな？
+	Spawn random 5 Fire, Water, Wood, Light, Dark orbs
+	[1] ESFixedStart(101:15116) -> おまけだ
+	Fix orb movement starting point to random position on the board
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 2, target rnd 17
+
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b11
+
+ESOrbChangeAttackBits(108:15121) -> 酒がまずくなるわ
+Change Fire, Water, Wood, Light, Dark, Heal to Jammer, Deal 1000% damage
+
+ESBranchHP(28:18) -> ESBranchHP
+Branch on hp < 50, target rnd 15
+
+ESAttackMultihit(15:15123) -> ちゃんと戦えいっ！
+Deal 1000% damage (5 hits, 200% each)
+
+SkillSet:
+	[0] ESRandomSpawn(92:15113) -> これは苦しいのではないか？
+	Spawn random 5 Fire, Water, Wood, Light, Dark orbs
+	[1] ESBlind(5:15114) -> おっとおまけを忘れてた
+	Blind all orbs on the board
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESOrbChangeAttackBits(108:15122) -> 酒がまずくなるわ
+Change Fire, Water, Wood, Light, Dark, Heal to Jammer, Deal 1000% damage
+
+ESBranchHP(28:18) -> ESBranchHP
+Branch on hp < 25, target rnd 20
+
+ESAttackMultihit(15:15123) -> ちゃんと戦えいっ！
+Deal 1000% damage (5 hits, 200% each)
+
+SkillSet:
+	[0] ESRandomSpawn(92:15117) -> ここまでやるとは驚きだ
+	Spawn random 3 Fire, Water, Wood, Light, Dark, Heal, Poison, Mortal Poison orbs
+	[1] ESAbsorbCombo(67:15119) -> これで最後だ
+	Absorb combo <= 7 damage for 999 turns
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+

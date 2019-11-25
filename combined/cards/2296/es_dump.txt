@@ -1,0 +1,84 @@
+#2296  - Blue Puppet Master of Rebirth, Charité Machina
+True : use_new_ai
+1 : starting/max counter
+1 : counter increment
+
+ESPreemptive(49:318) -> ESPreemptive
+Enable preempt if level 1
+
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 1, target rnd 6
+
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b1
+
+SkillSet:
+	[0] ESAbsorbAttribute(53:3811) -> Sangen Mechanism
+	Absorb Light, Dark damage for 5 turns
+	[1] ESOrbChangeAttack(48:3819) -> Heal-to-Blue Twist Puppetry
+	Change Heal to Water, Deal 90% damage
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESBranchHP(28:18) -> ESBranchHP
+Branch on hp < 50, target rnd 11
+
+SkillSet:
+	Condition: 40% chance (ai:0 rnd:40)
+	[0] ESChangeAttribute(46:3813) -> Elemental Flip
+	Change own attribute to random one of Fire, Water
+	[1] ESOrbChangeAttack(48:3817) -> Green-to-Red Twist Puppetry
+	Change Wood to Fire, Deal 110% damage
+
+SkillSet:
+	Condition: 25% chance (ai:0 rnd:25)
+	[0] ESChangeAttribute(46:3813) -> Elemental Flip
+	Change own attribute to random one of Fire, Water
+	[1] ESOrbChangeAttack(48:3819) -> Heal-to-Blue Twist Puppetry
+	Change Heal to Water, Deal 90% damage
+
+SkillSet:
+	Condition: 35% chance (ai:0 rnd:35)
+	[0] ESChangeAttribute(46:3813) -> Elemental Flip
+	Change own attribute to random one of Fire, Water
+	[1] ESRowSpawnMulti(79:3822) -> Red Line Stitch Puppetry
+	Change 3rd row to Fire orbs, Deal 100% damage
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+SkillSet:
+	Condition: One-time use (ai:100 rnd:0) (one-time: 1)
+	[0] ESStatusShield(20:3815) -> Impassive
+	Voids status ailments for 1 turns
+	[1] ESBindTarget(54:3836) -> Hold Twin
+	Bind 1 both leaders for 1 turns
+
+ESRowSpawnMulti(79:3838) -> Blue-to-Red Stitch Puppetry
+Change 1st, 3rd, 5th row to Water orbs, 2nd, 4th row to Fire orbs, Deal 220% damage
+
+ESNone(0:0) -> ESNone
+nothing
+
+ESNone(0:0) -> ESNone
+nothing
+
+ESNone(0:0) -> ESNone
+nothing
+
+ESNone(0:0) -> ESNone
+nothing
+
+ESNone(0:0) -> ESNone
+nothing
+
+ESNone(0:0) -> ESNone
+nothing
+
+SkillSet:
+	[0] ESChangeAttribute(46:3814) -> Elemental Flip
+	Change own attribute to random one of Water, Wood
+	[1] ESOrbChangeAttack(48:3820) -> Heal-to-Green Twist Puppetry
+	Change Heal to Wood, Deal 90% damage
+

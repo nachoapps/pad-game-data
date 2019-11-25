@@ -1,0 +1,53 @@
+#101422  - Alt. Guardian of the Sacred City, Athena
+False : use_new_ai
+2 : starting/max counter
+0 : counter increment
+
+ESPreemptive(49:318) -> ESPreemptive
+Enable preempt if level 1
+
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 1, target rnd 6
+
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b1
+
+ESRecoverPlayer(55:461) -> You've done well to make it here.
+	Condition: One-time use (ai:100 rnd:0) (one-time: 1)
+Player recover 100% hp
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESRecoverEnemy(7:1642) -> Resurrection
+	Condition: When < 50% hp , one-time use (ai:100 rnd:0) (one-time: 1)
+Enemy recover 100% hp
+
+ESBindAttribute(2:1643) -> Hymn of Nike
+	Condition: When < 75% hp , one-time use (ai:100 rnd:0) (one-time: 1)
+Bind Dark cards for 10 turns
+
+ESStatusShield(20:1644) -> Aegis Defense
+	Condition: When < 90% hp , one-time use (ai:100 rnd:0) (one-time: 1)
+Voids status ailments for 999 turns
+
+ESBranchHP(28:18) -> ESBranchHP
+Branch on hp < 30, target rnd 14
+
+ESOrbChangeAttack(48:454) -> Shining Spear
+	Condition: 50% chance (ai:50 rnd:0)
+Change Random to Light, Deal 80% damage
+
+ESAttackMultihit(15:456) -> Storm Punisher
+	Condition: 60% chance (ai:60 rnd:0)
+Deal 120% damage (6 hits, 20% each)
+
+ESGravity(50:1645) -> Siculus Strike
+Player -99% HP
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESAttackMultihit(15:458) -> Starburst
+Deal 1000% damage (10 hits, 100% each)
+

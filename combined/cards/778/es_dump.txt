@@ -1,0 +1,50 @@
+#778  - Twisted Mountain God, Grand Tengu
+False : use_new_ai
+1 : starting/max counter
+1 : counter increment
+
+ESBranchHP(29:19) -> ESBranchHP
+Branch on hp > 50, target rnd 5
+
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 1, target rnd 5
+
+ESFlagOperation(44:29) -> ESFlagOperation
+flag OR 0b1
+
+ESNone(0:0) -> ESNone
+nothing
+
+ESBranchHP(29:19) -> ESBranchHP
+Branch on hp > 40, target rnd 9
+
+ESInactivity(16:437) -> Focus my mind...
+	Condition: One-time use (ai:100 rnd:0) (one-time: 1)
+Do nothing
+
+ESAttackMultihit(15:438) -> What lives must die...
+Deal 800% damage (4 hits, 200% each)
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 2, target rnd 13
+
+ESFlagOperation(44:29) -> ESFlagOperation
+flag OR 0b10
+
+ESBindRandom(1:433) -> Bind!
+Bind 3 random cards for 3 turns
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESAttackMultihit(15:435) -> Destroy!
+	Condition: 60% chance (ai:60 rnd:0)
+Deal 150% damage
+
+ESOrbChangeAttack(48:434) -> Terminate!
+	Condition: 60% chance (ai:60 rnd:0)
+Change Random to Jammer, Deal 70% damage
+

@@ -1,0 +1,37 @@
+#748  - Guardian of Life Seiryuu, Karin
+False : use_new_ai
+1 : starting/max counter
+0 : counter increment
+
+ESPreemptive(49:697) -> ESPreemptive
+Enable preempt if level 3
+
+ESBranchLevel(35:25) -> ESBranchLevel
+Branch on level > 3, target rnd 4
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 1, target rnd 8
+
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b1
+
+ESBindSkill(14:1064) -> Binding Wave
+	Condition: One-time use (ai:100 rnd:0) (one-time: 1)
+Bind active skills for 5 turns
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESBranchHP(28:18) -> ESBranchHP
+Branch on hp < 20, target rnd 10
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESAttackMultihit(15:553) -> Eastern Seven-Star Formation
+	Condition: When < 20% hp (ai:100 rnd:0)
+Deal 490% damage (7 hits, 70% each)
+

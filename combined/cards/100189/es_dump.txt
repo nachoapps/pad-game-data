@@ -1,0 +1,49 @@
+#100189  - Alt. Hera
+True : use_new_ai
+1 : starting/max counter
+0 : counter increment
+
+ESPreemptive(49:318) -> ESPreemptive
+Enable preempt if level 1
+
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 1, target rnd 6
+
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b1
+
+SkillSet:
+	[0] ESAbsorbCombo(67:4765) -> Dark Matter
+	Absorb combo <= 6 damage for 99 turns
+	[1] ESAttackMultihit(15:4764) -> Holy Rite
+	Deal 100% damage
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESBranchHP(28:18) -> ESBranchHP
+Branch on hp < 25, target rnd 10
+
+ESJammerChangeRandom(13:4770) -> Mischief by God
+	Condition: 10% chance (ai:10 rnd:0)
+Change Random 2 to Jammer
+
+ESAttackMultihit(15:4767) -> Double Slap
+	Condition: 50% chance (ai:50 rnd:0)
+Deal 120% damage (3 hits, 40% each)
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 2, target rnd 13
+
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b11
+
+ESBindAwoken(88:4768) -> Gathering Energy
+Bind awoken skills for 1 turns
+
+ESAttackMultihit(15:4769) -> Graviton Bomb
+Deal 600% damage
+

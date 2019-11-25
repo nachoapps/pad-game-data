@@ -1,0 +1,57 @@
+#3744  - Dragonbound Shynjé
+True : use_new_ai
+1 : starting/max counter
+1 : counter increment
+
+ESPreemptive(49:318) -> ESPreemptive
+Enable preempt if level 1
+
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 1, target rnd 6
+
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b1
+
+ESSkillDelay(89:7397) -> Sigh... I'm exhausted...
+Delay active skills by 3 turns
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 2, target rnd 10
+
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b11
+
+ESColumnSpawnMulti(76:7398) -> Over here, Bolthas!
+Change 3rd, 4th column to Light, Jammer orbs
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 4, target rnd 14
+
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b111
+
+ESGravity(50:7399) -> Well, Bolthas, they're all yours!
+Player -90% HP
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESBindAttack(63:7401) -> Bolthas is shaking
+	Condition: One-time use (ai:100 rnd:0) (one-time: 1)
+Bind 1 random subs for 1 turns, Deal 170% damage
+
+ESRecoverEnemy(86:7400) -> Twinkle ☆ Bolt
+Enemy recover 50% hp
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESAttributeResist(72:7447) -> Light damage halved
+Reduce damage from Light by 50%
+

@@ -1,0 +1,147 @@
+#2875  - Purifying Thunder Dragon, Sedin
+True : use_new_ai
+1 : starting/max counter
+0 : counter increment
+
+ESPreemptive(49:3402) -> ESPreemptive
+Enable preempt if level 4
+
+ESBranchLevel(35:25) -> ESBranchLevel
+Branch on level > 4, target rnd 4
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 1, target rnd 8
+
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b1
+
+SkillSet:
+	[0] ESStatusShield(20:4354) -> This wishful soul looks tasty
+	Voids status ailments for 5 turns
+	[1] ESDamageShield(74:4353) -> Dividing Damage
+	Reduce damage from all sources by 50% for 5 turns
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+SkillSet:
+	Condition: When < 20% hp , one-time use (ai:100 rnd:0) (one-time: 1)
+	[0] ESRecoverEnemy(86:4381) -> Overcoming Will
+	Enemy recover 29% hp
+	[1] ESAttackUPRemainingEnemies(17:4222) -> Dragonbound's Wrath
+	Increase damage to 200% for the next 999 turns
+
+SkillSet:
+	Condition: When < 20% hp (ai:100 rnd:0)
+	[0] ESAttackMultihit(15:4374) -> Twin Prominence
+	Deal 120% damage (4 hits, 30% each)
+	[1] ESBoardChangeAttackBits(85:4359) -> Sunrise Zone
+	Change all orbs to Fire, Light, Dark, Heal, Deal 150% damage
+
+ESBranchHP(28:18) -> ESBranchHP
+Branch on hp < 50, target rnd 26
+
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 2, target rnd 16
+
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b11
+
+ESBranchCard(90:4356) -> ESBranchCard
+Branch on player_cards HAS [1946, 1947, 2744], target rnd 15
+
+SkillSet:
+	[0] ESAbsorbCombo(67:4358) -> Auroral Chains
+	Absorb combo <= 5 damage for 1 turns
+	[1] ESBoardChangeAttackBits(85:4359) -> Sunrise Zone
+	Change all orbs to Fire, Light, Dark, Heal, Deal 150% damage
+
+SkillSet:
+	[0] ESAbsorbCombo(67:4357) -> Hurry! Let me eat your soul!
+	Absorb combo <= 5 damage for 1 turns
+	[1] ESBoardChangeAttackBits(85:4359) -> Sunrise Zone
+	Change all orbs to Fire, Light, Dark, Heal, Deal 150% damage
+
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 4, target rnd 20
+
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b111
+
+ESBranchHP(28:18) -> ESBranchHP
+Branch on hp < 75, target rnd 14
+
+ESFlagOperation(24:14) -> ESFlagOperation
+flag UNSET 0b100
+
+ESRandomSpawn(92:4362) -> Dawn Guidance
+	Condition: 30% chance & when Water, Wood, Light, Dark, Jammer, Poison, Mortal Poison orbs are on the board (ai:0 rnd:30)
+Spawn random 6 Heal orbs, Deal 175% damage
+
+SkillSet:
+	Condition: 20% chance (ai:0 rnd:20)
+	[0] ESColumnSpawnMulti(77:4363) -> Thunder Roar
+	Change 2nd column to Light orbs, Deal 40% damage
+	[1] ESColumnSpawnMulti(77:4364) -> Heat Roar
+	Change 4th column to Fire orbs, Deal 40% damage
+
+SkillSet:
+	Condition: 15% chance (ai:0 rnd:15)
+	[0] ESColumnSpawnMulti(77:4363) -> Thunder Roar
+	Change 2nd column to Light orbs, Deal 40% damage
+	[1] ESAttackMultihit(15:4366) -> Prominence Bullet
+	Deal 60% damage (3 hits, 20% each)
+
+SkillSet:
+	Condition: 15% chance (ai:0 rnd:15)
+	[0] ESAttackMultihit(15:4365) -> Prominence Breath
+	Deal 60% damage
+	[1] ESColumnSpawnMulti(77:4364) -> Heat Roar
+	Change 4th column to Fire orbs, Deal 40% damage
+
+SkillSet:
+	Condition: 20% chance (ai:0 rnd:20)
+	[0] ESAttackMultihit(15:4365) -> Prominence Breath
+	Deal 60% damage
+	[1] ESAttackMultihit(15:4366) -> Prominence Bullet
+	Deal 60% damage (3 hits, 20% each)
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 8, target rnd 29
+
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b1111
+
+SkillSet:
+	[0] ESAbsorbAttribute(53:4371) -> Purifying Thunder Dragon's Trial
+	Absorb Fire damage for 1 turns
+	[1] ESBindAttack(63:4372) -> Rising Sun's Blazing Whirlpool
+	Bind 4 random cards for 1 turns, Deal 100% damage
+
+SkillSet:
+	Condition: 34% chance (ai:34 rnd:0)
+	[0] ESAttackMultihit(15:4374) -> Twin Prominence
+	Deal 120% damage (4 hits, 30% each)
+	[1] ESOrbLock(94:4376) -> Double-headed Gaze
+	Lock 10 random Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs
+
+SkillSet:
+	Condition: 50% chance (ai:50 rnd:0)
+	[0] ESColumnSpawnMulti(77:4375) -> Red Heat's Purifying Thunder
+	Change 2nd column to Light orbs, 4th column to Fire orbs, Deal 80% damage
+	[1] ESOrbLock(94:4376) -> Double-headed Gaze
+	Lock 10 random Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs
+
+ESRandomSpawn(92:4362) -> Dawn Guidance
+	Condition: When < 75% hp & when Water, Wood, Light, Dark, Jammer, Poison, Mortal Poison orbs are on the board (ai:100 rnd:0)
+Spawn random 6 Heal orbs, Deal 175% damage
+
+ESAttributeResist(72:4383) -> Water Halven
+Reduce damage from Water by 50%
+

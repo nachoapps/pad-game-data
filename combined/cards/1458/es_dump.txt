@@ -1,0 +1,66 @@
+#1458  - Mystic Pentad Dragon, Folklore
+True : use_new_ai
+2 : starting/max counter
+1 : counter increment
+
+ESPreemptive(49:318) -> ESPreemptive
+Enable preempt if level 1
+
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 1, target rnd 6
+
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b1
+
+ESBindAwoken(88:3762) -> Wisdom from Very Ancient Times
+	Condition: One-time use (ai:100 rnd:0) (one-time: 1)
+Bind awoken skills for 3 turns, Deal 70% damage
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESBranchHP(28:18) -> ESBranchHP
+Branch on hp < 50, target rnd 14
+
+ESAttackMultihit(15:3766) -> Gear Tempest
+	Condition: When < 20% hp (ai:100 rnd:0)
+Deal 300% damage (3 hits, 100% each)
+
+SkillSet:
+	Condition: One-time use (ai:100 rnd:0) (one-time: 2)
+	[0] ESBlind(62:3765) -> Cattle Mutilation
+	Blind all orbs on the board, Deal 200% damage
+	[1] ESChangeAttribute(46:3763) -> Full Element
+	Change own attribute to random one of Fire, Water, Wood, Light, Dark
+
+ESGravity(50:3794) -> Weight of the Trilithon
+	Condition: 20% chance (ai:0 rnd:20)
+Player -99% HP
+
+ESOrbChangeAttack(48:540) -> Glyph of Plunder, Monkey
+	Condition: 20% chance (ai:0 rnd:20)
+Change Random to Jammer, Deal 80% damage
+
+ESAttackMultihit(15:600) -> Crystal Fang
+	Condition: 30% chance (ai:0 rnd:30)
+Deal 120% damage (2 hits, 60% each)
+
+ESAttackMultihit(15:3778) -> Annihilating Light of the Pleiades
+	Condition: 30% chance (ai:0 rnd:30)
+Deal 140% damage (7 hits, 20% each)
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 2, target rnd 7
+
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b11
+
+ESDebuffMovetime(39:3764) -> Lost Technology
+Movetime -2s for 5 turns
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+

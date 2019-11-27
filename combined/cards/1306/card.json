@@ -988,20 +988,41 @@
             "base_id": 1306,
             "collab_id": 0,
             "cost": 20,
-            "enemy_atk_max": 6570,
-            "enemy_atk_min": 219,
+            "enemy_atk_max": 100,
+            "enemy_atk_min": 100,
             "enemy_atk_scale": 1.0,
             "enemy_coins_per_level": 480,
-            "enemy_def_max": 520,
-            "enemy_def_min": 52,
+            "enemy_def_max": 10000,
+            "enemy_def_min": 10000,
             "enemy_def_scale": 1.0,
-            "enemy_hp_max": 176400,
-            "enemy_hp_min": 5880,
+            "enemy_hp_max": 12,
+            "enemy_hp_min": 12,
             "enemy_hp_scale": 1.0,
             "enemy_max_level": 10,
             "enemy_skill_counter_increment": 0,
-            "enemy_skill_max_counter": 0,
-            "enemy_skill_refs": [],
+            "enemy_skill_max_counter": 1,
+            "enemy_skill_refs": [
+                {
+                    "enemy_ai": 0,
+                    "enemy_rnd": 0,
+                    "enemy_skill_id": 318
+                },
+                {
+                    "enemy_ai": 100,
+                    "enemy_rnd": 0,
+                    "enemy_skill_id": 15029
+                },
+                {
+                    "enemy_ai": 100,
+                    "enemy_rnd": 0,
+                    "enemy_skill_id": 15028
+                },
+                {
+                    "enemy_ai": 0,
+                    "enemy_rnd": 0,
+                    "enemy_skill_id": 26
+                }
+            ],
             "enemy_turns": 1,
             "enemy_turns_alt": 0,
             "enemy_xp_per_level": 363,
@@ -1052,13 +1073,232 @@
             "unknown_009": 5,
             "unknown_055": 0,
             "unknown_056": 0,
-            "use_new_ai": false,
+            "use_new_ai": true,
             "voice_id": 0,
             "xp_max": 4000000,
             "xp_scale": 2.5
         },
         "critical_failures": [],
-        "enemy_skills": [],
+        "enemy_skills": [
+            {
+                "behavior": {
+                    "_name": "선제커맨드Lv1",
+                    "enemy_skill_id": 318,
+                    "extra_description": null,
+                    "level": 1,
+                    "params": [
+                        null,
+                        1,
+                        100,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null
+                    ],
+                    "type": 49
+                },
+                "condition": null,
+                "enemy_skill_id": 318,
+                "extra_description": null
+            },
+            {
+                "behavior": {
+                    "_name": "＿선제공격 2회",
+                    "attack": null,
+                    "enemy_skill_id": 15029,
+                    "extra_description": null,
+                    "params": [
+                        null,
+                        15030,
+                        15031,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        1,
+                        null,
+                        null
+                    ],
+                    "skill_ids": [
+                        15030,
+                        15031
+                    ],
+                    "skills": [
+                        {
+                            "_name": "넓은 바다의 의복",
+                            "attack": null,
+                            "combo_threshold": 7,
+                            "enemy_skill_id": 15030,
+                            "extra_description": null,
+                            "max_turns": 999,
+                            "min_turns": 999,
+                            "params": [
+                                "7콤보 이하의 공격을 흡수",
+                                999,
+                                999,
+                                7,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null
+                            ],
+                            "type": 67
+                        },
+                        {
+                            "_name": "바다신의 저주",
+                            "attack": null,
+                            "attributes": [
+                                0,
+                                1,
+                                2,
+                                3,
+                                5
+                            ],
+                            "condition_attributes": null,
+                            "count": 6,
+                            "enemy_skill_id": 15031,
+                            "extra_description": null,
+                            "params": [
+                                null,
+                                6,
+                                47,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null
+                            ],
+                            "type": 92
+                        }
+                    ],
+                    "type": 83
+                },
+                "condition": {
+                    "_ai": 100,
+                    "_rnd": 0,
+                    "condition_attributes": null,
+                    "enemies_remaining": null,
+                    "forced_one_time": null,
+                    "hp_threshold": null,
+                    "on_death": null,
+                    "one_time": 1
+                },
+                "enemy_skill_id": 15029,
+                "extra_description": null
+            },
+            {
+                "behavior": {
+                    "_name": "바다신의 저주",
+                    "attack": {
+                        "atk_multiplier": 500,
+                        "max_hits": 1,
+                        "min_hits": 1
+                    },
+                    "attributes": [
+                        0,
+                        1,
+                        2,
+                        3,
+                        5
+                    ],
+                    "condition_attributes": null,
+                    "count": 6,
+                    "enemy_skill_id": 15028,
+                    "extra_description": null,
+                    "params": [
+                        null,
+                        6,
+                        47,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        500,
+                        null
+                    ],
+                    "type": 92
+                },
+                "condition": {
+                    "_ai": 100,
+                    "_rnd": 0,
+                    "condition_attributes": null,
+                    "enemies_remaining": null,
+                    "forced_one_time": null,
+                    "hp_threshold": null,
+                    "on_death": null,
+                    "one_time": null
+                },
+                "enemy_skill_id": 15028,
+                "extra_description": null
+            },
+            {
+                "behavior": {
+                    "_name": "테스트예비",
+                    "enemy_skill_id": 26,
+                    "extra_description": null,
+                    "params": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        4,
+                        null,
+                        null,
+                        null
+                    ],
+                    "type": 36
+                },
+                "condition": null,
+                "enemy_skill_id": 26,
+                "extra_description": null
+            }
+        ],
         "leader_skill": {
             "_atk": 2.5,
             "_hp": 1.0,

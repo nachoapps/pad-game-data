@@ -8,11 +8,11 @@ Enable preempt if level 1
 
 SkillSet:
 	Condition: One-time use (ai:100 rnd:0) (one-time: 8)
-	[0] ESNoSkyfall(127:15052) -> たくさんのコンボを見せてよ
+	[0] ESNoSkyfall(127:15052) -> Show me lots of combos
 	No skyfall for 2 turns
-	[1] ESDebuffMovetime(39:15053) -> そうだなぁ…
+	[1] ESDebuffMovetime(39:15053) -> Hmm, is that so...
 	Movetime 240% for 2 turns
-	[2] ESRandomSpawn(92:15054) -> 4ターン合計40コンボだ！
+	[2] ESRandomSpawn(92:15054) -> 40 combos in 4 turns!
 	Spawn random 6 Fire, Water, Wood, Light, Dark, Heal, Jammer orbs
 
 ESBranchCombo(113:6528) -> ESBranchCombo
@@ -102,38 +102,38 @@ counter + 1
 ESSetCounter(26:16) -> ESSetCounter
 counter + 1
 
-ESRowSpawnMulti(78:15055) -> ほら綺麗だろ？
+ESRowSpawnMulti(78:15055) -> Well, very pretty, right?
 	Condition: One-time use (ai:100 rnd:0) (one-time: 4)
 Change 1st, 5th row to Fire orbs, 2nd, 4th row to Water orbs
 
-ESColumnSpawnMulti(76:15056) -> 急いで出来るかい？
+ESColumnSpawnMulti(76:15056) -> Can you do it in a hurry?
 	Condition: One-time use (ai:100 rnd:0) (one-time: 2)
 Change 1st, 6th column to Fire orbs, 2nd, 5th column to Water orbs
 
 SkillSet:
 	Condition: One-time use (ai:100 rnd:0) (one-time: 1)
-	[0] ESBoardChange(84:15058) -> さぁ見せてくれよ
+	[0] ESBoardChange(84:15058) -> Well, show me then
 	Change all orbs to Fire
-	[1] ESColumnSpawnMulti(76:15059) -> こうして…
+	[1] ESColumnSpawnMulti(76:15059) -> Like this, then.....
 	Change 2nd, 5th column to Water orbs
-	[2] ESRowSpawnMulti(78:15060) -> こうだ！
+	[2] ESRowSpawnMulti(78:15060) -> This!
 	Change 2nd, 4th row to Wood orbs
-	[3] ESDebuffMovetime(39:15061) -> こんなもの必要ないよね？
+	[3] ESDebuffMovetime(39:15061) -> That wasn't needed, right?
 	Movetime -5s for 1 turns
 
 ESBranchCounter(32:22) -> ESBranchCounter
 Branch on counter > 40, target rnd 37
 
 SkillSet:
-	[0] ESInactivity(66:15064) -> さて合計コンボは…
+	[0] ESInactivity(66:15064) -> Well, your total combo was...
 	Do nothing
-	[1] ESAttackMultihit(15:15066) -> すくな～～～い！
+	[1] ESAttackMultihit(15:15066) -> Terrible!
 	Deal 1000% damage (5 hits, 200% each)
 
 SkillSet:
-	[0] ESInactivity(66:15064) -> さて合計コンボは…
+	[0] ESInactivity(66:15064) -> Well, your total combo was...
 	Do nothing
-	[1] ESEndBattle(40:15065) -> すば～らし～い！
+	[1] ESEndBattle(40:15065) -> Terrific!
 	Reduce self HP to 0
 
 ESEndPath(36:26) -> ESEndPath

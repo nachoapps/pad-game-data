@@ -26,8 +26,8 @@
         "na_skill": {
             "duration": 5,
             "levels": 10,
-            "name": "ガードブレイク",
-            "raw_description": "5ターンの間、敵の防御力が半減。",
+            "name": "Guard Break",
+            "raw_description": "Halves enemies' DEF for 5 turns",
             "shield": 0.5,
             "skill_id": 93,
             "skill_type": 19,
@@ -42,7 +42,7 @@
     "enemy_behavior": [
         {
             "behavior": {
-                "_name": "※先制コマンドLV1",
+                "_name": "*Preemptive Command LV1",
                 "enemy_skill_id": 318,
                 "extra_description": null,
                 "level": 1,
@@ -72,7 +72,7 @@
         },
         {
             "behavior": {
-                "_name": "＿先制2回",
+                "_name": "＿Preemptive 2 times",
                 "attack": null,
                 "enemy_skill_id": 14749,
                 "extra_description": null,
@@ -100,12 +100,12 @@
                 ],
                 "skills": [
                     {
-                        "_name": "定めの時",
+                        "_name": "Decision Time",
                         "attack": null,
                         "enemy_skill_id": 14750,
                         "extra_description": null,
                         "params": [
-                            "しばらくの間、状態異常を無効化する",
+                            "Voids status ailments for a number of turns",
                             999,
                             null,
                             null,
@@ -126,13 +126,13 @@
                         "type": 20
                     },
                     {
-                        "_name": "時限の振る舞い",
+                        "_name": "Time Limit Response",
                         "absorb_threshold": 10000000,
                         "attack": null,
                         "enemy_skill_id": 14751,
                         "extra_description": null,
                         "params": [
-                            "5ターンの間、1000万以上のダメージを吸収",
+                            "Absorbs damage of 10 million or more for 5 turns",
                             5,
                             10000000,
                             null,
@@ -170,7 +170,7 @@
         },
         {
             "behavior": {
-                "_name": "※カウンターが ai 以上の時 rnd に分岐",
+                "_name": "ERROR22",
                 "branch_condition": "counter",
                 "branch_value": 4,
                 "compare": ">",
@@ -203,7 +203,7 @@
         },
         {
             "behavior": {
-                "_name": "※カウンターを１＋",
+                "_name": "ERROR16",
                 "counter": 1,
                 "enemy_skill_id": 16,
                 "extra_description": null,
@@ -234,7 +234,7 @@
         },
         {
             "behavior": {
-                "_name": "エンパイアソード",
+                "_name": "Imperial Sword",
                 "attack": {
                     "atk_multiplier": 600,
                     "max_hits": 1,
@@ -277,7 +277,7 @@
         },
         {
             "behavior": {
-                "_name": "※パース終了",
+                "_name": "ERROR26",
                 "enemy_skill_id": 26,
                 "extra_description": null,
                 "params": [
@@ -306,7 +306,7 @@
         },
         {
             "behavior": {
-                "_name": "※カウンターが ai 以上の時 rnd に分岐",
+                "_name": "ERROR22",
                 "branch_condition": "counter",
                 "branch_value": 5,
                 "compare": ">",
@@ -339,7 +339,7 @@
         },
         {
             "behavior": {
-                "_name": "※カウンターを１＋",
+                "_name": "ERROR16",
                 "counter": 1,
                 "enemy_skill_id": 16,
                 "extra_description": null,
@@ -370,12 +370,12 @@
         },
         {
             "behavior": {
-                "_name": "万象の構え",
+                "_name": "Universal Stance",
                 "attack": null,
                 "enemy_skill_id": 14753,
                 "extra_description": null,
                 "params": [
-                    "10ターンの間、ダメージを激減する",
+                    "Damage greatly reduced for 10 turns",
                     10,
                     80,
                     null,
@@ -411,7 +411,7 @@
         },
         {
             "behavior": {
-                "_name": "※パース終了",
+                "_name": "ERROR26",
                 "enemy_skill_id": 26,
                 "extra_description": null,
                 "params": [
@@ -440,7 +440,7 @@
         },
         {
             "behavior": {
-                "_name": "バランス回復半減",
+                "_name": "Balance Recovery Halved",
                 "enemy_skill_id": 14754,
                 "extra_description": null,
                 "params": [
@@ -2146,8 +2146,8 @@
             "_hp": 1,
             "_rcv": 2.0,
             "_shield": 0,
-            "name": "人馬一体・快",
-            "raw_description": "バランスタイプの回復力が2倍。",
+            "name": "Man and Horse as One, Comfort",
+            "raw_description": "2x RCV for Balanced Type",
             "skill_id": 828,
             "skill_type": 24,
             "types": [
@@ -2162,47 +2162,106 @@
         "active_skill": {
             "duration": 5,
             "levels": 10,
-            "name": "ガードブレイク",
-            "raw_description": "5ターンの間、敵の防御力が半減。",
+            "name": "Guard Break",
+            "raw_description": "Halves enemies' DEF for 5 turns",
             "shield": 0.5,
             "skill_id": 93,
             "skill_type": 19,
             "turn_max": 15,
             "turn_min": 6
         },
-        "active_skill_id": null,
+        "active_skill_id": 93,
         "card": {
-            "active_skill_id": 0,
-            "ancestor_id": 0,
+            "active_skill_id": 93,
+            "ancestor_id": 75,
             "atk_scale": 1.0,
-            "attr_id": 0,
-            "awakenings": [],
-            "base_id": 909,
+            "attr_id": 3,
+            "awakenings": [
+                10,
+                11
+            ],
+            "base_id": 0,
             "collab_id": 0,
-            "cost": 1,
-            "enemy_atk_max": 0,
-            "enemy_atk_min": 0,
-            "enemy_atk_scale": 0.0,
-            "enemy_coins_per_level": 0,
-            "enemy_def_max": 0,
-            "enemy_def_min": 0,
-            "enemy_def_scale": 0.0,
-            "enemy_hp_max": 0,
-            "enemy_hp_min": 0,
-            "enemy_hp_scale": 0.0,
-            "enemy_max_level": 0,
+            "cost": 11,
+            "enemy_atk_max": 10020,
+            "enemy_atk_min": 548,
+            "enemy_atk_scale": 1.0,
+            "enemy_coins_per_level": 176,
+            "enemy_def_max": 150000,
+            "enemy_def_min": 15000,
+            "enemy_def_scale": 1.0,
+            "enemy_hp_max": 120000000,
+            "enemy_hp_min": 10075,
+            "enemy_hp_scale": 1.0,
+            "enemy_max_level": 10,
             "enemy_skill_counter_increment": 0,
-            "enemy_skill_max_counter": 0,
-            "enemy_skill_refs": [],
-            "enemy_turns": 0,
-            "enemy_turns_alt": 2,
-            "enemy_xp_per_level": 0,
-            "evo_mat_id_1": 0,
-            "evo_mat_id_2": 0,
-            "evo_mat_id_3": 0,
+            "enemy_skill_max_counter": 1,
+            "enemy_skill_refs": [
+                {
+                    "enemy_ai": 0,
+                    "enemy_rnd": 0,
+                    "enemy_skill_id": 318
+                },
+                {
+                    "enemy_ai": 100,
+                    "enemy_rnd": 0,
+                    "enemy_skill_id": 14749
+                },
+                {
+                    "enemy_ai": 4,
+                    "enemy_rnd": 7,
+                    "enemy_skill_id": 22
+                },
+                {
+                    "enemy_ai": 0,
+                    "enemy_rnd": 0,
+                    "enemy_skill_id": 16
+                },
+                {
+                    "enemy_ai": 100,
+                    "enemy_rnd": 0,
+                    "enemy_skill_id": 14752
+                },
+                {
+                    "enemy_ai": 0,
+                    "enemy_rnd": 0,
+                    "enemy_skill_id": 26
+                },
+                {
+                    "enemy_ai": 5,
+                    "enemy_rnd": 5,
+                    "enemy_skill_id": 22
+                },
+                {
+                    "enemy_ai": 0,
+                    "enemy_rnd": 0,
+                    "enemy_skill_id": 16
+                },
+                {
+                    "enemy_ai": 100,
+                    "enemy_rnd": 0,
+                    "enemy_skill_id": 14753
+                },
+                {
+                    "enemy_ai": 0,
+                    "enemy_rnd": 0,
+                    "enemy_skill_id": 26
+                },
+                {
+                    "enemy_ai": 0,
+                    "enemy_rnd": 0,
+                    "enemy_skill_id": 14754
+                }
+            ],
+            "enemy_turns": 1,
+            "enemy_turns_alt": 0,
+            "enemy_xp_per_level": 91,
+            "evo_mat_id_1": 150,
+            "evo_mat_id_2": 169,
+            "evo_mat_id_3": 158,
             "evo_mat_id_4": 0,
             "evo_mat_id_5": 0,
-            "feed_xp_per_level": 25,
+            "feed_xp_per_level": 562,
             "furigana": "",
             "group_id": 0,
             "hp_scale": 1.0,
@@ -2210,60 +2269,493 @@
             "is_collab": false,
             "is_ult": false,
             "latent_on_feed": 0,
-            "leader_skill_id": 0,
+            "leader_skill_id": 828,
             "limit_mult": 0,
-            "max_atk": 1,
-            "max_hp": 1,
-            "max_level": 1,
-            "max_rcv": 1,
-            "min_atk": 1,
-            "min_hp": 1,
-            "min_rcv": 1,
+            "max_atk": 1013,
+            "max_hp": 1930,
+            "max_level": 99,
+            "max_rcv": 221,
+            "min_atk": 365,
+            "min_hp": 650,
+            "min_rcv": 105,
             "monster_no": 100909,
             "name": "Alt. White Baron",
             "orb_skin_id": 0,
             "other_fields": [
                 ""
             ],
-            "random_flags": 0,
-            "rarity": 1,
+            "random_flags": 2,
+            "rarity": 4,
             "rcv_scale": 1.0,
-            "released_status": false,
-            "sell_gold_per_level": 10,
-            "sell_mp": 0,
+            "released_status": true,
+            "sell_gold_per_level": 255,
+            "sell_mp": 1,
             "sub_attr_id": -1,
             "super_awakenings": [],
             "type_1_id": 1,
             "type_2_id": -1,
             "type_3_id": -1,
-            "un_evo_mat_1": 0,
-            "un_evo_mat_2": 0,
-            "un_evo_mat_3": 0,
-            "un_evo_mat_4": 0,
-            "un_evo_mat_5": 0,
-            "unknown_009": 0,
+            "un_evo_mat_1": 155,
+            "un_evo_mat_2": 156,
+            "un_evo_mat_3": 157,
+            "un_evo_mat_4": 158,
+            "un_evo_mat_5": 159,
+            "unknown_009": 3,
             "unknown_055": 0,
             "unknown_056": 0,
-            "use_new_ai": false,
+            "use_new_ai": true,
             "voice_id": 0,
-            "xp_max": 1,
-            "xp_scale": 1.0
+            "xp_max": 3000000,
+            "xp_scale": 2.5
         },
-        "enemy_skills": [],
+        "enemy_skills": [
+            {
+                "behavior": {
+                    "_name": "*Preemptive Command LV1",
+                    "enemy_skill_id": 318,
+                    "extra_description": null,
+                    "level": 1,
+                    "params": [
+                        null,
+                        1,
+                        100,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null
+                    ],
+                    "type": 49
+                },
+                "condition": null,
+                "enemy_skill_id": 318,
+                "extra_description": null
+            },
+            {
+                "behavior": {
+                    "_name": "＿Preemptive 2 times",
+                    "attack": null,
+                    "enemy_skill_id": 14749,
+                    "extra_description": null,
+                    "params": [
+                        null,
+                        14750,
+                        14751,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        1,
+                        null,
+                        null
+                    ],
+                    "skill_ids": [
+                        14750,
+                        14751
+                    ],
+                    "skills": [
+                        {
+                            "_name": "Decision Time",
+                            "attack": null,
+                            "enemy_skill_id": 14750,
+                            "extra_description": null,
+                            "params": [
+                                "Voids status ailments for a number of turns",
+                                999,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null
+                            ],
+                            "turns": 999,
+                            "type": 20
+                        },
+                        {
+                            "_name": "Time Limit Response",
+                            "absorb_threshold": 10000000,
+                            "attack": null,
+                            "enemy_skill_id": 14751,
+                            "extra_description": null,
+                            "params": [
+                                "Absorbs damage of 10 million or more for 5 turns",
+                                5,
+                                10000000,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null
+                            ],
+                            "turns": 5,
+                            "type": 87
+                        }
+                    ],
+                    "type": 83
+                },
+                "condition": {
+                    "_ai": 100,
+                    "_rnd": 0,
+                    "condition_attributes": null,
+                    "enemies_remaining": null,
+                    "forced_one_time": null,
+                    "hp_threshold": null,
+                    "on_death": null,
+                    "one_time": 1
+                },
+                "enemy_skill_id": 14749,
+                "extra_description": null
+            },
+            {
+                "behavior": {
+                    "_name": "ERROR22",
+                    "branch_condition": "counter",
+                    "branch_value": 4,
+                    "compare": ">",
+                    "enemy_skill_id": 22,
+                    "extra_description": null,
+                    "params": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        4,
+                        null,
+                        null,
+                        null
+                    ],
+                    "target_round": 7,
+                    "type": 32
+                },
+                "condition": null,
+                "enemy_skill_id": 22,
+                "extra_description": null
+            },
+            {
+                "behavior": {
+                    "_name": "ERROR16",
+                    "counter": 1,
+                    "enemy_skill_id": 16,
+                    "extra_description": null,
+                    "params": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        4,
+                        null,
+                        null,
+                        null
+                    ],
+                    "set": "+",
+                    "type": 26
+                },
+                "condition": null,
+                "enemy_skill_id": 16,
+                "extra_description": null
+            },
+            {
+                "behavior": {
+                    "_name": "Imperial Sword",
+                    "attack": {
+                        "atk_multiplier": 600,
+                        "max_hits": 1,
+                        "min_hits": 1
+                    },
+                    "enemy_skill_id": 14752,
+                    "extra_description": null,
+                    "params": [
+                        null,
+                        1,
+                        1,
+                        600,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null
+                    ],
+                    "type": 15
+                },
+                "condition": {
+                    "_ai": 100,
+                    "_rnd": 0,
+                    "condition_attributes": null,
+                    "enemies_remaining": null,
+                    "forced_one_time": null,
+                    "hp_threshold": null,
+                    "on_death": null,
+                    "one_time": null
+                },
+                "enemy_skill_id": 14752,
+                "extra_description": null
+            },
+            {
+                "behavior": {
+                    "_name": "ERROR26",
+                    "enemy_skill_id": 26,
+                    "extra_description": null,
+                    "params": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        4,
+                        null,
+                        null,
+                        null
+                    ],
+                    "type": 36
+                },
+                "condition": null,
+                "enemy_skill_id": 26,
+                "extra_description": null
+            },
+            {
+                "behavior": {
+                    "_name": "ERROR22",
+                    "branch_condition": "counter",
+                    "branch_value": 5,
+                    "compare": ">",
+                    "enemy_skill_id": 22,
+                    "extra_description": null,
+                    "params": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        4,
+                        null,
+                        null,
+                        null
+                    ],
+                    "target_round": 5,
+                    "type": 32
+                },
+                "condition": null,
+                "enemy_skill_id": 22,
+                "extra_description": null
+            },
+            {
+                "behavior": {
+                    "_name": "ERROR16",
+                    "counter": 1,
+                    "enemy_skill_id": 16,
+                    "extra_description": null,
+                    "params": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        4,
+                        null,
+                        null,
+                        null
+                    ],
+                    "set": "+",
+                    "type": 26
+                },
+                "condition": null,
+                "enemy_skill_id": 16,
+                "extra_description": null
+            },
+            {
+                "behavior": {
+                    "_name": "Universal Stance",
+                    "attack": null,
+                    "enemy_skill_id": 14753,
+                    "extra_description": null,
+                    "params": [
+                        "Damage greatly reduced for 10 turns",
+                        10,
+                        80,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null
+                    ],
+                    "shield_percent": 80,
+                    "turns": 10,
+                    "type": 74
+                },
+                "condition": {
+                    "_ai": 100,
+                    "_rnd": 0,
+                    "condition_attributes": null,
+                    "enemies_remaining": null,
+                    "forced_one_time": null,
+                    "hp_threshold": null,
+                    "on_death": null,
+                    "one_time": null
+                },
+                "enemy_skill_id": 14753,
+                "extra_description": null
+            },
+            {
+                "behavior": {
+                    "_name": "ERROR26",
+                    "enemy_skill_id": 26,
+                    "extra_description": null,
+                    "params": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        4,
+                        null,
+                        null,
+                        null
+                    ],
+                    "type": 36
+                },
+                "condition": null,
+                "enemy_skill_id": 26,
+                "extra_description": null
+            },
+            {
+                "behavior": {
+                    "_name": "Balance Recovery Halved",
+                    "enemy_skill_id": 14754,
+                    "extra_description": null,
+                    "params": [
+                        null,
+                        10,
+                        50,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null
+                    ],
+                    "shield_percent": 50,
+                    "type": 118,
+                    "types": [
+                        1,
+                        3
+                    ]
+                },
+                "condition": null,
+                "enemy_skill_id": 14754,
+                "extra_description": null
+            }
+        ],
         "leader_skill": {
             "_atk": 1,
             "_hp": 1,
             "_rcv": 2.0,
             "_shield": 0,
-            "name": "人馬一体・快",
-            "raw_description": "バランスタイプの回復力が2倍。",
+            "name": "Man and Horse as One, Comfort",
+            "raw_description": "2x RCV for Balanced Type",
             "skill_id": 828,
             "skill_type": 24,
             "types": [
                 1
             ]
         },
-        "leader_skill_id": null,
+        "leader_skill_id": 828,
         "monster_id": 100909,
         "monster_no": 100909,
         "server": "Server.na"

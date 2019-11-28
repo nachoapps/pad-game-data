@@ -8,9 +8,9 @@ Enable preempt if level 1
 
 SkillSet:
 	Condition: One-time use (ai:100 rnd:0) (one-time: 1)
-	[0] ESStatusShield(20:14750) -> 定めの時
+	[0] ESStatusShield(20:14750) -> Decision Time
 	Voids status ailments for 999 turns
-	[1] ESAbsorbThreshold(87:14751) -> 時限の振る舞い
+	[1] ESAbsorbThreshold(87:14751) -> Time Limit Response
 	Absorb damage >= 10000000 damage for 5 turns
 
 ESBranchCounter(32:22) -> ESBranchCounter
@@ -19,7 +19,7 @@ Branch on counter > 4, target rnd 7
 ESSetCounter(26:16) -> ESSetCounter
 counter + 1
 
-ESAttackMultihit(15:14752) -> エンパイアソード
+ESAttackMultihit(15:14752) -> Imperial Sword
 Deal 600% damage
 
 ESEndPath(36:26) -> ESEndPath
@@ -31,12 +31,12 @@ Branch on counter > 5, target rnd 5
 ESSetCounter(26:16) -> ESSetCounter
 counter + 1
 
-ESDamageShield(74:14753) -> 万象の構え
+ESDamageShield(74:14753) -> Universal Stance
 Reduce damage from all sources by 80% for 10 turns
 
 ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESTypeResist(118:14754) -> バランス回復半減
+ESTypeResist(118:14754) -> Balance Recovery Halved
 Reduce damage from Balanced, Healer by 50%
 

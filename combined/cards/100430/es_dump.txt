@@ -1,4 +1,4 @@
-#100430  - クイーンゴールドドラゴン
+#100430  - Queen Gold Dragon
 True : use_new_ai
 0 : starting/max counter
 0 : counter increment
@@ -15,7 +15,7 @@ Branch on flag & 1, target rnd 7
 ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b1
 
-ESBoardChange(84:15023) -> ゴールドチェンジ
+ESBoardChange(84:15023) -> Gold Change
 Change all orbs to Fire, Water, Wood, Light, Dark, Heal
 
 ESEndPath(36:26) -> ESEndPath
@@ -24,13 +24,13 @@ end_turn
 ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b0
 
-ESRandomSpawn(92:15025) -> カラードロップ
+ESRandomSpawn(92:15025) -> Color Drop
 Spawn random 5 Fire, Water, Wood, Light, Dark, Heal orbs, Deal 100% damage
 
 ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESRecoverEnemyAlly(52:15027) -> 女王の意志
+ESRecoverEnemyAlly(52:15027) -> Queen's Will
 	Condition: when <= 1 enemies remain (ai:100 rnd:0)
 Enemy ally recover 100% hp
 

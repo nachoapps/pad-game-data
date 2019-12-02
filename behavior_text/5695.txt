@@ -1,0 +1,56 @@
+#5695 - 速杉ハヤト＆Ｅ５はやぶさ ＭｋII
+monster size: 5
+new AI: True
+start/max counter: 3
+counter increment: 0
+monster_id: 5695
+approved: False
+
+level: 1
+ type: PREEMPT
+ | (15268:83) チェンジ、シンカリオン！ + 行くぞ！
+ | Movetime -2s for 5 turns + Absorb damage >= 7000000 damage for 9 turns
+ group:
+ | group:
+   | group:
+   | condition: turn 1
+     | group:
+       | (15197:50) 止まるわけにはいかない！
+       | Player -50% HP
+   | group:
+   | condition: repeats every 6 turns
+     | group:
+       | (15198:77) カイサツブレード
+       | Change 3rd column to Wood orbs, 4th column to Wood orbs, Deal 175% damage
+   | group:
+   | condition: repeats every 6 turns
+     | group:
+       | (15200:67) 行くよシャショット！
+       | Absorb combo <= 7 damage for 3 turns
+   | group:
+   | condition: repeats every 6 turns
+     | group:
+       | (15198:77) カイサツブレード
+       | Change 3rd column to Wood orbs, 4th column to Wood orbs, Deal 175% damage
+ | group:
+ | condition: hp <= 19
+   | group:
+   | condition: turn 1
+     | group:
+       | (15199:74) 俺達に破滅なんてない
+       | Reduce damage from all sources by 75% for 3 turns
+   | group:
+   | condition: repeats every 6 turns
+     | group:
+       | (15201:79) デュアルグランクロス！
+       | Change 2nd row to Wood orbs, 3rd row to Light orbs, 4th row to Wood orbs, Deal 1000% damage
+   | group:
+   | condition: repeats every 6 turns
+     | group:
+       | (15200:67) 行くよシャショット！
+       | Absorb combo <= 7 damage for 3 turns
+   | group:
+   | condition: repeats every 6 turns
+     | group:
+       | (15201:79) デュアルグランクロス！
+       | Change 2nd row to Wood orbs, 3rd row to Light orbs, 4th row to Wood orbs, Deal 1000% damage

@@ -1,0 +1,44 @@
+#1581 - 魔人ブウ・邪悪
+monster size: 5
+new AI: False
+start/max counter: 1
+counter increment: 1
+monster_id: 1581
+approved: False
+
+level: 1
+ type: DEATH
+ | condition: when defeated, hp <= 100
+ | (1431:69) ブウ3→ブウ4
+ | Show message: ご…こおおおお…あっ…
+…あっ…あががが…|ウギャギャギャオーッ!!!
+ group:
+
+level: 5
+ type: DEATH
+ | condition: when defeated, hp <= 100
+ | (1431:69) ブウ3→ブウ4
+ | Show message: ご…こおおおお…あっ…
+…あっ…あががが…|ウギャギャギャオーッ!!!
+ group:
+ | group:
+ | condition: hp <= 74
+   | group:
+   | condition: turn 1
+     | group:
+       | condition: hp <= 75
+       | (1492:19) もうオレこうげきしていいか？
+       | Increase damage to 200% for the next 999 turns
+   | group:
+   | condition: repeats every 2 turns
+     | group:
+       | condition: hp <= 75
+       | (1491:15) はあっ!!!!
+       | Deal 150% damage
+ | group:
+ | condition: hp <= 49
+   | group:
+   | condition: turn 2
+     | group:
+       | (1493:67) いただきーーーっ!!!
+       | Absorb combo <= 3 damage for 3 turns

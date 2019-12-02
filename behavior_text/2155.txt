@@ -1,0 +1,29 @@
+#2155 - アクア・サーファー
+monster size: 3
+new AI: True
+start/max counter: 1
+counter increment: 0
+monster_id: 2155
+approved: False
+
+level: 5
+ group:
+ | type: DISPEL_PLAYER
+   | (2483:6) 波がきてるね～、俺♪
+   | Voids player buff effects
+ | group:
+ | condition: hp <= 79
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: 50% chance, hp <= 80
+       | (2482:77) アクア・360°
+       | Change 2nd, 3rd column to Water orbs, Deal 120% damage
+ | group:
+ | condition: hp <= 49
+   | group:
+   | condition: turn 1
+     | group:
+       | condition: hp <= 50
+       | (2481:89) 神秘のサーフボード
+       | Delay active skills by 1 turns

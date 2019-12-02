@@ -1,0 +1,37 @@
+#5694 - 速杉ハヤト＆Ｅ５はやぶさ
+monster size: 5
+new AI: True
+start/max counter: 2
+counter increment: 0
+monster_id: 5694
+approved: False
+
+level: 4
+ type: PREEMPT
+ | (15193:83) チェンジ、シンカリオン！ + インターロック
+ | Voids status ailments for 999 turns + Lock all Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs
+ group:
+ | group:
+   | group:
+   | condition: turn 1
+     | group:
+       | (15188:74) 絶対諦めないから
+       | Reduce damage from all sources by 50% for 3 turns, Deal 150% damage
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | (15187:77) カイサツソード！
+       | Change 3rd column to Wood orbs, 4th column to Wood orbs, Deal 125% damage
+ | group:
+ | condition: hp <= 24
+   | group:
+   | condition: turn 1
+     | group:
+       | condition: when 1 enemies remain, hp <= 100
+       | (15189:17) 決めるよ、シャショット！
+       | Increase damage to 200% for the next 1 turns
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | (15190:79) グランクロス！
+       | Change 2nd row to Wood orbs, 3rd row to Wood orbs, 4th row to Wood orbs, Deal 200% damage

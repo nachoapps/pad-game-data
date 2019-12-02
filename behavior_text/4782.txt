@@ -1,0 +1,44 @@
+#4782 - 長谷川泰三
+monster size: 5
+new AI: True
+start/max counter: 3
+counter increment: 0
+monster_id: 4782
+approved: False
+
+level: 4
+ type: PREEMPT
+ | (11032:108) This time! This time, I will grasp happiness!
+ | Change Light to Jammer
+ | condition: when required attributes on board, hp <= 100
+ | (11061:92) NOW! NOW I will grasp happiness!
+ | Spawn random 4 Jammer orbs
+ group:
+ | group:
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: 50% chance, hp <= 100
+       | (11034:63) The spiral staircase of pain keeps going!
+       | Bind 1 random subs for 1 turns, Deal 120% damage
+       | (11033:109) Life is like gambling
+       | Random 2 orbs change every 1.0s for 1 turns, Deal 80% damage
+ | group:
+ | condition: hp <= 49
+   | group:
+   | condition: turn 1
+     | group:
+       | condition: hp <= 50
+       | (11036:68) This sucks already...
+       | Poison skyfall +10% for 3 turns
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: 30% chance, hp <= 50
+       | (11035:15) I'll end this for you!!
+       | Deal 150% damage
+       | condition: 50% chance, hp <= 100
+       | (11034:63) The spiral staircase of pain keeps going!
+       | Bind 1 random subs for 1 turns, Deal 120% damage
+       | (11033:109) Life is like gambling
+       | Random 2 orbs change every 1.0s for 1 turns, Deal 80% damage

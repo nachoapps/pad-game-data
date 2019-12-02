@@ -1,0 +1,41 @@
+#205668 - 白蛇のナーガ
+monster size: 5
+new AI: True
+start/max counter: 1
+counter increment: 1
+monster_id: 205668
+approved: False
+
+level: 4
+ type: PREEMPT
+ | (15002:67) ほーっほっほっほ！
+ | Absorb combo <= 5 damage for 10 turns
+ group:
+ | group:
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: 33% chance, hp <= 100
+       | (15003:92) いくわよっ！　氷の矢！
+       | Spawn random 6 Water orbs, Deal 95% damage
+       | condition: 33% chance, hp <= 100
+       | (15004:63) 氷結弾！
+       | Bind 1 random subs for 2~3 turns, Deal 100% damage
+       | condition: 34% chance, hp <= 100
+       | (15005:50) 風魔咆裂弾！
+       | Player -75% HP
+ | group:
+ | condition: hp <= 49
+   | group:
+   | condition: turn 1
+     | group:
+       | condition: when 1 enemies remain, hp <= 100
+       | (15006:17) ふっ！　甘いっ！
+       | Increase damage to 150% for the next 999 turns
+ | group:
+ | condition: hp <= 20
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | (15007:92) 氷魔轟！
+       | Spawn random 10 Water orbs, Deal 150% damage

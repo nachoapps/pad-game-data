@@ -1,0 +1,44 @@
+#2346 - プーギー＆アイルー
+monster size: 5
+new AI: True
+start/max counter: 1
+counter increment: 0
+monster_id: 2346
+approved: False
+
+level: 5
+ type: PREEMPT
+ | (2589:50) Monster Hunter 4G Collab Series
+ | Player -75% HP
+ group:
+ | group:
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: 80% chance, hp <= 100
+       | (1:82) Disable Skill
+       | Deal 100% damage
+       | condition: 20% chance, hp <= 100
+       | (2593:13) Monster Hunter 4G Collab Series
+       | Change Random 2 to Jammer
+ | group:
+ | condition: hp <= 49
+   | group:
+   | condition: turn 1
+     | group:
+       | condition: hp <= 50
+       | (2590:89) Nyaa!
+       | Delay active skills by 1 turns
+ | group:
+ | condition: hp <= 39
+   | group:
+   | condition: repeats every 2 turns
+     | group:
+       | condition: when 1 enemies remain, hp <= 100
+       | (2591:17) Monster Hunter 4G Collab Series
+       | Increase damage to 200% for the next 1 turns
+   | group:
+   | condition: repeats every 2 turns
+     | group:
+       | (2592:15) Monster Hunter 4G Collab Series
+       | Deal 150% damage (3 hits, 50% each)

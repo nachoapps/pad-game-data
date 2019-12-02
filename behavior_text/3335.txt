@@ -1,0 +1,20 @@
+#3335 - 木の古老＝龍喚士・トーリエ
+monster size: 5
+new AI: True
+start/max counter: 0
+counter increment: 0
+monster_id: 3335
+approved: False
+
+level: 1
+ type: DEATH
+ | condition: when defeated, hp <= 100
+ | (6513:69) Torieh Transformation
+ | Show message: May Timbel's will be done!|Invoked the Ancient Dragon's power
+ group:
+ | group:
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | (6514:15) Full Tornado Wave
+       | Deal 100% damage (2 hits, 50% each)

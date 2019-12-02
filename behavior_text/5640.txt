@@ -1,0 +1,37 @@
+#5640 - 魔を滅する者・リナ＝インバース
+monster size: 5
+new AI: True
+start/max counter: 0
+counter increment: 0
+monster_id: 5640
+approved: False
+
+level: 1
+ type: PASSIVE
+ | (14955:118) 悪魔半減
+ | Reduce damage from Devil by 50%
+ type: PREEMPT
+ | (14956:66) ――悪夢の王の一片よ
+ | Do nothing
+ group:
+ | group:
+   | group:
+   | condition: repeats every 4 turns
+     | group:
+       | (14957:66) 凍れる黒き虚無の刃よ
+       | Do nothing
+   | group:
+   | condition: repeats every 4 turns
+     | group:
+       | (14958:66) 共に滅びの道を歩まん
+       | Do nothing
+   | group:
+   | condition: repeats every 4 turns
+     | group:
+       | (14959:50) 神滅斬！
+       | Player -500% HP
+   | group:
+   | condition: repeats every 4 turns
+     | group:
+       | (14956:66) ――悪夢の王の一片よ
+       | Do nothing

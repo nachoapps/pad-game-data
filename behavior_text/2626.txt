@@ -1,0 +1,54 @@
+#2626 - スネイク・ヘッズ幹部・大島智之
+monster size: 5
+new AI: True
+start/max counter: 0
+counter increment: 0
+monster_id: 2626
+approved: False
+
+level: 1
+ type: DEATH
+ | condition: when defeated, hp <= 100
+ | (2661:95) まだ お 終わってねーぞ こんなろー
+ | Blind all orbs on the board
+ group:
+
+level: 4
+ type: PREEMPT
+ | (2655:15) ヒャッハー
+ | Deal 30% damage
+ type: DEATH
+ | condition: when defeated, hp <= 100
+ | (2661:95) まだ お 終わってねーぞ こんなろー
+ | Blind all orbs on the board
+ group:
+ | group:
+   | group:
+   | condition: turn 1
+     | group:
+       | condition: when required attributes on board, when 2607, 2608 on team, hp <= 100
+       | (2663:92) おらー どーしたロンゲヤロー！
+       | Spawn random 8 Dark orbs
+       | (2656:15) おらっ
+       | Deal 150% damage
+   | group:
+   | condition: repeats every 4 turns
+     | group:
+       | (2657:89) ほう タフだなおまえ！
+       | Delay active skills by 1 turns
+   | group:
+   | condition: repeats every 4 turns
+     | group:
+       | (2658:63) そりゃ
+       | Bind own leader for 3 turns, Deal 65% damage
+   | group:
+   | condition: repeats every 4 turns
+     | group:
+       | condition: when 1 enemies remain, hp <= 100
+       | (2659:17) もーしまいか あー！
+       | Increase damage to 200% for the next 3 turns
+   | group:
+   | condition: repeats every 4 turns
+     | group:
+       | (2656:15) おらっ
+       | Deal 150% damage

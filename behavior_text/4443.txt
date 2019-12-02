@@ -1,0 +1,64 @@
+#4443 - 悲しき力・ゼオン＆デュフォー
+monster size: 5
+new AI: True
+start/max counter: 1
+counter increment: 1
+monster_id: 4443
+approved: False
+
+level: 1
+ type: PASSIVE
+ | (10120:72) ゼオン耐性
+ | Reduce damage from Light, Dark by 50%
+ type: PREEMPT
+ | (10121:63) テオザケル
+ | Bind 2 random cards for 2 turns, Deal 105% damage
+ group:
+ | group:
+   | group:
+   | condition: turn 1
+     | group:
+       | (10127:100) レード・ディラス・ザケルガ
+       | Seal 1st row for 2 turns
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: 33% chance, hp <= 100
+       | (10123:77) ソルド・ザケルガ
+       | Change 3rd column to Light orbs, 4th column to Jammer orbs, Deal 110% damage
+       | condition: 66% chance, hp <= 100
+       | (10122:15) ザケルガ
+       | Deal 120% damage
+       | (10124:15) ザケル
+       | Deal 100% damage
+ | group:
+ | condition: hp <= 49
+   | group:
+   | condition: turn 2
+     | group:
+       | (10128:50) ラージア・ザケル
+       | Player -70% HP
+   | group:
+   | condition: repeats every 2 turns
+     | group:
+       | condition: when required attributes on board, hp <= 100
+       | (10126:92) ジャウロ・ザケルガ
+       | Spawn random 11 Light orbs, Deal 120% damage
+   | group:
+   | condition: repeats every 2 turns
+     | group:
+       | (10125:15) ガンレイズ・ザケル
+       | Deal 128% damage (8 hits, 16% each)
+ | group:
+ | condition: hp <= 29
+   | group:
+   | condition: turn 2
+     | group:
+       | condition: when 1 enemies remain, hp <= 100
+       | (10129:17) お前らと遊ぶのは、もう飽きた
+       | Increase damage to 200% for the next 99 turns
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | (10130:83) ジガディラス・ウル・ザケルガ + ZIGAAAAAAAAAA
+       | Change 3rd, 4th column to Light orbs + Deal 400% damage (8 hits, 50% each)

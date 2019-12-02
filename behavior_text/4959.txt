@@ -1,0 +1,54 @@
+#4959 - ぬらりひょん
+monster size: 5
+new AI: True
+start/max counter: 1
+counter increment: 1
+monster_id: 4959
+approved: False
+
+level: 1
+ type: PASSIVE
+ | (12031:106) 遅いッ！
+ | Enemy turn counter change to 1 when HP <= 50%
+ type: PREEMPT
+ | (12032:83) 貴様に　妖魔界のなにが分かる！ + ここを通すわけにはいかん！
+ | Lock all Fire, Water, Wood, Dark, Heal orbs + Player -75% HP
+ group:
+ | group:
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: 20% chance, hp <= 100
+       | (12035:65) そこを動くなっ！
+       | Bind 1 random subs for 2 turns, Deal 85% damage
+       | condition: 20% chance, hp <= 100
+       | (12036:86) ぬるいぞ！
+       | Enemy recover 5% hp, Deal 90% damage
+       | condition: 20% chance, hp <= 100
+       | (12037:15) フンッ！
+       | Deal 100% damage
+       | condition: 20% chance, hp <= 100
+       | (12038:48) 闇に染まるがいい！
+       | Change Random to Dark, Deal 95% damage
+       | condition: 20% chance, hp <= 100
+       | (12039:79) 我が妖術を受けよ！
+       | Change 5th row to Poison orbs, Deal 80% damage
+ | group:
+ | condition: hp <= 49
+   | group:
+   | condition: turn 1
+     | group:
+       | (12040:83) 貴様を甘く見ていたようだな… + 全力でいかせてもらう！
+       | Movetime 50% for 5 turns + Rcv 50% for 5 turns
+ | group:
+ | condition: hp <= 14
+   | group:
+   | condition: turn 1
+     | group:
+       | (12043:86) ここまで追いつめられるとは…
+       | Enemy recover 50% hp
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | (12044:15) 裁きの超波動
+       | Deal 200% damage

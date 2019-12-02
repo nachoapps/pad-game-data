@@ -1,0 +1,39 @@
+#4983 - ツチノコ
+monster size: 4
+new AI: True
+start/max counter: 1
+counter increment: 1
+monster_id: 4983
+approved: False
+
+level: 4
+ type: PREEMPT
+ | (11925:83) ツチノコスマイル + しあわせ　あげちゃうっ！
+ | Player recover 100% hp + Movetime 150% for 5 turns
+ group:
+ | group:
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: 25% chance, hp <= 100
+       | (11928:15) カプッ！
+       | Deal 110% damage
+       | condition: 25% chance, hp <= 100
+       | (11929:48) クローバー　ふやしちゃおっ！
+       | Change Random to Wood, Deal 90% damage
+       | condition: 25% chance, hp <= 100
+       | (11930:79) しあわせだなぁ～
+       | Change 3rd row to Heal orbs, Deal 100% damage
+       | condition: 25% chance, hp <= 100
+       | (11931:65) みんな　なかよくしよっ！
+       | Bind 4 random subs for 1 turns, Deal 80% damage
+ type: REMAINING
+ condition: when 1 enemies remain
+ | group:
+ | condition: hp <= 49
+   | group:
+   | condition: turn 1
+     | group:
+       | condition: when 1 enemies remain, hp <= 100
+       | (11932:17) キュピーン！
+       | Increase damage to 150% for the next 5 turns

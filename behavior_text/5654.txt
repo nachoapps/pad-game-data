@@ -1,0 +1,46 @@
+#5654 - 相良宗介&アーバレスト
+monster size: 5
+new AI: True
+start/max counter: 3
+counter increment: 0
+monster_id: 5654
+approved: False
+
+level: 1
+ type: PASSIVE
+ | (14995:118) 攻撃マシン半減
+ | Reduce damage from Attacker, Machine by 50%
+ type: PREEMPT
+ | (14932:74) 一分で片付けるぞ
+ | Reduce damage from all sources by 75% for 5 turns
+ group:
+ | group:
+   | group:
+   | condition: turn 1
+     | group:
+       | (14933:105) 行くぞ……！
+       | Rcv 50% for 5 turns
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: 33% chance, hp <= 100
+       | (14935:15) チェーンガン、威力行使
+       | Deal 70% damage (5 hits, 14% each)
+       | condition: 33% chance, hp <= 100
+       | (14936:92) ショット・キャノン
+       | Spawn random 6 Jammer orbs, Deal 65% damage
+       | condition: 34% chance, hp <= 100
+       | (14937:77) 単分子カッター
+       | Change 4th column to Dark, Jammer orbs, Deal 65% damage
+ | group:
+ | condition: hp <= 49
+   | group:
+   | condition: turn 1
+     | group:
+       | (14934:71) ラムダ・ドライバ作動
+       | Void damage >= 5000000 for 5 turns
+   | group:
+   | condition: turn 2
+     | group:
+       | (14933:105) 行くぞ……！
+       | Rcv 50% for 5 turns

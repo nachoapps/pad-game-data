@@ -1,0 +1,40 @@
+#5646 - オーフェン
+monster size: 5
+new AI: True
+start/max counter: 31
+counter increment: 0
+monster_id: 5646
+approved: False
+
+level: 4
+ type: PREEMPT
+ | (14972:39) 俺はお前を止める
+ | Movetime -2s for 5 turns
+ group:
+ | group:
+   | group:
+   | condition: turn 1
+     | group:
+       | (14973:74) 我は紡ぐ光輪の鎧！
+       | Reduce damage from all sources by 50% for 4 turns
+   | group:
+   | condition: turn 2
+     | group:
+       | (14974:67) 我は踊る天の楼閣！
+       | Absorb combo <= 4 damage for 3 turns
+   | group:
+   | condition: turn 3
+     | group:
+       | (14975:65) 我は生む小さき精霊
+       | Bind 1 random subs for 2 turns
+   | group:
+   | condition: turn 4
+     | group:
+       | condition: when 1 enemies remain, hp <= 100
+       | (14976:17) 我掲げるは降魔の剣！
+       | Increase damage to 200% for the next 1 turns
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | (14977:15) 遅ぇっ！
+       | Deal 120% damage

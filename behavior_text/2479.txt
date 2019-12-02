@@ -1,0 +1,94 @@
+#2479 - 堕転したマギ・ジュダル
+monster size: 5
+new AI: True
+start/max counter: 1
+counter increment: 0
+monster_id: 2479
+approved: False
+
+level: 4
+ type: PREEMPT
+ | (3474:15) Here I go!
+ | Deal 50% damage
+ group:
+ | group:
+   | group:
+   | condition: turn 1
+     | group:
+       | (3475:20) Magic Barrier
+       | Voids status ailments for 999 turns
+   | group:
+   | condition: turn 2
+     | group:
+       | condition: when 2472, 2473 on team, hp <= 100
+       | (3483:15) Hey, fellow Magi!
+       | Deal 100% damage
+       | condition: 35% chance, hp <= 100
+       | (3477:77) Wind Magic
+       | Change 6th column to Wood orbs, Deal 100% damage
+       | condition: 35% chance, hp <= 100
+       | (3478:77) Ice Magic
+       | Change 1st column to Water orbs, Deal 100% damage
+       | condition: 30% chance, when required attributes on board, hp <= 100
+       | (3476:92) Rain of Ice Spears
+       | Spawn random 8 Water orbs, Deal 120% damage
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: 35% chance, hp <= 100
+       | (3477:77) Wind Magic
+       | Change 6th column to Wood orbs, Deal 100% damage
+       | condition: 35% chance, hp <= 100
+       | (3478:77) Ice Magic
+       | Change 1st column to Water orbs, Deal 100% damage
+       | condition: 30% chance, when required attributes on board, hp <= 100
+       | (3476:92) Rain of Ice Spears
+       | Spawn random 8 Water orbs, Deal 120% damage
+ | group:
+ | condition: hp <= 89
+   | group:
+   | condition: turn 1
+     | group:
+       | condition: when 2472, 2473 on team, hp <= 100
+       | (3483:15) Hey, fellow Magi!
+       | Deal 100% damage
+       | condition: 35% chance, hp <= 100
+       | (3477:77) Wind Magic
+       | Change 6th column to Wood orbs, Deal 100% damage
+       | condition: 35% chance, hp <= 100
+       | (3478:77) Ice Magic
+       | Change 1st column to Water orbs, Deal 100% damage
+       | condition: 30% chance, when required attributes on board, hp <= 100
+       | (3476:92) Rain of Ice Spears
+       | Spawn random 8 Water orbs, Deal 120% damage
+ | group:
+ | condition: hp <= 49
+   | group:
+   | condition: turn 1
+     | group:
+       | condition: when 1 enemies remain, hp <= 50
+       | (3479:17) That hurts!
+       | Increase damage to 200% for the next 999 turns
+   | group:
+   | condition: turn 2
+     | group:
+       | condition: when 2472, 2473 on team, hp <= 100
+       | (3483:15) Hey, fellow Magi!
+       | Deal 100% damage
+       | condition: 35% chance, hp <= 100
+       | (3477:77) Wind Magic
+       | Change 6th column to Wood orbs, Deal 100% damage
+       | condition: 35% chance, hp <= 100
+       | (3478:77) Ice Magic
+       | Change 1st column to Water orbs, Deal 100% damage
+       | condition: 30% chance, when required attributes on board, hp <= 100
+       | (3476:92) Rain of Ice Spears
+       | Spawn random 8 Water orbs, Deal 120% damage
+ | group:
+ | condition: hp <= 19
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: when required attributes on board, hp <= 100
+       | (3481:92) Black Lightning Spears
+       | Spawn random 8 Light, Dark orbs, Deal 300% damage

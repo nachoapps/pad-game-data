@@ -1,0 +1,38 @@
+#5467 - 鳴子章吉
+monster size: 5
+new AI: True
+start/max counter: 3
+counter increment: 0
+monster_id: 5467
+approved: False
+
+level: 4
+ type: PREEMPT
+ | (14124:15) ワイが鳴子章吉や!!
+ | Deal 80% damage
+ group:
+ | group:
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: 50% chance, hp <= 100
+       | (14125:50) どかんかいおるあああ!!
+       | Player -75% HP
+       | condition: 50% chance, hp <= 100
+       | (14126:48) ワイの真骨頂みせたるわ!!
+       | Change Random to Fire, Deal 95% damage
+ | group:
+ | condition: hp <= 50
+   | group:
+   | condition: turn 1
+     | group:
+       | (14127:83) いくで鳴子必殺――!! + アームストロングクライムや!!
+       | Increase damage to 150% for the next 5 turns + Specific orbs change every 1.0s for 2 turns
+ | group:
+ | condition: hp <= 20
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: when required attributes on board, hp <= 100
+       | (14130:92) そんで鳴子劇場総仕上げや!!
+       | Spawn random 7 Fire orbs, Deal 150% damage

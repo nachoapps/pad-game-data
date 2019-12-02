@@ -1,0 +1,45 @@
+#4961 - コマじろう
+monster size: 4
+new AI: True
+start/max counter: 3
+counter increment: 0
+monster_id: 4961
+approved: False
+
+level: 1
+ type: PREEMPT
+ | (11957:67) もんげーーっ！
+ | Absorb combo <= 4 damage for 5 turns
+ group:
+ | group:
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: 33% chance, hp <= 100
+       | (11958:105) オラ　負けないズラよ！
+       | Rcv 50% for 1 turns, Deal 80% damage
+       | condition: 33% chance, hp <= 100
+       | (11959:15) ズラッ！
+       | Deal 100% damage
+       | condition: 34% chance, hp <= 100
+       | (11960:48) いかずちの術ズラ！
+       | Change Random to Light, Deal 95% damage
+ | group:
+ | condition: hp <= 49
+   | group:
+   | condition: turn 1
+     | group:
+       | (11961:96) 手かげん　してほしいズラ～
+       | Locked random skyfall +100% for 5 turns
+ | group:
+ | condition: hp <= 19
+   | group:
+   | condition: turn 1
+     | group:
+       | (11962:39) 兄ちゃん…　オラがんばるズラ！
+       | Movetime -2s for 5 turns
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | (11963:15) 風来サンダー
+       | Deal 180% damage (3 hits, 60% each)

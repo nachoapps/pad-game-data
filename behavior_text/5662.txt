@@ -1,0 +1,37 @@
+#5662 - マジク・リン
+monster size: 5
+new AI: True
+start/max counter: 15
+counter increment: 0
+monster_id: 5662
+approved: False
+
+level: 1
+ type: PASSIVE
+ | (14963:118) バランス回復半減
+ | Reduce damage from Balanced, Healer by 50%
+ type: PREEMPT
+ | (14910:68) 僕だって魔術士なんだ
+ | Jammer, Poison skyfall +10% for 4 turns
+ group:
+ | group:
+   | group:
+   | condition: turn 1
+     | group:
+       | (14911:110) 我は乱す光列の檻！
+       | Specific orbs change every 1.0s for 4 turns
+   | group:
+   | condition: turn 2
+     | group:
+       | (14912:67) 我は跳ぶ――天の銀嶺！
+       | Absorb combo <= 6 damage for 15 turns
+   | group:
+   | condition: turn 3
+     | group:
+       | (14913:50) 全力で撃ち込んでやる
+       | Player -99% HP
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | (14914:83) わ、我は放つ光の―― + 光の白刃！
+       | Do nothing + Change Random to Light, Deal 150% damage

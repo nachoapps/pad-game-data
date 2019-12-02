@@ -1,0 +1,84 @@
+#4921 - 仮面ライダーＶ３
+monster size: 5
+new AI: True
+start/max counter: 3
+counter increment: 0
+monster_id: 4921
+approved: False
+
+level: 4
+ type: PREEMPT
+ | (11696:65) V3 Electric Heat Chop
+ | Bind 2 random subs for 2 turns
+ group:
+ | group:
+   | group:
+   | condition: turns 1-2
+     | group:
+       | condition: 33% chance, hp <= 100
+       | (11697:15) V3 Chop
+       | Deal 95% damage
+       | condition: 34% chance, hp <= 100
+       | (11698:15) V3 Punch
+       | Deal 100% damage
+       | condition: 33% chance, hp <= 100
+       | (11699:15) Hurricane Last Dash
+       | Deal 105% damage (3 hits, 35% each)
+   | group:
+   | condition: turn 3
+     | group:
+       | (11701:83) V3 Kick + V3 Reverse Kick
+       | Deal 60% damage + Deal 60% damage
+   | group:
+   | condition: turns 4-5
+     | group:
+       | condition: 33% chance, hp <= 100
+       | (11697:15) V3 Chop
+       | Deal 95% damage
+       | condition: 34% chance, hp <= 100
+       | (11698:15) V3 Punch
+       | Deal 100% damage
+       | condition: 33% chance, hp <= 100
+       | (11699:15) Hurricane Last Dash
+       | Deal 105% damage (3 hits, 35% each)
+   | group:
+   | condition: turn 6
+     | group:
+       | (11704:83) V3 Corkscrew Kick + V3 Reverse Corkscrew Kick
+       | Deal 60% damage + Random 2 orbs change every 1.0s for 1 turns, Deal 60% damage
+   | group:
+   | condition: repeats every 3 turns
+     | group:
+       | condition: 33% chance, hp <= 100
+       | (11697:15) V3 Chop
+       | Deal 95% damage
+       | condition: 34% chance, hp <= 100
+       | (11698:15) V3 Punch
+       | Deal 100% damage
+       | condition: 33% chance, hp <= 100
+       | (11699:15) Hurricane Last Dash
+       | Deal 105% damage (3 hits, 35% each)
+   | group:
+   | condition: repeats every 3 turns
+     | group:
+       | (11707:15) V3 Reverse Rotation Corkscrew Kick
+       | Deal 180% damage (3 hits, 60% each)
+ | group:
+ | condition: hp <= 49
+   | group:
+   | condition: turn 1
+     | group:
+       | (11700:50) Red Bone Ring
+       | Player -99% HP
+ | group:
+ | condition: hp <= 14
+   | group:
+   | condition: turn 1
+     | group:
+       | (11708:83) Red Bone Power + Red Lamp Power
+       | Increase damage to 200% for the next 1 turns + Reduce damage from all sources by 50% for 1 turns
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | (11711:15) V3 Double Rotation Kick
+       | Deal 100% damage (2 hits, 50% each)

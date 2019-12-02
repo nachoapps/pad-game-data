@@ -1,0 +1,46 @@
+#4981 - キュウビ【妖怪ウォッチ】
+monster size: 4
+new AI: True
+start/max counter: 1
+counter increment: 1
+monster_id: 4981
+approved: False
+
+level: 1
+ type: PREEMPT
+ | (12005:104) ふぅん…　キミが遊び相手かい
+ | 4x1 cloud appear for 3 turns at 3rd row, 2nd column
+ group:
+ | group:
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: 50% chance, hp <= 100
+       | (12006:83) キュンキュンさせてあげるよ… + ヤケドしても　知らないけどね！
+       | Change Random to Fire, Deal 95% damage + Locked Fire skyfall +100% for 10 turns
+       | condition: 50% chance, hp <= 100
+       | (12007:83) ほら　こっちだよ！ + だらしがないねえ！
+       | Player -30% HP + Deal 120% damage (2 hits, 60% each)
+ | group:
+ | condition: hp <= 50
+   | group:
+   | condition: repeats every 2 turns
+     | group:
+       | (12012:83) へぇ　少しは遊べるじゃないか… + それじゃ　こんなのはどうだい？ + さあ　もっと楽しませてよ！
+       | Deal 90% damage + Increase damage to 150% for the next 1 turns + Rcv 50% for 1 turns
+   | group:
+   | condition: repeats every 2 turns
+     | group:
+       | condition: 50% chance, hp <= 100
+       | (12006:83) キュンキュンさせてあげるよ… + ヤケドしても　知らないけどね！
+       | Change Random to Fire, Deal 95% damage + Locked Fire skyfall +100% for 10 turns
+       | condition: 50% chance, hp <= 100
+       | (12007:83) ほら　こっちだよ！ + だらしがないねえ！
+       | Player -30% HP + Deal 120% damage (2 hits, 60% each)
+ | group:
+ | condition: hp <= 14
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | (12016:15) 紅蓮地獄
+       | Deal 250% damage

@@ -1,0 +1,38 @@
+#105356 - ヒカフエドラ
+monster size: 4
+new AI: True
+start/max counter: 3
+counter increment: 0
+monster_id: 105356
+approved: False
+
+level: 4
+ type: PREEMPT
+ | (13442:92) 癒しの旋律
+ | Spawn random 10 Heal orbs
+ | (13443:105) シンフォニックハーモニー
+ | Rcv 50% for 3 turns
+ group:
+ | group:
+   | group:
+   | condition: turn 1
+     | group:
+       | (13443:105) シンフォニックハーモニー
+       | Rcv 50% for 3 turns
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: 50% chance, when required attributes on board, hp <= 100
+       | (13444:92) スフォルツァートペザンテ
+       | Spawn random 1 Heal orbs, Deal 105% damage
+       | condition: 50% chance, hp <= 100
+       | (13445:48) アダージョカランド
+       | Change Random to Light, Deal 95% damage
+ | group:
+ | condition: hp <= 19
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: when required attributes on board, hp <= 100
+       | (13446:92) リタルダンドアンビエント
+       | Spawn random 8 Light orbs, Deal 150% damage

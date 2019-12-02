@@ -1,0 +1,35 @@
+#5706 - 清洲リュウジ＆Ｎ７００Ａのぞみ アドバンスドモード
+monster size: 5
+new AI: True
+start/max counter: 7
+counter increment: 0
+monster_id: 5706
+approved: False
+
+level: 4
+ type: PREEMPT
+ | (15192:83) チェンジ、シンカリオン！ + いくぞ！
+ | Voids status ailments for 999 turns + 1x1 cloud appear for 1 turns at random location, Deal 50% damage
+ group:
+ | group:
+   | group:
+   | condition: turn 1
+     | group:
+       | (15174:99) まだまだだ！
+       | Seal 6th column for 2 turns
+   | group:
+   | condition: turn 2
+     | group:
+       | condition: when 1 enemies remain, hp <= 100
+       | (15175:17) 勝つためには俺は命を賭す
+       | Increase damage to 150% for the next 5 turns
+   | group:
+   | condition: turn 3
+     | group:
+       | (15176:66) それが俺の流儀だ！
+       | Do nothing
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | (15177:108) ドラゴンナックル
+       | Change Fire, Water, Wood to Water, Deal 90% damage

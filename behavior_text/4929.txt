@@ -1,0 +1,49 @@
+#4929 - 仮面ライダーＷ
+monster size: 5
+new AI: True
+start/max counter: 3
+counter increment: 0
+monster_id: 4929
+approved: False
+
+level: 4
+ type: PREEMPT
+ | (11749:83) Terminal Eye + Double Feeler
+ | Voids status ailments for 5 turns + Blind orbs in specific positions for 1 turns
+ group:
+ | group:
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: 50% chance, when required attributes on board, hp <= 100
+       | (11752:92) Cyclone Knuckle
+       | Spawn random 5 Wood orbs, Deal 100% damage
+       | condition: when required attributes on board, hp <= 100
+       | (11753:92) Joker Knuckle
+       | Spawn random 5 Dark orbs, Deal 100% damage
+ | group:
+ | condition: hp <= 50
+   | group:
+   | condition: turn 1
+     | group:
+       | (11754:67) Wind Control
+       | Absorb combo <= 4 damage for 5 turns
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: 33% chance, hp <= 100
+       | (11755:79) Charged Wind Power Kick
+       | Change 3rd row to Wood orbs, Deal 110% damage
+       | condition: 50% chance, when required attributes on board, hp <= 100
+       | (11752:92) Cyclone Knuckle
+       | Spawn random 5 Wood orbs, Deal 100% damage
+       | condition: when required attributes on board, hp <= 100
+       | (11753:92) Joker Knuckle
+       | Spawn random 5 Dark orbs, Deal 100% damage
+ | group:
+ | condition: hp <= 14
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | (11756:83) Maximum Drive + Extreme Joker
+       | 2x2 cloud appear for 1 turns at random location + Deal 150% damage

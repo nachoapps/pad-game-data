@@ -1,0 +1,53 @@
+#4662 - 紅のドラゴンスラッガー・ソニア
+monster size: 5
+new AI: True
+start/max counter: 1
+counter increment: 0
+monster_id: 4662
+approved: False
+
+level: 4
+ type: PREEMPT
+ | condition: when required attributes on board, hp <= 100
+ | (10624:92) Let's guide them man to man.
+ | Spawn random 6 Poison orbs
+ group:
+ | group:
+   | group:
+   | condition: turn 1
+     | group:
+       | (10628:108) I'll do it one way or another.
+       | Change Poison to Fire, Dark, Deal 200% damage
+       | (10627:83) Alright, great! + Don't forget this sensation now.
+       | Spawn random 6 Heal orbs + Movetime 200% for 1 turns
+   | group:
+   | condition: turn 2
+     | group:
+       | condition: when 1 enemies remain, hp <= 100
+       | (10629:17) Dauntless Courage
+       | Increase damage to 150% for the next 5 turns
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | (10630:94) Evasive Ball
+       | Lock 5 random Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs, Deal 100% damage
+ | group:
+ | condition: hp <= 49
+   | group:
+   | condition: turn 2
+     | group:
+       | (10631:84) Try saying that again!...
+       | Change all orbs to Fire, Dark, Deal 100% damage
+   | group:
+   | condition: turn 3
+     | group:
+       | condition: when 1 enemies remain, hp <= 100
+       | (10629:17) Dauntless Courage
+       | Increase damage to 150% for the next 5 turns
+ | group:
+ | condition: hp <= 19
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | (10632:15) Draco Summoning Throwing Law
+       | Deal 200% damage (4 hits, 50% each)

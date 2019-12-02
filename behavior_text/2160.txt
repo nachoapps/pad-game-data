@@ -1,0 +1,30 @@
+#2160 - 聖天使クラウゼ・バルキューラ
+monster size: 4
+new AI: True
+start/max counter: 1
+counter increment: 0
+monster_id: 2160
+approved: False
+
+level: 5
+ type: PREEMPT
+ | (2492:77) 高速突撃
+ | Change 2nd, 5th column to Light orbs, Deal 70% damage
+ group:
+ | group:
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | (2499:15) Ｗ・ブレイカー
+       | Deal 100% damage (2 hits, 50% each)
+ | group:
+ | condition: hp <= 49
+   | group:
+   | condition: turn 1
+     | group:
+       | condition: 50% chance, hp <= 50
+       | (2497:2) オプティック・バインド
+       | Bind Light cards for 2 turns
+       | condition: hp <= 50
+       | (2498:86) フォトニック・チャージ
+       | Enemy recover 30% hp

@@ -1,0 +1,25 @@
+#1038 - 師団長・コルト
+monster size: 4
+new AI: False
+start/max counter: 1
+counter increment: 0
+monster_id: 1038
+approved: False
+
+level: 1
+ group:
+ | group:
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: 50% chance, hp <= 100
+       | (837:48) すべては女王の為に
+       | Change Random to Jammer, Deal 80% damage
+ | group:
+ | condition: hp <= 74
+   | group:
+   | condition: turn 1
+     | group:
+       | condition: hp <= 75
+       | (836:8) 調子に乗るなよ
+       | Increase damage to 200% for the next attack

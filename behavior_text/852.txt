@@ -1,0 +1,18 @@
+#852 - DD・マジックアーチャー
+monster size: 4
+new AI: False
+start/max counter: 0
+counter increment: 0
+monster_id: 852
+approved: False
+
+level: 5
+ group:
+ | group:
+ | condition: hp <= 74
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: 50% chance, hp <= 75
+       | (584:15) Sorcery Bow
+       | Deal 120% damage (4 hits, 30% each)

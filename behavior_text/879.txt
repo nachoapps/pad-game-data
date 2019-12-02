@@ -1,0 +1,36 @@
+#879 - キングゴルドラ＆キンゴルネコ
+monster size: 5
+new AI: False
+start/max counter: 1
+counter increment: 0
+monster_id: 879
+approved: False
+
+level: 1
+ group:
+ | group:
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: 30% chance, hp <= 100
+       | (621:16) Meow meeow meooow♪
+       | Do nothing
+
+level: 5
+ group:
+ | group:
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | (630:48) Gold Bonus nya!
+       | Change Random to Light, Deal 90% damage
+ | group:
+ | condition: hp <= 49
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: 70% chance, hp <= 50
+       | (629:1) Sing and Dance nya!
+       | Bind 3 random cards for 2~3 turns
+       | (630:48) Gold Bonus nya!
+       | Change Random to Light, Deal 90% damage

@@ -1,0 +1,59 @@
+#4940 - 仮面ライダーゲンム ゾンビアクションゲーマー
+monster size: 5
+new AI: True
+start/max counter: 3
+counter increment: 0
+monster_id: 4940
+approved: False
+
+level: 1
+ type: DEATH
+ | condition: when defeated, hp <= 100
+ | (11826:95) I am God!
+ | Do nothing
+ group:
+
+level: 4
+ type: PREEMPT
+ | (11814:20) I'm the Game Master, I'm God!
+ | Voids status ailments for 999 turns
+ type: DEATH
+ | condition: when defeated, hp <= 100
+ | (11826:95) I am God!
+ | Do nothing
+ group:
+ | group:
+   | group:
+   | condition: turn 1
+     | group:
+       | (11815:83) Anti Bugster Area + Dangerous Breaker
+       | Movetime -3s for 10 turns + Reduce damage from all sources by 50% for 10 turns
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: 50% chance, hp <= 100
+       | (11818:15) Living Dead Shoes α
+       | Deal 100% damage
+       | condition: 50% chance, when required attributes on board, hp <= 100
+       | (11819:92) Spike Attack
+       | Spawn random 4 Jammer orbs, Deal 95% damage
+ | group:
+ | condition: hp <= 49
+   | group:
+   | condition: turn 2
+     | group:
+       | condition: when 1 enemies remain, hp <= 100
+       | (11820:17) Gain Riser
+       | Increase damage to 150% for the next 999 turns
+ | group:
+ | condition: hp <= 19
+   | group:
+   | condition: turn 2
+     | group:
+       | (11821:83) Revenant Dischargers + Bone Build Guard
+       | Lock all Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs + Absorb combo <= 6 damage for 10 turns
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | (11824:15) Dangerous Critical Strike
+       | Deal 300% damage

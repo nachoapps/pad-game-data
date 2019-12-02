@@ -1,0 +1,48 @@
+#4955 - ふぶき姫
+monster size: 4
+new AI: True
+start/max counter: 0
+counter increment: 0
+monster_id: 4955
+approved: False
+
+level: 1
+ type: PREEMPT
+ | (11943:83) 雪あそび　したくない？ + 急がないと　とろけちゃう！
+ | Increase damage to 150% for the next 3 turns + Movetime -2s for 3 turns
+ group:
+ | group:
+   | group:
+   | condition: repeats every 4 turns
+     | group:
+       | condition: 34% chance, hp <= 100
+       | (11946:83) 冷やしちゃう！ + こおりなさいっ！
+       | Player -25% HP + Deal 50% damage
+       | condition: 33% chance, hp <= 100
+       | (11947:83) ひえひえプレゼントっ♪ + ず～っと　溶けないでいてね？
+       | Change Random to Water, Deal 95% damage + Delay active skills by 1 turns
+       | condition: 33% chance, hp <= 100
+       | (11948:83) こごえさせてあげるっ！ + ぴゅう～～っ♪
+       | Lock 8 random Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs + Bind 1 random subs for 2 turns, Deal 90% damage
+   | group:
+   | condition: repeats every 4 turns
+     | group:
+       | (11955:66) 夏バテだわ…
+       | Do nothing
+   | group:
+   | condition: repeats every 4 turns
+     | group:
+       | (11943:83) 雪あそび　したくない？ + 急がないと　とろけちゃう！
+       | Increase damage to 150% for the next 3 turns + Movetime -2s for 3 turns
+ | group:
+ | condition: hp <= 19
+   | group:
+   | condition: repeats every 4 turns
+     | group:
+       | (11956:15) キラキラ雪化粧
+       | Deal 200% damage (4 hits, 50% each)
+   | group:
+   | condition: repeats every 4 turns
+     | group:
+       | (11943:83) 雪あそび　したくない？ + 急がないと　とろけちゃう！
+       | Increase damage to 150% for the next 3 turns + Movetime -2s for 3 turns

@@ -1,0 +1,29 @@
+#205360 - ミドオンマル
+monster size: 3
+new AI: True
+start/max counter: 1
+counter increment: 0
+monster_id: 205360
+approved: False
+
+level: 4
+ group:
+ | group:
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: 50% chance, hp <= 100
+       | (13456:14) 重厚な低音
+       | Bind active skills for 1 turns, Deal 95% damage
+       | condition: 50% chance, hp <= 100
+       | (13457:104) 長音の音色
+       | 2x2 cloud appear for 1 turns at random location, Deal 95% damage
+ type: REMAINING
+ condition: when 1 enemies remain
+ | group:
+   | group:
+   | condition: turn 1
+     | group:
+       | condition: when 1 enemies remain, hp <= 100
+       | (13462:17) 楽士の絆
+       | Increase damage to 150% for the next 999 turns

@@ -1,0 +1,41 @@
+#5661 - アメリア＝ウィル＝テスラ＝セイルーン
+monster size: 5
+new AI: True
+start/max counter: 3
+counter increment: 0
+monster_id: 5661
+approved: False
+
+level: 1
+ type: PASSIVE
+ | (14917:73) 根性
+ | Survive attacks with 1 HP when HP > 50%
+ | (14964:118) 攻撃悪魔半減
+ | Reduce damage from Attacker, Devil by 50%
+ type: PREEMPT
+ | (14918:15) 正義の鉄槌を下しますっ！
+ | Deal 100% damage
+ group:
+ | group:
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: 50% chance, hp <= 100
+       | (14919:83) 烈閃槍 + ブレイク！
+       | Change 3rd row to Light orbs, Deal 25% damage + Deal 35% damage
+       | condition: 50% chance, hp <= 100
+       | (14922:15) 霊王結魔弾
+       | Deal 70% damage (2 hits, 35% each)
+ | group:
+ | condition: hp <= 9
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | (14924:77) 崩霊裂
+       | Change 3rd, 4th column to Light orbs, Deal 200% damage
+ | group:
+   | group:
+   | condition: turn 1
+     | group:
+       | (14923:86) 復活
+       | Enemy recover 100% hp

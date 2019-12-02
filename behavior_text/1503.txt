@@ -1,0 +1,40 @@
+#1503 - Fire Dragon Knight
+monster size: 5
+new AI: True
+start/max counter: 7
+counter increment: 0
+monster_id: 1503
+approved: False
+
+level: 1
+ type: PREEMPT
+ | (13369:75) Fire Dragon's Whim
+ | Leader changes to random sub for 1 turns
+ group:
+ | group:
+   | group:
+   | condition: turn 1
+     | group:
+       | (13370:110) Round Dance of Burning Illusion
+       | Specific orbs change every 1.0s for 5 turns
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: 50% chance, hp <= 100
+       | (13371:77) Blaze Blade
+       | Change 1st column to Fire orbs, Deal 100% damage
+       | condition: 50% chance, hp <= 100
+       | (13372:105) Burn
+       | Rcv 50% for 1 turns, Deal 95% damage
+ | group:
+ | condition: hp <= 19
+   | group:
+   | condition: turn 2
+     | group:
+       | (13373:99) Firewall Boundary
+       | Seal 6th column for 1 turns
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | (13374:92) Blazing Sword
+       | Spawn random 15 Fire orbs, Deal 250% damage

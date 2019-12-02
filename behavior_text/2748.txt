@@ -1,0 +1,99 @@
+#2748 - Awoken Hermes
+monster size: 5
+new AI: True
+start/max counter: 2
+counter increment: 1
+monster_id: 2748
+approved: False
+
+level: 1
+ type: PASSIVE
+ | (2966:73) Hermes resolve
+ | Survive attacks with 1 HP when HP > 75%
+ type: PREEMPT
+ | (2944:83) Knowledge Barrier + Demon's Wall
+ | Voids status ailments for 999 turns + Reduce damage from all sources by 50% for 1 turns
+ group:
+ | group:
+   | group:
+   | condition: repeats every 3 turns
+     | group:
+       | condition: when required attributes on board, hp <= 100
+       | (2946:92) Poison Alchemy
+       | Spawn random 3 Poison orbs, Deal 180% damage
+   | group:
+   | condition: repeats every 3 turns
+     | group:
+       | (2945:63) Shadow Touch
+       | Bind 1 random subs for 2 turns, Deal 130% damage
+ | group:
+ | condition: hp <= 74
+   | group:
+   | condition: turn 1
+     | group:
+       | (2949:83) Healing Element + Hinder Line
+       | Change all orbs to Fire, Light, Dark, Deal 100% damage + Change 3rd row to Jammer orbs
+   | group:
+   | condition: repeats every 3 turns
+     | group:
+       | condition: when required attributes on board, hp <= 75
+       | (2950:92) Heat and Cold
+       | Spawn random 2 Fire, Water orbs, Deal 160% damage
+   | group:
+   | condition: repeats every 3 turns
+     | group:
+       | condition: when required attributes on board, hp <= 75
+       | (2951:92) Hinder Alchemy
+       | Spawn random 5 Jammer orbs, Deal 180% damage
+   | group:
+   | condition: repeats every 3 turns
+     | group:
+       | condition: when required attributes on board, hp <= 75
+       | (2950:92) Heat and Cold
+       | Spawn random 2 Fire, Water orbs, Deal 160% damage
+ | group:
+ | condition: hp <= 49
+   | group:
+   | condition: turn 1
+     | group:
+       | condition: 33% chance, hp <= 100
+       | (2954:83) Chemical Reaction + Weaknessless
+       | Change own attribute to Wood + Absorb Fire damage for 5 turns
+       | condition: 33% chance, hp <= 100
+       | (2957:83) Chemical Reaction + Weaknessless
+       | Change own attribute to Light + Absorb Dark damage for 5 turns
+       | condition: 34% chance, hp <= 100
+       | (2960:83) Chemical Reaction + Weaknessless
+       | Change own attribute to Dark + Absorb Light damage for 5 turns
+   | group:
+   | condition: repeats every 3 turns
+     | group:
+       | (2965:48) High Poison Alchemy
+       | Change Jammer to Mortal Poison, Deal 200% damage
+       | condition: when required attributes on board, hp <= 75
+       | (2950:92) Heat and Cold
+       | Spawn random 2 Fire, Water orbs, Deal 160% damage
+   | group:
+   | condition: repeats every 3 turns
+     | group:
+       | (2965:48) High Poison Alchemy
+       | Change Jammer to Mortal Poison, Deal 200% damage
+       | condition: when required attributes on board, hp <= 75
+       | (2951:92) Hinder Alchemy
+       | Spawn random 5 Jammer orbs, Deal 180% damage
+   | group:
+   | condition: repeats every 3 turns
+     | group:
+       | (2965:48) High Poison Alchemy
+       | Change Jammer to Mortal Poison, Deal 200% damage
+       | condition: when required attributes on board, hp <= 75
+       | (2950:92) Heat and Cold
+       | Spawn random 2 Fire, Water orbs, Deal 160% damage
+ | group:
+ | condition: hp <= 24
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: hp <= 25
+       | (2962:85) Contraindication
+       | Change all orbs to Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison, Deal 400% damage

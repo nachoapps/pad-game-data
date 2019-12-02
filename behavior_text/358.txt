@@ -1,0 +1,40 @@
+#358 - Genie
+monster size: 4
+new AI: False
+start/max counter: 4
+counter increment: 0
+monster_id: 358
+approved: False
+
+level: 1
+ group:
+ | group:
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: 20% chance, hp <= 100
+       | (143:5) Miracle of the Lamp
+       | Blind all orbs on the board
+       | condition: 20% chance, hp <= 100
+       | (144:13) Miracle of the Lamp
+       | Change Random 1 to Jammer
+       | condition: 20% chance, hp <= 100
+       | (147:16) Miracle of the Lamp
+       | Do nothing
+ | group:
+ | condition: hp <= 39
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: 40% chance, hp <= 40
+       | (142:7) Miracle of the Lamp
+       | Enemy recover 30% hp
+       | condition: 20% chance, hp <= 100
+       | (143:5) Miracle of the Lamp
+       | Blind all orbs on the board
+       | condition: 20% chance, hp <= 100
+       | (144:13) Miracle of the Lamp
+       | Change Random 1 to Jammer
+       | condition: 20% chance, hp <= 100
+       | (147:16) Miracle of the Lamp
+       | Do nothing

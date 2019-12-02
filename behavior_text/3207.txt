@@ -1,0 +1,54 @@
+#3207 - Fire Guardian Dragon, Touen
+monster size: 5
+new AI: True
+start/max counter: 2
+counter increment: 1
+monster_id: 3207
+approved: False
+
+level: 4
+ type: PREEMPT
+ | (5698:83) Bonfire of Enlightenment + Triple Fireball
+ | Absorb combo <= 7 damage for 1 turns + Change 1st column to Heal orbs, 2nd column to Dark orbs, 3rd column to Fire orbs, Deal 140% damage
+ group:
+ | group:
+   | group:
+   | condition: turn 1
+     | group:
+       | (5702:97) Coals of Enlightenment
+       | Blind random 8 orbs for 5 turns
+   | group:
+   | condition: repeats every 3 turns
+     | group:
+       | (5707:94) Sacred Exorcist Flame
+       | Lock all Jammer, Poison orbs, Deal 150% damage
+       | (5708:85) Fireball of Mass Destruction
+       | Change all orbs to Fire, Dark, Heal, Poison, Deal 120% damage
+   | group:
+   | condition: repeats every 3 turns
+     | group:
+       | (5707:94) Sacred Exorcist Flame
+       | Lock all Jammer, Poison orbs, Deal 150% damage
+       | condition: when required attributes on board, hp <= 100
+       | (5706:92) Triple Abaddon Wave
+       | Spawn random 3 Jammer orbs, Deal 100% damage
+ | group:
+ | condition: hp <= 59
+   | group:
+   | condition: turn 1
+     | group:
+       | (5701:74) Protective Flames of Retribution
+       | Reduce damage from all sources by 50% for 10 turns
+ | group:
+ | condition: hp <= 19
+   | group:
+   | condition: repeats every 2 turns
+     | group:
+       | condition: hp <= 20
+       | (5703:83) Bonfire of Enlightenment + Blazing Brand of Retribution
+       | Absorb combo <= 7 damage for 1 turns + Movetime 25% for 1 turns
+   | group:
+   | condition: repeats every 2 turns
+     | group:
+       | (5705:85) Fireball Destruction
+       | Change all orbs to Fire, Jammer, Deal 600% damage

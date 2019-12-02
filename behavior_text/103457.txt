@@ -1,0 +1,56 @@
+#103457 - Alt. Lawless Demonic Gentleman, Azazel
+monster size: 5
+new AI: True
+start/max counter: 1
+counter increment: 0
+monster_id: 103457
+approved: False
+
+level: 1
+ type: PASSIVE
+ | (6331:72) Fire/Light halved
+ | Reduce damage from Fire, Light by 50%
+ type: PREEMPT
+ | (12103:83) Fallen Angel's Wings + Scapegoat
+ | Seal 1st, 5th row for 4 turns + Voids status ailments for 999 turns
+ group:
+ | group:
+   | group:
+   | condition: turn 1
+     | group:
+       | (6318:83) Devil Snake's Glare + Negative Chain
+       | Delay active skills by 4 turns + Deal 175% damage (7 hits, 25% each)
+   | group:
+   | condition: repeats every 2 turns
+     | group:
+       | (6323:94) Black Rebellion
+       | Lock 10 random Wood, Dark, Jammer, Poison orbs, Deal 110% damage
+   | group:
+   | condition: repeats every 2 turns
+     | group:
+       | condition: 50% chance, when required attributes on board, hp <= 100
+       | (6324:92) Venomous
+       | Spawn random 12 Poison orbs, Deal 50% damage
+       | (6322:77) Agahara
+       | Change 1st, 2nd column to Fire, Water, Jammer orbs, 3rd, 4th column to Wood, Light, Jammer orbs, 5th, 6th column to Dark, Heal, Jammer orbs, Deal 150% damage
+ | group:
+ | condition: hp <= 39
+   | group:
+   | condition: turn 1
+     | group:
+       | condition: hp <= 40
+       | (6315:83) Fresh Blood of a Male Goat + Devil's Influence
+       | Enemy recover 50% hp + Reduce damage from all sources by 75% for 99 turns, Deal 200% damage
+   | group:
+   | condition: turn 2
+     | group:
+       | (6321:83) Devil Snake's Evil Eye + Negative Chain
+       | Delay active skills by 6 turns + Deal 160% damage (4 hits, 40% each)
+ | group:
+ | condition: hp <= 14
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: hp <= 15
+       | (6325:15) Nightmare Spiral
+       | Deal 700% damage (7 hits, 100% each)

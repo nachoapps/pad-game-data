@@ -1,0 +1,32 @@
+#586 - Light Sprite Pixie
+monster size: 2
+new AI: False
+start/max counter: 1
+counter increment: 1
+monster_id: 586
+approved: False
+
+level: 5
+ type: PREEMPT
+ | (599:48) Fairies' Mischief
+ | Change Random to Jammer, Deal 80% damage
+ group:
+ | group:
+   | group:
+   | condition: repeats every 2 turns
+     | group:
+       | (599:48) Fairies' Mischief
+       | Change Random to Jammer, Deal 80% damage
+ | group:
+ | condition: hp <= 24
+   | group:
+   | condition: repeats every 2 turns
+     | group:
+       | condition: hp <= 25
+       | (598:1) Charm of Sleep
+       | Bind 2 random cards for 2 turns
+   | group:
+   | condition: repeats every 2 turns
+     | group:
+       | (599:48) Fairies' Mischief
+       | Change Random to Jammer, Deal 80% damage

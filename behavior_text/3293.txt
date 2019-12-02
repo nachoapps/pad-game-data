@@ -1,0 +1,40 @@
+#3293 - Witch of the Climactic Night, Werewolfie
+monster size: 3
+new AI: True
+start/max counter: 2
+counter increment: 1
+monster_id: 3293
+approved: False
+
+level: 4
+ type: PREEMPT
+ | condition: when required attributes on board, hp <= 100
+ | (5933:92) I won't let you go!
+ | Spawn random 5 Dark orbs, Deal 130% damage
+ group:
+ | group:
+   | group:
+   | condition: repeats every 3 turns
+     | group:
+       | condition: when required attributes on board, hp <= 100
+       | (5934:92) Poison Slash
+       | Spawn random 3 Poison orbs, Deal 50% damage
+   | group:
+   | condition: repeats every 3 turns
+     | group:
+       | (5935:15) High-Speed Rapid Strike
+       | Deal 120% damage (3 hits, 40% each)
+ | group:
+ | condition: hp <= 49
+   | group:
+   | condition: turn 1
+     | group:
+       | (5936:19) Don't touch my ears!
+       | Increase damage to 150% for the next 999 turns
+ | group:
+ | condition: hp <= 19
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | (5937:15) Succession Technique, Wolf Combo
+       | Deal 300% damage (5 hits, 60% each)

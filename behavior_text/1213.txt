@@ -1,0 +1,34 @@
+#1213 - Saintly Maidens' Protector, Unicorn
+monster size: 5
+new AI: True
+start/max counter: 3
+counter increment: 1
+monster_id: 1213
+approved: False
+
+level: 1
+ type: PREEMPT
+ | (2308:87) Blessing of the Goddess
+ | Absorb damage >= 200000 damage for 3 turns
+ group:
+ | group:
+   | group:
+   | condition: repeats every 4 turns
+     | group:
+       | condition: 50% chance, when required attributes on board, hp <= 100
+       | (2309:92) Sacred Assault
+       | Spawn random 4 Light orbs, Deal 100% damage
+       | condition: 50% chance, hp <= 100
+       | (2310:85) Rainbow Road
+       | Change all orbs to Fire, Water, Wood, Light, Dark, Heal, Deal 125% damage
+   | group:
+   | condition: repeats every 4 turns
+     | group:
+       | (2311:2) Prayer of the Goddess
+       | Bind Dark cards for 3 turns
+       | condition: 50% chance, when required attributes on board, hp <= 100
+       | (2309:92) Sacred Assault
+       | Spawn random 4 Light orbs, Deal 100% damage
+       | condition: 50% chance, hp <= 100
+       | (2310:85) Rainbow Road
+       | Change all orbs to Fire, Water, Wood, Light, Dark, Heal, Deal 125% damage

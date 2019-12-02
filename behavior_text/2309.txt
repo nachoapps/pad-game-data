@@ -1,0 +1,26 @@
+#2309 - Leopard-Spotted Mystery, Furi
+monster size: 4
+new AI: True
+start/max counter: 1
+counter increment: 1
+monster_id: 2309
+approved: False
+
+level: 4
+ type: PREEMPT
+ | (3414:67) Riding the Winds
+ | Absorb combo <= 4 damage for 5 turns
+ group:
+ | group:
+   | group:
+   | condition: repeats every 2 turns
+     | group:
+       | (3416:15) Mysterious Twig
+       | Deal 160% damage (2 hits, 80% each)
+ | group:
+ | condition: hp <= 49
+   | group:
+   | condition: turn 1
+     | group:
+       | (3415:74) Begging for Life
+       | Reduce damage from all sources by 50% for 1 turns

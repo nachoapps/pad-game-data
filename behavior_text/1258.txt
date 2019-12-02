@@ -1,0 +1,32 @@
+#1258 - Chivalrous Demon Lord, Amon
+monster size: 5
+new AI: False
+start/max counter: 1
+counter increment: 1
+monster_id: 1258
+approved: False
+
+level: 1
+ type: PREEMPT
+ | (1545:50) Amon is here!!!
+ | Player -99% HP
+ group:
+ | group:
+   | group:
+   | condition: repeats every 2 turns
+     | group:
+       | (1546:48) Super Devil Hook
+       | Change Random to Jammer, Deal 80% damage
+   | group:
+   | condition: repeats every 2 turns
+     | group:
+       | (1548:15) Ho! Ho! Ho!!
+       | Deal 150% damage (3 hits, 50% each)
+ | group:
+ | condition: hp <= 49
+   | group:
+   | condition: turn 1
+     | group:
+       | condition: hp <= 50
+       | (1547:19) All for me!
+       | Increase damage to 300% for the next 999 turns

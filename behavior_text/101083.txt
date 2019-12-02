@@ -1,0 +1,26 @@
+#101083 - Alt. Grape Dragon
+monster size: 3
+new AI: True
+start/max counter: 0
+counter increment: 0
+monster_id: 101083
+approved: False
+
+level: 1
+ type: PREEMPT
+ | condition: when required attributes on board, hp <= 100
+ | (13632:92) Not just grapes... Eat everything!
+ | Spawn random 4 Dark, Poison orbs
+ group:
+ | group:
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: when required attributes on board, hp <= 100
+       | (5285:92) I'll take one
+       | Spawn random 1 Heal orbs
+       | (5289:48) No grapes? Let's eat this instead then!
+       | Change Heal to Jammer, Deal 100% damage
+       | condition: when required attributes on board, hp <= 100
+       | (5290:92) Let's eat grapes together!
+       | Spawn random 3 Dark orbs

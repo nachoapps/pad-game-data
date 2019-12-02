@@ -1,0 +1,27 @@
+#2242 - Sacred Princess, Alma
+monster size: 5
+new AI: True
+start/max counter: 1
+counter increment: 1
+monster_id: 2242
+approved: False
+
+level: 5
+ type: PREEMPT
+ | (2544:83) Can you hear... The wind's whisper, + the flames' flicker, the water's murmur
+ | Do nothing + Voids status ailments for 999 turns
+ group:
+ | group:
+   | group:
+   | condition: repeats every 2 turns
+     | group:
+       | (2547:15) Legendary 6 Wings
+       | Deal 120% damage (6 hits, 20% each)
+ | group:
+ | condition: hp <= 49
+   | group:
+   | condition: repeats every 2 turns
+     | group:
+       | condition: hp <= 50
+       | (2548:85) Holy Light Requiem
+       | Change all orbs to Fire, Wood, Light, Deal 150% damage

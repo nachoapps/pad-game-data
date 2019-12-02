@@ -1,0 +1,38 @@
+#101179 - Alt. Fire Sprite, Parrot
+monster size: 5
+new AI: True
+start/max counter: 1
+counter increment: 0
+monster_id: 101179
+approved: False
+
+level: 5
+ type: PREEMPT
+ | (6002:87) Innocent Brush Strokes
+ | Absorb damage >= 200000 damage for 2 turns
+ group:
+ | group:
+   | group:
+   | condition: repeats every 2 turns
+     | group:
+       | (6004:103) Explosive Writing
+       | Spawn Bomb orbs in the specified positions, Deal 100% damage
+   | group:
+   | condition: repeats every 2 turns
+     | group:
+       | (6003:48) Fire Spirit's Writing
+       | Change Random to Fire, Deal 80% damage
+ | group:
+ | condition: hp <= 24
+   | group:
+   | condition: turn 1
+     | group:
+       | condition: hp <= 25
+       | (6005:94) Victor Book♪
+       | Lock all Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: hp <= 25
+       | (6006:15) The Sword Kusanagi
+       | Deal 500% damage (5 hits, 100% each)

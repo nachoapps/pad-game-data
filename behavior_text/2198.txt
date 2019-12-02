@@ -1,0 +1,28 @@
+#2198 - Thunder Gear
+monster size: 3
+new AI: True
+start/max counter: 1
+counter increment: 0
+monster_id: 2198
+approved: False
+
+level: 2
+ group:
+ | group:
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | (3001:89) Sleep Mode
+       | Delay active skills by 1 turns
+ | group:
+ | condition: hp <= 99
+   | group:
+   | condition: turn 1
+     | group:
+       | (3002:19) Activated
+       | Increase damage to 200% for the next 999 turns
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | (3006:63) Shock Pulse
+       | Bind 1 random cards for 2 turns, Deal 200% damage

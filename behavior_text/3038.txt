@@ -1,0 +1,71 @@
+#3038 - Shishio Makoto
+monster size: 5
+new AI: True
+start/max counter: 1
+counter increment: 1
+monster_id: 3038
+approved: False
+
+level: 1
+ type: PREEMPT
+ | (5020:83) Neither of us has any reason
+to hold back. + There must be a winner!!
+ | Do nothing + Do nothing
+ type: DEATH
+ | condition: when defeated, hp <= 100
+ | (4969:95) Feh! You disappoint me.
+ | Do nothing
+ group:
+
+level: 4
+ type: PREEMPT
+ | (5004:83) Neither of us has any reason
+to hold back. + There must be a winner!!
+ | Voids status ailments for 999 turns + Change 1st, 6th column to Fire orbs
+ type: DEATH
+ | condition: when defeated, hp <= 100
+ | (4969:95) Feh! You disappoint me.
+ | Do nothing
+ group:
+ | group:
+   | group:
+   | condition: turn 1
+     | group:
+       | condition: when required attributes on board, hp <= 100
+       | (5007:92) The First Secret Blow, "Homura Dama"!!
+       | Spawn random 3 Fire orbs, Deal 100% damage
+   | group:
+   | condition: repeats every 2 turns
+     | group:
+       | (5010:83) Shaaaah!! + Shaaah!!
+       | Spawn random 3 Fire orbs + Change 3rd row to Fire orbs, Deal 120% damage
+   | group:
+   | condition: repeats every 2 turns
+     | group:
+       | (5009:15) Hyohh!!!
+       | Deal 100% damage
+ | group:
+ | condition: hp <= 49
+   | group:
+   | condition: turn 2
+     | group:
+       | (5013:83) In this world, the strong live... + ...and the weak die.
+       | Bind active skills for 1 turns + Reduce damage from all sources by 30% for 2 turns
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: hp <= 50
+       | (5016:15) One way or another, you will fall!
+       | Deal 150% damage (3 hits, 50% each)
+ | group:
+ | condition: hp <= 29
+   | group:
+   | condition: turn 3
+     | group:
+       | (5017:48) The Second Secret, "Guren Kaina"!!
+       | Change Random to Fire, Deal 180% damage
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | (5008:15) Hyohh!!!
+       | Deal 140%~210% damage (2~3 hits, 70% each)

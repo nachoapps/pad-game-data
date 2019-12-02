@@ -1,0 +1,282 @@
+  monster_id: 4321
+  levels {
+    level: 1
+    groups {
+      group_type: PREEMPT
+      children {
+        behavior {
+          condition {
+            hp_threshold: 100
+            use_chance: 100
+          }
+          enemy_skill_id: 9463
+        }
+      }
+    }
+    groups {
+      group_type: DEATH
+      children {
+        behavior {
+          condition {
+            hp_threshold: 100
+            if_defeated: true
+          }
+          enemy_skill_id: 9460
+        }
+      }
+    }
+    groups {
+      group_type: STANDARD
+    }
+  }
+  levels {
+    level: 3
+    groups {
+      group_type: DEATH
+      children {
+        behavior {
+          condition {
+            hp_threshold: 100
+            if_defeated: true
+          }
+          enemy_skill_id: 9460
+        }
+      }
+    }
+    groups {
+      group_type: STANDARD
+    }
+  }
+  levels {
+    level: 4
+    groups {
+      group_type: PREEMPT
+      children {
+        behavior {
+          condition {
+            hp_threshold: 100
+            use_chance: 100
+          }
+          enemy_skill_id: 9448
+        }
+      }
+    }
+    groups {
+      group_type: DEATH
+      children {
+        behavior {
+          condition {
+            hp_threshold: 100
+            if_defeated: true
+          }
+          enemy_skill_id: 9460
+        }
+      }
+    }
+    groups {
+      group_type: STANDARD
+      children {
+        group {
+          group_type: DISPEL_PLAYER
+          children {
+            behavior {
+              condition {
+                hp_threshold: 100
+                use_chance: 100
+              }
+              enemy_skill_id: 9449
+            }
+          }
+        }
+      }
+      children {
+        group {
+          group_type: STANDARD
+          condition {
+            hp_threshold: 100
+          }
+          children {
+            group {
+              condition {
+                trigger_turn: 1
+              }
+              children {
+                group {
+                  group_type: STANDARD
+                  children {
+                    behavior {
+                      condition {
+                        hp_threshold: 100
+                        use_chance: 100
+                      }
+                      enemy_skill_id: 9450
+                    }
+                  }
+                }
+              }
+            }
+          }
+          children {
+            group {
+              condition {
+                trigger_turn: 2
+              }
+              children {
+                group {
+                  group_type: STANDARD
+                  children {
+                    behavior {
+                      condition {
+                        hp_threshold: 100
+                        use_chance: 100
+                      }
+                      enemy_skill_id: 9451
+                    }
+                  }
+                }
+              }
+            }
+          }
+          children {
+            group {
+              condition {
+                trigger_turn: 3
+              }
+              children {
+                group {
+                  group_type: STANDARD
+                  children {
+                    behavior {
+                      condition {
+                        hp_threshold: 100
+                        use_chance: 100
+                      }
+                      enemy_skill_id: 9454
+                    }
+                  }
+                }
+              }
+            }
+          }
+          children {
+            group {
+              condition {
+                repeats_every: 1
+              }
+              children {
+                group {
+                  group_type: STANDARD
+                  children {
+                    behavior {
+                      condition {
+                        hp_threshold: 100
+                        use_chance: 33
+                      }
+                      enemy_skill_id: 9450
+                    }
+                  }
+                  children {
+                    behavior {
+                      condition {
+                        hp_threshold: 100
+                        use_chance: 50
+                      }
+                      enemy_skill_id: 9451
+                    }
+                  }
+                  children {
+                    behavior {
+                      condition {
+                        hp_threshold: 100
+                        use_chance: 100
+                      }
+                      enemy_skill_id: 9455
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      children {
+        group {
+          group_type: STANDARD
+          condition {
+            hp_threshold: 49
+          }
+          children {
+            group {
+              condition {
+                trigger_turn: 4
+              }
+              children {
+                group {
+                  group_type: STANDARD
+                  children {
+                    behavior {
+                      condition {
+                        hp_threshold: 100
+                        use_chance: 100
+                      }
+                      enemy_skill_id: 9456
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      children {
+        group {
+          group_type: STANDARD
+          condition {
+            hp_threshold: 19
+          }
+          children {
+            group {
+              condition {
+                trigger_turn: 1
+              }
+              children {
+                group {
+                  group_type: STANDARD
+                  children {
+                    behavior {
+                      condition {
+                        hp_threshold: 100
+                        use_chance: 100
+                      }
+                      enemy_skill_id: 9457
+                    }
+                  }
+                }
+              }
+            }
+          }
+          children {
+            group {
+              condition {
+                repeats_every: 1
+              }
+              children {
+                group {
+                  group_type: STANDARD
+                  children {
+                    behavior {
+                      condition {
+                        hp_threshold: 100
+                        use_chance: 100
+                      }
+                      enemy_skill_id: 9458
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }

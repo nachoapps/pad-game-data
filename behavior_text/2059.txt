@@ -1,0 +1,90 @@
+#2059 - Dancing Mad, Kefka
+monster size: 5
+new AI: True
+start/max counter: 5
+counter increment: 1
+monster_id: 2059
+approved: False
+
+level: 1
+ type: PASSIVE
+ | (2201:72) *****
+ | Reduce damage from Light, Dark by 50%
+ type: PREEMPT
+ | (2135:66) I'll destroy them all!
+ | Do nothing
+ type: DEATH
+ | condition: when defeated, hp <= 100
+ | (2045:69) *****
+ | Show death effect
+ group:
+
+level: 5
+ type: PASSIVE
+ | (2201:72) *****
+ | Reduce damage from Light, Dark by 50%
+ type: PREEMPT
+ | (2197:20) I'll destroy them all!
+ | Voids status ailments for 999 turns
+ type: DEATH
+ | condition: when defeated, hp <= 100
+ | (2045:69) *****
+ | Show death effect
+ group:
+ | type: DISPEL_PLAYER
+   | (2199:6) Vengeance
+   | Voids player buff effects
+ | group:
+   | group:
+   | condition: repeats every 6 turns
+     | group:
+       | (2146:50) Heartless Angel
+       | Player -99% HP
+   | group:
+   | condition: repeats every 6 turns
+     | group:
+       | condition: 40% chance, hp <= 100
+       | (2148:15) Havoc Wing
+       | Deal 140% damage (2 hits, 70% each)
+       | condition: 40% chance, hp <= 100
+       | (2200:14) Trine
+       | Bind active skills for 2 turns, Deal 110% damage
+       | condition: 20% chance, hp <= 100
+       | (1:82) Disable Skill
+       | Deal 100% damage
+ | group:
+ | condition: hp <= 49
+   | group:
+   | condition: turn 1
+     | group:
+       | (2150:66) Beyond the chaos, the end draws near.
+       | Do nothing
+   | group:
+   | condition: turn 2
+     | group:
+       | (2151:15) Forsaken
+       | Deal 240% damage (4 hits, 60% each)
+   | group:
+   | condition: repeats every 6 turns
+     | group:
+       | (2146:50) Heartless Angel
+       | Player -99% HP
+   | group:
+   | condition: repeats every 6 turns
+     | group:
+       | condition: 40% chance, hp <= 100
+       | (2148:15) Havoc Wing
+       | Deal 140% damage (2 hits, 70% each)
+       | condition: 40% chance, hp <= 100
+       | (2147:15) Hyperdrive
+       | Deal 150% damage
+       | condition: 20% chance, hp <= 100
+       | (2200:14) Trine
+       | Bind active skills for 2 turns, Deal 110% damage
+ | group:
+ | condition: hp <= 14
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | (2198:15) Ultima
+       | Deal 900% damage

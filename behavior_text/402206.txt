@@ -1,0 +1,55 @@
+#402206 - Alt. Broad-Minded Hell Demon, Scarlet
+monster size: 5
+new AI: True
+start/max counter: 1
+counter increment: 0
+monster_id: 402206
+approved: False
+
+level: 1
+ type: PREEMPT
+ | (13693:83) OK! I'm ready now. + The Beast is checking...
+ | Voids status ailments for 999 turns + Movetime -2s for 99 turns
+ group:
+ | group:
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | (3034:48) Rose Burst
+       | Change Jammer to Fire, Deal 150% damage
+       | (3035:83) Serpent Poison + Beast Attack
+       | Change Random 5 to Poison + Deal 100% damage
+ | group:
+ | condition: hp <= 79
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | (3034:48) Rose Burst
+       | Change Jammer to Fire, Deal 150% damage
+       | condition: 60% chance, hp <= 80
+       | (3038:83) Dark Color Fire + Beast's Ambition
+       | Change 1st, 3rd, 5th row to Fire, Dark, Jammer orbs, Deal 100% damage + Delay active skills by 2 turns
+       | (3035:83) Serpent Poison + Beast Attack
+       | Change Random 5 to Poison + Deal 100% damage
+ | group:
+ | condition: hp <= 49
+   | group:
+   | condition: turn 1
+     | group:
+       | condition: hp <= 50
+       | (3041:83) Can you wait a little bit please? + Grrrrr...
+       | Bind 1 both leaders for 1 turns + Increase damage to 200% for the next 999 turns
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: hp <= 50
+       | (3043:83) Dark Heat Bulwark + Beast Attack
+       | Reduce damage from all sources by 50% for 1 turns + Deal 100% damage
+ | group:
+ | condition: hp <= 19
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: hp <= 20
+       | (3046:83) Crows of Sorrow + Beast Last Attack
+       | Change 1st, 2nd, 3rd, 4th, 5th row to Fire, Dark, Jammer, Poison orbs, Deal 20% damage + Deal 360% damage (6 hits, 60% each)

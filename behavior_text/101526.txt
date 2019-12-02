@@ -1,0 +1,29 @@
+#101526 - Alt. High Fire Ninja
+monster size: 4
+new AI: True
+start/max counter: 1
+counter increment: 1
+monster_id: 101526
+approved: False
+
+level: 1
+ group:
+ | group:
+   | group:
+   | condition: repeats every 2 turns
+     | group:
+       | (8197:102) Ninja Dog Gnawing Technique
+       | Spawn random 3 Bomb orbs, Deal 100% damage
+ | group:
+ | condition: hp <= 49
+   | group:
+   | condition: repeats every 2 turns
+     | group:
+       | (8197:102) Ninja Dog Gnawing Technique
+       | Spawn random 3 Bomb orbs, Deal 100% damage
+   | group:
+   | condition: repeats every 2 turns
+     | group:
+       | condition: hp <= 50
+       | (8198:15) Ninja Dog Scramble - Big Curtain
+       | Deal 350%~560% damage (5~8 hits, 70% each)

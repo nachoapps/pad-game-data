@@ -1,0 +1,94 @@
+#5583 - Hanzo Hattori (Samurai Shodown)
+monster size: 5
+new AI: True
+start/max counter: 3
+counter increment: 0
+monster_id: 5583
+approved: False
+
+level: 1
+ type: PREEMPT
+ | (14655:14) Only death awaits you.
+ | Bind active skills for 3 turns
+ | condition: 34% chance, hp <= 100
+ | (14656:79) Ninja Exploding Dragon Blast
+ | Change 3rd row to Fire, Dark orbs, Deal 95% damage
+ | condition: 33% chance, hp <= 100
+ | (14657:63) Ninja Shrike Dash
+ | Bind 1 random subs for 1~2 turns, Deal 100% damage
+ | condition: 33% chance, hp <= 100
+ | (14660:48) Ninja Windsplitter
+ | Change Random to Dark, Deal 95% damage
+ group:
+ | group:
+   | group:
+   | condition: repeats every 3 turns
+     | group:
+       | condition: 34% chance, hp <= 100
+       | (14656:79) Ninja Exploding Dragon Blast
+       | Change 3rd row to Fire, Dark orbs, Deal 95% damage
+       | condition: 33% chance, hp <= 100
+       | (14657:63) Ninja Shrike Dash
+       | Bind 1 random subs for 1~2 turns, Deal 100% damage
+       | condition: 33% chance, hp <= 100
+       | (14660:48) Ninja Windsplitter
+       | Change Random to Dark, Deal 95% damage
+   | group:
+   | condition: repeats every 3 turns
+     | group:
+       | condition: 50% chance, hp <= 100
+       | (14658:109) Falling Ninja Cicada Larva
+       | Random 1 orbs change every 1.0s for 1 turns, Deal 105% damage
+       | condition: 50% chance, hp <= 100
+       | (14659:100) Gashing Ninja Cicada Larva
+       | Seal 5th row for 1 turns, Deal 105% damage
+   | group:
+   | condition: repeats every 3 turns
+     | group:
+       | condition: 34% chance, hp <= 100
+       | (14656:79) Ninja Exploding Dragon Blast
+       | Change 3rd row to Fire, Dark orbs, Deal 95% damage
+       | condition: 33% chance, hp <= 100
+       | (14657:63) Ninja Shrike Dash
+       | Bind 1 random subs for 1~2 turns, Deal 100% damage
+       | condition: 33% chance, hp <= 100
+       | (14660:48) Ninja Windsplitter
+       | Change Random to Dark, Deal 95% damage
+ | group:
+ | condition: hp <= 49
+   | group:
+   | condition: turn 1
+     | group:
+       | (14661:104) Ninja Mon Dance
+       | 2x2 cloud appear for 2 turns at random location
+   | group:
+   | condition: repeats every 3 turns
+     | group:
+       | condition: 50% chance, hp <= 100
+       | (14658:109) Falling Ninja Cicada Larva
+       | Random 1 orbs change every 1.0s for 1 turns, Deal 105% damage
+       | condition: 50% chance, hp <= 100
+       | (14659:100) Gashing Ninja Cicada Larva
+       | Seal 5th row for 1 turns, Deal 105% damage
+   | group:
+   | condition: repeats every 3 turns
+     | group:
+       | condition: 34% chance, hp <= 100
+       | (14656:79) Ninja Exploding Dragon Blast
+       | Change 3rd row to Fire, Dark orbs, Deal 95% damage
+       | condition: 33% chance, hp <= 100
+       | (14657:63) Ninja Shrike Dash
+       | Bind 1 random subs for 1~2 turns, Deal 100% damage
+       | condition: 33% chance, hp <= 100
+       | (14660:48) Ninja Windsplitter
+       | Change Random to Dark, Deal 95% damage
+ | group:
+ | condition: hp <= 14
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: 50% chance, hp <= 100
+       | (14663:15) True Whistling Shrike Drop - Ruin Embers-
+       | Deal 240% damage (6 hits, 40% each)
+       | (14662:77) Sealed Scroll: Shadow Particle
+       | Change 3rd, 4th column to Fire, Dark orbs, Deal 220% damage

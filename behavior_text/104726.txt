@@ -1,0 +1,25 @@
+#104726 - Green Sprite
+monster size: 3
+new AI: True
+start/max counter: 1
+counter increment: 1
+monster_id: 104726
+approved: False
+
+level: 4
+ type: PREEMPT
+ | (10693:15) Strike
+ | Deal 100% damage
+ group:
+ | group:
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: 10% chance, hp <= 100
+       | (10648:76) Club Rewrite
+       | Change 5th column to Wood orbs
+       | condition: 10% chance, hp <= 100
+       | (10649:76) Club Rewrite
+       | Change 6th column to Wood orbs
+       | (10693:15) Strike
+       | Deal 100% damage

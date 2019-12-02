@@ -1,0 +1,125 @@
+#4034 - The Dwarf Inside the Flask
+monster size: 5
+new AI: True
+start/max counter: 7
+counter increment: 0
+monster_id: 4034
+approved: False
+
+level: 1
+ type: PREEMPT
+ | (8596:66) I have to thank you for it, my friend.
+ | Do nothing
+ type: DEATH
+ | condition: when defeated, hp <= 100
+ | (8534:95) AAAAAAAAAAAAAAAAAAA
+ | Do nothing
+ group:
+
+level: 3
+ type: PREEMPT
+ | (8523:83) I thank you for your help. All of you. + You've fulfilled your purpose.
+ | Voids status ailments for 999 turns + Bind active skills for 3 turns
+ type: DEATH
+ | condition: when defeated, hp <= 100
+ | (8534:95) AAAAAAAAAAAAAAAAAAA
+ | Do nothing
+ group:
+ | group:
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: 10% chance, hp <= 100
+       | (8525:77) Stationary Transmutation
+       | Change 4th column to Dark orbs, Deal 100% damage
+       | condition: 10% chance, hp <= 100
+       | (8526:79) Stationary Transmutation
+       | Change 3rd row to Light orbs, Deal 100% damage
+       | condition: 20% chance, hp <= 100
+       | (8527:92) Stationary Transmutation
+       | Spawn random 7 Jammer orbs, Deal 100% damage
+       | condition: 20% chance, hp <= 100
+       | (8528:74) Stationary Transmutation
+       | Reduce damage from all sources by 75% for 1 turns, Deal 100% damage
+       | condition: 20% chance, hp <= 100
+       | (8529:94) Stationary Transmutation
+       | Lock 10 random Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs, Deal 100% damage
+       | condition: 20% chance, when required attributes on board, hp <= 100
+       | (8530:92) Stationary Transmutation
+       | Spawn random 4 Poison orbs, Deal 100% damage
+ | group:
+ | condition: hp <= 79
+   | group:
+   | condition: turn 1
+     | group:
+       | condition: hp <= 80
+       | (8524:71) How sad
+       | Void damage >= 500000 for 3 turns
+ | group:
+ | condition: hp <= 29
+   | group:
+   | condition: turn 2
+     | group:
+       | condition: when 1 enemies remain, hp <= 30
+       | (8531:17) Disappear from my sight.
+       | Increase damage to 1000% for the next 999 turns
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: hp <= 30
+       | (8532:85) Nuclear Fusion
+       | Change all orbs to Fire, Deal 1000% damage
+
+level: 4
+ type: PREEMPT
+ | (8523:83) I thank you for your help. All of you. + You've fulfilled your purpose.
+ | Voids status ailments for 999 turns + Bind active skills for 3 turns
+ type: DEATH
+ | condition: when defeated, hp <= 100
+ | (8534:95) AAAAAAAAAAAAAAAAAAA
+ | Do nothing
+ group:
+ | group:
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: 10% chance, hp <= 100
+       | (8525:77) Stationary Transmutation
+       | Change 4th column to Dark orbs, Deal 100% damage
+       | condition: 10% chance, hp <= 100
+       | (8526:79) Stationary Transmutation
+       | Change 3rd row to Light orbs, Deal 100% damage
+       | condition: 20% chance, hp <= 100
+       | (8527:92) Stationary Transmutation
+       | Spawn random 7 Jammer orbs, Deal 100% damage
+       | condition: 20% chance, hp <= 100
+       | (8528:74) Stationary Transmutation
+       | Reduce damage from all sources by 75% for 1 turns, Deal 100% damage
+       | condition: 20% chance, hp <= 100
+       | (8529:94) Stationary Transmutation
+       | Lock 10 random Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs, Deal 100% damage
+       | condition: 20% chance, when required attributes on board, hp <= 100
+       | (8530:92) Stationary Transmutation
+       | Spawn random 4 Poison orbs, Deal 100% damage
+ | group:
+ | condition: hp <= 79
+   | group:
+   | condition: turn 1
+     | group:
+       | condition: hp <= 80
+       | (8524:71) How sad
+       | Void damage >= 500000 for 3 turns
+ | group:
+ | condition: hp <= 29
+   | group:
+   | condition: turn 2
+     | group:
+       | condition: when 1 enemies remain, hp <= 30
+       | (8531:17) Disappear from my sight.
+       | Increase damage to 1000% for the next 999 turns
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: hp <= 30
+       | (8532:85) Nuclear Fusion
+       | Change all orbs to Fire, Deal 1000% damage

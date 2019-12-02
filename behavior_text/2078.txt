@@ -1,0 +1,44 @@
+#2078 - Blazing Goddess of Power, Kali
+monster size: 5
+new AI: True
+start/max counter: 0
+counter increment: 0
+monster_id: 2078
+approved: False
+
+level: 1
+ type: PREEMPT
+ | (2403:83) Dance of the Goddess + Released Chakra
+ | Voids status ailments for 999 turns + Reduce damage from all sources by 50% for 1 turns
+ group:
+ | group:
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | (2418:15) Mahasukha-Kamala
+       | Deal 1200% damage (6 hits, 200% each)
+ | group:
+ | condition: hp <= 64
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: 20% chance, hp <= 100
+       | (2419:83) Nirmanakaya + Dharmakaya
+       | Blind all orbs on the board, Deal 90% damage + Change all orbs to Fire, Water, Wood, Light, Dark, Heal, Deal 90% damage
+       | condition: 20% chance, hp <= 100
+       | (2420:83) Dharmakaya + Sambhogakaya
+       | Change all orbs to Fire, Water, Wood, Light, Dark, Heal, Deal 90% damage + Delay active skills by 1 turns, Deal 90% damage
+       | condition: 20% chance, hp <= 100
+       | (2421:83) Sambhogakaya + Nirmanakaya
+       | Delay active skills by 1 turns, Deal 90% damage + Blind all orbs on the board, Deal 90% damage
+       | condition: 20% chance, hp <= 100
+       | (2395:14) Kalam
+       | Bind active skills for 10 turns, Deal 150% damage
+ | group:
+ | condition: hp <= 4
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: hp <= 5
+       | (2417:15) Ushnisha-Kamala
+       | Deal 1500% damage

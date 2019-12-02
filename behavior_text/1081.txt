@@ -1,0 +1,23 @@
+#1081 - Lemon Dragon
+monster size: 3
+new AI: True
+start/max counter: 0
+counter increment: 0
+monster_id: 1081
+approved: False
+
+level: 3
+ type: PREEMPT
+ | condition: when required attributes on board, hp <= 100
+ | (4258:92) Lemon... Sour... I want some...
+ | Spawn random 3 Light orbs
+ group:
+ | group:
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: when required attributes on board, hp <= 100
+       | (4253:92) It's tart, so just one...
+       | Spawn random 1 Heal orbs, Deal 100% damage
+       | (4257:15) There is no lemon!
+       | Deal 150% damage (3 hits, 50% each)

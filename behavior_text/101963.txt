@@ -1,0 +1,29 @@
+#101963 - Alt. Blue DeviNyan
+monster size: 3
+new AI: True
+start/max counter: 0
+counter increment: 0
+monster_id: 101963
+approved: False
+
+level: 1
+ type: PREEMPT
+ | condition: when required attributes on board, hp <= 100
+ | (10245:92) Souvenir
+ | Spawn random 1 Poison orbs
+ group:
+ | group:
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: when required attributes on board, hp <= 100
+       | (10245:92) Souvenir
+       | Spawn random 1 Poison orbs
+ type: REMAINING
+ condition: when 2 enemies remain
+ | group:
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | (10246:15) Quick Attack
+       | Deal 300% damage (3 hits, 100% each)

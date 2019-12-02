@@ -1,0 +1,58 @@
+#104395 - Guard Dog of Hades, Cerberus
+monster size: 3
+new AI: True
+start/max counter: 0
+counter increment: 0
+monster_id: 104395
+approved: False
+
+level: 4
+ group:
+ | group:
+   | group:
+   | condition: turn 1
+     | group:
+       | (9958:48) Agidyne
+       | Change Random to Jammer, Deal 130% damage
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: 20% chance, hp <= 100
+       | (9960:79) Maragi
+       | Change 1st, 2nd row to Fire, Jammer orbs, Deal 100% damage
+       | condition: 20% chance, hp <= 100
+       | (9961:79) Maragi
+       | Change 2nd, 4th row to Fire, Jammer orbs, Deal 100% damage
+       | condition: 20% chance, hp <= 100
+       | (9962:79) Maragi
+       | Change 4th, 5th row to Fire, Jammer orbs, Deal 100% damage
+       | condition: 40% chance, hp <= 100
+       | (9958:48) Agidyne
+       | Change Random to Jammer, Deal 130% damage
+ type: REMAINING
+ condition: when 1 enemies remain
+ | group:
+   | group:
+   | condition: turn 1
+     | group:
+       | condition: when 1 enemies remain, hp <= 100
+       | (9963:17) Rebellion
+       | Increase damage to 150% for the next 3 turns
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: 10% chance, hp <= 100
+       | (9960:79) Maragi
+       | Change 1st, 2nd row to Fire, Jammer orbs, Deal 100% damage
+       | condition: 10% chance, hp <= 100
+       | (9961:79) Maragi
+       | Change 2nd, 4th row to Fire, Jammer orbs, Deal 100% damage
+       | condition: 10% chance, hp <= 100
+       | (9962:79) Maragi
+       | Change 4th, 5th row to Fire, Jammer orbs, Deal 100% damage
+       | condition: 40% chance, hp <= 100
+       | (9959:15) Megaton Raid
+       | Deal 120% damage
+       | condition: 30% chance, hp <= 100
+       | (9958:48) Agidyne
+       | Change Random to Jammer, Deal 130% damage

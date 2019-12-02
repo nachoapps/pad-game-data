@@ -1,0 +1,49 @@
+#3237 - Windrunner Dragon Knight, Ishtar
+monster size: 5
+new AI: True
+start/max counter: 3
+counter increment: 0
+monster_id: 3237
+approved: False
+
+level: 1
+ type: PREEMPT
+ | (8812:100) Whirlwind Bindings
+ | Seal 1st row for 3 turns
+ group:
+ | group:
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: 50% chance, hp <= 100
+       | (8815:77) Dragon Gale
+       | Change 3rd, 4th column to Wood orbs, Deal 210% damage
+       | (8814:15) Storm Slash
+       | Deal 240% damage (3 hits, 80% each)
+ | group:
+ | condition: hp <= 69
+   | group:
+   | condition: turn 1
+     | group:
+       | condition: hp <= 70
+       | (8813:20) I won't lose!
+       | Voids status ailments for 10 turns
+ | group:
+ | condition: hp <= 39
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: 30% chance, hp <= 40
+       | (8816:89) Blast Bash
+       | Delay active skills by 3 turns, Deal 260% damage
+       | condition: hp <= 40
+       | (8817:15) Tempest Slash
+       | Deal 300% damage (5 hits, 60% each)
+ | group:
+ | condition: hp <= 19
+   | group:
+   | condition: turn 2
+     | group:
+       | condition: when 1 enemies remain, hp <= 20
+       | (8818:17) My strength won't waver yet!
+       | Increase damage to 300% for the next 999 turns

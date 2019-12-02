@@ -1,0 +1,41 @@
+#2645 - Metallic Star Dragon, Light Gemini
+monster size: 4
+new AI: True
+start/max counter: 1
+counter increment: 1
+monster_id: 2645
+approved: False
+
+level: 4
+ type: PREEMPT
+ | (2714:53) Dark Cloak
+ | Absorb Dark damage for 3 turns
+ group:
+ | group:
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: 20% chance, hp <= 100
+       | (2717:88) Sleep Light
+       | Bind awoken skills for 1 turns
+       | condition: 40% chance, when required attributes on board, hp <= 100
+       | (2716:92) Bright Fellow
+       | Spawn random 3 Light orbs, Deal 100% damage
+       | condition: 40% chance, hp <= 100
+       | (2718:65) Little Spark
+       | Bind 1 random subs for 1 turns, Deal 100% damage
+ | group:
+ | condition: hp <= 49
+   | group:
+   | condition: turn 1
+     | group:
+       | (2715:76) Bright Child's Timbre
+       | Change 5th, 6th column to Light orbs
+ | group:
+ | condition: hp <= 9
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: hp <= 10
+       | (2719:50) Gemini's Crest - Cosmos
+       | Player -100% HP

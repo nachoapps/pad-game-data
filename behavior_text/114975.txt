@@ -1,0 +1,42 @@
+#114975 - Goldar
+monster size: 5
+new AI: True
+start/max counter: 1
+counter increment: 0
+monster_id: 114975
+approved: False
+
+level: 4
+ type: PREEMPT
+ | (14850:14) You fools will pay!
+ | Bind active skills for 5 turns
+ group:
+ | group:
+   | group:
+   | condition: turn 1
+     | group:
+       | (14851:83) I can finish you off any time I choose! + You're only prolonging the inevitable.
+       | Movetime -2s for 5 turns + Change 3rd, 4th column to Jammer orbs
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: 50% chance, hp <= 100
+       | (14843:89) You and your weapons are
+no match for me!
+       | Delay active skills by 2 turns, Deal 95% damage
+       | condition: 50% chance, hp <= 100
+       | (14844:104) Give up!
+       | 1x3 cloud appear for 1 turns at random location, Deal 90% damage
+ | group:
+ | condition: hp <= 19
+   | group:
+   | condition: turn 1
+     | group:
+       | (14848:19) URRRRAAGHH!
+       | Increase damage to 150% for the next 5 turns
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: when required attributes on board, hp <= 100
+       | (14849:92) No human's ever defeated Goldar!
+       | Spawn random 5 Poison orbs, Deal 80% damage

@@ -1,0 +1,46 @@
+#102962 - White Roses Bride, Hera-Beorc
+monster size: 5
+new AI: True
+start/max counter: 3
+counter increment: 1
+monster_id: 102962
+approved: False
+
+level: 4
+ type: PREEMPT
+ | condition: when 650, 651, 2948 on team, hp <= 100
+ | (4732:55) Please make me happy ♪
+ | Player recover 100% hp
+ | (4725:55) I am very happy!
+ | Player recover 100% hp
+ group:
+ | group:
+   | group:
+   | condition: repeats every 4 turns
+     | group:
+       | (4727:39) Cake Cutting
+       | Movetime -2s for 1 turns, Deal 100% damage
+   | group:
+   | condition: repeats every 4 turns
+     | group:
+       | (4726:94) Bouquet Toss
+       | Lock 1 random Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs, Deal 130% damage
+ | group:
+ | condition: hp <= 69
+   | group:
+   | condition: turn 1
+     | group:
+       | (4729:74) White Flower
+       | Reduce damage from all sources by 50% for 3 turns
+ | group:
+ | condition: hp <= 19
+   | group:
+   | condition: turn 1
+     | group:
+       | (4730:65) Hug of Happiness
+       | Bind 1 random subs for 5 turns
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | (4728:15) Happy Genesis
+       | Deal 300% damage

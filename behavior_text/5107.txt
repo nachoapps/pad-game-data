@@ -1,0 +1,49 @@
+#5107 - Dhalsim
+monster size: 5
+new AI: True
+start/max counter: 2
+counter increment: 1
+monster_id: 5107
+approved: False
+
+level: 1
+ type: PREEMPT
+ | (12489:39) I'm not very fond of conflict.
+ | Movetime -1s for 5 turns
+ group:
+ | group:
+   | group:
+   | condition: repeats every 3 turns
+     | group:
+       | condition: 50% chance, hp <= 100
+       | (12490:67) Yoga Teleport
+       | Absorb combo <= 3 damage for 3 turns
+       | (12491:104) Yoga Float
+       | 2x1 cloud appear for 3 turns at random location
+   | group:
+   | condition: repeats every 3 turns
+     | group:
+       | condition: 34% chance, when required attributes on board, hp <= 100
+       | (12492:92) Yoga Flame
+       | Spawn random 4 Fire orbs, Deal 100% damage
+       | condition: 33% chance, hp <= 100
+       | (12493:83) Divine Kick + Yoga Anvil
+       | Deal 45% damage + Seal 1st column for 1 turns, Deal 45% damage
+       | condition: 33% chance, hp <= 100
+       | (12496:83) Yoga Fire + Yoga Gale
+       | Change 3rd row to Fire orbs, Deal 45% damage + Change Random to Fire, Deal 50% damage
+ | group:
+ | condition: hp <= 49
+   | group:
+   | condition: turn 1
+     | group:
+       | (12499:79) Yoga Burner
+       | Change 5th row to Fire orbs, Deal 150% damage
+ | group:
+ | condition: hp <= 9
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: when required attributes on board, hp <= 100
+       | (12500:92) Yoga Sunburst
+       | Spawn random 6 Fire orbs, Deal 200% damage

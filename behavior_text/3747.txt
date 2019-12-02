@@ -1,0 +1,60 @@
+#3747 - Awoken Hestia
+monster size: 5
+new AI: True
+start/max counter: 1
+counter increment: 0
+monster_id: 3747
+approved: False
+
+level: 1
+ type: PREEMPT
+ | condition: 25% chance, hp <= 100
+ | (12286:83) Don't come here, it's dangerous! + Bellows of the Smelting Furnace
+ | Voids status ailments for 999 turns + Absorb Water, Wood damage for 1 turns
+ | condition: 25% chance, hp <= 100
+ | (12287:83) Don't come here, it's dangerous! + Bellows of the Smelting Furnace
+ | Voids status ailments for 999 turns + Absorb Water, Light damage for 1 turns
+ | condition: 25% chance, hp <= 100
+ | (12288:83) Don't come here, it's dangerous! + Bellows of the Smelting Furnace
+ | Voids status ailments for 999 turns + Absorb Wood, Dark damage for 1 turns
+ | condition: 25% chance, hp <= 100
+ | (12289:83) Don't come here, it's dangerous! + Bellows of the Smelting Furnace
+ | Voids status ailments for 999 turns + Absorb Light, Dark damage for 1 turns
+ group:
+ | group:
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | (12295:83) That's it? + You won't beat me like that!
+       | Absorb combo <= 7 damage for 1 turns + Delay active skills by 3~10 turns
+ | group:
+ | condition: hp <= 99
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: 25% chance, hp <= 100
+       | (12301:83) Bellows of the Smelting Furnace + Garbage Disposal
+       | Absorb Water, Wood damage for 1 turns + Deal 105% damage (3 hits, 35% each)
+       | condition: 25% chance, hp <= 100
+       | (12302:83) Bellows of the Smelting Furnace + Sacred Fire Dust
+       | Absorb Water, Light damage for 1 turns + Change Random to Jammer, Deal 100% damage
+       | condition: 25% chance, hp <= 100
+       | (12303:83) Bellows of the Smelting Furnace + Incineration
+       | Absorb Wood, Dark damage for 1 turns + Change 2nd, 4th row to Fire orbs, Deal 95% damage
+       | condition: 25% chance, hp <= 100
+       | (12304:83) Bellows of the Smelting Furnace + Incineration
+       | Absorb Light, Dark damage for 1 turns + Change 1st, 5th row to Fire orbs, Deal 95% damage
+ | group:
+ | condition: hp <= 50
+   | group:
+   | condition: turn 1
+     | group:
+       | (12298:83) Ashes + Sacrifice to the Furnace
+       | Jammer skyfall +20% for 10 turns + Rcv 50% for 10 turns
+ | group:
+ | condition: hp <= 9
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | (12309:85) Burn it all!
+       | Change all orbs to Fire, Jammer, Deal 500% damage

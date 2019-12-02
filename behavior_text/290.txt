@@ -1,0 +1,28 @@
+#290 - Flare Drall
+monster size: 5
+new AI: False
+start/max counter: 0
+counter increment: 0
+monster_id: 290
+approved: False
+
+level: 1
+ group:
+ | group:
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: 40% chance, hp <= 100
+       | (42:2) Water Bind
+       | Bind Water cards for 2~4 turns
+ | group:
+ | condition: hp <= 49
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: 30% chance, hp <= 50
+       | (8:8) Energy Charge
+       | Increase damage to 200% for the next attack
+       | condition: 40% chance, hp <= 100
+       | (42:2) Water Bind
+       | Bind Water cards for 2~4 turns

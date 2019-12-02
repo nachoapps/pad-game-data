@@ -1,0 +1,60 @@
+#105604 - Shizuka Gozen
+monster size: 5
+new AI: True
+start/max counter: 3
+counter increment: 0
+monster_id: 105604
+approved: False
+
+level: 1
+ type: DEATH
+ | condition: when defeated, hp <= 100
+ | (14700:69) *****
+ | Show message: You shall pay for this...
+both you and this world itself!|Haah... Haah...
+ group:
+
+level: 4
+ type: PREEMPT
+ | (14714:83) ...This entire world...  + ...And all within it... + Will be extinguished before me!
+ | Voids status ailments for 999 turns + Do nothing + Reduce damage from all sources by 75% for 5 turns
+ type: DEATH
+ | condition: when defeated, hp <= 100
+ | (14700:69) *****
+ | Show message: You shall pay for this...
+both you and this world itself!|Haah... Haah...
+ group:
+ | group:
+   | group:
+   | condition: repeats every 5 turns
+     | group:
+       | (14695:15) Slicing Wind
+       | Deal 100% damage
+   | group:
+   | condition: repeats every 5 turns
+     | group:
+       | condition: when required attributes on board, hp <= 100
+       | (14696:92) Torrential Rain
+       | Spawn random 6 Dark orbs, Deal 105% damage
+   | group:
+   | condition: repeats every 5 turns
+     | group:
+       | (14697:63) Vortex Drop
+       | Bind 1 random subs for 2~3 turns, Deal 110% damage
+   | group:
+   | condition: repeats every 5 turns
+     | group:
+       | (14698:15) Ravaging Wind
+       | Deal 120% damage (10 hits, 12% each)
+   | group:
+   | condition: repeats every 5 turns
+     | group:
+       | (14699:77) Waterfall Cascade
+       | Change 1st, 3rd, 5th column to Dark orbs, Deal 115% damage
+ | group:
+ | condition: hp <= 50
+   | group:
+   | condition: turn 1
+     | group:
+       | (14691:83) Bitter suffering...and hatred. + Destruction upon you! + Rrarrrrgh!!!
+       | Poison skyfall +10% for 5 turns + Do nothing + Increase damage to 150% for the next 999 turns

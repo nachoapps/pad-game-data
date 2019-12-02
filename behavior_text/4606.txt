@@ -1,0 +1,72 @@
+#4606 - Shivan Dragon
+monster size: 5
+new AI: True
+start/max counter: 15
+counter increment: 0
+monster_id: 4606
+approved: False
+
+level: 4
+ type: PREEMPT
+ | (10271:15) Firebreathing
+ | Deal 100% damage
+ group:
+ | group:
+   | group:
+   | condition: turn 1
+     | group:
+       | condition: when required attributes on board, hp <= 100
+       | (10272:92) Cinder Stench
+       | Spawn random 1 Fire orbs, Deal 105% damage
+   | group:
+   | condition: turn 2
+     | group:
+       | (10277:15) Shivan Fire
+       | Deal 110% damage (2 hits, 55% each)
+   | group:
+   | condition: turn 3
+     | group:
+       | condition: when required attributes on board, hp <= 100
+       | (10273:92) Cinder Stench
+       | Spawn random 2 Fire orbs, Deal 115% damage
+   | group:
+   | condition: turn 4
+     | group:
+       | (10278:15) Shivan Fire
+       | Deal 120% damage (4 hits, 30% each)
+   | group:
+   | condition: turn 5
+     | group:
+       | condition: when required attributes on board, hp <= 100
+       | (10274:92) Cinder Stench
+       | Spawn random 3 Fire orbs, Deal 125% damage
+   | group:
+   | condition: turn 6
+     | group:
+       | (10277:15) Shivan Fire
+       | Deal 110% damage (2 hits, 55% each)
+   | group:
+   | condition: turn 7
+     | group:
+       | condition: when required attributes on board, hp <= 100
+       | (10275:92) Cinder Stench
+       | Spawn random 4 Fire orbs, Deal 135% damage
+   | group:
+   | condition: turn 8
+     | group:
+       | (10278:15) Shivan Fire
+       | Deal 120% damage (4 hits, 30% each)
+   | group:
+   | condition: turn 9
+     | group:
+       | condition: when required attributes on board, hp <= 100
+       | (10276:92) Cinder Stench
+       | Spawn random 5 Fire orbs, Deal 145% damage
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | (10279:48) Wildfire
+       | Change Fire to Jammer, Deal 300% damage
+       | condition: when required attributes on board, hp <= 100
+       | (10276:92) Cinder Stench
+       | Spawn random 5 Fire orbs, Deal 145% damage

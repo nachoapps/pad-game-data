@@ -1,0 +1,36 @@
+#304794 - Awoken Machine Noah
+monster size: 5
+new AI: True
+start/max counter: 0
+counter increment: 0
+monster_id: 304794
+approved: False
+
+level: 1
+ type: PASSIVE
+ | (10956:73) Resolve
+ | Survive attacks with 1 HP when HP > 50%
+ type: PREEMPT
+ | (10931:83) I wonder if your life means anything + Defense of the Twin Ships + Ark Contract + Requiem
+ | Voids status ailments for 999 turns + Void damage >= 40000000 for 99 turns + Change player HP to 500000 for 99 turns + Voids player buff effects
+ group:
+ | group:
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | (10934:111) Ark Contract
+       | Change player HP to 500000 for 99 turns
+ | group:
+ | condition: hp <= 49
+   | group:
+   | condition: turn 1
+     | group:
+       | (10790:83) Diminishing Fighting Spirit + Vanishing Judgment
+       | Bind awoken skills for 5 turns + Player -99% HP
+ | group:
+ | condition: hp <= 9
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | (10952:83) Gear Shift + Banishing Lightning
+       | Change own attribute to random one of Fire, Water, Wood, Light, Dark + Deal 50000% damage (4 hits, 12500% each)

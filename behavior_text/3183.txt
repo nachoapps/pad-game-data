@@ -1,0 +1,22 @@
+#3183 - Flame Spore Crusher, Hammer Troll
+monster size: 5
+new AI: True
+start/max counter: 1
+counter increment: 1
+monster_id: 3183
+approved: False
+
+level: 1
+ group:
+ | group:
+   | group:
+   | condition: repeats every 2 turns
+     | group:
+       | (5607:39) Troll Dance
+       | Movetime -1s for 1 turns
+   | group:
+   | condition: repeats every 2 turns
+     | group:
+       | condition: when required attributes on board, hp <= 100
+       | (5604:92) Green Flame Crush
+       | Spawn random 1 Fire, Wood orbs, Deal 80% damage

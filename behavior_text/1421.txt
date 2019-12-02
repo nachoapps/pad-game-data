@@ -1,0 +1,26 @@
+#1421 - Thorn Princess, Sleeping Beauty
+monster size: 4
+new AI: True
+start/max counter: 0
+counter increment: 0
+monster_id: 1421
+approved: False
+
+level: 1
+ type: PREEMPT
+ | condition: one time only, hp <= 100
+ | (10891:1) Sleeping Forest
+ | Bind 6 random cards for 5 turns
+ group:
+ | group:
+   | group:
+   | condition: turns 1-4
+     | group:
+       | condition: when required attributes on board, hp <= 100
+       | (10892:92) Growing Roses
+       | Spawn random 5 Jammer orbs
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | (10893:15) Waking Time
+       | Deal 1000% damage (5 hits, 200% each)

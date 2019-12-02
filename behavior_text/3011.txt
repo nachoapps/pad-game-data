@@ -1,0 +1,80 @@
+#3011 - Achtros
+monster size: 4
+new AI: True
+start/max counter: 7
+counter increment: 0
+monster_id: 3011
+approved: False
+
+level: 1
+ type: PASSIVE
+ | (5144:73) Eight Resolve
+ | Survive attacks with 1 HP when HP > 75%
+ type: PREEMPT
+ | (5063:53) Deep Aqua
+ | Absorb Wood damage for 3 turns
+ group:
+ | group:
+   | group:
+   | condition: repeats every 6 turns
+     | group:
+       | (5065:68) Poison Swirl
+       | Mortal Poison skyfall +20% for 1 turns
+   | group:
+   | condition: repeats every 6 turns
+     | group:
+       | (5066:94) Sharp Teeth
+       | Lock 8 random Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs, Deal 140% damage
+   | group:
+   | condition: repeats every 6 turns
+     | group:
+       | (5067:74) Shell Scale
+       | Reduce damage from all sources by 75% for 3 turns
+   | group:
+   | condition: repeats every 6 turns
+     | group:
+       | (5065:68) Poison Swirl
+       | Mortal Poison skyfall +20% for 1 turns
+   | group:
+   | condition: repeats every 6 turns
+     | group:
+       | (5066:94) Sharp Teeth
+       | Lock 8 random Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs, Deal 140% damage
+   | group:
+   | condition: repeats every 6 turns
+     | group:
+       | (5064:53) Deep Aqua
+       | Absorb Wood damage for 3 turns
+ | group:
+ | condition: hp <= 69
+   | group:
+   | condition: turn 1
+     | group:
+       | condition: hp <= 70
+       | (5068:39) Extreme Cold
+       | Movetime -1s for 3 turns
+ | group:
+ | condition: hp <= 49
+   | group:
+   | condition: turn 2
+     | group:
+       | condition: hp <= 50
+       | (5069:67) Bubble Wall
+       | Absorb combo <= 5 damage for 3 turns
+ | group:
+ | condition: hp <= 14
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: hp <= 15
+       | (5070:85) Blue Calamity
+       | Change all orbs to Poison, Deal 200% damage
+ type: REMAINING
+ condition: when 1 enemies remain
+ | group:
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: when 1 enemies remain, hp <= 100
+       | (5079:52) Resuscitation
+       | Enemy ally recover 100% hp

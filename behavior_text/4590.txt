@@ -1,0 +1,26 @@
+#4590 - Ceremony Miko, Sapphire Carbuncle
+monster size: 3
+new AI: True
+start/max counter: 1
+counter increment: 0
+monster_id: 4590
+approved: False
+
+level: 4
+ type: PREEMPT
+ | condition: 50% chance, hp <= 100
+ | (10445:76) Marching Ceremony
+ | Change 4th column to Water, Heal orbs
+ | (10444:76) Marching Ceremony
+ | Change 3rd column to Water, Heal orbs
+ group:
+ | group:
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: 50% chance, hp <= 100
+       | (10443:39) Drunken God's Alcohol
+       | Movetime -2s for 1 turns
+       | condition: when required attributes on board, hp <= 100
+       | (10442:92) Water Call
+       | Spawn random 1 Water orbs, Deal 100% damage

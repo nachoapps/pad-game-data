@@ -1,0 +1,59 @@
+#1763 - Rich Bowl Dragon, Katsumin
+monster size: 5
+new AI: False
+start/max counter: 1
+counter increment: 1
+monster_id: 1763
+approved: False
+
+level: 1
+ type: PASSIVE
+ | (1771:72) Halve Fire
+ | Reduce damage from Fire by 50%
+ group:
+
+level: 5
+ type: PASSIVE
+ | (1771:72) Halve Fire
+ | Reduce damage from Fire by 50%
+ type: PREEMPT
+ | condition: when 1 enemies remain, hp <= 100
+ | (1844:17) Victory will be mine!
+ | Increase damage to 200% for the next 1 turns
+ group:
+ | group:
+   | group:
+   | condition: turn 1
+     | group:
+       | (1845:48) Hoof of Victory
+       | Change Random to Jammer, Deal 100% damage
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: 50% chance, hp <= 100
+       | (1845:48) Hoof of Victory
+       | Change Random to Jammer, Deal 100% damage
+       | condition: 60% chance, hp <= 100
+       | (1847:79) Tail Snap
+       | Change 3rd row to Wood orbs, Deal 150% damage
+ | group:
+ | condition: hp <= 74
+   | group:
+   | condition: turn 2
+     | group:
+       | (1846:54) Best Smile
+       | Bind 1 both leaders for 2~4 turns
+ | group:
+ | condition: hp <= 29
+   | group:
+   | condition: repeats every 2 turns
+     | group:
+       | condition: when 1 enemies remain, hp <= 30
+       | (1848:17) I'll win at any cost!
+       | Increase damage to 300% for the next 1 turns
+   | group:
+   | condition: repeats every 2 turns
+     | group:
+       | condition: hp <= 30
+       | (1849:15) Double Hooves of Victory
+       | Deal 400% damage (2 hits, 200% each)

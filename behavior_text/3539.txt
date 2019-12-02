@@ -1,0 +1,88 @@
+#3539 - Flame Wing Wisedragon, Nerva
+monster size: 5
+new AI: True
+start/max counter: 2047
+counter increment: 0
+monster_id: 3539
+approved: False
+
+level: 1
+ type: PASSIVE
+ | (6923:72) Fire damage halved
+ | Reduce damage from Fire by 50%
+ type: PREEMPT
+ | (6856:74) Fireform
+ | Reduce damage from all sources by 75% for 3 turns
+ group:
+ | group:
+   | group:
+   | condition: turn 1
+     | group:
+       | (6857:39) Burn Claw
+       | Movetime 50% for 1 turns, Deal 300% damage
+   | group:
+   | condition: turn 2
+     | group:
+       | (6858:62) Flash Burn
+       | Blind all orbs on the board, Deal 300% damage
+   | group:
+   | condition: turn 3
+     | group:
+       | (6861:83) Margo Cult + Crimson Breath
+       | Voids status ailments for 999 turns + Deal 3500% damage (5 hits, 700% each)
+   | group:
+   | condition: turn 4
+     | group:
+       | (6865:83) Fireform + Giant Iceflame Talons
+       | Reduce damage from all sources by 75% for 3 turns + Bind 1 random cards for 4 turns, Deal 300% damage
+   | group:
+   | condition: turn 5
+     | group:
+       | (6866:15) Pyro Breath
+       | Deal 360% damage (3 hits, 120% each)
+   | group:
+   | condition: turn 6
+     | group:
+       | (6867:94) Freeze Ignis
+       | Lock 15 random Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs, Deal 300% damage
+   | group:
+   | condition: turn 7
+     | group:
+       | (6868:15) Crimson Breath
+       | Deal 3500% damage (5 hits, 700% each)
+   | group:
+   | condition: turn 8
+     | group:
+       | (6870:83) Fireform + Giant Iceflame Talons
+       | Reduce damage from all sources by 75% for 3 turns + Bind 1 random cards for 4 turns, Deal 300% damage
+   | group:
+   | condition: turn 9
+     | group:
+       | (6871:15) Inferno Breath
+       | Deal 450% damage (3 hits, 150% each)
+   | group:
+   | condition: turn 10
+     | group:
+       | (6872:15) Inferno Breath
+       | Deal 450% damage (3 hits, 150% each)
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | (6873:15) Vasahal Vorzen
+       | Deal 5000% damage (10 hits, 500% each)
+ | group:
+ | condition: hp <= 84
+   | group:
+   | condition: turn 3
+     | group:
+       | condition: hp <= 85
+       | (6863:83) Margo Cult + Lava Flare
+       | Voids status ailments for 999 turns + Change all orbs to Fire, Deal 350% damage
+ | group:
+ | condition: hp <= 49
+   | group:
+   | condition: turn 7
+     | group:
+       | condition: hp <= 50
+       | (6869:85) Lava Flare
+       | Change all orbs to Fire, Deal 350% damage

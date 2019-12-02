@@ -1,0 +1,36 @@
+#3842 - Awoken Ishida Mitsunari
+monster size: 5
+new AI: True
+start/max counter: 2
+counter increment: 1
+monster_id: 3842
+approved: False
+
+level: 1
+ type: PREEMPT
+ | (6943:83) Target Confirmed + Lock-On
+ | Voids status ailments for 3 turns + Fix orb movement starting point to random position on the board
+ type: DEATH
+ | condition: when defeated, hp <= 100
+ | (6948:95) Shutting Down
+ | Do nothing
+ group:
+ | group:
+   | group:
+   | condition: repeats every 3 turns
+     | group:
+       | (6945:50) Focused Laser
+       | Player -99% HP
+   | group:
+   | condition: repeats every 3 turns
+     | group:
+       | (6944:15) Spread Laser
+       | Deal 120% damage (3 hits, 40% each)
+ | group:
+ | condition: hp <= 49
+   | group:
+   | condition: turn 1
+     | group:
+       | condition: hp <= 50
+       | (6946:74) Safety Mode Activated
+       | Reduce damage from all sources by 75% for 1 turns

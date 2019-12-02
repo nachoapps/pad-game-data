@@ -1,0 +1,67 @@
+#899 - Aqua Chaser
+monster size: 5
+new AI: False
+start/max counter: 1
+counter increment: 1
+monster_id: 899
+approved: False
+
+level: 5
+ group:
+ | group:
+   | group:
+   | condition: repeats every 2 turns
+     | group:
+       | (679:48) Hydro Laser
+       | Change Random to Water, Deal 80% damage
+   | group:
+   | condition: repeats every 2 turns
+     | group:
+       | (678:15) Aqua Lance
+       | Deal 100% damage (4 hits, 25% each)
+ | group:
+ | condition: hp <= 49
+   | group:
+   | condition: repeats every 6 turns
+     | group:
+       | condition: when 1 enemies remain, hp <= 50
+       | (638:17) Chase Mode
+       | Increase damage to 200% for the next 5 turns
+   | group:
+   | condition: repeats every 6 turns
+     | group:
+       | (679:48) Hydro Laser
+       | Change Random to Water, Deal 80% damage
+   | group:
+   | condition: repeats every 6 turns
+     | group:
+       | (678:15) Aqua Lance
+       | Deal 100% damage (4 hits, 25% each)
+   | group:
+   | condition: repeats every 6 turns
+     | group:
+       | (679:48) Hydro Laser
+       | Change Random to Water, Deal 80% damage
+   | group:
+   | condition: repeats every 6 turns
+     | group:
+       | (678:15) Aqua Lance
+       | Deal 100% damage (4 hits, 25% each)
+   | group:
+   | condition: repeats every 6 turns
+     | group:
+       | (679:48) Hydro Laser
+       | Change Random to Water, Deal 80% damage
+ | group:
+ | condition: hp <= 24
+   | group:
+   | condition: repeats every 6 turns
+     | group:
+       | condition: when 1 enemies remain, hp <= 50
+       | (638:17) Chase Mode
+       | Increase damage to 200% for the next 5 turns
+   | group:
+   | condition: repeats every 6 turns
+     | group:
+       | (680:48) Hydro Burst
+       | Change Random to Water, Deal 160% damage

@@ -1,0 +1,67 @@
+#901 - Wind Chaser
+monster size: 5
+new AI: False
+start/max counter: 1
+counter increment: 1
+monster_id: 901
+approved: False
+
+level: 5
+ group:
+ | group:
+   | group:
+   | condition: repeats every 2 turns
+     | group:
+       | (689:48) Air Slash
+       | Change Random to Wood, Deal 80% damage
+   | group:
+   | condition: repeats every 2 turns
+     | group:
+       | (688:15) Wind Edge
+       | Deal 100% damage (5 hits, 20% each)
+ | group:
+ | condition: hp <= 49
+   | group:
+   | condition: repeats every 6 turns
+     | group:
+       | condition: when 1 enemies remain, hp <= 50
+       | (638:17) Chase Mode
+       | Increase damage to 200% for the next 5 turns
+   | group:
+   | condition: repeats every 6 turns
+     | group:
+       | (689:48) Air Slash
+       | Change Random to Wood, Deal 80% damage
+   | group:
+   | condition: repeats every 6 turns
+     | group:
+       | (688:15) Wind Edge
+       | Deal 100% damage (5 hits, 20% each)
+   | group:
+   | condition: repeats every 6 turns
+     | group:
+       | (689:48) Air Slash
+       | Change Random to Wood, Deal 80% damage
+   | group:
+   | condition: repeats every 6 turns
+     | group:
+       | (688:15) Wind Edge
+       | Deal 100% damage (5 hits, 20% each)
+   | group:
+   | condition: repeats every 6 turns
+     | group:
+       | (689:48) Air Slash
+       | Change Random to Wood, Deal 80% damage
+ | group:
+ | condition: hp <= 24
+   | group:
+   | condition: repeats every 6 turns
+     | group:
+       | condition: when 1 enemies remain, hp <= 50
+       | (638:17) Chase Mode
+       | Increase damage to 200% for the next 5 turns
+   | group:
+   | condition: repeats every 6 turns
+     | group:
+       | (690:48) Aero Stream
+       | Change Random to Wood, Deal 160% damage

@@ -1,0 +1,47 @@
+#102788 - Shadow Lord
+monster size: 5
+new AI: True
+start/max counter: 3
+counter increment: 0
+monster_id: 102788
+approved: False
+
+level: 1
+ type: PASSIVE
+ | (7748:72) Dark damage halved
+ | Reduce damage from Dark by 50%
+ type: DEATH
+ | condition: when defeated, hp <= 100
+ | (3921:95) No... It's not over yet!
+ | Do nothing
+ group:
+
+level: 3
+ type: PASSIVE
+ | (7748:72) Dark damage halved
+ | Reduce damage from Dark by 50%
+ type: PREEMPT
+ | (7746:98) Let us see if you can
+do any better!
+ | Blind orbs in specific positions for 10 turns
+ type: DEATH
+ | condition: when defeated, hp <= 100
+ | (3921:95) No... It's not over yet!
+ | Do nothing
+ group:
+ | group:
+   | group:
+   | condition: turn 1
+     | group:
+       | (3917:15) Implosion
+       | Deal 100% damage
+   | group:
+   | condition: turn 2
+     | group:
+       | (3918:15) Implosion
+       | Deal 150% damage
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | (3919:15) Implosion
+       | Deal 200% damage

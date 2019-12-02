@@ -1,0 +1,48 @@
+#102743 - Alt. Reincarnated Chaos Dragon Knight, Voice
+monster size: 5
+new AI: True
+start/max counter: 3
+counter increment: 1
+monster_id: 102743
+approved: False
+
+level: 1
+ type: PREEMPT
+ | (8221:83) Infernal Dragon Knight's Soul + Dark Dragon Scythe
+ | Absorb Dark damage for 4 turns + Change 5th column to Dark orbs, Deal 150% damage
+ group:
+ | group:
+   | group:
+   | condition: repeats every 4 turns
+     | group:
+       | (4836:15) Soul Spirit
+       | Deal 200% damage
+   | group:
+   | condition: repeats every 4 turns
+     | group:
+       | (4839:2) Abyss Cage
+       | Bind Dark cards for 5~10 turns
+       | (4836:15) Soul Spirit
+       | Deal 200% damage
+ | group:
+ | condition: hp <= 99
+   | group:
+   | condition: repeats every 4 turns
+     | group:
+       | (4837:48) Erosion
+       | Change Random to Dark, Deal 80% damage
+   | group:
+   | condition: repeats every 4 turns
+     | group:
+       | (4839:2) Abyss Cage
+       | Bind Dark cards for 5~10 turns
+       | (4837:48) Erosion
+       | Change Random to Dark, Deal 80% damage
+ | group:
+ | condition: hp <= 9
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: hp <= 10
+       | (4838:15) Chaos Prominence
+       | Deal 800% damage (8 hits, 100% each)

@@ -1,0 +1,44 @@
+#5623 - Strolling Dragon Callers, Alpha & Omega
+monster size: 5
+new AI: True
+start/max counter: 1
+counter increment: 1
+monster_id: 5623
+approved: False
+
+level: 1
+ type: PREEMPT
+ | (14817:83) I'll give you candy for a combo of 6♪ + I'm counting on you for a good combo! + Cheery Candy!
+ | Absorb combo <= 5 damage for 999 turns + No skyfall for 5 turns + Spawn random 5 Fire, Water, Wood, Light, Dark, Heal orbs
+ group:
+ | group:
+   | group:
+   | condition: turns 1-4
+     | group:
+       | condition: when 6 combos last turn, hp <= 100
+       | (14825:83) Great! You did it!♪ + Here's the candy, like I promised!
+       | Do nothing + Reduce self HP to 0
+       | condition: when 5 combos last turn, hp <= 100
+       | (14824:83) Unlucky, just a bit more♪ + You'll show me your worth now, right!
+       | Do nothing + Spawn random 5 Fire, Water, Wood, Light, Dark, Heal orbs
+       | (14826:83) Make 1 combo with each color♪ + Take your time!
+       | Do nothing + Spawn random 5 Fire, Water, Wood, Light, Dark, Heal orbs
+   | group:
+   | condition: turn 5
+     | group:
+       | condition: when 6 combos last turn, hp <= 100
+       | (14825:83) Great! You did it!♪ + Here's the candy, like I promised!
+       | Do nothing + Reduce self HP to 0
+       | (14829:83) Fight♪ + Don't give up!
+       | Movetime 500% for 99 turns + Spawn random 5 Fire, Water, Wood, Light, Dark, Heal orbs
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: when 6 combos last turn, hp <= 100
+       | (14825:83) Great! You did it!♪ + Here's the candy, like I promised!
+       | Do nothing + Reduce self HP to 0
+       | condition: when 5 combos last turn, hp <= 100
+       | (14824:83) Unlucky, just a bit more♪ + You'll show me your worth now, right!
+       | Do nothing + Spawn random 5 Fire, Water, Wood, Light, Dark, Heal orbs
+       | (14826:83) Make 1 combo with each color♪ + Take your time!
+       | Do nothing + Spawn random 5 Fire, Water, Wood, Light, Dark, Heal orbs

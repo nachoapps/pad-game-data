@@ -1,0 +1,26 @@
+#629 - Seraph of Dawn Lucifer
+monster size: 5
+new AI: True
+start/max counter: 1
+counter increment: 0
+monster_id: 629
+approved: False
+
+level: 1
+ type: PREEMPT
+ | (5611:83) Pass this trial if you wish to advance + Clear a path with your puzzle + Let's start by changing attributes + Come!
+ | Bind awoken skills for 1 turns + Bind active skills for 2 turns + Absorb combo <= 3 damage for 1 turns + Change all orbs to Fire, Water, Wood, Light, Dark, Heal
+ group:
+ | group:
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | (5616:50) Come at me again!
+       | Player -500% HP
+ | group:
+ | condition: hp <= 50
+   | group:
+   | condition: turn 1
+     | group:
+       | (5614:83) Fine then, try to strike me down! + If you can't do it, this ends here!
+       | Absorb combo <= 6 damage for 1 turns + Change all orbs to Fire, Water, Wood, Light, Dark, Heal

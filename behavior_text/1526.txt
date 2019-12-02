@@ -1,0 +1,29 @@
+#1526 - High Fire Ninja
+monster size: 4
+new AI: False
+start/max counter: 1
+counter increment: 1
+monster_id: 1526
+approved: False
+
+level: 1
+ group:
+ | group:
+   | group:
+   | condition: repeats every 2 turns
+     | group:
+       | (1528:48) Ninja Dog Technique
+       | Change Random to Jammer, Deal 80% damage
+ | group:
+ | condition: hp <= 49
+   | group:
+   | condition: repeats every 2 turns
+     | group:
+       | (1528:48) Ninja Dog Technique
+       | Change Random to Jammer, Deal 80% damage
+   | group:
+   | condition: repeats every 2 turns
+     | group:
+       | condition: hp <= 50
+       | (1529:15) Ninja Dog Scramble
+       | Deal 100%~160% damage (5~8 hits, 20% each)

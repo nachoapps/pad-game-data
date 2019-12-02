@@ -1,0 +1,78 @@
+#104356 - Alt. Spirit Numen of Darkness, Mowa
+monster size: 5
+new AI: True
+start/max counter: 0
+counter increment: 0
+monster_id: 104356
+approved: False
+
+level: 1
+ type: PASSIVE
+ | (10077:72) Dark Halved
+ | Reduce damage from Dark by 50%
+ | (12175:73) Dragonbound Soul Spirit
+ | Survive attacks with 1 HP when HP > 99%
+ group:
+
+level: 4
+ type: PASSIVE
+ | (10077:72) Dark Halved
+ | Reduce damage from Dark by 50%
+ | (12175:73) Dragonbound Soul Spirit
+ | Survive attacks with 1 HP when HP > 99%
+ type: PREEMPT
+ | (10082:83) Shadow Aura + Turbulent Boundary Line + Invitation to Darkness + Black Feelings
+ | Voids status ailments for 999 turns + Void damage >= 15000000 for 999 turns + Blind all orbs for 1 turns + Delay active skills by 15 turns, Deal 70% damage
+ group:
+ | group:
+   | group:
+   | condition: turn 1
+     | group:
+       | (10085:83) Black Feelings + Light Eater
+       | Delay active skills by 5 turns + Change Light to Heal, Deal 108% damage
+   | group:
+   | condition: turn 2
+     | group:
+       | condition: one time only, hp <= 100
+       | (10086:1) Fury Against a Sworn Rival
+       | Bind 2 random cards for 1~3 turns, Deal 92% damage
+   | group:
+   | condition: repeats every 2 turns
+     | group:
+       | (10087:97) Gloomy Darkness
+       | Blind random 5~8 orbs for 30 turns, Deal 92% damage
+   | group:
+   | condition: repeats every 2 turns
+     | group:
+       | (10085:83) Black Feelings + Light Eater
+       | Delay active skills by 5 turns + Change Light to Heal, Deal 108% damage
+ | group:
+ | condition: hp <= 49
+   | group:
+   | condition: turn 1
+     | group:
+       | (10090:83) Gloomy Environment + Devious World
+       | Absorb combo <= 9 damage for 1 turns + Player -99% HP
+   | group:
+   | condition: turn 2
+     | group:
+       | (10085:83) Black Feelings + Light Eater
+       | Delay active skills by 5 turns + Change Light to Heal, Deal 108% damage
+   | group:
+   | condition: turn 3
+     | group:
+       | condition: one time only, hp <= 100
+       | (10086:1) Fury Against a Sworn Rival
+       | Bind 2 random cards for 1~3 turns, Deal 92% damage
+ | group:
+ | condition: hp <= 9
+   | group:
+   | condition: turn 1
+     | group:
+       | (10093:83) Gloomy Darkness + Delusion of Carnage
+       | Blind all orbs for 1 turns, Deal 92% damage + Increase damage to 300% for the next 99 turns
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | (10094:15) World Without the Enemy
+       | Deal 500% damage (5 hits, 100% each)

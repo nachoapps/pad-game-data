@@ -1,0 +1,31 @@
+#100030 - Alt. Lil' White Dragon
+monster size: 2
+new AI: True
+start/max counter: 1
+counter increment: 0
+monster_id: 100030
+approved: False
+
+level: 1
+ group:
+ | group:
+   | group:
+   | condition: repeats every 2 turns
+     | group:
+       | (7452:74) Light Guard
+       | Reduce damage from all sources by 50% for 2 turns
+ | group:
+ | condition: hp <= 99
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | (7458:92) Flash Ball
+       | Spawn random 1 Light orbs, Deal 100% damage
+ | group:
+ | condition: hp <= 49
+   | group:
+   | condition: turn 1
+     | group:
+       | condition: hp <= 50
+       | (7454:19) Anger
+       | Increase damage to 200% for the next 99 turns

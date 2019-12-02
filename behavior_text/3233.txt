@@ -1,0 +1,53 @@
+#3233 - Morning Sun Dragon Caller, Kanna
+monster size: 5
+new AI: True
+start/max counter: 7
+counter increment: 7
+monster_id: 3233
+approved: False
+
+level: 1
+ type: PREEMPT
+ | (7032:83) Barrier Charm + Heavenly Mirror Scales
+ | Voids status ailments for 999 turns + Absorb damage >= 6000000 damage for 999 turns
+ group:
+ | group:
+   | group:
+   | condition: repeats every 3 turns
+     | group:
+       | condition: 17% chance, hp <= 100
+       | (7044:83) Thousand-Seal Prison + Silk Chains
+       | Absorb Dark damage for 2 turns + Bind 1 random cards for 2 turns, Deal 260% damage
+       | condition: 17% chance, hp <= 100
+       | (7043:83) Thousand-Seal Prison + Silk Chains
+       | Absorb Light damage for 2 turns + Bind 1 random cards for 2 turns, Deal 260% damage
+       | condition: 17% chance, hp <= 100
+       | (7042:83) Thousand-Seal Prison + Silk Chains
+       | Absorb Wood damage for 2 turns + Bind 1 random cards for 2 turns, Deal 260% damage
+       | condition: 17% chance, hp <= 100
+       | (7041:83) Thousand-Seal Prison + Silk Chains
+       | Absorb Water damage for 2 turns + Bind 1 random cards for 2 turns, Deal 260% damage
+       | condition: 17% chance, hp <= 100
+       | (7040:83) Thousand-Seal Prison + Silk Chains
+       | Absorb Fire damage for 2 turns + Bind 1 random cards for 2 turns, Deal 260% damage
+       | condition: 15% chance, hp <= 100
+       | (7045:83) Disturbed Forest + Silk Chains
+       | Rcv 50% for 2 turns + Bind 1 random cards for 2 turns, Deal 260% damage
+   | group:
+   | condition: repeats every 3 turns
+     | group:
+       | (7054:83) Fire Beacon + Glistening Sword
+       | Lock all Fire orbs + Deal 300% damage (2 hits, 150% each)
+   | group:
+   | condition: repeats every 3 turns
+     | group:
+       | (7088:62) Lightraider Amulet
+       | Blind all orbs on the board, Deal 250% damage
+ | group:
+ | condition: hp <= 9
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: hp <= 10
+       | (7062:83) Light Mist + Light
+       | Bind awoken skills for 1 turns + Change all orbs to Light, Deal 6000% damage

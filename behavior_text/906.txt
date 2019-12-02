@@ -1,0 +1,27 @@
+#906 - Flame Baron
+monster size: 3
+new AI: False
+start/max counter: 1
+counter increment: 1
+monster_id: 906
+approved: False
+
+level: 1
+ type: PREEMPT
+ | (1143:55) Chivalric Spirit
+ | Player recover 100% hp
+ group:
+ | group:
+   | group:
+   | condition: repeats every 2 turns
+     | group:
+       | (1144:48) Flame Force
+       | Change Random to Fire, Deal 80% damage
+ | group:
+ | condition: hp <= 24
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: hp <= 25
+       | (1148:15) Imperial Sword
+       | Deal 150% damage

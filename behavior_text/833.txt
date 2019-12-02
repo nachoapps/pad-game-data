@@ -1,0 +1,38 @@
+#833 - Fukuragi
+monster size: 2
+new AI: False
+start/max counter: 0
+counter increment: 0
+monster_id: 833
+approved: False
+
+level: 1
+ group:
+ | group:
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: 30% chance, hp <= 100
+       | (603:16) Splashing About
+       | Do nothing
+
+level: 5
+ group:
+ | group:
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: 10% chance, hp <= 100
+       | (603:16) Splashing About
+       | Do nothing
+ | group:
+ | condition: hp <= 69
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: 10% chance, hp <= 100
+       | (603:16) Splashing About
+       | Do nothing
+       | condition: 40% chance, hp <= 70
+       | (604:15) Jump Up
+       | Deal 120% damage

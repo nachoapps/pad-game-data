@@ -1,0 +1,43 @@
+#5581 - Rebellious Crow Tengu, Yashamaru Kurama
+monster size: 5
+new AI: True
+start/max counter: 3
+counter increment: 0
+monster_id: 5581
+approved: False
+
+level: 1
+ type: PREEMPT
+ | (14613:98) Sorry, but your life ends here.
+ | Blind orbs in specific positions for 3 turns
+ group:
+ | group:
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: 33% chance, hp <= 100
+       | (14614:63) Wintry Gust
+       | Bind 1 random subs for 1~2 turns, Deal 95% damage
+       | condition: 33% chance, hp <= 100
+       | (14615:79) Azure Gale
+       | Change 3rd row to Wood orbs, Deal 100% damage
+       | condition: 34% chance, hp <= 100
+       | (14616:15) Arctic Tempest
+       | Deal 108% damage (6 hits, 18% each)
+ | group:
+ | condition: hp <= 49
+   | group:
+   | condition: turn 1
+     | group:
+       | (14617:67) Double Jump
+       | Absorb combo <= 6 damage for 10 turns
+ | group:
+ | condition: hp <= 14
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: 50% chance, hp <= 100
+       | (14619:77) Skand's Divine Squall
+       | Change 4th column to Wood orbs, Deal 250% damage
+       | (14618:15) Ebony Tengu Feathers
+       | Deal 220% damage (10 hits, 22% each)

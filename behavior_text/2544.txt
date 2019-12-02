@@ -1,0 +1,28 @@
+#2544 - Prayer's Sacred Bird, Yatagarasu
+monster size: 3
+new AI: True
+start/max counter: 1
+counter increment: 0
+monster_id: 2544
+approved: False
+
+level: 4
+ type: PREEMPT
+ | (3691:48) First Sunrise's Crow
+ | Change Random to Light, Deal 120% damage
+ group:
+ | group:
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: 80% chance, hp <= 100
+       | (3693:15) Hanetsuki
+       | Deal 100% damage (2 hits, 50% each)
+ | group:
+ | condition: hp <= 49
+   | group:
+   | condition: turn 1
+     | group:
+       | condition: hp <= 50
+       | (3692:89) Dance of the New Year
+       | Delay active skills by 2 turns

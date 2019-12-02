@@ -1,0 +1,29 @@
+#4724 - Red Sprite
+monster size: 3
+new AI: True
+start/max counter: 1
+counter increment: 1
+monster_id: 4724
+approved: False
+
+level: 4
+ type: PREEMPT
+ | condition: 50% chance, hp <= 100
+ | (10644:76) Heart Rewrite
+ | Change 1st column to Fire orbs
+ | condition: 50% chance, hp <= 100
+ | (10645:76) Heart Rewrite
+ | Change 2nd column to Fire orbs
+ group:
+ | group:
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: 10% chance, hp <= 100
+       | (10644:76) Heart Rewrite
+       | Change 1st column to Fire orbs
+       | condition: 10% chance, hp <= 100
+       | (10645:76) Heart Rewrite
+       | Change 2nd column to Fire orbs
+       | (10693:15) Strike
+       | Deal 100% damage

@@ -1,0 +1,55 @@
+#4062 - Ruining Hands War Goddess, Morrigu
+monster size: 5
+new AI: True
+start/max counter: 1
+counter increment: 1
+monster_id: 4062
+approved: False
+
+level: 1
+ type: PASSIVE
+ | (8863:118) Machine Boss Resistance
+ | Reduce damage from Machine by 50%
+ group:
+
+level: 4
+ type: PASSIVE
+ | (8863:118) Machine Boss Resistance
+ | Reduce damage from Machine by 50%
+ type: PREEMPT
+ | (8867:83) I'm...the strongest!!! + X Wall + Absorb Sechs
+ | Voids status ailments for 999 turns + Void damage >= 25000000 for 99 turns + Absorb combo <= 6 damage for 99 turns
+ group:
+ | group:
+   | group:
+   | condition: turns 1-10
+     | group:
+       | (8891:66) Hold
+       | Do nothing
+   | group:
+   | condition: turn 11
+     | group:
+       | (8892:85) Extreme Burst
+       | Change all orbs to Jammer, Deal 370% damage
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | (8891:66) Hold
+       | Do nothing
+ | group:
+ | condition: hp <= 19
+   | group:
+   | condition: turn 1
+     | group:
+       | (8896:83) Aaaahhhhhh! I won't forgive you!! + I'll weaken you!!
+       | Enemy recover 30% hp + Bind awoken skills for 5 turns
+   | group:
+   | condition: turns 2-10
+     | group:
+       | (8893:85) Twin Explosion
+       | Change all orbs to Fire, Dark, Deal 400% damage
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | (8893:85) Twin Explosion
+       | Change all orbs to Fire, Dark, Deal 400% damage

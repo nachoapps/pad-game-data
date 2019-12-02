@@ -1,0 +1,43 @@
+#3905 - Almighty Awoken Zeus Mercury
+monster size: 5
+new AI: True
+start/max counter: 1
+counter increment: 0
+monster_id: 3905
+approved: False
+
+level: 1
+ type: PREEMPT
+ | (8387:83) Protection of the Gods + Vibrant Blue + Divine Ocean's Wisdom
+ | Voids status ailments for 999 turns + Locked Water skyfall +100% for 10 turns + Absorb damage >= 5000000 damage for 10 turns
+ group:
+ | group:
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: 50% chance, when required attributes on board, hp <= 100
+       | (8388:92) Krytallos Mageia
+       | Spawn random 8 Water orbs, Deal 300% damage
+       | (8389:15) Crystal Storm
+       | Deal 400% damage (5 hits, 80% each)
+ | group:
+ | condition: hp <= 49
+   | group:
+   | condition: turn 1
+     | group:
+       | (8390:67) Díni
+       | Absorb combo <= 7 damage for 5 turns
+ | group:
+ | condition: hp <= 29
+   | group:
+   | condition: turn 2
+     | group:
+       | condition: hp <= 30
+       | (8391:39) Nerophobos
+       | Movetime 50% for 1 turns
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: hp <= 30
+       | (8392:85) Mercury Genesis
+       | Change all orbs to Water, Deal 2000% damage

@@ -1,0 +1,59 @@
+#1647 - Dark Knight, Gravis
+monster size: 5
+new AI: True
+start/max counter: 1
+counter increment: 1
+monster_id: 1647
+approved: False
+
+level: 1
+ type: PREEMPT
+ | condition: 50% chance, hp <= 100
+ | (14300:83) Dark Shield + Dark Spell
+ | Void damage >= 10000000 for 999 turns + Seal 1st, 6th column for 3 turns
+ | (14304:83) Dark Shield + Dark Spell
+ | Void damage >= 10000000 for 999 turns + 2x5 cloud appear for 3 turns at 1st row, 3rd column
+ group:
+ | group:
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: 50% chance, hp <= 100
+       | (14310:102) Explosive Hit
+       | Spawn random 5 Bomb orbs, Deal 100% damage
+       | condition: 50% chance, hp <= 100
+       | (14311:108) Disastrous Swing
+       | Change Jammer to Dark, Deal 150% damage
+       | condition: 50% chance, hp <= 100
+       | (14312:48) Doomsday Blow
+       | Change Random to Jammer, Deal 95% damage
+       | condition: 50% chance, hp <= 100
+       | (14309:15) Bloody Execution
+       | Deal 105% damage (3 hits, 35% each)
+ | group:
+ | condition: hp <= 49
+   | group:
+   | condition: turn 1
+     | group:
+       | (14313:83) Plunged into Darkness + Time Split
+       | Blind random 15~20 orbs for 5 turns + Movetime 50% for 5 turns
+   | group:
+   | condition: turns 2-5
+     | group:
+       | condition: 50% chance, hp <= 100
+       | (14310:102) Explosive Hit
+       | Spawn random 5 Bomb orbs, Deal 100% damage
+       | condition: 50% chance, hp <= 100
+       | (14311:108) Disastrous Swing
+       | Change Jammer to Dark, Deal 150% damage
+       | condition: 50% chance, hp <= 100
+       | (14312:48) Doomsday Blow
+       | Change Random to Jammer, Deal 95% damage
+       | condition: 50% chance, hp <= 100
+       | (14309:15) Bloody Execution
+       | Deal 105% damage (3 hits, 35% each)
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | (14316:15) Darkness Execution
+       | Deal 300% damage (6 hits, 50% each)

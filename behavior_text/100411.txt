@@ -1,0 +1,71 @@
+#100411 - Alt. Cyberdragon Valhalla
+monster size: 5
+new AI: True
+start/max counter: 3
+counter increment: 0
+monster_id: 100411
+approved: False
+
+level: 1
+ type: PASSIVE
+ | (10853:118) Devil Halved
+ | Reduce damage from Devil by 50%
+ type: PREEMPT
+ | (10798:83) Sequenced Power Outage + Electrification
+ | Blind orbs in specific positions for 1 turns + Lock all Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs, Deal 120% damage
+ group:
+ | group:
+   | group:
+   | condition: turns 1-4
+     | group:
+       | (10857:94) Electric Charge
+       | Lock 6 random Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs, Deal 100% damage
+   | group:
+   | condition: turn 5
+     | group:
+       | (10858:39) Leakage
+       | Movetime 50% for 5 turns
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | (10859:15) God's Holy Breath
+       | Deal 400% damage (4 hits, 100% each)
+ | group:
+ | condition: hp <= 29
+   | group:
+   | condition: turn 1
+     | group:
+       | (10858:39) Leakage
+       | Movetime 50% for 5 turns
+
+level: 6
+ type: PASSIVE
+ | (10853:118) Devil Halved
+ | Reduce damage from Devil by 50%
+ type: PREEMPT
+ | (10856:83) Sequenced Power Outage + Electrification
+ | Blind orbs in specific positions for 5 turns + Lock all Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs, Deal 120% damage
+ group:
+ | group:
+   | group:
+   | condition: turns 1-4
+     | group:
+       | (10857:94) Electric Charge
+       | Lock 6 random Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs, Deal 100% damage
+   | group:
+   | condition: turn 5
+     | group:
+       | (10858:39) Leakage
+       | Movetime 50% for 5 turns
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | (10859:15) God's Holy Breath
+       | Deal 400% damage (4 hits, 100% each)
+ | group:
+ | condition: hp <= 29
+   | group:
+   | condition: turn 1
+     | group:
+       | (10858:39) Leakage
+       | Movetime 50% for 5 turns

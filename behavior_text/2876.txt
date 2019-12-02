@@ -1,0 +1,68 @@
+#2876 - Abyssal Shark Dragon, Toa
+monster size: 5
+new AI: True
+start/max counter: 1
+counter increment: 0
+monster_id: 2876
+approved: False
+
+level: 1
+ type: PASSIVE
+ | (4220:73) Dragonbound's Resolve
+ | Survive attacks with 1 HP when HP > 50%
+ | (4348:72) Toa Wood Halven
+ | Reduce damage from Wood by 50%
+ group:
+
+level: 4
+ type: PASSIVE
+ | (4220:73) Dragonbound's Resolve
+ | Survive attacks with 1 HP when HP > 50%
+ | (4348:72) Toa Wood Halven
+ | Reduce damage from Wood by 50%
+ type: PREEMPT
+ | (4226:83) Let's confirm your wishes + Abyss Dark Ring
+ | Voids status ailments for 5 turns + Change all orbs to Water, Dark, Heal, Deal 130% damage
+ group:
+ | group:
+   | group:
+   | condition: turn 1
+     | group:
+       | condition: when 2442, 2443 on team, hp <= 100
+       | (4228:89) Use the Claws's power as you wish
+       | Delay active skills by 2 turns
+       | (4229:89) Wave of Calmness
+       | Delay active skills by 2 turns
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: 40% chance, hp <= 100
+       | (4230:77) Blue Ice Revival
+       | Change 1st column to Dark orbs, 2nd column to Water orbs, Deal 100% damage
+       | condition: 50% chance, hp <= 100
+       | (4232:15) Abyss Hole
+       | Deal 120% damage (4 hits, 30% each)
+       | condition: when required attributes on board, hp <= 100
+       | (4231:92) Abyss' Guidance
+       | Spawn random 8 Water orbs, Deal 100% damage
+ | group:
+ | condition: hp <= 49
+   | group:
+   | condition: turn 1
+     | group:
+       | (4235:83) Abyssal Shark Dragon's Trial + Chopping Ring of the Deep Sea
+       | Absorb Water damage for 1 turns + Change Heal to Poison, Deal 50% damage
+ | group:
+ | condition: hp <= 19
+   | group:
+   | condition: turn 1
+     | group:
+       | condition: hp <= 20
+       | (4223:83) Conquering Will + Dragonbound's Wrath
+       | Enemy recover 55% hp + Increase damage to 200% for the next 999 turns
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: hp <= 20
+       | (4236:83) Abyss Hole + Abyss Dark Ring
+       | Deal 120% damage (4 hits, 30% each) + Change all orbs to Water, Dark, Heal, Deal 130% damage

@@ -1,0 +1,21 @@
+#721 - CoC Rage Barbarian
+monster size: 4
+new AI: False
+start/max counter: 0
+counter increment: 0
+monster_id: 721
+approved: False
+
+level: 1
+ type: PREEMPT
+ | (398:47) Assault Attack
+ | Deal 50% damage
+ group:
+ | group:
+ | condition: hp <= 74
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: 50% chance, hp <= 75
+       | (397:15) Break Through
+       | Deal 150% damage (2 hits, 75% each)

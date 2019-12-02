@@ -1,0 +1,49 @@
+#4641 - Wood Companion Dragon, Nehd
+monster size: 4
+new AI: True
+start/max counter: 0
+counter increment: 0
+monster_id: 4641
+approved: False
+
+level: 1
+ type: DEATH
+ | condition: when defeated, hp <= 100
+ | (10358:69) Spe Dun Dragon Wood Transformation
+ | Show message: Nehd's appearance is changing|Help have been summoned
+ group:
+
+level: 4
+ type: PREEMPT
+ | (10351:15) Reaping Cut
+ | Deal 120% damage
+ type: DEATH
+ | condition: when defeated, hp <= 100
+ | (10358:69) Spe Dun Dragon Wood Transformation
+ | Show message: Nehd's appearance is changing|Help have been summoned
+ group:
+ | group:
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: 33% chance, when required attributes on board, hp <= 100
+       | (10352:92) Burying
+       | Spawn random 3 Wood orbs, Deal 110% damage
+       | condition: 33% chance, hp <= 100
+       | (10353:77) Vertical Slash
+       | Change 4th column to Wood orbs, Deal 100% damage
+       | condition: 34% chance, hp <= 100
+       | (10354:79) Vertical Slash
+       | Change 3rd row to Wood orbs, Deal 100% damage
+ | group:
+ | condition: hp <= 19
+   | group:
+   | condition: turn 1
+     | group:
+       | (10356:83) Reaping Cut + Restrain
+       | Deal 120% damage + Bind 1 random subs for 3 turns
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | (10357:15) Reaping Dismissal
+       | Deal 160% damage

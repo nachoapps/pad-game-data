@@ -1,0 +1,44 @@
+#890 - Commerce Deity of Dreams, Hermes
+monster size: 5
+new AI: False
+start/max counter: 1
+counter increment: 0
+monster_id: 890
+approved: False
+
+level: 3
+ type: PREEMPT
+ | (1441:48) Speedster
+ | Change Random to Jammer, Deal 50% damage
+ group:
+ | group:
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: 30% chance, hp <= 100
+       | (1443:62) Black Letter
+       | Blind all orbs on the board, Deal 75% damage
+       | condition: 40% chance, hp <= 100
+       | (1444:48) Love Letter
+       | Change Random to Heal, Deal 150% damage
+       | condition: 30% chance, hp <= 100
+       | (1445:63) Hypnos Letter
+       | Bind 4 random cards for 1~2 turns, Deal 50% damage
+       | (1446:48) Thanatos Letter
+       | Change Random to Jammer, Deal 100% damage
+ | group:
+ | condition: hp <= 74
+   | group:
+   | condition: turn 1
+     | group:
+       | condition: hp <= 75
+       | (1442:68) Trickster
+       | Jammer skyfall +25% for 5 turns
+ | group:
+ | condition: hp <= 29
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: hp <= 30
+       | (1447:15) Argeiphontes
+       | Deal 200% damage (4 hits, 50% each)

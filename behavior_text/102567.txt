@@ -1,0 +1,49 @@
+#102567 - Alt. Past Life Jade Dragon Caller, Sonia
+monster size: 5
+new AI: True
+start/max counter: 2
+counter increment: 1
+monster_id: 102567
+approved: False
+
+level: 1
+ type: PASSIVE
+ | (12098:72) Green Sonia Water Halved
+ | Reduce damage from Water by 50%
+ type: PREEMPT
+ | (2826:50) You're not getting through!
+ | Player -99% HP
+ group:
+ | group:
+   | group:
+   | condition: repeats every 3 turns
+     | group:
+       | (2827:77) Gale Shot
+       | Change 3rd column to Wood orbs, Deal 150% damage
+   | group:
+   | condition: repeats every 3 turns
+     | group:
+       | condition: when required attributes on board, hp <= 100
+       | (2828:92) Poison Arrow
+       | Spawn random 2 Poison orbs, Deal 110% damage
+ | group:
+ | condition: hp <= 69
+   | group:
+   | condition: turn 1
+     | group:
+       | (2829:14) Ancient Dragon Tribe's Dark Curse
+       | Bind active skills for 6 turns
+       | (2830:66) Draco Summon-Swift Dragon Emperor
+       | Do nothing
+ | group:
+ | condition: hp <= 29
+   | group:
+   | condition: turn 1
+     | group:
+       | (2830:66) Draco Summon-Swift Dragon Emperor
+       | Do nothing
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | (2831:15) World-Wrecking Windstorm
+       | Deal 2500% damage (5 hits, 500% each)

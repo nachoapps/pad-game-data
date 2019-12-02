@@ -1,0 +1,33 @@
+#102376 - Combat State, Colossus Titan
+monster size: 5
+new AI: True
+start/max counter: 1
+counter increment: 1
+monster_id: 102376
+approved: False
+
+level: 3
+ type: PREEMPT
+ | (7558:50) Desperate Assault
+ | Player -99% HP
+ group:
+ | group:
+   | group:
+   | condition: turn 1
+     | group:
+       | condition: 50% chance, hp <= 100
+       | (7561:79) Mow-Down
+       | Change 1st row to Fire orbs, Deal 180% damage
+       | condition: when required attributes on board, hp <= 100
+       | (7559:92) Pyro-Vapor
+       | Spawn random 10 Fire orbs, Deal 180% damage
+   | group:
+   | condition: repeats every 2 turns
+     | group:
+       | (7562:39) Raises hand
+       | Movetime 50% for 1 turns
+   | group:
+   | condition: repeats every 2 turns
+     | group:
+       | (7560:15) Severe Blow
+       | Deal 1000% damage

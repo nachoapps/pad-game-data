@@ -1,0 +1,20 @@
+#100080 - Alt. Ice Golem
+monster size: 3
+new AI: True
+start/max counter: 1
+counter increment: 0
+monster_id: 100080
+approved: False
+
+level: 1
+ type: PREEMPT
+ | (4948:68) Ice Cascade
+ | Water skyfall +15% for 20 turns
+ group:
+ | group:
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: when required attributes on board, hp <= 100
+       | (4949:92) Freezing Punch
+       | Spawn random 1 Water orbs, Deal 400% damage

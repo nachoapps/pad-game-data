@@ -1,0 +1,71 @@
+#2926 - Passionate Dragon Caller, Ace
+monster size: 5
+new AI: True
+start/max counter: 2
+counter increment: 1
+monster_id: 2926
+approved: False
+
+level: 1
+ type: PREEMPT
+ | condition: 34% chance, hp <= 100
+ | (4633:83) Monsters! + Dragon Summoning!!!
+ | Do nothing + Change 1st row to Fire orbs, Deal 100% damage
+ | condition: 50% chance, hp <= 100
+ | (4634:83) Monsters! + Dragon Summoning!!!
+ | Do nothing + Change 1st row to Water orbs, Deal 100% damage
+ | (4635:83) Monsters! + Dragon Summoning!!!
+ | Do nothing + Change 1st row to Wood orbs, Deal 100% damage
+ type: DEATH
+ | condition: when defeated, hp <= 100
+ | (4658:69) Changing Ace
+ | Show message: Armor Drop set on D-Gear!|Blazing Deity Falcon, Horus' Energy
+grants Ace new powers
+ group:
+ | group:
+   | group:
+   | condition: repeats every 6 turns
+     | group:
+       | (4638:83) Scorching Heat Mantle + 7 combos!!
+       | Reduce damage from all sources by 75% for 2 turns + Deal 140% damage (7 hits, 20% each)
+   | group:
+   | condition: repeats every 6 turns
+     | group:
+       | (4640:50) Blazing Tail
+       | Player -99% HP
+   | group:
+   | condition: repeats every 6 turns
+     | group:
+       | (4644:48) Beauty of the Four Seasons
+       | Change Heal to Water, Deal 80% damage
+       | condition: when required attributes on board, hp <= 100
+       | (4645:92) Ice Sword
+       | Spawn random 9 Water orbs, Deal 110% damage
+   | group:
+   | condition: repeats every 6 turns
+     | group:
+       | (4647:83) Wind Wing's Dance + 7 combos!!
+       | Absorb combo <= 5 damage for 2 turns + Deal 140% damage (7 hits, 20% each)
+   | group:
+   | condition: repeats every 6 turns
+     | group:
+       | (4649:85) Feather Rain
+       | Change all orbs to Fire, Water, Wood, Light, Dark, Jammer, Deal 100% damage
+   | group:
+   | condition: repeats every 6 turns
+     | group:
+       | condition: 34% chance, hp <= 100
+       | (4651:83) Dragon Summoning!!! + We're gonna do our best too TAMA!
+       | Change 1st row to Fire orbs, Deal 100% damage + Bind awoken skills for 1 turns
+       | condition: 50% chance, hp <= 100
+       | (4652:83) Dragon Summoning!!! + We're gonna do our best too TAMA!
+       | Change 1st row to Water orbs, Deal 100% damage + Bind awoken skills for 1 turns
+       | (4653:83) Dragon Summoning!!! + We're gonna do our best too TAMA!
+       | Change 1st row to Wood orbs, Deal 100% damage + Bind awoken skills for 1 turns
+ | group:
+ | condition: hp <= 19
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | (4657:83) Count on us TAMA! + 10 combos!!
+       | Delay active skills by 1~2 turns + Deal 200% damage (10 hits, 20% each)

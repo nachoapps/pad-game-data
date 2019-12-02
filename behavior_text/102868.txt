@@ -1,0 +1,32 @@
+#102868 - Alt. Men in Black, Gin & Vodka
+monster size: 5
+new AI: True
+start/max counter: 7
+counter increment: 0
+monster_id: 102868
+approved: False
+
+level: 4
+ type: PREEMPT
+ | (4398:89) Glacial Eyes
+ | Delay active skills by 2 turns
+ group:
+ | group:
+   | group:
+   | condition: turn 1
+     | group:
+       | condition: when 2861, 2862 on team, hp <= 100
+       | (4403:15) Farewell... Detective!!
+       | Deal 120% damage
+       | (4399:15) This ends here!!!
+       | Deal 120% damage
+   | group:
+   | condition: turn 2
+     | group:
+       | (4400:39) Last Chance...
+       | Movetime -1s for 2 turns
+   | group:
+   | condition: repeats every 2 turns
+     | group:
+       | (4401:64) APTX4869
+       | Change Random 5 to Poison, Deal 10% damage

@@ -1,0 +1,47 @@
+#4121 - Gilles Legato
+monster size: 4
+new AI: True
+start/max counter: 1
+counter increment: 0
+monster_id: 4121
+approved: False
+
+level: 1
+ type: PREEMPT
+ | (8713:119) Overcoat of Immortality
+ | Immune to damage from all sources for 999 turns
+ group:
+ | group:
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: 30% chance, hp <= 100
+       | (8714:77) Vampire Blade
+       | Change 2nd column to Dark orbs, Deal 160% damage
+       | (8715:15) Blood Needle
+       | Deal 180% damage (2 hits, 90% each)
+ type: REMAINING
+ condition: when 2 enemies remain
+ | group:
+   | group:
+   | condition: turn 1
+     | group:
+       | (8716:75) Dance!
+       | Leader changes to random sub for 1 turns
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: 60% chance, hp <= 100
+       | (8721:5) Dark World
+       | Blind all orbs on the board
+       | (8722:50) Pain
+       | Player -99% HP
+ type: REMAINING
+ condition: when 1 enemies remain
+ | group:
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: when 1 enemies remain, hp <= 100
+       | (8723:52) Futile...
+       | Enemy ally recover 100% hp

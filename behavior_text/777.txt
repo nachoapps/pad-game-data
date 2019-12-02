@@ -1,0 +1,38 @@
+#777 - Great Tengu
+monster size: 5
+new AI: True
+start/max counter: 1
+counter increment: 1
+monster_id: 777
+approved: False
+
+level: 1
+ type: PREEMPT
+ | (12329:83) Absorb! + Seal!
+ | Absorb combo <= 4 damage for 5 turns + Seal 1st, 5th row for 1 turns
+ group:
+ | group:
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: 33% chance, hp <= 100
+       | (12332:65) Bind!
+       | Bind 1 random subs for 1 turns
+       | condition: 33% chance, hp <= 100
+       | (12333:15) Destroy!
+       | Deal 150% damage
+       | condition: 34% chance, hp <= 100
+       | (12334:48) Terminate!
+       | Change Random to Jammer, Deal 70% damage
+ | group:
+ | condition: hp <= 39
+   | group:
+   | condition: repeats every 2 turns
+     | group:
+       | (12335:66) Focusing his mind
+       | Do nothing
+   | group:
+   | condition: repeats every 2 turns
+     | group:
+       | (12336:15) All is impermanent...
+       | Deal 800% damage (4 hits, 200% each)

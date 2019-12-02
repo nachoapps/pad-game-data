@@ -1,0 +1,58 @@
+#5109 - Blanka
+monster size: 5
+new AI: True
+start/max counter: 3
+counter increment: 0
+monster_id: 5109
+approved: False
+
+level: 1
+ type: PREEMPT
+ | (12474:67) Vauuuun! Gurrrrrr...Graaauh!
+ | Absorb combo <= 3 damage for 3 turns
+ group:
+ | group:
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: 25% chance, hp <= 100
+       | (12475:15) Wild Hunt
+       | Deal 110% damage (5 hits, 22% each)
+       | condition: 25% chance, when required attributes on board, hp <= 100
+       | (12476:92) Electric Thunder
+       | Spawn random 4 Light orbs, Deal 100% damage
+       | condition: 25% chance, hp <= 100
+       | (12477:83) Rolling Attack + Vertical Rolling
+       | Deal 50% damage + Player -25% HP
+       | condition: 25% chance, hp <= 100
+       | (12480:83) Back Step Rolling + Raging Bash
+       | Deal 45% damage + Deal 60% damage (4 hits, 15% each)
+ | group:
+ | condition: hp <= 49
+   | group:
+   | condition: turn 1
+     | group:
+       | (12483:96) Jungle Dynamo
+       | Locked random skyfall +30% for 3 turns
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: 25% chance, hp <= 100
+       | (12484:63) Ground Shave Rolling
+       | Bind 1 random subs for 1 turns, Deal 130% damage
+       | condition: 25% chance, hp <= 100
+       | (12485:94) Rolling Attack
+       | Lock 10 random Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs, Deal 115% damage
+       | condition: 25% chance, hp <= 100
+       | (12486:39) Back Step Rolling
+       | Movetime -1s for 1 turns, Deal 110% damage
+       | condition: 25% chance, hp <= 100
+       | (12487:89) Vertical Rolling
+       | Delay active skills by 2 turns, Deal 105% damage
+ | group:
+ | condition: hp <= 9
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | (12488:63) Dynamic Rolling
+       | Bind 1 random subs for 1~2 turns, Deal 200% damage

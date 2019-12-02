@@ -1,0 +1,29 @@
+#362 - Odin
+monster size: 5
+new AI: False
+start/max counter: 1
+counter increment: 0
+monster_id: 362
+approved: False
+
+level: 1
+ group:
+ | group:
+ | condition: hp <= 74
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: 40% chance, hp <= 75
+       | (118:8) Zen
+       | Increase damage to 300% for the next attack
+ | group:
+ | condition: hp <= 29
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: 40% chance, hp <= 30
+       | (119:15) Diabolic Lance Gungnir
+       | Deal 250% damage (5 hits, 50% each)
+       | condition: 40% chance, hp <= 75
+       | (118:8) Zen
+       | Increase damage to 300% for the next attack

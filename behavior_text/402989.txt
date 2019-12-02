@@ -1,0 +1,160 @@
+#402989 - Alt. Iron Machine Emperor, Another Justice
+monster size: 5
+new AI: True
+start/max counter: 3
+counter increment: 0
+monster_id: 402989
+approved: False
+
+level: 1
+ type: PASSIVE
+ | (4903:73) Resolve Robot
+ | Survive attacks with 1 HP when HP > 50%
+ type: PREEMPT
+ | (13674:83) Mode-Sea Armor + Justice Wave + Justice Armor
+ | Voids status ailments for 999 turns + Delay active skills by 3~5 turns + Void damage >= 8000000 for 999 turns
+ group:
+ | type: DISPEL_PLAYER
+   | (4900:6) Justice Eye
+   | Voids player buff effects
+ | group:
+   | group:
+   | condition: turn 1
+     | group:
+       | (4895:79) Justice Abyss Blade
+       | Change 2nd row to Water, Poison orbs, Deal 100% damage
+   | group:
+   | condition: turn 2
+     | group:
+       | (4896:50) Justice Punch
+       | Player -99% HP
+   | group:
+   | condition: turn 3
+     | group:
+       | (4897:15) Justice Dark Boomerang
+       | Deal 140% damage (4 hits, 35% each)
+   | group:
+   | condition: turn 4
+     | group:
+       | (4895:79) Justice Abyss Blade
+       | Change 2nd row to Water, Poison orbs, Deal 100% damage
+   | group:
+   | condition: turn 5
+     | group:
+       | (4896:50) Justice Punch
+       | Player -99% HP
+   | group:
+   | condition: turn 6
+     | group:
+       | (4898:19) Justice Booster
+       | Increase damage to 200% for the next 999 turns
+   | group:
+   | condition: repeats every 3 turns
+     | group:
+       | (4897:15) Justice Dark Boomerang
+       | Deal 140% damage (4 hits, 35% each)
+   | group:
+   | condition: repeats every 3 turns
+     | group:
+       | (4895:79) Justice Abyss Blade
+       | Change 2nd row to Water, Poison orbs, Deal 100% damage
+   | group:
+   | condition: repeats every 3 turns
+     | group:
+       | (4896:50) Justice Punch
+       | Player -99% HP
+ | group:
+ | condition: hp <= 69
+   | group:
+   | condition: turn 1
+     | group:
+       | condition: hp <= 70
+       | (4899:74) Justice Shield
+       | Reduce damage from all sources by 75% for 3 turns
+   | group:
+   | condition: turn 2
+     | group:
+       | (4895:79) Justice Abyss Blade
+       | Change 2nd row to Water, Poison orbs, Deal 100% damage
+   | group:
+   | condition: turn 3
+     | group:
+       | (4896:50) Justice Punch
+       | Player -99% HP
+   | group:
+   | condition: turn 4
+     | group:
+       | (4897:15) Justice Dark Boomerang
+       | Deal 140% damage (4 hits, 35% each)
+   | group:
+   | condition: turn 5
+     | group:
+       | (4895:79) Justice Abyss Blade
+       | Change 2nd row to Water, Poison orbs, Deal 100% damage
+   | group:
+   | condition: repeats every 3 turns
+     | group:
+       | (4896:50) Justice Punch
+       | Player -99% HP
+   | group:
+   | condition: repeats every 3 turns
+     | group:
+       | (4897:15) Justice Dark Boomerang
+       | Deal 140% damage (4 hits, 35% each)
+   | group:
+   | condition: repeats every 3 turns
+     | group:
+       | (4895:79) Justice Abyss Blade
+       | Change 2nd row to Water, Poison orbs, Deal 100% damage
+ | group:
+ | condition: hp <= 49
+   | group:
+   | condition: turn 2
+     | group:
+       | condition: hp <= 50
+       | (4902:68) Justice Tempest
+       | Water, Jammer, Poison skyfall +15% for 5 turns, Deal 120% damage
+   | group:
+   | condition: turn 3
+     | group:
+       | (4895:79) Justice Abyss Blade
+       | Change 2nd row to Water, Poison orbs, Deal 100% damage
+   | group:
+   | condition: turn 4
+     | group:
+       | (4896:50) Justice Punch
+       | Player -99% HP
+   | group:
+   | condition: turn 5
+     | group:
+       | (4897:15) Justice Dark Boomerang
+       | Deal 140% damage (4 hits, 35% each)
+   | group:
+   | condition: repeats every 3 turns
+     | group:
+       | (4895:79) Justice Abyss Blade
+       | Change 2nd row to Water, Poison orbs, Deal 100% damage
+   | group:
+   | condition: repeats every 3 turns
+     | group:
+       | (4896:50) Justice Punch
+       | Player -99% HP
+   | group:
+   | condition: repeats every 3 turns
+     | group:
+       | (4897:15) Justice Dark Boomerang
+       | Deal 140% damage (4 hits, 35% each)
+ | group:
+ | condition: hp <= 14
+   | group:
+   | condition: turns 1-5
+     | group:
+       | condition: hp <= 15
+       | (4901:15) Justice Absolute Storm
+       | Deal 1600% damage (8 hits, 200% each)
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: hp <= 15
+       | (4901:15) Justice Absolute Storm
+       | Deal 1600% damage (8 hits, 200% each)

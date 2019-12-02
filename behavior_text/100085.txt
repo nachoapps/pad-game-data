@@ -1,0 +1,33 @@
+#100085 - Alt. Machine Golem Mk.II
+monster size: 4
+new AI: True
+start/max counter: 1
+counter increment: 1
+monster_id: 100085
+approved: False
+
+level: 1
+ type: PREEMPT
+ | (5717:104) Peaky Smog
+ | Column of cloud appear for 2 turns at random location
+ group:
+ | group:
+   | group:
+   | condition: repeats every 2 turns
+     | group:
+       | (5719:50) Weak Shot
+       | Player -60% HP
+   | group:
+   | condition: repeats every 2 turns
+     | group:
+       | (5718:94) Tri-Gatling
+       | Lock 3 random Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs, Deal 100% damage
+ type: REMAINING
+ condition: when 1 enemies remain
+ | group:
+   | group:
+   | condition: turn 1
+     | group:
+       | condition: when 1 enemies remain, hp <= 100
+       | (5720:17) Full Throttle
+       | Increase damage to 500% for the next 999 turns

@@ -1,0 +1,40 @@
+#919 - Elemental of Harsh Flame, Shaitan
+monster size: 5
+new AI: True
+start/max counter: 1
+counter increment: 1
+monster_id: 919
+approved: False
+
+level: 1
+ type: PREEMPT
+ | (4530:79) I will devour you!
+ | Change 3rd row to Fire, Jammer orbs, Deal 130% damage
+ group:
+ | group:
+   | group:
+   | condition: turn 1
+     | group:
+       | (4531:1) Flame Cage
+       | Bind 3 random cards for 3 turns
+   | group:
+   | condition: repeats every 2 turns
+     | group:
+       | (4533:15) Burn Knuckle
+       | Deal 150% damage (2 hits, 75% each)
+   | group:
+   | condition: repeats every 2 turns
+     | group:
+       | condition: when required attributes on board, hp <= 100
+       | (4534:92) Dusky Malice
+       | Change all orbs to Jammer, Deal 100% damage
+       | condition: when required attributes on board, hp <= 100
+       | (4535:92) Robbing Heat
+       | Change all orbs to Poison, Deal 100% damage
+ | group:
+ | condition: hp <= 49
+   | group:
+   | condition: turn 2
+     | group:
+       | (4532:14) Flame Commandment
+       | Bind active skills for 5 turns

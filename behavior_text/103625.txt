@@ -1,0 +1,54 @@
+#103625 - Warlock, Fei Wang Reed
+monster size: 5
+new AI: True
+start/max counter: 1
+counter increment: 0
+monster_id: 103625
+approved: False
+
+level: 1
+ type: PREEMPT
+ | condition: when 3613 on team, hp <= 100
+ | (6738:83) You're nothing more than a puppet! + Death Seal
+ | Voids status ailments for 4 turns + Player -99% HP
+ | condition: when 3611, 3612 on team, hp <= 100
+ | (6737:83) I shall erase you from all dimensions! + Death Seal
+ | Voids status ailments for 4 turns + Player -99% HP
+ | (6705:83) Let me grant your wish + Death Seal
+ | Voids status ailments for 4 turns + Player -99% HP
+ group:
+ | group:
+   | group:
+   | condition: repeats every 6 turns
+     | group:
+       | condition: when required attributes on board, hp <= 100
+       | (6706:92) Black wings overturn the corpses
+       | Spawn random 3 Jammer orbs
+   | group:
+   | condition: repeats every 6 turns
+     | group:
+       | condition: when required attributes on board, hp <= 100
+       | (6707:92) Black wings overturn the corpses
+       | Spawn random 6 Jammer orbs
+   | group:
+   | condition: repeats every 6 turns
+     | group:
+       | condition: when required attributes on board, hp <= 100
+       | (6708:92) Black wings overturn the corpses
+       | Spawn random 12 Jammer orbs
+   | group:
+   | condition: repeats every 6 turns
+     | group:
+       | condition: when required attributes on board, hp <= 100
+       | (6709:92) Black wings overturn the corpses
+       | Spawn random 24 Jammer orbs
+   | group:
+   | condition: repeats every 6 turns
+     | group:
+       | (6710:85) Black wings overturned all the corpses
+       | Change all orbs to Jammer, Deal 500% damage
+   | group:
+   | condition: repeats every 6 turns
+     | group:
+       | (6704:50) Death Seal
+       | Player -99% HP

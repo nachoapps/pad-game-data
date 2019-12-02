@@ -1,0 +1,62 @@
+#4136 - Paolumu
+monster size: 5
+new AI: True
+start/max counter: 1
+counter increment: 0
+monster_id: 4136
+approved: False
+
+level: 4
+ type: PREEMPT
+ | (13020:83) Roar + Spinning Tail Attack
+ | Bind 1 random subs for 1 turns + Deal 100% damage
+ group:
+ | group:
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: 33% chance, hp <= 100
+       | (13022:15) Spinning Tail Attack
+       | Deal 100% damage
+       | condition: 33% chance, hp <= 100
+       | (13023:15) Claw Attack
+       | Deal 110% damage
+       | condition: 34% chance, hp <= 100
+       | (13024:89) Bite
+       | Delay active skills by 2 turns, Deal 95% damage
+ | group:
+ | condition: hp <= 49
+   | group:
+   | condition: repeats every 6 turns
+     | group:
+       | (13025:83) Strongly Sucking Air In... + Roar
+       | Absorb combo <= 4 damage for 3 turns + Bind 1 random subs for 1 turns
+   | group:
+   | condition: repeats every 6 turns
+     | group:
+       | condition: 33% chance, hp <= 100
+       | (13027:15) Mid-air Body Slam
+       | Deal 150% damage
+       | condition: 33% chance, hp <= 100
+       | (13028:79) Mid-air Tail Sweep
+       | Change 5th row to Dark orbs, Deal 130% damage
+       | condition: 34% chance, when required attributes on board, hp <= 100
+       | (13029:92) Mid-air Tail Strike
+       | Spawn random 3 Water, Dark orbs, Deal 130% damage
+   | group:
+   | condition: repeats every 6 turns
+     | group:
+       | (13030:109) Compressing Air Bubble...
+       | Random 1 orbs change every 1.0s for 1 turns, Deal 200% damage
+   | group:
+   | condition: repeats every 6 turns
+     | group:
+       | condition: 33% chance, hp <= 100
+       | (13022:15) Spinning Tail Attack
+       | Deal 100% damage
+       | condition: 33% chance, hp <= 100
+       | (13023:15) Claw Attack
+       | Deal 110% damage
+       | condition: 34% chance, hp <= 100
+       | (13024:89) Bite
+       | Delay active skills by 2 turns, Deal 95% damage

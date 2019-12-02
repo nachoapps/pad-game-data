@@ -1,0 +1,48 @@
+#2434 - Light Dog Dragon, Chinbowdra
+monster size: 4
+new AI: True
+start/max counter: 0
+counter increment: 0
+monster_id: 2434
+approved: False
+
+level: 4
+ type: PREEMPT
+ | (3466:96) Eagle Eye
+ | Locked Light skyfall +100% for 99 turns
+ group:
+ | type: DISPEL_PLAYER
+   | (3473:6) Lovely Pose
+   | Voids player buff effects
+ | group:
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: 25% chance, hp <= 100
+       | (3472:94) Skipping about
+       | Lock 4 random Fire, Water, Wood, Light, Dark orbs, Deal 100% damage
+       | condition: 25% chance, hp <= 100
+       | (3469:1) Lick Bind
+       | Bind 1 random cards for 1 turns
+       | condition: 25% chance, hp <= 100
+       | (3468:15) Snarl
+       | Deal 100% damage
+       | condition: 25% chance, hp <= 100
+       | (3467:77) Saint Corona
+       | Change 2nd, 4th column to Light orbs, Deal 70% damage
+ | group:
+ | condition: hp <= 69
+   | group:
+   | condition: turn 1
+     | group:
+       | condition: hp <= 70
+       | (3471:75) Whim
+       | Leader changes to random sub for 1 turns
+ | group:
+ | condition: hp <= 9
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: hp <= 10
+       | (3470:15) Meteorite
+       | Deal 270% damage (3 hits, 90% each)

@@ -1,0 +1,33 @@
+#4790 - Witch of Escaping the Summer, Werewolfie
+monster size: 4
+new AI: True
+start/max counter: 3
+counter increment: 0
+monster_id: 4790
+approved: False
+
+level: 4
+ type: PREEMPT
+ | (10864:48) You want some too?!
+ | Change Random to Dark, Deal 120% damage
+ group:
+ | group:
+   | group:
+   | condition: turn 1
+     | group:
+       | condition: when required attributes on board, hp <= 100
+       | (10865:92) I'll give you only one!
+       | Spawn random 1 Heal orbs, Deal 100% damage
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: when required attributes on board, hp <= 100
+       | (10866:92) I said only one!
+       | Spawn random 3 Jammer orbs, Deal 100% damage
+ | group:
+ | condition: hp <= 19
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | (10867:15) Coconut Slash
+       | Deal 120% damage (3 hits, 40% each)

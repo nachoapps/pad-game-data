@@ -1,0 +1,34 @@
+#4124 - Blue Stone Pillar
+monster size: 0
+new AI: True
+start/max counter: 1
+counter increment: 0
+monster_id: 4124
+approved: False
+
+level: 1
+ type: PREEMPT
+ | (8708:67) Vile Cerulean Flame
+ | Absorb combo <= 6 damage for 99 turns
+ group:
+ | type: DISPEL_PLAYER
+   | (8710:6) Wave of Nothingness
+   | Voids player buff effects
+ | group:
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: 20% chance, hp <= 100
+       | (8711:7) Healing Flame
+       | Enemy recover 15% hp
+       | (8712:94) Freeze Flame
+       | Lock 4 random Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs, Deal 70% damage
+ type: REMAINING
+ condition: when 1 enemies remain
+ | group:
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: when 1 enemies remain, hp <= 100
+       | (8709:52) Revival Flame
+       | Enemy ally recover 100% hp

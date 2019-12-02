@@ -1,0 +1,60 @@
+#1827 - Red-Winged Star Angel, Rozuel
+monster size: 5
+new AI: True
+start/max counter: 1
+counter increment: 0
+monster_id: 1827
+approved: False
+
+level: 1
+ type: PASSIVE
+ | (6533:72) Water damage halved
+ | Reduce damage from Water by 50%
+ type: PREEMPT
+ | (6560:83) Flare Bomb + Flashburn
+ | Spawn Bomb orbs in the specified positions + Blind orbs in specific positions for 1 turns, Deal 160% damage
+ group:
+ | group:
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | (6563:83) Healing Hymn + Scarlet Azure Blade
+       | Change Random to Heal + Change 2nd, 3rd row to Fire, Water orbs, Deal 170% damage
+ | group:
+ | condition: hp <= 69
+   | group:
+   | condition: turn 1
+     | group:
+       | condition: hp <= 70
+       | (6564:68) Light Punishment
+       | Jammer skyfall +20% for 5 turns
+   | group:
+   | condition: turn 2
+     | group:
+       | condition: hp <= 70
+       | (6535:83) Angel's Holy Grail + Battle Anthem
+       | Enemy recover 100% hp + Increase damage to 150% for the next 999 turns
+ | group:
+ | condition: hp <= 49
+   | group:
+   | condition: turn 1
+     | group:
+       | condition: hp <= 50
+       | (6565:68) Moderate Punishment
+       | Poison skyfall +20% for 5 turns
+ | group:
+ | condition: hp <= 29
+   | group:
+   | condition: turn 1
+     | group:
+       | condition: hp <= 30
+       | (6566:68) Full Punishment
+       | Mortal Poison skyfall +20% for 5 turns
+ | group:
+ | condition: hp <= 14
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: hp <= 15
+       | (6567:79) Lotus Sky Blades
+       | Change 1st, 3rd, 5th row to Fire orbs, 2nd, 4th row to Water orbs, Deal 1500% damage

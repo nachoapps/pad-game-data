@@ -1,0 +1,175 @@
+#102987 - Alt. Iron Machine King, Star Justice
+monster size: 5
+new AI: True
+start/max counter: 3
+counter increment: 0
+monster_id: 102987
+approved: False
+
+level: 1
+ type: PASSIVE
+ | (4882:73) Resolve Robot
+ | Survive attacks with 1 HP when HP > 50%
+ type: PREEMPT
+ | (12164:83) Mode-Ground Armor + Justice Aura
+ | Voids status ailments for 999 turns + Delay active skills by 6 turns
+ group:
+ | type: DISPEL_PLAYER
+   | (4848:6) Justice Eye
+   | Voids player buff effects
+ | group:
+   | group:
+   | condition: turn 1
+     | group:
+       | (4843:79) Justice Blade
+       | Change 2nd row to Wood orbs, Deal 100% damage
+   | group:
+   | condition: turn 2
+     | group:
+       | (4844:50) Justice Punch
+       | Player -99% HP
+   | group:
+   | condition: turn 3
+     | group:
+       | (4845:15) Justice Star Boomerang
+       | Deal 120% damage (3 hits, 40% each)
+   | group:
+   | condition: turn 4
+     | group:
+       | (4843:79) Justice Blade
+       | Change 2nd row to Wood orbs, Deal 100% damage
+   | group:
+   | condition: turn 5
+     | group:
+       | (4844:50) Justice Punch
+       | Player -99% HP
+   | group:
+   | condition: turn 6
+     | group:
+       | (4845:15) Justice Star Boomerang
+       | Deal 120% damage (3 hits, 40% each)
+   | group:
+   | condition: turn 7
+     | group:
+       | (4846:19) Justice Booster
+       | Increase damage to 200% for the next 999 turns
+   | group:
+   | condition: repeats every 3 turns
+     | group:
+       | (4843:79) Justice Blade
+       | Change 2nd row to Wood orbs, Deal 100% damage
+   | group:
+   | condition: repeats every 3 turns
+     | group:
+       | (4844:50) Justice Punch
+       | Player -99% HP
+   | group:
+   | condition: repeats every 3 turns
+     | group:
+       | (4845:15) Justice Star Boomerang
+       | Deal 120% damage (3 hits, 40% each)
+ | group:
+ | condition: hp <= 69
+   | group:
+   | condition: turn 1
+     | group:
+       | condition: hp <= 70
+       | (4847:74) Justice Barrier
+       | Reduce damage from all sources by 50% for 6 turns
+   | group:
+   | condition: turn 2
+     | group:
+       | (4843:79) Justice Blade
+       | Change 2nd row to Wood orbs, Deal 100% damage
+   | group:
+   | condition: turn 3
+     | group:
+       | (4844:50) Justice Punch
+       | Player -99% HP
+   | group:
+   | condition: turn 4
+     | group:
+       | (4845:15) Justice Star Boomerang
+       | Deal 120% damage (3 hits, 40% each)
+   | group:
+   | condition: turn 5
+     | group:
+       | (4843:79) Justice Blade
+       | Change 2nd row to Wood orbs, Deal 100% damage
+   | group:
+   | condition: turn 6
+     | group:
+       | (4844:50) Justice Punch
+       | Player -99% HP
+   | group:
+   | condition: repeats every 3 turns
+     | group:
+       | (4845:15) Justice Star Boomerang
+       | Deal 120% damage (3 hits, 40% each)
+   | group:
+   | condition: repeats every 3 turns
+     | group:
+       | (4843:79) Justice Blade
+       | Change 2nd row to Wood orbs, Deal 100% damage
+   | group:
+   | condition: repeats every 3 turns
+     | group:
+       | (4844:50) Justice Punch
+       | Player -99% HP
+ | group:
+ | condition: hp <= 49
+   | group:
+   | condition: turn 2
+     | group:
+       | condition: hp <= 50
+       | (4883:68) Justice Tornado
+       | Wood, Jammer, Poison skyfall +10% for 5 turns, Deal 100% damage
+   | group:
+   | condition: turn 3
+     | group:
+       | (4843:79) Justice Blade
+       | Change 2nd row to Wood orbs, Deal 100% damage
+   | group:
+   | condition: turn 4
+     | group:
+       | (4844:50) Justice Punch
+       | Player -99% HP
+   | group:
+   | condition: turn 5
+     | group:
+       | (4845:15) Justice Star Boomerang
+       | Deal 120% damage (3 hits, 40% each)
+   | group:
+   | condition: turn 6
+     | group:
+       | (4843:79) Justice Blade
+       | Change 2nd row to Wood orbs, Deal 100% damage
+   | group:
+   | condition: repeats every 3 turns
+     | group:
+       | (4844:50) Justice Punch
+       | Player -99% HP
+   | group:
+   | condition: repeats every 3 turns
+     | group:
+       | (4845:15) Justice Star Boomerang
+       | Deal 120% damage (3 hits, 40% each)
+   | group:
+   | condition: repeats every 3 turns
+     | group:
+       | (4843:79) Justice Blade
+       | Change 2nd row to Wood orbs, Deal 100% damage
+ | group:
+ | condition: hp <= 14
+   | group:
+   | condition: turns 1-6
+     | group:
+       | condition: hp <= 15
+       | (4849:15) Justice Ultimate Storm
+       | Deal 800% damage (8 hits, 100% each)
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: hp <= 15
+       | (4849:15) Justice Ultimate Storm
+       | Deal 800% damage (8 hits, 100% each)

@@ -1,0 +1,20 @@
+#100195 - Alt. Taur Devil
+monster size: 1
+new AI: True
+start/max counter: 0
+counter increment: 0
+monster_id: 100195
+approved: False
+
+level: 1
+ type: PREEMPT
+ | condition: when required attributes on board, hp <= 100
+ | (9352:92) Tiny Poison
+ | Spawn random 1 Poison orbs, Deal 10% damage
+ group:
+ | group:
+   | group:
+   | condition: repeats every 4 turns
+     | group:
+       | (131:19) Anger
+       | Increase damage to 130% for the next 3 turns

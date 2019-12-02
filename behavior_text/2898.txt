@@ -1,0 +1,22 @@
+#2898 - Venomous Midgard Snake, Jörmungandr-Ullr
+monster size: 5
+new AI: True
+start/max counter: 63
+counter increment: 0
+monster_id: 2898
+approved: False
+
+level: 1
+ type: PREEMPT
+ | condition: when 4 combos last turn, hp <= 100
+ | (7096:83) This is just the beginning + How tedious... + Just let me enjoy this
+ | Absorb combo <= 4 damage for 1 turns + Change all orbs to Fire, Water, Wood, Light, Dark, Heal + Blind all orbs on the board
+ | (7115:50) Is that your best? Then begone!
+ | Player -1000% HP
+ group:
+ | group:
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | (7115:50) Is that your best? Then begone!
+       | Player -1000% HP

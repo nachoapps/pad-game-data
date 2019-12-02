@@ -1,0 +1,43 @@
+#4213 - Aurora Loving Goddess, Sakuya
+monster size: 5
+new AI: True
+start/max counter: 3
+counter increment: 0
+monster_id: 4213
+approved: False
+
+level: 4
+ type: PREEMPT
+ | (8985:20) It's special, right?
+ | Voids status ailments for 3 turns
+ group:
+ | group:
+   | group:
+   | condition: repeats every 4 turns
+     | group:
+       | condition: 15% chance, hp <= 100
+       | (8987:63) Chocolate Kiss
+       | Bind 1 random subs for 1 turns, Deal 100% damage
+       | (8995:15) Sweet Combo
+       | Deal 100% damage (2 hits, 50% each)
+   | group:
+   | condition: repeats every 4 turns
+     | group:
+       | (8988:89) Don't rush!
+       | Delay active skills by 2 turns, Deal 120% damage
+ | group:
+ | condition: hp <= 49
+   | group:
+   | condition: turn 1
+     | group:
+       | condition: hp <= 50
+       | (8986:53) Kirin's Perception
+       | Absorb Light damage for 2 turns
+ | group:
+ | condition: hp <= 9
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: hp <= 10
+       | (8989:85) Kirin Four Origin Perception
+       | Change all orbs to Fire, Water, Wood, Light, Deal 180% damage

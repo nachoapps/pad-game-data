@@ -1,0 +1,39 @@
+#103742 - Alt. Dragonbound Wanje
+monster size: 3
+new AI: True
+start/max counter: 1
+counter increment: 1
+monster_id: 103742
+approved: False
+
+level: 1
+ type: PASSIVE
+ | (7444:72) Fire damage halved
+ | Reduce damage from Fire by 50%
+ | (8199:73) Dragonbound Chibi Resolve
+ | Survive attacks with 1 HP when HP > 80%
+ type: PREEMPT
+ | (7387:39) Woo-hoo!
+ | Movetime -2s for 3 turns
+ group:
+ | group:
+   | group:
+   | condition: turn 1
+     | group:
+       | (7388:76) Ackris! Yoo-hoo!
+       | Change 3rd, 4th column to Water, Jammer orbs
+   | group:
+   | condition: turn 2
+     | group:
+       | (7389:50) Do your best, Ackris!
+       | Player -90% HP
+   | group:
+   | condition: repeats every 2 turns
+     | group:
+       | (7391:94) Ackris is spinning around
+       | Lock 8 random Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs, Deal 160% damage
+   | group:
+   | condition: repeats every 2 turns
+     | group:
+       | (7390:86) Twinkle ☆ Aqua
+       | Enemy recover 50% hp

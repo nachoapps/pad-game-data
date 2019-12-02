@@ -1,0 +1,26 @@
+#4131 - New Year's Fortune Dragon, Haneron
+monster size: 3
+new AI: True
+start/max counter: 1
+counter increment: 1
+monster_id: 4131
+approved: False
+
+level: 4
+ type: PREEMPT
+ | condition: when required attributes on board, hp <= 100
+ | (8768:92) Here I come!
+ | Spawn random 1 Jammer orbs
+ group:
+ | group:
+   | group:
+   | condition: repeats every 2 turns
+     | group:
+       | condition: when required attributes on board, hp <= 100
+       | (8769:92) Taaake that!
+       | Spawn random 2 Jammer orbs, Deal 60% damage
+   | group:
+   | condition: repeats every 2 turns
+     | group:
+       | (8770:97) Smear
+       | Blind random 1 orbs for 1 turns, Deal 100% damage

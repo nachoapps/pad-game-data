@@ -1,0 +1,29 @@
+#5358 - Little Red Note
+monster size: 3
+new AI: True
+start/max counter: 1
+counter increment: 0
+monster_id: 5358
+approved: False
+
+level: 4
+ group:
+ | group:
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: 50% chance, hp <= 100
+       | (13452:63) Beginning of the Beat
+       | Bind 1 random subs for 2 turns, Deal 95% damage
+       | condition: 50% chance, hp <= 100
+       | (13453:50) Reverberating Drum Roll
+       | Player -35% HP
+ type: REMAINING
+ condition: when 1 enemies remain
+ | group:
+   | group:
+   | condition: turn 1
+     | group:
+       | condition: when 1 enemies remain, hp <= 100
+       | (13462:17) Musician's Bonds
+       | Increase damage to 150% for the next 999 turns

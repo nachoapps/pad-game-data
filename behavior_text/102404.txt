@@ -1,0 +1,31 @@
+#102404 - Alt. Bewitching Demon Bird, Cockatrice
+monster size: 4
+new AI: True
+start/max counter: 1
+counter increment: 0
+monster_id: 102404
+approved: False
+
+level: 1
+ type: PREEMPT
+ | (11399:102) True Face
+ | Spawn random 5 Bomb orbs
+ group:
+ | group:
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: 50% chance, hp <= 100
+       | (11400:48) Evil Eye Trick
+       | Change Random to Jammer, Deal 100% damage
+       | (11401:94) Wonder Feather
+       | Lock 10 random Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs, Deal 105% damage
+ type: REMAINING
+ condition: when 1 enemies remain
+ | group:
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: when required attributes on board, hp <= 100
+       | (11402:92) Sweet Magic
+       | Spawn random 3 Jammer, Poison, Mortal Poison orbs, Deal 100% damage

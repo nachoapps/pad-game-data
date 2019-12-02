@@ -1,0 +1,92 @@
+#102805 - Alt. Demon Leader, Shuten-doji
+monster size: 5
+new AI: True
+start/max counter: 1
+counter increment: 1
+monster_id: 102805
+approved: False
+
+level: 1
+ type: PASSIVE
+ | (3868:73) Shuten-doji Resolve
+ | Survive attacks with 1 HP when HP > 50%
+ type: PREEMPT
+ | condition: 5% chance, hp <= 100
+ | (3855:83) Mount Ooe's Soul Guardian + Heat Demon's Sake
+ | Voids status ailments for 5 turns + Absorb Fire damage for 1 turns
+ | condition: 5% chance, hp <= 100
+ | (3856:83) Mount Ooe's Soul Guardian + Ice Demon's Sake
+ | Voids status ailments for 5 turns + Absorb Water damage for 1 turns
+ | condition: 5% chance, hp <= 100
+ | (3857:83) Mount Ooe's Soul Guardian + Storm Demon's Sake
+ | Voids status ailments for 5 turns + Absorb Wood damage for 1 turns
+ | condition: 5% chance, hp <= 100
+ | (3858:83) Mount Ooe's Soul Guardian + Sunlight Demon's Sake
+ | Voids status ailments for 5 turns + Absorb Light damage for 1 turns
+ | condition: 5% chance, hp <= 100
+ | (3859:83) Mount Ooe's Soul Guardian + Shadow Demon's Sake
+ | Voids status ailments for 5 turns + Absorb Dark damage for 1 turns
+ | condition: 25% chance, hp <= 100
+ | (3860:83) Mount Ooe's Soul Guardian + Steel Demon's Sake
+ | Voids status ailments for 5 turns + Void damage >= 500000 for 1 turns
+ | condition: 25% chance, hp <= 100
+ | (3861:83) Mount Ooe's Soul Guardian + Armored Demon's Sake
+ | Voids status ailments for 5 turns + Reduce damage from all sources by 75% for 1 turns
+ | condition: 25% chance, hp <= 100
+ | (3862:83) Mount Ooe's Soul Guardian + Refined Demon's Sake
+ | Voids status ailments for 5 turns + Absorb combo <= 7 damage for 1 turns
+ group:
+ | group:
+   | group:
+   | condition: repeats every 2 turns
+     | group:
+       | condition: 20% chance, hp <= 100
+       | (3863:89) Demon's Violent Suppression
+       | Delay active skills by 1 turns, Deal 100% damage
+       | condition: 20% chance, hp <= 100
+       | (3864:14) Cursed Mask's Sealing Technique
+       | Bind active skills for 1 turns, Deal 100% damage
+       | condition: 20% chance, hp <= 100
+       | (3865:88) Holy Genius Odachi
+       | Bind awoken skills for 1 turns, Deal 100% damage
+       | condition: 20% chance, hp <= 100
+       | (3866:62) Miasma of Grudge
+       | Blind all orbs on the board, Deal 100% damage
+       | condition: 20% chance, hp <= 100
+       | (3867:39) Corpse Crushing Fist
+       | Movetime -2s for 1 turns, Deal 100% damage
+   | group:
+   | condition: repeats every 2 turns
+     | group:
+       | condition: 5% chance, hp <= 100
+       | (3847:53) Heat Demon's Sake
+       | Absorb Fire damage for 1 turns
+       | condition: 5% chance, hp <= 100
+       | (3848:53) Ice Demon's Sake
+       | Absorb Water damage for 1 turns
+       | condition: 5% chance, hp <= 100
+       | (3849:53) Storm Demon's Sake
+       | Absorb Wood damage for 1 turns
+       | condition: 5% chance, hp <= 100
+       | (3850:53) Sunlight Demon's Sake
+       | Absorb Light damage for 1 turns
+       | condition: 5% chance, hp <= 100
+       | (3851:53) Shadow Demon's Sake
+       | Absorb Dark damage for 1 turns
+       | condition: 25% chance, hp <= 100
+       | (3852:71) Steel Demon's Sake
+       | Void damage >= 500000 for 1 turns
+       | condition: 25% chance, hp <= 100
+       | (3853:74) Armored Demon's Sake
+       | Reduce damage from all sources by 75% for 1 turns
+       | condition: 25% chance, hp <= 100
+       | (3854:67) Refined Demon's Sake
+       | Absorb combo <= 7 damage for 1 turns
+ | group:
+ | condition: hp <= 19
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: hp <= 20
+       | (3869:15) Night Parade of One Hundred Demons
+       | Deal 1000% damage (10 hits, 100% each)

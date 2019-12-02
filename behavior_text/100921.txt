@@ -1,0 +1,48 @@
+#100921 - Alt. Elemental of Levity, Sylph
+monster size: 5
+new AI: True
+start/max counter: 0
+counter increment: 0
+monster_id: 100921
+approved: False
+
+level: 1
+ type: PASSIVE
+ | (12104:118) Sylph Phys Atk Halved
+ | Reduce damage from Physical, Attacker by 50%
+ group:
+
+level: 4
+ type: PASSIVE
+ | (12104:118) Sylph Phys Atk Halved
+ | Reduce damage from Physical, Attacker by 50%
+ type: PREEMPT
+ | (9227:83) Boom! + And another boom!
+ | Player -99% HP + Rcv 50% for 2 turns
+ group:
+ | group:
+   | group:
+   | condition: turn 1
+     | group:
+       | (9228:15) Can you bear through this?
+       | Deal 2% damage
+   | group:
+   | condition: turn 2
+     | group:
+       | (9227:83) Boom! + And another boom!
+       | Player -99% HP + Rcv 50% for 2 turns
+   | group:
+   | condition: turn 3
+     | group:
+       | (9229:15) How's this?
+       | Deal 20% damage
+   | group:
+   | condition: turn 4
+     | group:
+       | (9227:83) Boom! + And another boom!
+       | Player -99% HP + Rcv 50% for 2 turns
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | (9230:15) Let's end this
+       | Deal 200% damage

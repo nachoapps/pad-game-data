@@ -1,0 +1,20 @@
+#302404 - Bewitching Demon Bird, Cockatrice
+monster size: 4
+new AI: True
+start/max counter: 1
+counter increment: 1
+monster_id: 302404
+approved: False
+
+level: 4
+ type: PREEMPT
+ | condition: when required attributes on board, hp <= 100
+ | (3379:92) True Face
+ | Spawn random 5 Jammer orbs
+ group:
+ | group:
+   | group:
+   | condition: repeats every 2 turns
+     | group:
+       | (3380:48) Evil Eye Trick
+       | Change Random to Jammer, Deal 100% damage

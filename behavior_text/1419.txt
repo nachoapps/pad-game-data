@@ -1,0 +1,37 @@
+#1419 - White Coach Princess, Cinderella
+monster size: 4
+new AI: True
+start/max counter: 1
+counter increment: 1
+monster_id: 1419
+approved: False
+
+level: 1
+ type: PREEMPT
+ | (10885:67) Dress Up
+ | Absorb combo <= 8 damage for 1 turns
+ type: DEATH
+ | condition: when defeated, hp <= 100
+ | (10890:95) Midnight Chimes
+ | Spawn random 1 Bomb orbs
+ group:
+ | group:
+   | group:
+   | condition: turn 1
+     | group:
+       | condition: when 9 combos last turn, hp <= 100
+       | (10888:75) The Ball
+       | Leader changes to random sub for 1 turns
+       | (10886:74) Magic Midnight
+       | Reduce damage from all sources by 75% for 12 turns
+   | group:
+   | condition: repeats every 2 turns
+     | group:
+       | (10887:15) Glass Slipper
+       | Deal 120% damage (2 hits, 60% each)
+   | group:
+   | condition: repeats every 2 turns
+     | group:
+       | condition: when 9 combos last turn, hp <= 100
+       | (10888:75) The Ball
+       | Leader changes to random sub for 1 turns

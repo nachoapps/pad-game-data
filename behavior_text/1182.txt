@@ -1,0 +1,32 @@
+#1182 - Green Fairy
+monster size: 5
+new AI: False
+start/max counter: 1
+counter increment: 1
+monster_id: 1182
+approved: False
+
+level: 5
+ type: PREEMPT
+ | (903:55) Lucky Encounter
+ | Player recover 100% hp
+ group:
+ | group:
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: 50% chance, hp <= 100
+       | (959:48) Wood Spirit's Writing
+       | Change Random to Wood, Deal 80% damage
+ | group:
+ | condition: hp <= 49
+   | group:
+   | condition: repeats every 2 turns
+     | group:
+       | (948:15) Magical Book
+       | Deal 25% damage
+   | group:
+   | condition: repeats every 2 turns
+     | group:
+       | (958:15) Green Star Sword
+       | Deal 300% damage

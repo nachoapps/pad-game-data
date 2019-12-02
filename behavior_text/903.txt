@@ -1,0 +1,67 @@
+#903 - Lightning Chaser
+monster size: 5
+new AI: False
+start/max counter: 1
+counter increment: 1
+monster_id: 903
+approved: False
+
+level: 5
+ group:
+ | group:
+   | group:
+   | condition: repeats every 2 turns
+     | group:
+       | (709:48) Discharge
+       | Change Random to Light, Deal 80% damage
+   | group:
+   | condition: repeats every 2 turns
+     | group:
+       | (708:15) Volt Axe
+       | Deal 110% damage
+ | group:
+ | condition: hp <= 49
+   | group:
+   | condition: repeats every 6 turns
+     | group:
+       | condition: when 1 enemies remain, hp <= 50
+       | (638:17) Chase Mode
+       | Increase damage to 200% for the next 5 turns
+   | group:
+   | condition: repeats every 6 turns
+     | group:
+       | (709:48) Discharge
+       | Change Random to Light, Deal 80% damage
+   | group:
+   | condition: repeats every 6 turns
+     | group:
+       | (708:15) Volt Axe
+       | Deal 110% damage
+   | group:
+   | condition: repeats every 6 turns
+     | group:
+       | (709:48) Discharge
+       | Change Random to Light, Deal 80% damage
+   | group:
+   | condition: repeats every 6 turns
+     | group:
+       | (708:15) Volt Axe
+       | Deal 110% damage
+   | group:
+   | condition: repeats every 6 turns
+     | group:
+       | (709:48) Discharge
+       | Change Random to Light, Deal 80% damage
+ | group:
+ | condition: hp <= 24
+   | group:
+   | condition: repeats every 6 turns
+     | group:
+       | condition: when 1 enemies remain, hp <= 50
+       | (638:17) Chase Mode
+       | Increase damage to 200% for the next 5 turns
+   | group:
+   | condition: repeats every 6 turns
+     | group:
+       | (710:48) Thunder Weapon
+       | Change Random to Light, Deal 160% damage

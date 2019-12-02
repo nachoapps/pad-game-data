@@ -1,0 +1,48 @@
+#102127 - Alt. Light Mech General, Sherospada
+monster size: 5
+new AI: True
+start/max counter: 1
+counter increment: 0
+monster_id: 102127
+approved: False
+
+level: 1
+ type: PASSIVE
+ | (3215:73) Golem Spirit
+ | Survive attacks with 1 HP when HP > 50%
+ type: PREEMPT
+ | (12099:89) Downer Bullet
+ | Delay active skills by 1~6 turns
+ group:
+ | group:
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: 60% chance, hp <= 100
+       | (3197:15) Energy Shotgun
+       | Deal 120% damage (6 hits, 20% each)
+       | condition: 40% chance, hp <= 100
+       | (3198:77) Keen Edge
+       | Change 2nd column to Jammer orbs, 4th column to Poison orbs, Deal 100% damage
+ | group:
+ | condition: hp <= 49
+   | group:
+   | condition: turn 1
+     | group:
+       | (3230:83) High-End Booster + Energy Counter
+       | Increase damage to 200% for the next 999 turns + Player -99% HP
+ | group:
+ | condition: hp <= 9
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: hp <= 10
+       | (3200:15) Backward Impact
+       | Deal 500% damage
+ | group:
+   | group:
+   | condition: turn 1
+     | group:
+       | condition: hp <= 1
+       | (12100:39) Backdraft
+       | Movetime 50% for 10 turns, Deal 150% damage

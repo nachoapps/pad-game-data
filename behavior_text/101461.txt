@@ -1,0 +1,94 @@
+#101461 - Alt. Awoken Noah
+monster size: 4
+new AI: True
+start/max counter: 0
+counter increment: 0
+monster_id: 101461
+approved: False
+
+level: 1
+ type: PREEMPT
+ | condition: 10% chance, hp <= 100
+ | (5532:83) Are you worth saving? + Truth Gate
+ | Player recover 100% hp + Absorb Fire, Water damage for 2 turns
+ | condition: 10% chance, hp <= 100
+ | (5533:83) Are you worth saving? + Truth Gate
+ | Player recover 100% hp + Absorb Fire, Wood damage for 2 turns
+ | condition: 10% chance, hp <= 100
+ | (5534:83) Are you worth saving? + Truth Gate
+ | Player recover 100% hp + Absorb Fire, Light damage for 2 turns
+ | condition: 10% chance, hp <= 100
+ | (5535:83) Are you worth saving? + Truth Gate
+ | Player recover 100% hp + Absorb Fire, Dark damage for 2 turns
+ | condition: 10% chance, hp <= 100
+ | (5536:83) Are you worth saving? + Truth Gate
+ | Player recover 100% hp + Absorb Water, Wood damage for 2 turns
+ | condition: 10% chance, hp <= 100
+ | (5537:83) Are you worth saving? + Truth Gate
+ | Player recover 100% hp + Absorb Water, Light damage for 2 turns
+ | condition: 10% chance, hp <= 100
+ | (5538:83) Are you worth saving? + Truth Gate
+ | Player recover 100% hp + Absorb Water, Dark damage for 2 turns
+ | condition: 10% chance, hp <= 100
+ | (5539:83) Are you worth saving? + Truth Gate
+ | Player recover 100% hp + Absorb Wood, Light damage for 2 turns
+ | condition: 10% chance, hp <= 100
+ | (5540:83) Are you worth saving? + Truth Gate
+ | Player recover 100% hp + Absorb Wood, Dark damage for 2 turns
+ | condition: 10% chance, hp <= 100
+ | (5541:83) Are you worth saving? + Truth Gate
+ | Player recover 100% hp + Absorb Light, Dark damage for 2 turns
+ group:
+ | group:
+   | group:
+   | condition: repeats every 2 turns
+     | group:
+       | condition: 30% chance, hp <= 100
+       | (5516:63) Sacred Sacrifice
+       | Bind 1 random subs for 2 turns, Deal 50% damage
+       | condition: 50% chance, hp <= 100
+       | (5517:48) Rainbow Contract
+       | Change Random to Random, Deal 75% damage
+       | (5518:48) Twinkle Hope
+       | Change Random to Heal, Deal 100% damage
+   | group:
+   | condition: repeats every 2 turns
+     | group:
+       | condition: 10% chance, hp <= 100
+       | (5542:83) Ark Impact + Truth Gate
+       | Player -99% HP + Absorb Fire, Water damage for 2 turns
+       | condition: 10% chance, hp <= 100
+       | (5543:83) Ark Impact + Truth Gate
+       | Player -99% HP + Absorb Fire, Wood damage for 2 turns
+       | condition: 10% chance, hp <= 100
+       | (5544:83) Ark Impact + Truth Gate
+       | Player -99% HP + Absorb Fire, Light damage for 2 turns
+       | condition: 10% chance, hp <= 100
+       | (5545:83) Ark Impact + Truth Gate
+       | Player -99% HP + Absorb Fire, Dark damage for 2 turns
+       | condition: 10% chance, hp <= 100
+       | (5546:83) Ark Impact + Truth Gate
+       | Player -99% HP + Absorb Water, Wood damage for 2 turns
+       | condition: 10% chance, hp <= 100
+       | (5547:83) Ark Impact + Truth Gate
+       | Player -99% HP + Absorb Water, Light damage for 2 turns
+       | condition: 10% chance, hp <= 100
+       | (5548:83) Ark Impact + Truth Gate
+       | Player -99% HP + Absorb Water, Dark damage for 2 turns
+       | condition: 10% chance, hp <= 100
+       | (5549:83) Ark Impact + Truth Gate
+       | Player -99% HP + Absorb Wood, Light damage for 2 turns
+       | condition: 10% chance, hp <= 100
+       | (5550:83) Ark Impact + Truth Gate
+       | Player -99% HP + Absorb Wood, Dark damage for 2 turns
+       | condition: 10% chance, hp <= 100
+       | (5551:83) Ark Impact + Truth Gate
+       | Player -99% HP + Absorb Light, Dark damage for 2 turns
+ | group:
+ | condition: hp <= 19
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: hp <= 20
+       | (5520:15) Punishment Thunder
+       | Deal 2000% damage (2 hits, 1000% each)

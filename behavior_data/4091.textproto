@@ -1,0 +1,43 @@
+  monster_id: 4091
+  levels {
+    level: 1
+    groups {
+      group_type: PREEMPT
+      children {
+        behavior {
+          condition {
+            hp_threshold: 100
+            use_chance: 100
+            trigger_monsters: 4076
+            trigger_monsters: 4077
+            trigger_monsters: 4078
+          }
+          enemy_skill_id: 8678
+        }
+      }
+      children {
+        behavior {
+          condition {
+            hp_threshold: 100
+            use_chance: 100
+          }
+          enemy_skill_id: 8677
+        }
+      }
+    }
+    groups {
+      group_type: DEATH
+      children {
+        behavior {
+          condition {
+            hp_threshold: 100
+            if_defeated: true
+          }
+          enemy_skill_id: 8676
+        }
+      }
+    }
+    groups {
+      group_type: STANDARD
+    }
+  }

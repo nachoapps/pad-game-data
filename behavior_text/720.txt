@@ -1,0 +1,18 @@
+#720 - CoC Barbarian
+monster size: 2
+new AI: False
+start/max counter: 0
+counter increment: 0
+monster_id: 720
+approved: False
+
+level: 5
+ group:
+ | group:
+ | condition: hp <= 74
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: 50% chance, hp <= 75
+       | (397:15) Break Through
+       | Deal 150% damage (2 hits, 75% each)

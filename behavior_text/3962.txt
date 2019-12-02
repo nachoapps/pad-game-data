@@ -1,0 +1,31 @@
+#3962 - Water Text Dragon
+monster size: 3
+new AI: True
+start/max counter: 1
+counter increment: 0
+monster_id: 3962
+approved: False
+
+level: 4
+ type: PREEMPT
+ | (8277:94) Gah!
+ | Lock 3 random Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs
+ group:
+ | group:
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: 30% chance, when required attributes on board, hp <= 100
+       | (8271:92) Chilling Ice
+       | Spawn random 10 Water orbs, Deal 100% damage
+       | condition: 40% chance, hp <= 100
+       | (8276:15) Vivid Slash
+       | Deal 140% damage (2 hits, 70% each)
+ | group:
+ | condition: hp <= 49
+   | group:
+   | condition: turn 1
+     | group:
+       | condition: hp <= 50
+       | (8275:67) Toon Dragon Sense
+       | Absorb combo <= 5 damage for 3 turns

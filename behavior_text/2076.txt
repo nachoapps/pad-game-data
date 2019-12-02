@@ -1,0 +1,44 @@
+#2076 - Awoken Haku
+monster size: 5
+new AI: True
+start/max counter: 1
+counter increment: 1
+monster_id: 2076
+approved: False
+
+level: 1
+ type: PASSIVE
+ | (5843:72) Fire Water Dark Reduced Damage
+ | Reduce damage from Fire, Water, Dark by 30%
+ type: PREEMPT
+ | (5836:87) What did you come here for?
+ | Absorb damage >= 500000 damage for 5 turns
+ group:
+ | group:
+   | group:
+   | condition: turn 1
+     | group:
+       | (5839:85) Western Seven-Star Formation
+       | Change all orbs to Fire, Water, Dark, Deal 100% damage
+   | group:
+   | condition: repeats every 2 turns
+     | group:
+       | (5838:50) Unbreakable Fangs
+       | Player -99% HP
+   | group:
+   | condition: repeats every 2 turns
+     | group:
+       | (5837:98) Dark Tiger Claw
+       | Blind orbs in specific positions for 1 turns, Deal 100% damage
+ | group:
+ | condition: hp <= 14
+   | group:
+   | condition: repeats every 2 turns
+     | group:
+       | (5839:85) Western Seven-Star Formation
+       | Change all orbs to Fire, Water, Dark, Deal 100% damage
+   | group:
+   | condition: repeats every 2 turns
+     | group:
+       | (5842:83) I'm sorry... + Byakko Seven-Star Formation
+       | Delay active skills by 1 turns + Change all orbs to Fire, Water, Dark, Deal 300% damage

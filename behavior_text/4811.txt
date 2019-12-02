@@ -1,0 +1,79 @@
+#4811 - Brilliance Crafting Dragonbound, Chuan
+monster size: 5
+new AI: True
+start/max counter: 0
+counter increment: 0
+monster_id: 4811
+approved: False
+
+level: 1
+ type: PREEMPT
+ | (11233:83) Oh, welcome to my shop + You're the one doing errands huh? + Show me the result of your errand
+ | Voids status ailments for 999 turns + Reduce damage from all sources by 75% for 1 turns + Void damage >= 50000000 for 999 turns
+ type: DEATH
+ | condition: when defeated, hp <= 100
+ | (11265:95) unknown_name
+ | 
+ group:
+ | group:
+   | group:
+   | condition: turn 1
+     | group:
+       | (11237:83) You're just a small-fry + Well, try your best!
+       | Jammer, Poison skyfall +10% for 99 turns + Specific orbs change every 1.0s for 99 turns
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: 16% chance, hp <= 100
+       | (11243:94) Viscid Dragon
+       | Lock 15 random Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs, Deal 100% damage
+       | condition: 16% chance, hp <= 100
+       | (11244:15) Snappy
+       | Deal 105% damage (3 hits, 35% each)
+       | condition: 17% chance, hp <= 100
+       | (11245:48) Colorful Palette
+       | Change Random to Dark, Deal 100% damage
+       | condition: 17% chance, hp <= 100
+       | (11246:39) Cracked Hourglass
+       | Movetime -4s for 1 turns, Deal 95% damage
+       | condition: 17% chance, hp <= 100
+       | (11247:102) Dangerous Tools
+       | Spawn random 5 Bomb orbs, Deal 100% damage
+       | condition: 17% chance, hp <= 100
+       | (11248:1) Welding
+       | Bind 3 random cards for 2 turns, Deal 95% damage
+ | group:
+ | condition: hp <= 89
+   | group:
+   | condition: turn 1
+     | group:
+       | (11240:83) You're doing quite well + This is fine, right?
+       | Reduce damage from all sources by 50% for 99 turns + Delay active skills by 10 turns
+ | group:
+ | condition: hp <= 74
+   | group:
+   | condition: turn 2
+     | group:
+       | (11252:83) It huuurts! + How about this?
+       | Player -50% HP + Absorb combo <= 7 damage for 99 turns
+ | group:
+ | condition: hp <= 49
+   | group:
+   | condition: turn 2
+     | group:
+       | (11257:83) It huuurts! + You won't have me again
+       | Player -75% HP + Bind awoken skills for 3 turns
+ | group:
+ | condition: hp <= 24
+   | group:
+   | condition: turn 2
+     | group:
+       | (11262:83) It huuurts! + Is it over already?
+       | Player -99% HP + Absorb Light, Dark damage for 99 turns
+ | group:
+ | condition: hp <= 9
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | (11264:15) Right, good job!
+       | Deal 3000% damage (3 hits, 1000% each)

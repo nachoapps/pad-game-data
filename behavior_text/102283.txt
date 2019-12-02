@@ -1,0 +1,67 @@
+#102283 - Paradise Celeb, Hera-Is
+monster size: 5
+new AI: True
+start/max counter: 1
+counter increment: 0
+monster_id: 102283
+approved: False
+
+level: 5
+ type: PREEMPT
+ | (3142:20) You're on vacation, take a rest
+ | Voids status ailments for 999 turns
+ group:
+ | group:
+   | group:
+   | condition: turn 1
+     | group:
+       | condition: when 1531, 1532 on team, hp <= 100
+       | (3149:55) I'm so happy you came!
+       | Player recover 100% hp
+       | (3143:14) It's a little cold, but do you want a drink?
+       | Bind active skills for 2~3 turns
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: 90% chance, when required attributes on board, hp <= 100
+       | (3144:92) A cold wave washes over you
+       | Spawn random 3 Water orbs, Deal 100% damage
+ | group:
+ | condition: hp <= 49
+   | group:
+   | condition: turn 1
+     | group:
+       | condition: when 1531, 1532 on team, hp <= 100
+       | (3149:55) I'm so happy you came!
+       | Player recover 100% hp
+       | (3143:14) It's a little cold, but do you want a drink?
+       | Bind active skills for 2~3 turns
+       | condition: hp <= 50
+       | (3145:1) You'll freeze this close to me
+       | Bind 3 random cards for 2 turns
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: 70% chance, when required attributes on board, hp <= 50
+       | (3146:92) A cold wind blows
+       | Spawn random 4 Water orbs, Deal 120% damage
+       | condition: 90% chance, when required attributes on board, hp <= 100
+       | (3144:92) A cold wave washes over you
+       | Spawn random 3 Water orbs, Deal 100% damage
+ | group:
+ | condition: hp <= 19
+   | group:
+   | condition: turn 1
+     | group:
+       | condition: when 1531, 1532 on team, hp <= 100
+       | (3149:55) I'm so happy you came!
+       | Player recover 100% hp
+       | (3143:14) It's a little cold, but do you want a drink?
+       | Bind active skills for 2~3 turns
+       | (3147:50) Absolute Zero Summer
+       | Player -100% HP
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | (3170:15) A blizzard rages
+       | Deal 210% damage (3 hits, 70% each)

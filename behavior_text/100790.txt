@@ -1,0 +1,63 @@
+#100790 - Alt. Stone Gaze Demon Bird, Cockatrice
+monster size: 3
+new AI: True
+start/max counter: 1
+counter increment: 0
+monster_id: 100790
+approved: False
+
+level: 1
+ type: PREEMPT
+ | (503:13) Chaos Eye
+ | Change Random 2 to Jammer
+ group:
+ | group:
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | (503:13) Chaos Eye
+       | Change Random 2 to Jammer
+
+level: 4
+ type: PREEMPT
+ | (9605:112) Charming Demon Eye
+ | Forces attacks to hit this enemy
+ group:
+ | group:
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: 70% chance, hp <= 100
+       | (512:15) Snake Bite
+       | Deal 130% damage (2 hits, 65% each)
+       | (503:13) Chaos Eye
+       | Change Random 2 to Jammer
+ | group:
+ | condition: hp <= 29
+   | group:
+   | condition: turn 1
+     | group:
+       | (504:1) Pupil of the Evil Eye
+       | Bind 2 random cards for 4 turns
+
+level: 5
+ type: PREEMPT
+ | (9605:112) Charming Demon Eye
+ | Forces attacks to hit this enemy
+ group:
+ | group:
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: 70% chance, hp <= 100
+       | (512:15) Snake Bite
+       | Deal 130% damage (2 hits, 65% each)
+       | (503:13) Chaos Eye
+       | Change Random 2 to Jammer
+ | group:
+ | condition: hp <= 29
+   | group:
+   | condition: turn 1
+     | group:
+       | (504:1) Pupil of the Evil Eye
+       | Bind 2 random cards for 4 turns

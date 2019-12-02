@@ -1,0 +1,24 @@
+#1596 - Oneton
+monster size: 3
+new AI: False
+start/max counter: 1
+counter increment: 1
+monster_id: 1596
+approved: False
+
+level: 5
+ group:
+ | group:
+   | group:
+   | condition: repeats every 2 turns
+     | group:
+       | (1510:48) Fire Eating Attack
+       | Change Fire to Jammer, Deal 80% damage
+ | group:
+ | condition: hp <= 29
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: hp <= 30
+       | (1515:15) Bugs Bomb
+       | Deal 200% damage

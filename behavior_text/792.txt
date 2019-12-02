@@ -1,0 +1,75 @@
+#792 - Hominal Beast, Centaur
+monster size: 4
+new AI: False
+start/max counter: 1
+counter increment: 1
+monster_id: 792
+approved: False
+
+level: 4
+ type: PREEMPT
+ | (534:15) Gale Thrust
+ | Deal 60% damage
+ group:
+ | group:
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: 70% chance, hp <= 100
+       | (535:15) Rainfall Thrust
+       | Deal 105%~140% damage (3~4 hits, 35% each)
+ | group:
+ | condition: hp <= 29
+   | group:
+   | condition: repeats every 2 turns
+     | group:
+       | (536:15) A little closer...
+       | Deal 10% damage
+   | group:
+   | condition: repeats every 2 turns
+     | group:
+       | (537:15) Critical Charge
+       | Deal 200% damage
+ type: REMAINING
+ condition: when 1 enemies remain
+ | group:
+   | group:
+   | condition: turn 1
+     | group:
+       | condition: when 1 enemies remain, hp <= 100
+       | (270:17) Lone Force
+       | Increase damage to 300% for the next 999 turns
+
+level: 5
+ type: PREEMPT
+ | (534:15) Gale Thrust
+ | Deal 60% damage
+ group:
+ | group:
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: 70% chance, hp <= 100
+       | (535:15) Rainfall Thrust
+       | Deal 105%~140% damage (3~4 hits, 35% each)
+ | group:
+ | condition: hp <= 29
+   | group:
+   | condition: repeats every 2 turns
+     | group:
+       | (536:15) A little closer...
+       | Deal 10% damage
+   | group:
+   | condition: repeats every 2 turns
+     | group:
+       | (537:15) Critical Charge
+       | Deal 200% damage
+ type: REMAINING
+ condition: when 1 enemies remain
+ | group:
+   | group:
+   | condition: turn 1
+     | group:
+       | condition: when 1 enemies remain, hp <= 100
+       | (270:17) Lone Force
+       | Increase damage to 300% for the next 999 turns

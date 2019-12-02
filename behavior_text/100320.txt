@@ -1,0 +1,48 @@
+#100320 - Alt. Dark Golem Mk.III
+monster size: 5
+new AI: True
+start/max counter: 0
+counter increment: 0
+monster_id: 100320
+approved: False
+
+level: 1
+ type: PASSIVE
+ | (9355:106) Enemy's next turn changed
+ | Enemy turn counter change to 1 when HP <= 50%
+ type: PREEMPT
+ | (9353:53) Dark Barrier
+ | Absorb Light damage for 3 turns
+ group:
+ | group:
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: when required attributes on board, hp <= 100
+       | (9354:92) Dark Spark
+       | Spawn random 4 Mortal Poison orbs, Deal 150% damage
+ | group:
+ | condition: hp <= 49
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: 30% chance, when 1 enemies remain, hp <= 50
+       | (151:17) Attack Stance
+       | Increase damage to 125% for the next 5 turns
+       | condition: when required attributes on board, hp <= 100
+       | (9354:92) Dark Spark
+       | Spawn random 4 Mortal Poison orbs, Deal 150% damage
+ | group:
+ | condition: hp <= 39
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: 30% chance, when 1 enemies remain, hp <= 50
+       | (151:17) Attack Stance
+       | Increase damage to 125% for the next 5 turns
+       | condition: 40% chance, hp <= 40
+       | (159:15) Genocide Bit
+       | Deal 60%~180% damage (2~6 hits, 30% each)
+       | condition: when required attributes on board, hp <= 100
+       | (9354:92) Dark Spark
+       | Spawn random 4 Mortal Poison orbs, Deal 150% damage

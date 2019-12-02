@@ -1,0 +1,20 @@
+#100082 - Alt. Earth Golem
+monster size: 3
+new AI: True
+start/max counter: 1
+counter increment: 0
+monster_id: 100082
+approved: False
+
+level: 1
+ type: PREEMPT
+ | (4950:98) Grip Fist
+ | Blind orbs in specific positions for 3 turns
+ group:
+ | group:
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: when required attributes on board, hp <= 100
+       | (4951:92) Rock Punch
+       | Spawn random 1 Wood orbs, Deal 400% damage

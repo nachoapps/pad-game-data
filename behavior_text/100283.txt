@@ -1,0 +1,47 @@
+#100283 - Alt. Fire Mechdragon, Betelgeuse
+monster size: 5
+new AI: True
+start/max counter: 5
+counter increment: 1
+monster_id: 100283
+approved: False
+
+level: 1
+ type: PREEMPT
+ | (5726:83) Metal Barrier + Heat Area
+ | Voids status ailments for 5 turns + Seal 1st column for 5 turns
+ group:
+ | group:
+   | group:
+   | condition: repeats every 6 turns
+     | group:
+       | condition: 80% chance, hp <= 100
+       | (5730:94) Blast Cannon
+       | Lock all Fire orbs, Deal 100% damage
+       | (5731:15) Plasma Lance
+       | Deal 140% damage (2 hits, 70% each)
+   | group:
+   | condition: repeats every 6 turns
+     | group:
+       | (5729:83) Hard Coating + Piercing Burn
+       | Reduce damage from all sources by 75% for 5 turns + Change Heal to Fire, Deal 200% damage
+   | group:
+   | condition: repeats every 6 turns
+     | group:
+       | condition: 80% chance, hp <= 100
+       | (5730:94) Blast Cannon
+       | Lock all Fire orbs, Deal 100% damage
+       | (5731:15) Plasma Lance
+       | Deal 140% damage (2 hits, 70% each)
+ | group:
+ | condition: hp <= 19
+   | group:
+   | condition: turn 1
+     | group:
+       | (5732:86) Auto Repair
+       | Enemy recover 30% hp
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | (5733:15) Megido Cannon
+       | Deal 1000% damage (2 hits, 500% each)

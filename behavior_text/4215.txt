@@ -1,0 +1,43 @@
+#4215 - West Loving Goddess, Haku
+monster size: 5
+new AI: True
+start/max counter: 3
+counter increment: 0
+monster_id: 4215
+approved: False
+
+level: 4
+ type: PREEMPT
+ | (8990:68) Do you like it?
+ | Dark skyfall +15% for 3 turns
+ group:
+ | group:
+   | group:
+   | condition: repeats every 4 turns
+     | group:
+       | condition: 15% chance, hp <= 100
+       | (8992:67) Rosy Cheeks
+       | Absorb combo <= 5 damage for 2 turns
+       | (8995:15) Sweet Combo
+       | Deal 100% damage (2 hits, 50% each)
+   | group:
+   | condition: repeats every 4 turns
+     | group:
+       | (8993:101) Don't get cocky now
+       | Fix orb movement starting point to random position on the board, Deal 120% damage
+ | group:
+ | condition: hp <= 49
+   | group:
+   | condition: turn 1
+     | group:
+       | condition: hp <= 50
+       | (8991:53) Byakko's Perception
+       | Absorb Dark damage for 2 turns
+ | group:
+ | condition: hp <= 9
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: hp <= 10
+       | (8994:85) Byakko Seven-Star Perception
+       | Change all orbs to Fire, Water, Dark, Deal 180% damage

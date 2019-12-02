@@ -1,0 +1,30 @@
+#102760 - Yellow Chrysanthemum Virtue, Xiu Min
+monster size: 5
+new AI: True
+start/max counter: 1
+counter increment: 0
+monster_id: 102760
+approved: False
+
+level: 1
+ type: PREEMPT
+ | (9466:83) Melancholic Colors + Colorless
+ | Jammer, Poison skyfall +20% for 10 turns + Void damage >= 1000000 for 99 turns
+ group:
+ | group:
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: 50% chance, hp <= 100
+       | (9467:85) Vibrant Petals
+       | Change all orbs to Fire, Water, Wood, Light, Dark, Deal 100% damage
+       | (9468:109) Chill-Flower's Rising
+       | Random 1 orbs change every 1.5s for 1 turns, Deal 100% damage
+ | group:
+ | condition: hp <= 9
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: hp <= 10
+       | (9469:15) Polychrome Chrysanthemum
+       | Deal 200% damage (10 hits, 20% each)

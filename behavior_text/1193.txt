@@ -1,0 +1,37 @@
+#1193 - Gusting Prodigy, Sasuke
+monster size: 5
+new AI: True
+start/max counter: 4
+counter increment: 1
+monster_id: 1193
+approved: False
+
+level: 1
+ type: PASSIVE
+ | (3870:72) Slightly reduces Fire
+ | Reduce damage from Fire by 50%
+ type: PREEMPT
+ | (3871:68) Ninpo - Hide in Leaves
+ | Jammer skyfall +15% for 5 turns
+ group:
+ | group:
+   | group:
+   | condition: repeats every 5 turns
+     | group:
+       | condition: 25% chance, when required attributes on board, hp <= 100
+       | (3872:92) Wind's Escape - Gust
+       | Change all orbs to Wood
+       | condition: 25% chance, hp <= 100
+       | (3873:15) Kunai Multiple Throw
+       | Deal 80%~120% damage (4~6 hits, 20% each)
+       | condition: 25% chance, hp <= 100
+       | (3874:48) Spiritual Ninja Art: Wt to Wd
+       | Change Water to Wood, Deal 100% damage
+       | condition: 25% chance, hp <= 100
+       | (3875:77) Fuma Shuriken Attack - Twin Shuriken
+       | Change 2nd, 5th column to Wood orbs, Deal 80% damage
+   | group:
+   | condition: repeats every 5 turns
+     | group:
+       | (3877:85) Leaf Blade Whirlwind Swing Technique
+       | Change all orbs to Wood, Jammer, Poison, Deal 300% damage

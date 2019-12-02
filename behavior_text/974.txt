@@ -1,0 +1,38 @@
+#974 - Red Pirate Dragon, Bartholomew
+monster size: 5
+new AI: False
+start/max counter: 1
+counter increment: 1
+monster_id: 974
+approved: False
+
+level: 5
+ type: PREEMPT
+ | (715:20) Diamond Cross
+ | Voids status ailments for 20 turns
+ group:
+ | group:
+   | group:
+   | condition: turn 1
+     | group:
+       | condition: when 1 enemies remain, hp <= 100
+       | (714:17) Black Bird
+       | Increase damage to 300% for the next 3 turns
+   | group:
+   | condition: repeats every 2 turns
+     | group:
+       | (717:48) Main Battery Discharge
+       | Change Random to Fire, Deal 125% damage
+ | group:
+ | condition: hp <= 49
+   | group:
+   | condition: repeats every 2 turns
+     | group:
+       | (717:48) Main Battery Discharge
+       | Change Random to Fire, Deal 125% damage
+   | group:
+   | condition: repeats every 2 turns
+     | group:
+       | condition: hp <= 50
+       | (716:15) Royal Fortune
+       | Deal 160% damage (4 hits, 40% each)

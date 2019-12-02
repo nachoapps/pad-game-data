@@ -1,0 +1,60 @@
+#2789 - Gabranth
+monster size: 5
+new AI: True
+start/max counter: 0
+counter increment: 0
+monster_id: 2789
+approved: False
+
+level: 1
+ type: DEATH
+ | condition: when defeated, hp <= 100
+ | (3934:95) You, too, would leave
+your debts unpaid?
+ | Do nothing
+ group:
+
+level: 4
+ type: PREEMPT
+ | (3924:83) Without power what future
+can you claim? + Protect
+ | Do nothing + Reduce damage from all sources by 50% for 3 turns
+ type: DEATH
+ | condition: when defeated, hp <= 100
+ | (3934:95) You, too, would leave
+your debts unpaid?
+ | Do nothing
+ group:
+ | group:
+   | group:
+   | condition: repeats every 3 turns
+     | group:
+       | condition: when required attributes on board, hp <= 100
+       | (3926:92) Kick
+       | Spawn random 1 Jammer orbs, Deal 100% damage
+   | group:
+   | condition: repeats every 3 turns
+     | group:
+       | condition: when required attributes on board, hp <= 100
+       | (3929:92) Lunge
+       | Spawn random 5 Jammer orbs, Deal 150% damage
+   | group:
+   | condition: repeats every 3 turns
+     | group:
+       | (3928:94) Sentence
+       | Lock 6 random Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs, Deal 150% damage
+ | group:
+ | condition: hp <= 69
+   | group:
+   | condition: turn 1
+     | group:
+       | (3933:83) Preen and strut as you like! + Anti-Magick
+       | Do nothing + Voids status ailments for 999 turns
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: 20% chance, hp <= 100
+       | (3927:94) Judgment
+       | Lock all Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs, Deal 130% damage
+       | (3925:79) Execution
+       | Change 1st, 5th row to Dark orbs, Deal 180% damage

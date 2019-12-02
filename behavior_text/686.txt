@@ -1,0 +1,34 @@
+#686 - King Woodsie
+monster size: 2
+new AI: False
+start/max counter: 1
+counter increment: 0
+monster_id: 686
+approved: False
+
+level: 1
+ group:
+ | group:
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: 50% chance, hp <= 100
+       | (382:8) Puffing Up
+       | Increase damage to 200% for the next attack
+ | group:
+ | condition: hp <= 49
+   | group:
+   | condition: turn 1
+     | group:
+       | condition: hp <= 50
+       | (386:1) Chow Time!
+       | Bind 1 random cards for 5 turns
+ type: REMAINING
+ condition: when 1 enemies remain
+ | group:
+   | group:
+   | condition: turn 1
+     | group:
+       | condition: when 1 enemies remain, hp <= 100
+       | (270:17) Lone Force
+       | Increase damage to 300% for the next 999 turns

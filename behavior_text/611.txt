@@ -1,0 +1,40 @@
+#611 - Kapibara-san
+monster size: 4
+new AI: False
+start/max counter: 0
+counter increment: 0
+monster_id: 611
+approved: False
+
+level: 1
+ group:
+ | group:
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: 50% chance, hp <= 100
+       | (298:16) Be slack
+       | Do nothing
+
+level: 5
+ group:
+ | group:
+   | group:
+   | condition: turn 1
+     | group:
+       | (300:20) Kyulu
+       | Voids status ailments for 999 turns
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: 50% chance, hp <= 100
+       | (298:16) Be slack
+       | Do nothing
+ | group:
+ | condition: hp <= 39
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: hp <= 40
+       | (299:15) Dogooon
+       | Deal 600% damage (3 hits, 200% each)

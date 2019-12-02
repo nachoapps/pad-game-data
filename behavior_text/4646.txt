@@ -1,0 +1,126 @@
+#4646 - Heavenly King Companion Dragon, Doltos
+monster size: 4
+new AI: True
+start/max counter: 2
+counter increment: 1
+monster_id: 4646
+approved: False
+
+level: 4
+ type: PREEMPT
+ | (10410:97) Swallowing Darkness
+ | Blind random 8 orbs for 2 turns
+ group:
+ | group:
+   | group:
+   | condition: turn 1
+     | group:
+       | (10409:107) Yellow Exception
+       | Unable to match Light orbs for 3 turns
+   | group:
+   | condition: repeats every 3 turns
+     | group:
+       | condition: 33% chance, when required attributes on board, hp <= 100
+       | (10413:92) Accepting Spirit
+       | Spawn random 4 Fire, Dark orbs, Deal 100% damage
+       | condition: 33% chance, hp <= 100
+       | (10414:48) Darkness Pillar
+       | Change Random to Dark, Deal 105% damage
+       | condition: 34% chance, hp <= 100
+       | (10415:15) Darkness Rush
+       | Deal 120% damage (2 hits, 60% each)
+   | group:
+   | condition: repeats every 3 turns
+     | group:
+       | (10412:85) Gloomy Enclosure
+       | Change all orbs to Fire, Water, Dark, Heal, Deal 120% damage
+ | group:
+ | condition: hp <= 49
+   | group:
+   | condition: repeats every 3 turns
+     | group:
+       | condition: when required attributes on board, hp <= 100
+       | (10416:92) Eroding Mist
+       | Spawn random 8 Poison orbs
+   | group:
+   | condition: repeats every 3 turns
+     | group:
+       | condition: 33% chance, when required attributes on board, hp <= 100
+       | (10413:92) Accepting Spirit
+       | Spawn random 4 Fire, Dark orbs, Deal 100% damage
+       | condition: 33% chance, hp <= 100
+       | (10414:48) Darkness Pillar
+       | Change Random to Dark, Deal 105% damage
+       | condition: 34% chance, hp <= 100
+       | (10415:15) Darkness Rush
+       | Deal 120% damage (2 hits, 60% each)
+   | group:
+   | condition: repeats every 3 turns
+     | group:
+       | (10412:85) Gloomy Enclosure
+       | Change all orbs to Fire, Water, Dark, Heal, Deal 120% damage
+ | group:
+ | condition: hp <= 14
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | (10420:15) Liberation from Life
+       | Deal 180% damage (4 hits, 45% each)
+ type: REMAINING
+ condition: when 2 enemies remain
+ | group:
+   | group:
+   | condition: repeats every 3 turns
+     | group:
+       | condition: 33% chance, when required attributes on board, hp <= 100
+       | (10413:92) Accepting Spirit
+       | Spawn random 4 Fire, Dark orbs, Deal 100% damage
+       | condition: 33% chance, hp <= 100
+       | (10414:48) Darkness Pillar
+       | Change Random to Dark, Deal 105% damage
+       | condition: 34% chance, hp <= 100
+       | (10415:15) Darkness Rush
+       | Deal 120% damage (2 hits, 60% each)
+   | group:
+   | condition: repeats every 3 turns
+     | group:
+       | (10411:53) Welcoming Mist
+       | Absorb Fire, Dark damage for 2 turns
+ | group:
+ | condition: hp <= 49
+   | group:
+   | condition: repeats every 3 turns
+     | group:
+       | condition: when required attributes on board, hp <= 100
+       | (10416:92) Eroding Mist
+       | Spawn random 8 Poison orbs
+   | group:
+   | condition: repeats every 3 turns
+     | group:
+       | condition: 33% chance, when required attributes on board, hp <= 100
+       | (10413:92) Accepting Spirit
+       | Spawn random 4 Fire, Dark orbs, Deal 100% damage
+       | condition: 33% chance, hp <= 100
+       | (10414:48) Darkness Pillar
+       | Change Random to Dark, Deal 105% damage
+       | condition: 34% chance, hp <= 100
+       | (10415:15) Darkness Rush
+       | Deal 120% damage (2 hits, 60% each)
+   | group:
+   | condition: repeats every 3 turns
+     | group:
+       | (10411:53) Welcoming Mist
+       | Absorb Fire, Dark damage for 2 turns
+ type: REMAINING
+ condition: when 1 enemies remain
+ | group:
+   | group:
+   | condition: turn 1
+     | group:
+       | (10409:107) Yellow Exception
+       | Unable to match Light orbs for 3 turns
+   | group:
+   | condition: turn 2
+     | group:
+       | (10419:83) Eroding Sleep + Counterattack from the Abyss
+       | Bind awoken skills for 1 turns + Increase damage to 200% for the next 99 turns

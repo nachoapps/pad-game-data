@@ -1,0 +1,34 @@
+#202284 - Alt. Shaved Ice Specialist, Frost Demon
+monster size: 4
+new AI: True
+start/max counter: 0
+counter increment: 0
+monster_id: 202284
+approved: False
+
+level: 1
+ type: PASSIVE
+ | (14276:73) Resolve
+ | Survive attacks with 1 HP when HP > 50%
+ group:
+
+level: 5
+ type: PASSIVE
+ | (14276:73) Resolve
+ | Survive attacks with 1 HP when HP > 50%
+ type: PREEMPT
+ | (14274:94) Why don't you stick around
+ | Lock 3 random Water orbs
+ group:
+ | group:
+   | group:
+   | condition: turn 1
+     | group:
+       | (3133:19) Don't jump out like that!
+       | Increase damage to 200% for the next 999 turns
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: 50% chance, hp <= 100
+       | (3134:15) Summer Slash
+       | Deal 120% damage (2 hits, 60% each)

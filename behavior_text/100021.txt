@@ -1,0 +1,31 @@
+#100021 - Alt. Lil' Red Dragon
+monster size: 2
+new AI: True
+start/max counter: 1
+counter increment: 0
+monster_id: 100021
+approved: False
+
+level: 1
+ group:
+ | group:
+   | group:
+   | condition: repeats every 2 turns
+     | group:
+       | (7449:74) Fire Guard
+       | Reduce damage from all sources by 50% for 2 turns
+ | group:
+ | condition: hp <= 99
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | (7455:92) Heat Ball
+       | Spawn random 1 Fire orbs, Deal 100% damage
+ | group:
+ | condition: hp <= 49
+   | group:
+   | condition: turn 1
+     | group:
+       | condition: hp <= 50
+       | (7454:19) Anger
+       | Increase damage to 200% for the next 99 turns

@@ -1,0 +1,49 @@
+#1115 - Purple Lotus Chanter, Lakshmi
+monster size: 5
+new AI: True
+start/max counter: 1
+counter increment: 0
+monster_id: 1115
+approved: False
+
+level: 1
+ type: PREEMPT
+ | (2364:55) Welcome! I'm glad you're here.
+ | Player recover 100% hp
+ group:
+ | group:
+   | group:
+   | condition: turn 1
+     | group:
+       | (2365:68) Waterways Verification
+       | Water skyfall +20% for 99 turns
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: 50% chance, hp <= 100
+       | (2367:48) Lotus Drop
+       | Change Heal to Water, Deal 150% damage
+ | group:
+ | condition: hp <= 69
+   | group:
+   | condition: turn 2
+     | group:
+       | condition: hp <= 70
+       | (2366:75) Chanchala
+       | Leader changes to random sub for 3 turns
+ | group:
+ | condition: hp <= 49
+   | group:
+   | condition: turn 3
+     | group:
+       | condition: hp <= 50
+       | (2368:86) Magic Absorbing Eye
+       | Enemy recover 30% hp, Deal 100% damage
+ | group:
+ | condition: hp <= 19
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: hp <= 20
+       | (2318:15) Wave Current Attack
+       | Deal 250% damage

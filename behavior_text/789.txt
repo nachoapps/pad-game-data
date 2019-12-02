@@ -1,0 +1,40 @@
+#789 - Cockatrice
+monster size: 2
+new AI: False
+start/max counter: 1
+counter increment: 0
+monster_id: 789
+approved: False
+
+level: 1
+ group:
+ | group:
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: 25% chance, hp <= 100
+       | (511:16) Chirping
+       | Do nothing
+
+level: 5
+ group:
+ | group:
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: 25% chance, hp <= 100
+       | (511:16) Chirping
+       | Do nothing
+       | condition: 20% chance, hp <= 100
+       | (503:13) Chaos Eye
+       | Change Random 2 to Jammer
+ | group:
+ | condition: hp <= 29
+   | group:
+   | condition: turn 1
+     | group:
+       | condition: 25% chance, hp <= 100
+       | (511:16) Chirping
+       | Do nothing
+       | (502:1) Evil Eye
+       | Bind 1 random cards for 5 turns

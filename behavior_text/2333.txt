@@ -1,0 +1,51 @@
+#2333 - Fire Armor Dragon, Sador
+monster size: 4
+new AI: True
+start/max counter: 1
+counter increment: 0
+monster_id: 2333
+approved: False
+
+level: 5
+ type: PREEMPT
+ | (3231:53) Burn Core
+ | Absorb Fire damage for 5 turns
+ group:
+ | group:
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: 40% chance, hp <= 100
+       | (3232:48) Blaze Emission
+       | Change Random to Fire, Deal 120% damage
+       | condition: 40% chance, hp <= 100
+       | (3233:15) Flare Missile
+       | Deal 150% damage (3 hits, 50% each)
+       | condition: 20% chance, hp <= 100
+       | (3234:48) Fire Trap
+       | Change Fire to Poison, Deal 120% damage
+ | group:
+ | condition: hp <= 79
+   | group:
+   | condition: turn 1
+     | group:
+       | condition: hp <= 80
+       | (3240:89) Absorption
+       | Delay active skills by 1 turns
+ | group:
+ | condition: hp <= 9
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: hp <= 10
+       | (3241:15) Limit Burst
+       | Deal 1000% damage (2 hits, 500% each)
+ type: REMAINING
+ condition: when 1 enemies remain
+ | group:
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: when 1 enemies remain, hp <= 100
+       | (3235:52) Follow Repair
+       | Enemy ally recover 45% hp

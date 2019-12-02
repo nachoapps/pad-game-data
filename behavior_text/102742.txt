@@ -1,0 +1,27 @@
+#102742 - Alt. Reincarnated Godly Knight of the Sky, Verche
+monster size: 5
+new AI: True
+start/max counter: 0
+counter increment: 0
+monster_id: 102742
+approved: False
+
+level: 1
+ type: PREEMPT
+ | (8220:83) Heaven Dragon Knight's Soul + Celestial Wings
+ | Voids status ailments for 999 turns + Light, Heal skyfall +25% for 5 turns
+ group:
+ | group:
+   | group:
+   | condition: repeats every 4 turns
+     | group:
+       | (4830:83) Saint Decision + Saint Poison
+       | Player -60% HP + Change Random 1 to Poison, Deal 40% damage
+   | group:
+   | condition: repeats every 4 turns
+     | group:
+       | condition: when required attributes on board, hp <= 100
+       | (4831:92) Shining Railgun
+       | Change all orbs to Light, Deal 5000% damage
+       | (4832:55) Heaven's Compassion
+       | Player recover 100% hp

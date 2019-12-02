@@ -1,0 +1,35 @@
+#1533 - Awoken Minerva
+monster size: 5
+new AI: False
+start/max counter: 4
+counter increment: 0
+monster_id: 1533
+approved: False
+
+level: 1
+ type: PASSIVE
+ | (1880:72) *****
+ | Reduce damage from Light, Dark by 50%
+ type: PREEMPT
+ | (1884:67) Show me your puzzle skill!
+ | Absorb combo <= 5 damage for 5 turns
+ group:
+ | group:
+   | group:
+   | condition: turns 1-4
+     | group:
+       | (1885:79) Crimson Gleam
+       | Change 3rd row to Fire orbs, Deal 140% damage
+   | group:
+   | condition: turn 5
+     | group:
+       | condition: when 1 enemies remain, hp <= 100
+       | (1886:17) How boring
+       | Increase damage to 300% for the next 999 turns
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | (1887:48) Divine Prison's Searing Heat
+       | Change Dark to Fire, Deal 200% damage
+       | (1888:48) Divine Prison's Searing Heat
+       | Change Random to Fire, Deal 200% damage

@@ -1,0 +1,44 @@
+#1879 - Armored Blade Dragon, Diagoldos
+monster size: 5
+new AI: False
+start/max counter: 1
+counter increment: 1
+monster_id: 1879
+approved: False
+
+level: 1
+ type: PASSIVE
+ | (1775:72) Halve Dark
+ | Reduce damage from Dark by 50%
+ type: PREEMPT
+ | (1813:20) Light Sword Scale
+ | Voids status ailments for 999 turns
+ group:
+ | group:
+   | group:
+   | condition: repeats every 2 turns
+     | group:
+       | (1815:79) Tail Slash
+       | Change 3rd row to Jammer orbs, Deal 100% damage
+   | group:
+   | condition: repeats every 2 turns
+     | group:
+       | (1814:15) Sword Phalanx
+       | Deal 90%~150% damage (3~5 hits, 30% each)
+ | group:
+ | condition: hp <= 49
+   | group:
+   | condition: repeats every 3 turns
+     | group:
+       | (1816:67) Sword Mountain Stance
+       | Absorb combo <= 4 damage for 2 turns
+   | group:
+   | condition: repeats every 3 turns
+     | group:
+       | (1817:48) Pouring Light Blade
+       | Change Random to Light, Deal 85% damage
+   | group:
+   | condition: repeats every 3 turns
+     | group:
+       | (1818:79) Lightning Horizon
+       | Change 2nd, 3rd, 4th row to Light orbs, Deal 300% damage

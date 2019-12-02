@@ -1,0 +1,29 @@
+#2197 - Wind Gear
+monster size: 3
+new AI: True
+start/max counter: 1
+counter increment: 0
+monster_id: 2197
+approved: False
+
+level: 2
+ group:
+ | group:
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | (3001:89) Sleep Mode
+       | Delay active skills by 1 turns
+ | group:
+ | condition: hp <= 99
+   | group:
+   | condition: turn 1
+     | group:
+       | (3002:19) Activated
+       | Increase damage to 200% for the next 999 turns
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: when required attributes on board, hp <= 100
+       | (3005:92) Wind Pulse
+       | Spawn random 3 Wood orbs, Deal 280% damage

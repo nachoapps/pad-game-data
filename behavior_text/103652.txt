@@ -1,0 +1,53 @@
+#103652 - Rathalos
+monster size: 5
+new AI: True
+start/max counter: 1
+counter increment: 0
+monster_id: 103652
+approved: False
+
+level: 4
+ type: PREEMPT
+ | (7230:83) Roar + Flame Breath
+ | Bind 1 random subs for 1 turns + Change 3rd column to Fire orbs, Deal 100% damage
+ group:
+ | group:
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: 50% chance, hp <= 100
+       | (7231:15) Tailspin
+       | Deal 100% damage
+       | (7232:94) Rushing Bite
+       | Lock 3 random Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs, Deal 80% damage
+ | group:
+ | condition: hp <= 69
+   | group:
+   | condition: turn 1
+     | group:
+       | condition: hp <= 70
+       | (7235:83) Rage + Take Flight
+       | Increase damage to 126% for the next 10 turns + Absorb combo <= 5 damage for 10 turns
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: 25% chance, hp <= 100
+       | (7236:77) Flame Breath
+       | Change 3rd column to Fire orbs, Deal 100% damage
+       | condition: 25% chance, hp <= 100
+       | (7237:92) Flying Kick
+       | Spawn random 4 Poison orbs, Deal 120% damage
+       | condition: 25% chance, hp <= 100
+       | (7238:79) Airborne Heat Breath
+       | Change 2nd row to Fire orbs, Deal 110% damage
+       | condition: 25% chance, hp <= 100
+       | (7239:94) Airborne Bite
+       | Lock 3 random Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs, Deal 90% damage
+ | group:
+ | condition: hp <= 14
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: hp <= 15
+       | (7240:15) Triple Flame Breath
+       | Deal 300% damage (3 hits, 100% each)

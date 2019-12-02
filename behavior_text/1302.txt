@@ -1,0 +1,35 @@
+#1302 - Beast Rider, Wiz Merlin
+monster size: 5
+new AI: True
+start/max counter: 1
+counter increment: 0
+monster_id: 1302
+approved: False
+
+level: 1
+ type: PREEMPT
+ | (12076:92) Elemental Magic
+ | Spawn random 6 Fire, Water, Wood, Light, Dark orbs, Deal 50% damage
+ | condition: 50% chance, hp <= 100
+ | (12077:77) Ice Rain
+ | Change 6th column to Water orbs, Deal 100% damage
+ | (12078:77) Flare Burst
+ | Change 1st column to Fire orbs, Deal 100% damage
+ group:
+ | group:
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: 50% chance, hp <= 100
+       | (12077:77) Ice Rain
+       | Change 6th column to Water orbs, Deal 100% damage
+       | (12078:77) Flare Burst
+       | Change 1st column to Fire orbs, Deal 100% damage
+ | group:
+ | condition: hp <= 19
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: hp <= 20
+       | (12079:77) Icicle Flare
+       | Change 6th column to Water orbs, 1st column to Fire orbs, Deal 200% damage

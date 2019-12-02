@@ -1,0 +1,38 @@
+#104805 - Gentle-Guard Rising Dragon Caller, Omega
+monster size: 5
+new AI: True
+start/max counter: 3
+counter increment: 0
+monster_id: 104805
+approved: False
+
+level: 1
+ type: PREEMPT
+ | (10748:67) Wings of Wind
+ | Absorb combo <= 5 damage for 3 turns
+ group:
+ | group:
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: 50% chance, hp <= 100
+       | (10749:105) Sad Verse of Wind
+       | Rcv 50% for 1 turns, Deal 100% damage
+       | (10750:15) Fuldofa Rulia
+       | Deal 120% damage (2 hits, 60% each)
+ | group:
+ | condition: hp <= 49
+   | group:
+   | condition: turn 1
+     | group:
+       | condition: hp <= 50
+       | (10751:68) Burden
+       | Jammer skyfall +20% for 3 turns
+ | group:
+ | condition: hp <= 9
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: hp <= 10
+       | (10752:85) Faldia le Shent
+       | Change all orbs to Wood, Deal 200% damage

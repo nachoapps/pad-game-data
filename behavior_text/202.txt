@@ -1,0 +1,42 @@
+#202 - Enchantress of the Sea, Siren
+monster size: 5
+new AI: False
+start/max counter: 6
+counter increment: 0
+monster_id: 202
+approved: False
+
+level: 1
+ group:
+ | group:
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: 10% chance, hp <= 100
+       | (113:16) Humming...
+       | Do nothing
+ | group:
+ | condition: hp <= 74
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: 20% chance, hp <= 75
+       | (93:12) Wood change to Block
+       | Change Wood to Jammer
+       | condition: 10% chance, hp <= 100
+       | (113:16) Humming...
+       | Do nothing
+ | group:
+ | condition: hp <= 19
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: 50% chance, hp <= 20
+       | (83:7) Resurrection
+       | Enemy recover 100% hp
+       | condition: 20% chance, hp <= 75
+       | (93:12) Wood change to Block
+       | Change Wood to Jammer
+       | condition: 10% chance, hp <= 100
+       | (113:16) Humming...
+       | Do nothing

@@ -1,0 +1,140 @@
+#1733 - Blue Chain Starsea Goddess, Andromeda
+monster size: 5
+new AI: True
+start/max counter: 1
+counter increment: 1
+monster_id: 1733
+approved: False
+
+level: 1
+ type: PASSIVE
+ | (9092:106) Enemy's next turn changed
+ | Enemy turn counter change to 1 when HP <= 90%
+ group:
+
+level: 4
+ type: PASSIVE
+ | (9092:106) Enemy's next turn changed
+ | Enemy turn counter change to 1 when HP <= 90%
+ type: PREEMPT
+ | (9079:83) I'll reinforce my defenses + Can you hit me?
+ | Voids status ailments for 999 turns + Reduce damage from all sources by 90% for 2 turns
+ group:
+ | group:
+   | group:
+   | condition: turn 1
+     | group:
+       | (9087:83) Not yet, ok? + Prepare yourself
+       | Absorb damage >= 4000000 damage for 10 turns + Increase damage to 150% for the next 2 turns
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | (9085:85) Time's up!
+       | Change all orbs to Water, Deal 250% damage
+ | group:
+ | condition: hp <= 89
+   | group:
+   | condition: turn 1
+     | group:
+       | (9084:39) I'm really going to give my all now!
+       | Movetime 50% for 10 turns
+   | group:
+   | condition: turn 2
+     | group:
+       | (9082:78) How about this?
+       | Change 2nd row to Water, Jammer orbs, 4th row to Water, Jammer orbs
+   | group:
+   | condition: turn 3
+     | group:
+       | condition: 50% chance, hp <= 100
+       | (9081:109) Blue Metal Flash
+       | Random 3 orbs change every 1.0s for 2 turns, Deal 90% damage
+       | (9083:15) Take it!
+       | Deal 110% damage (2 hits, 55% each)
+   | group:
+   | condition: turn 4
+     | group:
+       | (9082:78) How about this?
+       | Change 2nd row to Water, Jammer orbs, 4th row to Water, Jammer orbs
+   | group:
+   | condition: turn 5
+     | group:
+       | condition: 50% chance, hp <= 100
+       | (9081:109) Blue Metal Flash
+       | Random 3 orbs change every 1.0s for 2 turns, Deal 90% damage
+       | (9083:15) Take it!
+       | Deal 110% damage (2 hits, 55% each)
+   | group:
+   | condition: turn 6
+     | group:
+       | (9082:78) How about this?
+       | Change 2nd row to Water, Jammer orbs, 4th row to Water, Jammer orbs
+   | group:
+   | condition: turn 7
+     | group:
+       | condition: 50% chance, hp <= 100
+       | (9081:109) Blue Metal Flash
+       | Random 3 orbs change every 1.0s for 2 turns, Deal 90% damage
+       | (9083:15) Take it!
+       | Deal 110% damage (2 hits, 55% each)
+   | group:
+   | condition: turn 8
+     | group:
+       | (9082:78) How about this?
+       | Change 2nd row to Water, Jammer orbs, 4th row to Water, Jammer orbs
+   | group:
+   | condition: turn 9
+     | group:
+       | condition: 50% chance, hp <= 100
+       | (9081:109) Blue Metal Flash
+       | Random 3 orbs change every 1.0s for 2 turns, Deal 90% damage
+       | (9083:15) Take it!
+       | Deal 110% damage (2 hits, 55% each)
+   | group:
+   | condition: turn 10
+     | group:
+       | (9085:85) Time's up!
+       | Change all orbs to Water, Deal 250% damage
+   | group:
+   | condition: repeats every 4 turns
+     | group:
+       | (9082:78) How about this?
+       | Change 2nd row to Water, Jammer orbs, 4th row to Water, Jammer orbs
+   | group:
+   | condition: repeats every 4 turns
+     | group:
+       | condition: 50% chance, hp <= 100
+       | (9081:109) Blue Metal Flash
+       | Random 3 orbs change every 1.0s for 2 turns, Deal 90% damage
+       | (9083:15) Take it!
+       | Deal 110% damage (2 hits, 55% each)
+   | group:
+   | condition: repeats every 4 turns
+     | group:
+       | (9082:78) How about this?
+       | Change 2nd row to Water, Jammer orbs, 4th row to Water, Jammer orbs
+   | group:
+   | condition: repeats every 4 turns
+     | group:
+       | condition: 50% chance, hp <= 100
+       | (9081:109) Blue Metal Flash
+       | Random 3 orbs change every 1.0s for 2 turns, Deal 90% damage
+       | (9083:15) Take it!
+       | Deal 110% damage (2 hits, 55% each)
+ | group:
+ | condition: hp <= 29
+   | group:
+   | condition: turn 1
+     | group:
+       | (9088:99) Azure Star Blockade
+       | Seal 1st, 6th column for 1 turns
+   | group:
+   | condition: turns 2-9
+     | group:
+       | (9090:76) Binding Azure Bladewings
+       | Change 2nd column to Water, Jammer orbs, 5th column to Water, Jammer orbs
+   | group:
+   | condition: repeats every 3 turns
+     | group:
+       | (9090:76) Binding Azure Bladewings
+       | Change 2nd column to Water, Jammer orbs, 5th column to Water, Jammer orbs

@@ -1,0 +1,71 @@
+#3751 - Awoken Cronus
+monster size: 5
+new AI: True
+start/max counter: 2
+counter increment: 1
+monster_id: 3751
+approved: False
+
+level: 1
+ type: PREEMPT
+ | (13463:83) Get over it! + King's Test + King's Edict
+ | Voids status ailments for 999 turns + Absorb combo <= 6 damage for 1 turns + Movetime 25% for 1 turns
+ group:
+ | group:
+   | group:
+   | condition: turn 1
+     | group:
+       | (13467:88) That's it?
+       | Bind awoken skills for 10 turns
+   | group:
+   | condition: repeats every 3 turns
+     | group:
+       | (13472:108) Trash Shift
+       | Change Jammer to Wood, Deal 150% damage
+       | condition: 33% chance, hp <= 100
+       | (13473:79) Adamant Judgment
+       | Change 3rd row to Wood, Jammer orbs, Deal 95% damage
+       | condition: 33% chance, hp <= 100
+       | (13474:89) Breaking Swallow
+       | Delay active skills by 2 turns, Deal 100% damage
+       | condition: 34% chance, hp <= 100
+       | (13475:15) Killer Size
+       | Deal 110% damage (2 hits, 55% each)
+   | group:
+   | condition: repeats every 3 turns
+     | group:
+       | condition: 33% chance, hp <= 100
+       | (13473:79) Adamant Judgment
+       | Change 3rd row to Wood, Jammer orbs, Deal 95% damage
+       | condition: 33% chance, hp <= 100
+       | (13474:89) Breaking Swallow
+       | Delay active skills by 2 turns, Deal 100% damage
+       | condition: 34% chance, hp <= 100
+       | (13475:15) Killer Size
+       | Deal 110% damage (2 hits, 55% each)
+ | group:
+ | condition: hp <= 99
+   | group:
+   | condition: turn 1
+     | group:
+       | (13468:74) Looks like you're starting to get it
+       | Reduce damage from all sources by 75% for 10 turns
+ | group:
+ | condition: hp <= 49
+   | group:
+   | condition: turn 2
+     | group:
+       | (13469:83) Well, that wasn't enough + You can have fun with this
+       | Locked random skyfall +20% for 10 turns + Jammer skyfall +15% for 10 turns
+ | group:
+ | condition: hp <= 19
+   | group:
+   | condition: turn 2
+     | group:
+       | (13476:83) That's enough + Let's finish this!
+       | Bind awoken skills for 1 turns + Change player HP to 1000 for 1 turns
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | (13479:15) Adamant Punishment
+       | Deal 320% damage (4 hits, 80% each)

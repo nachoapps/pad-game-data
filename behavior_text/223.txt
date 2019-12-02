@@ -1,0 +1,24 @@
+#223 - Highlander
+monster size: 3
+new AI: False
+start/max counter: 1
+counter increment: 0
+monster_id: 223
+approved: False
+
+level: 1
+ group:
+ | group:
+   | group:
+   | condition: turn 1
+     | group:
+       | (333:5) Dark Flash
+       | Blind all orbs on the board
+ | group:
+ | condition: hp <= 74
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: 70% chance, hp <= 75
+       | (334:15) Legion Thrust
+       | Deal 120%~240% damage (3~6 hits, 40% each)

@@ -1,0 +1,24 @@
+#967 - Stormy Sea Dragon, Levia
+monster size: 5
+new AI: False
+start/max counter: 1
+counter increment: 1
+monster_id: 967
+approved: False
+
+level: 1
+ group:
+ | group:
+   | group:
+   | condition: repeats every 2 turns
+     | group:
+       | (789:48) Blizzard Ball
+       | Change Random to Water, Deal 125% damage
+ | group:
+ | condition: hp <= 49
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: hp <= 50
+       | (792:54) Constrict
+       | Bind 1 friend leader for 4 turns

@@ -1,0 +1,59 @@
+#2786 - Trance Kuja
+monster size: 5
+new AI: True
+start/max counter: 1
+counter increment: 0
+monster_id: 2786
+approved: False
+
+level: 1
+ type: DEATH
+ | condition: when defeated, hp <= 100
+ | (3903:95) I'm not gonna die alone...
+ | Do nothing
+ group:
+
+level: 4
+ type: PREEMPT
+ | (3897:83) My time is almost up... + Reflect
+ | Do nothing + Voids status ailments for 999 turns
+ type: DEATH
+ | condition: when defeated, hp <= 100
+ | (3903:95) I'm not gonna die alone...
+ | Do nothing
+ group:
+ | group:
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: 75% chance, hp <= 100
+       | (3899:94) Flare
+       | Lock 3 random Fire, Water, Wood, Light, Dark orbs, Deal 110% damage
+       | condition: 25% chance, hp <= 100
+       | (3898:79) Holy
+       | Change 2nd, 4th row to Light orbs, Deal 120% damage
+ | group:
+ | condition: hp <= 59
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: 40% chance, hp <= 60
+       | (3901:86) Curaga
+       | Enemy recover 100% hp
+       | condition: 75% chance, hp <= 100
+       | (3899:94) Flare
+       | Lock 3 random Fire, Water, Wood, Light, Dark orbs, Deal 110% damage
+       | condition: 25% chance, hp <= 100
+       | (3898:79) Holy
+       | Change 2nd, 4th row to Light orbs, Deal 120% damage
+ | group:
+ | condition: hp <= 19
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: 40% chance, hp <= 60
+       | (3901:86) Curaga
+       | Enemy recover 100% hp
+       | condition: when required attributes on board, hp <= 100
+       | (3900:92) Flare Star
+       | Spawn random 8 Fire orbs, Deal 250% damage

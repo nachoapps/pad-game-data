@@ -1,0 +1,21 @@
+#101520 - Metabon
+monster size: 2
+new AI: True
+start/max counter: 3
+counter increment: 0
+monster_id: 101520
+approved: False
+
+level: 1
+ type: PREEMPT
+ | (10702:13) I'm gonna get in your way.
+ | Change Random 1 to Jammer
+ group:
+ | group:
+ | condition: hp <= 29
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: 60% chance, hp <= 30
+       | (1340:65) I'm going to keep you from moving.
+       | Bind 3 random subs for 2~3 turns

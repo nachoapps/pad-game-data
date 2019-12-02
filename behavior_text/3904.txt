@@ -1,0 +1,40 @@
+#3904 - Almighty Awoken Zeus Vulcan
+monster size: 5
+new AI: True
+start/max counter: 2
+counter increment: 1
+monster_id: 3904
+approved: False
+
+level: 1
+ type: PREEMPT
+ | (8395:83) Flame God's Ambition + Incandescent Fighting Spirit
+ | Absorb combo <= 8 damage for 10 turns + Void damage >= 10000000 for 999 turns
+ group:
+ | group:
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: when 12 combos last turn, hp <= 100
+       | (8397:104) Fotiá Xíphos
+       | Column of cloud appear for 1 turns at random location, Deal 260% damage
+       | condition: 50% chance, when 1 enemies remain, when 9 combos last turn, hp <= 100
+       | (8396:17) Theós Thymós
+       | Increase damage to 150% for the next 1 turns
+       | condition: 60% chance, hp <= 100
+       | (8398:50) Timoría
+       | Player -99% HP
+       | (8399:15) Epíthesi
+       | Deal 300% damage (2 hits, 150% each)
+ | group:
+ | condition: hp <= 19
+   | group:
+   | condition: turn 1
+     | group:
+       | (8403:83) You're making me angry + Stigmæ Aspída
+       | Lock all Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs + Reduce damage from all sources by 75% for 1 turns
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | (8404:15) Apotéfrosi
+       | Deal 3000% damage (3 hits, 1000% each)

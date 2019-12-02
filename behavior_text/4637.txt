@@ -1,0 +1,51 @@
+#4637 - Fire Companion Dragon, Harnis
+monster size: 4
+new AI: True
+start/max counter: 0
+counter increment: 0
+monster_id: 4637
+approved: False
+
+level: 1
+ type: DEATH
+ | condition: when defeated, hp <= 100
+ | (10309:69) Special Dungeon
+Fire Dragon Transformation
+ | Show message: Harnis's appearance is changing|Help have been summoned
+ group:
+
+level: 4
+ type: PREEMPT
+ | (10301:50) Flare Drive
+ | Player -99% HP
+ type: DEATH
+ | condition: when defeated, hp <= 100
+ | (10309:69) Special Dungeon
+Fire Dragon Transformation
+ | Show message: Harnis's appearance is changing|Help have been summoned
+ group:
+ | group:
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: 33% chance, when required attributes on board, hp <= 100
+       | (10302:92) Flare Wing
+       | Spawn random 3 Fire orbs, Deal 100% damage
+       | condition: 33% chance, hp <= 100
+       | (10303:102) Property Bombing
+       | Spawn random 5 Bomb orbs, Deal 60% damage
+       | condition: 34% chance, hp <= 100
+       | (10304:15) Strike
+       | Deal 120% damage (3 hits, 40% each)
+ | group:
+ | condition: hp <= 19
+   | group:
+   | condition: turn 1
+     | group:
+       | (10307:83) Raging + Property Bombing
+       | Increase damage to 200% for the next 99 turns + Spawn random 1 Bomb orbs
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | (10308:15) Flare Rush
+       | Deal 240% damage (3 hits, 80% each)

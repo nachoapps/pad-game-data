@@ -1,0 +1,76 @@
+#204638 - Holy Inferno Companion Dragon, Harnis
+monster size: 4
+new AI: True
+start/max counter: 1
+counter increment: 1
+monster_id: 204638
+approved: False
+
+level: 4
+ type: PREEMPT
+ | (10310:107) Green Exception
+ | Unable to match Wood orbs for 3 turns
+ group:
+ | group:
+   | group:
+   | condition: turn 1
+     | group:
+       | (10311:103) Affliction Bombing
+       | Spawn Bomb orbs in the specified positions
+   | group:
+   | condition: repeats every 3 turns
+     | group:
+       | condition: 33% chance, hp <= 100
+       | (10314:48) Soppy Flame
+       | Change Random to Fire, Deal 110% damage
+       | condition: 33% chance, hp <= 100
+       | (10315:15) Flame Rush
+       | Deal 120% damage (3 hits, 40% each)
+       | condition: 34% chance, hp <= 100
+       | (10316:102) Affliction Bombing
+       | Spawn random 3 Bomb orbs
+   | group:
+   | condition: repeats every 3 turns
+     | group:
+       | (10313:85) Flame Enclosure
+       | Change all orbs to Fire, Wood, Light, Heal, Deal 120% damage
+ | group:
+ | condition: hp <= 14
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | (10320:15) Blaze Rush
+       | Deal 200% damage (4 hits, 50% each)
+ type: REMAINING
+ condition: when 2 enemies remain
+ | group:
+   | group:
+   | condition: repeats every 3 turns
+     | group:
+       | condition: 33% chance, hp <= 100
+       | (10314:48) Soppy Flame
+       | Change Random to Fire, Deal 110% damage
+       | condition: 33% chance, hp <= 100
+       | (10315:15) Flame Rush
+       | Deal 120% damage (3 hits, 40% each)
+       | condition: 34% chance, hp <= 100
+       | (10316:102) Affliction Bombing
+       | Spawn random 3 Bomb orbs
+   | group:
+   | condition: repeats every 3 turns
+     | group:
+       | (10312:102) Affliction Bombing
+       | Spawn random 1 locked Bomb orbs
+ type: REMAINING
+ condition: when 1 enemies remain
+ | group:
+   | group:
+   | condition: turn 1
+     | group:
+       | (10311:103) Affliction Bombing
+       | Spawn Bomb orbs in the specified positions
+   | group:
+   | condition: turn 2
+     | group:
+       | (10319:83) Burning Affliction + Blazing Fire
+       | Player -99% HP + Increase damage to 200% for the next 99 turns

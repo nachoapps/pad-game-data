@@ -1,0 +1,36 @@
+#2935 - Water Blade, Aoyaiba
+monster size: 5
+new AI: True
+start/max counter: 1
+counter increment: 0
+monster_id: 2935
+approved: False
+
+level: 1
+ type: PREEMPT
+ | (4615:74) Water Blade's Iron Skin
+ | Reduce damage from all sources by 50% for 3 turns
+ group:
+ | group:
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | (4616:48) Beauty of the Four Seasons
+       | Change Heal to Water, Deal 100% damage
+       | condition: when required attributes on board, hp <= 100
+       | (4617:92) Ice Sword
+       | Spawn random 9 Water orbs, Deal 130% damage
+ | group:
+ | condition: hp <= 49
+   | group:
+   | condition: turn 1
+     | group:
+       | condition: hp <= 50
+       | (4618:63) Freezing Feather
+       | Bind 4 random subs for 3 turns, Deal 50% damage
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: hp <= 50
+       | (4619:79) Mirage Blade
+       | Change 1st row to Water orbs, Deal 300% damage

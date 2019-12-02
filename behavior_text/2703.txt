@@ -1,0 +1,65 @@
+#2703 - Squad 6 Captain, Byakuya Kuchiki
+monster size: 5
+new AI: True
+start/max counter: 1
+counter increment: 1
+monster_id: 2703
+approved: False
+
+level: 1
+ type: PREEMPT
+ | (2804:83) This is the true form of Senbonzakura. + Senkei... Senbonzakura Kageyoshi.
+ | Do nothing + Do nothing
+ type: DEATH
+ | condition: when defeated, hp <= 100
+ | (2799:95) The battle... is yours.
+ | Do nothing
+ group:
+
+level: 4
+ type: PREEMPT
+ | (2793:83) Then feast your eyes... + Senbonzakura Kageyoshi
+ | Voids status ailments for 999 turns + Deal 110% damage (10 hits, 11% each)
+ type: DEATH
+ | condition: when defeated, hp <= 100
+ | (2799:95) The battle... is yours.
+ | Do nothing
+ group:
+ | group:
+   | group:
+   | condition: repeats every 2 turns
+     | group:
+       | (2794:77) Hado Thirty-Three... Soukatsui.
+       | Change 3rd column to Water orbs, 4th column to Fire orbs, Deal 90% damage
+   | group:
+   | condition: repeats every 2 turns
+     | group:
+       | (2795:15) Infinite blades attack
+       | Deal 110% damage (10 hits, 11% each)
+ | group:
+ | condition: hp <= 49
+   | group:
+   | condition: turn 1
+     | group:
+       | condition: when 2675, 2676, 2677, 3353, 3354 on team, hp <= 100
+       | (2825:83) This is the true form of Senbonzakura. + Senkei Senbonzakura Kageyoshi + You are only the second to ever see it.
+       | Do nothing + Increase damage to 200% for the next 999 turns + Do nothing
+       | (2861:83) This is the true form of Senbonzakura. + Senkei Senbonzakura Kageyoshi
+       | Do nothing + Increase damage to 200% for the next 999 turns
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: 30% chance, hp <= 100
+       | (2797:50) Hado Four... Byakurai.
+       | Player -99% HP
+       | (2805:15) Slash
+       | Deal 110% damage
+ | group:
+ | condition: hp <= 14
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: hp <= 15
+       | (2798:15) Senbonzakura Kageyoshi...
+Shukei Hakuteiken
+       | Deal 600% damage

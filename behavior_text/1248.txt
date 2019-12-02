@@ -1,0 +1,38 @@
+#1248 - Dark-Eyed Dragon Monk, Xuanzang
+monster size: 5
+new AI: False
+start/max counter: 1
+counter increment: 0
+monster_id: 1248
+approved: False
+
+level: 1
+ type: PREEMPT
+ | (62:53) Evil Seal of Destruction
+ | Absorb Light damage for 5 turns
+ group:
+ | group:
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: 50% chance, hp <= 100
+       | (61:48) Dark Buddhist Magic
+       | Change Light to Dark, Deal 75% damage
+       | (66:15) Purple Dragon Summoning
+       | Deal 105% damage (3 hits, 35% each)
+ | group:
+ | condition: hp <= 49
+   | group:
+   | condition: turn 1
+     | group:
+       | condition: hp <= 50
+       | (63:39) Insanity of the Heretic
+       | Movetime -2s for 3 turns
+ | group:
+ | condition: hp <= 29
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: hp <= 30
+       | (64:15) Hellbringer Flame Palm
+       | Deal 200% damage (4 hits, 50% each)

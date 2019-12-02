@@ -1,0 +1,52 @@
+#2416 - Thorned Mechanical Star God, Antares
+monster size: 5
+new AI: True
+start/max counter: 0
+counter increment: 0
+monster_id: 2416
+approved: False
+
+level: 1
+ type: PASSIVE
+ | (9817:118) God Machine Halved
+ | Reduce damage from God, Machine by 50%
+ group:
+
+level: 4
+ type: PASSIVE
+ | (9817:118) God Machine Halved
+ | Reduce damage from God, Machine by 50%
+ type: PREEMPT
+ | (9820:83) Look! + That's a lot of meteors!
+ | Poison skyfall +20% for 5 turns + Locked Poison skyfall +100% for 30 turns
+ group:
+ | group:
+   | group:
+   | condition: turn 1
+     | group:
+       | (9823:83) Like the stars in the night sky... + Show me your locus...
+       | Absorb combo <= 6 damage for 15 turns + Unable to match Poison orbs for 1 turns
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: 33% chance, hp <= 100
+       | (9824:48) Shooting Stardust
+       | Change Random to Jammer, Deal 95% damage
+       | condition: 33% chance, hp <= 100
+       | (9825:89) Star Symphony
+       | Delay active skills by 2 turns, Deal 90% damage
+       | condition: 34% chance, hp <= 100
+       | (9826:15) Meteor Rain
+       | Deal 105% damage (3 hits, 35% each)
+ | group:
+ | condition: hp <= 49
+   | group:
+   | condition: turn 2
+     | group:
+       | (9829:83) I'll end this with my own hands! + The stars are bright tonight...
+       | Increase damage to 150% for the next 99 turns + Blind all orbs on the board
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | (9830:88) At least peacefully...
+       | Bind awoken skills for 1 turns, Deal 400% damage

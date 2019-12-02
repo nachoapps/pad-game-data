@@ -1,0 +1,24 @@
+#3288 - Frostmare
+monster size: 2
+new AI: True
+start/max counter: 2
+counter increment: 1
+monster_id: 3288
+approved: False
+
+level: 4
+ group:
+ | group:
+   | group:
+   | condition: repeats every 3 turns
+     | group:
+       | (5920:65) Just chill for a while
+       | Bind 1 random subs for 2 turns
+ | group:
+ | condition: hp <= 19
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: hp <= 20
+       | (5921:15) Icicle Rain
+       | Deal 200% damage (4 hits, 50% each)

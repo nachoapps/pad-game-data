@@ -1,0 +1,54 @@
+#5078 - Ryu
+monster size: 5
+new AI: True
+start/max counter: 3
+counter increment: 0
+monster_id: 5078
+approved: False
+
+level: 1
+ type: PREEMPT
+ | (12572:94) This is the path of my destiny!
+ | Lock all Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs
+ group:
+ | group:
+   | group:
+   | condition: repeats every 10 turns
+     | group:
+       | condition: 33% chance, hp <= 100
+       | (12573:83) Collarbone Breaker + Disable Skill + Hadoken
+       | Deal 50% damage (2 hits, 25% each) + Deal 100% damage + Deal 45% damage
+       | condition: 33% chance, hp <= 100
+       | (12574:83) Solar Plexus Strike + Disable Skill + Shoryuken
+       | Bind 1 random subs for 1~2 turns, Deal 45% damage + Deal 100% damage + Deal 50% damage
+       | condition: 34% chance, hp <= 100
+       | (12575:83) Axe Kick + Disable Skill + Tatsumaki Senpukyaku
+       | Player -25% HP + Deal 100% damage + Absorb combo <= 5 damage for 1 turns, Deal 40% damage
+   | group:
+   | condition: repeats every 10 turns
+     | group:
+       | (12587:15) Shinku Hadoken
+       | Deal 350% damage
+ | group:
+ | condition: hp <= 49
+   | group:
+   | condition: turn 1
+     | group:
+       | (12669:83) Denjin Renki + Now the fight's begun!
+       | Increase damage to 150% for the next 10 turns + Do nothing
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: 50% chance, hp <= 100
+       | (12583:83) Collarbone Breaker + Disable Skill + Ooo!
+       | Deal 50% damage (2 hits, 25% each) + Deal 100% damage + Change 3rd row to Light orbs, Deal 45% damage
+       | condition: 50% chance, hp <= 100
+       | (12584:83) Solar Plexus Strike + Disable Skill + Shoryuken
+       | Bind 1 random subs for 1~2 turns, Deal 45% damage + Deal 100% damage + Change 4th column to Light orbs, Deal 50% damage
+ | group:
+ | condition: hp <= 14
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | (12588:77) Denjin Hadoken
+       | Change 4th, 5th column to Light orbs, Deal 400% damage

@@ -1,0 +1,33 @@
+#1963 - Blue DeviNyan
+monster size: 3
+new AI: True
+start/max counter: 1
+counter increment: 0
+monster_id: 1963
+approved: False
+
+level: 5
+ group:
+ | group:
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | (2093:48) Pounce Stance - Water
+       | Change Heal to Water, Deal 100% damage
+ | group:
+ | condition: hp <= 49
+   | group:
+   | condition: turn 1
+     | group:
+       | condition: hp <= 50
+       | (2051:14) Menace
+       | Bind active skills for 2 turns
+       | (2093:48) Pounce Stance - Water
+       | Change Heal to Water, Deal 100% damage
+ | group:
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: hp <= 1
+       | (2052:15) Irritated Swat
+       | Deal 1000% damage

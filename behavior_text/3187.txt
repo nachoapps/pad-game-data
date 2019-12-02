@@ -1,0 +1,22 @@
+#3187 - Evergreen Glacial Crusher, Hammer Troll
+monster size: 5
+new AI: True
+start/max counter: 1
+counter increment: 1
+monster_id: 3187
+approved: False
+
+level: 1
+ group:
+ | group:
+   | group:
+   | condition: repeats every 2 turns
+     | group:
+       | (5607:39) Troll Dance
+       | Movetime -1s for 1 turns
+   | group:
+   | condition: repeats every 2 turns
+     | group:
+       | condition: when required attributes on board, hp <= 100
+       | (5605:92) Blue Earth Crush
+       | Spawn random 1 Water, Wood orbs, Deal 80% damage

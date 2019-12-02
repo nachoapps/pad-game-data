@@ -1,0 +1,29 @@
+#4194 - Light Scroll Dragon
+monster size: 3
+new AI: True
+start/max counter: 1
+counter increment: 1
+monster_id: 4194
+approved: False
+
+level: 4
+ group:
+ | group:
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: 50% chance, hp <= 100
+       | (9190:79) Quick Revolution
+       | Change 2nd row to Light orbs, Deal 70% damage
+ | group:
+ | condition: hp <= 49
+   | group:
+   | condition: turn 1
+     | group:
+       | (9191:104) Flapping
+       | 2x2 cloud appear for 1 turns at random location
+   | group:
+   | condition: repeats every 2 turns
+     | group:
+       | (9192:8) Super Acceleration
+       | Increase damage to 300% for the next attack

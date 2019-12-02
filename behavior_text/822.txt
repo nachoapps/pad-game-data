@@ -1,0 +1,44 @@
+#822 - Burning Phoenix Knight, Homura
+monster size: 5
+new AI: True
+start/max counter: 5
+counter increment: 1
+monster_id: 822
+approved: False
+
+level: 1
+ type: PASSIVE
+ | (2811:73) Homura Resolve
+ | Survive attacks with 1 HP when HP > 76%
+ type: PREEMPT
+ | (2813:83) Wings of the Blazing Knight + Burning Aura
+ | Absorb combo <= 3 damage for 5 turns + Fire skyfall +15% for 5 turns
+ group:
+ | group:
+   | group:
+   | condition: repeats every 6 turns
+     | group:
+       | condition: 70% chance, hp <= 100
+       | (2809:86) Healing Heat
+       | Enemy recover 10% hp, Deal 100% damage
+       | condition: 30% chance, when required attributes on board, hp <= 100
+       | (2808:92) Flame Thrust
+       | Spawn random 4 Fire orbs, Deal 100% damage
+   | group:
+   | condition: repeats every 6 turns
+     | group:
+       | (2810:48) Orb Alteration - Flame
+       | Change Water to Fire, Deal 300% damage
+       | condition: 70% chance, hp <= 100
+       | (2809:86) Healing Heat
+       | Enemy recover 10% hp, Deal 100% damage
+       | condition: 30% chance, when required attributes on board, hp <= 100
+       | (2808:92) Flame Thrust
+       | Spawn random 4 Fire orbs, Deal 100% damage
+ | group:
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: hp <= 1
+       | (2812:7) Soul of the Phoenix
+       | Enemy recover 100% hp

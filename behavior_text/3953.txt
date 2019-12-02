@@ -1,0 +1,68 @@
+#3953 - Thundershock Tiger Dragon, Balidoora
+monster size: 5
+new AI: True
+start/max counter: 0
+counter increment: 0
+monster_id: 3953
+approved: False
+
+level: 4
+ type: PREEMPT
+ | (8289:83) ...Hyah + Thunder Bound Chitin
+ | Voids status ailments for 5 turns + Absorb combo <= 5 damage for 5 turns
+ group:
+ | group:
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: 25% chance, hp <= 100
+       | (8290:77) Tear to Pieces
+       | Change 2nd, 4th, 6th column to Jammer orbs, Deal 140% damage
+       | condition: 25% chance, hp <= 100
+       | (8291:79) Tear to Pieces
+       | Change 1st, 3rd, 5th row to Jammer orbs, Deal 140% damage
+       | condition: 25% chance, hp <= 100
+       | (8292:50) Lightning Zen
+       | Player -70% HP
+       | condition: 25% chance, hp <= 100
+       | (1:82) Disable Skill
+       | Deal 100% damage
+ | group:
+ | condition: hp <= 49
+   | group:
+   | condition: turn 1
+     | group:
+       | condition: 20% chance, hp <= 100
+       | (8299:83) Anti-Fire + Body hardened
+       | Absorb Fire damage for 3 turns + Reduce damage from all sources by 50% for 1 turns
+       | condition: 20% chance, hp <= 100
+       | (8300:83) Anti-Water + Body hardened
+       | Absorb Water damage for 3 turns + Reduce damage from all sources by 50% for 1 turns
+       | condition: 20% chance, hp <= 100
+       | (8301:83) Anti-Wind + Body hardened
+       | Absorb Wood damage for 3 turns + Reduce damage from all sources by 50% for 1 turns
+       | condition: 20% chance, hp <= 100
+       | (8302:83) Anti-Light + Body hardened
+       | Absorb Light damage for 3 turns + Reduce damage from all sources by 50% for 1 turns
+       | condition: 20% chance, hp <= 100
+       | (8303:83) Anti-Dark + Body hardened
+       | Absorb Dark damage for 3 turns + Reduce damage from all sources by 50% for 1 turns
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: hp <= 50
+       | (8304:15) Run Amok
+       | Deal 150%~250% damage (3~5 hits, 50% each)
+ | group:
+ | condition: hp <= 19
+   | group:
+   | condition: turn 2
+     | group:
+       | condition: when 1 enemies remain, hp <= 100
+       | (8305:17) Hyah!
+       | Increase damage to 1000% for the next 999 turns
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | (8306:15) Hyahhhh!!!
+       | Deal 1000% damage (10 hits, 100% each)

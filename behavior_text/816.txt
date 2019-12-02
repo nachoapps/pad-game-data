@@ -1,0 +1,21 @@
+#816 - Don Domovoi
+monster size: 3
+new AI: False
+start/max counter: 1
+counter increment: 0
+monster_id: 816
+approved: False
+
+level: 1
+ type: PREEMPT
+ | (523:50) Nervous Attack
+ | Player -50% HP
+ group:
+ | group:
+ | condition: hp <= 29
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: hp <= 30
+       | (522:8) High Tension
+       | Increase damage to 1000% for the next attack

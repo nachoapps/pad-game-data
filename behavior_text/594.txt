@@ -1,0 +1,35 @@
+#594 - Archangeling
+monster size: 4
+new AI: False
+start/max counter: 1
+counter increment: 0
+monster_id: 594
+approved: False
+
+level: 1
+ group:
+ | group:
+ | condition: hp <= 74
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: 40% chance, hp <= 75
+       | (101:15) Double Strike
+       | Deal 140% damage (2 hits, 70% each)
+ | group:
+ | condition: hp <= 49
+   | group:
+   | condition: turn 1
+     | group:
+       | condition: hp <= 50
+       | (271:1) Halo
+       | Bind 4 random cards for 1~2 turns
+ type: REMAINING
+ condition: when 1 enemies remain
+ | group:
+   | group:
+   | condition: turn 1
+     | group:
+       | condition: when 1 enemies remain, hp <= 100
+       | (270:17) Lone Force
+       | Increase damage to 300% for the next 999 turns

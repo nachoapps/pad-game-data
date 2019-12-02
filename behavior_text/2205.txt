@@ -1,0 +1,69 @@
+#2205 - Hell Demon, Scarlet
+monster size: 5
+new AI: True
+start/max counter: 1
+counter increment: 0
+monster_id: 2205
+approved: False
+
+level: 1
+ type: PREEMPT
+ | (3021:71) Oh! Raiders?
+ | Void damage >= 100000 for 2 turns
+ type: DEATH
+ | condition: when defeated, hp <= 100
+ | (3020:69) *****
+ | Show message: You're....you're pretty strong.
+Well then, let's summon this thing.|By releasing its magical power,
+the staff turned into a beast.
+ group:
+ | group:
+   | group:
+   | condition: turn 1
+     | group:
+       | (3022:89) What Happened?
+       | Delay active skills by 2 turns
+   | group:
+   | condition: turn 2
+     | group:
+       | (3023:19) Let's Go!
+       | Increase damage to 200% for the next 999 turns
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | (3024:48) Rose Flare
+       | Change Jammer to Fire, Deal 70% damage
+       | condition: 60% chance, hp <= 100
+       | (3025:92) Snake Bite
+       | Spawn random 5 Jammer orbs, Deal 50% damage
+       | (3026:62) Shadow Tail
+       | Blind all orbs on the board, Deal 40% damage
+ | group:
+ | condition: hp <= 99
+   | group:
+   | condition: turn 1
+     | group:
+       | (3023:19) Let's Go!
+       | Increase damage to 200% for the next 999 turns
+ | group:
+ | condition: hp <= 49
+   | group:
+   | condition: turn 1
+     | group:
+       | condition: one time only, hp <= 50
+       | (3027:1) Black Magic Charge
+       | Bind 1 random cards for 1 turns
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: hp <= 50
+       | (3028:92) Violet Flaaa!
+       | Spawn random 11 Jammer orbs
+ | group:
+ | condition: hp <= 44
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: hp <= 45
+       | (3029:15) Violet Flame
+       | Deal 160% damage (2 hits, 80% each)

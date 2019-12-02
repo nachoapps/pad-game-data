@@ -1,0 +1,124 @@
+  monster_id: 587
+  levels {
+    level: 5
+    groups {
+      group_type: STANDARD
+      children {
+        group {
+          group_type: STANDARD
+          condition {
+            hp_threshold: 69
+          }
+          children {
+            group {
+              condition {
+                repeats_every: 1
+              }
+              children {
+                group {
+                  group_type: STANDARD
+                  children {
+                    behavior {
+                      condition {
+                        hp_threshold: 70
+                        use_chance: 70
+                      }
+                      enemy_skill_id: 240
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    groups {
+      group_type: REMAINING
+      condition {
+        trigger_enemies_remaining: 1
+      }
+      children {
+        group {
+          group_type: STANDARD
+          condition {
+            hp_threshold: 100
+          }
+          children {
+            group {
+              condition {
+                trigger_turn: 1
+              }
+              children {
+                group {
+                  group_type: STANDARD
+                  children {
+                    behavior {
+                      condition {
+                        hp_threshold: 100
+                        use_chance: 100
+                        trigger_enemies_remaining: 1
+                      }
+                      enemy_skill_id: 516
+                    }
+                  }
+                }
+              }
+            }
+          }
+          children {
+            group {
+              condition {
+                trigger_turn: 12
+              }
+              children {
+                group {
+                  group_type: STANDARD
+                  children {
+                    behavior {
+                      condition {
+                        hp_threshold: 100
+                        use_chance: 100
+                        trigger_enemies_remaining: 1
+                      }
+                      enemy_skill_id: 516
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      children {
+        group {
+          group_type: STANDARD
+          condition {
+            hp_threshold: 69
+          }
+          children {
+            group {
+              condition {
+                trigger_turn: 2
+                trigger_turn_end: 11
+              }
+              children {
+                group {
+                  group_type: STANDARD
+                  children {
+                    behavior {
+                      condition {
+                        hp_threshold: 70
+                        use_chance: 70
+                      }
+                      enemy_skill_id: 240
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }

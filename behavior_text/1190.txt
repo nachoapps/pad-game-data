@@ -1,0 +1,53 @@
+#1190 - Ancient Draggie Knight, Zeal
+monster size: 5
+new AI: True
+start/max counter: 2
+counter increment: 1
+monster_id: 1190
+approved: False
+
+level: 1
+ type: PREEMPT
+ | (8330:83) Ancient Field + Hyper Dragon Shield
+ | Rcv 50% for 10 turns + Reduce damage from all sources by 99% for 5 turns
+ group:
+ | type: DISPEL_PLAYER
+   | (8336:6) Wave of Nothingness
+   | Voids player buff effects
+ | group:
+   | group:
+   | condition: turn 1
+     | group:
+       | (8333:20) Ready...Set...Fight!
+       | Voids status ailments for 999 turns
+   | group:
+   | condition: turn 2
+     | group:
+       | (8337:74) Super Dragon Shield
+       | Reduce damage from all sources by 75% for 5 turns
+   | group:
+   | condition: turn 3
+     | group:
+       | (8334:39) That's all you've got?!
+       | Movetime -3s for 10 turns
+   | group:
+   | condition: turns 4-6
+     | group:
+       | (8339:15) Dragon Fang
+       | Deal 100% damage (2 hits, 50% each)
+   | group:
+   | condition: turn 7
+     | group:
+       | (8338:74) Dragon Shield
+       | Reduce damage from all sources by 50% for 5 turns
+   | group:
+   | condition: turn 8
+     | group:
+       | condition: when 1 enemies remain, hp <= 100
+       | (8335:17) This is my true power!
+       | Increase damage to 300% for the next 999 turns
+   | group:
+   | condition: repeats every 3 turns
+     | group:
+       | (8339:15) Dragon Fang
+       | Deal 100% damage (2 hits, 50% each)

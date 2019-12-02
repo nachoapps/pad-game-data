@@ -1,0 +1,32 @@
+#1918 - Battle Flower Spirit, Mandrake
+monster size: 4
+new AI: True
+start/max counter: 1
+counter increment: 1
+monster_id: 1918
+approved: False
+
+level: 1
+ type: PREEMPT
+ | (2373:89) Strange Scream
+ | Delay active skills by 3 turns
+ group:
+ | group:
+   | group:
+   | condition: repeats every 2 turns
+     | group:
+       | (2374:15) Rock of Mandragora
+       | Deal 150% damage (5 hits, 30% each)
+   | group:
+   | condition: repeats every 2 turns
+     | group:
+       | (2375:66) Gets excited
+       | Do nothing
+ | group:
+ | condition: hp <= 29
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: hp <= 30
+       | (2376:79) Mandrake Beam
+       | Change 3rd row to Wood orbs, Deal 200% damage

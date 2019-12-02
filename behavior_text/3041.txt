@@ -1,0 +1,33 @@
+#3041 - Juppongatana "All Knowing", Sadojima Hoji
+monster size: 5
+new AI: True
+start/max counter: 0
+counter increment: 0
+monster_id: 3041
+approved: False
+
+level: 1
+ type: PREEMPT
+ | (5023:83) Shishio-sama! + Hurry! The killing blow!!
+ | Do nothing + Do nothing
+ type: DEATH
+ | condition: when defeated, hp <= 100
+ | (4971:95) Uh... uh...
+ | Do nothing
+ group:
+
+level: 4
+ type: PREEMPT
+ | (5000:83) Shishio-sama! + Hurry! The killing blow!!
+ | Spawn random 2 Jammer orbs + Movetime -1s for 2 turns
+ type: DEATH
+ | condition: when defeated, hp <= 100
+ | (4971:95) Uh... uh...
+ | Do nothing
+ group:
+ | group:
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | (5003:50) Shot
+       | Player -100% HP

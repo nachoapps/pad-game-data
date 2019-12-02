@@ -1,0 +1,26 @@
+#1313 - Purple Queen Bee, Mistress
+monster size: 3
+new AI: False
+start/max counter: 1
+counter increment: 0
+monster_id: 1313
+approved: False
+
+level: 5
+ group:
+ | group:
+ | condition: hp <= 74
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: 70% chance, hp <= 75
+       | (1053:48) Jupiter's Thunder
+       | Change Random to Light, Deal 120% damage
+ | group:
+ | condition: hp <= 49
+   | group:
+   | condition: turn 1
+     | group:
+       | condition: hp <= 50
+       | (1052:65) Hold Web
+       | Bind 1 random subs for 3 turns

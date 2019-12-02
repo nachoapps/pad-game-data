@@ -1,0 +1,77 @@
+#4133 - Barioth
+monster size: 5
+new AI: True
+start/max counter: 1
+counter increment: 1
+monster_id: 4133
+approved: False
+
+level: 4
+ type: PREEMPT
+ | (8900:110) Ice Breath
+ | Specific orbs change every 1.0s for 3 turns
+ group:
+ | group:
+   | group:
+   | condition: repeats every 3 turns
+     | group:
+       | condition: 15% chance, hp <= 100
+       | (8901:89) Short Tackle
+       | Delay active skills by 1 turns, Deal 100% damage
+       | condition: 15% chance, hp <= 100
+       | (8902:50) Charge
+       | Player -70% HP
+       | condition: 35% chance, hp <= 100
+       | (8903:79) Tail Attack
+       | Change 5th row to Water orbs, Deal 95% damage
+       | condition: 35% chance, hp <= 100
+       | (8904:67) Take Off
+       | Absorb combo <= 5 damage for 1 turns
+   | group:
+   | condition: repeats every 3 turns
+     | group:
+       | condition: 50% chance, hp <= 100
+       | (8907:94) Diagonal Strike Attack
+       | Lock 5 random Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs, Deal 120% damage
+       | (8909:79) Tail Attack
+       | Change 5th row to Water orbs, Deal 95% damage
+   | group:
+   | condition: repeats every 3 turns
+     | group:
+       | (8908:74) Sneak Behind
+       | Reduce damage from all sources by 50% for 1 turns
+ | group:
+ | condition: hp <= 39
+   | group:
+   | condition: turn 1
+     | group:
+       | (8912:83) Roar + Anger
+       | Bind 1 random subs for 1 turns + Increase damage to 140% for the next 10 turns
+   | group:
+   | condition: repeats every 3 turns
+     | group:
+       | condition: 50% chance, hp <= 100
+       | (8907:94) Diagonal Strike Attack
+       | Lock 5 random Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs, Deal 120% damage
+       | (8909:79) Tail Attack
+       | Change 5th row to Water orbs, Deal 95% damage
+   | group:
+   | condition: repeats every 3 turns
+     | group:
+       | (8908:74) Sneak Behind
+       | Reduce damage from all sources by 50% for 1 turns
+   | group:
+   | condition: repeats every 3 turns
+     | group:
+       | condition: 15% chance, hp <= 100
+       | (8901:89) Short Tackle
+       | Delay active skills by 1 turns, Deal 100% damage
+       | condition: 15% chance, hp <= 100
+       | (8902:50) Charge
+       | Player -70% HP
+       | condition: 35% chance, hp <= 100
+       | (8903:79) Tail Attack
+       | Change 5th row to Water orbs, Deal 95% damage
+       | condition: 35% chance, hp <= 100
+       | (8904:67) Take Off
+       | Absorb combo <= 5 damage for 1 turns

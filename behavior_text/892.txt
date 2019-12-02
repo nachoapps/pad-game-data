@@ -1,0 +1,51 @@
+#892 - Solar God of Heaven's Bow, Apollo
+monster size: 5
+new AI: False
+start/max counter: 1
+counter increment: 0
+monster_id: 892
+approved: False
+
+level: 3
+ type: PREEMPT
+ | condition: one time only, hp <= 100
+ | (1456:2) Flame Cage
+ | Bind Wood cards for 3 turns
+ | (1471:48) Lightning Arrow
+ | Change Random to Light, Deal 75% damage
+ group:
+ | group:
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: 50% chance, hp <= 100
+       | (1458:48) Sunlight Bullet
+       | Change Random to Fire, Deal 125% damage
+ | group:
+ | condition: hp <= 49
+   | group:
+   | condition: turn 1
+     | group:
+       | condition: hp <= 50
+       | (1457:3) Shining Lyre
+       | Bind Devil cards for 3 turns
+       | condition: 50% chance, hp <= 100
+       | (1458:48) Sunlight Bullet
+       | Change Random to Fire, Deal 125% damage
+ | group:
+ | condition: hp <= 29
+   | group:
+   | condition: turn 1
+     | group:
+       | condition: hp <= 50
+       | (1457:3) Shining Lyre
+       | Bind Devil cards for 3 turns
+       | condition: hp <= 30
+       | (1459:66) Burn to ashes
+       | Do nothing
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: hp <= 30
+       | (1460:15) Grand Sun
+       | Deal 1000% damage

@@ -1,0 +1,36 @@
+#114963 - Mighty Morphin Black Ranger
+monster size: 5
+new AI: True
+start/max counter: 0
+counter increment: 0
+monster_id: 114963
+approved: False
+
+level: 4
+ type: PREEMPT
+ | condition: when required attributes on board, hp <= 100
+ | (12060:92) Spoil it!
+ | Spawn random 6 Heal orbs
+ group:
+ | group:
+   | group:
+   | condition: turn 1
+     | group:
+       | (12061:50) Damn!
+       | Player -99% HP
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: 40% chance, hp <= 100
+       | (11891:15) Grrrrr!
+       | Deal 110% damage
+       | condition: 40% chance, hp <= 100
+       | (11892:48) It's hot! It's HOOOT!!
+       | Change Random to Fire, Deal 90% damage
+ | group:
+ | condition: hp <= 14
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | (11894:15) Creepy Superbite
+       | Deal 180% damage (3 hits, 60% each)

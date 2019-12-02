@@ -1,0 +1,48 @@
+#1532 - Awoken Zeus Mercury
+monster size: 5
+new AI: False
+start/max counter: 1
+counter increment: 1
+monster_id: 1532
+approved: False
+
+level: 3
+ type: PREEMPT
+ | (90:20) Protection of the Gods
+ | Voids status ailments for 999 turns
+ group:
+ | group:
+   | group:
+   | condition: turn 1
+     | group:
+       | (1451:68) The Nectar of Welcome Rains
+       | Water skyfall +25% for 99 turns
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | (1454:48) Crystal Bullet
+       | Change Random to Water, Deal 100% damage
+ | group:
+ | condition: hp <= 74
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: 25% chance, hp <= 75
+       | (1453:63) Deucalion Flood
+       | Bind 3 random subs for 1~2 turns, Deal 75% damage
+       | (1454:48) Crystal Bullet
+       | Change Random to Water, Deal 100% damage
+ | group:
+ | condition: hp <= 49
+   | group:
+   | condition: repeats every 2 turns
+     | group:
+       | condition: hp <= 50
+       | (1452:67) Deep Aquarius
+       | Absorb combo <= 5 damage for 1 turns
+   | group:
+   | condition: repeats every 2 turns
+     | group:
+       | condition: hp <= 50
+       | (1455:15) Galaxy Swarm
+       | Deal 175% damage (5 hits, 35% each)

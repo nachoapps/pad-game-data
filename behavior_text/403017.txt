@@ -1,0 +1,229 @@
+#403017 - Alt. War Machine Emperor, Another Geist
+monster size: 5
+new AI: True
+start/max counter: 11
+counter increment: 0
+monster_id: 403017
+approved: False
+
+level: 1
+ type: PASSIVE
+ | (4928:72) Halves Light-Dark
+ | Reduce damage from Light, Dark by 50%
+ type: PREEMPT
+ | (13678:83) Darkness Flame + Power Claw + Flame Out
+ | Absorb combo <= 7 damage for 99 turns + Lock all Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs + No skyfall for 5 turns
+ group:
+ | group:
+   | group:
+   | condition: turn 1
+     | group:
+       | (5084:74) Gun Metallic Armor
+       | Reduce damage from all sources by 75% for 3 turns
+   | group:
+   | condition: turn 2
+     | group:
+       | (5088:62) Dark Bolt
+       | Blind all orbs on the board, Deal 200% damage
+   | group:
+   | condition: repeats every 2 turns
+     | group:
+       | condition: 50% chance, hp <= 100
+       | (5090:48) Nemesis Claw
+       | Change Random to Poison, Deal 130% damage
+       | (5091:48) Break Claw
+       | Change Random to Jammer, Deal 130% damage
+   | group:
+   | condition: repeats every 2 turns
+     | group:
+       | condition: 50% chance, hp <= 100
+       | (5093:94) Evil Grab
+       | Lock all Jammer, Poison orbs, Deal 140% damage
+       | (5092:94) Element Grab
+       | Lock 10 random Fire, Water, Wood, Light, Dark, Heal orbs, Deal 140% damage
+       | condition: 50% chance, hp <= 100
+       | (5094:14) High Metal Chain
+       | Bind active skills for 5 turns, Deal 140% damage
+       | (5095:15) Cleave Combo
+       | Deal 160% damage (4 hits, 40% each)
+ | group:
+ | condition: hp <= 69
+   | group:
+   | condition: turn 1
+     | group:
+       | condition: hp <= 70
+       | (5087:83) Power Eater + Metal Slicer
+       | Absorb damage >= 500000 damage for 3 turns + Player -99% HP
+   | group:
+   | condition: turn 2
+     | group:
+       | condition: hp <= 70
+       | (5089:94) Power Claw
+       | Lock 8 random Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs, Deal 100% damage
+ | group:
+ | condition: hp <= 49
+   | group:
+   | condition: turn 3
+     | group:
+       | condition: when 1 enemies remain, hp <= 50
+       | (5097:17) Increase
+       | Increase damage to 200% for the next 999 turns
+   | group:
+   | condition: repeats every 2 turns
+     | group:
+       | condition: 50% chance, hp <= 100
+       | (5093:94) Evil Grab
+       | Lock all Jammer, Poison orbs, Deal 140% damage
+       | (5092:94) Element Grab
+       | Lock 10 random Fire, Water, Wood, Light, Dark, Heal orbs, Deal 140% damage
+       | condition: 50% chance, hp <= 100
+       | (5094:14) High Metal Chain
+       | Bind active skills for 5 turns, Deal 140% damage
+       | (5095:15) Cleave Combo
+       | Deal 160% damage (4 hits, 40% each)
+   | group:
+   | condition: repeats every 2 turns
+     | group:
+       | condition: 50% chance, hp <= 100
+       | (5090:48) Nemesis Claw
+       | Change Random to Poison, Deal 130% damage
+       | (5091:48) Break Claw
+       | Change Random to Jammer, Deal 130% damage
+ | group:
+ | condition: hp <= 29
+   | group:
+   | condition: repeats every 2 turns
+     | group:
+       | condition: 50% chance, hp <= 100
+       | (5093:94) Evil Grab
+       | Lock all Jammer, Poison orbs, Deal 140% damage
+       | (5092:94) Element Grab
+       | Lock 10 random Fire, Water, Wood, Light, Dark, Heal orbs, Deal 140% damage
+       | condition: hp <= 30
+       | (5099:15) Raiden Claw
+       | Deal 200% damage (4 hits, 50% each)
+   | group:
+   | condition: repeats every 2 turns
+     | group:
+       | condition: when required attributes on board, hp <= 30
+       | (5098:92) Destruction Claw
+       | Spawn random 4 Jammer, Poison orbs, Deal 130% damage
+ | group:
+ | condition: hp <= 14
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: hp <= 15
+       | (5096:94) Ultimate Skewer
+       | Lock all Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs, Deal 1000% damage
+
+level: 7
+ type: PASSIVE
+ | (4928:72) Halves Light-Dark
+ | Reduce damage from Light, Dark by 50%
+ type: PREEMPT
+ | (13678:83) Darkness Flame + Power Claw + Flame Out
+ | Absorb combo <= 7 damage for 99 turns + Lock all Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs + No skyfall for 5 turns
+ group:
+ | group:
+   | group:
+   | condition: turn 1
+     | group:
+       | (5084:74) Gun Metallic Armor
+       | Reduce damage from all sources by 75% for 3 turns
+   | group:
+   | condition: turn 2
+     | group:
+       | (5088:62) Dark Bolt
+       | Blind all orbs on the board, Deal 200% damage
+   | group:
+   | condition: repeats every 2 turns
+     | group:
+       | condition: 50% chance, hp <= 100
+       | (5090:48) Nemesis Claw
+       | Change Random to Poison, Deal 130% damage
+       | (5091:48) Break Claw
+       | Change Random to Jammer, Deal 130% damage
+   | group:
+   | condition: repeats every 2 turns
+     | group:
+       | condition: 50% chance, hp <= 100
+       | (5093:94) Evil Grab
+       | Lock all Jammer, Poison orbs, Deal 140% damage
+       | (5092:94) Element Grab
+       | Lock 10 random Fire, Water, Wood, Light, Dark, Heal orbs, Deal 140% damage
+       | condition: 50% chance, hp <= 100
+       | (5094:14) High Metal Chain
+       | Bind active skills for 5 turns, Deal 140% damage
+       | (5095:15) Cleave Combo
+       | Deal 160% damage (4 hits, 40% each)
+ | group:
+ | condition: hp <= 69
+   | group:
+   | condition: turn 1
+     | group:
+       | condition: hp <= 70
+       | (5087:83) Power Eater + Metal Slicer
+       | Absorb damage >= 500000 damage for 3 turns + Player -99% HP
+   | group:
+   | condition: turn 2
+     | group:
+       | condition: hp <= 70
+       | (5089:94) Power Claw
+       | Lock 8 random Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs, Deal 100% damage
+ | group:
+ | condition: hp <= 49
+   | group:
+   | condition: turn 3
+     | group:
+       | condition: when 1 enemies remain, hp <= 50
+       | (5097:17) Increase
+       | Increase damage to 200% for the next 999 turns
+   | group:
+   | condition: repeats every 2 turns
+     | group:
+       | condition: 50% chance, hp <= 100
+       | (5093:94) Evil Grab
+       | Lock all Jammer, Poison orbs, Deal 140% damage
+       | (5092:94) Element Grab
+       | Lock 10 random Fire, Water, Wood, Light, Dark, Heal orbs, Deal 140% damage
+       | condition: 50% chance, hp <= 100
+       | (5094:14) High Metal Chain
+       | Bind active skills for 5 turns, Deal 140% damage
+       | (5095:15) Cleave Combo
+       | Deal 160% damage (4 hits, 40% each)
+   | group:
+   | condition: repeats every 2 turns
+     | group:
+       | condition: 50% chance, hp <= 100
+       | (5090:48) Nemesis Claw
+       | Change Random to Poison, Deal 130% damage
+       | (5091:48) Break Claw
+       | Change Random to Jammer, Deal 130% damage
+ | group:
+ | condition: hp <= 29
+   | group:
+   | condition: repeats every 2 turns
+     | group:
+       | condition: 50% chance, hp <= 100
+       | (5093:94) Evil Grab
+       | Lock all Jammer, Poison orbs, Deal 140% damage
+       | (5092:94) Element Grab
+       | Lock 10 random Fire, Water, Wood, Light, Dark, Heal orbs, Deal 140% damage
+       | condition: hp <= 30
+       | (5099:15) Raiden Claw
+       | Deal 200% damage (4 hits, 50% each)
+   | group:
+   | condition: repeats every 2 turns
+     | group:
+       | condition: when required attributes on board, hp <= 30
+       | (5098:92) Destruction Claw
+       | Spawn random 4 Jammer, Poison orbs, Deal 130% damage
+ | group:
+ | condition: hp <= 14
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: hp <= 15
+       | (5096:94) Ultimate Skewer
+       | Lock all Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs, Deal 1000% damage

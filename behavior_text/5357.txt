@@ -1,0 +1,37 @@
+#5357 - Darkflute Dragon
+monster size: 4
+new AI: True
+start/max counter: 3
+counter increment: 0
+monster_id: 5357
+approved: False
+
+level: 4
+ type: PREEMPT
+ | condition: when required attributes on board, hp <= 100
+ | (13447:92) Magic Dragon Melody
+ | Spawn random 10 Poison orbs
+ group:
+ | group:
+   | group:
+   | condition: turn 1
+     | group:
+       | (13448:67) Cadenza Groovy
+       | Absorb combo <= 5 damage for 3 turns
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: 50% chance, hp <= 100
+       | (13449:15) Molto Crescendo
+       | Deal 105% damage (3 hits, 35% each)
+       | condition: 50% chance, hp <= 100
+       | (13450:102) Beat Rock
+       | Spawn random 3 locked Bomb orbs, Deal 95% damage
+ | group:
+ | condition: hp <= 19
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: when required attributes on board, hp <= 100
+       | (13451:92) Allargando Marcato
+       | Spawn random 5 Poison orbs, Deal 150% damage

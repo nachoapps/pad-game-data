@@ -1,0 +1,52 @@
+#654 - Freyja, the Fertility Goddess
+monster size: 5
+new AI: True
+start/max counter: 7
+counter increment: 0
+monster_id: 654
+approved: False
+
+level: 1
+ type: PREEMPT
+ | (13189:87) Brisingamen's Divine Protection
+ | Absorb damage >= 5000000 damage for 1 turns
+ group:
+ | group:
+   | group:
+   | condition: turn 1
+     | group:
+       | (13190:88) Wind of Peace
+       | Bind awoken skills for 1 turns
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | (13191:15) Animal Attack
+       | Deal 150% damage (3 hits, 50% each)
+ | group:
+ | condition: hp <= 19
+   | group:
+   | condition: turn 1
+     | group:
+       | (13190:88) Wind of Peace
+       | Bind awoken skills for 1 turns
+       | condition: when 1 enemies remain, hp <= 20
+       | (13192:17) Enhancing Earth
+       | Increase damage to 150% for the next 3 turns
+   | group:
+   | condition: turns 2-4
+     | group:
+       | condition: hp <= 20
+       | (13193:77) Raging Earth
+       | Change 3rd, 4th column to Jammer orbs, Deal 300% damage
+   | group:
+   | condition: turn 5
+     | group:
+       | condition: when 1 enemies remain, hp <= 20
+       | (13192:17) Enhancing Earth
+       | Increase damage to 150% for the next 3 turns
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: hp <= 20
+       | (13193:77) Raging Earth
+       | Change 3rd, 4th column to Jammer orbs, Deal 300% damage

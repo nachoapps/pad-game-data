@@ -1,0 +1,52 @@
+#2697 - Squad 11, 3rd Seat, Ikkaku Madarame
+monster size: 5
+new AI: True
+start/max counter: 0
+counter increment: 0
+monster_id: 2697
+approved: False
+
+level: 1
+ type: PREEMPT
+ | (2750:20) I'm 3rd-Seat Assistant Adjutant,
+Squad 11, Ikkaku Madarame!
+ | Voids status ailments for 3 turns
+ type: DEATH
+ | condition: when defeated, hp <= 100
+ | (2756:95) I'm not so lucky after all.
+ | Blind all orbs on the board
+ group:
+ | group:
+   | group:
+   | condition: turn 1
+     | group:
+       | condition: when 2675, 2676, 2677, 3353, 3354 on team, hp <= 100
+       | (2758:94) Well, "ichi", what say we be friends!
+       | Lock 3 random Fire, Water, Wood, Light, Dark, Heal, Jammer orbs
+       | (2751:50) Extend! Hozukimaru!
+       | Player -70% HP
+   | group:
+   | condition: turn 2
+     | group:
+       | condition: when required attributes on board, hp <= 100
+       | (2752:92) No mistakes!!
+       | Spawn random 3 Jammer orbs, Deal 50% damage
+   | group:
+   | condition: turn 3
+     | group:
+       | (2753:15) Split apart! Hozukimaru!
+       | Deal 180% damage (3 hits, 60% each)
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | (2755:15) Ha!
+       | Deal 110% damage
+ | group:
+ | condition: hp <= 14
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: hp <= 15
+       | (2754:15) Ikkaku Madarame was
+not born a coward!!!
+       | Deal 200% damage

@@ -1,0 +1,25 @@
+#763 - OCTOPUS Ver.2
+monster size: 2
+new AI: False
+start/max counter: 1
+counter increment: 1
+monster_id: 763
+approved: False
+
+level: 5
+ group:
+ | group:
+   | group:
+   | condition: repeats every 2 turns
+     | group:
+       | (429:48) INVASION
+       | Change Water to Jammer, Deal 70% damage
+ type: REMAINING
+ condition: when 1 enemies remain
+ | group:
+   | group:
+   | condition: turn 1
+     | group:
+       | condition: when 1 enemies remain, hp <= 100
+       | (425:17) SPEED UP
+       | Increase damage to 200% for the next 999 turns

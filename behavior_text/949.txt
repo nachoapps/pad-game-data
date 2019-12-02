@@ -1,0 +1,27 @@
+#949 - AB Red Bird Red
+monster size: 3
+new AI: False
+start/max counter: 0
+counter increment: 0
+monster_id: 949
+approved: False
+
+level: 5
+ group:
+ | group:
+ | condition: hp <= 74
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: 50% chance, hp <= 75
+       | (731:15) Slingshot
+       | Deal 125% damage
+ type: REMAINING
+ condition: when 1 enemies remain
+ | group:
+   | group:
+   | condition: turn 1
+     | group:
+       | condition: when 1 enemies remain, hp <= 100
+       | (725:17) Seeing Red
+       | Increase damage to 200% for the next 999 turns

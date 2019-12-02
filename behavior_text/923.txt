@@ -1,0 +1,37 @@
+#923 - Elemental of True Death, Thanatos
+monster size: 5
+new AI: True
+start/max counter: 1
+counter increment: 0
+monster_id: 923
+approved: False
+
+level: 1
+ type: PASSIVE
+ | (10237:118) Balanced Halved
+ | Reduce damage from Balanced by 50%
+ type: PREEMPT
+ | (10240:83) Announcement of Fate + End of the Omen
+ | Lock all Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs + Locked random skyfall +100% for 3 turns
+ group:
+ | group:
+   | group:
+   | condition: repeats every 4 turns
+     | group:
+       | (3178:-1) Countdown Message
+       | Display '0' and skip turn
+   | group:
+   | condition: repeats every 4 turns
+     | group:
+       | (2178:-1) Countdown Message
+       | Display '0' and skip turn
+   | group:
+   | condition: repeats every 4 turns
+     | group:
+       | (1178:-1) Countdown Message
+       | Display '0' and skip turn
+   | group:
+   | condition: repeats every 4 turns
+     | group:
+       | (10241:15) Sound of Death
+       | Deal 2000% damage (10 hits, 200% each)

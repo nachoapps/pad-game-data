@@ -1,0 +1,41 @@
+#588 - Midnight Beast Werewolf
+monster size: 3
+new AI: False
+start/max counter: 0
+counter increment: 0
+monster_id: 588
+approved: False
+
+level: 5
+ group:
+ | group:
+ | condition: hp <= 69
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: 70% chance, hp <= 70
+       | (240:15) Wolf Combo
+       | Deal 125% damage (5 hits, 25% each)
+ type: REMAINING
+ condition: when 1 enemies remain
+ | group:
+   | group:
+   | condition: turn 1
+     | group:
+       | condition: when 1 enemies remain, hp <= 100
+       | (516:17) Howl of Anger
+       | Increase damage to 300% for the next 10 turns
+   | group:
+   | condition: turn 12
+     | group:
+       | condition: when 1 enemies remain, hp <= 100
+       | (516:17) Howl of Anger
+       | Increase damage to 300% for the next 10 turns
+ | group:
+ | condition: hp <= 69
+   | group:
+   | condition: turns 2-11
+     | group:
+       | condition: 70% chance, hp <= 70
+       | (240:15) Wolf Combo
+       | Deal 125% damage (5 hits, 25% each)

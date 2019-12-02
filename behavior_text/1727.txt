@@ -1,0 +1,61 @@
+#1727 - Divine Law Goddess, Valkyrie Rose
+monster size: 5
+new AI: True
+start/max counter: 31
+counter increment: 0
+monster_id: 1727
+approved: False
+
+level: 1
+ type: PASSIVE
+ | (6503:73) Valkyrie Resolve
+ | Survive attacks with 1 HP when HP > 50%
+ type: PREEMPT
+ | (6476:83) White Valkyrie Shield + Fylgja Fur + Discerning Lifechains
+ | Voids status ailments for 999 turns + Void damage >= 10000000 for 999 turns + Rcv 50% for 20 turns
+ group:
+ | group:
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | (6490:83) Bash + Double Slash
+       | Player -50% HP + Deal 50% damage (2 hits, 25% each)
+ | group:
+ | condition: hp <= 89
+   | group:
+   | condition: turn 1
+     | group:
+       | condition: hp <= 90
+       | (6480:67) Test of Skill
+       | Absorb combo <= 5 damage for 10 turns
+ | group:
+ | condition: hp <= 79
+   | group:
+   | condition: turn 2
+     | group:
+       | condition: hp <= 80
+       | (6481:104) Test of Perception
+       | 2x3 cloud appear for 10 turns at 2nd row, 3rd column
+ | group:
+ | condition: hp <= 69
+   | group:
+   | condition: turn 3
+     | group:
+       | condition: hp <= 70
+       | (6482:39) Test of Speed
+       | Movetime 50% for 10 turns
+ | group:
+ | condition: hp <= 59
+   | group:
+   | condition: turn 1
+     | group:
+       | condition: hp <= 60
+       | (6486:83) Test of Skill + Test of Perception + Test of Speed + Test of Endurance
+       | Absorb combo <= 5 damage for 10 turns + 2x3 cloud appear for 10 turns at 2nd row, 3rd column + Movetime 50% for 10 turns + Increase damage to 150% for the next 10 turns
+ | group:
+ | condition: hp <= 49
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | (6487:83) Resurrection + Sweeping Spirit Garments
+       | Enemy recover 100% hp + Change own attribute to random one of Fire, Water, Wood, Light, Dark

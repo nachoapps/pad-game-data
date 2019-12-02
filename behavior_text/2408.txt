@@ -1,0 +1,43 @@
+#2408 - Masquerade Guest, Izanami
+monster size: 5
+new AI: True
+start/max counter: 7
+counter increment: 0
+monster_id: 2408
+approved: False
+
+level: 4
+ type: PREEMPT
+ | (11414:65) Do you want to join us?
+ | Bind 1 random subs for 2 turns
+ group:
+ | group:
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: 50% chance, when required attributes on board, hp <= 100
+       | (11415:92) Temptation of the 3 colored Dango
+       | Spawn random 1 Fire, Wood, Heal orbs, Deal 105% damage
+       | condition: 50% chance, hp <= 100
+       | (11416:48) Super Sweet Dorayaki
+       | Change Random to Jammer, Deal 100% damage
+ | group:
+ | condition: hp <= 49
+   | group:
+   | condition: turn 1
+     | group:
+       | (11417:78) Sweet Grudge
+       | Change 1st row to Poison orbs, 5th row to Jammer orbs
+ | group:
+ | condition: hp <= 19
+   | group:
+   | condition: turn 2
+     | group:
+       | condition: when 1 enemies remain, hp <= 100
+       | (11418:17) Palate Cleanser
+       | Increase damage to 150% for the next 99 turns
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | (11419:15) Nectar Inferno
+       | Deal 100% damage (5 hits, 20% each)

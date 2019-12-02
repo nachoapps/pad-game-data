@@ -1,0 +1,68 @@
+#393 - Fertility Deity, Evil Ceres
+monster size: 5
+new AI: True
+start/max counter: 1
+counter increment: 1
+monster_id: 393
+approved: False
+
+level: 1
+ type: PASSIVE
+ | (4338:73) 30% Resolve
+ | Survive attacks with 1 HP when HP > 30%
+ type: PREEMPT
+ | (4321:83) Dark Melancholy + Divine Protection of the Good Harvest
+ | Absorb combo <= 6 damage for 999 turns + Voids status ailments for 999 turns
+ group:
+ | group:
+   | group:
+   | condition: repeats every 2 turns
+     | group:
+       | (4322:85) Sephiroth Anger
+       | Change all orbs to Fire, Water, Wood, Light, Dark, Heal, Deal 240% damage
+   | group:
+   | condition: repeats every 2 turns
+     | group:
+       | (4323:53) Light Fascination
+       | Absorb Light damage for 1 turns
+ | group:
+ | condition: hp <= 49
+   | group:
+   | condition: turn 1
+     | group:
+       | (4326:83) Lucent Blessing + Sephiroth Rage
+       | Light skyfall +20% for 5 turns + Change all orbs to Fire, Water, Wood, Light, Dark, Heal, Deal 340% damage
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | (4325:85) Sephiroth Rage
+       | Change all orbs to Fire, Water, Wood, Light, Dark, Heal, Deal 340% damage
+ | group:
+ | condition: hp <= 29
+   | group:
+   | condition: turn 1
+     | group:
+       | (4329:83) God Tree's Basket + Plant Fascination
+       | Void damage >= 500000 for 99 turns + Absorb Wood damage for 1 turns
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: 25% chance, hp <= 100
+       | (4334:83) Flame Fascination + Natural Disaster
+       | Absorb Fire damage for 1 turns + Change 5th row to Heal orbs, Deal 1000% damage
+       | condition: 25% chance, hp <= 100
+       | (4335:83) Ice Fascination + Natural Disaster
+       | Absorb Water damage for 1 turns + Change 5th row to Heal orbs, Deal 1000% damage
+       | condition: 25% chance, hp <= 100
+       | (4336:83) Dark Fascination + Natural Disaster
+       | Absorb Dark damage for 1 turns + Change 5th row to Heal orbs, Deal 1000% damage
+       | condition: 25% chance, hp <= 100
+       | (4337:83) Plant Fascination + Natural Disaster
+       | Absorb Wood damage for 1 turns + Change 5th row to Heal orbs, Deal 1000% damage
+ | group:
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: hp <= 1
+       | (4341:83) Healing Wind + Evil Eye
+       | Enemy recover 50% hp + Player -500% HP

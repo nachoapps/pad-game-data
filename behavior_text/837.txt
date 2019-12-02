@@ -1,0 +1,28 @@
+#837 - Mystery of Toyama Bay, Firefly Squid
+monster size: 3
+new AI: False
+start/max counter: 1
+counter increment: 1
+monster_id: 837
+approved: False
+
+level: 5
+ group:
+ | group:
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: 40% chance, hp <= 100
+       | (608:5) Squid Ink
+       | Blind all orbs on the board
+ | group:
+ | condition: hp <= 69
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: 70% chance, hp <= 70
+       | (609:48) Illuminate
+       | Change Random to Jammer, Deal 80% damage
+       | condition: 40% chance, hp <= 100
+       | (608:5) Squid Ink
+       | Blind all orbs on the board

@@ -1,0 +1,96 @@
+#2791 - Orphan, Second Form
+monster size: 5
+new AI: True
+start/max counter: 511
+counter increment: 0
+monster_id: 2791
+approved: False
+
+level: 1
+ type: PREEMPT
+ | (3966:66) Go back to oblivion!
+ | Do nothing
+ type: DEATH
+ | condition: when defeated, hp <= 100
+ | (2964:69) ****
+ | Show death effect
+ group:
+
+level: 4
+ type: PREEMPT
+ | (3967:83) Go back to oblivion! + Doom
+ | Reduce damage from all sources by 75% for 3 turns + Voids status ailments for 8 turns
+ type: DEATH
+ | condition: when defeated, hp <= 100
+ | (2964:69) ****
+ | Show death effect
+ group:
+ | type: DISPEL_PLAYER
+   | (3956:6) Temporal Hollow
+   | Voids player buff effects
+ | group:
+   | group:
+   | condition: turn 1
+     | group:
+       | (3957:15) Sanction
+       | Deal 100%~150% damage (2~3 hits, 50% each)
+   | group:
+   | condition: turn 2
+     | group:
+       | (3958:89) Emitter
+       | Delay active skills by 1 turns, Deal 50% damage
+   | group:
+   | condition: turn 3
+     | group:
+       | (3968:83) Destruction is inevitable. + Sanction
+       | Reduce damage from all sources by 75% for 2 turns + Deal 100%~150% damage (2~3 hits, 50% each)
+   | group:
+   | condition: turn 4
+     | group:
+       | condition: 50% chance, hp <= 100
+       | (3979:89) Emitter
+       | Delay active skills by 1 turns, Deal 50% damage
+       | (3980:15) Sanction
+       | Deal 80%~120% damage (2~3 hits, 40% each)
+   | group:
+   | condition: turn 5
+     | group:
+       | (3969:83) Ignorant slaves of Pulse. + Sanction
+       | Reduce damage from all sources by 75% for 2 turns + Deal 100%~150% damage (2~3 hits, 50% each)
+   | group:
+   | condition: turn 6
+     | group:
+       | (3981:89) Emitter
+       | Delay active skills by 1 turns, Deal 50% damage
+   | group:
+   | condition: turn 7
+     | group:
+       | (3970:83) Surrender your will. + Sanction
+       | Reduce damage from all sources by 75% for 2 turns + Deal 100%~150% damage (2~3 hits, 50% each)
+   | group:
+   | condition: turn 8
+     | group:
+       | (3963:15) The world shall know redemption.
+       | Deal 500% damage
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | (3959:15) Kaleidoscopic Ray
+       | Deal 700% damage
+ | group:
+ | condition: hp <= 59
+   | group:
+   | condition: turn 3
+     | group:
+       | (3973:83) It's acting differently. + Black Ruin
+       | Jammer skyfall +15% for 3 turns + Deal 100% damage
+   | group:
+   | condition: turn 4
+     | group:
+       | (3977:15) Black Ruin
+       | Deal 100% damage
+   | group:
+   | condition: turn 5
+     | group:
+       | (3975:83) Ignorant slaves of Pulse. + Rebirth
+       | Reduce damage from all sources by 75% for 2 turns + Change Random to Heal, Deal 200% damage

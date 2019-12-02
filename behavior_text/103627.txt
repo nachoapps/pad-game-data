@@ -1,0 +1,32 @@
+#103627 - Great Holy Knight, Hendrickson
+monster size: 5
+new AI: True
+start/max counter: 1
+counter increment: 1
+monster_id: 103627
+approved: False
+
+level: 1
+ type: PREEMPT
+ | (6715:68) Dark Snow
+ | Poison skyfall +15% for 5 turns
+ group:
+ | group:
+   | group:
+   | condition: repeats every 2 turns
+     | group:
+       | (6716:15) Dark Nebula
+       | Deal 150% damage (3 hits, 50% each)
+ | group:
+ | condition: hp <= 19
+   | group:
+   | condition: turn 1
+     | group:
+       | condition: when 3608, 3609 on team, hp <= 100
+       | (6739:83) You are a remarkable man... + Be consumed by the darkness... + That swallows even the void of night... + Dead End
+       | Do nothing + Do nothing + Do nothing + Player -150% HP
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | (6720:83) Be consumed by the darkness... + That swallows even the void of night... + Dead End
+       | Do nothing + Do nothing + Player -150% HP

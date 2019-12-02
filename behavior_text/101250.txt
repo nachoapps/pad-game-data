@@ -1,0 +1,56 @@
+#101250 - Alt. Awoken Hera-Sowilo
+monster size: 5
+new AI: False
+start/max counter: 1
+counter increment: 1
+monster_id: 101250
+approved: False
+
+level: 1
+ type: PREEMPT
+ | (1023:14) Shining Death Queen's Whisper
+ | Bind active skills for 5 turns
+ group:
+ | group:
+   | group:
+   | condition: turn 1
+     | group:
+       | (90:20) Protection of the Gods
+       | Voids status ailments for 999 turns
+   | group:
+   | condition: repeats every 2 turns
+     | group:
+       | (1024:63) Thunder Arrow
+       | Bind 1 random subs for 2 turns, Deal 50% damage
+   | group:
+   | condition: repeats every 2 turns
+     | group:
+       | (1025:48) Shining Blast
+       | Change Dark to Light, Deal 100% damage
+ | group:
+ | condition: hp <= 49
+   | group:
+   | condition: repeats every 5 turns
+     | group:
+       | (1026:67) Shining Death Queen's Test
+       | Absorb combo <= 5 damage for 5 turns
+   | group:
+   | condition: repeats every 5 turns
+     | group:
+       | (3178:-1) Countdown Message
+       | Display '0' and skip turn
+   | group:
+   | condition: repeats every 5 turns
+     | group:
+       | (2178:-1) Countdown Message
+       | Display '0' and skip turn
+   | group:
+   | condition: repeats every 5 turns
+     | group:
+       | (1178:-1) Countdown Message
+       | Display '0' and skip turn
+   | group:
+   | condition: repeats every 5 turns
+     | group:
+       | (1027:15) Shining Death Queen's Judgement
+       | Deal 500% damage (5 hits, 100% each)

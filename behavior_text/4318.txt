@@ -1,0 +1,67 @@
+#4318 - Karasu
+monster size: 5
+new AI: True
+start/max counter: 0
+counter increment: 0
+monster_id: 4318
+approved: False
+
+level: 1
+ type: PREEMPT
+ | (9429:83) Bang! + I am curious as to why...
+ | Do nothing + Do nothing
+ type: DEATH
+ | condition: when defeated, hp <= 100
+ | (9427:95) It can't be...
+ | Do nothing
+ group:
+
+level: 3
+ type: DEATH
+ | condition: when defeated, hp <= 100
+ | (9427:95) It can't be...
+ | Do nothing
+ group:
+
+level: 4
+ type: PREEMPT
+ | (9416:83) Bang! + I am curious as to why...
+ | Voids status ailments for 5 turns + Do nothing
+ type: DEATH
+ | condition: when defeated, hp <= 100
+ | (9427:95) It can't be...
+ | Do nothing
+ group:
+ | group:
+   | group:
+   | condition: turn 1
+     | group:
+       | (9420:83) Like they say, + I wouldn't want you to miss
+a single beat. + Deleterious bomb!
+       | Do nothing + Do nothing + Spawn random 1 Bomb orbs
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | condition: 50% chance, hp <= 100
+       | (9421:102) Trace Eyes
+       | Spawn random 4 Bomb orbs, Deal 100% damage
+       | condition: 26% chance, hp <= 100
+       | (9422:103) That's what I call my Mad Bomb.
+       | Spawn Bomb orbs in the specified positions, Deal 100% damage
+       | condition: 25% chance, hp <= 100
+       | (9423:103) That's what I call my Mad Bomb.
+       | Spawn Bomb orbs in the specified positions, Deal 100% damage
+ | group:
+ | condition: hp <= 49
+   | group:
+   | condition: turn 2
+     | group:
+       | (9424:103) My my, looks like you're surrounded.
+       | Spawn Bomb orbs in the specified positions, Deal 100% damage
+ | group:
+ | condition: hp <= 19
+   | group:
+   | condition: repeats every 1 turns
+     | group:
+       | (9425:103) Hahahahahaha!
+       | Spawn Bomb orbs in the specified positions, Deal 100% damage

@@ -15,24 +15,18 @@ level: 1
  | Voids status ailments for 7 turns
  group:
  | group:
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: 50% chance, hp <= 100
-       | (10881:4) Bitten Fruit
-       | Change Heal to Poison
-       | condition: 50% chance, hp <= 100
-       | (10882:1) Completely Consumed Fruit
-       | Bind 1 random cards for 10 turns
+   | condition: 50% chance, hp <= 100
+   | (10881:4) Bitten Fruit
+   | Change Heal to Poison
+   | condition: 50% chance, hp <= 100
+   | (10882:1) Completely Consumed Fruit
+   | Bind 1 random cards for 10 turns
  | group:
  | condition: hp <= 19
    | group:
-   | condition: turn 1
-     | group:
-       | (10883:86) Dwarven Rebirth
-       | Enemy recover 100% hp
+   | condition: turn 1, hp <= 100
+     | (10883:86) Dwarven Rebirth
+     | Enemy recover 100% hp
    | group:
-   | condition: repeats every 1 turns
-     | group:
-       | (10884:15) Raging Dwarf
-       | Deal 350% damage (7 hits, 50% each)
+     | (10884:15) Raging Dwarf
+     | Deal 350% damage (7 hits, 50% each)

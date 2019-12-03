@@ -19,42 +19,32 @@ level: 1
    | Increase damage to 200% for the next 999 turns
  | group:
    | group:
-   | condition: turn 1
-     | group:
-       | (6620:98) Black Cut
-       | Blind orbs in specific positions for 1 turns, Deal 300% damage
+   | condition: turn 1, hp <= 100
+     | (6620:98) Black Cut
+     | Blind orbs in specific positions for 1 turns, Deal 300% damage
    | group:
-   | condition: turn 2
-     | group:
-       | (6621:98) Black Cut
-       | Blind orbs in specific positions for 1 turns, Deal 300% damage
+   | condition: turn 2, hp <= 100
+     | (6621:98) Black Cut
+     | Blind orbs in specific positions for 1 turns, Deal 300% damage
    | group:
-   | condition: turn 3
-     | group:
-       | (6624:83) Freeze Breath + Ocean Roar
-       | Bind 2 random subs for 3 turns, Deal 300% damage + Increase damage to 300% for the next 1 turns
+   | condition: turn 3, hp <= 100
+     | (6624:83) Freeze Breath + Ocean Roar
+     | Bind 2 random subs for 3 turns, Deal 300% damage + Increase damage to 300% for the next 1 turns
    | group:
-   | condition: turn 4
-     | group:
-       | (6627:83) Frozen Fur + Cold Impact
-       | Reduce damage from all sources by 50% for 3 turns + Deal 450% damage (3 hits, 150% each)
+   | condition: turn 4, hp <= 100
+     | (6627:83) Frozen Fur + Cold Impact
+     | Reduce damage from all sources by 50% for 3 turns + Deal 450% damage (3 hits, 150% each)
    | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: 20% chance, hp <= 100
-       | (6629:98) Black Cut
-       | Blind orbs in specific positions for 1 turns, Deal 300% damage
-       | condition: 20% chance, hp <= 100
-       | (6630:98) Black Cut
-       | Blind orbs in specific positions for 1 turns, Deal 300% damage
-       | condition: 60% chance, hp <= 100
-       | (6631:15) Cold Fang
-       | Deal 320% damage (2 hits, 160% each)
+     | condition: 20% chance, hp <= 100
+     | (6629:98) Black Cut
+     | Blind orbs in specific positions for 1 turns, Deal 300% damage
+     | condition: 20% chance, hp <= 100
+     | (6630:98) Black Cut
+     | Blind orbs in specific positions for 1 turns, Deal 300% damage
+     | condition: 60% chance, hp <= 100
+     | (6631:15) Cold Fang
+     | Deal 320% damage (2 hits, 160% each)
  | group:
- | condition: hp <= 14
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: hp <= 15
-       | (6634:83) Its body is glowing + Absolute Blue
-       | Change own attribute to random one of Water, Dark + Deal 1800% damage (6 hits, 300% each)
+ | condition: hp <= 15
+   | (6634:83) Its body is glowing + Absolute Blue
+   | Change own attribute to random one of Water, Dark + Deal 1800% damage (6 hits, 300% each)

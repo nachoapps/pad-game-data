@@ -13,37 +13,27 @@ level: 1
  group:
  | group:
    | group:
-   | condition: turn 1
-     | group:
-       | (12338:15) Crown Rod
-       | Deal 100% damage
+   | condition: turn 1, hp <= 100
+     | (12338:15) Crown Rod
+     | Deal 100% damage
    | group:
-   | condition: turn 2
-     | group:
-       | (12339:88) Deep Blue Eyes
-       | Bind awoken skills for 3 turns
+   | condition: turn 2, hp <= 100
+     | (12339:88) Deep Blue Eyes
+     | Bind awoken skills for 3 turns
    | group:
-   | condition: turn 3
-     | group:
-       | condition: when 1 enemies remain, hp <= 100
-       | (12340:17) Sublime Sapphire
-       | Increase damage to 150% for the next 99 turns
+   | condition: when 1 enemies remain, turn 3, hp <= 100
+     | (12340:17) Sublime Sapphire
+     | Increase damage to 150% for the next 99 turns
    | group:
-   | condition: repeats every 1 turns
-     | group:
-       | (12338:15) Crown Rod
-       | Deal 100% damage
+     | (12338:15) Crown Rod
+     | Deal 100% damage
  | group:
  | condition: hp <= 9
    | group:
-   | condition: turn 1
-     | group:
-       | condition: hp <= 10
-       | (12341:15) Carat Full Swing
-       | Deal 300% damage
+   | condition: turn 1, hp <= 10
+     | (12341:15) Carat Full Swing
+     | Deal 300% damage
    | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: hp <= 10
-       | (12341:15) Carat Full Swing
-       | Deal 300% damage
+   | condition: hp <= 10
+     | (12341:15) Carat Full Swing
+     | Deal 300% damage

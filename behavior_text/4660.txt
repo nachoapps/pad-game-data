@@ -14,34 +14,25 @@ level: 4
  | group:
    | group:
    | condition: repeats every 2 turns
-     | group:
-       | condition: 50% chance, hp <= 100
-       | (10636:108) Shining Straight
-       | Change Heal to Light, Deal 100% damage
-       | (10637:48) Orb Curve
-       | Change Random to Wood, Deal 120% damage
+     | condition: 50% chance, hp <= 100
+     | (10636:108) Shining Straight
+     | Change Heal to Light, Deal 100% damage
+     | (10637:48) Orb Curve
+     | Change Random to Wood, Deal 120% damage
    | group:
-   | condition: repeats every 2 turns
-     | group:
-       | (10640:83) Were you surprised? + Even looking like this, you're strong!
-       | Blind all orbs on the board + Deal 120% damage (6 hits, 20% each)
+   | condition: repeats every 2 turns, hp <= 100
+     | (10640:83) Were you surprised? + Even looking like this, you're strong!
+     | Blind all orbs on the board + Deal 120% damage (6 hits, 20% each)
  | group:
- | condition: hp <= 49
-   | group:
-   | condition: turn 1
-     | group:
-       | condition: when 1 enemies remain, hp <= 100
-       | (10641:17) You got burned!
-       | Increase damage to 150% for the next 5 turns
+ | condition: when 1 enemies remain, turn 1, hp <= 100
+   | (10641:17) You got burned!
+   | Increase damage to 150% for the next 5 turns
  | group:
  | condition: hp <= 19
    | group:
-   | condition: turn 2
-     | group:
-       | (10642:66) Let's end this!
-       | Do nothing
+   | condition: turn 2, hp <= 100
+     | (10642:66) Let's end this!
+     | Do nothing
    | group:
-   | condition: repeats every 1 turns
-     | group:
-       | (10643:15) Starburst!!!
-       | Deal 300% damage (10 hits, 30% each)
+     | (10643:15) Starburst!!!
+     | Deal 300% damage (10 hits, 30% each)

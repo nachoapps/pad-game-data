@@ -10,38 +10,28 @@ level: 1
  group:
  | group:
    | group:
-   | condition: turn 1
-     | group:
-       | condition: one time only, hp <= 100
-       | (303:1) Poke Poke EX
-       | Bind 5 random cards for 1~3 turns
+   | condition: one time only, turn 1, hp <= 100
+     | (303:1) Poke Poke EX
+     | Bind 5 random cards for 1~3 turns
    | group:
-   | condition: turn 2
-     | group:
-       | (305:16) Yah!
-       | Do nothing
+   | condition: turn 2, hp <= 100
+     | (305:16) Yah!
+     | Do nothing
  | group:
  | condition: hp <= 49
    | group:
-   | condition: turn 1
-     | group:
-       | condition: hp <= 50
-       | (304:7) Healing
-       | Enemy recover 100% hp
+   | condition: turn 1, hp <= 50
+     | (304:7) Healing
+     | Enemy recover 100% hp
    | group:
-   | condition: turn 2
-     | group:
-       | condition: one time only, hp <= 100
-       | (303:1) Poke Poke EX
-       | Bind 5 random cards for 1~3 turns
+   | condition: one time only, turn 2, hp <= 100
+     | (303:1) Poke Poke EX
+     | Bind 5 random cards for 1~3 turns
    | group:
-   | condition: turn 3
-     | group:
-       | (305:16) Yah!
-       | Do nothing
+   | condition: turn 3, hp <= 100
+     | (305:16) Yah!
+     | Do nothing
    | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: hp <= 50
-       | (306:15) Okaaaay!
-       | Deal 180% damage (3 hits, 60% each)
+   | condition: hp <= 50
+     | (306:15) Okaaaay!
+     | Deal 180% damage (3 hits, 60% each)

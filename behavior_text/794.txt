@@ -9,21 +9,16 @@ approved: False
 level: 5
  group:
  | group:
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: 50% chance, hp <= 100
-       | (595:50) Heavy Blow
-       | Player -75% HP
+ | condition: 50% chance, hp <= 100
+   | (595:50) Heavy Blow
+   | Player -75% HP
  | group:
  | condition: hp <= 49
    | group:
-   | condition: repeats every 2 turns
-     | group:
-       | (596:66) Raised Weapon
-       | Do nothing
+   | condition: repeats every 2 turns, hp <= 100
+     | (596:66) Raised Weapon
+     | Do nothing
    | group:
-   | condition: repeats every 2 turns
-     | group:
-       | (597:15) Giga Impact
-       | Deal 200% damage
+   | condition: repeats every 2 turns, hp <= 100
+     | (597:15) Giga Impact
+     | Deal 200% damage

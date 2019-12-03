@@ -16,43 +16,34 @@ level: 1
  group:
  | group:
    | group:
-   | condition: turn 1
-     | group:
-       | (2526:67) General of the Sacred Mountain
-       | Absorb combo <= 4 damage for 99 turns
+   | condition: turn 1, hp <= 100
+     | (2526:67) General of the Sacred Mountain
+     | Absorb combo <= 4 damage for 99 turns
    | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: 30% chance, when required attributes on board, hp <= 100
-       | (2528:92) Crescent Moon Staff
-       | Spawn random 5 Dark orbs, Deal 85% damage
-       | condition: 30% chance, hp <= 100
-       | (2532:15) Chomp
-       | Deal 120% damage (2 hits, 60% each)
-       | condition: 30% chance, hp <= 100
-       | (1:82) Disable Skill
-       | Deal 100% damage
+     | condition: 30% chance, when required attributes on board, hp <= 100
+     | (2528:92) Crescent Moon Staff
+     | Spawn random 5 Dark orbs, Deal 85% damage
+     | condition: 30% chance, hp <= 100
+     | (2532:15) Chomp
+     | Deal 120% damage (2 hits, 60% each)
+     | condition: 30% chance, hp <= 100
+     | (1:82) Disable Skill
+     | Deal 100% damage
  | group:
- | condition: hp <= 49
-   | group:
-   | condition: turn 2
-     | group:
-       | condition: hp <= 50
-       | (2527:14) Nine Ill Winds
-       | Bind active skills for 3 turns
-       | condition: 30% chance, when required attributes on board, hp <= 100
-       | (2528:92) Crescent Moon Staff
-       | Spawn random 5 Dark orbs, Deal 85% damage
-       | condition: 30% chance, hp <= 100
-       | (2532:15) Chomp
-       | Deal 120% damage (2 hits, 60% each)
-       | condition: 30% chance, hp <= 100
-       | (1:82) Disable Skill
-       | Deal 100% damage
+ | condition: turn 2, hp <= 49
+   | condition: hp <= 50
+   | (2527:14) Nine Ill Winds
+   | Bind active skills for 3 turns
+   | condition: 30% chance, when required attributes on board, hp <= 100
+   | (2528:92) Crescent Moon Staff
+   | Spawn random 5 Dark orbs, Deal 85% damage
+   | condition: 30% chance, hp <= 100
+   | (2532:15) Chomp
+   | Deal 120% damage (2 hits, 60% each)
+   | condition: 30% chance, hp <= 100
+   | (1:82) Disable Skill
+   | Deal 100% damage
  | group:
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: hp <= 1
-       | (2529:83) Mystic Curse + Chomp
-       | Player -99% HP + Deal 120% damage (2 hits, 60% each)
+ | condition: hp <= 1
+   | (2529:83) Mystic Curse + Chomp
+   | Player -99% HP + Deal 120% damage (2 hits, 60% each)

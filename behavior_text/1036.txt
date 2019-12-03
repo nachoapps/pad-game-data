@@ -12,13 +12,10 @@ level: 1
  | Absorb combo <= 4 damage for 99 turns
  group:
  | group:
-   | group:
-   | condition: repeats every 3 turns
-     | group:
-       | (3077:66) Building up Anger
-       | Do nothing
-   | group:
-   | condition: repeats every 3 turns
-     | group:
-       | (3078:15) Youuuuuuu!!!!
-       | Deal 300% damage
+ | condition: repeats every 3 turns, hp <= 100
+   | (3077:66) Building up Anger
+   | Do nothing
+ | group:
+ | condition: repeats every 3 turns, hp <= 100
+   | (3078:15) Youuuuuuu!!!!
+   | Deal 300% damage

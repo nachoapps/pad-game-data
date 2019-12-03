@@ -11,61 +11,47 @@ level: 1
  | (7939:74) Let's enjoy the beach!
  | Reduce damage from all sources by 50% for 99 turns
  type: DEATH
- | condition: when defeated, hp <= 100
+ condition: when defeated, hp <= 100
  | (6388:69) REMDra death performance
  | Show death effect
  group:
- | group:
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | (7940:15) Island REM Punch!
-       | Deal 130% damage
+ | (7940:15) Island REM Punch!
+ | Deal 130% damage
 
 level: 2
  type: PREEMPT
  | (7924:83) Let's enjoy the beach! + Island Getaway Aura + Pull!
  | Blind orbs in specific positions for 1 turns + Voids status ailments for 5 turns + Reduce damage from all sources by 75% for 1 turns
  type: DEATH
- | condition: when defeated, hp <= 100
+ condition: when defeated, hp <= 100
  | (6388:69) REMDra death performance
  | Show death effect
  group:
  | group:
    | group:
-   | condition: turn 1
-     | group:
-       | (7925:74) Pull it!
-       | Reduce damage from all sources by 50% for 1 turns, Deal 100% damage
+   | condition: turn 1, hp <= 100
+     | (7925:74) Pull it!
+     | Reduce damage from all sources by 50% for 1 turns, Deal 100% damage
    | group:
-   | condition: repeats every 1 turns
-     | group:
-       | (7926:74) Come on! Pull!
-       | Reduce damage from all sources by 50% for 1 turns, Deal 120% damage
+     | (7926:74) Come on! Pull!
+     | Reduce damage from all sources by 50% for 1 turns, Deal 120% damage
  | group:
  | condition: hp <= 79
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: 20% chance, hp <= 100
-       | (7933:83) It's putting some back into it + Sundial
-       | Do nothing + Change Random to Heal, Deal 150% damage
-       | condition: 20% chance, hp <= 100
-       | (7934:83) It's putting some back into it + Sea Draco Summon-Wt & Wd
-       | Do nothing + Change all orbs to Water, Wood, Deal 150% damage
-       | condition: 20% chance, hp <= 100
-       | (7935:83) It's putting some back into it + Summer Paradise - Aqua
-       | Do nothing + Change 3rd, 4th column to Water orbs, Deal 150% damage
-       | condition: 20% chance, hp <= 100
-       | (7936:83) It's putting some back into it + Summer Sea Seven-Star Formation
-       | Do nothing + Change all orbs to Water, Wood, Light, Deal 150% damage
-       | condition: 20% chance, hp <= 100
-       | (7937:83) It's putting some back into it + Lunatic Shot
-       | Do nothing + Absorb Water, Light damage for 1 turns, Deal 150% damage, Deal 150% damage
+   | condition: 20% chance, hp <= 100
+   | (7933:83) It's putting some back into it + Sundial
+   | Do nothing + Change Random to Heal, Deal 150% damage
+   | condition: 20% chance, hp <= 100
+   | (7934:83) It's putting some back into it + Sea Draco Summon-Wt & Wd
+   | Do nothing + Change all orbs to Water, Wood, Deal 150% damage
+   | condition: 20% chance, hp <= 100
+   | (7935:83) It's putting some back into it + Summer Paradise - Aqua
+   | Do nothing + Change 3rd, 4th column to Water orbs, Deal 150% damage
+   | condition: 20% chance, hp <= 100
+   | (7936:83) It's putting some back into it + Summer Sea Seven-Star Formation
+   | Do nothing + Change all orbs to Water, Wood, Light, Deal 150% damage
+   | condition: 20% chance, hp <= 100
+   | (7937:83) It's putting some back into it + Lunatic Shot
+   | Do nothing + Absorb Water, Light damage for 1 turns, Deal 150% damage, Deal 150% damage
  | group:
- | condition: hp <= 14
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | (7938:15) Throw me some more Magic Stones!
-       | Deal 900% damage (3 hits, 300% each)
+   | (7938:15) Throw me some more Magic Stones!
+   | Deal 900% damage (3 hits, 300% each)

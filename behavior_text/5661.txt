@@ -17,25 +17,16 @@ level: 1
  | Deal 100% damage
  group:
  | group:
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: 50% chance, hp <= 100
-       | (14919:83) 烈閃槍 + ブレイク！
-       | Change 3rd row to Light orbs, Deal 25% damage + Deal 35% damage
-       | condition: 50% chance, hp <= 100
-       | (14922:15) 霊王結魔弾
-       | Deal 70% damage (2 hits, 35% each)
+   | condition: 50% chance, hp <= 100
+   | (14919:83) 烈閃槍 + ブレイク！
+   | Change 3rd row to Light orbs, Deal 25% damage + Deal 35% damage
+   | condition: 50% chance, hp <= 100
+   | (14922:15) 霊王結魔弾
+   | Deal 70% damage (2 hits, 35% each)
  | group:
- | condition: hp <= 9
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | (14924:77) 崩霊裂
-       | Change 3rd, 4th column to Light orbs, Deal 200% damage
+   | (14924:77) 崩霊裂
+   | Change 3rd, 4th column to Light orbs, Deal 200% damage
  | group:
-   | group:
-   | condition: turn 1
-     | group:
-       | (14923:86) 復活
-       | Enemy recover 100% hp
+ | condition: turn 1, hp <= 100
+   | (14923:86) 復活
+   | Enemy recover 100% hp

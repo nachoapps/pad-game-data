@@ -12,23 +12,17 @@ level: 1
  | Reduce damage from all sources by 50% for 1 turns
  group:
  | group:
-   | group:
-   | condition: turn 1
-     | group:
-       | (6117:19) Got angry
-       | Increase damage to 200% for the next 999 turns
-   | group:
-   | condition: turn 2
-     | group:
-       | (6115:74) Dancing around
-       | Reduce damage from all sources by 75% for 1 turns
-   | group:
-   | condition: turn 3
-     | group:
-       | (6116:74) Dancing around
-       | Reduce damage from all sources by 99% for 1 turns
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | (6118:15) Amazing Attack
-       | Deal 400% damage (4 hits, 100% each)
+ | condition: turn 1, hp <= 100
+   | (6117:19) Got angry
+   | Increase damage to 200% for the next 999 turns
+ | group:
+ | condition: turn 2, hp <= 100
+   | (6115:74) Dancing around
+   | Reduce damage from all sources by 75% for 1 turns
+ | group:
+ | condition: turn 3, hp <= 100
+   | (6116:74) Dancing around
+   | Reduce damage from all sources by 99% for 1 turns
+ | group:
+   | (6118:15) Amazing Attack
+   | Deal 400% damage (4 hits, 100% each)

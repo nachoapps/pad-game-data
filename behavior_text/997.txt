@@ -12,26 +12,19 @@ level: 1
  | Deal 50% damage
  group:
  | group:
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: 50% chance, hp <= 100
-       | (1254:48) Holy Ocean's Wave
-       | Change Wood to Water, Deal 80% damage
-       | condition: 80% chance, hp <= 100
-       | (1255:48) Burning Life Light
-       | Change Dark to Light, Deal 80% damage
+   | condition: 50% chance, hp <= 100
+   | (1254:48) Holy Ocean's Wave
+   | Change Wood to Water, Deal 80% damage
+   | condition: 80% chance, hp <= 100
+   | (1255:48) Burning Life Light
+   | Change Dark to Light, Deal 80% damage
  | group:
  | condition: hp <= 49
    | group:
-   | condition: turn 1
-     | group:
-       | condition: hp <= 50
-       | (1256:14) The Flooding of the Nile
-       | Bind active skills for 5 turns
+   | condition: turn 1, hp <= 50
+     | (1256:14) The Flooding of the Nile
+     | Bind active skills for 5 turns
    | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: hp <= 50
-       | (1257:15) Star Mother & Firebird's Flash
-       | Deal 160% damage (2 hits, 80% each)
+   | condition: hp <= 50
+     | (1257:15) Star Mother & Firebird's Flash
+     | Deal 160% damage (2 hits, 80% each)

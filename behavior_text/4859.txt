@@ -15,30 +15,21 @@ the hell out of you.
  group:
  | group:
    | group:
-   | condition: repeats every 3 turns
-     | group:
-       | (11497:75) Switch with me!
-       | Leader changes to random sub for 1 turns, Deal 90% damage
+   | condition: repeats every 3 turns, hp <= 100
+     | (11497:75) Switch with me!
+     | Leader changes to random sub for 1 turns, Deal 90% damage
    | group:
    | condition: repeats every 3 turns
-     | group:
-       | condition: 50% chance, hp <= 100
-       | (11498:48) Fire!
-       | Change Random to Light, Deal 100% damage
-       | condition: 50% chance, when required attributes on board, hp <= 100
-       | (11499:92) Yaa!
-       | Spawn random 3 Fire, Light orbs, Deal 100% damage
+     | condition: 50% chance, hp <= 100
+     | (11498:48) Fire!
+     | Change Random to Light, Deal 100% damage
+     | condition: 50% chance, when required attributes on board, hp <= 100
+     | (11499:92) Yaa!
+     | Spawn random 3 Fire, Light orbs, Deal 100% damage
  | group:
- | condition: hp <= 49
-   | group:
-   | condition: turn 1
-     | group:
-       | (11496:14) Our plan worked!
-       | Bind active skills for 3 turns
+ | condition: turn 1, hp <= 100
+   | (11496:14) Our plan worked!
+   | Bind active skills for 3 turns
  | group:
- | condition: hp <= 15
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | (11500:15) I know what skill to use.
-       | Deal 200% damage (8 hits, 25% each)
+   | (11500:15) I know what skill to use.
+   | Deal 200% damage (8 hits, 25% each)

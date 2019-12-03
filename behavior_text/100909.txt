@@ -15,18 +15,13 @@ level: 1
  | Voids status ailments for 999 turns + Absorb damage >= 10000000 damage for 5 turns
  group:
  | group:
-   | group:
-   | condition: turns 1-4
-     | group:
-       | (14752:15) Imperial Sword
-       | Deal 600% damage
-   | group:
-   | condition: turn 5
-     | group:
-       | (14753:74) Universal Stance
-       | Reduce damage from all sources by 80% for 10 turns
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | (14752:15) Imperial Sword
-       | Deal 600% damage
+ | condition: turns 1-4, hp <= 100
+   | (14752:15) Imperial Sword
+   | Deal 600% damage
+ | group:
+ | condition: turn 5, hp <= 100
+   | (14753:74) Universal Stance
+   | Reduce damage from all sources by 80% for 10 turns
+ | group:
+   | (14752:15) Imperial Sword
+   | Deal 600% damage

@@ -9,16 +9,12 @@ approved: False
 level: 4
  group:
  | group:
-   | group:
-   | condition: turn 1
-     | group:
-       | (9630:53) I finished my homework!
-       | Absorb Wood damage for 2 turns
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: 30% chance, hp <= 100
-       | (9632:104) Soft Tail
-       | 2x2 cloud appear for 1 turns at random location, Deal 80% damage
-       | (9631:15) Adolescent Punch
-       | Deal 100% damage
+ | condition: turn 1, hp <= 100
+   | (9630:53) I finished my homework!
+   | Absorb Wood damage for 2 turns
+ | group:
+   | condition: 30% chance, hp <= 100
+   | (9632:104) Soft Tail
+   | 2x2 cloud appear for 1 turns at random location, Deal 80% damage
+   | (9631:15) Adolescent Punch
+   | Deal 100% damage

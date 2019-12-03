@@ -12,37 +12,28 @@ level: 1
  | Player -99% HP
  group:
  | group:
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: 50% chance, hp <= 100
-       | (12658:74) Warm Gloves
-       | Reduce damage from all sources by 50% for 1 turns, Deal 95% damage
-       | condition: 50% chance, hp <= 100
-       | (12659:15) Double Wreath Swing
-       | Deal 112% damage (4 hits, 28% each)
+   | condition: 50% chance, hp <= 100
+   | (12658:74) Warm Gloves
+   | Reduce damage from all sources by 50% for 1 turns, Deal 95% damage
+   | condition: 50% chance, hp <= 100
+   | (12659:15) Double Wreath Swing
+   | Deal 112% damage (4 hits, 28% each)
  | group:
- | condition: hp <= 49
-   | group:
-   | condition: turn 1
-     | group:
-       | (12660:88) I told you not to...
-       | Bind awoken skills for 5 turns
-       | condition: 50% chance, hp <= 100
-       | (12658:74) Warm Gloves
-       | Reduce damage from all sources by 50% for 1 turns, Deal 95% damage
-       | condition: 50% chance, hp <= 100
-       | (12659:15) Double Wreath Swing
-       | Deal 112% damage (4 hits, 28% each)
+ | condition: turn 1, hp <= 49
+   | (12660:88) I told you not to...
+   | Bind awoken skills for 5 turns
+   | condition: 50% chance, hp <= 100
+   | (12658:74) Warm Gloves
+   | Reduce damage from all sources by 50% for 1 turns, Deal 95% damage
+   | condition: 50% chance, hp <= 100
+   | (12659:15) Double Wreath Swing
+   | Deal 112% damage (4 hits, 28% each)
  | group:
  | condition: hp <= 20
    | group:
-   | condition: turn 1
-     | group:
-       | (12660:88) I told you not to...
-       | Bind awoken skills for 5 turns
+   | condition: turn 1, hp <= 100
+     | (12660:88) I told you not to...
+     | Bind awoken skills for 5 turns
    | group:
-   | condition: repeats every 1 turns
-     | group:
-       | (12661:15) Western Seven-Star Formation
-       | Deal 245% damage (7 hits, 35% each)
+     | (12661:15) Western Seven-Star Formation
+     | Deal 245% damage (7 hits, 35% each)

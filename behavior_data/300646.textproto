@@ -3,12 +3,12 @@
     level: 1
     groups {
       group_type: PREEMPT
+      condition {
+        hp_threshold: 100
+        use_chance: 100
+      }
       children {
         behavior {
-          condition {
-            hp_threshold: 100
-            use_chance: 100
-          }
           enemy_skill_id: 266
         }
       }
@@ -18,12 +18,12 @@
       children {
         group {
           group_type: DISPEL_PLAYER
+          condition {
+            hp_threshold: 100
+            use_chance: 100
+          }
           children {
             behavior {
-              condition {
-                hp_threshold: 100
-                use_chance: 100
-              }
               enemy_skill_id: 268
             }
           }
@@ -38,20 +38,13 @@
           children {
             group {
               condition {
+                hp_threshold: 100
+                use_chance: 100
                 trigger_turn: 1
               }
               children {
-                group {
-                  group_type: STANDARD
-                  children {
-                    behavior {
-                      condition {
-                        hp_threshold: 100
-                        use_chance: 100
-                      }
-                      enemy_skill_id: 269
-                    }
-                  }
+                behavior {
+                  enemy_skill_id: 269
                 }
               }
             }
@@ -59,20 +52,13 @@
           children {
             group {
               condition {
+                hp_threshold: 100
+                use_chance: 100
                 repeats_every: 3
               }
               children {
-                group {
-                  group_type: STANDARD
-                  children {
-                    behavior {
-                      condition {
-                        hp_threshold: 100
-                        use_chance: 100
-                      }
-                      enemy_skill_id: 267
-                    }
-                  }
+                behavior {
+                  enemy_skill_id: 267
                 }
               }
             }

@@ -15,31 +15,20 @@ level: 1
  | Voids status ailments for 999 turns + 1x3 cloud appear for 30 turns at random location
  group:
  | group:
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: 33% chance, hp <= 100
-       | (7835:39) Anzel Sou
-       | Movetime -1s for 1 turns, Deal 200% damage
-       | condition: 33% chance, hp <= 100
-       | (7837:89) Guasa
-       | Delay active skills by 2 turns, Deal 200% damage
-       | condition: 34% chance, hp <= 100
-       | (7836:15) Redeon Radel
-       | Deal 240% damage (3 hits, 80% each)
+   | condition: 33% chance, hp <= 100
+   | (7835:39) Anzel Sou
+   | Movetime -1s for 1 turns, Deal 200% damage
+   | condition: 33% chance, hp <= 100
+   | (7837:89) Guasa
+   | Delay active skills by 2 turns, Deal 200% damage
+   | condition: 34% chance, hp <= 100
+   | (7836:15) Redeon Radel
+   | Deal 240% damage (3 hits, 80% each)
  | group:
- | condition: hp <= 49
-   | group:
-   | condition: turn 1
-     | group:
-       | condition: hp <= 50
-       | (7840:83) Judgment day has come + Accept your demise!
-       | Increase damage to 150% for the next 999 turns + Player -99% HP
+ | condition: turn 1, hp <= 50
+   | (7840:83) Judgment day has come + Accept your demise!
+   | Increase damage to 150% for the next 999 turns + Player -99% HP
  | group:
- | condition: hp <= 4
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: hp <= 5
-       | (7841:15) Kalreshi Osaryu
-       | Deal 500% damage (5 hits, 100% each)
+ | condition: hp <= 5
+   | (7841:15) Kalreshi Osaryu
+   | Deal 500% damage (5 hits, 100% each)

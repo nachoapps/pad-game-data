@@ -12,19 +12,13 @@ level: 1
  | Do nothing
  group:
  | group:
-   | group:
-   | condition: turn 1
-     | group:
-       | (883:16) *Snores*
-       | Do nothing
-   | group:
-   | condition: turn 2
-     | group:
-       | condition: when 999 enemies remain, hp <= 100
-       | (884:17) Awakening
-       | Increase damage to 300% for the next 999 turns
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | (885:15) Dragon Star
-       | Deal 100% damage (2 hits, 50% each)
+ | condition: turn 1, hp <= 100
+   | (883:16) *Snores*
+   | Do nothing
+ | group:
+ | condition: when 999 enemies remain, turn 2, hp <= 100
+   | (884:17) Awakening
+   | Increase damage to 300% for the next 999 turns
+ | group:
+   | (885:15) Dragon Star
+   | Deal 100% damage (2 hits, 50% each)

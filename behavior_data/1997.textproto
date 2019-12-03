@@ -3,55 +3,38 @@
     level: 5
     groups {
       group_type: PREEMPT
+      condition {
+        hp_threshold: 100
+        use_chance: 100
+      }
       children {
         behavior {
-          condition {
-            hp_threshold: 100
-            use_chance: 100
-          }
           enemy_skill_id: 2034
         }
       }
     }
     groups {
       group_type: STANDARD
+      condition {
+        hp_threshold: 100
+      }
       children {
-        group {
-          group_type: STANDARD
+        behavior {
           condition {
             hp_threshold: 100
+            use_chance: 100
+            trigger_combos: 6
           }
-          children {
-            group {
-              condition {
-                repeats_every: 1
-              }
-              children {
-                group {
-                  group_type: STANDARD
-                  children {
-                    behavior {
-                      condition {
-                        hp_threshold: 100
-                        use_chance: 100
-                        trigger_combos: 6
-                      }
-                      enemy_skill_id: 2039
-                    }
-                  }
-                  children {
-                    behavior {
-                      condition {
-                        hp_threshold: 100
-                        use_chance: 100
-                      }
-                      enemy_skill_id: 2035
-                    }
-                  }
-                }
-              }
-            }
+          enemy_skill_id: 2039
+        }
+      }
+      children {
+        behavior {
+          condition {
+            hp_threshold: 100
+            use_chance: 100
           }
+          enemy_skill_id: 2035
         }
       }
     }

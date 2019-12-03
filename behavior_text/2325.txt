@@ -12,28 +12,21 @@ level: 1
  | Absorb combo <= 9 damage for 5 turns + Bind awoken skills for 5 turns
  group:
  | group:
-   | group:
-   | condition: turn 1
-     | group:
-       | (14386:62) New Moon
-       | Blind all orbs on the board, Deal 50% damage
-   | group:
-   | condition: turn 2
-     | group:
-       | (14387:48) Shadowed Moon
-       | Change Random to Dark, Deal 100% damage
-   | group:
-   | condition: turn 3
-     | group:
-       | (14388:15) Nocturnal Blades
-       | Deal 150% damage (3 hits, 50% each)
-   | group:
-   | condition: turn 4
-     | group:
-       | (14389:98) Waxing Crescent
-       | Blind orbs in specific positions for 1 turns, Deal 200% damage
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | (14390:15) Resounding Dusk Swoop
-       | Deal 1000% damage (10 hits, 100% each)
+ | condition: turn 1, hp <= 100
+   | (14386:62) New Moon
+   | Blind all orbs on the board, Deal 50% damage
+ | group:
+ | condition: turn 2, hp <= 100
+   | (14387:48) Shadowed Moon
+   | Change Random to Dark, Deal 100% damage
+ | group:
+ | condition: turn 3, hp <= 100
+   | (14388:15) Nocturnal Blades
+   | Deal 150% damage (3 hits, 50% each)
+ | group:
+ | condition: turn 4, hp <= 100
+   | (14389:98) Waxing Crescent
+   | Blind orbs in specific positions for 1 turns, Deal 200% damage
+ | group:
+   | (14390:15) Resounding Dusk Swoop
+   | Deal 1000% damage (10 hits, 100% each)

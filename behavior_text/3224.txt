@@ -13,30 +13,20 @@ level: 1
  group:
  | group:
    | group:
-   | condition: turn 1
-     | group:
-       | (12639:75) Swinging left and right!
-       | Leader changes to random sub for 2 turns
+   | condition: turn 1, hp <= 100
+     | (12639:75) Swinging left and right!
+     | Leader changes to random sub for 2 turns
    | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: 50% chance, hp <= 100
-       | (12640:15) Cheer up!
-       | Deal 110% damage
-       | condition: 50% chance, hp <= 100
-       | (12641:63) Sacred Beast Dance
-       | Bind 2 random subs for 1~2 turns, Deal 95% damage
+     | condition: 50% chance, hp <= 100
+     | (12640:15) Cheer up!
+     | Deal 110% damage
+     | condition: 50% chance, hp <= 100
+     | (12641:63) Sacred Beast Dance
+     | Bind 2 random subs for 1~2 turns, Deal 95% damage
  | group:
- | condition: hp <= 49
-   | group:
-   | condition: turn 2
-     | group:
-       | (12642:97) The night is coming!
-       | Blind all orbs for 5 turns
+ | condition: turn 2, hp <= 100
+   | (12642:97) The night is coming!
+   | Blind all orbs for 5 turns
  | group:
- | condition: hp <= 20
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | (12643:15) Eastern Seven-Star Formation
-       | Deal 245% damage (7 hits, 35% each)
+   | (12643:15) Eastern Seven-Star Formation
+   | Deal 245% damage (7 hits, 35% each)

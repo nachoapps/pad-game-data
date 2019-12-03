@@ -12,13 +12,10 @@ level: 1
  | Do nothing
  group:
  | group:
-   | group:
-   | condition: repeats every 2 turns
-     | group:
-       | (1125:66) おぬしはほんとに幸運の持ち主じゃよ
-       | Do nothing
-   | group:
-   | condition: repeats every 2 turns
-     | group:
-       | (1126:66) くじけるではないぞ!
-       | Do nothing
+ | condition: repeats every 2 turns, hp <= 100
+   | (1125:66) おぬしはほんとに幸運の持ち主じゃよ
+   | Do nothing
+ | group:
+ | condition: repeats every 2 turns, hp <= 100
+   | (1126:66) くじけるではないぞ!
+   | Do nothing

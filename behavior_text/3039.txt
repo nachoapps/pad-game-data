@@ -14,7 +14,7 @@ level: 1
  | (5026:83) Heh + How this brings me back...
  | Do nothing + Do nothing
  type: DEATH
- | condition: when defeated, hp <= 100
+ condition: when defeated, hp <= 100
  | (4973:95) Nyah... Nyah, ha, hah... Nyahh,
 hah, hah, hah!!
  | Do nothing
@@ -27,54 +27,39 @@ level: 4
  | (5032:83) Heh + How this brings me back...
  | Voids status ailments for 7 turns + Spawn random 5 Wood orbs
  type: DEATH
- | condition: when defeated, hp <= 100
+ condition: when defeated, hp <= 100
  | (4973:95) Nyah... Nyah, ha, hah... Nyahh,
 hah, hah, hah!!
  | Do nothing
  group:
  | group:
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: 40% chance, hp <= 100
-       | (5038:50) Hyaah!
-       | Player -70% HP
-       | (5039:77) Shaaah!!
-       | Change 3rd column to Fire orbs, Deal 130% damage
+   | condition: 40% chance, hp <= 100
+   | (5038:50) Hyaah!
+   | Player -70% HP
+   | (5039:77) Shaaah!!
+   | Change 3rd column to Fire orbs, Deal 130% damage
  | group:
- | condition: hp <= 64
-   | group:
-   | condition: turn 1
-     | group:
-       | condition: hp <= 65
-       | (5040:83) Is that... + ..all you have?!
-       | Enemy recover 50% hp + Reduce damage from all sources by 50% for 2 turns
+ | condition: turn 1, hp <= 65
+   | (5040:83) Is that... + ..all you have?!
+   | Enemy recover 50% hp + Reduce damage from all sources by 50% for 2 turns
  | group:
  | condition: hp <= 29
    | group:
-   | condition: turn 2
-     | group:
-       | (5047:65) Final round. Here comes.
-       | Bind 3 random subs for 1 turns
+   | condition: turn 2, hp <= 100
+     | (5047:65) Final round. Here comes.
+     | Bind 3 random subs for 1 turns
    | group:
-   | condition: turn 3
-     | group:
-       | (5043:83) Hyaaah!! + The Final Secret Sword, "Kaguzuchi"!!
-       | Change all orbs to Fire + Deal 280% damage (7 hits, 40% each)
+   | condition: turn 3, hp <= 100
+     | (5043:83) Hyaaah!! + The Final Secret Sword, "Kaguzuchi"!!
+     | Change all orbs to Fire + Deal 280% damage (7 hits, 40% each)
    | group:
-   | condition: turn 4
-     | group:
-       | (5038:50) Hyaah!
-       | Player -70% HP
+   | condition: turn 4, hp <= 100
+     | (5038:50) Hyaah!
+     | Player -70% HP
    | group:
-   | condition: repeats every 1 turns
-     | group:
-       | (5046:15) Hyaaah!!
-       | Deal 360% damage (3 hits, 120% each)
+     | (5046:15) Hyaaah!!
+     | Deal 360% damage (3 hits, 120% each)
  | group:
- | condition: hp <= 9
-   | group:
-   | condition: turn 1
-     | group:
-       | (5031:83) Hyaaah!! + The Final Secret Sword, "Kaguzuchi"!!
-       | Change all orbs to Fire + Deal 280% damage (7 hits, 40% each)
+ | condition: turn 1, hp <= 100
+   | (5031:83) Hyaaah!! + The Final Secret Sword, "Kaguzuchi"!!
+   | Change all orbs to Fire + Deal 280% damage (7 hits, 40% each)

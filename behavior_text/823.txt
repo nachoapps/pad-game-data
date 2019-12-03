@@ -12,28 +12,22 @@ level: 1
  | Movetime -1s for 3 turns
  group:
  | group:
-   | group:
-   | condition: repeats every 5 turns
-     | group:
-       | (1620:15) First Strike
-       | Deal 80% damage
-   | group:
-   | condition: repeats every 5 turns
-     | group:
-       | (1621:15) Second Strike
-       | Deal 160% damage (2 hits, 80% each)
-   | group:
-   | condition: repeats every 5 turns
-     | group:
-       | (1622:15) Third Strike
-       | Deal 240% damage (3 hits, 80% each)
-   | group:
-   | condition: repeats every 5 turns
-     | group:
-       | (1623:15) Fourth Strike
-       | Deal 320% damage (4 hits, 80% each)
-   | group:
-   | condition: repeats every 5 turns
-     | group:
-       | (1624:15) Final Strike
-       | Deal 2000% damage (4 hits, 500% each)
+ | condition: repeats every 5 turns, hp <= 100
+   | (1620:15) First Strike
+   | Deal 80% damage
+ | group:
+ | condition: repeats every 5 turns, hp <= 100
+   | (1621:15) Second Strike
+   | Deal 160% damage (2 hits, 80% each)
+ | group:
+ | condition: repeats every 5 turns, hp <= 100
+   | (1622:15) Third Strike
+   | Deal 240% damage (3 hits, 80% each)
+ | group:
+ | condition: repeats every 5 turns, hp <= 100
+   | (1623:15) Fourth Strike
+   | Deal 320% damage (4 hits, 80% each)
+ | group:
+ | condition: repeats every 5 turns, hp <= 100
+   | (1624:15) Final Strike
+   | Deal 2000% damage (4 hits, 500% each)

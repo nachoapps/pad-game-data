@@ -12,20 +12,13 @@ level: 1
  | Bind 4 random subs for 50 turns + Void damage >= 30 for 999 turns
  group:
  | group:
-   | group:
-   | condition: turns 1-4
-     | group:
-       | condition: when required attributes on board, hp <= 100
-       | (14293:92) I'll give you this♪
-       | Spawn random 3 Heal orbs
-   | group:
-   | condition: turn 5
-     | group:
-       | condition: when required attributes on board, hp <= 100
-       | (14294:92) This is my last
-       | Spawn random 3 Heal orbs
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | (14292:85) Magic Circle Anomaly
-       | Change all orbs to Fire, Heal, Jammer, Poison, Deal 10000% damage
+ | condition: when required attributes on board, turns 1-4, hp <= 100
+   | (14293:92) I'll give you this♪
+   | Spawn random 3 Heal orbs
+ | group:
+ | condition: when required attributes on board, turn 5, hp <= 100
+   | (14294:92) This is my last
+   | Spawn random 3 Heal orbs
+ | group:
+   | (14292:85) Magic Circle Anomaly
+   | Change all orbs to Fire, Heal, Jammer, Poison, Deal 10000% damage

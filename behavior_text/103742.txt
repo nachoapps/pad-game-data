@@ -17,23 +17,18 @@ level: 1
  | Movetime -2s for 3 turns
  group:
  | group:
-   | group:
-   | condition: turn 1
-     | group:
-       | (7388:76) Ackris! Yoo-hoo!
-       | Change 3rd, 4th column to Water, Jammer orbs
-   | group:
-   | condition: turn 2
-     | group:
-       | (7389:50) Do your best, Ackris!
-       | Player -90% HP
-   | group:
-   | condition: repeats every 2 turns
-     | group:
-       | (7391:94) Ackris is spinning around
-       | Lock 8 random Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs, Deal 160% damage
-   | group:
-   | condition: repeats every 2 turns
-     | group:
-       | (7390:86) Twinkle ☆ Aqua
-       | Enemy recover 50% hp
+ | condition: turn 1, hp <= 100
+   | (7388:76) Ackris! Yoo-hoo!
+   | Change 3rd, 4th column to Water, Jammer orbs
+ | group:
+ | condition: turn 2, hp <= 100
+   | (7389:50) Do your best, Ackris!
+   | Player -90% HP
+ | group:
+ | condition: repeats every 2 turns, hp <= 100
+   | (7391:94) Ackris is spinning around
+   | Lock 8 random Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs, Deal 160% damage
+ | group:
+ | condition: repeats every 2 turns, hp <= 100
+   | (7390:86) Twinkle ☆ Aqua
+   | Enemy recover 50% hp

@@ -9,37 +9,30 @@ approved: False
 level: 1
  group:
  | group:
-   | group:
-   | condition: repeats every 10 turns
-     | group:
-       | (133:20) Skill Guard
-       | Voids status ailments for 10 turns
+ | condition: repeats every 10 turns, hp <= 100
+   | (133:20) Skill Guard
+   | Voids status ailments for 10 turns
  | group:
  | condition: hp <= 39
    | group:
-   | condition: repeats every 10 turns
-     | group:
-       | (133:20) Skill Guard
-       | Voids status ailments for 10 turns
+   | condition: repeats every 10 turns, hp <= 100
+     | (133:20) Skill Guard
+     | Voids status ailments for 10 turns
    | group:
-   | condition: repeats every 10 turns
-     | group:
-       | condition: 30% chance, hp <= 40
-       | (138:15) Aqua Storm
-       | Deal 135% damage (3 hits, 45% each)
+   | condition: 30% chance, repeats every 10 turns, hp <= 40
+     | (138:15) Aqua Storm
+     | Deal 135% damage (3 hits, 45% each)
  | group:
  | condition: hp <= 29
    | group:
-   | condition: repeats every 10 turns
-     | group:
-       | (133:20) Skill Guard
-       | Voids status ailments for 10 turns
+   | condition: repeats every 10 turns, hp <= 100
+     | (133:20) Skill Guard
+     | Voids status ailments for 10 turns
    | group:
    | condition: repeats every 10 turns
-     | group:
-       | condition: 40% chance, hp <= 30
-       | (82:7) Cure
-       | Enemy recover 50% hp
-       | condition: 30% chance, hp <= 40
-       | (138:15) Aqua Storm
-       | Deal 135% damage (3 hits, 45% each)
+     | condition: 40% chance, hp <= 30
+     | (82:7) Cure
+     | Enemy recover 50% hp
+     | condition: 30% chance, hp <= 40
+     | (138:15) Aqua Storm
+     | Deal 135% damage (3 hits, 45% each)

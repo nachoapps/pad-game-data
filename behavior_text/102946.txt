@@ -16,32 +16,25 @@ level: 1
  group:
  | group:
    | group:
-   | condition: turn 1
-     | group:
-       | (8091:63) Bolt Arrow
-       | Bind 1 random subs for 10 turns, Deal 400% damage
+   | condition: turn 1, hp <= 100
+     | (8091:63) Bolt Arrow
+     | Bind 1 random subs for 10 turns, Deal 400% damage
    | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: 60% chance, hp <= 100
-       | (8093:48) Shine Blast
-       | Change Dark to Light, Deal 280% damage
-       | (8094:39) Resting Pulse
-       | Movetime -1s for 1 turns, Deal 280% damage
+     | condition: 60% chance, hp <= 100
+     | (8093:48) Shine Blast
+     | Change Dark to Light, Deal 280% damage
+     | (8094:39) Resting Pulse
+     | Movetime -1s for 1 turns, Deal 280% damage
  | group:
  | condition: hp <= 49
    | group:
-   | condition: turn 2
-     | group:
-       | (8096:67) Gleaming Queen's Trial
-       | Absorb combo <= 8 damage for 8 turns
+   | condition: turn 2, hp <= 100
+     | (8096:67) Gleaming Queen's Trial
+     | Absorb combo <= 8 damage for 8 turns
    | group:
-   | condition: turns 3-9
-     | group:
-       | (8097:101) Gleaming Chains
-       | Fix orb movement starting point to random position on the board, Deal 300% damage
+   | condition: turns 3-9, hp <= 100
+     | (8097:101) Gleaming Chains
+     | Fix orb movement starting point to random position on the board, Deal 300% damage
    | group:
-   | condition: repeats every 1 turns
-     | group:
-       | (8100:83) Sorry + Gleaming Queen's Judgment
-       | Player -99% HP + Deal 15000% damage (5 hits, 3000% each)
+     | (8100:83) Sorry + Gleaming Queen's Judgment
+     | Player -99% HP + Deal 15000% damage (5 hits, 3000% each)

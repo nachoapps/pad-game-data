@@ -8,30 +8,20 @@ approved: False
 
 level: 1
  group:
- | group:
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: 30% chance, hp <= 100
-       | (621:16) Meow meeow meooow♪
-       | Do nothing
+ condition: 30% chance, hp <= 100
+ | (621:16) Meow meeow meooow♪
+ | Do nothing
 
 level: 5
  group:
  | group:
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: 40% chance, hp <= 100
-       | (620:48) Wind Breath nya!
-       | Change Random to Wood, Deal 50% damage
-       | condition: 10% chance, hp <= 100
-       | (621:16) Meow meeow meooow♪
-       | Do nothing
+   | condition: 40% chance, hp <= 100
+   | (620:48) Wind Breath nya!
+   | Change Random to Wood, Deal 50% damage
+   | condition: 10% chance, hp <= 100
+   | (621:16) Meow meeow meooow♪
+   | Do nothing
  | group:
- | condition: hp <= 29
-   | group:
-   | condition: turn 1
-     | group:
-       | (631:50) Barrel Bomb nya!
-       | Player -75% HP
+ | condition: turn 1, hp <= 100
+   | (631:50) Barrel Bomb nya!
+   | Player -75% HP

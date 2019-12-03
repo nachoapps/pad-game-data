@@ -12,20 +12,15 @@ level: 5
  | Jammer skyfall +10% for 3 turns
  group:
  | group:
-   | group:
-   | condition: repeats every 2 turns
-     | group:
-       | (1283:63) Leg Snipe
-       | Bind friend leader for 2 turns, Deal 50% damage
+ | condition: repeats every 2 turns, hp <= 100
+   | (1283:63) Leg Snipe
+   | Bind friend leader for 2 turns, Deal 50% damage
  | group:
  | condition: hp <= 49
    | group:
-   | condition: turn 1
-     | group:
-       | (1284:15) Ride-by Attack
-       | Deal 25% damage
+   | condition: turn 1, hp <= 100
+     | (1284:15) Ride-by Attack
+     | Deal 25% damage
    | group:
-   | condition: repeats every 1 turns
-     | group:
-       | (1285:15) Critical Arrow
-       | Deal 150% damage
+     | (1285:15) Critical Arrow
+     | Deal 150% damage

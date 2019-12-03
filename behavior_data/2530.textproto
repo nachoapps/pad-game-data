@@ -3,13 +3,13 @@
     level: 1
     groups {
       group_type: DEATH
+      condition {
+        hp_threshold: 100
+        use_chance: 100
+        if_defeated: true
+      }
       children {
         behavior {
-          condition {
-            hp_threshold: 100
-            use_chance: 100
-            if_defeated: true
-          }
           enemy_skill_id: 3581
         }
       }
@@ -19,25 +19,25 @@
     level: 5
     groups {
       group_type: PREEMPT
+      condition {
+        hp_threshold: 100
+        use_chance: 100
+      }
       children {
         behavior {
-          condition {
-            hp_threshold: 100
-            use_chance: 100
-          }
           enemy_skill_id: 3582
         }
       }
     }
     groups {
       group_type: DEATH
+      condition {
+        hp_threshold: 100
+        use_chance: 100
+        if_defeated: true
+      }
       children {
         behavior {
-          condition {
-            hp_threshold: 100
-            use_chance: 100
-            if_defeated: true
-          }
           enemy_skill_id: 3581
         }
       }
@@ -51,34 +51,22 @@
             hp_threshold: 100
           }
           children {
-            group {
+            behavior {
               condition {
-                repeats_every: 1
+                hp_threshold: 100
+                use_chance: 50
+                if_attributes_available: true
               }
-              children {
-                group {
-                  group_type: STANDARD
-                  children {
-                    behavior {
-                      condition {
-                        hp_threshold: 100
-                        use_chance: 50
-                        if_attributes_available: true
-                      }
-                      enemy_skill_id: 3584
-                    }
-                  }
-                  children {
-                    behavior {
-                      condition {
-                        hp_threshold: 100
-                        use_chance: 100
-                      }
-                      enemy_skill_id: 3583
-                    }
-                  }
-                }
+              enemy_skill_id: 3584
+            }
+          }
+          children {
+            behavior {
+              condition {
+                hp_threshold: 100
+                use_chance: 100
               }
+              enemy_skill_id: 3583
             }
           }
         }
@@ -87,27 +75,13 @@
         group {
           group_type: STANDARD
           condition {
-            hp_threshold: 79
+            hp_threshold: 80
+            use_chance: 100
+            trigger_turn: 1
           }
           children {
-            group {
-              condition {
-                trigger_turn: 1
-              }
-              children {
-                group {
-                  group_type: STANDARD
-                  children {
-                    behavior {
-                      condition {
-                        hp_threshold: 80
-                        use_chance: 100
-                      }
-                      enemy_skill_id: 3240
-                    }
-                  }
-                }
-              }
+            behavior {
+              enemy_skill_id: 3240
             }
           }
         }
@@ -116,27 +90,12 @@
         group {
           group_type: STANDARD
           condition {
-            hp_threshold: 9
+            hp_threshold: 10
+            use_chance: 100
           }
           children {
-            group {
-              condition {
-                repeats_every: 1
-              }
-              children {
-                group {
-                  group_type: STANDARD
-                  children {
-                    behavior {
-                      condition {
-                        hp_threshold: 10
-                        use_chance: 100
-                      }
-                      enemy_skill_id: 3241
-                    }
-                  }
-                }
-              }
+            behavior {
+              enemy_skill_id: 3241
             }
           }
         }

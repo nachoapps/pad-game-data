@@ -8,23 +8,16 @@ approved: False
 
 level: 1
  group:
- | group:
-   | group:
-   | condition: turn 1
-     | group:
-       | (278:66) Beckoning...
-       | Do nothing
+ condition: turn 1, hp <= 100
+ | (278:66) Beckoning...
+ | Do nothing
 
 level: 3
  group:
  | group:
-   | group:
-   | condition: turn 1
-     | group:
-       | (278:66) Beckoning...
-       | Do nothing
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | (279:15) Cat Paw!
-       | Deal 1000% damage
+ | condition: turn 1, hp <= 100
+   | (278:66) Beckoning...
+   | Do nothing
+ | group:
+   | (279:15) Cat Paw!
+   | Deal 1000% damage

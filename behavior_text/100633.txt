@@ -13,31 +13,23 @@ level: 1
  group:
  | group:
    | group:
-   | condition: turns 1-2
-     | group:
-       | (9474:48) Grovel before me!
-       | Change Random to Jammer, Deal 150% damage
+   | condition: turns 1-2, hp <= 100
+     | (9474:48) Grovel before me!
+     | Change Random to Jammer, Deal 150% damage
    | group:
-   | condition: turn 3
-     | group:
-       | (9475:39) Patience Reward
-       | Movetime 150% for 10 turns
+   | condition: turn 3, hp <= 100
+     | (9475:39) Patience Reward
+     | Movetime 150% for 10 turns
    | group:
-   | condition: repeats every 1 turns
-     | group:
-       | (9474:48) Grovel before me!
-       | Change Random to Jammer, Deal 150% damage
+     | (9474:48) Grovel before me!
+     | Change Random to Jammer, Deal 150% damage
  | group:
  | condition: hp <= 49
    | group:
-   | condition: turns 1-2
-     | group:
-       | condition: hp <= 50
-       | (9473:15) Hoo hoo hoo!
-       | Deal 240% damage (3 hits, 80% each)
+   | condition: turns 1-2, hp <= 50
+     | (9473:15) Hoo hoo hoo!
+     | Deal 240% damage (3 hits, 80% each)
    | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: hp <= 50
-       | (9473:15) Hoo hoo hoo!
-       | Deal 240% damage (3 hits, 80% each)
+   | condition: hp <= 50
+     | (9473:15) Hoo hoo hoo!
+     | Deal 240% damage (3 hits, 80% each)

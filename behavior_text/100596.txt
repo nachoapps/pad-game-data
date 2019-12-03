@@ -12,36 +12,22 @@ level: 1
  | Bind 5 random cards for 1~2 turns + Bind active skills for 3 turns
  group:
  | group:
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: when required attributes on board, hp <= 100
-       | (9377:92) Cooling Poison
-       | Spawn random 1 Poison orbs, Deal 80% damage
+ | condition: when required attributes on board, hp <= 100
+   | (9377:92) Cooling Poison
+   | Spawn random 1 Poison orbs, Deal 80% damage
  | group:
  | condition: hp <= 74
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: 80% chance, hp <= 75
-       | (9378:15) Freeze Blast
-       | Deal 120% damage (2 hits, 60% each)
-       | condition: when required attributes on board, hp <= 100
-       | (9377:92) Cooling Poison
-       | Spawn random 1 Poison orbs, Deal 80% damage
+   | condition: 80% chance, hp <= 75
+   | (9378:15) Freeze Blast
+   | Deal 120% damage (2 hits, 60% each)
+   | condition: when required attributes on board, hp <= 100
+   | (9377:92) Cooling Poison
+   | Spawn random 1 Poison orbs, Deal 80% damage
  | group:
- | condition: hp <= 54
-   | group:
-   | condition: turn 1
-     | group:
-       | condition: hp <= 55
-       | (9381:83) Divine Mischief + Freeze
-       | Change Random 2 to Jammer + Lock all Jammer orbs, Deal 100% damage
+ | condition: turn 1, hp <= 55
+   | (9381:83) Divine Mischief + Freeze
+   | Change Random 2 to Jammer + Lock all Jammer orbs, Deal 100% damage
  | group:
- | condition: hp <= 29
-   | group:
-   | condition: turn 2
-     | group:
-       | condition: hp <= 30
-       | (9384:83) Crystal Coffin + Serene Wrath
-       | Bind 3 random cards for 2~3 turns + Increase damage to 200% for the next 999 turns
+ | condition: turn 2, hp <= 30
+   | (9384:83) Crystal Coffin + Serene Wrath
+   | Bind 3 random cards for 2~3 turns + Increase damage to 200% for the next 999 turns

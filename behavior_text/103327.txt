@@ -16,65 +16,49 @@ level: 1
  group:
  | group:
    | group:
-   | condition: turn 1
-     | group:
-       | (5979:83) Bouclier du Vent + Embrassement du Vent
-       | Voids status ailments for 999 turns + Bind 1 random subs for 4 turns, Deal 150% damage
+   | condition: turn 1, hp <= 100
+     | (5979:83) Bouclier du Vent + Embrassement du Vent
+     | Voids status ailments for 999 turns + Bind 1 random subs for 4 turns, Deal 150% damage
    | group:
-   | condition: turn 2
-     | group:
-       | (5980:104) Siège de Brouillard
-       | 2x2 cloud appear for 1 turns at random location, Deal 140% damage
+   | condition: turn 2, hp <= 100
+     | (5980:104) Siège de Brouillard
+     | 2x2 cloud appear for 1 turns at random location, Deal 140% damage
    | group:
-   | condition: turn 3
-     | group:
-       | (5981:98) Lame Foncée
-       | Blind orbs in specific positions for 1 turns, Deal 140% damage
+   | condition: turn 3, hp <= 100
+     | (5981:98) Lame Foncée
+     | Blind orbs in specific positions for 1 turns, Deal 140% damage
    | group:
-   | condition: turn 4
-     | group:
-       | (5982:86) Got tired and fell asleep
-       | Enemy recover 100% hp
+   | condition: turn 4, hp <= 100
+     | (5982:86) Got tired and fell asleep
+     | Enemy recover 100% hp
    | group:
-   | condition: turn 5
-     | group:
-       | (5983:86) Sound asleep
-       | Enemy recover 20% hp
+   | condition: turn 5, hp <= 100
+     | (5983:86) Sound asleep
+     | Enemy recover 20% hp
    | group:
-   | condition: turn 6
-     | group:
-       | (5984:86) Sound asleep
-       | Enemy recover 20% hp
+   | condition: turn 6, hp <= 100
+     | (5984:86) Sound asleep
+     | Enemy recover 20% hp
    | group:
-   | condition: turn 7
-     | group:
-       | (5988:83) Woke up + You were waiting for me, weren't you?
-       | Do nothing + Do nothing
+   | condition: turn 7, hp <= 100
+     | (5988:83) Woke up + You were waiting for me, weren't you?
+     | Do nothing + Do nothing
    | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: 50% chance, hp <= 100
-       | (5994:104) Siège de Brouillard
-       | 2x2 cloud appear for 1 turns at random location, Deal 140% damage
-       | (5995:98) Lame Foncée
-       | Blind orbs in specific positions for 1 turns, Deal 140% damage
+     | condition: 50% chance, hp <= 100
+     | (5994:104) Siège de Brouillard
+     | 2x2 cloud appear for 1 turns at random location, Deal 140% damage
+     | (5995:98) Lame Foncée
+     | Blind orbs in specific positions for 1 turns, Deal 140% damage
  | group:
- | condition: hp <= 98
-   | group:
-   | condition: turn 7
-     | group:
-       | condition: hp <= 99
-       | (5989:83) Woke up + Sorry about that, let's continue!
-       | Do nothing + Increase damage to 150% for the next 999 turns
+ | condition: turn 7, hp <= 99
+   | (5989:83) Woke up + Sorry about that, let's continue!
+   | Do nothing + Increase damage to 150% for the next 999 turns
  | group:
  | condition: hp <= 19
    | group:
-   | condition: turn 5
-     | group:
-       | (5997:83) Woke up startled + I'm just a little cranky, you know?
-       | Reduce damage from all sources by 75% for 3 turns + Increase damage to 200% for the next 999 turns
+   | condition: turn 5, hp <= 100
+     | (5997:83) Woke up startled + I'm just a little cranky, you know?
+     | Reduce damage from all sources by 75% for 3 turns + Increase damage to 200% for the next 999 turns
    | group:
-   | condition: repeats every 1 turns
-     | group:
-       | (5993:15) Fée Colère
-       | Deal 3000% damage (3 hits, 1000% each)
+     | (5993:15) Fée Colère
+     | Deal 3000% damage (3 hits, 1000% each)

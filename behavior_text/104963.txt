@@ -8,32 +8,21 @@ approved: False
 
 level: 4
  type: PREEMPT
- | condition: when required attributes on board, hp <= 100
+ condition: when required attributes on board, hp <= 100
  | (12060:92) チヤホヤしてくれよぉ！
  | Spawn random 6 Heal orbs
  group:
  | group:
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: 40% chance, hp <= 100
-       | (11891:15) ガルルッ！！
-       | Deal 110% damage
-       | condition: 40% chance, hp <= 100
-       | (11892:48) アチッ！　アチチチッ！！
-       | Change Random to Fire, Deal 90% damage
+   | condition: 40% chance, hp <= 100
+   | (11891:15) ガルルッ！！
+   | Deal 110% damage
+   | condition: 40% chance, hp <= 100
+   | (11892:48) アチッ！　アチチチッ！！
+   | Change Random to Fire, Deal 90% damage
  | group:
- | condition: hp <= 14
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | (11894:15) おっさんかみマックス
-       | Deal 180% damage (3 hits, 60% each)
+   | (11894:15) おっさんかみマックス
+   | Deal 180% damage (3 hits, 60% each)
  type: REMAINING
- condition: when 1 enemies remain
- | group:
-   | group:
-   | condition: turn 1
-     | group:
-       | (12061:50) チクショー！
-       | Player -99% HP
+ condition: when 1 enemies remain, turn 1, hp <= 100
+ | (12061:50) チクショー！
+ | Player -99% HP

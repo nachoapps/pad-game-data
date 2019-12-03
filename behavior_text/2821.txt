@@ -12,37 +12,28 @@ level: 1
  | Change all orbs to Fire, Water, Wood, Light, Dark, Jammer, Poison, Deal 60% damage + Lock all Jammer, Poison orbs
  group:
  | group:
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: 16% chance, hp <= 100
-       | (13140:48) Concentrate!
-       | Change Water to Fire, Deal 60% damage
-       | condition: 60% chance, hp <= 100
-       | (13140:48) Concentrate!
-       | Change Water to Fire, Deal 60% damage
-       | condition: 60% chance, hp <= 100
-       | (13141:79) Don't give up!
-       | Change 1st, 2nd row to Fire, Jammer, Poison orbs, Deal 60% damage
+   | condition: 16% chance, hp <= 100
+   | (13140:48) Concentrate!
+   | Change Water to Fire, Deal 60% damage
+   | condition: 60% chance, hp <= 100
+   | (13140:48) Concentrate!
+   | Change Water to Fire, Deal 60% damage
+   | condition: 60% chance, hp <= 100
+   | (13141:79) Don't give up!
+   | Change 1st, 2nd row to Fire, Jammer, Poison orbs, Deal 60% damage
  | group:
- | condition: hp <= 79
-   | group:
-   | condition: turn 1
-     | group:
-       | condition: 16% chance, hp <= 100
-       | (13140:48) Concentrate!
-       | Change Water to Fire, Deal 60% damage
-       | condition: hp <= 80
-       | (13142:74) It really starts now
-       | Reduce damage from all sources by 50% for 10 turns
+ | condition: turn 1, hp <= 79
+   | condition: 16% chance, hp <= 100
+   | (13140:48) Concentrate!
+   | Change Water to Fire, Deal 60% damage
+   | condition: hp <= 80
+   | (13142:74) It really starts now
+   | Reduce damage from all sources by 50% for 10 turns
  | group:
  | condition: hp <= 29
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: 16% chance, hp <= 100
-       | (13140:48) Concentrate!
-       | Change Water to Fire, Deal 60% damage
-       | condition: hp <= 30
-       | (13143:15) Pick up everything!
-       | Deal 150% damage (5 hits, 30% each)
+   | condition: 16% chance, hp <= 100
+   | (13140:48) Concentrate!
+   | Change Water to Fire, Deal 60% damage
+   | condition: hp <= 30
+   | (13143:15) Pick up everything!
+   | Deal 150% damage (5 hits, 30% each)

@@ -13,36 +13,26 @@ level: 1
  group:
  | group:
    | group:
-   | condition: turn 1
-     | group:
-       | (5588:20) Aegis Shield
-       | Voids status ailments for 999 turns
+   | condition: turn 1, hp <= 100
+     | (5588:20) Aegis Shield
+     | Voids status ailments for 999 turns
    | group:
-   | condition: repeats every 1 turns
-     | group:
-       | (5589:48) Shining Spear
-       | Change Random to Light, Deal 80% damage
+     | (5589:48) Shining Spear
+     | Change Random to Light, Deal 80% damage
  | group:
  | condition: hp <= 59
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: 50% chance, hp <= 60
-       | (5590:15) Storm Punisher
-       | Deal 120% damage (6 hits, 20% each)
-       | (5589:48) Shining Spear
-       | Change Random to Light, Deal 80% damage
+   | condition: 50% chance, hp <= 60
+   | (5590:15) Storm Punisher
+   | Deal 120% damage (6 hits, 20% each)
+   | (5589:48) Shining Spear
+   | Change Random to Light, Deal 80% damage
  | group:
  | condition: hp <= 34
    | group:
-   | condition: turn 2
-     | group:
-       | condition: hp <= 35
-       | (5591:104) End of the line!
-       | 2x5 cloud appear for 2 turns at 1st row, 3rd column
+   | condition: turn 2, hp <= 35
+     | (5591:104) End of the line!
+     | 2x5 cloud appear for 2 turns at 1st row, 3rd column
    | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: hp <= 35
-       | (5592:15) Lightning Starburst
-       | Deal 2000% damage (10 hits, 200% each)
+   | condition: hp <= 35
+     | (5592:15) Lightning Starburst
+     | Deal 2000% damage (10 hits, 200% each)

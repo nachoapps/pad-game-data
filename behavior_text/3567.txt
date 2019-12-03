@@ -8,7 +8,7 @@ approved: False
 
 level: 1
  type: DEATH
- | condition: when defeated, hp <= 100
+ condition: when defeated, hp <= 100
  | (8862:69) Machine Transformation
  | Show message: Hey, hey! You finally joined!!|Hyaaaaaaaa!!
 
@@ -17,50 +17,40 @@ level: 4
  | (8854:1) I got you! Let's battle!!
  | Bind 6 random cards for 2 turns
  type: DEATH
- | condition: when defeated, hp <= 100
+ condition: when defeated, hp <= 100
  | (8862:69) Machine Transformation
  | Show message: Hey, hey! You finally joined!!|Hyaaaaaaaa!!
  group:
  | group:
    | group:
-   | condition: turn 1
-     | group:
-       | (8855:50) Giant Fist
-       | Player -99% HP
+   | condition: turn 1, hp <= 100
+     | (8855:50) Giant Fist
+     | Player -99% HP
+   | group:
+   | condition: repeats every 2 turns, hp <= 100
+     | (8856:98) X Knuckles
+     | Blind orbs in specific positions for 1 turns, Deal 120% damage
    | group:
    | condition: repeats every 2 turns
-     | group:
-       | (8856:98) X Knuckles
-       | Blind orbs in specific positions for 1 turns, Deal 120% damage
-   | group:
-   | condition: repeats every 2 turns
-     | group:
-       | condition: 50% chance, hp <= 100
-       | (8857:79) Shadow Punch
-       | Change 3rd row to Dark orbs, Deal 140% damage
-       | (8858:108) Killing Knuckles
-       | Change Heal to Poison, Deal 100% damage
+     | condition: 50% chance, hp <= 100
+     | (8857:79) Shadow Punch
+     | Change 3rd row to Dark orbs, Deal 140% damage
+     | (8858:108) Killing Knuckles
+     | Change Heal to Poison, Deal 100% damage
  | group:
  | condition: hp <= 49
    | group:
-   | condition: turn 1
-     | group:
-       | (8860:39) Double Smoke
-       | Movetime -2s for 5 turns
+   | condition: turn 1, hp <= 100
+     | (8860:39) Double Smoke
+     | Movetime -2s for 5 turns
    | group:
-   | condition: repeats every 2 turns
-     | group:
-       | (8856:98) X Knuckles
-       | Blind orbs in specific positions for 1 turns, Deal 120% damage
+   | condition: repeats every 2 turns, hp <= 100
+     | (8856:98) X Knuckles
+     | Blind orbs in specific positions for 1 turns, Deal 120% damage
    | group:
-   | condition: repeats every 2 turns
-     | group:
-       | (8859:89) Grief Punch
-       | Delay active skills by 2 turns, Deal 120% damage
+   | condition: repeats every 2 turns, hp <= 100
+     | (8859:89) Grief Punch
+     | Delay active skills by 2 turns, Deal 120% damage
  | group:
- | condition: hp <= 9
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | (8861:15) Sechs Knuckles
-       | Deal 210% damage (6 hits, 35% each)
+   | (8861:15) Sechs Knuckles
+   | Deal 210% damage (6 hits, 35% each)

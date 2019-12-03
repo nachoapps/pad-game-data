@@ -9,33 +9,25 @@ approved: False
 level: 1
  group:
  | group:
-   | group:
-   | condition: repeats every 2 turns
-     | group:
-       | (1197:48) これ以上悪あがきはよせ
-       | Change Random to Jammer, Deal 80% damage
+ | condition: repeats every 2 turns, hp <= 100
+   | (1197:48) これ以上悪あがきはよせ
+   | Change Random to Jammer, Deal 80% damage
  | group:
  | condition: hp <= 74
    | group:
-   | condition: repeats every 2 turns
-     | group:
-       | (1197:48) これ以上悪あがきはよせ
-       | Change Random to Jammer, Deal 80% damage
+   | condition: repeats every 2 turns, hp <= 100
+     | (1197:48) これ以上悪あがきはよせ
+     | Change Random to Jammer, Deal 80% damage
    | group:
-   | condition: repeats every 2 turns
-     | group:
-       | condition: hp <= 75
-       | (1198:15) ジャンピングストーン!!
-       | Deal 125% damage
+   | condition: repeats every 2 turns, hp <= 75
+     | (1198:15) ジャンピングストーン!!
+     | Deal 125% damage
  | group:
  | condition: hp <= 49
    | group:
-   | condition: turn 1
-     | group:
-       | (1199:66) もはや死に時だ
-       | Do nothing
+   | condition: turn 1, hp <= 100
+     | (1199:66) もはや死に時だ
+     | Do nothing
    | group:
-   | condition: repeats every 1 turns
-     | group:
-       | (1200:15) エクスカリバー!!
-       | Deal 200% damage
+     | (1200:15) エクスカリバー!!
+     | Deal 200% damage

@@ -12,19 +12,14 @@ level: 4
  | Voids status ailments for 3 turns
  group:
  | group:
-   | group:
-   | condition: repeats every 4 turns
-     | group:
-       | (5051:15) Dokuro Attack
-       | Deal 100% damage (2 hits, 50% each)
-   | group:
-   | condition: repeats every 4 turns
-     | group:
-       | condition: when required attributes on board, hp <= 100
-       | (5052:92) Dokuro Crisis
-       | Spawn random 3 Poison orbs, Deal 80% damage
-   | group:
-   | condition: repeats every 4 turns
-     | group:
-       | (5051:15) Dokuro Attack
-       | Deal 100% damage (2 hits, 50% each)
+ | condition: repeats every 4 turns, hp <= 100
+   | (5051:15) Dokuro Attack
+   | Deal 100% damage (2 hits, 50% each)
+ | group:
+ | condition: repeats every 4 turns, when required attributes on board, hp <= 100
+   | (5052:92) Dokuro Crisis
+   | Spawn random 3 Poison orbs, Deal 80% damage
+ | group:
+ | condition: repeats every 4 turns, hp <= 100
+   | (5051:15) Dokuro Attack
+   | Deal 100% damage (2 hits, 50% each)

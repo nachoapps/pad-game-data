@@ -11,48 +11,40 @@ level: 1
  | (2759:67) Come.
  | Absorb combo <= 4 damage for 3 turns
  type: DEATH
- | condition: when defeated, hp <= 100
+ condition: when defeated, hp <= 100
  | (2767:95) Damn it...
  | Spawn random 3 Jammer orbs
  group:
  | group:
    | group:
-   | condition: turn 1
-     | group:
-       | (2760:15) Roar Zabimaru!!!
-       | Deal 114% damage (3 hits, 38% each)
+   | condition: turn 1, hp <= 100
+     | (2760:15) Roar Zabimaru!!!
+     | Deal 114% damage (3 hits, 38% each)
    | group:
    | condition: turn 2
-     | group:
-       | condition: 50% chance, hp <= 100
-       | (2761:62) There's still no way you can defeat me!
-       | Blind all orbs on the board, Deal 90% damage
-       | (2762:14) It's over!
-       | Bind active skills for 1 turns
-       | (2763:15) You scum!!!
-       | Deal 120% damage
+     | condition: 50% chance, hp <= 100
+     | (2761:62) There's still no way you can defeat me!
+     | Blind all orbs on the board, Deal 90% damage
+     | (2762:14) It's over!
+     | Bind active skills for 1 turns
+     | (2763:15) You scum!!!
+     | Deal 120% damage
    | group:
-   | condition: repeats every 1 turns
-     | group:
-       | (2763:15) You scum!!!
-       | Deal 120% damage
+     | (2763:15) You scum!!!
+     | Deal 120% damage
  | group:
  | condition: hp <= 49
    | group:
    | condition: turn 1
-     | group:
-       | condition: when 2702, 2703 on team, hp <= 100
-       | (2859:83) I will surpass you, Captain Kuchiki. + Bankai + Hihio Zabimaru
-       | Do nothing + Do nothing + Increase damage to 200% for the next 999 turns
-       | (2863:83) Bankai + Hihio Zabimaru
-       | Do nothing + Increase damage to 200% for the next 999 turns
+     | condition: when 2702, 2703 on team, hp <= 100
+     | (2859:83) I will surpass you, Captain Kuchiki. + Bankai + Hihio Zabimaru
+     | Do nothing + Do nothing + Increase damage to 200% for the next 999 turns
+     | (2863:83) Bankai + Hihio Zabimaru
+     | Do nothing + Increase damage to 200% for the next 999 turns
    | group:
-   | condition: turn 2
-     | group:
-       | (2765:15) I see you!!
-       | Deal 114% damage (3 hits, 38% each)
+   | condition: turn 2, hp <= 100
+     | (2765:15) I see you!!
+     | Deal 114% damage (3 hits, 38% each)
    | group:
-   | condition: repeats every 1 turns
-     | group:
-       | (2766:15) Joint attack
-       | Deal 90% damage (2 hits, 45% each)
+     | (2766:15) Joint attack
+     | Deal 90% damage (2 hits, 45% each)

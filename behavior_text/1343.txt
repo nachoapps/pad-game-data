@@ -12,29 +12,20 @@ level: 1
  | Movetime -2s for 5 turns
  group:
  | group:
-   | group:
-   | condition: repeats every 2 turns
-     | group:
-       | (1421:48) Dark Dragon Wave
-       | Change Random to Dark, Deal 150% damage
+ | condition: repeats every 2 turns, hp <= 100
+   | (1421:48) Dark Dragon Wave
+   | Change Random to Dark, Deal 150% damage
  | group:
  | condition: hp <= 69
    | group:
-   | condition: repeats every 2 turns
-     | group:
-       | (1421:48) Dark Dragon Wave
-       | Change Random to Dark, Deal 150% damage
+   | condition: repeats every 2 turns, hp <= 100
+     | (1421:48) Dark Dragon Wave
+     | Change Random to Dark, Deal 150% damage
    | group:
-   | condition: repeats every 2 turns
-     | group:
-       | condition: hp <= 70
-       | (1420:15) Extreme Twin Dragon Palms
-       | Deal 200% damage (2 hits, 100% each)
+   | condition: repeats every 2 turns, hp <= 70
+     | (1420:15) Extreme Twin Dragon Palms
+     | Deal 200% damage (2 hits, 100% each)
  | group:
- | condition: hp <= 29
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: hp <= 30
-       | (1422:48) Extreme Dark Dragon Wave
-       | Change Random to Dark, Deal 300% damage
+ | condition: hp <= 30
+   | (1422:48) Extreme Dark Dragon Wave
+   | Change Random to Dark, Deal 300% damage

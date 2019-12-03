@@ -10,29 +10,18 @@ level: 1
  group:
  | group:
    | group:
-   | condition: repeats every 2 turns
-     | group:
-       | (723:60) Devilit Poison
-       | Change Random 6 to Poison
+   | condition: repeats every 2 turns, hp <= 100
+     | (723:60) Devilit Poison
+     | Change Random 6 to Poison
    | group:
-   | condition: repeats every 2 turns
-     | group:
-       | (724:48) Heart Break
-       | Change Heal to Jammer, Deal 100% damage
+   | condition: repeats every 2 turns, hp <= 100
+     | (724:48) Heart Break
+     | Change Heal to Jammer, Deal 100% damage
  | group:
- | condition: hp <= 19
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: hp <= 20
-       | (722:15) Hell & Heaven
-       | Deal 200% damage (4 hits, 50% each)
+ | condition: hp <= 20
+   | (722:15) Hell & Heaven
+   | Deal 200% damage (4 hits, 50% each)
  type: REMAINING
- condition: when 1 enemies remain
- | group:
-   | group:
-   | condition: turn 1
-     | group:
-       | condition: when 1 enemies remain, hp <= 100
-       | (721:17) Angrilit
-       | Increase damage to 300% for the next 999 turns
+ condition: when 1 enemies remain, turn 1, hp <= 100
+ | (721:17) Angrilit
+ | Increase damage to 300% for the next 999 turns

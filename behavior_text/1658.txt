@@ -15,13 +15,10 @@ level: 1
  | Specific orbs change every 1.0s for 5 turns
  group:
  | group:
-   | group:
-   | condition: repeats every 4 turns
-     | group:
-       | (7696:15) Death Viper Slash
-       | Deal 500% damage (2 hits, 250% each)
-   | group:
-   | condition: repeats every 4 turns
-     | group:
-       | (7697:19) Evil Crest
-       | Increase damage to 250% for the next 1 turns
+ | condition: repeats every 4 turns, hp <= 100
+   | (7696:15) Death Viper Slash
+   | Deal 500% damage (2 hits, 250% each)
+ | group:
+ | condition: repeats every 4 turns, hp <= 100
+   | (7697:19) Evil Crest
+   | Increase damage to 250% for the next 1 turns

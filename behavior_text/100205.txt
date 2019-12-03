@@ -12,20 +12,16 @@ level: 4
  | Heal skyfall +25% for 3 turns
  group:
  | group:
-   | group:
-   | condition: repeats every 3 turns
-     | group:
-       | (9121:48) I don't need this!
-       | Change Light to Jammer, Deal 80% damage
-       | (9224:48) Don't need this!
-       | Change Heal to Poison, Deal 80% damage
-   | group:
-   | condition: repeats every 3 turns
-     | group:
-       | (9122:85) Dye it!
-       | Change all orbs to Dark, Deal 60% damage
-   | group:
-   | condition: repeats every 3 turns
-     | group:
-       | (9123:15) I'm bored of this now
-       | Deal 180% damage (3 hits, 60% each)
+ | condition: repeats every 3 turns
+   | (9121:48) I don't need this!
+   | Change Light to Jammer, Deal 80% damage
+   | (9224:48) Don't need this!
+   | Change Heal to Poison, Deal 80% damage
+ | group:
+ | condition: repeats every 3 turns, hp <= 100
+   | (9122:85) Dye it!
+   | Change all orbs to Dark, Deal 60% damage
+ | group:
+ | condition: repeats every 3 turns, hp <= 100
+   | (9123:15) I'm bored of this now
+   | Deal 180% damage (3 hits, 60% each)

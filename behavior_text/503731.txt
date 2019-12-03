@@ -11,27 +11,20 @@ level: 1
  | (14566:83) Well, let's get things started + Frolicking Flame Tail
  | 2x2 cloud appear for 3 turns at 4th row, 4th column + Fix orb movement starting point to random position on the board, Deal 100% damage
  type: DEATH
- | condition: when defeated, hp <= 100
+ condition: when defeated, hp <= 100
  | (14572:69) Valten's Transformation
  | Show message: Little ones|Show me your strength
  group:
  | group:
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: when 2 combos last turn, hp <= 100
-       | (14570:15) Nudge
-       | Deal 110% damage
-       | condition: 50% chance, when required attributes on board, when 2 combos last turn, hp <= 100
-       | (14568:92) Hellfire's Scent
-       | Spawn random 5 Fire orbs, Deal 100% damage
-       | (14569:50) Warm Winds
-       | Player -80% HP
+   | condition: when 2 combos last turn, hp <= 100
+   | (14570:15) Nudge
+   | Deal 110% damage
+   | condition: 50% chance, when required attributes on board, when 2 combos last turn, hp <= 100
+   | (14568:92) Hellfire's Scent
+   | Spawn random 5 Fire orbs, Deal 100% damage
+   | (14569:50) Warm Winds
+   | Player -80% HP
  | group:
- | condition: hp <= 49
-   | group:
-   | condition: turn 1
-     | group:
-       | condition: hp <= 50
-       | (14571:68) Molten Rock Downpour
-       | Fire, Jammer skyfall +15% for 5 turns
+ | condition: turn 1, hp <= 50
+   | (14571:68) Molten Rock Downpour
+   | Fire, Jammer skyfall +15% for 5 turns

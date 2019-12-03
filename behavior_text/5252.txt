@@ -8,31 +8,24 @@ approved: False
 
 level: 1
  type: PREEMPT
- | condition: when required attributes on board, hp <= 100
+ condition: when required attributes on board, hp <= 100
  | (13262:92) My mana burns with passion.
  | Spawn random 3 Wood, Dark orbs
  group:
  | group:
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: 25% chance, hp <= 100
-       | (13265:50) You're gonna get hurt!
-       | Player -25% HP
-       | condition: 33% chance, hp <= 100
-       | (13263:48) Wanna dance punk?
-       | Change Random to Dark, Deal 90% damage
-       | condition: 33% chance, hp <= 100
-       | (13264:15) Hmph! Hmph! Hmph!
-       | Deal 105% damage (3 hits, 35% each)
-       | condition: 34% chance, hp <= 100
-       | (13266:89) This is really gonna hurt.
-       | Delay active skills by 1 turns, Deal 100% damage
+   | condition: 25% chance, hp <= 100
+   | (13265:50) You're gonna get hurt!
+   | Player -25% HP
+   | condition: 33% chance, hp <= 100
+   | (13263:48) Wanna dance punk?
+   | Change Random to Dark, Deal 90% damage
+   | condition: 33% chance, hp <= 100
+   | (13264:15) Hmph! Hmph! Hmph!
+   | Deal 105% damage (3 hits, 35% each)
+   | condition: 34% chance, hp <= 100
+   | (13266:89) This is really gonna hurt.
+   | Delay active skills by 1 turns, Deal 100% damage
  | group:
- | condition: hp <= 49
-   | group:
-   | condition: turn 1
-     | group:
-       | condition: when 1 enemies remain, hp <= 100
-       | (13267:17) Are you ready?
-       | Increase damage to 150% for the next 5 turns
+ | condition: when 1 enemies remain, turn 1, hp <= 100
+   | (13267:17) Are you ready?
+   | Increase damage to 150% for the next 5 turns

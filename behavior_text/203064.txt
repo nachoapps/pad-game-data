@@ -12,20 +12,14 @@ level: 1
  | Voids status ailments for 999 turns
  group:
  | group:
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | (5057:48) Blue Sphere
-       | Change Random to Water, Deal 100% damage
+   | (5057:48) Blue Sphere
+   | Change Random to Water, Deal 100% damage
  | group:
  | condition: hp <= 39
    | group:
-   | condition: turn 1
-     | group:
-       | (5062:66) Draco Summon TAMA!
-       | Do nothing
+   | condition: turn 1, hp <= 100
+     | (5062:66) Draco Summon TAMA!
+     | Do nothing
    | group:
-   | condition: repeats every 1 turns
-     | group:
-       | (5058:77) Crystal Fang
-       | Change 2nd, 5th column to Water orbs, Deal 500% damage
+     | (5058:77) Crystal Fang
+     | Change 2nd, 5th column to Water orbs, Deal 500% damage

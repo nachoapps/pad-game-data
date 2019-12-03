@@ -20,33 +20,26 @@ level: 4
  | Reduce damage from all sources by 75% for 99 turns + Change all orbs to Heal + Unable to match Heal orbs for 6 turns
  group:
  | group:
-   | group:
-   | condition: repeats every 6 turns
-     | group:
-       | (9071:78) One
-       | Change 3rd row to Fire orbs
-   | group:
-   | condition: repeats every 6 turns
-     | group:
-       | (9072:76) Two
-       | Change 2nd column to Water orbs, 5th column to Wood orbs
-   | group:
-   | condition: repeats every 6 turns
-     | group:
-       | (9073:78) Three
-       | Change 1st row to Light orbs, 3rd row to Dark orbs
-   | group:
-   | condition: repeats every 6 turns
-     | group:
-       | (9074:76) Four
-       | Change 1st column to Water orbs, 3rd column to Wood orbs
-   | group:
-   | condition: repeats every 6 turns
-     | group:
-       | (9075:84) Five
-       | Change all orbs to Heal
-   | group:
-   | condition: repeats every 6 turns
-     | group:
-       | (9076:15) Sleep for eternity
-       | Deal 2400% damage (6 hits, 400% each)
+ | condition: repeats every 6 turns, hp <= 100
+   | (9071:78) One
+   | Change 3rd row to Fire orbs
+ | group:
+ | condition: repeats every 6 turns, hp <= 100
+   | (9072:76) Two
+   | Change 2nd column to Water orbs, 5th column to Wood orbs
+ | group:
+ | condition: repeats every 6 turns, hp <= 100
+   | (9073:78) Three
+   | Change 1st row to Light orbs, 3rd row to Dark orbs
+ | group:
+ | condition: repeats every 6 turns, hp <= 100
+   | (9074:76) Four
+   | Change 1st column to Water orbs, 3rd column to Wood orbs
+ | group:
+ | condition: repeats every 6 turns, hp <= 100
+   | (9075:84) Five
+   | Change all orbs to Heal
+ | group:
+ | condition: repeats every 6 turns, hp <= 100
+   | (9076:15) Sleep for eternity
+   | Deal 2400% damage (6 hits, 400% each)

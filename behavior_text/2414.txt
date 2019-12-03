@@ -12,19 +12,13 @@ level: 4
  | Voids status ailments for 999 turns
  group:
  | group:
-   | group:
-   | condition: turn 1
-     | group:
-       | (3413:50) Barbell Drop
-       | Player -99% HP
-   | group:
-   | condition: turn 2
-     | group:
-       | condition: when 1 enemies remain, hp <= 100
-       | (3411:17) Pump Up
-       | Increase damage to 200% for the next 999 turns
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | (3412:15) Muscle Impact
-       | Deal 300% damage (3 hits, 100% each)
+ | condition: turn 1, hp <= 100
+   | (3413:50) Barbell Drop
+   | Player -99% HP
+ | group:
+ | condition: when 1 enemies remain, turn 2, hp <= 100
+   | (3411:17) Pump Up
+   | Increase damage to 200% for the next 999 turns
+ | group:
+   | (3412:15) Muscle Impact
+   | Deal 300% damage (3 hits, 100% each)

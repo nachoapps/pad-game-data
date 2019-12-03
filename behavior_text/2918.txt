@@ -11,41 +11,25 @@ level: 1
  | (15125:83) Hey! I'm back! + Let me have some more fun + Well, this is a start! + Okay, try to beat me!
  | No skyfall for 5 turns + Change all orbs to Fire, Water, Wood, Light, Dark, Heal + 2x5 cloud appear for 1 turns at 1st row, 3rd column + Absorb combo <= 5 damage for 1 turns
  type: DEATH
- | condition: when defeated, hp <= 100
+ condition: when defeated, hp <= 100
  | (15150:95) Huh, better than I thought
  | Do nothing
  group:
  | group:
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | (15148:50) What are you doing!
-       | Player -1000% HP
+   | (15148:50) What are you doing!
+   | Player -1000% HP
  | group:
- | condition: hp <= 79
-   | group:
-   | condition: turn 1
-     | group:
-       | (15129:83) How about this? + We're only getting started + I wonder, can you do it?
-       | Spawn random 6 Fire, Water, Wood, Light, Dark orbs + Specific orbs change every 1.0s for 1 turns + Absorb combo <= 6 damage for 1 turns
+ | condition: turn 1, hp <= 100
+   | (15129:83) How about this? + We're only getting started + I wonder, can you do it?
+   | Spawn random 6 Fire, Water, Wood, Light, Dark orbs + Specific orbs change every 1.0s for 1 turns + Absorb combo <= 6 damage for 1 turns
  | group:
- | condition: hp <= 61
-   | group:
-   | condition: turn 2
-     | group:
-       | (15134:83) Huh, pretty good + Don't back down now + Here, speed is important + Try to wrap this up smoothly + Here's a present
-       | Change 1st, 3rd, 5th column to Water orbs, 2nd column to Fire orbs + Spawn Bomb orbs in the specified positions + Seal 5th row for 1 turns + Absorb combo <= 7 damage for 1 turns + Row of cloud appear for 1 turns at 1st column
+ | condition: turn 2, hp <= 100
+   | (15134:83) Huh, pretty good + Don't back down now + Here, speed is important + Try to wrap this up smoothly + Here's a present
+   | Change 1st, 3rd, 5th column to Water orbs, 2nd column to Fire orbs + Spawn Bomb orbs in the specified positions + Seal 5th row for 1 turns + Absorb combo <= 7 damage for 1 turns + Row of cloud appear for 1 turns at 1st column
  | group:
- | condition: hp <= 39
-   | group:
-   | condition: turn 3
-     | group:
-       | (15139:83) You can do it if you try! + I'll be impressed if you can do it + Yoooo! + You'd better look out!
-       | Change all orbs to Light + Spawn random 9 Heal, Jammer, Poison orbs + Blind all orbs for 1 turns + Absorb combo <= 8 damage for 1 turns
+ | condition: turn 3, hp <= 100
+   | (15139:83) You can do it if you try! + I'll be impressed if you can do it + Yoooo! + You'd better look out!
+   | Change all orbs to Light + Spawn random 9 Heal, Jammer, Poison orbs + Blind all orbs for 1 turns + Absorb combo <= 8 damage for 1 turns
  | group:
- | condition: hp <= 19
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | (15144:83) I didn't think you'd make it this far + This is my last shot! + Don't mess this up!!
-       | Spawn Bomb orbs in the specified positions + Spawn random 3 Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison orbs + Absorb combo <= 9 damage for 1 turns
+   | (15144:83) I didn't think you'd make it this far + This is my last shot! + Don't mess this up!!
+   | Spawn Bomb orbs in the specified positions + Spawn random 3 Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison orbs + Absorb combo <= 9 damage for 1 turns

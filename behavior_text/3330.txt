@@ -9,14 +9,10 @@ approved: False
 level: 1
  group:
  | group:
-   | group:
-   | condition: repeats every 2 turns
-     | group:
-       | condition: when 1 enemies remain, hp <= 100
-       | (6154:17) Roar of the Black Dragon
-       | Increase damage to 200% for the next 1 turns
-   | group:
-   | condition: repeats every 2 turns
-     | group:
-       | (6155:15) Dance of the Black Dragon
-       | Deal 60% damage (3 hits, 20% each)
+ | condition: repeats every 2 turns, when 1 enemies remain, hp <= 100
+   | (6154:17) Roar of the Black Dragon
+   | Increase damage to 200% for the next 1 turns
+ | group:
+ | condition: repeats every 2 turns, hp <= 100
+   | (6155:15) Dance of the Black Dragon
+   | Deal 60% damage (3 hits, 20% each)

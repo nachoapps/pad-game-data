@@ -8,11 +8,6 @@ approved: False
 
 level: 5
  group:
- | group:
- | condition: hp <= 19
-   | group:
-   | condition: turn 1
-     | group:
-       | condition: hp <= 20
-       | (83:7) Resurrection
-       | Enemy recover 100% hp
+ condition: turn 1, hp <= 20
+ | (83:7) Resurrection
+ | Enemy recover 100% hp

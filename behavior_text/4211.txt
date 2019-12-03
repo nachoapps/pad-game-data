@@ -14,30 +14,20 @@ level: 4
  | group:
    | group:
    | condition: repeats every 4 turns
-     | group:
-       | condition: 15% chance, hp <= 100
-       | (8977:50) Tiny Bashful Punch
-       | Player -90% HP
-       | (8995:15) Sweet Combo
-       | Deal 100% damage (2 hits, 50% each)
+     | condition: 15% chance, hp <= 100
+     | (8977:50) Tiny Bashful Punch
+     | Player -90% HP
+     | (8995:15) Sweet Combo
+     | Deal 100% damage (2 hits, 50% each)
    | group:
-   | condition: repeats every 4 turns
-     | group:
-       | (8978:15) Don't smirk at me!
-       | Deal 120% damage (4 hits, 30% each)
+   | condition: repeats every 4 turns, hp <= 100
+     | (8978:15) Don't smirk at me!
+     | Deal 120% damage (4 hits, 30% each)
  | group:
- | condition: hp <= 49
-   | group:
-   | condition: turn 1
-     | group:
-       | condition: hp <= 50
-       | (8976:53) Seiryuu's Perception
-       | Absorb Water damage for 2 turns
+ | condition: turn 1, hp <= 50
+   | (8976:53) Seiryuu's Perception
+   | Absorb Water damage for 2 turns
  | group:
- | condition: hp <= 9
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: hp <= 10
-       | (8979:85) Seiryuu Seven-Star Perception
-       | Change all orbs to Water, Wood, Dark, Deal 180% damage
+ | condition: hp <= 10
+   | (8979:85) Seiryuu Seven-Star Perception
+   | Change all orbs to Water, Wood, Dark, Deal 180% damage

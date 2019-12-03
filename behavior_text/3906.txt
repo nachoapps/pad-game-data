@@ -12,39 +12,32 @@ level: 1
  | Voids status ailments for 999 turns + Absorb Light, Dark damage for 3 turns, Deal 200% damage
  group:
  | group:
-   | group:
-   | condition: turns 1-2
-     | group:
-       | (8465:83) Elemental Reincarnation + Vicious Khakkhara Thrust
-       | Change own attribute to random one of Fire, Water, Wood, Light, Dark + Deal 220% damage
-   | group:
-   | condition: turn 3
-     | group:
-       | (8462:87) 3,000 Rising Dragon Talismens
-       | Absorb damage >= 10000000 damage for 10 turns
-   | group:
-   | condition: turns 4-6
-     | group:
-       | (8465:83) Elemental Reincarnation + Vicious Khakkhara Thrust
-       | Change own attribute to random one of Fire, Water, Wood, Light, Dark + Deal 220% damage
-   | group:
-   | condition: turn 7
-     | group:
-       | (8468:83) Instant Purification + Aim for high combos!
-       | Reduce damage from all sources by 99% for 1 turns + Movetime -1s for 10 turns
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: when 10 combos last turn, hp <= 100
-       | (8470:13) Cruelty
-       | Change Random 1 to Jammer, Deal 230% damage
-       | condition: when 10 combos last turn, hp <= 100
-       | (8469:92) Heavenly Palm
-       | Spawn random 3 Heal orbs, Deal 200% damage
-       | condition: when 10 combos last turn, hp <= 100
-       | (8470:13) Cruelty
-       | Change Random 1 to Jammer, Deal 230% damage
-       | (8472:48) Chaos
-       | Change Jammer to Light, Deal 1000% damage
-       | (8471:15) The Truth of Suffering
-       | Deal 280% damage (4 hits, 70% each)
+ | condition: turns 1-2, hp <= 100
+   | (8465:83) Elemental Reincarnation + Vicious Khakkhara Thrust
+   | Change own attribute to random one of Fire, Water, Wood, Light, Dark + Deal 220% damage
+ | group:
+ | condition: turn 3, hp <= 100
+   | (8462:87) 3,000 Rising Dragon Talismens
+   | Absorb damage >= 10000000 damage for 10 turns
+ | group:
+ | condition: turns 4-6, hp <= 100
+   | (8465:83) Elemental Reincarnation + Vicious Khakkhara Thrust
+   | Change own attribute to random one of Fire, Water, Wood, Light, Dark + Deal 220% damage
+ | group:
+ | condition: turn 7, hp <= 100
+   | (8468:83) Instant Purification + Aim for high combos!
+   | Reduce damage from all sources by 99% for 1 turns + Movetime -1s for 10 turns
+ | group:
+   | condition: when 10 combos last turn, hp <= 100
+   | (8470:13) Cruelty
+   | Change Random 1 to Jammer, Deal 230% damage
+   | condition: when 10 combos last turn, hp <= 100
+   | (8469:92) Heavenly Palm
+   | Spawn random 3 Heal orbs, Deal 200% damage
+   | condition: when 10 combos last turn, hp <= 100
+   | (8470:13) Cruelty
+   | Change Random 1 to Jammer, Deal 230% damage
+   | (8472:48) Chaos
+   | Change Jammer to Light, Deal 1000% damage
+   | (8471:15) The Truth of Suffering
+   | Deal 280% damage (4 hits, 70% each)

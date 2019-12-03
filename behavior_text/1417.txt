@@ -12,25 +12,19 @@ level: 1
  | Reduce damage from all sources by 90% for 3 turns
  group:
  | group:
-   | group:
-   | condition: turns 1-2
-     | group:
-       | (8811:50) Squall
-       | Player -99% HP
-   | group:
-   | condition: turn 3
-     | group:
-       | (8808:88) Star Stream
-       | Bind awoken skills for 3 turns
-       | (8809:15) Poke
-       | Deal 330% damage (3 hits, 110% each)
-   | group:
-   | condition: turns 4-5
-     | group:
-       | (8809:15) Poke
-       | Deal 330% damage (3 hits, 110% each)
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | (8810:15) Swallow Dive
-       | Deal 1800% damage (6 hits, 300% each)
+ | condition: turns 1-2, hp <= 100
+   | (8811:50) Squall
+   | Player -99% HP
+ | group:
+ | condition: turn 3
+   | (8808:88) Star Stream
+   | Bind awoken skills for 3 turns
+   | (8809:15) Poke
+   | Deal 330% damage (3 hits, 110% each)
+ | group:
+ | condition: turns 4-5, hp <= 100
+   | (8809:15) Poke
+   | Deal 330% damage (3 hits, 110% each)
+ | group:
+   | (8810:15) Swallow Dive
+   | Deal 1800% damage (6 hits, 300% each)

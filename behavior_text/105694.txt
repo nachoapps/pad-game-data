@@ -13,25 +13,18 @@ level: 4
  group:
  | group:
    | group:
-   | condition: turn 1
-     | group:
-       | (15280:74) 絶対諦めないから
-       | Reduce damage from all sources by 75% for 1 turns, Deal 200% damage
+   | condition: turn 1, hp <= 100
+     | (15280:74) 絶対諦めないから
+     | Reduce damage from all sources by 75% for 1 turns, Deal 200% damage
    | group:
-   | condition: repeats every 1 turns
-     | group:
-       | (15187:77) カイサツソード！
-       | Change 3rd column to Wood orbs, 4th column to Wood orbs, Deal 125% damage
+     | (15187:77) カイサツソード！
+     | Change 3rd column to Wood orbs, 4th column to Wood orbs, Deal 125% damage
  | group:
  | condition: hp <= 24
    | group:
-   | condition: turn 1
-     | group:
-       | condition: when 1 enemies remain, hp <= 100
-       | (15281:17) 決めるよ、シャショット！
-       | Increase damage to 1000% for the next 1 turns
+   | condition: when 1 enemies remain, turn 1, hp <= 100
+     | (15281:17) 決めるよ、シャショット！
+     | Increase damage to 1000% for the next 1 turns
    | group:
-   | condition: repeats every 1 turns
-     | group:
-       | (15190:79) グランクロス！
-       | Change 2nd row to Wood orbs, 3rd row to Wood orbs, 4th row to Wood orbs, Deal 200% damage
+     | (15190:79) グランクロス！
+     | Change 2nd row to Wood orbs, 3rd row to Wood orbs, 4th row to Wood orbs, Deal 200% damage

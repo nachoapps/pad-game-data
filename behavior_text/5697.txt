@@ -12,30 +12,24 @@ level: 4
  | Voids status ailments for 999 turns + Blind all orbs on the board
  group:
  | group:
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: 50% chance, hp <= 100
-       | (15163:77) フミキリガン バーナーモード
-       | Change 1st column to Fire orbs, Deal 70% damage
-       | (15161:15) フミキリガン
-       | Deal 50% damage (2 hits, 25% each)
+   | condition: 50% chance, hp <= 100
+   | (15163:77) フミキリガン バーナーモード
+   | Change 1st column to Fire orbs, Deal 70% damage
+   | (15161:15) フミキリガン
+   | Deal 50% damage (2 hits, 25% each)
  | group:
  | condition: hp <= 49
    | group:
-   | condition: turn 1
-     | group:
-       | (15164:101) さっさと終わらせるぞ
-       | Fix orb movement starting point to random position on the board
+   | condition: turn 1, hp <= 100
+     | (15164:101) さっさと終わらせるぞ
+     | Fix orb movement starting point to random position on the board
    | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: 34% chance, hp <= 100
-       | (15165:85) フミキリキャノン
-       | Change all orbs to Fire, Deal 80% damage
-       | condition: 33% chance, hp <= 100
-       | (15163:77) フミキリガン バーナーモード
-       | Change 1st column to Fire orbs, Deal 70% damage
-       | condition: 33% chance, hp <= 100
-       | (15161:15) フミキリガン
-       | Deal 50% damage (2 hits, 25% each)
+     | condition: 34% chance, hp <= 100
+     | (15165:85) フミキリキャノン
+     | Change all orbs to Fire, Deal 80% damage
+     | condition: 33% chance, hp <= 100
+     | (15163:77) フミキリガン バーナーモード
+     | Change 1st column to Fire orbs, Deal 70% damage
+     | condition: 33% chance, hp <= 100
+     | (15161:15) フミキリガン
+     | Deal 50% damage (2 hits, 25% each)

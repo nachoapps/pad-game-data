@@ -15,32 +15,27 @@ level: 1
  | Bind awoken skills for 3 turns + Random 1 orbs change every 1.0s for 10 turns
  group:
  | group:
-   | group:
-   | condition: turns 1-8
-     | group:
-       | condition: 33% chance, hp <= 100
-       | (8424:102) Fire Shot
-       | Spawn random 3 Bomb orbs, Deal 360% damage
-       | condition: 33% chance, hp <= 100
-       | (8425:94) Freeze Shot
-       | Lock 9 random Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs, Deal 360% damage
-       | condition: 34% chance, hp <= 100
-       | (8426:15) Quadruple Shot
-       | Deal 400% damage (4 hits, 100% each)
-   | group:
-   | condition: turn 9
-     | group:
-       | (8427:89) Weak Point
-       | Delay active skills by 5 turns, Deal 320% damage
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: 33% chance, hp <= 100
-       | (8424:102) Fire Shot
-       | Spawn random 3 Bomb orbs, Deal 360% damage
-       | condition: 33% chance, hp <= 100
-       | (8425:94) Freeze Shot
-       | Lock 9 random Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs, Deal 360% damage
-       | condition: 34% chance, hp <= 100
-       | (8426:15) Quadruple Shot
-       | Deal 400% damage (4 hits, 100% each)
+ | condition: turns 1-8
+   | condition: 33% chance, hp <= 100
+   | (8424:102) Fire Shot
+   | Spawn random 3 Bomb orbs, Deal 360% damage
+   | condition: 33% chance, hp <= 100
+   | (8425:94) Freeze Shot
+   | Lock 9 random Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs, Deal 360% damage
+   | condition: 34% chance, hp <= 100
+   | (8426:15) Quadruple Shot
+   | Deal 400% damage (4 hits, 100% each)
+ | group:
+ | condition: turn 9, hp <= 100
+   | (8427:89) Weak Point
+   | Delay active skills by 5 turns, Deal 320% damage
+ | group:
+   | condition: 33% chance, hp <= 100
+   | (8424:102) Fire Shot
+   | Spawn random 3 Bomb orbs, Deal 360% damage
+   | condition: 33% chance, hp <= 100
+   | (8425:94) Freeze Shot
+   | Lock 9 random Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs, Deal 360% damage
+   | condition: 34% chance, hp <= 100
+   | (8426:15) Quadruple Shot
+   | Deal 400% damage (4 hits, 100% each)

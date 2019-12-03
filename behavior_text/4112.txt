@@ -11,7 +11,7 @@ level: 1
  | (8693:83) Ooowah! + Let's go!
  | Do nothing + Do nothing
  type: DEATH
- | condition: when defeated, hp <= 100
+ condition: when defeated, hp <= 100
  | (8690:95) HOAAAAAAAAAA!
  | Do nothing
 
@@ -20,46 +20,38 @@ level: 4
  | (8681:83) Ooowah! + Let's go!
  | Voids status ailments for 999 turns + Reduce damage from all sources by 50% for 3 turns
  type: DEATH
- | condition: when defeated, hp <= 100
+ condition: when defeated, hp <= 100
  | (8690:95) HOAAAAAAAAAA!
  | Do nothing
  group:
  | group:
    | group:
-   | condition: repeats every 4 turns
-     | group:
-       | (8682:71) Gravity Smash
-       | Void damage >= 1000000 for 1 turns, Deal 80% damage
+   | condition: repeats every 4 turns, hp <= 100
+     | (8682:71) Gravity Smash
+     | Void damage >= 1000000 for 1 turns, Deal 80% damage
    | group:
    | condition: repeats every 4 turns
-     | group:
-       | condition: 50% chance, when required attributes on board, hp <= 100
-       | (8683:92) Genocide Cutter
-       | Spawn random 3 Dark orbs, Deal 100% damage
-       | (8684:15) Vanishing Rush
-       | Deal 90% damage (6 hits, 15% each)
+     | condition: 50% chance, when required attributes on board, hp <= 100
+     | (8683:92) Genocide Cutter
+     | Spawn random 3 Dark orbs, Deal 100% damage
+     | (8684:15) Vanishing Rush
+     | Deal 90% damage (6 hits, 15% each)
  | group:
  | condition: hp <= 49
    | group:
-   | condition: repeats every 4 turns
-     | group:
-       | (8682:71) Gravity Smash
-       | Void damage >= 1000000 for 1 turns, Deal 80% damage
+   | condition: repeats every 4 turns, hp <= 100
+     | (8682:71) Gravity Smash
+     | Void damage >= 1000000 for 1 turns, Deal 80% damage
    | group:
    | condition: repeats every 4 turns
-     | group:
-       | condition: 20% chance, hp <= 100
-       | (8685:15) Destruction Omega
-       | Deal 130% damage
-       | condition: 50% chance, when required attributes on board, hp <= 100
-       | (8683:92) Genocide Cutter
-       | Spawn random 3 Dark orbs, Deal 100% damage
-       | (8684:15) Vanishing Rush
-       | Deal 90% damage (6 hits, 15% each)
+     | condition: 20% chance, hp <= 100
+     | (8685:15) Destruction Omega
+     | Deal 130% damage
+     | condition: 50% chance, when required attributes on board, hp <= 100
+     | (8683:92) Genocide Cutter
+     | Spawn random 3 Dark orbs, Deal 100% damage
+     | (8684:15) Vanishing Rush
+     | Deal 90% damage (6 hits, 15% each)
  | group:
- | condition: hp <= 19
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | (8688:83) Gigantic Pressure + Die!
-       | Change 6th column to Dark orbs, Deal 100% damage + Change 1st column to Dark orbs, Deal 100% damage
+   | (8688:83) Gigantic Pressure + Die!
+   | Change 6th column to Dark orbs, Deal 100% damage + Change 1st column to Dark orbs, Deal 100% damage

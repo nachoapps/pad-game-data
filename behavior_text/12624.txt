@@ -11,26 +11,20 @@ level: 1
  | (6943:83) Target Confirmed + Lock-On
  | Voids status ailments for 3 turns + Fix orb movement starting point to random position on the board
  type: DEATH
- | condition: when defeated, hp <= 100
+ condition: when defeated, hp <= 100
  | (6948:95) Shutting Down
  | Do nothing
  group:
  | group:
    | group:
-   | condition: repeats every 3 turns
-     | group:
-       | (6945:50) Focused Laser
-       | Player -99% HP
+   | condition: repeats every 3 turns, hp <= 100
+     | (6945:50) Focused Laser
+     | Player -99% HP
    | group:
-   | condition: repeats every 3 turns
-     | group:
-       | (6944:15) Spread Laser
-       | Deal 120% damage (3 hits, 40% each)
+   | condition: repeats every 3 turns, hp <= 100
+     | (6944:15) Spread Laser
+     | Deal 120% damage (3 hits, 40% each)
  | group:
- | condition: hp <= 49
-   | group:
-   | condition: turn 1
-     | group:
-       | condition: hp <= 50
-       | (6946:74) Safety Mode Activated
-       | Reduce damage from all sources by 75% for 1 turns
+ | condition: turn 1, hp <= 50
+   | (6946:74) Safety Mode Activated
+   | Reduce damage from all sources by 75% for 1 turns

@@ -12,39 +12,26 @@ level: 1
  | Bind active skills for 5 turns
  group:
  | group:
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | (1685:48) Blue Blizzard
-       | Change Random to Water, Deal 100% damage
+   | (1685:48) Blue Blizzard
+   | Change Random to Water, Deal 100% damage
  | group:
  | condition: hp <= 74
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: 75% chance, hp <= 75
-       | (1686:63) Freezing Blast
-       | Bind 1 random cards for 2~4 turns, Deal 85% damage
-       | (1685:48) Blue Blizzard
-       | Change Random to Water, Deal 100% damage
+   | condition: 75% chance, hp <= 75
+   | (1686:63) Freezing Blast
+   | Bind 1 random cards for 2~4 turns, Deal 85% damage
+   | (1685:48) Blue Blizzard
+   | Change Random to Water, Deal 100% damage
  | group:
- | condition: hp <= 49
-   | group:
-   | condition: turn 1
-     | group:
-       | condition: hp <= 50
-       | (1687:63) Ice Coffin
-       | Bind 5 random cards for 1~3 turns, Deal 25% damage
+ | condition: turn 1, hp <= 50
+   | (1687:63) Ice Coffin
+   | Bind 5 random cards for 1~3 turns, Deal 25% damage
  | group:
  | condition: hp <= 29
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: 75% chance, hp <= 30
-       | (1684:50) Absolute Zero
-       | Player -100% HP
-       | condition: 75% chance, hp <= 75
-       | (1686:63) Freezing Blast
-       | Bind 1 random cards for 2~4 turns, Deal 85% damage
-       | (1685:48) Blue Blizzard
-       | Change Random to Water, Deal 100% damage
+   | condition: 75% chance, hp <= 30
+   | (1684:50) Absolute Zero
+   | Player -100% HP
+   | condition: 75% chance, hp <= 75
+   | (1686:63) Freezing Blast
+   | Bind 1 random cards for 2~4 turns, Deal 85% damage
+   | (1685:48) Blue Blizzard
+   | Change Random to Water, Deal 100% damage

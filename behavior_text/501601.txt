@@ -12,32 +12,22 @@ level: 1
  | Poison skyfall +5% for 5 turns
  group:
  | group:
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: 50% chance, hp <= 100
-       | (14535:108) Antivenom Shot
-       | Change Poison to Heal, Deal 120% damage
-       | (14534:15) Vivid Thorn
-       | Deal 90% damage (3 hits, 30% each)
+   | condition: 50% chance, hp <= 100
+   | (14535:108) Antivenom Shot
+   | Change Poison to Heal, Deal 120% damage
+   | (14534:15) Vivid Thorn
+   | Deal 90% damage (3 hits, 30% each)
  | group:
- | condition: hp <= 49
-   | group:
-   | condition: turn 1
-     | group:
-       | condition: when required attributes on board, hp <= 100
-       | (14536:92) Scattering Scales
-       | Spawn random 5 Heal, Poison orbs
+ | condition: when required attributes on board, turn 1, hp <= 100
+   | (14536:92) Scattering Scales
+   | Spawn random 5 Heal, Poison orbs
  | group:
  | condition: hp <= 9
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: 50% chance, hp <= 10
-       | (14537:85) Flamboyant Flower Flourish
-       | Change all orbs to Fire, Water, Wood, Light, Dark, Heal, Poison, Deal 150% damage
-       | condition: 50% chance, hp <= 100
-       | (14535:108) Antivenom Shot
-       | Change Poison to Heal, Deal 120% damage
-       | (14534:15) Vivid Thorn
-       | Deal 90% damage (3 hits, 30% each)
+   | condition: 50% chance, hp <= 10
+   | (14537:85) Flamboyant Flower Flourish
+   | Change all orbs to Fire, Water, Wood, Light, Dark, Heal, Poison, Deal 150% damage
+   | condition: 50% chance, hp <= 100
+   | (14535:108) Antivenom Shot
+   | Change Poison to Heal, Deal 120% damage
+   | (14534:15) Vivid Thorn
+   | Deal 90% damage (3 hits, 30% each)

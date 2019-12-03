@@ -13,38 +13,25 @@ level: 4
  group:
  | group:
    | group:
-   | condition: turn 1
-     | group:
-       | (3396:83) Gimme candy! + zzZZZ
-       | Change Random to Jammer, Deal 100% damage + Do nothing
+   | condition: turn 1, hp <= 100
+     | (3396:83) Gimme candy! + zzZZZ
+     | Change Random to Jammer, Deal 100% damage + Do nothing
    | group:
-   | condition: turn 2
-     | group:
-       | (3397:83) More! + zzZZZ
-       | Change Random to Jammer, Deal 150% damage + Do nothing
+   | condition: turn 2, hp <= 100
+     | (3397:83) More! + zzZZZ
+     | Change Random to Jammer, Deal 150% damage + Do nothing
    | group:
-   | condition: turn 3
-     | group:
-       | (3398:83) Wake up already! + Oops, sorry about that!
-       | Do nothing + Increase damage to 200% for the next 999 turns
+   | condition: turn 3, hp <= 100
+     | (3398:83) Wake up already! + Oops, sorry about that!
+     | Do nothing + Increase damage to 200% for the next 999 turns
    | group:
-   | condition: repeats every 1 turns
-     | group:
-       | (3399:83) Take that! + Underworld Glow
-       | Change Random to Heal, Deal 100% damage + Spawn random 3 Poison orbs
+     | (3399:83) Take that! + Underworld Glow
+     | Change Random to Heal, Deal 100% damage + Spawn random 3 Poison orbs
  | group:
- | condition: hp <= 19
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: hp <= 20
-       | (3400:83) And that! + Underworld Glow
-       | Change Random to Jammer, Deal 120% damage + Spawn random 3 Poison orbs
+ | condition: hp <= 20
+   | (3400:83) And that! + Underworld Glow
+   | Change Random to Jammer, Deal 120% damage + Spawn random 3 Poison orbs
  | group:
- | condition: hp <= 9
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: hp <= 10
-       | (3401:83) And that! + Magic Pumpkin Shot
-       | Change Random to Jammer, Deal 120% damage + Spawn random 6 Mortal Poison orbs
+ | condition: hp <= 10
+   | (3401:83) And that! + Magic Pumpkin Shot
+   | Change Random to Jammer, Deal 120% damage + Spawn random 6 Mortal Poison orbs

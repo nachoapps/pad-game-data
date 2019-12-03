@@ -16,27 +16,22 @@ level: 1
  group:
  | group:
    | group:
-   | condition: turn 1
-     | group:
-       | (5831:85) Eastern Seven-Star Formation
-       | Change all orbs to Water, Wood, Dark, Deal 100% damage
+   | condition: turn 1, hp <= 100
+     | (5831:85) Eastern Seven-Star Formation
+     | Change all orbs to Water, Wood, Dark, Deal 100% damage
    | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: 50% chance, hp <= 100
-       | (5829:15) Dragon Uppercut!
-       | Deal 120% damage
-       | (5830:15) Spinning Whirlwind Kick!
-       | Deal 105% damage (3 hits, 35% each)
+     | condition: 50% chance, hp <= 100
+     | (5829:15) Dragon Uppercut!
+     | Deal 120% damage
+     | (5830:15) Spinning Whirlwind Kick!
+     | Deal 105% damage (3 hits, 35% each)
  | group:
  | condition: hp <= 14
    | group:
-   | condition: repeats every 2 turns
-     | group:
-       | (5831:85) Eastern Seven-Star Formation
-       | Change all orbs to Water, Wood, Dark, Deal 100% damage
+   | condition: repeats every 2 turns, hp <= 100
+     | (5831:85) Eastern Seven-Star Formation
+     | Change all orbs to Water, Wood, Dark, Deal 100% damage
    | group:
-   | condition: repeats every 2 turns
-     | group:
-       | (5834:83) Alright! + Seiryuu Seven-Star Formation
-       | Delay active skills by 1 turns + Change all orbs to Water, Wood, Dark, Deal 300% damage
+   | condition: repeats every 2 turns, hp <= 100
+     | (5834:83) Alright! + Seiryuu Seven-Star Formation
+     | Delay active skills by 1 turns + Change all orbs to Water, Wood, Dark, Deal 300% damage

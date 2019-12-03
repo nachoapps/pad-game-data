@@ -13,36 +13,26 @@ level: 1
  group:
  | group:
    | group:
-   | condition: turn 1
-     | group:
-       | (13999:74) Burning Dragon Wall
-       | Reduce damage from all sources by 75% for 3 turns
+   | condition: turn 1, hp <= 100
+     | (13999:74) Burning Dragon Wall
+     | Reduce damage from all sources by 75% for 3 turns
    | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: 50% chance, when required attributes on board, hp <= 100
-       | (14590:92) Purgatory
-       | Spawn random 2 Fire, Jammer orbs, Deal 100% damage
-       | (14501:15) Scarlet Flame Dance
-       | Deal 120% damage (2 hits, 60% each)
+     | condition: 50% chance, when required attributes on board, hp <= 100
+     | (14590:92) Purgatory
+     | Spawn random 2 Fire, Jammer orbs, Deal 100% damage
+     | (14501:15) Scarlet Flame Dance
+     | Deal 120% damage (2 hits, 60% each)
  | group:
- | condition: hp <= 49
-   | group:
-   | condition: turn 2
-     | group:
-       | condition: when 1 enemies remain, hp <= 50
-       | (14502:17) I can keep going!
-       | Increase damage to 150% for the next 3 turns
+ | condition: when 1 enemies remain, turn 2, hp <= 50
+   | (14502:17) I can keep going!
+   | Increase damage to 150% for the next 3 turns
  | group:
  | condition: hp <= 9
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: 80% chance, when required attributes on board, hp <= 10
-       | (14503:92) Ferociously Soaring Scarlet Flames
-       | Spawn random 5 Fire, Jammer orbs, Deal 200% damage
-       | condition: 50% chance, when required attributes on board, hp <= 100
-       | (14590:92) Purgatory
-       | Spawn random 2 Fire, Jammer orbs, Deal 100% damage
-       | (14501:15) Scarlet Flame Dance
-       | Deal 120% damage (2 hits, 60% each)
+   | condition: 80% chance, when required attributes on board, hp <= 10
+   | (14503:92) Ferociously Soaring Scarlet Flames
+   | Spawn random 5 Fire, Jammer orbs, Deal 200% damage
+   | condition: 50% chance, when required attributes on board, hp <= 100
+   | (14590:92) Purgatory
+   | Spawn random 2 Fire, Jammer orbs, Deal 100% damage
+   | (14501:15) Scarlet Flame Dance
+   | Deal 120% damage (2 hits, 60% each)

@@ -12,36 +12,26 @@ level: 1
  | Absorb combo <= 6 damage for 1 turns + Change all orbs to Fire, Water, Wood, Light, Dark, Jammer, Deal 80% damage
  group:
  | group:
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | (5225:85) Feather Rain
-       | Change all orbs to Fire, Water, Wood, Light, Dark, Jammer, Deal 80% damage
+   | (5225:85) Feather Rain
+   | Change all orbs to Fire, Water, Wood, Light, Dark, Jammer, Deal 80% damage
  | group:
  | condition: hp <= 99
    | group:
-   | condition: turn 1
-     | group:
-       | (5226:79) Wind Spiral
-       | Change 1st row to Wood orbs, Deal 100% damage
+   | condition: turn 1, hp <= 100
+     | (5226:79) Wind Spiral
+     | Change 1st row to Wood orbs, Deal 100% damage
    | group:
-   | condition: turn 2
-     | group:
-       | (5227:53) Fire-Extinguishing Wind
-       | Absorb Fire damage for 3 turns
+   | condition: turn 2, hp <= 100
+     | (5227:53) Fire-Extinguishing Wind
+     | Absorb Fire damage for 3 turns
    | group:
-   | condition: repeats every 1 turns
-     | group:
-       | (5228:48) Lightning
-       | Change Jammer to Light, Deal 150% damage
-       | (5229:48) Gale
-       | Change Random to Jammer, Deal 100% damage
+     | (5228:48) Lightning
+     | Change Jammer to Light, Deal 150% damage
+     | (5229:48) Gale
+     | Change Random to Jammer, Deal 100% damage
  | group:
  | condition: hp <= 49
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | (5228:48) Lightning
-       | Change Jammer to Light, Deal 150% damage
-       | (5225:85) Feather Rain
-       | Change all orbs to Fire, Water, Wood, Light, Dark, Jammer, Deal 80% damage
+   | (5228:48) Lightning
+   | Change Jammer to Light, Deal 150% damage
+   | (5225:85) Feather Rain
+   | Change all orbs to Fire, Water, Wood, Light, Dark, Jammer, Deal 80% damage

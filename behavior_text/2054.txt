@@ -12,13 +12,10 @@ level: 5
  | Do nothing
  group:
  | group:
-   | group:
-   | condition: repeats every 2 turns
-     | group:
-       | (2108:15) Particle Beam
-       | Deal 200% damage
-   | group:
-   | condition: repeats every 2 turns
-     | group:
-       | (1:82) Disable Skill
-       | Deal 100% damage
+ | condition: repeats every 2 turns, hp <= 100
+   | (2108:15) Particle Beam
+   | Deal 200% damage
+ | group:
+ | condition: repeats every 2 turns, hp <= 100
+   | (1:82) Disable Skill
+   | Deal 100% damage

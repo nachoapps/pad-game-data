@@ -12,21 +12,16 @@ level: 5
  | Player recover 100% hp
  group:
  | group:
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: 50% chance, hp <= 100
-       | (961:48) Light Spirit's Writing
-       | Change Random to Light, Deal 80% damage
+ | condition: 50% chance, hp <= 100
+   | (961:48) Light Spirit's Writing
+   | Change Random to Light, Deal 80% damage
  | group:
  | condition: hp <= 49
    | group:
-   | condition: repeats every 2 turns
-     | group:
-       | (948:15) Magical Book
-       | Deal 25% damage
+   | condition: repeats every 2 turns, hp <= 100
+     | (948:15) Magical Book
+     | Deal 25% damage
    | group:
-   | condition: repeats every 2 turns
-     | group:
-       | (960:15) The Compliant Rod
-       | Deal 280% damage (2 hits, 140% each)
+   | condition: repeats every 2 turns, hp <= 100
+     | (960:15) The Compliant Rod
+     | Deal 280% damage (2 hits, 140% each)

@@ -12,13 +12,10 @@ level: 1
  | Do nothing
  group:
  | group:
-   | group:
-   | condition: repeats every 2 turns
-     | group:
-       | (13559:66) Make a Wish TAMA!
-       | Do nothing
-   | group:
-   | condition: repeats every 2 turns
-     | group:
-       | (13558:66) Today is Tanabata TAMA!
-       | Do nothing
+ | condition: repeats every 2 turns, hp <= 100
+   | (13559:66) Make a Wish TAMA!
+   | Do nothing
+ | group:
+ | condition: repeats every 2 turns, hp <= 100
+   | (13558:66) Today is Tanabata TAMA!
+   | Do nothing

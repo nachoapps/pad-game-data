@@ -12,21 +12,15 @@ level: 1
  | Reduce damage from Light by 50%
  group:
  | group:
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | (436:7) Heal!
-       | Enemy recover 50% hp
+   | (436:7) Heal!
+   | Enemy recover 50% hp
  | group:
  | condition: hp <= 19
    | group:
-   | condition: repeats every 2 turns
-     | group:
-       | condition: hp <= 20
-       | (83:7) Resurrection
-       | Enemy recover 100% hp
+   | condition: repeats every 2 turns, hp <= 20
+     | (83:7) Resurrection
+     | Enemy recover 100% hp
    | group:
-   | condition: repeats every 2 turns
-     | group:
-       | (436:7) Heal!
-       | Enemy recover 50% hp
+   | condition: repeats every 2 turns, hp <= 100
+     | (436:7) Heal!
+     | Enemy recover 50% hp

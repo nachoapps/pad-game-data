@@ -9,14 +9,10 @@ approved: False
 level: 5
  group:
  | group:
-   | group:
-   | condition: repeats every 3 turns
-     | group:
-       | condition: when 1 enemies remain, hp <= 100
-       | (821:17) Venom Strength
-       | Increase damage to 200% for the next 2 turns
-   | group:
-   | condition: repeats every 3 turns
-     | group:
-       | (822:15) Brute Strength
-       | Deal 200% damage
+ | condition: repeats every 3 turns, when 1 enemies remain, hp <= 100
+   | (821:17) Venom Strength
+   | Increase damage to 200% for the next 2 turns
+ | group:
+ | condition: repeats every 3 turns, hp <= 100
+   | (822:15) Brute Strength
+   | Deal 200% damage

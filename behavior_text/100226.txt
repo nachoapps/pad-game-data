@@ -13,23 +13,16 @@ level: 1
  group:
  | group:
    | group:
-   | condition: turn 1
-     | group:
-       | (9361:83) Gleipnir + Fylgja's Protection
-       | Bind 2 random cards for 5 turns + Absorb combo <= 6 damage for 10 turns
+   | condition: turn 1, hp <= 100
+     | (9361:83) Gleipnir + Fylgja's Protection
+     | Bind 2 random cards for 5 turns + Absorb combo <= 6 damage for 10 turns
    | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: 50% chance, hp <= 100
-       | (9362:15) Double Slash
-       | Deal 200% damage (2 hits, 100% each)
-       | (9365:101) Sword of Fate
-       | Fix orb movement starting point to random position on the board, Deal 150% damage
+     | condition: 50% chance, hp <= 100
+     | (9362:15) Double Slash
+     | Deal 200% damage (2 hits, 100% each)
+     | (9365:101) Sword of Fate
+     | Fix orb movement starting point to random position on the board, Deal 150% damage
  | group:
- | condition: hp <= 49
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: hp <= 50
-       | (9363:86) Resurrection
-       | Enemy recover 100% hp
+ | condition: hp <= 50
+   | (9363:86) Resurrection
+   | Enemy recover 100% hp

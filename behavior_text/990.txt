@@ -12,36 +12,23 @@ level: 1
  | Absorb combo <= 7 damage for 3 turns
  group:
  | group:
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | (3879:15) Nocturnal Blades
-       | Deal 70%~140% damage (7~14 hits, 10% each)
+   | (3879:15) Nocturnal Blades
+   | Deal 70%~140% damage (7~14 hits, 10% each)
  | group:
- | condition: hp <= 99
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: when required attributes on board, hp <= 100
-       | (3880:92) Full Moon
-       | Spawn random 3 Heal, Poison orbs, Deal 80% damage
+ | condition: when required attributes on board, hp <= 100
+   | (3880:92) Full Moon
+   | Spawn random 3 Heal, Poison orbs, Deal 80% damage
  | group:
- | condition: hp <= 69
-   | group:
-   | condition: turn 1
-     | group:
-       | condition: hp <= 70
-       | (3881:39) Divine Song's Tuning
-       | Movetime -1s for 5 turns
+ | condition: turn 1, hp <= 70
+   | (3881:39) Divine Song's Tuning
+   | Movetime -1s for 5 turns
  | group:
  | condition: hp <= 29
    | group:
-   | condition: repeats every 2 turns
-     | group:
-       | (3882:66) Time, stop...
-       | Do nothing
+   | condition: repeats every 2 turns, hp <= 100
+     | (3882:66) Time, stop...
+     | Do nothing
    | group:
-   | condition: repeats every 2 turns
-     | group:
-       | (3883:50) Nocturnal Sky Bell Execution
-       | Player -500% HP
+   | condition: repeats every 2 turns, hp <= 100
+     | (3883:50) Nocturnal Sky Bell Execution
+     | Player -500% HP

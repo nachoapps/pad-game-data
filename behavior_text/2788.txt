@@ -8,7 +8,7 @@ approved: False
 
 level: 1
  type: DEATH
- | condition: when defeated, hp <= 100
+ condition: when defeated, hp <= 100
  | (3921:95) No... It's not over yet!
  | Do nothing
 
@@ -18,23 +18,18 @@ level: 3
 do any better!
  | Blind all orbs on the board
  type: DEATH
- | condition: when defeated, hp <= 100
+ condition: when defeated, hp <= 100
  | (3921:95) No... It's not over yet!
  | Do nothing
  group:
  | group:
-   | group:
-   | condition: turn 1
-     | group:
-       | (3917:15) Implosion
-       | Deal 100% damage
-   | group:
-   | condition: turn 2
-     | group:
-       | (3918:15) Implosion
-       | Deal 150% damage
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | (3919:15) Implosion
-       | Deal 200% damage
+ | condition: turn 1, hp <= 100
+   | (3917:15) Implosion
+   | Deal 100% damage
+ | group:
+ | condition: turn 2, hp <= 100
+   | (3918:15) Implosion
+   | Deal 150% damage
+ | group:
+   | (3919:15) Implosion
+   | Deal 200% damage

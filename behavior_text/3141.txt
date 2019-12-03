@@ -14,53 +14,40 @@ level: 4
  | Deal 100% damage
  group:
  | group:
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | (5419:15) Muscle Revenger
-       | Deal 80%~120% damage (2~3 hits, 40% each)
+   | (5419:15) Muscle Revenger
+   | Deal 80%~120% damage (2~3 hits, 40% each)
  | group:
  | condition: hp <= 49
    | group:
-   | condition: turn 1
-     | group:
-       | (5421:53) Moctezuma Defense
-       | Absorb Fire damage for 3 turns
+   | condition: turn 1, hp <= 100
+     | (5421:53) Moctezuma Defense
+     | Absorb Fire damage for 3 turns
    | group:
-   | condition: turn 2
-     | group:
-       | (5422:63) Secret Art: Steel Domination
-       | Bind own leader for 4 turns, Deal 50% damage
+   | condition: turn 2, hp <= 100
+     | (5422:63) Secret Art: Steel Domination
+     | Bind own leader for 4 turns, Deal 50% damage
    | group:
-   | condition: turn 3
-     | group:
-       | (5423:48) Aztec Drop
-       | Change Random to Fire, Deal 80% damage
+   | condition: turn 3, hp <= 100
+     | (5423:48) Aztec Drop
+     | Change Random to Fire, Deal 80% damage
    | group:
    | condition: turn 4
-     | group:
-       | (5424:94) Aztec Senton
-       | Lock all Fire orbs, Deal 100% damage
-       | (5425:15) Aztec Senton
-       | Deal 100% damage
+     | (5424:94) Aztec Senton
+     | Lock all Fire orbs, Deal 100% damage
+     | (5425:15) Aztec Senton
+     | Deal 100% damage
    | group:
-   | condition: turn 5
-     | group:
-       | condition: when required attributes on board, hp <= 100
-       | (5426:92) Aztec Knee Drop
-       | Spawn random 4 Fire orbs, Deal 80% damage
+   | condition: when required attributes on board, turn 5, hp <= 100
+     | (5426:92) Aztec Knee Drop
+     | Spawn random 4 Fire orbs, Deal 80% damage
    | group:
-   | condition: turn 6
-     | group:
-       | (5427:50) Aztec Headbutt
-       | Player -99% HP
+   | condition: turn 6, hp <= 100
+     | (5427:50) Aztec Headbutt
+     | Player -99% HP
    | group:
-   | condition: turn 7
-     | group:
-       | (5428:15) Muscle Revenger!!
-       | Deal 360% damage (6 hits, 60% each)
+   | condition: turn 7, hp <= 100
+     | (5428:15) Muscle Revenger!!
+     | Deal 360% damage (6 hits, 60% each)
    | group:
-   | condition: repeats every 1 turns
-     | group:
-       | (5429:40) Divine Retribution
-       | Reduce self HP to 0
+     | (5429:40) Divine Retribution
+     | Reduce self HP to 0

@@ -8,7 +8,7 @@ approved: False
 
 level: 1
  type: DEATH
- | condition: when defeated, hp <= 100
+ condition: when defeated, hp <= 100
  | (10383:69) Spe Dun Dragon Light Transformation
  | Show message: Goteene's appearance is changing|Help have been summoned
 
@@ -17,32 +17,26 @@ level: 4
  | (10376:14) Holy Sealing Technique
  | Bind active skills for 1 turns
  type: DEATH
- | condition: when defeated, hp <= 100
+ condition: when defeated, hp <= 100
  | (10383:69) Spe Dun Dragon Light Transformation
  | Show message: Goteene's appearance is changing|Help have been summoned
  group:
  | group:
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: 33% chance, hp <= 100
-       | (10377:48) Light Pillar
-       | Change Random to Light, Deal 110% damage
-       | condition: 33% chance, hp <= 100
-       | (10378:89) Diminishing Rush
-       | Delay active skills by 1~2 turns, Deal 100% damage
-       | condition: 34% chance, hp <= 100
-       | (10379:15) Tradition
-       | Deal 120% damage (3 hits, 40% each)
+   | condition: 33% chance, hp <= 100
+   | (10377:48) Light Pillar
+   | Change Random to Light, Deal 110% damage
+   | condition: 33% chance, hp <= 100
+   | (10378:89) Diminishing Rush
+   | Delay active skills by 1~2 turns, Deal 100% damage
+   | condition: 34% chance, hp <= 100
+   | (10379:15) Tradition
+   | Deal 120% damage (3 hits, 40% each)
  | group:
  | condition: hp <= 19
    | group:
-   | condition: turn 1
-     | group:
-       | (10381:83) Holy Sealing Technique + Behavior Shield
-       | Bind active skills for 1 turns + Seal 5th row for 1 turns
+   | condition: turn 1, hp <= 100
+     | (10381:83) Holy Sealing Technique + Behavior Shield
+     | Bind active skills for 1 turns + Seal 5th row for 1 turns
    | group:
-   | condition: repeats every 1 turns
-     | group:
-       | (10382:15) Last Decision
-       | Deal 165% damage (3 hits, 55% each)
+     | (10382:15) Last Decision
+     | Deal 165% damage (3 hits, 55% each)

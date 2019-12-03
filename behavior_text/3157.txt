@@ -16,43 +16,28 @@ level: 1
  group:
  | group:
    | group:
-   | condition: repeats every 2 turns
-     | group:
-       | condition: when required attributes on board, hp <= 100
-       | (5378:92) Luft Schwert
-       | Spawn random 4 Heal orbs, Deal 120% damage
+   | condition: repeats every 2 turns, when required attributes on board, hp <= 100
+     | (5378:92) Luft Schwert
+     | Spawn random 4 Heal orbs, Deal 120% damage
    | group:
    | condition: repeats every 2 turns
-     | group:
-       | condition: 50% chance, when required attributes on board, hp <= 100
-       | (5379:92) Gewitter Klinge
-       | Change all orbs to Jammer, Deal 170% damage
-       | condition: when required attributes on board, hp <= 100
-       | (5380:92) Sturm Wind
-       | Change all orbs to Mortal Poison, Deal 100% damage
-       | (5383:77) Wirbel Lanze
-       | Change 3rd, 4th column to Water, Wood, Poison orbs, Deal 150% damage
+     | condition: 50% chance, when required attributes on board, hp <= 100
+     | (5379:92) Gewitter Klinge
+     | Change all orbs to Jammer, Deal 170% damage
+     | condition: when required attributes on board, hp <= 100
+     | (5380:92) Sturm Wind
+     | Change all orbs to Mortal Poison, Deal 100% damage
+     | (5383:77) Wirbel Lanze
+     | Change 3rd, 4th column to Water, Wood, Poison orbs, Deal 150% damage
  | group:
- | condition: hp <= 69
-   | group:
-   | condition: turns 1-3
-     | group:
-       | condition: hp <= 70
-       | (5385:68) Tot Regen
-       | Poison skyfall +15% for 10 turns
+ | condition: turns 1-3, hp <= 70
+   | (5385:68) Tot Regen
+   | Poison skyfall +15% for 10 turns
  | group:
- | condition: hp <= 49
-   | group:
-   | condition: turn 1
-     | group:
-       | condition: hp <= 50
-       | (5384:74) Starr Schild
-       | Reduce damage from all sources by 50% for 5 turns
+ | condition: turn 1, hp <= 50
+   | (5384:74) Starr Schild
+   | Reduce damage from all sources by 50% for 5 turns
  | group:
- | condition: hp <= 14
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: hp <= 15
-       | (5382:15) Eisen Ärger
-       | Deal 3500% damage (5 hits, 700% each)
+ | condition: hp <= 15
+   | (5382:15) Eisen Ärger
+   | Deal 3500% damage (5 hits, 700% each)

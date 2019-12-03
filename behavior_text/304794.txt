@@ -15,22 +15,12 @@ level: 1
  | Voids status ailments for 999 turns + Void damage >= 40000000 for 99 turns + Change player HP to 500000 for 99 turns + Voids player buff effects
  group:
  | group:
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | (10934:111) Ark Contract
-       | Change player HP to 500000 for 99 turns
+   | (10934:111) Ark Contract
+   | Change player HP to 500000 for 99 turns
  | group:
- | condition: hp <= 49
-   | group:
-   | condition: turn 1
-     | group:
-       | (10790:83) Diminishing Fighting Spirit + Vanishing Judgment
-       | Bind awoken skills for 5 turns + Player -99% HP
+ | condition: turn 1, hp <= 100
+   | (10790:83) Diminishing Fighting Spirit + Vanishing Judgment
+   | Bind awoken skills for 5 turns + Player -99% HP
  | group:
- | condition: hp <= 9
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | (10952:83) Gear Shift + Banishing Lightning
-       | Change own attribute to random one of Fire, Water, Wood, Light, Dark + Deal 50000% damage (4 hits, 12500% each)
+   | (10952:83) Gear Shift + Banishing Lightning
+   | Change own attribute to random one of Fire, Water, Wood, Light, Dark + Deal 50000% damage (4 hits, 12500% each)

@@ -15,34 +15,24 @@ level: 1
  group:
  | group:
    | group:
-   | condition: turn 1
-     | group:
-       | (2451:53) Green Element
-       | Absorb Wood damage for 3 turns
+   | condition: turn 1, hp <= 100
+     | (2451:53) Green Element
+     | Absorb Wood damage for 3 turns
    | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: 30% chance, hp <= 100
-       | (2454:79) Earthlight Blade
-       | Change 4th row to Wood, Jammer orbs, Deal 80% damage
-       | condition: 30% chance, hp <= 100
-       | (2455:14) Earth Dragon Binding
-       | Bind active skills for 2 turns, Deal 90% damage
-       | condition: 30% chance, hp <= 100
-       | (1:82) Disable Skill
-       | Deal 100% damage
+     | condition: 30% chance, hp <= 100
+     | (2454:79) Earthlight Blade
+     | Change 4th row to Wood, Jammer orbs, Deal 80% damage
+     | condition: 30% chance, hp <= 100
+     | (2455:14) Earth Dragon Binding
+     | Bind active skills for 2 turns, Deal 90% damage
+     | condition: 30% chance, hp <= 100
+     | (1:82) Disable Skill
+     | Deal 100% damage
  | group:
- | condition: hp <= 49
-   | group:
-   | condition: turn 2
-     | group:
-       | (2453:86) Supernatural
-       | Enemy recover 30% hp
+ | condition: turn 2, hp <= 100
+   | (2453:86) Supernatural
+   | Enemy recover 30% hp
  | group:
- | condition: hp <= 19
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: hp <= 20
-       | (2452:50) Ground Burst
-       | Player -100% HP
+ | condition: hp <= 20
+   | (2452:50) Ground Burst
+   | Player -100% HP

@@ -12,25 +12,19 @@ level: 1
  | Voids status ailments for 3 turns
  group:
  | group:
-   | group:
-   | condition: turn 1
-     | group:
-       | (1523:66) I'll finish you in three moves!
-       | Do nothing
-   | group:
-   | condition: turn 2
-     | group:
-       | (1524:15) Shichika Hachiretsu
-       | Deal 140% damage (7 hits, 20% each)
-   | group:
-   | condition: turn 3
-     | group:
-       | (1525:48) Seisei Ruten
-       | Change Random to Heal, Deal 100% damage
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | (1526:48) Garyou Tensei
-       | Change Heal to Wood, Deal 5000% damage
-       | (1527:66) Garyou...huh?
-       | Do nothing
+ | condition: turn 1, hp <= 100
+   | (1523:66) I'll finish you in three moves!
+   | Do nothing
+ | group:
+ | condition: turn 2, hp <= 100
+   | (1524:15) Shichika Hachiretsu
+   | Deal 140% damage (7 hits, 20% each)
+ | group:
+ | condition: turn 3, hp <= 100
+   | (1525:48) Seisei Ruten
+   | Change Random to Heal, Deal 100% damage
+ | group:
+   | (1526:48) Garyou Tensei
+   | Change Heal to Wood, Deal 5000% damage
+   | (1527:66) Garyou...huh?
+   | Do nothing

@@ -15,27 +15,16 @@ level: 1
  | Blind random 10 orbs for 4 turns
  group:
  | group:
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: 50% chance, hp <= 100
-       | (14894:15) もらった！
-       | Deal 70% damage
-       | condition: 50% chance, hp <= 100
-       | (14895:101) 照準が狂ってんじゃねぇのか
-       | Fix orb movement starting point to random position on the board, Deal 65% damage
+   | condition: 50% chance, hp <= 100
+   | (14894:15) もらった！
+   | Deal 70% damage
+   | condition: 50% chance, hp <= 100
+   | (14895:101) 照準が狂ってんじゃねぇのか
+   | Fix orb movement starting point to random position on the board, Deal 65% damage
  | group:
- | condition: hp <= 49
-   | group:
-   | condition: turn 1
-     | group:
-       | condition: when 1 enemies remain, hp <= 100
-       | (14896:17) やってみるか……
-       | Increase damage to 150% for the next 999 turns
+ | condition: when 1 enemies remain, turn 1, hp <= 100
+   | (14896:17) やってみるか……
+   | Increase damage to 150% for the next 999 turns
  | group:
- | condition: hp <= 20
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | (14897:15) 撃発
-       | Deal 100% damage
+   | (14897:15) 撃発
+   | Deal 100% damage

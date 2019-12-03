@@ -16,25 +16,17 @@ level: 1
  group:
  | group:
    | group:
-   | condition: turns 1-4
-     | group:
-       | (10515:102) Explosion Breath
-       | Spawn random 4 Bomb orbs, Deal 200% damage
+   | condition: turns 1-4, hp <= 100
+     | (10515:102) Explosion Breath
+     | Spawn random 4 Bomb orbs, Deal 200% damage
    | group:
-   | condition: turn 5
-     | group:
-       | (10516:105) Scorching Heat
-       | Rcv 50% for 5 turns
+   | condition: turn 5, hp <= 100
+     | (10516:105) Scorching Heat
+     | Rcv 50% for 5 turns
    | group:
-   | condition: repeats every 1 turns
-     | group:
-       | (10515:102) Explosion Breath
-       | Spawn random 4 Bomb orbs, Deal 200% damage
+     | (10515:102) Explosion Breath
+     | Spawn random 4 Bomb orbs, Deal 200% damage
  | group:
- | condition: hp <= 19
-   | group:
-   | condition: turn 1
-     | group:
-       | condition: when 1 enemies remain, hp <= 20
-       | (10517:17) Flame Up
-       | Increase damage to 200% for the next 99 turns
+ | condition: when 1 enemies remain, turn 1, hp <= 20
+   | (10517:17) Flame Up
+   | Increase damage to 200% for the next 99 turns

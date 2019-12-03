@@ -12,24 +12,17 @@ level: 4
  | Voids status ailments for 999 turns + 6x2 cloud appear for 4 turns at random location
  group:
  | group:
-   | group:
-   | condition: turn 1
-     | group:
-       | (15275:99) まだまだだ！
-       | Seal 1st column for 3 turns
-   | group:
-   | condition: turn 2
-     | group:
-       | condition: when 1 enemies remain, hp <= 100
-       | (15276:17) 勝つためには俺は命を賭す
-       | Increase damage to 300% for the next 5 turns
-   | group:
-   | condition: turn 3
-     | group:
-       | (15176:66) それが俺の流儀だ！
-       | Do nothing
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | (15177:108) ドラゴンナックル
-       | Change Fire, Water, Wood to Water, Deal 90% damage
+ | condition: turn 1, hp <= 100
+   | (15275:99) まだまだだ！
+   | Seal 1st column for 3 turns
+ | group:
+ | condition: when 1 enemies remain, turn 2, hp <= 100
+   | (15276:17) 勝つためには俺は命を賭す
+   | Increase damage to 300% for the next 5 turns
+ | group:
+ | condition: turn 3, hp <= 100
+   | (15176:66) それが俺の流儀だ！
+   | Do nothing
+ | group:
+   | (15177:108) ドラゴンナックル
+   | Change Fire, Water, Wood to Water, Deal 90% damage

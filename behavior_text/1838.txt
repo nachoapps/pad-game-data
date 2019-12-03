@@ -11,37 +11,27 @@ level: 1
  | (3782:83) You have guts to point your sword at me! + Burn!!
  | Reduce damage from all sources by 35% for 3 turns + Change 4th row to Fire orbs, Deal 100% damage
  type: DEATH
- | condition: when defeated, hp <= 100
+ condition: when defeated, hp <= 100
  | (3779:69) Gainaut Transform
  | Show message: Ohhhh!! I....can still....shiiiine!!!
  group:
  | group:
    | group:
-   | condition: repeats every 4 turns
-     | group:
-       | (3785:89) Burning Cannon
-       | Delay active skills by 2 turns, Deal 75% damage
+   | condition: repeats every 4 turns, hp <= 100
+     | (3785:89) Burning Cannon
+     | Delay active skills by 2 turns, Deal 75% damage
    | group:
    | condition: repeats every 4 turns
-     | group:
-       | condition: 30% chance, hp <= 100
-       | (3784:63) Miraculous Vortex
-       | Bind 1 random cards for 3 turns, Deal 80% damage
-       | (3783:15) Fire Prison
-       | Deal 100% damage (2 hits, 50% each)
+     | condition: 30% chance, hp <= 100
+     | (3784:63) Miraculous Vortex
+     | Bind 1 random cards for 3 turns, Deal 80% damage
+     | (3783:15) Fire Prison
+     | Deal 100% damage (2 hits, 50% each)
  | group:
- | condition: hp <= 49
-   | group:
-   | condition: turn 1
-     | group:
-       | condition: when 1 enemies remain, hp <= 100
-       | (3786:17) Guooohhh!! I won't forgive you!!
-       | Increase damage to 200% for the next 999 turns
+ | condition: when 1 enemies remain, turn 1, hp <= 100
+   | (3786:17) Guooohhh!! I won't forgive you!!
+   | Increase damage to 200% for the next 999 turns
  | group:
- | condition: hp <= 19
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: hp <= 20
-       | (3787:15) Extreme Blaze
-       | Deal 300% damage
+ | condition: hp <= 20
+   | (3787:15) Extreme Blaze
+   | Deal 300% damage

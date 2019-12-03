@@ -8,7 +8,7 @@ approved: False
 
 level: 1
  type: DEATH
- | condition: when defeated, hp <= 100
+ condition: when defeated, hp <= 100
  | (8316:95) It's dangerous inside so be careful...!
  | Spawn random 1 Heal orbs
 
@@ -20,36 +20,25 @@ level: 4
  | (8307:74) Oh! A visitor?!
  | Reduce damage from all sources by 75% for 1 turns
  type: DEATH
- | condition: when defeated, hp <= 100
+ condition: when defeated, hp <= 100
  | (8316:95) It's dangerous inside so be careful...!
  | Spawn random 1 Heal orbs
  group:
  | group:
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: 34% chance, hp <= 100
-       | (8310:104) Sweeping Duster
-       | 2x2 cloud appear for 1 turns at random location, Deal 120% damage
-       | condition: 33% chance, hp <= 100
-       | (8311:79) Neat and Tidy
-       | Change 1st, 3rd, 5th row to Heal orbs, 2nd row to Fire orbs, 4th row to Fire, Jammer orbs, Deal 50% damage
-       | condition: 33% chance, when required attributes on board, hp <= 100
-       | (8312:92) Terrible Tumble
-       | Spawn random 5 Jammer orbs, Deal 130% damage
+   | condition: 34% chance, hp <= 100
+   | (8310:104) Sweeping Duster
+   | 2x2 cloud appear for 1 turns at random location, Deal 120% damage
+   | condition: 33% chance, hp <= 100
+   | (8311:79) Neat and Tidy
+   | Change 1st, 3rd, 5th row to Heal orbs, 2nd row to Fire orbs, 4th row to Fire, Jammer orbs, Deal 50% damage
+   | condition: 33% chance, when required attributes on board, hp <= 100
+   | (8312:92) Terrible Tumble
+   | Spawn random 5 Jammer orbs, Deal 130% damage
  | group:
- | condition: hp <= 49
-   | group:
-   | condition: turn 1
-     | group:
-       | condition: hp <= 50
-       | (8313:89) Flying Bucket
-       | Delay active skills by 2 turns
+ | condition: turn 1, hp <= 50
+   | (8313:89) Flying Bucket
+   | Delay active skills by 2 turns
  | group:
- | condition: hp <= 19
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: hp <= 20
-       | (8314:15) Toppling Bookshelf
-       | Deal 220% damage
+ | condition: hp <= 20
+   | (8314:15) Toppling Bookshelf
+   | Deal 220% damage

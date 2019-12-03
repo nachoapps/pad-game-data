@@ -8,7 +8,7 @@ approved: False
 
 level: 1
  type: DEATH
- | condition: when defeated, hp <= 100
+ condition: when defeated, hp <= 100
  | (8490:95) You won.
  | Do nothing
 
@@ -17,35 +17,24 @@ level: 4
  | (8482:20) I thought we had something.
  | Voids status ailments for 3 turns
  type: DEATH
- | condition: when defeated, hp <= 100
+ condition: when defeated, hp <= 100
  | (8490:95) You won.
  | Do nothing
  group:
  | group:
    | group:
-   | condition: turn 1
-     | group:
-       | (8483:48) Too slow!
-       | Change Random to Water, Deal 100% damage
+   | condition: turn 1, hp <= 100
+     | (8483:48) Too slow!
+     | Change Random to Water, Deal 100% damage
    | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: 40% chance, hp <= 100
-       | (8487:15) Ultimate Spear
-       | Deal 120% damage
+   | condition: 40% chance, hp <= 100
+     | (8487:15) Ultimate Spear
+     | Deal 120% damage
  | group:
- | condition: hp <= 49
-   | group:
-   | condition: turn 2
-     | group:
-       | condition: hp <= 50
-       | (8486:83) It's pointless! + It'll take more than that to kill me!
-       | Do nothing + Enemy recover 50% hp
+ | condition: turn 2, hp <= 50
+   | (8486:83) It's pointless! + It'll take more than that to kill me!
+   | Do nothing + Enemy recover 50% hp
  | group:
- | condition: hp <= 19
-   | group:
-   | condition: turn 3
-     | group:
-       | condition: when 1 enemies remain, hp <= 20
-       | (8488:17) AAAAAAAAH!!!
-       | Increase damage to 150% for the next 999 turns
+ | condition: when 1 enemies remain, turn 3, hp <= 20
+   | (8488:17) AAAAAAAAH!!!
+   | Increase damage to 150% for the next 999 turns

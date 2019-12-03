@@ -8,53 +8,47 @@ approved: False
 
 level: 1
  type: DEATH
- | condition: when defeated, hp <= 100
+ condition: when defeated, hp <= 100
  | (2652:95) ぐあっ
  | Change Heal to Dark
 
 level: 4
  type: PREEMPT
- | condition: when 1 enemies remain, hp <= 100
+ condition: when 1 enemies remain, hp <= 100
  | (2643:17) ぐだぐだぬかしてねーでかかってこい
  | Increase damage to 200% for the next 1 turns
  type: DEATH
- | condition: when defeated, hp <= 100
+ condition: when defeated, hp <= 100
  | (2652:95) ぐあっ
  | Change Heal to Dark
  group:
  | group:
    | group:
    | condition: turn 1
-     | group:
-       | condition: when 2609, 2610 on team, hp <= 100
-       | (2654:50) なめんじゃねーぞコラッ
-       | Player -50% HP
-       | condition: when required attributes on board, hp <= 100
-       | (2644:92) イェアー
-       | Spawn random 6 Jammer orbs, Deal 80% damage
+     | condition: when 2609, 2610 on team, hp <= 100
+     | (2654:50) なめんじゃねーぞコラッ
+     | Player -50% HP
+     | condition: when required attributes on board, hp <= 100
+     | (2644:92) イェアー
+     | Spawn random 6 Jammer orbs, Deal 80% damage
    | group:
-   | condition: repeats every 2 turns
-     | group:
-       | (2646:50) だりゃ
-       | Player -70% HP
+   | condition: repeats every 2 turns, hp <= 100
+     | (2646:50) だりゃ
+     | Player -70% HP
    | group:
-   | condition: repeats every 2 turns
-     | group:
-       | (2645:15) おらぁ
-       | Deal 120% damage (2 hits, 60% each)
+   | condition: repeats every 2 turns, hp <= 100
+     | (2645:15) おらぁ
+     | Deal 120% damage (2 hits, 60% each)
  | group:
  | condition: hp <= 49
    | group:
    | condition: turn 1
-     | group:
-       | condition: when 2609, 2610 on team, hp <= 100
-       | (2654:50) なめんじゃねーぞコラッ
-       | Player -50% HP
-       | condition: hp <= 50
-       | (2650:83) こんクソが + うおらぁっ
-       | Spawn random 4 Jammer orbs + Player -50% HP
+     | condition: when 2609, 2610 on team, hp <= 100
+     | (2654:50) なめんじゃねーぞコラッ
+     | Player -50% HP
+     | condition: hp <= 50
+     | (2650:83) こんクソが + うおらぁっ
+     | Spawn random 4 Jammer orbs + Player -50% HP
    | group:
-   | condition: repeats every 1 turns
-     | group:
-       | (2647:15) おらぁ おらぁ
-       | Deal 240% damage (4 hits, 60% each)
+     | (2647:15) おらぁ おらぁ
+     | Deal 240% damage (4 hits, 60% each)

@@ -13,28 +13,21 @@ level: 1
  group:
  | group:
    | group:
-   | condition: turn 1
-     | group:
-       | (15233:85) はあぁぁぁぁ！
-       | Change all orbs to Jammer, Deal 100% damage
+   | condition: turn 1, hp <= 100
+     | (15233:85) はあぁぁぁぁ！
+     | Change all orbs to Jammer, Deal 100% damage
    | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: 50% chance, hp <= 100
-       | (15234:15) 月山流手裏剣術
-       | Deal 120% damage (3 hits, 40% each)
-       | (15235:77) 必殺！フミキリシュリケン
-       | Change 2nd column to Dark orbs, 5th column to Dark orbs, Deal 100% damage
+     | condition: 50% chance, hp <= 100
+     | (15234:15) 月山流手裏剣術
+     | Deal 120% damage (3 hits, 40% each)
+     | (15235:77) 必殺！フミキリシュリケン
+     | Change 2nd column to Dark orbs, 5th column to Dark orbs, Deal 100% damage
  | group:
  | condition: hp <= 14
    | group:
-   | condition: turn 1
-     | group:
-       | condition: when 1 enemies remain, hp <= 100
-       | (15232:17) その気合い、受け止めた
-       | Increase damage to 150% for the next 3 turns
+   | condition: when 1 enemies remain, turn 1, hp <= 100
+     | (15232:17) その気合い、受け止めた
+     | Increase damage to 150% for the next 3 turns
    | group:
-   | condition: repeats every 1 turns
-     | group:
-       | (15235:77) 必殺！フミキリシュリケン
-       | Change 2nd column to Dark orbs, 5th column to Dark orbs, Deal 100% damage
+     | (15235:77) 必殺！フミキリシュリケン
+     | Change 2nd column to Dark orbs, 5th column to Dark orbs, Deal 100% damage

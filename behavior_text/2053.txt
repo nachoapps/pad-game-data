@@ -8,7 +8,7 @@ approved: False
 
 level: 1
  type: DEATH
- | condition: when defeated, hp <= 100
+ condition: when defeated, hp <= 100
  | (2891:95) Rrrraaaaagh!
  | Do nothing
 
@@ -17,48 +17,42 @@ level: 5
  | (2181:66) Man can never defeat the lord of Hell!
  | Do nothing
  type: DEATH
- | condition: when defeated, hp <= 100
+ condition: when defeated, hp <= 100
  | (2891:95) Rrrraaaaagh!
  | Do nothing
  group:
  | group:
    | group:
    | condition: repeats every 2 turns
-     | group:
-       | condition: 50% chance, hp <= 100
-       | (2106:62) Blind
-       | Blind all orbs on the board, Deal 75% damage
-       | (2105:89) Slow
-       | Delay active skills by 1 turns
+     | condition: 50% chance, hp <= 100
+     | (2106:62) Blind
+     | Blind all orbs on the board, Deal 75% damage
+     | (2105:89) Slow
+     | Delay active skills by 1 turns
    | group:
-   | condition: repeats every 2 turns
-     | group:
-       | (2107:15) Starfall
-       | Deal 160% damage (4 hits, 40% each)
+   | condition: repeats every 2 turns, hp <= 100
+     | (2107:15) Starfall
+     | Deal 160% damage (4 hits, 40% each)
  | group:
  | condition: hp <= 49
    | group:
-   | condition: repeats every 2 turns
-     | group:
-       | (2182:15) Flare
-       | Deal 140% damage
+   | condition: repeats every 2 turns, hp <= 100
+     | (2182:15) Flare
+     | Deal 140% damage
    | group:
-   | condition: repeats every 2 turns
-     | group:
-       | (2107:15) Starfall
-       | Deal 160% damage (4 hits, 40% each)
+   | condition: repeats every 2 turns, hp <= 100
+     | (2107:15) Starfall
+     | Deal 160% damage (4 hits, 40% each)
  | group:
  | condition: hp <= 29
    | group:
    | condition: repeats every 2 turns
-     | group:
-       | condition: 50% chance, hp <= 30
-       | (2104:14) Curse
-       | Bind active skills for 2 turns
-       | (2182:15) Flare
-       | Deal 140% damage
+     | condition: 50% chance, hp <= 30
+     | (2104:14) Curse
+     | Bind active skills for 2 turns
+     | (2182:15) Flare
+     | Deal 140% damage
    | group:
-   | condition: repeats every 2 turns
-     | group:
-       | (2107:15) Starfall
-       | Deal 160% damage (4 hits, 40% each)
+   | condition: repeats every 2 turns, hp <= 100
+     | (2107:15) Starfall
+     | Deal 160% damage (4 hits, 40% each)

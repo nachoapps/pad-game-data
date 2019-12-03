@@ -9,16 +9,10 @@ approved: False
 level: 5
  group:
  | group:
-   | group:
-   | condition: turn 1
-     | group:
-       | (361:20) Protection of the Pagoda
-       | Voids status ailments for 999 turns
+ | condition: turn 1, hp <= 100
+   | (361:20) Protection of the Pagoda
+   | Voids status ailments for 999 turns
  | group:
- | condition: hp <= 49
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: 70% chance, hp <= 50
-       | (360:15) Boisterous Dance of Bishamon
-       | Deal 180% damage (3 hits, 60% each)
+ | condition: 70% chance, hp <= 50
+   | (360:15) Boisterous Dance of Bishamon
+   | Deal 180% damage (3 hits, 60% each)

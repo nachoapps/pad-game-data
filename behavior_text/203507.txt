@@ -13,39 +13,29 @@ level: 4
  group:
  | group:
    | group:
-   | condition: turn 1
-     | group:
-       | (9041:83) No skills for you! + Hyah ♪
-       | Bind active skills for 10 turns + Movetime -2s for 10 turns
+   | condition: turn 1, hp <= 100
+     | (9041:83) No skills for you! + Hyah ♪
+     | Bind active skills for 10 turns + Movetime -2s for 10 turns
    | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: 50% chance, hp <= 100
-       | (9044:50) Here I come ♪
-       | Player -99% HP
-       | condition: 50% chance, hp <= 100
-       | (9043:79) How about this?
-       | Change 1st row to Wood, Jammer orbs, 5th row to Wood, Poison orbs, Deal 70% damage
-       | condition: when required attributes on board, hp <= 100
-       | (9045:92) I'm going to block you!
-       | Spawn random 6 Wood, Jammer, Poison orbs, Deal 100% damage
+     | condition: 50% chance, hp <= 100
+     | (9044:50) Here I come ♪
+     | Player -99% HP
+     | condition: 50% chance, hp <= 100
+     | (9043:79) How about this?
+     | Change 1st row to Wood, Jammer orbs, 5th row to Wood, Poison orbs, Deal 70% damage
+     | condition: when required attributes on board, hp <= 100
+     | (9045:92) I'm going to block you!
+     | Spawn random 6 Wood, Jammer, Poison orbs, Deal 100% damage
  | group:
- | condition: hp <= 74
-   | group:
-   | condition: turn 1
-     | group:
-       | (9042:67) Okay, now it's playtime♪
-       | Absorb combo <= 7 damage for 6 turns
+ | condition: turn 1, hp <= 100
+   | (9042:67) Okay, now it's playtime♪
+   | Absorb combo <= 7 damage for 6 turns
  | group:
  | condition: hp <= 29
    | group:
-   | condition: turn 1
-     | group:
-       | condition: when 99 enemies remain, hp <= 100
-       | (9046:17) Unforgivable!
-       | Increase damage to 200% for the next 99 turns
+   | condition: when 99 enemies remain, turn 1, hp <= 100
+     | (9046:17) Unforgivable!
+     | Increase damage to 200% for the next 99 turns
    | group:
-   | condition: repeats every 1 turns
-     | group:
-       | (9047:15) Playtime's over!
-       | Deal 240% damage (3 hits, 80% each)
+     | (9047:15) Playtime's over!
+     | Deal 240% damage (3 hits, 80% each)

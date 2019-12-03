@@ -13,33 +13,25 @@ level: 1
  group:
  | group:
    | group:
-   | condition: turn 1
-     | group:
-       | (6736:83) I recognize you as my enemy + GWAAAH-
-       | Fix orb movement starting point to random position on the board + Deal 150% damage (3 hits, 50% each)
+   | condition: turn 1, hp <= 100
+     | (6736:83) I recognize you as my enemy + GWAAAH-
+     | Fix orb movement starting point to random position on the board + Deal 150% damage (3 hits, 50% each)
    | group:
-   | condition: turn 2
-     | group:
-       | (6728:39) You can't escape
-       | Movetime -1s for 3 turns
+   | condition: turn 2, hp <= 100
+     | (6728:39) You can't escape
+     | Movetime -1s for 3 turns
    | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: 50% chance, hp <= 100
-       | (6727:15) GWAAAH-
-       | Deal 150% damage (3 hits, 50% each)
-       | (6730:15) DESTROY!!! DESTROY!!!
-       | Deal 120% damage (2 hits, 60% each)
+     | condition: 50% chance, hp <= 100
+     | (6727:15) GWAAAH-
+     | Deal 150% damage (3 hits, 50% each)
+     | (6730:15) DESTROY!!! DESTROY!!!
+     | Deal 120% damage (2 hits, 60% each)
  | group:
  | condition: hp <= 34
    | group:
-   | condition: turn 3
-     | group:
-       | condition: when 1 enemies remain, hp <= 100
-       | (6729:17) Total Annihilation is what I seek!
-       | Increase damage to 200% for the next 999 turns
+   | condition: when 1 enemies remain, turn 3, hp <= 100
+     | (6729:17) Total Annihilation is what I seek!
+     | Increase damage to 200% for the next 999 turns
    | group:
-   | condition: repeats every 1 turns
-     | group:
-       | (6731:85) Howl
-       | Change all orbs to Fire, Deal 500% damage
+     | (6731:85) Howl
+     | Change all orbs to Fire, Deal 500% damage

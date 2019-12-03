@@ -9,16 +9,10 @@ approved: False
 level: 1
  group:
  | group:
-   | group:
-   | condition: turn 1
-     | group:
-       | (280:20) Flame of Olympus
-       | Voids status ailments for 999 turns
+ | condition: turn 1, hp <= 100
+   | (280:20) Flame of Olympus
+   | Voids status ailments for 999 turns
  | group:
- | condition: hp <= 49
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: 50% chance, hp <= 50
-       | (281:15) Sunshine Burst
-       | Deal 150% damage (3 hits, 50% each)
+ | condition: 50% chance, hp <= 50
+   | (281:15) Sunshine Burst
+   | Deal 150% damage (3 hits, 50% each)

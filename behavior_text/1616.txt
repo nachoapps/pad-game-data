@@ -13,33 +13,27 @@ level: 1
  | (4178:-1) Countdown Message
  | Display '0' and skip turn
  type: DEATH
- | condition: when defeated, hp <= 100
+ condition: when defeated, hp <= 100
  | (14288:95) Next is my last
  | Bind awoken skills for 1 turns
  group:
  | group:
-   | group:
-   | condition: repeats every 5 turns
-     | group:
-       | (3178:-1) Countdown Message
-       | Display '0' and skip turn
-   | group:
-   | condition: repeats every 5 turns
-     | group:
-       | (2178:-1) Countdown Message
-       | Display '0' and skip turn
-   | group:
-   | condition: repeats every 5 turns
-     | group:
-       | (1178:-1) Countdown Message
-       | Display '0' and skip turn
-   | group:
-   | condition: repeats every 5 turns
-     | group:
-       | (14286:85) Elemental Splash!
-       | Change all orbs to Fire, Water, Wood, Light, Dark, Deal 10000% damage
-   | group:
-   | condition: repeats every 5 turns
-     | group:
-       | (4178:-1) Countdown Message
-       | Display '0' and skip turn
+ | condition: repeats every 5 turns, hp <= 100
+   | (3178:-1) Countdown Message
+   | Display '0' and skip turn
+ | group:
+ | condition: repeats every 5 turns, hp <= 100
+   | (2178:-1) Countdown Message
+   | Display '0' and skip turn
+ | group:
+ | condition: repeats every 5 turns, hp <= 100
+   | (1178:-1) Countdown Message
+   | Display '0' and skip turn
+ | group:
+ | condition: repeats every 5 turns, hp <= 100
+   | (14286:85) Elemental Splash!
+   | Change all orbs to Fire, Water, Wood, Light, Dark, Deal 10000% damage
+ | group:
+ | condition: repeats every 5 turns, hp <= 100
+   | (4178:-1) Countdown Message
+   | Display '0' and skip turn

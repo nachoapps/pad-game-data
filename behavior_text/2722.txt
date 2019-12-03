@@ -12,33 +12,25 @@ level: 1
  | Reduce damage from all sources by 75% for 5 turns
  group:
  | group:
-   | group:
-   | condition: turn 1
-     | group:
-       | (2815:15) Forging
-       | Deal 80% damage (2 hits, 40% each)
-   | group:
-   | condition: turn 2
-     | group:
-       | (2816:15) Forging
-       | Deal 100% damage (2 hits, 50% each)
-   | group:
-   | condition: turn 3
-     | group:
-       | (2817:15) Forging
-       | Deal 120% damage (2 hits, 60% each)
-   | group:
-   | condition: turn 4
-     | group:
-       | (2820:15) Forging
-       | Deal 140% damage (2 hits, 70% each)
-   | group:
-   | condition: turn 5
-     | group:
-       | (2818:15) Creation of the Sacred Treasures
-       | Deal 160% damage
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | (2819:15) Iron Rampage
-       | Deal 700% damage (7 hits, 100% each)
+ | condition: turn 1, hp <= 100
+   | (2815:15) Forging
+   | Deal 80% damage (2 hits, 40% each)
+ | group:
+ | condition: turn 2, hp <= 100
+   | (2816:15) Forging
+   | Deal 100% damage (2 hits, 50% each)
+ | group:
+ | condition: turn 3, hp <= 100
+   | (2817:15) Forging
+   | Deal 120% damage (2 hits, 60% each)
+ | group:
+ | condition: turn 4, hp <= 100
+   | (2820:15) Forging
+   | Deal 140% damage (2 hits, 70% each)
+ | group:
+ | condition: turn 5, hp <= 100
+   | (2818:15) Creation of the Sacred Treasures
+   | Deal 160% damage
+ | group:
+   | (2819:15) Iron Rampage
+   | Deal 700% damage (7 hits, 100% each)

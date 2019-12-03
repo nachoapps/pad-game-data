@@ -12,23 +12,17 @@ level: 1
  | Reduce damage from all sources by 75% for 4 turns
  group:
  | group:
-   | group:
-   | condition: turn 1
-     | group:
-       | (12651:104) Puffy Fluffy Meat Bun
-       | Row of cloud appear for 3 turns at random location
-   | group:
-   | condition: turn 2
-     | group:
-       | (12652:66) Munch Munch
-       | Do nothing
-   | group:
-   | condition: turn 3
-     | group:
-       | (12653:83) Thank you for the meal♪ + Thank you for waiting. Here I come!
-       | Do nothing + Increase damage to 500% for the next 3 turns
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | (12656:15) Dance of the Four Gods
-       | Deal 120% damage (4 hits, 30% each)
+ | condition: turn 1, hp <= 100
+   | (12651:104) Puffy Fluffy Meat Bun
+   | Row of cloud appear for 3 turns at random location
+ | group:
+ | condition: turn 2, hp <= 100
+   | (12652:66) Munch Munch
+   | Do nothing
+ | group:
+ | condition: turn 3, hp <= 100
+   | (12653:83) Thank you for the meal♪ + Thank you for waiting. Here I come!
+   | Do nothing + Increase damage to 500% for the next 3 turns
+ | group:
+   | (12656:15) Dance of the Four Gods
+   | Deal 120% damage (4 hits, 30% each)

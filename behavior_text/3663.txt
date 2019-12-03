@@ -14,12 +14,8 @@ level: 1
  | (7254:15) Body Slam
  | Deal 1100% damage
  group:
- | group:
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | (7254:15) Body Slam
-       | Deal 1100% damage
+ | (7254:15) Body Slam
+ | Deal 1100% damage
 
 level: 4
  type: PASSIVE
@@ -30,105 +26,82 @@ level: 4
  | Voids status ailments for 999 turns + Bind 1 random cards for 2 turns
  group:
  | group:
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: 33% chance, hp <= 100
-       | (7254:15) Body Slam
-       | Deal 1100% damage
-       | condition: 33% chance, hp <= 100
-       | (7255:15) Tail Swing
-       | Deal 1000% damage (2 hits, 500% each)
-       | condition: 34% chance, hp <= 100
-       | (7256:92) Dash Attack
-       | Spawn random 3 Jammer orbs, Deal 1000% damage
+   | condition: 33% chance, hp <= 100
+   | (7254:15) Body Slam
+   | Deal 1100% damage
+   | condition: 33% chance, hp <= 100
+   | (7255:15) Tail Swing
+   | Deal 1000% damage (2 hits, 500% each)
+   | condition: 34% chance, hp <= 100
+   | (7256:92) Dash Attack
+   | Spawn random 3 Jammer orbs, Deal 1000% damage
  | group:
  | condition: hp <= 89
    | group:
-   | condition: turn 1
-     | group:
-       | (7260:83) Roar + Enter Fury State + Burrow
-       | Bind active skills for 3 turns + Do nothing + Reduce damage from all sources by 75% for 1 turns
+   | condition: turn 1, hp <= 100
+     | (7260:83) Roar + Enter Fury State + Burrow
+     | Bind active skills for 3 turns + Do nothing + Reduce damage from all sources by 75% for 1 turns
    | group:
-   | condition: turn 2
-     | group:
-       | (7261:15) Burrowed Assault
-       | Deal 1500% damage
+   | condition: turn 2, hp <= 100
+     | (7261:15) Burrowed Assault
+     | Deal 1500% damage
    | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: 33% chance, hp <= 90
-       | (7269:83) Rage + Horn Gouge
-       | Increase damage to 120% for the next 1 turns + Change Random to Jammer, Deal 1200% damage
-       | condition: 50% chance, hp <= 90
-       | (7270:83) Rage + Springing Burrow
-       | Increase damage to 120% for the next 1 turns + Blind all orbs on the board, Deal 1200% damage
-       | condition: hp <= 90
-       | (7271:83) Rage + Combo Horn Thrash
-       | Increase damage to 120% for the next 1 turns + Deal 1000%~1500% damage (2~3 hits, 500% each)
+     | condition: 33% chance, hp <= 90
+     | (7269:83) Rage + Horn Gouge
+     | Increase damage to 120% for the next 1 turns + Change Random to Jammer, Deal 1200% damage
+     | condition: 50% chance, hp <= 90
+     | (7270:83) Rage + Springing Burrow
+     | Increase damage to 120% for the next 1 turns + Blind all orbs on the board, Deal 1200% damage
+     | condition: hp <= 90
+     | (7271:83) Rage + Combo Horn Thrash
+     | Increase damage to 120% for the next 1 turns + Deal 1000%~1500% damage (2~3 hits, 500% each)
  | group:
  | condition: hp <= 69
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: 33% chance, hp <= 70
-       | (7272:83) Rage + Horn Gouge
-       | Increase damage to 130% for the next 1 turns + Change Random to Jammer, Deal 1200% damage
-       | condition: 50% chance, hp <= 70
-       | (7273:83) Rage + Springing Burrow
-       | Increase damage to 130% for the next 1 turns + Blind all orbs on the board, Deal 1200% damage
-       | condition: hp <= 70
-       | (7274:83) Rage + Combo Horn Thrash
-       | Increase damage to 130% for the next 1 turns + Deal 1000%~1500% damage (2~3 hits, 500% each)
+   | condition: 33% chance, hp <= 70
+   | (7272:83) Rage + Horn Gouge
+   | Increase damage to 130% for the next 1 turns + Change Random to Jammer, Deal 1200% damage
+   | condition: 50% chance, hp <= 70
+   | (7273:83) Rage + Springing Burrow
+   | Increase damage to 130% for the next 1 turns + Blind all orbs on the board, Deal 1200% damage
+   | condition: hp <= 70
+   | (7274:83) Rage + Combo Horn Thrash
+   | Increase damage to 130% for the next 1 turns + Deal 1000%~1500% damage (2~3 hits, 500% each)
  | group:
  | condition: hp <= 59
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: 33% chance, hp <= 60
-       | (7275:83) Rage + Horn Gouge
-       | Increase damage to 140% for the next 1 turns + Change Random to Jammer, Deal 1200% damage
-       | condition: 50% chance, hp <= 60
-       | (7276:83) Rage + Springing Burrow
-       | Increase damage to 140% for the next 1 turns + Blind all orbs on the board, Deal 1200% damage
-       | condition: hp <= 60
-       | (7277:83) Rage + Combo Horn Thrash
-       | Increase damage to 140% for the next 1 turns + Deal 1000%~1500% damage (2~3 hits, 500% each)
+   | condition: 33% chance, hp <= 60
+   | (7275:83) Rage + Horn Gouge
+   | Increase damage to 140% for the next 1 turns + Change Random to Jammer, Deal 1200% damage
+   | condition: 50% chance, hp <= 60
+   | (7276:83) Rage + Springing Burrow
+   | Increase damage to 140% for the next 1 turns + Blind all orbs on the board, Deal 1200% damage
+   | condition: hp <= 60
+   | (7277:83) Rage + Combo Horn Thrash
+   | Increase damage to 140% for the next 1 turns + Deal 1000%~1500% damage (2~3 hits, 500% each)
  | group:
  | condition: hp <= 39
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: 33% chance, hp <= 40
-       | (7278:83) Rage + Horn Gouge
-       | Increase damage to 150% for the next 1 turns + Change Random to Jammer, Deal 1200% damage
-       | condition: 50% chance, hp <= 40
-       | (7279:83) Rage + Springing Burrow
-       | Increase damage to 150% for the next 1 turns + Blind all orbs on the board, Deal 1200% damage
-       | condition: hp <= 40
-       | (7280:83) Rage + Combo Horn Thrash
-       | Increase damage to 150% for the next 1 turns + Deal 1000%~1500% damage (2~3 hits, 500% each)
+   | condition: 33% chance, hp <= 40
+   | (7278:83) Rage + Horn Gouge
+   | Increase damage to 150% for the next 1 turns + Change Random to Jammer, Deal 1200% damage
+   | condition: 50% chance, hp <= 40
+   | (7279:83) Rage + Springing Burrow
+   | Increase damage to 150% for the next 1 turns + Blind all orbs on the board, Deal 1200% damage
+   | condition: hp <= 40
+   | (7280:83) Rage + Combo Horn Thrash
+   | Increase damage to 150% for the next 1 turns + Deal 1000%~1500% damage (2~3 hits, 500% each)
  | group:
  | condition: hp <= 19
    | group:
-   | condition: turn 3
-     | group:
-       | (7284:83) Roar + Enter Rampaging State + Burrow
-       | Bind awoken skills for 3 turns + Do nothing + Reduce damage from all sources by 75% for 1 turns
+   | condition: turn 3, hp <= 100
+     | (7284:83) Roar + Enter Rampaging State + Burrow
+     | Bind awoken skills for 3 turns + Do nothing + Reduce damage from all sources by 75% for 1 turns
    | group:
-   | condition: turn 4
-     | group:
-       | (7288:83) Burrowed Assault + Rampaging Downstrike + Rampaging Geyser
-       | Deal 1500% damage + Player -99% HP + Change all orbs to Water, Deal 12000% damage
+   | condition: turn 4, hp <= 100
+     | (7288:83) Burrowed Assault + Rampaging Downstrike + Rampaging Geyser
+     | Deal 1500% damage + Player -99% HP + Change all orbs to Water, Deal 12000% damage
    | group:
-   | condition: repeats every 1 turns
-     | group:
-       | (7291:83) Rampaging Triple Dash + Rampaging Geyser
-       | Deal 3000% damage (3 hits, 1000% each) + Change all orbs to Water, Deal 12000% damage
+     | (7291:83) Rampaging Triple Dash + Rampaging Geyser
+     | Deal 3000% damage (3 hits, 1000% each) + Change all orbs to Water, Deal 12000% damage
  | group:
-   | group:
-   | condition: turn 1
-     | group:
-       | condition: hp <= 1
-       | (7327:83) Roar + Enter Fury State + Burrow
-       | Bind active skills for 3 turns + Enemy recover 60% hp + Reduce damage from all sources by 75% for 1 turns
+ | condition: turn 1, hp <= 1
+   | (7327:83) Roar + Enter Fury State + Burrow
+   | Bind active skills for 3 turns + Enemy recover 60% hp + Reduce damage from all sources by 75% for 1 turns

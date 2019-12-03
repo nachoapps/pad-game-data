@@ -12,21 +12,15 @@ level: 1
  | Poison skyfall +15% for 5 turns
  group:
  | group:
-   | group:
-   | condition: repeats every 2 turns
-     | group:
-       | (6716:15) Dark Nebula
-       | Deal 150% damage (3 hits, 50% each)
+ | condition: repeats every 2 turns, hp <= 100
+   | (6716:15) Dark Nebula
+   | Deal 150% damage (3 hits, 50% each)
  | group:
  | condition: hp <= 19
    | group:
-   | condition: turn 1
-     | group:
-       | condition: when 3608, 3609 on team, hp <= 100
-       | (6739:83) You are a remarkable man... + Be consumed by the darkness... + That swallows even the void of night... + Dead End
-       | Do nothing + Do nothing + Do nothing + Player -150% HP
+   | condition: when 3608, 3609 on team, turn 1, hp <= 100
+     | (6739:83) You are a remarkable man... + Be consumed by the darkness... + That swallows even the void of night... + Dead End
+     | Do nothing + Do nothing + Do nothing + Player -150% HP
    | group:
-   | condition: repeats every 1 turns
-     | group:
-       | (6720:83) Be consumed by the darkness... + That swallows even the void of night... + Dead End
-       | Do nothing + Do nothing + Player -150% HP
+     | (6720:83) Be consumed by the darkness... + That swallows even the void of night... + Dead End
+     | Do nothing + Do nothing + Player -150% HP

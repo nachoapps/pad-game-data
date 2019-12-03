@@ -20,53 +20,44 @@ level: 4
  | Bind 1 random subs for 3 turns, Deal 100% damage
  group:
  | group:
-   | group:
-   | condition: turns 1-4
-     | group:
-       | condition: 34% chance, hp <= 100
-       | (8440:15) Rapid Fire
-       | Deal 105%~150% damage (7~10 hits, 15% each)
-       | condition: 33% chance, hp <= 100
-       | (8435:89) Flanking Assault
-       | Delay active skills by 2 turns, Deal 110% damage
-       | condition: 33% chance, hp <= 100
-       | (8441:48) Apokaliptan Weaponry
-       | Change Random to Fire, Deal 130% damage
-   | group:
-   | condition: turn 5
-     | group:
-       | (8445:15) All-Out Attack
-       | Deal 195% damage (3 hits, 65% each)
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: 34% chance, hp <= 100
-       | (8440:15) Rapid Fire
-       | Deal 105%~150% damage (7~10 hits, 15% each)
-       | condition: 33% chance, hp <= 100
-       | (8435:89) Flanking Assault
-       | Delay active skills by 2 turns, Deal 110% damage
-       | condition: 33% chance, hp <= 100
-       | (8441:48) Apokaliptan Weaponry
-       | Change Random to Fire, Deal 130% damage
- type: REMAINING
- condition: when 1 enemies remain
+ | condition: turns 1-4
+   | condition: 34% chance, hp <= 100
+   | (8440:15) Rapid Fire
+   | Deal 105%~150% damage (7~10 hits, 15% each)
+   | condition: 33% chance, hp <= 100
+   | (8435:89) Flanking Assault
+   | Delay active skills by 2 turns, Deal 110% damage
+   | condition: 33% chance, hp <= 100
+   | (8441:48) Apokaliptan Weaponry
+   | Change Random to Fire, Deal 130% damage
  | group:
-   | group:
-   | condition: turns 1-4
-     | group:
-       | condition: 34% chance, hp <= 100
-       | (8440:15) Rapid Fire
-       | Deal 105%~150% damage (7~10 hits, 15% each)
-       | condition: 33% chance, hp <= 100
-       | (8435:89) Flanking Assault
-       | Delay active skills by 2 turns, Deal 110% damage
-       | condition: 33% chance, hp <= 100
-       | (8441:48) Apokaliptan Weaponry
-       | Change Random to Fire, Deal 130% damage
-   | group:
-   | condition: turn 5
-     | group:
-       | condition: when 1 enemies remain, hp <= 100
-       | (8444:17) Mindless Loyalty
-       | Increase damage to 300% for the next 999 turns
+ | condition: turn 5, hp <= 100
+   | (8445:15) All-Out Attack
+   | Deal 195% damage (3 hits, 65% each)
+ | group:
+   | condition: 34% chance, hp <= 100
+   | (8440:15) Rapid Fire
+   | Deal 105%~150% damage (7~10 hits, 15% each)
+   | condition: 33% chance, hp <= 100
+   | (8435:89) Flanking Assault
+   | Delay active skills by 2 turns, Deal 110% damage
+   | condition: 33% chance, hp <= 100
+   | (8441:48) Apokaliptan Weaponry
+   | Change Random to Fire, Deal 130% damage
+ type: REMAINING
+ condition: when 1 enemies remain, hp <= 100
+ | group:
+ | condition: turns 1-4
+   | condition: 34% chance, hp <= 100
+   | (8440:15) Rapid Fire
+   | Deal 105%~150% damage (7~10 hits, 15% each)
+   | condition: 33% chance, hp <= 100
+   | (8435:89) Flanking Assault
+   | Delay active skills by 2 turns, Deal 110% damage
+   | condition: 33% chance, hp <= 100
+   | (8441:48) Apokaliptan Weaponry
+   | Change Random to Fire, Deal 130% damage
+ | group:
+ | condition: when 1 enemies remain, turn 5, hp <= 100
+   | (8444:17) Mindless Loyalty
+   | Increase damage to 300% for the next 999 turns

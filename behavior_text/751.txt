@@ -12,29 +12,20 @@ level: 5
  | Blind all orbs on the board
  group:
  | group:
-   | group:
-   | condition: turn 1
-     | group:
-       | (563:2) Protective Light Formation
-       | Bind Dark cards for 3~4 turns
+ | condition: turn 1, hp <= 100
+   | (563:2) Protective Light Formation
+   | Bind Dark cards for 3~4 turns
  | group:
  | condition: hp <= 59
    | group:
-   | condition: turn 1
-     | group:
-       | (563:2) Protective Light Formation
-       | Bind Dark cards for 3~4 turns
+   | condition: turn 1, hp <= 100
+     | (563:2) Protective Light Formation
+     | Bind Dark cards for 3~4 turns
    | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: 70% chance, hp <= 60
-       | (564:15) Aurora Strikes
-       | Deal 150% damage (3 hits, 50% each)
+   | condition: 70% chance, hp <= 60
+     | (564:15) Aurora Strikes
+     | Deal 150% damage (3 hits, 50% each)
  | group:
- | condition: hp <= 19
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: hp <= 20
-       | (565:15) Dance of the Four Sources
-       | Deal 800% damage (4 hits, 200% each)
+ | condition: hp <= 20
+   | (565:15) Dance of the Four Sources
+   | Deal 800% damage (4 hits, 200% each)

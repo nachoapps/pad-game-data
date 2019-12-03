@@ -12,30 +12,19 @@ level: 1
  | Voids status ailments for 999 turns
  group:
  | group:
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | (3073:15) That's all it is
-       | Deal 100% damage
+   | (3073:15) That's all it is
+   | Deal 100% damage
  | group:
- | condition: hp <= 74
-   | group:
-   | condition: turn 1
-     | group:
-       | condition: hp <= 75
-       | (833:1) 催眠作用のある鱗粉
-       | Bind 3 random cards for 2~3 turns
+ | condition: turn 1, hp <= 75
+   | (833:1) 催眠作用のある鱗粉
+   | Bind 3 random cards for 2~3 turns
  | group:
  | condition: hp <= 49
    | group:
-   | condition: turn 1
-     | group:
-       | condition: hp <= 50
-       | (3074:83) Lord of the Flies + Alter Ego Attack
-       | Reduce damage from all sources by 30% for 99 turns + Deal 60% damage (6 hits, 10% each)
+   | condition: turn 1, hp <= 50
+     | (3074:83) Lord of the Flies + Alter Ego Attack
+     | Reduce damage from all sources by 30% for 99 turns + Deal 60% damage (6 hits, 10% each)
    | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: hp <= 50
-       | (3075:83) That's all it is + Alter Ego Attack
-       | Deal 100% damage + Deal 60% damage (6 hits, 10% each)
+   | condition: hp <= 50
+     | (3075:83) That's all it is + Alter Ego Attack
+     | Deal 100% damage + Deal 60% damage (6 hits, 10% each)

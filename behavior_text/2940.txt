@@ -12,40 +12,27 @@ level: 1
  | Delay active skills by 5 turns + Absorb combo <= 5 damage for 10 turns
  group:
  | group:
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: 25% chance, hp <= 100
-       | (5171:15) Tempest
-       | Deal 150% damage (3 hits, 50% each)
-       | condition: 25% chance, hp <= 100
-       | (5172:62) Swallowing Whole!
-       | Blind all orbs on the board, Deal 130% damage
-       | condition: 25% chance, hp <= 100
-       | (5173:39) Dazzler Splash
-       | Movetime 50% for 1 turns, Deal 140% damage
-       | condition: 25% chance, when required attributes on board, hp <= 100
-       | (5176:92) Tail Slap
-       | Spawn random 3 Water orbs, Deal 130% damage
+   | condition: 25% chance, hp <= 100
+   | (5171:15) Tempest
+   | Deal 150% damage (3 hits, 50% each)
+   | condition: 25% chance, hp <= 100
+   | (5172:62) Swallowing Whole!
+   | Blind all orbs on the board, Deal 130% damage
+   | condition: 25% chance, hp <= 100
+   | (5173:39) Dazzler Splash
+   | Movetime 50% for 1 turns, Deal 140% damage
+   | condition: 25% chance, when required attributes on board, hp <= 100
+   | (5176:92) Tail Slap
+   | Spawn random 3 Water orbs, Deal 130% damage
  | group:
- | condition: hp <= 69
-   | group:
-   | condition: turn 1
-     | group:
-       | (5175:8) Breaching
-       | Increase damage to 250% for the next attack
+ | condition: turn 1, hp <= 100
+   | (5175:8) Breaching
+   | Increase damage to 250% for the next attack
  | group:
- | condition: hp <= 49
-   | group:
-   | condition: turn 2
-     | group:
-       | (5170:50) Skimming
-       | Player -99% HP
+ | condition: turn 2, hp <= 100
+   | (5170:50) Skimming
+   | Player -99% HP
  | group:
- | condition: hp <= 14
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: hp <= 15
-       | (5174:77) Hydro Cannon
-       | Change 3rd, 4th column to Water orbs, Deal 750% damage
+ | condition: hp <= 15
+   | (5174:77) Hydro Cannon
+   | Change 3rd, 4th column to Water orbs, Deal 750% damage

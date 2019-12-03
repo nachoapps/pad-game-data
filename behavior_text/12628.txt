@@ -11,27 +11,20 @@ level: 1
  | (6958:20) War Cry
  | Voids status ailments for 3 turns
  type: DEATH
- | condition: when defeated, hp <= 100
+ condition: when defeated, hp <= 100
  | (6963:95) Growl!!
  | Do nothing
  group:
  | group:
    | group:
-   | condition: repeats every 3 turns
-     | group:
-       | condition: when required attributes on board, hp <= 100
-       | (6959:92) Approaching Light Ball
-       | Spawn random 4 Light orbs, Deal 100% damage
+   | condition: repeats every 3 turns, when required attributes on board, hp <= 100
+     | (6959:92) Approaching Light Ball
+     | Spawn random 4 Light orbs, Deal 100% damage
    | group:
-   | condition: repeats every 3 turns
-     | group:
-       | (6960:8) Charging
-       | Increase damage to 200% for the next attack
+   | condition: repeats every 3 turns, hp <= 100
+     | (6960:8) Charging
+     | Increase damage to 200% for the next attack
  | group:
- | condition: hp <= 9
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: hp <= 10
-       | (6961:15) Focused Attack
-       | Deal 250% damage
+ | condition: hp <= 10
+   | (6961:15) Focused Attack
+   | Deal 250% damage

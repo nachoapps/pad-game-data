@@ -8,7 +8,7 @@ approved: False
 
 level: 1
  type: DEATH
- | condition: when defeated, hp <= 100
+ condition: when defeated, hp <= 100
  | (2684:95) オレも何かを見つけてこようと思う！ + テルの言う光ってやつさ… そしたら…
  | Do nothing + Do nothing
 
@@ -17,39 +17,32 @@ level: 4
  | (2689:83) もういい… + 最後はオレがきっちりカタをつける
  | Do nothing + Voids status ailments for 999 turns
  type: DEATH
- | condition: when defeated, hp <= 100
+ condition: when defeated, hp <= 100
  | (2684:95) オレも何かを見つけてこようと思う！ + テルの言う光ってやつさ… そしたら…
  | Do nothing + Do nothing
  group:
  | group:
    | group:
    | condition: turn 1
-     | group:
-       | condition: when required attributes on board, when 2617, 2618 on team, hp <= 100
-       | (2687:92) 久しぶりだなパルコ
-       | Spawn random 8 Wood orbs
-       | (2675:89) おまえらとりあえずワビを入れろや
-       | Delay active skills by 2~5 turns
+     | condition: when required attributes on board, when 2617, 2618 on team, hp <= 100
+     | (2687:92) 久しぶりだなパルコ
+     | Spawn random 8 Wood orbs
+     | (2675:89) おまえらとりあえずワビを入れろや
+     | Delay active skills by 2~5 turns
    | group:
-   | condition: turn 2
-     | group:
-       | (2676:79) ここに頭をこすりつけてな！
-       | Change 5th row to Poison orbs, Deal 100% damage
+   | condition: turn 2, hp <= 100
+     | (2676:79) ここに頭をこすりつけてな！
+     | Change 5th row to Poison orbs, Deal 100% damage
    | group:
-   | condition: repeats every 1 turns
-     | group:
-       | (2677:48) あんまり調子にのんなよてめー
-       | Change Heal to Fire, Deal 100% damage
-       | condition: when required attributes on board, hp <= 100
-       | (2678:92) あんまり調子にのんなよてめー
-       | Spawn random 6 Fire orbs, Deal 100% damage
+     | (2677:48) あんまり調子にのんなよてめー
+     | Change Heal to Fire, Deal 100% damage
+     | condition: when required attributes on board, hp <= 100
+     | (2678:92) あんまり調子にのんなよてめー
+     | Spawn random 6 Fire orbs, Deal 100% damage
  | group:
- | condition: hp <= 49
-   | group:
-   | condition: turn 1
-     | group:
-       | condition: when required attributes on board, when 2617, 2618 on team, hp <= 100
-       | (2687:92) 久しぶりだなパルコ
-       | Spawn random 8 Wood orbs
-       | (2681:83) タイマンか それとも全員でふくろか… + 今日のオレはそう簡単にくたばんねーぞ
-       | Increase damage to 200% for the next 99 turns + Reduce damage from all sources by 50% for 1 turns
+ | condition: turn 1, hp <= 49
+   | condition: when required attributes on board, when 2617, 2618 on team, hp <= 100
+   | (2687:92) 久しぶりだなパルコ
+   | Spawn random 8 Wood orbs
+   | (2681:83) タイマンか それとも全員でふくろか… + 今日のオレはそう簡単にくたばんねーぞ
+   | Increase damage to 200% for the next 99 turns + Reduce damage from all sources by 50% for 1 turns

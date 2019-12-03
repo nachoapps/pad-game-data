@@ -21,30 +21,19 @@ level: 1
  | Absorb combo <= 6 damage for 999 turns + Voids status ailments for 999 turns + Movetime 25% for 6 turns
  group:
  | group:
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | (6381:83) Benevolent Protection + Lifespan Diminisher + Ruined Harvest Mudslide
-       | Reduce damage from all sources by 75% for 1 turns + Change 3rd row to Heal orbs, Deal 100% damage + Change Heal to Jammer, Deal 100% damage
+   | (6381:83) Benevolent Protection + Lifespan Diminisher + Ruined Harvest Mudslide
+   | Reduce damage from all sources by 75% for 1 turns + Change 3rd row to Heal orbs, Deal 100% damage + Change Heal to Jammer, Deal 100% damage
  | group:
- | condition: hp <= 49
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: hp <= 50
-       | (6384:83) Lifespan Diminisher + Insidious Impurity
-       | Change 3rd row to Heal orbs, Deal 100% damage + Change Heal to Poison, Deal 100% damage
+ | condition: hp <= 50
+   | (6384:83) Lifespan Diminisher + Insidious Impurity
+   | Change 3rd row to Heal orbs, Deal 100% damage + Change Heal to Poison, Deal 100% damage
  | group:
  | condition: hp <= 24
    | group:
-   | condition: turn 1
-     | group:
-       | condition: hp <= 25
-       | (6386:75) It's time for your punishment!
-       | Leader changes to random sub for 1 turns
+   | condition: turn 1, hp <= 25
+     | (6386:75) It's time for your punishment!
+     | Leader changes to random sub for 1 turns
    | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: hp <= 25
-       | (6387:50) Judgment Slash
-       | Player -300% HP
+   | condition: hp <= 25
+     | (6387:50) Judgment Slash
+     | Player -300% HP

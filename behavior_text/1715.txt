@@ -12,26 +12,19 @@ level: 1
  | Bind active skills for 5 turns
  group:
  | group:
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: 40% chance, hp <= 100
-       | (1662:48) Wind-Calling Prayer
-       | Change Random to Wood, Deal 75% damage
-       | condition: 80% chance, hp <= 100
-       | (1663:48) Fiery Counterattack Strategy
-       | Change Random to Fire, Deal 75% damage
+   | condition: 40% chance, hp <= 100
+   | (1662:48) Wind-Calling Prayer
+   | Change Random to Wood, Deal 75% damage
+   | condition: 80% chance, hp <= 100
+   | (1663:48) Fiery Counterattack Strategy
+   | Change Random to Fire, Deal 75% damage
  | group:
  | condition: hp <= 29
    | group:
-   | condition: turn 1
-     | group:
-       | condition: hp <= 30
-       | (1664:1) Interlocking Stratagems
-       | Bind 5 random cards for 2~3 turns
+   | condition: turn 1, hp <= 30
+     | (1664:1) Interlocking Stratagems
+     | Bind 5 random cards for 2~3 turns
    | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: hp <= 30
-       | (1665:15) Final Strategy - Rain of Arrows
-       | Deal 300% damage (10 hits, 30% each)
+   | condition: hp <= 30
+     | (1665:15) Final Strategy - Rain of Arrows
+     | Deal 300% damage (10 hits, 30% each)

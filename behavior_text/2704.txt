@@ -8,7 +8,7 @@ approved: False
 
 level: 1
  type: DEATH
- | condition: when defeated, hp <= 100
+ condition: when defeated, hp <= 100
  | (2775:95) Can you still stand and continue?
  | Spawn random 3 Heal orbs
 
@@ -21,7 +21,7 @@ that is the true me. + Try to defeat me if you can!!
  | (2770:55) Try to defeat me if you can!!
  | Player recover 100% hp
  type: DEATH
- | condition: when defeated, hp <= 100
+ condition: when defeated, hp <= 100
  | (2775:95) Can you still stand and continue?
  | Spawn random 3 Heal orbs
  group:
@@ -31,36 +31,29 @@ to be crawling around!!
    | Voids player buff effects
  | group:
    | group:
-   | condition: turn 1
-     | group:
-       | (2771:74) Too weak.
-       | Reduce damage from all sources by 50% for 1 turns
+   | condition: turn 1, hp <= 100
+     | (2771:74) Too weak.
+     | Reduce damage from all sources by 50% for 1 turns
    | group:
-   | condition: turn 2
-     | group:
-       | (1:82) Disable Skill
-       | Deal 100% damage
+   | condition: turn 2, hp <= 100
+     | (1:82) Disable Skill
+     | Deal 100% damage
    | group:
-   | condition: turn 3
-     | group:
-       | (2801:20) You don't have time to be kneeling!
-       | Voids status ailments for 3 turns
+   | condition: turn 3, hp <= 100
+     | (2801:20) You don't have time to be kneeling!
+     | Voids status ailments for 3 turns
    | group:
    | condition: turn 4
-     | group:
-       | (2772:94) Move on to the next one!
-       | Lock all Dark orbs, Deal 100% damage
-       | condition: when 1 enemies remain, hp <= 100
-       | (2774:17) Never take your eyes off the enemy.
-       | Increase damage to 200% for the next 1 turns
+     | (2772:94) Move on to the next one!
+     | Lock all Dark orbs, Deal 100% damage
+     | condition: when 1 enemies remain, hp <= 100
+     | (2774:17) Never take your eyes off the enemy.
+     | Increase damage to 200% for the next 1 turns
    | group:
-   | condition: repeats every 2 turns
-     | group:
-       | (1:82) Disable Skill
-       | Deal 100% damage
+   | condition: repeats every 2 turns, hp <= 100
+     | (1:82) Disable Skill
+     | Deal 100% damage
    | group:
-   | condition: repeats every 2 turns
-     | group:
-       | condition: when 1 enemies remain, hp <= 100
-       | (2774:17) Never take your eyes off the enemy.
-       | Increase damage to 200% for the next 1 turns
+   | condition: repeats every 2 turns, when 1 enemies remain, hp <= 100
+     | (2774:17) Never take your eyes off the enemy.
+     | Increase damage to 200% for the next 1 turns

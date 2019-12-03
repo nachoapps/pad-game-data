@@ -12,30 +12,22 @@ level: 1
  | Movetime -1s for 1 turns
  group:
  | group:
-   | group:
-   | condition: turn 1
-     | group:
-       | (14119:109) 回転数30上げます!!
-       | Random 1 orbs change every 1.0s for 1 turns
-   | group:
-   | condition: turn 2
-     | group:
-       | (14120:110) 回れぇぇぇ!!
-       | Specific orbs change every 0.5s for 1 turns
-   | group:
-   | condition: turn 3
-     | group:
-       | condition: when required attributes on board, hp <= 100
-       | (14121:92) ラブリーチャンスペタンコチャン♪
-       | Spawn random 5 Wood orbs
-   | group:
-   | condition: repeats every 2 turns
-     | group:
-       | condition: when 1 enemies remain, hp <= 100
-       | (14122:17) ヒメはヒメなの ハイ!!
-       | Increase damage to 150% for the next 1 turns
-   | group:
-   | condition: repeats every 2 turns
-     | group:
-       | (14123:15) ヒメなのだ!!
-       | Deal 100% damage
+ | condition: turn 1, hp <= 100
+   | (14119:109) 回転数30上げます!!
+   | Random 1 orbs change every 1.0s for 1 turns
+ | group:
+ | condition: turn 2, hp <= 100
+   | (14120:110) 回れぇぇぇ!!
+   | Specific orbs change every 0.5s for 1 turns
+ | group:
+ | condition: when required attributes on board, turn 3, hp <= 100
+   | (14121:92) ラブリーチャンスペタンコチャン♪
+   | Spawn random 5 Wood orbs
+ | group:
+ | condition: repeats every 2 turns, when 1 enemies remain, hp <= 100
+   | (14122:17) ヒメはヒメなの ハイ!!
+   | Increase damage to 150% for the next 1 turns
+ | group:
+ | condition: repeats every 2 turns, hp <= 100
+   | (14123:15) ヒメなのだ!!
+   | Deal 100% damage

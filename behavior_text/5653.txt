@@ -12,35 +12,26 @@ level: 4
  | 2x2 cloud appear for 3 turns at random location
  group:
  | group:
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: 33% chance, hp <= 100
-       | (14967:92) 安心するのはまだ早い
-       | Spawn random 5 Dark orbs, Deal 95% damage
-       | condition: 33% chance, hp <= 100
-       | (14968:15) くそっ
-       | Deal 100% damage
-       | condition: 34% chance, hp <= 100
-       | (14971:15) くたばれ……！
-       | Deal 105% damage (3 hits, 35% each)
+   | condition: 33% chance, hp <= 100
+   | (14967:92) 安心するのはまだ早い
+   | Spawn random 5 Dark orbs, Deal 95% damage
+   | condition: 33% chance, hp <= 100
+   | (14968:15) くそっ
+   | Deal 100% damage
+   | condition: 34% chance, hp <= 100
+   | (14971:15) くたばれ……！
+   | Deal 105% damage (3 hits, 35% each)
  | group:
- | condition: hp <= 75
-   | group:
-   | condition: turn 1
-     | group:
-       | (14969:109) 次は貴様を撃つ
-       | Random 2 orbs change every 1.0s for 5 turns
+ | condition: turn 1, hp <= 100
+   | (14969:109) 次は貴様を撃つ
+   | Random 2 orbs change every 1.0s for 5 turns
  | group:
  | condition: hp <= 49
    | group:
-   | condition: turn 1
-     | group:
-       | condition: when 1 enemies remain, hp <= 100
-       | (14970:17) やってみるしかない
-       | Increase damage to 150% for the next 5 turns
+   | condition: when 1 enemies remain, turn 1, hp <= 100
+     | (14970:17) やってみるしかない
+     | Increase damage to 150% for the next 5 turns
    | group:
-   | condition: turn 2
-     | group:
-       | (14969:109) 次は貴様を撃つ
-       | Random 2 orbs change every 1.0s for 5 turns
+   | condition: turn 2, hp <= 100
+     | (14969:109) 次は貴様を撃つ
+     | Random 2 orbs change every 1.0s for 5 turns

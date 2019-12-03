@@ -9,26 +9,14 @@ approved: False
 level: 1
  group:
  | group:
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: 10% chance, hp <= 100
-       | (381:16) Bouncing off the Walls
-       | Do nothing
+ | condition: 10% chance, hp <= 100
+   | (381:16) Bouncing off the Walls
+   | Do nothing
  | group:
- | condition: hp <= 49
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: hp <= 50
-       | (387:15) Super Duper Mad!
-       | Deal 140% damage (7 hits, 20% each)
+ | condition: hp <= 50
+   | (387:15) Super Duper Mad!
+   | Deal 140% damage (7 hits, 20% each)
  type: REMAINING
- condition: when 1 enemies remain
- | group:
-   | group:
-   | condition: turn 1
-     | group:
-       | condition: when 1 enemies remain, hp <= 100
-       | (270:17) Lone Force
-       | Increase damage to 300% for the next 999 turns
+ condition: when 1 enemies remain, turn 1, hp <= 100
+ | (270:17) Lone Force
+ | Increase damage to 300% for the next 999 turns

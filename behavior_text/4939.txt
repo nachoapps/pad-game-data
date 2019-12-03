@@ -8,7 +8,7 @@ approved: False
 
 level: 1
  type: DEATH
- | condition: when defeated, hp <= 100
+ condition: when defeated, hp <= 100
  | (11813:95) I'm... indestructible!
  | Do nothing
 
@@ -17,51 +17,41 @@ level: 4
  | (11805:83) I'm Kamen Rider Genm! + Multi Unbreaker
  | Voids status ailments for 10 turns + Reduce damage from all sources by 50% for 5 turns
  type: DEATH
- | condition: when defeated, hp <= 100
+ condition: when defeated, hp <= 100
  | (11813:95) I'm... indestructible!
  | Do nothing
  group:
  | group:
    | group:
-   | condition: turn 1
-     | group:
-       | (11806:39) Anti Bugster Area
-       | Movetime -1s for 5 turns
+   | condition: turn 1, hp <= 100
+     | (11806:39) Anti Bugster Area
+     | Movetime -1s for 5 turns
    | group:
    | condition: repeats every 5 turns
-     | group:
-       | condition: 50% chance, hp <= 100
-       | (11807:15) GM Glows Arm
-       | Deal 100% damage
-       | condition: 50% chance, when required attributes on board, hp <= 100
-       | (11808:92) Alfight Shoes
-       | Spawn random 4 Dark orbs, Deal 95% damage
+     | condition: 50% chance, hp <= 100
+     | (11807:15) GM Glows Arm
+     | Deal 100% damage
+     | condition: 50% chance, when required attributes on board, hp <= 100
+     | (11808:92) Alfight Shoes
+     | Spawn random 4 Dark orbs, Deal 95% damage
    | group:
    | condition: repeats every 5 turns
-     | group:
-       | condition: 50% chance, hp <= 100
-       | (11778:104) Mid-Air
-       | 2x1 cloud appear for 5 turns at random location
-       | condition: 50% chance, hp <= 100
-       | (11779:67) Double Jump
-       | Absorb combo <= 4 damage for 5 turns
+     | condition: 50% chance, hp <= 100
+     | (11778:104) Mid-Air
+     | 2x1 cloud appear for 5 turns at random location
+     | condition: 50% chance, hp <= 100
+     | (11779:67) Double Jump
+     | Absorb combo <= 4 damage for 5 turns
  | group:
- | condition: hp <= 49
-   | group:
-   | condition: turn 2
-     | group:
-       | condition: when 1 enemies remain, hp <= 100
-       | (11789:17) Gain Riser
-       | Increase damage to 150% for the next 3 turns, Deal 100% damage
+ | condition: when 1 enemies remain, turn 2, hp <= 100
+   | (11789:17) Gain Riser
+   | Increase damage to 150% for the next 3 turns, Deal 100% damage
  | group:
  | condition: hp <= 20
    | group:
-   | condition: turn 3
-     | group:
-       | (11790:53) Mech Build Guard
-       | Absorb Fire damage for 3 turns
+   | condition: turn 3, hp <= 100
+     | (11790:53) Mech Build Guard
+     | Absorb Fire damage for 3 turns
    | group:
-   | condition: repeats every 1 turns
-     | group:
-       | (11809:83) Gashat! Finishing Move! + Mighty Critical Strike
-       | Spawn random 6 Dark orbs + Deal 160% damage (8 hits, 20% each)
+     | (11809:83) Gashat! Finishing Move! + Mighty Critical Strike
+     | Spawn random 6 Dark orbs + Deal 160% damage (8 hits, 20% each)

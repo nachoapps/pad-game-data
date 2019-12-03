@@ -16,30 +16,20 @@ level: 1
  group:
  | group:
    | group:
-   | condition: turn 1
-     | group:
-       | (7970:83) Eternal Suffering + Garm's Rotten Fangs
-       | Poison skyfall +20% for 99 turns + Deal 165% damage (3 hits, 55% each)
+   | condition: turn 1, hp <= 100
+     | (7970:83) Eternal Suffering + Garm's Rotten Fangs
+     | Poison skyfall +20% for 99 turns + Deal 165% damage (3 hits, 55% each)
    | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: 50% chance, hp <= 100
-       | (7977:94) Dead Judgment
-       | Lock 1 random Poison, Mortal Poison orbs, Deal 160% damage
-       | (7978:64) Poison Thorn
-       | Change Random 6 to Poison, Deal 160% damage
+     | condition: 50% chance, hp <= 100
+     | (7977:94) Dead Judgment
+     | Lock 1 random Poison, Mortal Poison orbs, Deal 160% damage
+     | (7978:64) Poison Thorn
+     | Change Random 6 to Poison, Deal 160% damage
  | group:
- | condition: hp <= 49
-   | group:
-   | condition: turn 2
-     | group:
-       | (7973:83) Color of Life + Naglfar
-       | Enemy recover 100% hp + Reduce damage from all sources by 75% for 10 turns
+ | condition: turn 2, hp <= 100
+   | (7973:83) Color of Life + Naglfar
+   | Enemy recover 100% hp + Reduce damage from all sources by 75% for 10 turns
  | group:
- | condition: hp <= 9
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: hp <= 10
-       | (7979:64) Grief of Helheim
-       | Change Random 10 to Poison, Deal 3000% damage
+ | condition: hp <= 10
+   | (7979:64) Grief of Helheim
+   | Change Random 10 to Poison, Deal 3000% damage

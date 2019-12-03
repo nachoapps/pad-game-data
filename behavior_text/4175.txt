@@ -12,13 +12,10 @@ level: 1
  | Do nothing
  group:
  | group:
-   | group:
-   | condition: repeats every 2 turns
-     | group:
-       | (9220:66) Celebrate with us, TAMA!
-       | Do nothing
-   | group:
-   | condition: repeats every 2 turns
-     | group:
-       | (9219:66) Thank you, TAMA!
-       | Do nothing
+ | condition: repeats every 2 turns, hp <= 100
+   | (9220:66) Celebrate with us, TAMA!
+   | Do nothing
+ | group:
+ | condition: repeats every 2 turns, hp <= 100
+   | (9219:66) Thank you, TAMA!
+   | Do nothing

@@ -12,29 +12,22 @@ level: 4
  | Reduce damage from all sources by 75% for 1 turns
  group:
  | group:
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: 20% chance, hp <= 100
-       | (10608:48) Slider
-       | Change Random to Water, Deal 100% damage
-       | condition: 20% chance, hp <= 100
-       | (10609:48) Curve
-       | Change Random to Wood, Deal 100% damage
-       | condition: 20% chance, hp <= 100
-       | (10610:48) Fork
-       | Change Random to Fire, Deal 100% damage
-       | condition: 20% chance, hp <= 100
-       | (10611:48) Sinker
-       | Change Random to Dark, Deal 100% damage
-       | condition: 20% chance, hp <= 100
-       | (10612:48) Shoot
-       | Change Random to Light, Deal 100% damage
+   | condition: 20% chance, hp <= 100
+   | (10608:48) Slider
+   | Change Random to Water, Deal 100% damage
+   | condition: 20% chance, hp <= 100
+   | (10609:48) Curve
+   | Change Random to Wood, Deal 100% damage
+   | condition: 20% chance, hp <= 100
+   | (10610:48) Fork
+   | Change Random to Fire, Deal 100% damage
+   | condition: 20% chance, hp <= 100
+   | (10611:48) Sinker
+   | Change Random to Dark, Deal 100% damage
+   | condition: 20% chance, hp <= 100
+   | (10612:48) Shoot
+   | Change Random to Light, Deal 100% damage
  | group:
- | condition: hp <= 49
-   | group:
-   | condition: turn 1
-     | group:
-       | condition: when 1 enemies remain, hp <= 100
-       | (10607:17) Spirit of Persistence
-       | Increase damage to 200% for the next 9 turns
+ | condition: when 1 enemies remain, turn 1, hp <= 100
+   | (10607:17) Spirit of Persistence
+   | Increase damage to 200% for the next 9 turns

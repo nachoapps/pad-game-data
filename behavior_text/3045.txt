@@ -8,7 +8,7 @@ approved: False
 
 level: 1
  type: DEATH
- | condition: when defeated, hp <= 100
+ condition: when defeated, hp <= 100
  | (4965:95) ...Uh......uh...
  | Do nothing
 
@@ -17,54 +17,37 @@ level: 4
  | (4982:62) All that matters is the mission...
  | Blind all orbs on the board, Deal 100% damage
  type: DEATH
- | condition: when defeated, hp <= 100
+ condition: when defeated, hp <= 100
  | (4965:95) ...Uh......uh...
  | Do nothing
  group:
  | group:
    | group:
    | condition: turn 1
-     | group:
-       | (4983:48) "Myo-o The Angry" cannot lose!
-       | Change Light to Dark, Deal 100% damage
-       | (4984:15) "Myo-o The Angry" cannot lose!
-       | Deal 100% damage
+     | (4983:48) "Myo-o The Angry" cannot lose!
+     | Change Light to Dark, Deal 100% damage
+     | (4984:15) "Myo-o The Angry" cannot lose!
+     | Deal 100% damage
    | group:
-   | condition: repeats every 1 turns
-     | group:
-       | (4986:15) Futae no Kiwami
-       | Deal 160% damage (2 hits, 80% each)
+     | (4986:15) Futae no Kiwami
+     | Deal 160% damage (2 hits, 80% each)
  | group:
- | condition: hp <= 69
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: when required attributes on board, hp <= 70
-       | (4987:92) Hyoh!!
-       | Spawn random 3 Fire orbs, Deal 150% damage
+ | condition: when required attributes on board, hp <= 70
+   | (4987:92) Hyoh!!
+   | Spawn random 3 Fire orbs, Deal 150% damage
  | group:
- | condition: hp <= 49
-   | group:
-   | condition: turn 2
-     | group:
-       | (4985:86) Hyoooh
-       | Enemy recover 15% hp
+ | condition: turn 2, hp <= 100
+   | (4985:86) Hyoooh
+   | Enemy recover 15% hp
  | group:
  | condition: hp <= 44
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: 50% chance, hp <= 45
-       | (4988:63) Long range
-       | Bind 1 random subs for 3 turns, Deal 80% damage
-       | condition: when required attributes on board, hp <= 70
-       | (4987:92) Hyoh!!
-       | Spawn random 3 Fire orbs, Deal 150% damage
+   | condition: 50% chance, hp <= 45
+   | (4988:63) Long range
+   | Bind 1 random subs for 3 turns, Deal 80% damage
+   | condition: when required attributes on board, hp <= 70
+   | (4987:92) Hyoh!!
+   | Spawn random 3 Fire orbs, Deal 150% damage
  | group:
- | condition: hp <= 9
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: hp <= 10
-       | (4989:15) Hyoh!!
-       | Deal 400% damage
+ | condition: hp <= 10
+   | (4989:15) Hyoh!!
+   | Deal 400% damage

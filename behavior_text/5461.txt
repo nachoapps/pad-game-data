@@ -12,30 +12,20 @@ level: 1
  | Voids status ailments for 10 turns
  group:
  | group:
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: 33% chance, hp <= 100
-       | (14092:15) デッド直伝の剣術があるっ
-       | Deal 110% damage (2 hits, 55% each)
-       | condition: 33% chance, hp <= 100
-       | (14093:15) 何すんだこの野郎！
-       | Deal 100% damage
-       | condition: 34% chance, hp <= 100
-       | (14094:48) いいかげんにしろォォ!!
-       | Change Random to Water, Deal 95% damage
+   | condition: 33% chance, hp <= 100
+   | (14092:15) デッド直伝の剣術があるっ
+   | Deal 110% damage (2 hits, 55% each)
+   | condition: 33% chance, hp <= 100
+   | (14093:15) 何すんだこの野郎！
+   | Deal 100% damage
+   | condition: 34% chance, hp <= 100
+   | (14094:48) いいかげんにしろォォ!!
+   | Change Random to Water, Deal 95% damage
  | group:
- | condition: hp <= 50
-   | group:
-   | condition: turn 1
-     | group:
-       | (14091:110) 同じお宝求めて勝負だァ!!
-       | Specific orbs change every 2.0s for 3 turns
+ | condition: turn 1, hp <= 100
+   | (14091:110) 同じお宝求めて勝負だァ!!
+   | Specific orbs change every 2.0s for 3 turns
  | group:
- | condition: hp <= 20
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: when required attributes on board, hp <= 100
-       | (14095:92) わぁあぁあぁぁあ
-       | Spawn random 6 Water orbs, Deal 150% damage
+ | condition: when required attributes on board, hp <= 100
+   | (14095:92) わぁあぁあぁぁあ
+   | Spawn random 6 Water orbs, Deal 150% damage

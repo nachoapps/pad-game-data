@@ -12,36 +12,26 @@ level: 4
  | Absorb combo <= 5 damage for 99 turns
  group:
  | group:
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: 40% chance, hp <= 100
-       | (11896:15) ひもっ！
-       | Deal 110% damage
-       | condition: 40% chance, when required attributes on board, hp <= 100
-       | (11897:92) メシの時間じゃ！
-       | Spawn random 3 Heal orbs, Deal 120% damage
+   | condition: 40% chance, hp <= 100
+   | (11896:15) ひもっ！
+   | Deal 110% damage
+   | condition: 40% chance, when required attributes on board, hp <= 100
+   | (11897:92) メシの時間じゃ！
+   | Spawn random 3 Heal orbs, Deal 120% damage
  | group:
  | condition: hp <= 29
    | group:
-   | condition: turn 1
-     | group:
-       | (11899:86) ひもじインパクト
-       | Enemy recover 100% hp
+   | condition: turn 1, hp <= 100
+     | (11899:86) ひもじインパクト
+     | Enemy recover 100% hp
    | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: 50% chance, hp <= 100
-       | (11900:48) ヨダレが止まら～ん！
-       | Change Random to Water, Deal 100% damage
-       | condition: 50% chance, hp <= 100
-       | (11901:94) コレは　ワシのメシじゃ～！
-       | Lock 10 random Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs, Deal 110% damage
+     | condition: 50% chance, hp <= 100
+     | (11900:48) ヨダレが止まら～ん！
+     | Change Random to Water, Deal 100% damage
+     | condition: 50% chance, hp <= 100
+     | (11901:94) コレは　ワシのメシじゃ～！
+     | Lock 10 random Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs, Deal 110% damage
  type: REMAINING
- condition: when 1 enemies remain
- | group:
-   | group:
-   | condition: turn 1
-     | group:
-       | (12063:88) ひもじいのぅ…
-       | Bind awoken skills for 3 turns
+ condition: when 1 enemies remain, turn 1, hp <= 100
+ | (12063:88) ひもじいのぅ…
+ | Bind awoken skills for 3 turns

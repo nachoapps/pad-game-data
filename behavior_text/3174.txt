@@ -9,13 +9,10 @@ approved: False
 level: 1
  group:
  | group:
-   | group:
-   | condition: repeats every 2 turns
-     | group:
-       | (5596:19) Super Berserk
-       | Increase damage to 200% for the next 1 turns
-   | group:
-   | condition: repeats every 2 turns
-     | group:
-       | (5595:15) Catastrophe
-       | Deal 60% damage (3 hits, 20% each)
+ | condition: repeats every 2 turns, hp <= 100
+   | (5596:19) Super Berserk
+   | Increase damage to 200% for the next 1 turns
+ | group:
+ | condition: repeats every 2 turns, hp <= 100
+   | (5595:15) Catastrophe
+   | Deal 60% damage (3 hits, 20% each)

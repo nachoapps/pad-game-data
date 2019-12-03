@@ -15,18 +15,13 @@ level: 1
  | Absorb combo <= 7 damage for 3 turns
  group:
  | group:
-   | group:
-   | condition: turn 1
-     | group:
-       | (13855:88) I'll tie you up if you make a scene here
-       | Bind awoken skills for 1 turns
-   | group:
-   | condition: turn 2
-     | group:
-       | (13856:65) Thorn Fang's Detainment
-       | Bind 4 random subs for 3 turns
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | (13857:85) Hydrosnake
-       | Change all orbs to Fire, Water, Heal, Deal 200% damage
+ | condition: turn 1, hp <= 100
+   | (13855:88) I'll tie you up if you make a scene here
+   | Bind awoken skills for 1 turns
+ | group:
+ | condition: turn 2, hp <= 100
+   | (13856:65) Thorn Fang's Detainment
+   | Bind 4 random subs for 3 turns
+ | group:
+   | (13857:85) Hydrosnake
+   | Change all orbs to Fire, Water, Heal, Deal 200% damage

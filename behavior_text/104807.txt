@@ -12,27 +12,16 @@ level: 1
  | Blind all orbs on the board, Deal 50% damage
  group:
  | group:
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: 50% chance, hp <= 100
-       | (10744:97) Fading Shape
-       | Blind random 1~2 orbs for 3 turns, Deal 100% damage
-       | (10745:15) Deltmis
-       | Deal 120% damage (3 hits, 40% each)
+   | condition: 50% chance, hp <= 100
+   | (10744:97) Fading Shape
+   | Blind random 1~2 orbs for 3 turns, Deal 100% damage
+   | (10745:15) Deltmis
+   | Deal 120% damage (3 hits, 40% each)
  | group:
- | condition: hp <= 49
-   | group:
-   | condition: turn 1
-     | group:
-       | condition: hp <= 50
-       | (10746:89) Dark Shine
-       | Delay active skills by 3 turns
+ | condition: turn 1, hp <= 50
+   | (10746:89) Dark Shine
+   | Delay active skills by 3 turns
  | group:
- | condition: hp <= 9
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: hp <= 10
-       | (10747:97) Anghel Feldamis
-       | Blind random 4~8 orbs for 1 turns, Deal 180% damage
+ | condition: hp <= 10
+   | (10747:97) Anghel Feldamis
+   | Blind random 4~8 orbs for 1 turns, Deal 180% damage

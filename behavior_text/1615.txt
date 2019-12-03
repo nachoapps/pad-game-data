@@ -17,35 +17,28 @@ level: 1
  | group:
    | group:
    | condition: turn 1
-     | group:
-       | condition: 34% chance, hp <= 100
-       | (5302:66) Hear me, Serpents of Fiery Dawn!
-       | Do nothing
-       | condition: 50% chance, hp <= 100
-       | (5305:66) Go now, Scorpions of Creeping Flame!
-       | Do nothing
-       | (5308:66) Come forth, Wolves of Wildfire!
-       | Do nothing
+     | condition: 34% chance, hp <= 100
+     | (5302:66) Hear me, Serpents of Fiery Dawn!
+     | Do nothing
+     | condition: 50% chance, hp <= 100
+     | (5305:66) Go now, Scorpions of Creeping Flame!
+     | Do nothing
+     | (5308:66) Come forth, Wolves of Wildfire!
+     | Do nothing
    | group:
-   | condition: repeats every 1 turns
-     | group:
-       | (5319:15) Cane Strike
-       | Deal 500% damage
+     | (5319:15) Cane Strike
+     | Deal 500% damage
  | group:
  | condition: hp <= 49
    | group:
-   | condition: turn 1
-     | group:
-       | condition: hp <= 50
-       | (5315:83) Now you've done it! I'm going all out! + Inferno Spell!
-       | Delay active skills by 5 turns + Change all orbs to Fire, Jammer, Deal 150% damage
+   | condition: turn 1, hp <= 50
+     | (5315:83) Now you've done it! I'm going all out! + Inferno Spell!
+     | Delay active skills by 5 turns + Change all orbs to Fire, Jammer, Deal 150% damage
    | group:
-   | condition: turns 2-3
-     | group:
-       | (5321:85) Inferno Spell!
-       | Change all orbs to Fire, Jammer, Deal 150% damage
+   | condition: turns 2-3, hp <= 100
+     | (5321:85) Inferno Spell!
+     | Change all orbs to Fire, Jammer, Deal 150% damage
    | group:
-   | condition: turn 4
-     | group:
-       | (5318:84) Infe...
-       | Change all orbs to Jammer
+   | condition: turn 4, hp <= 100
+     | (5318:84) Infe...
+     | Change all orbs to Jammer

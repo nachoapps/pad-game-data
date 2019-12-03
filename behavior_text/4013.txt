@@ -16,49 +16,38 @@ level: 1
  group:
  | group:
    | group:
-   | condition: repeats every 6 turns
-     | group:
-       | (8408:15) Royal Sword
-       | Deal 96%~160% damage (6~10 hits, 16% each)
+   | condition: repeats every 6 turns, hp <= 100
+     | (8408:15) Royal Sword
+     | Deal 96%~160% damage (6~10 hits, 16% each)
    | group:
    | condition: repeats every 6 turns
-     | group:
-       | condition: 50% chance, hp <= 100
-       | (8409:97) Black Thunderstorm
-       | Blind random 1~5 orbs for 3 turns, Deal 140% damage
-       | condition: when required attributes on board, hp <= 100
-       | (8410:92) Black Thunderstorm
-       | Spawn random 3 Mortal Poison orbs, Deal 140% damage
+     | condition: 50% chance, hp <= 100
+     | (8409:97) Black Thunderstorm
+     | Blind random 1~5 orbs for 3 turns, Deal 140% damage
+     | condition: when required attributes on board, hp <= 100
+     | (8410:92) Black Thunderstorm
+     | Spawn random 3 Mortal Poison orbs, Deal 140% damage
  | group:
  | condition: hp <= 49
    | group:
-   | condition: turn 1
-     | group:
-       | condition: hp <= 50
-       | (8413:83) Psevdaisthíseis + ...Grovel at my feet
-       | Change own attribute to random one of Fire, Water, Wood + Change 3rd column to Dark orbs, 4th column to Light orbs, Deal 250% damage
+   | condition: turn 1, hp <= 50
+     | (8413:83) Psevdaisthíseis + ...Grovel at my feet
+     | Change own attribute to random one of Fire, Water, Wood + Change 3rd column to Dark orbs, 4th column to Light orbs, Deal 250% damage
    | group:
-   | condition: turn 2
-     | group:
-       | condition: hp <= 50
-       | (8416:83) Dread + Keraunós
-       | Change own attribute to Dark + Movetime -1s for 10 turns, Deal 150% damage
+   | condition: turn 2, hp <= 50
+     | (8416:83) Dread + Keraunós
+     | Change own attribute to Dark + Movetime -1s for 10 turns, Deal 150% damage
  | group:
  | condition: hp <= 9
    | group:
-   | condition: turn 1
-     | group:
-       | (8419:83) Playtime's over... + Élenchos
-       | Increase damage to 1000% for the next 999 turns + Bind awoken skills for 10 turns
+   | condition: turn 1, hp <= 100
+     | (8419:83) Playtime's over... + Élenchos
+     | Increase damage to 1000% for the next 999 turns + Bind awoken skills for 10 turns
    | group:
-   | condition: turn 2
-     | group:
-       | condition: hp <= 50
-       | (8413:83) Psevdaisthíseis + ...Grovel at my feet
-       | Change own attribute to random one of Fire, Water, Wood + Change 3rd column to Dark orbs, 4th column to Light orbs, Deal 250% damage
+   | condition: turn 2, hp <= 50
+     | (8413:83) Psevdaisthíseis + ...Grovel at my feet
+     | Change own attribute to random one of Fire, Water, Wood + Change 3rd column to Dark orbs, 4th column to Light orbs, Deal 250% damage
    | group:
-   | condition: turn 3
-     | group:
-       | condition: hp <= 50
-       | (8416:83) Dread + Keraunós
-       | Change own attribute to Dark + Movetime -1s for 10 turns, Deal 150% damage
+   | condition: turn 3, hp <= 50
+     | (8416:83) Dread + Keraunós
+     | Change own attribute to Dark + Movetime -1s for 10 turns, Deal 150% damage

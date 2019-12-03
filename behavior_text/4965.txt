@@ -18,51 +18,35 @@ level: 1
  | Change Random to Wood, Deal 95% damage
  group:
  | group:
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: 50% chance, hp <= 100
-       | (11965:15) ガッツ！！
-       | Deal 110% damage (2 hits, 55% each)
-       | condition: 50% chance, hp <= 100
-       | (11966:48) そこは飲み込んでくれ！
-       | Change Random to Wood, Deal 95% damage
+   | condition: 50% chance, hp <= 100
+   | (11965:15) ガッツ！！
+   | Deal 110% damage (2 hits, 55% each)
+   | condition: 50% chance, hp <= 100
+   | (11966:48) そこは飲み込んでくれ！
+   | Change Random to Wood, Deal 95% damage
  | group:
  | condition: hp <= 49
    | group:
-   | condition: turn 1
-     | group:
-       | (11967:86) ガッツをチャージしないとな…！
-       | Enemy recover 30% hp
+   | condition: turn 1, hp <= 100
+     | (11967:86) ガッツをチャージしないとな…！
+     | Enemy recover 30% hp
    | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: 25% chance, hp <= 100
-       | (11968:77) ど根性…　左肉球！
-       | Change 1st column to Water orbs, Deal 100% damage
-       | condition: 25% chance, hp <= 100
-       | (11969:77) ど根性…　右肉球！
-       | Change 6th column to Dark orbs, Deal 100% damage
-       | condition: 25% chance, hp <= 100
-       | (11965:15) ガッツ！！
-       | Deal 110% damage (2 hits, 55% each)
-       | condition: 25% chance, hp <= 100
-       | (11966:48) そこは飲み込んでくれ！
-       | Change Random to Wood, Deal 95% damage
+     | condition: 25% chance, hp <= 100
+     | (11968:77) ど根性…　左肉球！
+     | Change 1st column to Water orbs, Deal 100% damage
+     | condition: 25% chance, hp <= 100
+     | (11969:77) ど根性…　右肉球！
+     | Change 6th column to Dark orbs, Deal 100% damage
+     | condition: 25% chance, hp <= 100
+     | (11965:15) ガッツ！！
+     | Deal 110% damage (2 hits, 55% each)
+     | condition: 25% chance, hp <= 100
+     | (11966:48) そこは飲み込んでくれ！
+     | Change Random to Wood, Deal 95% damage
  | group:
- | condition: hp <= 19
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | (11971:15) ど根性ストレート肉球
-       | Deal 200% damage
+   | (11971:15) ど根性ストレート肉球
+   | Deal 200% damage
  type: REMAINING
- condition: when 1 enemies remain
- | group:
- | condition: hp <= 19
-   | group:
-   | condition: turn 1
-     | group:
-       | condition: when 1 enemies remain, hp <= 100
-       | (11970:17) 世界はトモダチ！　全部守るぜ！
-       | Increase damage to 150% for the next 5 turns
+ condition: when 1 enemies remain, turn 1, hp <= 100
+ | (11970:17) 世界はトモダチ！　全部守るぜ！
+ | Increase damage to 150% for the next 5 turns

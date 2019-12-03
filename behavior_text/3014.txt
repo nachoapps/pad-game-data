@@ -11,50 +11,41 @@ level: 1
  | (4954:83) Heat Smoke + Started accumulating power in his fists
  | Jammer, Poison skyfall +15% for 5 turns + Reduce damage from all sources by 50% for 3 turns
  type: DEATH
- | condition: when defeated, hp <= 100
+ condition: when defeated, hp <= 100
  | (4961:69) Black Robot Transformation
  | Show message: This... is not... the end!|Limiters have been released
  group:
  | group:
-   | group:
-   | condition: turn 1
-     | group:
-       | (4955:66) 3
-       | Do nothing
-   | group:
-   | condition: turn 2
-     | group:
-       | condition: when required attributes on board, hp <= 100
-       | (4956:92) 2
-       | Change all orbs to Jammer
-       | (4957:66) 2
-       | Do nothing
-   | group:
-   | condition: turn 3
-     | group:
-       | condition: when 1 enemies remain, hp <= 100
-       | (4958:17) 1
-       | Increase damage to 1000% for the next 999 turns
-   | group:
-   | condition: repeats every 4 turns
-     | group:
-       | (4960:85) Burning Destruction Fist
-       | Change all orbs to Fire, Deal 1000% damage
-   | group:
-   | condition: repeats every 4 turns
-     | group:
-       | (4955:66) 3
-       | Do nothing
-   | group:
-   | condition: repeats every 4 turns
-     | group:
-       | condition: when required attributes on board, hp <= 100
-       | (4956:92) 2
-       | Change all orbs to Jammer
-       | (4957:66) 2
-       | Do nothing
-   | group:
-   | condition: repeats every 4 turns
-     | group:
-       | (4959:66) 1
-       | Do nothing
+ | condition: turn 1, hp <= 100
+   | (4955:66) 3
+   | Do nothing
+ | group:
+ | condition: turn 2
+   | condition: when required attributes on board, hp <= 100
+   | (4956:92) 2
+   | Change all orbs to Jammer
+   | (4957:66) 2
+   | Do nothing
+ | group:
+ | condition: when 1 enemies remain, turn 3, hp <= 100
+   | (4958:17) 1
+   | Increase damage to 1000% for the next 999 turns
+ | group:
+ | condition: repeats every 4 turns, hp <= 100
+   | (4960:85) Burning Destruction Fist
+   | Change all orbs to Fire, Deal 1000% damage
+ | group:
+ | condition: repeats every 4 turns, hp <= 100
+   | (4955:66) 3
+   | Do nothing
+ | group:
+ | condition: repeats every 4 turns
+   | condition: when required attributes on board, hp <= 100
+   | (4956:92) 2
+   | Change all orbs to Jammer
+   | (4957:66) 2
+   | Do nothing
+ | group:
+ | condition: repeats every 4 turns, hp <= 100
+   | (4959:66) 1
+   | Do nothing

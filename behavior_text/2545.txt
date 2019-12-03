@@ -12,43 +12,32 @@ level: 4
  | Blind all orbs on the board
  group:
  | group:
-   | group:
-   | condition: turn 1
-     | group:
-       | (3695:15) Speed of
-       | Deal 70% damage
-   | group:
-   | condition: turn 2
-     | group:
-       | (3696:1) Boiling
-       | Bind 1 random cards for 3 turns
-   | group:
-   | condition: repeats every 2 turns
-     | group:
-       | condition: when required attributes on board, hp <= 100
-       | (3697:92) Very
-       | Spawn random 5 Jammer orbs, Deal 40% damage
-   | group:
-   | condition: repeats every 2 turns
-     | group:
-       | (3695:15) Speed of
-       | Deal 70% damage
- type: REMAINING
- condition: when 1 enemies remain
+ | condition: turn 1, hp <= 100
+   | (3695:15) Speed of
+   | Deal 70% damage
  | group:
-   | group:
-   | condition: turn 1
-     | group:
-       | condition: when 1 enemies remain, hp <= 100
-       | (3702:17) Curse you!
-       | Increase damage to 200% for the next 999 turns
-   | group:
-   | condition: turn 2
-     | group:
-       | (3695:15) Speed of
-       | Deal 70% damage
-   | group:
-   | condition: turn 3
-     | group:
-       | (3696:1) Boiling
-       | Bind 1 random cards for 3 turns
+ | condition: turn 2, hp <= 100
+   | (3696:1) Boiling
+   | Bind 1 random cards for 3 turns
+ | group:
+ | condition: repeats every 2 turns, when required attributes on board, hp <= 100
+   | (3697:92) Very
+   | Spawn random 5 Jammer orbs, Deal 40% damage
+ | group:
+ | condition: repeats every 2 turns, hp <= 100
+   | (3695:15) Speed of
+   | Deal 70% damage
+ type: REMAINING
+ condition: when 1 enemies remain, hp <= 100
+ | group:
+ | condition: when 1 enemies remain, turn 1, hp <= 100
+   | (3702:17) Curse you!
+   | Increase damage to 200% for the next 999 turns
+ | group:
+ | condition: turn 2, hp <= 100
+   | (3695:15) Speed of
+   | Deal 70% damage
+ | group:
+ | condition: turn 3, hp <= 100
+   | (3696:1) Boiling
+   | Bind 1 random cards for 3 turns

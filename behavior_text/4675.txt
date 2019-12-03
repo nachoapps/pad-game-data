@@ -8,29 +8,22 @@ approved: False
 
 level: 4
  type: PREEMPT
- | condition: when required attributes on board, hp <= 100
+ condition: when required attributes on board, hp <= 100
  | (10598:92) Hades Showdown
  | Spawn random 4 Poison orbs
  group:
  | group:
-   | group:
-   | condition: turn 1
-     | group:
-       | (10585:74) Heavy Ball
-       | Reduce damage from all sources by 50% for 2 turns, Deal 100% damage
-   | group:
-   | condition: turn 2
-     | group:
-       | (10599:98) Black Zero Seizure
-       | Blind orbs in specific positions for 2 turns
-   | group:
-   | condition: turn 3
-     | group:
-       | condition: when 1 enemies remain, hp <= 100
-       | (10600:17) Rampage Ball
-       | Increase damage to 150% for the next 2 turns, Deal 100% damage
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | (10601:15) Hell Cape of Reverse Menace
-       | Deal 200% damage (10 hits, 20% each)
+ | condition: turn 1, hp <= 100
+   | (10585:74) Heavy Ball
+   | Reduce damage from all sources by 50% for 2 turns, Deal 100% damage
+ | group:
+ | condition: turn 2, hp <= 100
+   | (10599:98) Black Zero Seizure
+   | Blind orbs in specific positions for 2 turns
+ | group:
+ | condition: when 1 enemies remain, turn 3, hp <= 100
+   | (10600:17) Rampage Ball
+   | Increase damage to 150% for the next 2 turns, Deal 100% damage
+ | group:
+   | (10601:15) Hell Cape of Reverse Menace
+   | Deal 200% damage (10 hits, 20% each)

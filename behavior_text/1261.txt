@@ -12,41 +12,34 @@ level: 1
  | Movetime 150% for 4 turns + Fix orb movement starting point to random position on the board + Absorb combo <= 5 damage for 1 turns
  group:
  | group:
-   | group:
-   | condition: turn 1
-     | group:
-       | condition: when 6 combos last turn, hp <= 100
-       | (9055:83) It's only natural to get this far + In that case... + ...how about this?
-       | Change 1st, 3rd, 5th row to Light orbs, 2nd, 4th row to Dark orbs + Change 3rd, 4th column to Heal orbs + Absorb combo <= 6 damage for 1 turns
-       | (9064:15) Too bad
-       | Deal 40000% damage (4 hits, 10000% each)
-   | group:
-   | condition: turn 2
-     | group:
-       | condition: when 7 combos last turn, hp <= 100
-       | (9059:83) You can do it, right? + Next...this... + Can you do it?
-       | Spawn random 6 Fire, Water, Wood, Light, Dark orbs + Blind orbs in specific positions for 1 turns + Absorb combo <= 7 damage for 1 turns
-       | (9064:15) Too bad
-       | Deal 40000% damage (4 hits, 10000% each)
-   | group:
-   | condition: turn 3
-     | group:
-       | condition: when 8 combos last turn, hp <= 100
-       | (9063:83) I didn't think you'd do it + This is the end + Decide and show me!
-       | Change all orbs to Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison + Blind all orbs on the board + Absorb combo <= 8 damage for 1 turns
-       | (9064:15) Too bad
-       | Deal 40000% damage (4 hits, 10000% each)
-   | group:
-   | condition: turn 4
-     | group:
-       | condition: when 9 combos last turn, hp <= 100
-       | (9065:40) Nice combo
-       | Reduce self HP to 0
-       | (9064:15) Too bad
-       | Deal 40000% damage (4 hits, 10000% each)
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: when 9 combos last turn, hp <= 100
-       | (9065:40) Nice combo
-       | Reduce self HP to 0
+ | condition: turn 1
+   | condition: when 6 combos last turn, hp <= 100
+   | (9055:83) It's only natural to get this far + In that case... + ...how about this?
+   | Change 1st, 3rd, 5th row to Light orbs, 2nd, 4th row to Dark orbs + Change 3rd, 4th column to Heal orbs + Absorb combo <= 6 damage for 1 turns
+   | (9064:15) Too bad
+   | Deal 40000% damage (4 hits, 10000% each)
+ | group:
+ | condition: turn 2
+   | condition: when 7 combos last turn, hp <= 100
+   | (9059:83) You can do it, right? + Next...this... + Can you do it?
+   | Spawn random 6 Fire, Water, Wood, Light, Dark orbs + Blind orbs in specific positions for 1 turns + Absorb combo <= 7 damage for 1 turns
+   | (9064:15) Too bad
+   | Deal 40000% damage (4 hits, 10000% each)
+ | group:
+ | condition: turn 3
+   | condition: when 8 combos last turn, hp <= 100
+   | (9063:83) I didn't think you'd do it + This is the end + Decide and show me!
+   | Change all orbs to Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison + Blind all orbs on the board + Absorb combo <= 8 damage for 1 turns
+   | (9064:15) Too bad
+   | Deal 40000% damage (4 hits, 10000% each)
+ | group:
+ | condition: turn 4
+   | condition: when 9 combos last turn, hp <= 100
+   | (9065:40) Nice combo
+   | Reduce self HP to 0
+   | (9064:15) Too bad
+   | Deal 40000% damage (4 hits, 10000% each)
+ | group:
+ | condition: when 9 combos last turn, hp <= 100
+   | (9065:40) Nice combo
+   | Reduce self HP to 0

@@ -9,21 +9,16 @@ approved: False
 level: 5
  group:
  | group:
-   | group:
-   | condition: turn 1
-     | group:
-       | (472:48) Fire Break
-       | Change Fire to Jammer, Deal 50% damage
+ | condition: turn 1, hp <= 100
+   | (472:48) Fire Break
+   | Change Fire to Jammer, Deal 50% damage
  | group:
  | condition: hp <= 49
    | group:
-   | condition: turn 1
-     | group:
-       | (472:48) Fire Break
-       | Change Fire to Jammer, Deal 50% damage
+   | condition: turn 1, hp <= 100
+     | (472:48) Fire Break
+     | Change Fire to Jammer, Deal 50% damage
    | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: 40% chance, hp <= 50
-       | (8:8) Energy Charge
-       | Increase damage to 200% for the next attack
+   | condition: 40% chance, hp <= 50
+     | (8:8) Energy Charge
+     | Increase damage to 200% for the next attack

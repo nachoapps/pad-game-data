@@ -12,30 +12,20 @@ level: 1
  | Player recover 100% hp
  group:
  | group:
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: 60% chance, hp <= 100
-       | (828:48) まぁよいわ
-       | Change Random to Jammer, Deal 100% damage
+ | condition: 60% chance, hp <= 100
+   | (828:48) まぁよいわ
+   | Change Random to Jammer, Deal 100% damage
  | group:
- | condition: hp <= 74
-   | group:
-   | condition: turn 1
-     | group:
-       | condition: hp <= 75
-       | (827:8) おぬし　なかなか強いな
-       | Increase damage to 200% for the next attack
+ | condition: turn 1, hp <= 75
+   | (827:8) おぬし　なかなか強いな
+   | Increase damage to 200% for the next attack
  | group:
  | condition: hp <= 24
    | group:
-   | condition: repeats every 2 turns
-     | group:
-       | (829:16) 余の力こそが
-       | Do nothing
+   | condition: repeats every 2 turns, hp <= 100
+     | (829:16) 余の力こそが
+     | Do nothing
    | group:
-   | condition: repeats every 2 turns
-     | group:
-       | condition: hp <= 25
-       | (830:15) この世の頂点に在る！
-       | Deal 400% damage (4 hits, 100% each)
+   | condition: repeats every 2 turns, hp <= 25
+     | (830:15) この世の頂点に在る！
+     | Deal 400% damage (4 hits, 100% each)

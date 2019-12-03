@@ -12,27 +12,16 @@ level: 1
  | Voids status ailments for 999 turns
  group:
  | group:
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: 50% chance, hp <= 100
-       | (10760:102) Burst of Dust
-       | Spawn random 3 Bomb orbs, Deal 100% damage
-       | (10759:15) Double-Edged Sword Technique
-       | Deal 120% damage (4 hits, 30% each)
+   | condition: 50% chance, hp <= 100
+   | (10760:102) Burst of Dust
+   | Spawn random 3 Bomb orbs, Deal 100% damage
+   | (10759:15) Double-Edged Sword Technique
+   | Deal 120% damage (4 hits, 30% each)
  | group:
- | condition: hp <= 49
-   | group:
-   | condition: turn 1
-     | group:
-       | condition: hp <= 50
-       | (10763:83) Toughen Up + Flare Slash
-       | Reduce damage from all sources by 75% for 1 turns + Change 3rd, 4th column to Fire orbs, Deal 130% damage
+ | condition: turn 1, hp <= 50
+   | (10763:83) Toughen Up + Flare Slash
+   | Reduce damage from all sources by 75% for 1 turns + Change 3rd, 4th column to Fire orbs, Deal 130% damage
  | group:
- | condition: hp <= 9
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: hp <= 10
-       | (10764:15) Special Move
-       | Deal 240% damage (6 hits, 40% each)
+ | condition: hp <= 10
+   | (10764:15) Special Move
+   | Deal 240% damage (6 hits, 40% each)

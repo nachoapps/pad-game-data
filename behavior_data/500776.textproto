@@ -3,86 +3,60 @@
     level: 1
     groups {
       group_type: PREEMPT
+      condition {
+        hp_threshold: 100
+        use_chance: 100
+      }
       children {
         behavior {
-          condition {
-            hp_threshold: 100
-            use_chance: 100
-          }
           enemy_skill_id: 14543
         }
       }
     }
     groups {
       group_type: STANDARD
+      condition {
+        hp_threshold: 100
+      }
       children {
         group {
-          group_type: STANDARD
           condition {
             hp_threshold: 100
+            use_chance: 100
+            repeats_every: 5
           }
           children {
-            group {
-              condition {
-                repeats_every: 5
-              }
-              children {
-                group {
-                  group_type: STANDARD
-                  children {
-                    behavior {
-                      condition {
-                        hp_threshold: 100
-                        use_chance: 100
-                      }
-                      enemy_skill_id: 14544
-                    }
-                  }
-                }
-              }
+            behavior {
+              enemy_skill_id: 14544
             }
           }
-          children {
-            group {
-              condition {
-                repeats_every: 5
-              }
-              children {
-                group {
-                  group_type: STANDARD
-                  children {
-                    behavior {
-                      condition {
-                        hp_threshold: 100
-                        use_chance: 100
-                        trigger_enemies_remaining: 1
-                      }
-                      enemy_skill_id: 14545
-                    }
-                  }
-                }
-              }
-            }
+        }
+      }
+      children {
+        group {
+          condition {
+            hp_threshold: 100
+            use_chance: 100
+            repeats_every: 5
+            trigger_enemies_remaining: 1
           }
           children {
-            group {
-              condition {
-                repeats_every: 5
-              }
-              children {
-                group {
-                  group_type: STANDARD
-                  children {
-                    behavior {
-                      condition {
-                        hp_threshold: 100
-                        use_chance: 100
-                      }
-                      enemy_skill_id: 14546
-                    }
-                  }
-                }
-              }
+            behavior {
+              enemy_skill_id: 14545
+            }
+          }
+        }
+      }
+      children {
+        group {
+          condition {
+            hp_threshold: 100
+            use_chance: 100
+            repeats_every: 5
+          }
+          children {
+            behavior {
+              enemy_skill_id: 14546
             }
           }
         }

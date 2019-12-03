@@ -8,18 +8,15 @@ approved: False
 
 level: 1
  type: PREEMPT
- | condition: when 1 enemies remain, hp <= 100
+ condition: when 1 enemies remain, hp <= 100
  | (6071:17) High Spirit Mode
  | Increase damage to 200% for the next 999 turns
  group:
  | group:
-   | group:
-   | condition: repeats every 2 turns
-     | group:
-       | (6072:15) Marici's Blazing Dance
-       | Deal 50% damage
-   | group:
-   | condition: repeats every 2 turns
-     | group:
-       | (6073:15) Secret Blade - Devilbind Flame
-       | Deal 75% damage
+ | condition: repeats every 2 turns, hp <= 100
+   | (6072:15) Marici's Blazing Dance
+   | Deal 50% damage
+ | group:
+ | condition: repeats every 2 turns, hp <= 100
+   | (6073:15) Secret Blade - Devilbind Flame
+   | Deal 75% damage

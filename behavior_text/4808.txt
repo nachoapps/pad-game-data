@@ -14,33 +14,26 @@ level: 1
  | (11136:67) I hope you're a good training partner
  | Absorb combo <= 10 damage for 999 turns
  type: DEATH
- | condition: when defeated, hp <= 100
+ condition: when defeated, hp <= 100
  | (11144:95) unknown_name
  | 
  group:
  | group:
-   | group:
-   | condition: turn 1
-     | group:
-       | (11139:110) Show me what you've got
-       | Specific orbs change every 1.0s for 4 turns
-   | group:
-   | condition: turn 2
-     | group:
-       | (11140:102) How about...this!
-       | Spawn random 3 Bomb orbs
-   | group:
-   | condition: turn 3
-     | group:
-       | (11141:77) Let's see how you handle this!
-       | Change 1st column to Water, Light orbs, 6th column to Water, Light orbs, Deal 100% damage
-   | group:
-   | condition: turn 4
-     | group:
-       | (11142:88) Let's end it now...
-       | Bind awoken skills for 1 turns
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | (11143:15) I look forward to next time
-       | Deal 3000% damage (6 hits, 500% each)
+ | condition: turn 1, hp <= 100
+   | (11139:110) Show me what you've got
+   | Specific orbs change every 1.0s for 4 turns
+ | group:
+ | condition: turn 2, hp <= 100
+   | (11140:102) How about...this!
+   | Spawn random 3 Bomb orbs
+ | group:
+ | condition: turn 3, hp <= 100
+   | (11141:77) Let's see how you handle this!
+   | Change 1st column to Water, Light orbs, 6th column to Water, Light orbs, Deal 100% damage
+ | group:
+ | condition: turn 4, hp <= 100
+   | (11142:88) Let's end it now...
+   | Bind awoken skills for 1 turns
+ | group:
+   | (11143:15) I look forward to next time
+   | Deal 3000% damage (6 hits, 500% each)

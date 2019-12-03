@@ -12,14 +12,14 @@ level: 1
 You have something to prove to me.
  | Do nothing
  type: DEATH
- | condition: when defeated, hp <= 100
+ condition: when defeated, hp <= 100
  | (9444:69) 変身2回目戸愚呂弟
  | Show message: At last, you've done as I asked.
 I've waited a long time for this moment.|Now destiny has rewarded my patience.
 
 level: 3
  type: DEATH
- | condition: when defeated, hp <= 100
+ condition: when defeated, hp <= 100
  | (9444:69) 変身2回目戸愚呂弟
  | Show message: At last, you've done as I asked.
 I've waited a long time for this moment.|Now destiny has rewarded my patience.
@@ -30,64 +30,51 @@ level: 4
 You have something to prove to me.
  | Voids status ailments for 999 turns
  type: DEATH
- | condition: when defeated, hp <= 100
+ condition: when defeated, hp <= 100
  | (9444:69) 変身2回目戸愚呂弟
  | Show message: At last, you've done as I asked.
 I've waited a long time for this moment.|Now destiny has rewarded my patience.
  group:
  | group:
    | group:
-   | condition: turn 1
-     | group:
-       | (9439:15) Come on!
-       | Deal 100% damage
+   | condition: turn 1, hp <= 100
+     | (9439:15) Come on!
+     | Deal 100% damage
    | group:
-   | condition: turn 2
-     | group:
-       | (9440:110) Let's kick this up a notch, shall we?
-       | Specific orbs change every 1.0s for 1 turns, Deal 120% damage
+   | condition: turn 2, hp <= 100
+     | (9440:110) Let's kick this up a notch, shall we?
+     | Specific orbs change every 1.0s for 1 turns, Deal 120% damage
    | group:
-   | condition: turn 3
-     | group:
-       | (9441:89) Is that all you got for me?
-       | Delay active skills by 1~2 turns, Deal 90% damage
+   | condition: turn 3, hp <= 100
+     | (9441:89) Is that all you got for me?
+     | Delay active skills by 1~2 turns, Deal 90% damage
    | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: 33% chance, hp <= 100
-       | (9439:15) Come on!
-       | Deal 100% damage
-       | condition: 50% chance, hp <= 100
-       | (9440:110) Let's kick this up a notch, shall we?
-       | Specific orbs change every 1.0s for 1 turns, Deal 120% damage
-       | (9441:89) Is that all you got for me?
-       | Delay active skills by 1~2 turns, Deal 90% damage
+     | condition: 33% chance, hp <= 100
+     | (9439:15) Come on!
+     | Deal 100% damage
+     | condition: 50% chance, hp <= 100
+     | (9440:110) Let's kick this up a notch, shall we?
+     | Specific orbs change every 1.0s for 1 turns, Deal 120% damage
+     | (9441:89) Is that all you got for me?
+     | Delay active skills by 1~2 turns, Deal 90% damage
  | group:
  | condition: hp <= 49
    | group:
-   | condition: turn 1
-     | group:
-       | (9442:14) My total power would be wasted on you.
-       | Bind active skills for 3 turns
+   | condition: turn 1, hp <= 100
+     | (9442:14) My total power would be wasted on you.
+     | Bind active skills for 3 turns
    | group:
-   | condition: turn 2
-     | group:
-       | (9439:15) Come on!
-       | Deal 100% damage
+   | condition: turn 2, hp <= 100
+     | (9439:15) Come on!
+     | Deal 100% damage
    | group:
-   | condition: turn 3
-     | group:
-       | (9440:110) Let's kick this up a notch, shall we?
-       | Specific orbs change every 1.0s for 1 turns, Deal 120% damage
+   | condition: turn 3, hp <= 100
+     | (9440:110) Let's kick this up a notch, shall we?
+     | Specific orbs change every 1.0s for 1 turns, Deal 120% damage
    | group:
-   | condition: turn 4
-     | group:
-       | (9441:89) Is that all you got for me?
-       | Delay active skills by 1~2 turns, Deal 90% damage
+   | condition: turn 4, hp <= 100
+     | (9441:89) Is that all you got for me?
+     | Delay active skills by 1~2 turns, Deal 90% damage
  | group:
- | condition: hp <= 19
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | (9443:15) I'll finish this as I am, at 80 percent.
-       | Deal 160% damage (4 hits, 40% each)
+   | (9443:15) I'll finish this as I am, at 80 percent.
+   | Deal 160% damage (4 hits, 40% each)

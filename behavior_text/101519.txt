@@ -12,13 +12,9 @@ level: 1
  | Jammer skyfall +30% for 9 turns
  group:
  | group:
-   | group:
-   | condition: turns 1-4
-     | group:
-       | (1337:66) …
-       | Do nothing
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | (1338:15) Take that!
-       | Deal 400% damage (4 hits, 100% each)
+ | condition: turns 1-4, hp <= 100
+   | (1337:66) …
+   | Do nothing
+ | group:
+   | (1338:15) Take that!
+   | Deal 400% damage (4 hits, 100% each)

@@ -11,7 +11,7 @@ level: 1
  | (9591:118) Akechi Dragon Half Reduced
  | Reduce damage from Dragon by 50%
  type: DEATH
- | condition: when defeated, hp <= 100
+ condition: when defeated, hp <= 100
  | (9602:95) It can't end yet....
  | Player -99% HP
 
@@ -23,34 +23,24 @@ level: 4
  | (9592:89) Allow me to get us started
  | Delay active skills by 5 turns, Deal 120% damage
  type: DEATH
- | condition: when defeated, hp <= 100
+ condition: when defeated, hp <= 100
  | (9602:95) It can't end yet....
  | Player -99% HP
  group:
  | group:
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: 33% chance, hp <= 100
-       | (9593:48) I don't need this!
-       | Change Random to Dark, Deal 100% damage
-       | condition: 50% chance, hp <= 100
-       | (9594:74) Reinforce defence while attacking
-       | Reduce damage from all sources by 50% for 1 turns, Deal 80% damage
-       | (9595:15) You can't escape my 
+   | condition: 33% chance, hp <= 100
+   | (9593:48) I don't need this!
+   | Change Random to Dark, Deal 100% damage
+   | condition: 50% chance, hp <= 100
+   | (9594:74) Reinforce defence while attacking
+   | Reduce damage from all sources by 50% for 1 turns, Deal 80% damage
+   | (9595:15) You can't escape my 
 attacks for an instant
-       | Deal 120% damage (3 hits, 40% each)
+   | Deal 120% damage (3 hits, 40% each)
  | group:
- | condition: hp <= 49
-   | group:
-   | condition: turn 1
-     | group:
-       | (9599:83) I didn't want to use this but... + Let me use this + Let me end this
-       | Specific orbs change every 1.0s for 3 turns + Blind orbs in specific positions for 3 turns + Increase damage to 150% for the next 99 turns
+ | condition: turn 1, hp <= 100
+   | (9599:83) I didn't want to use this but... + Let me use this + Let me end this
+   | Specific orbs change every 1.0s for 3 turns + Blind orbs in specific positions for 3 turns + Increase damage to 150% for the next 99 turns
  | group:
- | condition: hp <= 9
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | (9600:15) Not...not yet!
-       | Deal 500% damage (5 hits, 100% each)
+   | (9600:15) Not...not yet!
+   | Deal 500% damage (5 hits, 100% each)

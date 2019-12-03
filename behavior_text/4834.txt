@@ -16,47 +16,36 @@ level: 1
  group:
  | group:
    | group:
-   | condition: repeats every 10 turns
-     | group:
-       | (11556:15) Double Slash
-       | Deal 100% damage (2 hits, 50% each)
+   | condition: repeats every 10 turns, hp <= 100
+     | (11556:15) Double Slash
+     | Deal 100% damage (2 hits, 50% each)
    | group:
-   | condition: repeats every 10 turns
-     | group:
-       | (11558:83) Discerning Lifechains + Mighty Bash
-       | Rcv 50% for 10 turns + Player -75% HP
+   | condition: repeats every 10 turns, hp <= 100
+     | (11558:83) Discerning Lifechains + Mighty Bash
+     | Rcv 50% for 10 turns + Player -75% HP
  | group:
  | condition: hp <= 49
    | group:
-   | condition: turn 1
-     | group:
-       | (11553:83) Resurrection + Heavenly Decision
-       | Enemy recover 100% hp + Locked random skyfall +100% for 99 turns
+   | condition: turn 1, hp <= 100
+     | (11553:83) Resurrection + Heavenly Decision
+     | Enemy recover 100% hp + Locked random skyfall +100% for 99 turns
    | group:
-   | condition: turns 2-10
-     | group:
-       | (11557:15) Triple Slash
-       | Deal 150% damage (3 hits, 50% each)
+   | condition: turns 2-10, hp <= 100
+     | (11557:15) Triple Slash
+     | Deal 150% damage (3 hits, 50% each)
    | group:
-   | condition: turn 11
-     | group:
-       | (11558:83) Discerning Lifechains + Mighty Bash
-       | Rcv 50% for 10 turns + Player -75% HP
+   | condition: turn 11, hp <= 100
+     | (11558:83) Discerning Lifechains + Mighty Bash
+     | Rcv 50% for 10 turns + Player -75% HP
    | group:
-   | condition: repeats every 1 turns
-     | group:
-       | (11557:15) Triple Slash
-       | Deal 150% damage (3 hits, 50% each)
+     | (11557:15) Triple Slash
+     | Deal 150% damage (3 hits, 50% each)
  | group:
  | condition: hp <= 7
    | group:
-   | condition: turn 2
-     | group:
-       | condition: when 1 enemies remain, hp <= 100
-       | (11560:17) Last Judgement
-       | Increase damage to 200% for the next 99 turns
+   | condition: when 1 enemies remain, turn 2, hp <= 100
+     | (11560:17) Last Judgement
+     | Increase damage to 200% for the next 99 turns
    | group:
-   | condition: repeats every 1 turns
-     | group:
-       | (11561:83) Sweeping Spirit Garments + Valkyrie Blade - Ciel
-       | Change own attribute to random one of Fire, Water, Wood, Light, Dark + Deal 2000%~2500% damage (4~5 hits, 500% each)
+     | (11561:83) Sweeping Spirit Garments + Valkyrie Blade - Ciel
+     | Change own attribute to random one of Fire, Water, Wood, Light, Dark + Deal 2000%~2500% damage (4~5 hits, 500% each)

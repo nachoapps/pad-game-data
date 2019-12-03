@@ -12,41 +12,30 @@ level: 1
  | Reduce damage from all sources by 75% for 2 turns
  group:
  | group:
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: when required attributes on board, hp <= 100
-       | (4610:92) Powerful Blaze
-       | Spawn random 6 Fire orbs, Deal 150% damage
+ | condition: when required attributes on board, hp <= 100
+   | (4610:92) Powerful Blaze
+   | Spawn random 6 Fire orbs, Deal 150% damage
  | group:
  | condition: hp <= 79
    | group:
-   | condition: repeats every 2 turns
-     | group:
-       | (4611:50) Blazing Tail
-       | Player -99% HP
+   | condition: repeats every 2 turns, hp <= 100
+     | (4611:50) Blazing Tail
+     | Player -99% HP
    | group:
-   | condition: repeats every 2 turns
-     | group:
-       | (4612:15) Hellfire Claw
-       | Deal 100% damage (2 hits, 50% each)
+   | condition: repeats every 2 turns, hp <= 100
+     | (4612:15) Hellfire Claw
+     | Deal 100% damage (2 hits, 50% each)
  | group:
  | condition: hp <= 29
    | group:
-   | condition: turns 1-2
-     | group:
-       | condition: hp <= 30
-       | (4614:79) Inferno Blast
-       | Change 1st row to Fire orbs, Deal 250% damage
+   | condition: turns 1-2, hp <= 30
+     | (4614:79) Inferno Blast
+     | Change 1st row to Fire orbs, Deal 250% damage
    | group:
-   | condition: turn 3
-     | group:
-       | condition: hp <= 30
-       | (4613:74) Scorching Heat Mantle
-       | Reduce damage from all sources by 75% for 2 turns
+   | condition: turn 3, hp <= 30
+     | (4613:74) Scorching Heat Mantle
+     | Reduce damage from all sources by 75% for 2 turns
    | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: hp <= 30
-       | (4614:79) Inferno Blast
-       | Change 1st row to Fire orbs, Deal 250% damage
+   | condition: hp <= 30
+     | (4614:79) Inferno Blast
+     | Change 1st row to Fire orbs, Deal 250% damage

@@ -12,23 +12,18 @@ level: 1
  | Player recover 100% hp + Reduce damage from all sources by 50% for 3 turns
  group:
  | group:
-   | group:
-   | condition: repeats every 4 turns
-     | group:
-       | (2520:77) Graffiti of the Gods
-       | Change 2nd column to Jammer orbs, Deal 100% damage
-   | group:
-   | condition: repeats every 4 turns
-     | group:
-       | (2521:79) Graffiti of the Gods
-       | Change 3rd row to Jammer orbs, Deal 100% damage
-   | group:
-   | condition: repeats every 4 turns
-     | group:
-       | (2522:77) Graffiti of the Gods
-       | Change 5th column to Jammer orbs, Deal 100% damage
-   | group:
-   | condition: repeats every 4 turns
-     | group:
-       | (2523:62) Ink Spill of the Gods
-       | Blind all orbs on the board, Deal 300% damage
+ | condition: repeats every 4 turns, hp <= 100
+   | (2520:77) Graffiti of the Gods
+   | Change 2nd column to Jammer orbs, Deal 100% damage
+ | group:
+ | condition: repeats every 4 turns, hp <= 100
+   | (2521:79) Graffiti of the Gods
+   | Change 3rd row to Jammer orbs, Deal 100% damage
+ | group:
+ | condition: repeats every 4 turns, hp <= 100
+   | (2522:77) Graffiti of the Gods
+   | Change 5th column to Jammer orbs, Deal 100% damage
+ | group:
+ | condition: repeats every 4 turns, hp <= 100
+   | (2523:62) Ink Spill of the Gods
+   | Blind all orbs on the board, Deal 300% damage

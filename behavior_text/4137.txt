@@ -13,41 +13,31 @@ level: 4
  group:
  | group:
    | group:
-   | condition: turn 1
-     | group:
-       | (8820:39) Mid-Air Frost Blast
-       | Movetime -2s for 10 turns
+   | condition: turn 1, hp <= 100
+     | (8820:39) Mid-Air Frost Blast
+     | Movetime -2s for 10 turns
    | group:
-   | condition: repeats every 2 turns
-     | group:
-       | (8821:104) Mid-Air Frost Scythe
-       | 1x1 cloud appear for 2 turns at random location, Deal 120% damage
+   | condition: repeats every 2 turns, hp <= 100
+     | (8821:104) Mid-Air Frost Scythe
+     | 1x1 cloud appear for 2 turns at random location, Deal 120% damage
    | group:
-   | condition: repeats every 2 turns
-     | group:
-       | (8822:15) Mid-Air Claw Attack
-       | Deal 130% damage
+   | condition: repeats every 2 turns, hp <= 100
+     | (8822:15) Mid-Air Claw Attack
+     | Deal 130% damage
  | group:
  | condition: hp <= 49
    | group:
-   | condition: turn 2
-     | group:
-       | (8825:83) Roar + Anger
-       | Bind 2 random subs for 1 turns + Increase damage to 150% for the next 10 turns
+   | condition: turn 2, hp <= 100
+     | (8825:83) Roar + Anger
+     | Bind 2 random subs for 1 turns + Increase damage to 150% for the next 10 turns
    | group:
-   | condition: repeats every 2 turns
-     | group:
-       | (8826:50) Charge
-       | Player -99% HP
+   | condition: repeats every 2 turns, hp <= 100
+     | (8826:50) Charge
+     | Player -99% HP
    | group:
-   | condition: repeats every 2 turns
-     | group:
-       | (8827:15) Mid-Air Strike Attack
-       | Deal 140% damage (2 hits, 70% each)
+   | condition: repeats every 2 turns, hp <= 100
+     | (8827:15) Mid-Air Strike Attack
+     | Deal 140% damage (2 hits, 70% each)
  | group:
- | condition: hp <= 14
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | (8828:104) Mid-Air Spinning Tail Attack
-       | Column of cloud appear for 1 turns at random location, Deal 170% damage
+   | (8828:104) Mid-Air Spinning Tail Attack
+   | Column of cloud appear for 1 turns at random location, Deal 170% damage

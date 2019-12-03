@@ -12,13 +12,10 @@ level: 1
  | Do nothing
  group:
  | group:
-   | group:
-   | condition: repeats every 2 turns
-     | group:
-       | (12761:66) It looks very valuable
-       | Do nothing
-   | group:
-   | condition: repeats every 2 turns
-     | group:
-       | (12760:66) Seven-Color Sparkle
-       | Do nothing
+ | condition: repeats every 2 turns, hp <= 100
+   | (12761:66) It looks very valuable
+   | Do nothing
+ | group:
+ | condition: repeats every 2 turns, hp <= 100
+   | (12760:66) Seven-Color Sparkle
+   | Do nothing

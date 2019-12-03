@@ -28,62 +28,48 @@ level: 4
  | Absorb combo <= 5 damage for 99 turns + Void damage >= 10000000 for 6 turns
  group:
  | group:
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: 33% chance, hp <= 100
-       | (9267:104) Gladnir
-       | 2x3 cloud appear for 2 turns at 2nd row, 3rd column, Deal 170% damage
-       | condition: 50% chance, hp <= 100
-       | (9270:83) Bifröst Generation + Norn's Forgotten Item
-       | Change 1st column to Wood orbs, 6th column to Fire orbs, Deal 155% damage + Change 3rd row to Jammer orbs
-       | (9273:83) Norn Slave + Norn's Law
-       | Change all orbs to Fire, Wood, Heal, Deal 180% damage + Fix orb movement starting point to random position on the board
+   | condition: 33% chance, hp <= 100
+   | (9267:104) Gladnir
+   | 2x3 cloud appear for 2 turns at 2nd row, 3rd column, Deal 170% damage
+   | condition: 50% chance, hp <= 100
+   | (9270:83) Bifröst Generation + Norn's Forgotten Item
+   | Change 1st column to Wood orbs, 6th column to Fire orbs, Deal 155% damage + Change 3rd row to Jammer orbs
+   | (9273:83) Norn Slave + Norn's Law
+   | Change all orbs to Fire, Wood, Heal, Deal 180% damage + Fix orb movement starting point to random position on the board
  | group:
  | condition: hp <= 59
    | group:
-   | condition: turn 1
-     | group:
-       | (9245:99) Time Stasis
-       | Seal 1st column for 2 turns
+   | condition: turn 1, hp <= 100
+     | (9245:99) Time Stasis
+     | Seal 1st column for 2 turns
    | group:
-   | condition: repeats every 1 turns
-     | group:
-       | (9281:15) Fimbulvetr Awakening
-       | Deal 600% damage (6 hits, 100% each)
+     | (9281:15) Fimbulvetr Awakening
+     | Deal 600% damage (6 hits, 100% each)
  | group:
  | condition: hp <= 49
    | group:
-   | condition: turn 1
-     | group:
-       | (9248:83) The cogs of fate are now in motion + Nornil Curse
-       | Voids status ailments for 999 turns + Movetime 50% for 12 turns
+   | condition: turn 1, hp <= 100
+     | (9248:83) The cogs of fate are now in motion + Nornil Curse
+     | Voids status ailments for 999 turns + Movetime 50% for 12 turns
    | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: 33% chance, hp <= 100
-       | (9276:83) Bifröst Generation + Time Restriction
-       | Change 1st row to Wood orbs, 5th row to Fire orbs, Deal 110% damage + Bind 2 random cards for 1~2 turns
-       | condition: 50% chance, hp <= 100
-       | (9279:83) Norn Slave + Stopping time
-       | Change all orbs to Fire, Wood, Jammer, Deal 90% damage + Lock 12 random Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs
-       | (9280:15) Away Tein
-       | Deal 120% damage (3 hits, 40% each)
+     | condition: 33% chance, hp <= 100
+     | (9276:83) Bifröst Generation + Time Restriction
+     | Change 1st row to Wood orbs, 5th row to Fire orbs, Deal 110% damage + Bind 2 random cards for 1~2 turns
+     | condition: 50% chance, hp <= 100
+     | (9279:83) Norn Slave + Stopping time
+     | Change all orbs to Fire, Wood, Jammer, Deal 90% damage + Lock 12 random Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs
+     | (9280:15) Away Tein
+     | Deal 120% damage (3 hits, 40% each)
  | group:
- | condition: hp <= 9
-   | group:
-   | condition: turn 1
-     | group:
-       | (9251:88) End of Time
-       | Bind awoken skills for 1 turns
+ | condition: turn 1, hp <= 100
+   | (9251:88) End of Time
+   | Bind awoken skills for 1 turns
  | group:
    | group:
-   | condition: turn 1
-     | group:
-       | (9250:83) Healing Scratch + The cogs of fate are now in motion + Nornil Curse
-       | Enemy recover 50% hp + Voids status ailments for 999 turns + Movetime 50% for 12 turns
+   | condition: turn 1, hp <= 100
+     | (9250:83) Healing Scratch + The cogs of fate are now in motion + Nornil Curse
+     | Enemy recover 50% hp + Voids status ailments for 999 turns + Movetime 50% for 12 turns
    | group:
-   | condition: turn 2
-     | group:
-       | (9251:88) End of Time
-       | Bind awoken skills for 1 turns
+   | condition: turn 2, hp <= 100
+     | (9251:88) End of Time
+     | Bind awoken skills for 1 turns

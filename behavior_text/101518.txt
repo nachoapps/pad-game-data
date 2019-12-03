@@ -12,34 +12,27 @@ level: 5
  | Bind 1 both leaders for 2 turns
  group:
  | group:
-   | group:
-   | condition: turn 1
-     | group:
-       | (3120:74) Can't forget the sunscreen!
-       | Reduce damage from all sources by 50% for 1 turns
-   | group:
-   | condition: turn 2
-     | group:
-       | (3122:79) Here I go!
-       | Change 1st, 2nd, 3rd, 4th, 5th row to Water orbs, Deal 100% damage
-   | group:
-   | condition: turn 3
-     | group:
-       | (3127:83) Beach volleyball time! + ATTACK!!
-       | Spawn random 1 Heal orbs + Bind 1 random subs for 2 turns, Deal 120% damage
-   | group:
-   | condition: turn 4
-     | group:
-       | (3129:83) Next let's split watermelons! + Ha!
-       | Change all orbs to Wood + Change 3rd, 4th column to Fire orbs, Deal 150% damage
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: when 1119 on team, hp <= 100
-       | (3169:15) Why do you resist me?
-       | Deal 400% damage (2 hits, 200% each)
-       | condition: when 1118 on team, hp <= 100
-       | (3131:15) ...Aren't you hot with that on your head?
-       | Deal 400% damage (2 hits, 200% each)
-       | (3125:15) That was fun! This is for you!
-       | Deal 400% damage (2 hits, 200% each)
+ | condition: turn 1, hp <= 100
+   | (3120:74) Can't forget the sunscreen!
+   | Reduce damage from all sources by 50% for 1 turns
+ | group:
+ | condition: turn 2, hp <= 100
+   | (3122:79) Here I go!
+   | Change 1st, 2nd, 3rd, 4th, 5th row to Water orbs, Deal 100% damage
+ | group:
+ | condition: turn 3, hp <= 100
+   | (3127:83) Beach volleyball time! + ATTACK!!
+   | Spawn random 1 Heal orbs + Bind 1 random subs for 2 turns, Deal 120% damage
+ | group:
+ | condition: turn 4, hp <= 100
+   | (3129:83) Next let's split watermelons! + Ha!
+   | Change all orbs to Wood + Change 3rd, 4th column to Fire orbs, Deal 150% damage
+ | group:
+   | condition: when 1119 on team, hp <= 100
+   | (3169:15) Why do you resist me?
+   | Deal 400% damage (2 hits, 200% each)
+   | condition: when 1118 on team, hp <= 100
+   | (3131:15) ...Aren't you hot with that on your head?
+   | Deal 400% damage (2 hits, 200% each)
+   | (3125:15) That was fun! This is for you!
+   | Deal 400% damage (2 hits, 200% each)

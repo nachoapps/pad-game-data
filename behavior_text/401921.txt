@@ -12,23 +12,16 @@ level: 1
  | Heal skyfall +20% for 10 turns + Rcv 25% for 10 turns
  group:
  | group:
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: 33% chance, when required attributes on board, hp <= 100
-       | (10522:92) Fluttering Flower Petals
-       | Spawn random 4 Jammer orbs, Deal 90% damage
-       | condition: 33% chance, hp <= 100
-       | (10523:108) Decaying Flowers
-       | Change Heal to Jammer, Deal 80% damage
-       | condition: 34% chance, hp <= 100
-       | (10524:15) Gaia Flame
-       | Deal 105% damage (3 hits, 35% each)
+   | condition: 33% chance, when required attributes on board, hp <= 100
+   | (10522:92) Fluttering Flower Petals
+   | Spawn random 4 Jammer orbs, Deal 90% damage
+   | condition: 33% chance, hp <= 100
+   | (10523:108) Decaying Flowers
+   | Change Heal to Jammer, Deal 80% damage
+   | condition: 34% chance, hp <= 100
+   | (10524:15) Gaia Flame
+   | Deal 105% damage (3 hits, 35% each)
  | group:
- | condition: hp <= 20
-   | group:
-   | condition: turn 1
-     | group:
-       | condition: when 1 enemies remain, hp <= 100
-       | (10525:17) Ripening of the Land
-       | Increase damage to 200% for the next 999 turns
+ | condition: when 1 enemies remain, turn 1, hp <= 100
+   | (10525:17) Ripening of the Land
+   | Increase damage to 200% for the next 999 turns

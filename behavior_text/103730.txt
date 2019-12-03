@@ -13,62 +13,49 @@ level: 4
  group:
  | group:
    | group:
-   | condition: repeats every 3 turns
-     | group:
-       | (7351:13) Yaoshu
-       | Change Random 2 to Jammer, Deal 80% damage
+   | condition: repeats every 3 turns, hp <= 100
+     | (7351:13) Yaoshu
+     | Change Random 2 to Jammer, Deal 80% damage
    | group:
-   | condition: repeats every 3 turns
-     | group:
-       | (7352:15) Gongji
-       | Deal 100% damage (2 hits, 50% each)
+   | condition: repeats every 3 turns, hp <= 100
+     | (7352:15) Gongji
+     | Deal 100% damage (2 hits, 50% each)
    | group:
-   | condition: repeats every 3 turns
-     | group:
-       | (7360:66) Jumping, jumping
-       | Do nothing
+   | condition: repeats every 3 turns, hp <= 100
+     | (7360:66) Jumping, jumping
+     | Do nothing
  | group:
  | condition: hp <= 49
    | group:
    | condition: turn 1
-     | group:
-       | condition: hp <= 50
-       | (7381:94) Heianshufu
-       | Lock all Dark orbs, Deal 50% damage
-       | (7351:13) Yaoshu
-       | Change Random 2 to Jammer, Deal 80% damage
+     | condition: hp <= 50
+     | (7381:94) Heianshufu
+     | Lock all Dark orbs, Deal 50% damage
+     | (7351:13) Yaoshu
+     | Change Random 2 to Jammer, Deal 80% damage
    | group:
-   | condition: repeats every 3 turns
-     | group:
-       | (7352:15) Gongji
-       | Deal 100% damage (2 hits, 50% each)
+   | condition: repeats every 3 turns, hp <= 100
+     | (7352:15) Gongji
+     | Deal 100% damage (2 hits, 50% each)
    | group:
-   | condition: repeats every 3 turns
-     | group:
-       | (7360:66) Jumping, jumping
-       | Do nothing
+   | condition: repeats every 3 turns, hp <= 100
+     | (7360:66) Jumping, jumping
+     | Do nothing
    | group:
-   | condition: repeats every 3 turns
-     | group:
-       | (7351:13) Yaoshu
-       | Change Random 2 to Jammer, Deal 80% damage
+   | condition: repeats every 3 turns, hp <= 100
+     | (7351:13) Yaoshu
+     | Change Random 2 to Jammer, Deal 80% damage
  type: REMAINING
  condition: when 1 enemies remain
  | group:
-   | group:
-   | condition: turn 1
-     | group:
-       | condition: when 1 enemies remain, hp <= 100
-       | (7353:17) Fennu
-       | Increase damage to 150% for the next 999 turns
+ | condition: when 1 enemies remain, turn 1, hp <= 100
+   | (7353:17) Fennu
+   | Increase damage to 150% for the next 999 turns
  | group:
- | condition: hp <= 49
-   | group:
-   | condition: turn 1
-     | group:
-       | condition: hp <= 50
-       | (7381:94) Heianshufu
-       | Lock all Dark orbs, Deal 50% damage
-       | condition: when 1 enemies remain, hp <= 100
-       | (7353:17) Fennu
-       | Increase damage to 150% for the next 999 turns
+ | condition: turn 1, hp <= 49
+   | condition: hp <= 50
+   | (7381:94) Heianshufu
+   | Lock all Dark orbs, Deal 50% damage
+   | condition: when 1 enemies remain, hp <= 100
+   | (7353:17) Fennu
+   | Increase damage to 150% for the next 999 turns

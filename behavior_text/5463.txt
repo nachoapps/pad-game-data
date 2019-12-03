@@ -12,53 +12,44 @@ level: 1
  | Do nothing
  group:
  | type: DISPEL_PLAYER
-   | condition: 50% chance, hp <= 100
+ | condition: 50% chance, hp <= 100
    | (14101:6) しかたない発光するでゲソ！
    | Voids player buff effects
  | group:
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: 33% chance, hp <= 100
-       | (14097:15) 私の本気を見せてやるでゲソ
-       | Deal 105% damage (3 hits, 35% each)
-       | condition: 33% chance, hp <= 100
-       | (14098:15) そこでゲソ!!
-       | Deal 100% damage
-       | condition: 34% chance, hp <= 100
-       | (14099:62) イカスミ攻撃!!
-       | Blind all orbs on the board, Deal 95% damage
+   | condition: 33% chance, hp <= 100
+   | (14097:15) 私の本気を見せてやるでゲソ
+   | Deal 105% damage (3 hits, 35% each)
+   | condition: 33% chance, hp <= 100
+   | (14098:15) そこでゲソ!!
+   | Deal 100% damage
+   | condition: 34% chance, hp <= 100
+   | (14099:62) イカスミ攻撃!!
+   | Blind all orbs on the board, Deal 95% damage
  | group:
  | condition: hp <= 50
    | group:
-   | condition: turn 1
-     | group:
-       | (14100:67) もうイカしてはおけんでゲソ!!
-       | Absorb combo <= 4 damage for 3 turns
+   | condition: turn 1, hp <= 100
+     | (14100:67) もうイカしてはおけんでゲソ!!
+     | Absorb combo <= 4 damage for 3 turns
    | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: 50% chance, hp <= 100
-       | (14102:97) イカスミアターック!!
-       | Blind random 3 orbs for 2 turns, Deal 100% damage
-       | condition: 33% chance, hp <= 100
-       | (14097:15) 私の本気を見せてやるでゲソ
-       | Deal 105% damage (3 hits, 35% each)
-       | condition: 33% chance, hp <= 100
-       | (14098:15) そこでゲソ!!
-       | Deal 100% damage
-       | condition: 34% chance, hp <= 100
-       | (14099:62) イカスミ攻撃!!
-       | Blind all orbs on the board, Deal 95% damage
+     | condition: 50% chance, hp <= 100
+     | (14102:97) イカスミアターック!!
+     | Blind random 3 orbs for 2 turns, Deal 100% damage
+     | condition: 33% chance, hp <= 100
+     | (14097:15) 私の本気を見せてやるでゲソ
+     | Deal 105% damage (3 hits, 35% each)
+     | condition: 33% chance, hp <= 100
+     | (14098:15) そこでゲソ!!
+     | Deal 100% damage
+     | condition: 34% chance, hp <= 100
+     | (14099:62) イカスミ攻撃!!
+     | Blind all orbs on the board, Deal 95% damage
  | group:
  | condition: hp <= 20
    | group:
-   | condition: turn 2
-     | group:
-       | (14103:83) 積年のうらみ… + 今こそ晴らしてやるでゲソ！
-       | Do nothing + Increase damage to 150% for the next 5 turns
+   | condition: turn 2, hp <= 100
+     | (14103:83) 積年のうらみ… + 今こそ晴らしてやるでゲソ！
+     | Do nothing + Increase damage to 150% for the next 5 turns
    | group:
-   | condition: repeats every 1 turns
-     | group:
-       | (14104:15) 今こそ侵略の時！
-       | Deal 150% damage (10 hits, 15% each)
+     | (14104:15) 今こそ侵略の時！
+     | Deal 150% damage (10 hits, 15% each)

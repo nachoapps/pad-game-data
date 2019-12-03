@@ -8,14 +8,10 @@ approved: False
 
 level: 4
  type: PREEMPT
- | condition: when required attributes on board, hp <= 100
+ condition: when required attributes on board, hp <= 100
  | (2704:92) Ash Star
  | Spawn random 3 Jammer orbs, Deal 100% damage
  group:
- | group:
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: 30% chance, hp <= 100
-       | (2705:94) red meteor
-       | Lock all Fire orbs, Deal 70% damage
+ condition: 30% chance, hp <= 100
+ | (2705:94) red meteor
+ | Lock all Fire orbs, Deal 70% damage

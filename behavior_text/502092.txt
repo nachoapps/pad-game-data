@@ -12,33 +12,25 @@ level: 1
  | Reduce damage from all sources by 50% for 2 turns, Deal 140% damage
  group:
  | group:
-   | group:
-   | condition: turn 1
-     | group:
-       | (14515:67) Blaze Aura
-       | Absorb combo <= 5 damage for 1 turns
-   | group:
-   | condition: turn 2
-     | group:
-       | (14516:15) Triple Breath
-       | Deal 210% damage (3 hits, 70% each)
-   | group:
-   | condition: turn 3
-     | group:
-       | (14517:74) Armor Burn
-       | Reduce damage from all sources by 75% for 1 turns
-   | group:
-   | condition: turn 4
-     | group:
-       | (14518:15) Fining Breath
-       | Deal 222% damage (6 hits, 37% each)
-   | group:
-   | condition: turn 5
-     | group:
-       | (14519:63) Inferno Bullet
-       | Bind 5 random cards for 5 turns, Deal 100% damage
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | (14520:15) Burst End
-       | Deal 250% damage (5 hits, 50% each)
+ | condition: turn 1, hp <= 100
+   | (14515:67) Blaze Aura
+   | Absorb combo <= 5 damage for 1 turns
+ | group:
+ | condition: turn 2, hp <= 100
+   | (14516:15) Triple Breath
+   | Deal 210% damage (3 hits, 70% each)
+ | group:
+ | condition: turn 3, hp <= 100
+   | (14517:74) Armor Burn
+   | Reduce damage from all sources by 75% for 1 turns
+ | group:
+ | condition: turn 4, hp <= 100
+   | (14518:15) Fining Breath
+   | Deal 222% damage (6 hits, 37% each)
+ | group:
+ | condition: turn 5, hp <= 100
+   | (14519:63) Inferno Bullet
+   | Bind 5 random cards for 5 turns, Deal 100% damage
+ | group:
+   | (14520:15) Burst End
+   | Deal 250% damage (5 hits, 50% each)

@@ -20,34 +20,25 @@ level: 4
  | Reduce damage from all sources by 75% for 10 turns
  group:
  | group:
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: 50% chance, hp <= 100
-       | (8929:97) Exhaust Hit
-       | Blind random 5 orbs for 2 turns, Deal 140% damage
-       | condition: 20% chance, hp <= 100
-       | (8932:83) Warning + Seven Smog
-       | Delay active skills by 2 turns + Spawn random 7 Poison orbs
-       | condition: 30% chance, hp <= 100
-       | (8933:94) All Alert
-       | Lock all Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs, Deal 160% damage
+   | condition: 50% chance, hp <= 100
+   | (8929:97) Exhaust Hit
+   | Blind random 5 orbs for 2 turns, Deal 140% damage
+   | condition: 20% chance, hp <= 100
+   | (8932:83) Warning + Seven Smog
+   | Delay active skills by 2 turns + Spawn random 7 Poison orbs
+   | condition: 30% chance, hp <= 100
+   | (8933:94) All Alert
+   | Lock all Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs, Deal 160% damage
  | group:
- | condition: hp <= 49
-   | group:
-   | condition: turn 1
-     | group:
-       | (8936:83) Capture Net + Hold Wind
-       | Bind 2 random subs for 3 turns + Bind active skills for 5 turns
+ | condition: turn 1, hp <= 100
+   | (8936:83) Capture Net + Hold Wind
+   | Bind 2 random subs for 3 turns + Bind active skills for 5 turns
  | group:
  | condition: hp <= 29
    | group:
-   | condition: turn 2
-     | group:
-       | (8928:68) Acid Rain
-       | Poison skyfall +15% for 10 turns
+   | condition: turn 2, hp <= 100
+     | (8928:68) Acid Rain
+     | Poison skyfall +15% for 10 turns
    | group:
-   | condition: repeats every 1 turns
-     | group:
-       | (8937:15) Killing Code
-       | Deal 300% damage (6 hits, 50% each)
+     | (8937:15) Killing Code
+     | Deal 300% damage (6 hits, 50% each)

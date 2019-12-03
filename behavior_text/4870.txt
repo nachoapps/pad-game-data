@@ -11,7 +11,7 @@ level: 1
  | (11420:66) Could you give me some tips?
  | Do nothing
  type: DEATH
- | condition: when defeated, hp <= 100
+ condition: when defeated, hp <= 100
  | (11426:95) I'm really hungry. I have to log out.
  | Do nothing
 
@@ -20,28 +20,21 @@ level: 4
  | (11421:84) Could you give me some tips?
  | Change all orbs to Fire, Water, Wood, Light, Dark, Heal
  type: DEATH
- | condition: when defeated, hp <= 100
+ condition: when defeated, hp <= 100
  | (11426:95) I'm really hungry. I have to log out.
  | Do nothing
  group:
  | group:
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: 33% chance, hp <= 100
-       | (11422:79) Hiyaaa!
-       | Change 3rd row to Fire orbs, Deal 100% damage
-       | condition: 33% chance, when required attributes on board, hp <= 100
-       | (11424:92) Huaaa!
-       | Spawn random 4 Jammer orbs, Deal 90% damage
-       | condition: 34% chance, hp <= 100
-       | (11425:15) Ahh ghaaa!
-       | Deal 110% damage
+   | condition: 33% chance, hp <= 100
+   | (11422:79) Hiyaaa!
+   | Change 3rd row to Fire orbs, Deal 100% damage
+   | condition: 33% chance, when required attributes on board, hp <= 100
+   | (11424:92) Huaaa!
+   | Spawn random 4 Jammer orbs, Deal 90% damage
+   | condition: 34% chance, hp <= 100
+   | (11425:15) Ahh ghaaa!
+   | Deal 110% damage
  | group:
- | condition: hp <= 49
-   | group:
-   | condition: turn 1
-     | group:
-       | condition: when 1 enemies remain, hp <= 100
-       | (11423:17) Let's keep going!
-       | Increase damage to 150% for the next 3 turns
+ | condition: when 1 enemies remain, turn 1, hp <= 100
+   | (11423:17) Let's keep going!
+   | Increase damage to 150% for the next 3 turns

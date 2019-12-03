@@ -12,28 +12,22 @@ level: 3
  | Voids status ailments for 9 turns
  group:
  | group:
-   | group:
-   | condition: turn 1
-     | group:
-       | (7564:66) Approaches fast
-       | Do nothing
-   | group:
-   | condition: repeats every 4 turns
-     | group:
-       | (3178:-1) Countdown Message
-       | Display '0' and skip turn
-   | group:
-   | condition: repeats every 4 turns
-     | group:
-       | (2178:-1) Countdown Message
-       | Display '0' and skip turn
-   | group:
-   | condition: repeats every 4 turns
-     | group:
-       | (1178:-1) Countdown Message
-       | Display '0' and skip turn
-   | group:
-   | condition: repeats every 4 turns
-     | group:
-       | (7565:15) Ruthless Tackle
-       | Deal 1200% damage (4 hits, 300% each)
+ | condition: turn 1, hp <= 100
+   | (7564:66) Approaches fast
+   | Do nothing
+ | group:
+ | condition: repeats every 4 turns, hp <= 100
+   | (3178:-1) Countdown Message
+   | Display '0' and skip turn
+ | group:
+ | condition: repeats every 4 turns, hp <= 100
+   | (2178:-1) Countdown Message
+   | Display '0' and skip turn
+ | group:
+ | condition: repeats every 4 turns, hp <= 100
+   | (1178:-1) Countdown Message
+   | Display '0' and skip turn
+ | group:
+ | condition: repeats every 4 turns, hp <= 100
+   | (7565:15) Ruthless Tackle
+   | Deal 1200% damage (4 hits, 300% each)

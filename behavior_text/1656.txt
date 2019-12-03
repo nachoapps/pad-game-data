@@ -12,54 +12,47 @@ level: 1
  | Voids status ailments for 999 turns + Absorb damage >= 5000000 damage for 3 turns
  group:
  | group:
-   | group:
-   | condition: turns 1-2
-     | group:
-       | condition: 33% chance, hp <= 100
-       | (11633:48) Lame du Tonnerre
-       | Change Random to Light, Deal 100% damage
-       | condition: 33% chance, hp <= 100
-       | (11634:86) Épée Consolatrice
-       | Enemy recover 5% hp, Deal 90% damage
-       | condition: 34% chance, hp <= 100
-       | (11635:15) Atout Durée
-       | Deal 111% damage (3 hits, 37% each)
-   | group:
-   | condition: turn 3
-     | group:
-       | (11624:83) Pierced Belief + Sharpened Mind
-       | Absorb damage >= 10000000 damage for 3 turns + Increase damage to 150% for the next 2 turns
-   | group:
-   | condition: turns 4-5
-     | group:
-       | condition: 33% chance, hp <= 100
-       | (11633:48) Lame du Tonnerre
-       | Change Random to Light, Deal 100% damage
-       | condition: 33% chance, hp <= 100
-       | (11634:86) Épée Consolatrice
-       | Enemy recover 5% hp, Deal 90% damage
-       | condition: 34% chance, hp <= 100
-       | (11635:15) Atout Durée
-       | Deal 111% damage (3 hits, 37% each)
-   | group:
-   | condition: turn 6
-     | group:
-       | (11627:83) Pierced Belief + Sharpened Mind
-       | Absorb damage >= 15000000 damage for 99 turns + Increase damage to 200% for the next 99 turns
-   | group:
-   | condition: repeats every 3 turns
-     | group:
-       | condition: 33% chance, hp <= 100
-       | (11633:48) Lame du Tonnerre
-       | Change Random to Light, Deal 100% damage
-       | condition: 33% chance, hp <= 100
-       | (11634:86) Épée Consolatrice
-       | Enemy recover 5% hp, Deal 90% damage
-       | condition: 34% chance, hp <= 100
-       | (11635:15) Atout Durée
-       | Deal 111% damage (3 hits, 37% each)
-   | group:
-   | condition: repeats every 3 turns
-     | group:
-       | (11630:83) Convicting Justice + Life Deprivation
-       | Player -99% HP + Rcv 50% for 3 turns
+ | condition: turns 1-2
+   | condition: 33% chance, hp <= 100
+   | (11633:48) Lame du Tonnerre
+   | Change Random to Light, Deal 100% damage
+   | condition: 33% chance, hp <= 100
+   | (11634:86) Épée Consolatrice
+   | Enemy recover 5% hp, Deal 90% damage
+   | condition: 34% chance, hp <= 100
+   | (11635:15) Atout Durée
+   | Deal 111% damage (3 hits, 37% each)
+ | group:
+ | condition: turn 3, hp <= 100
+   | (11624:83) Pierced Belief + Sharpened Mind
+   | Absorb damage >= 10000000 damage for 3 turns + Increase damage to 150% for the next 2 turns
+ | group:
+ | condition: turns 4-5
+   | condition: 33% chance, hp <= 100
+   | (11633:48) Lame du Tonnerre
+   | Change Random to Light, Deal 100% damage
+   | condition: 33% chance, hp <= 100
+   | (11634:86) Épée Consolatrice
+   | Enemy recover 5% hp, Deal 90% damage
+   | condition: 34% chance, hp <= 100
+   | (11635:15) Atout Durée
+   | Deal 111% damage (3 hits, 37% each)
+ | group:
+ | condition: turn 6, hp <= 100
+   | (11627:83) Pierced Belief + Sharpened Mind
+   | Absorb damage >= 15000000 damage for 99 turns + Increase damage to 200% for the next 99 turns
+ | group:
+ | condition: repeats every 3 turns
+   | condition: 33% chance, hp <= 100
+   | (11633:48) Lame du Tonnerre
+   | Change Random to Light, Deal 100% damage
+   | condition: 33% chance, hp <= 100
+   | (11634:86) Épée Consolatrice
+   | Enemy recover 5% hp, Deal 90% damage
+   | condition: 34% chance, hp <= 100
+   | (11635:15) Atout Durée
+   | Deal 111% damage (3 hits, 37% each)
+ | group:
+ | condition: repeats every 3 turns, hp <= 100
+   | (11630:83) Convicting Justice + Life Deprivation
+   | Player -99% HP + Rcv 50% for 3 turns

@@ -8,7 +8,7 @@ approved: False
 
 level: 1
  type: DEATH
- | condition: when defeated, hp <= 100
+ condition: when defeated, hp <= 100
  | (8520:69) Father's Transformation
  | Show message: I'll drag you down to the ground and
 make you a part of me!|Yes. It was a success.
@@ -18,45 +18,39 @@ level: 4
  | (8511:55) Keep yourselves in top condition.
  | Player recover 100% hp
  type: DEATH
- | condition: when defeated, hp <= 100
+ condition: when defeated, hp <= 100
  | (8520:69) Father's Transformation
  | Show message: I'll drag you down to the ground and
 make you a part of me!|Yes. It was a success.
  group:
  | group:
    | group:
-   | condition: turn 1
-     | group:
-       | (8512:88) This is a waste of time.
-       | Bind awoken skills for 3 turns
+   | condition: turn 1, hp <= 100
+     | (8512:88) This is a waste of time.
+     | Bind awoken skills for 3 turns
    | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: 20% chance, hp <= 100
-       | (8514:77) Stationary Transmutation
-       | Change 4th column to Dark orbs, Deal 100% damage
-       | condition: 20% chance, hp <= 100
-       | (8515:79) Stationary Transmutation
-       | Change 3rd row to Dark orbs, Deal 100% damage
-       | condition: 15% chance, hp <= 100
-       | (8516:92) Stationary Transmutation
-       | Spawn random 6 Jammer orbs, Deal 100% damage
-       | condition: 15% chance, hp <= 100
-       | (8517:74) Stationary Transmutation
-       | Reduce damage from all sources by 50% for 1 turns, Deal 100% damage
-       | condition: 15% chance, hp <= 100
-       | (8518:94) Stationary Transmutation
-       | Lock 8 random Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs, Deal 100% damage
-       | condition: 15% chance, when required attributes on board, hp <= 100
-       | (8519:92) Stationary Transmutation
-       | Spawn random 3 Poison orbs, Deal 100% damage
+     | condition: 20% chance, hp <= 100
+     | (8514:77) Stationary Transmutation
+     | Change 4th column to Dark orbs, Deal 100% damage
+     | condition: 20% chance, hp <= 100
+     | (8515:79) Stationary Transmutation
+     | Change 3rd row to Dark orbs, Deal 100% damage
+     | condition: 15% chance, hp <= 100
+     | (8516:92) Stationary Transmutation
+     | Spawn random 6 Jammer orbs, Deal 100% damage
+     | condition: 15% chance, hp <= 100
+     | (8517:74) Stationary Transmutation
+     | Reduce damage from all sources by 50% for 1 turns, Deal 100% damage
+     | condition: 15% chance, hp <= 100
+     | (8518:94) Stationary Transmutation
+     | Lock 8 random Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs, Deal 100% damage
+     | condition: 15% chance, when required attributes on board, hp <= 100
+     | (8519:92) Stationary Transmutation
+     | Spawn random 3 Poison orbs, Deal 100% damage
  | group:
- | condition: hp <= 19
-   | group:
-   | condition: turn 1
-     | group:
-       | (8512:88) This is a waste of time.
-       | Bind awoken skills for 3 turns
-       | condition: when 1 enemies remain, hp <= 20
-       | (8513:17) I will become a perfect being.
-       | Increase damage to 300% for the next 999 turns
+ | condition: turn 1, hp <= 19
+   | (8512:88) This is a waste of time.
+   | Bind awoken skills for 3 turns
+   | condition: when 1 enemies remain, hp <= 20
+   | (8513:17) I will become a perfect being.
+   | Increase damage to 300% for the next 999 turns

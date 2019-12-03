@@ -12,24 +12,18 @@ level: 4
  | Voids status ailments for 5 turns
  group:
  | group:
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | (10608:48) Slider
-       | Change Random to Water, Deal 100% damage
+   | (10608:48) Slider
+   | Change Random to Water, Deal 100% damage
  | group:
  | condition: hp <= 74
    | group:
-   | condition: turn 1
-     | group:
-       | (10603:74) Don't panic!
-       | Reduce damage from all sources by 50% for 3 turns
+   | condition: turn 1, hp <= 100
+     | (10603:74) Don't panic!
+     | Reduce damage from all sources by 50% for 3 turns
    | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: 50% chance, when required attributes on board, hp <= 100
-       | (10604:92) Raging Shot
-       | Spawn random 5 Wood orbs, Deal 120% damage
-       | condition: 50% chance, when required attributes on board, hp <= 100
-       | (10605:92) Raging Cannon
-       | Spawn random 5 Light orbs, Deal 120% damage
+     | condition: 50% chance, when required attributes on board, hp <= 100
+     | (10604:92) Raging Shot
+     | Spawn random 5 Wood orbs, Deal 120% damage
+     | condition: 50% chance, when required attributes on board, hp <= 100
+     | (10605:92) Raging Cannon
+     | Spawn random 5 Light orbs, Deal 120% damage

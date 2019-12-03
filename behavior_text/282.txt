@@ -9,24 +9,14 @@ approved: False
 level: 1
  group:
  | group:
-   | group:
-   | condition: turn 1
-     | group:
-       | (260:20) See-Through Option
-       | Voids status ailments for 999 turns
+ | condition: turn 1, hp <= 100
+   | (260:20) See-Through Option
+   | Voids status ailments for 999 turns
  | group:
- | condition: hp <= 74
-   | group:
-   | condition: turn 2
-     | group:
-       | condition: when 1 enemies remain, hp <= 75
-       | (262:17) Frantic Thunder
-       | Increase damage to 200% for the next 999 turns
+ | condition: when 1 enemies remain, turn 2, hp <= 75
+   | (262:17) Frantic Thunder
+   | Increase damage to 200% for the next 999 turns
  | group:
- | condition: hp <= 49
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: 75% chance, hp <= 50
-       | (261:15) Ignite!
-       | Deal 125% damage (5 hits, 25% each)
+ | condition: 75% chance, hp <= 50
+   | (261:15) Ignite!
+   | Deal 125% damage (5 hits, 25% each)

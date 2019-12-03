@@ -8,26 +8,11 @@
           group_type: STANDARD
           condition {
             hp_threshold: 100
+            use_chance: 50
           }
           children {
-            group {
-              condition {
-                repeats_every: 1
-              }
-              children {
-                group {
-                  group_type: STANDARD
-                  children {
-                    behavior {
-                      condition {
-                        hp_threshold: 100
-                        use_chance: 50
-                      }
-                      enemy_skill_id: 8
-                    }
-                  }
-                }
-              }
+            behavior {
+              enemy_skill_id: 8
             }
           }
         }
@@ -39,33 +24,21 @@
             hp_threshold: 24
           }
           children {
-            group {
+            behavior {
               condition {
-                repeats_every: 1
+                hp_threshold: 25
+                use_chance: 70
               }
-              children {
-                group {
-                  group_type: STANDARD
-                  children {
-                    behavior {
-                      condition {
-                        hp_threshold: 25
-                        use_chance: 70
-                      }
-                      enemy_skill_id: 7
-                    }
-                  }
-                  children {
-                    behavior {
-                      condition {
-                        hp_threshold: 100
-                        use_chance: 50
-                      }
-                      enemy_skill_id: 8
-                    }
-                  }
-                }
+              enemy_skill_id: 7
+            }
+          }
+          children {
+            behavior {
+              condition {
+                hp_threshold: 100
+                use_chance: 50
               }
+              enemy_skill_id: 8
             }
           }
         }

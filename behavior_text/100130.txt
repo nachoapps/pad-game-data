@@ -11,7 +11,7 @@ level: 1
  | (9129:72) Hades Resistance
  | Reduce damage from Light by 50%
  type: DEATH
- | condition: when defeated, hp <= 100
+ condition: when defeated, hp <= 100
  | (9137:95) It can't end like this
  | Poison skyfall +15% for 2 turns
 
@@ -23,33 +23,26 @@ level: 4
  | (9130:98) Death Countdown: 5
  | Blind orbs in specific positions for 1 turns
  type: DEATH
- | condition: when defeated, hp <= 100
+ condition: when defeated, hp <= 100
  | (9137:95) It can't end like this
  | Poison skyfall +15% for 2 turns
  group:
  | group:
-   | group:
-   | condition: turn 1
-     | group:
-       | (9131:98) Death Countdown: 4
-       | Blind orbs in specific positions for 1 turns
-   | group:
-   | condition: turn 2
-     | group:
-       | (9132:98) Death Countdown: 3
-       | Blind orbs in specific positions for 1 turns
-   | group:
-   | condition: turn 3
-     | group:
-       | (9133:98) Death Countdown: 2
-       | Blind orbs in specific positions for 1 turns
-   | group:
-   | condition: turn 4
-     | group:
-       | (9134:98) Death Countdown: 1
-       | Blind orbs in specific positions for 1 turns
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | (9015:83) Death Countdown: 0 + This is the end
-       | Blind orbs in specific positions for 1 turns + Deal 500% damage
+ | condition: turn 1, hp <= 100
+   | (9131:98) Death Countdown: 4
+   | Blind orbs in specific positions for 1 turns
+ | group:
+ | condition: turn 2, hp <= 100
+   | (9132:98) Death Countdown: 3
+   | Blind orbs in specific positions for 1 turns
+ | group:
+ | condition: turn 3, hp <= 100
+   | (9133:98) Death Countdown: 2
+   | Blind orbs in specific positions for 1 turns
+ | group:
+ | condition: turn 4, hp <= 100
+   | (9134:98) Death Countdown: 1
+   | Blind orbs in specific positions for 1 turns
+ | group:
+   | (9015:83) Death Countdown: 0 + This is the end
+   | Blind orbs in specific positions for 1 turns + Deal 500% damage

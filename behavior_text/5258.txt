@@ -12,22 +12,18 @@ level: 4
  | Absorb combo <= 4 damage for 5 turns
  group:
  | group:
-   | group:
-   | condition: repeats every 4 turns
-     | group:
-       | condition: 50% chance, hp <= 100
-       | (13216:62) I am the Jaguar!
-       | Blind all orbs on the board, Deal 100% damage
-       | condition: 50% chance, hp <= 100
-       | (13217:15) SLICE
-       | Deal 105% damage (3 hits, 35% each)
-   | group:
-   | condition: repeats every 4 turns
-     | group:
-       | (13218:89) C'mon
-       | Delay active skills by 3 turns
-   | group:
-   | condition: repeats every 4 turns
-     | group:
-       | (13319:83) Over Soul + Ayers Rock!!!
-       | Do nothing + Change 4th, 5th row to Light orbs, Deal 250% damage
+ | condition: repeats every 4 turns
+   | condition: 50% chance, hp <= 100
+   | (13216:62) I am the Jaguar!
+   | Blind all orbs on the board, Deal 100% damage
+   | condition: 50% chance, hp <= 100
+   | (13217:15) SLICE
+   | Deal 105% damage (3 hits, 35% each)
+ | group:
+ | condition: repeats every 4 turns, hp <= 100
+   | (13218:89) C'mon
+   | Delay active skills by 3 turns
+ | group:
+ | condition: repeats every 4 turns, hp <= 100
+   | (13319:83) Over Soul + Ayers Rock!!!
+   | Do nothing + Change 4th, 5th row to Light orbs, Deal 250% damage

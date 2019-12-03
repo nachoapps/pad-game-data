@@ -12,18 +12,13 @@ level: 4
  | Voids status ailments for 999 turns + Absorb combo <= 8 damage for 5 turns
  group:
  | group:
-   | group:
-   | condition: turns 1-4
-     | group:
-       | (9300:50) Uhuhuh
-       | Player -99% HP
-   | group:
-   | condition: turn 5
-     | group:
-       | (9301:89) I want you
-       | Delay active skills by 99 turns
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | (9302:15) We're together forever
-       | Deal 10000% damage
+ | condition: turns 1-4, hp <= 100
+   | (9300:50) Uhuhuh
+   | Player -99% HP
+ | group:
+ | condition: turn 5, hp <= 100
+   | (9301:89) I want you
+   | Delay active skills by 99 turns
+ | group:
+   | (9302:15) We're together forever
+   | Deal 10000% damage

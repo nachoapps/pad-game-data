@@ -15,23 +15,17 @@ level: 1
  | Blind orbs in specific positions for 3 turns, Deal 50% damage
  group:
  | group:
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: 50% chance, when required attributes on board, hp <= 100
-       | (9368:92) Blood Needle
-       | Spawn random 6 Dark orbs, Deal 80% damage
-       | (9373:15) Triple Fang
-       | Deal 105% damage (3 hits, 35% each)
+   | condition: 50% chance, when required attributes on board, hp <= 100
+   | (9368:92) Blood Needle
+   | Spawn random 6 Dark orbs, Deal 80% damage
+   | (9373:15) Triple Fang
+   | Deal 105% damage (3 hits, 35% each)
  | group:
  | condition: hp <= 29
    | group:
-   | condition: turn 1
-     | group:
-       | (9371:66) Mouth opened wide
-       | Do nothing
+   | condition: turn 1, hp <= 100
+     | (9371:66) Mouth opened wide
+     | Do nothing
    | group:
-   | condition: repeats every 1 turns
-     | group:
-       | (9372:15) Chaos Ray
-       | Deal 400% damage
+     | (9372:15) Chaos Ray
+     | Deal 400% damage

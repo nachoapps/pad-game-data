@@ -15,25 +15,19 @@ level: 1
  | Movetime -2s for 5 turns + Voids status ailments for 999 turns
  group:
  | group:
-   | group:
-   | condition: turn 1
-     | group:
-       | (14941:50) 我導くは死呼ぶ椋鳥！
-       | Player -99% HP
-   | group:
-   | condition: turn 2
-     | group:
-       | (14942:83) 全部吹き飛ばす！ + 我は築く太陽の尖塔！
-       | Delay active skills by 5 turns + Change 3rd, 4th column to Fire orbs, Deal 90% damage
-   | group:
-   | condition: turn 3
-     | group:
-       | (14945:88) 最後の－－勝負！
-       | Bind awoken skills for 3 turns
-       | (14946:92) 我は放つ光の白刃！
-       | Spawn random 10 Light orbs, Deal 150% damage
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | (14946:92) 我は放つ光の白刃！
-       | Spawn random 10 Light orbs, Deal 150% damage
+ | condition: turn 1, hp <= 100
+   | (14941:50) 我導くは死呼ぶ椋鳥！
+   | Player -99% HP
+ | group:
+ | condition: turn 2, hp <= 100
+   | (14942:83) 全部吹き飛ばす！ + 我は築く太陽の尖塔！
+   | Delay active skills by 5 turns + Change 3rd, 4th column to Fire orbs, Deal 90% damage
+ | group:
+ | condition: turn 3
+   | (14945:88) 最後の－－勝負！
+   | Bind awoken skills for 3 turns
+   | (14946:92) 我は放つ光の白刃！
+   | Spawn random 10 Light orbs, Deal 150% damage
+ | group:
+   | (14946:92) 我は放つ光の白刃！
+   | Spawn random 10 Light orbs, Deal 150% damage

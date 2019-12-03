@@ -17,32 +17,24 @@ level: 1
  | group:
    | group:
    | condition: turns 1-4
-     | group:
-       | condition: 33% chance, hp <= 100
-       | (874:48) Shining Ray
-       | Change Random to Light, Deal 75% damage
-       | condition: 50% chance, hp <= 100
-       | (9537:48) Heart Break
-       | Change Heal to Jammer, Deal 50% damage
+     | condition: 33% chance, hp <= 100
+     | (874:48) Shining Ray
+     | Change Random to Light, Deal 75% damage
+     | condition: 50% chance, hp <= 100
+     | (9537:48) Heart Break
+     | Change Heal to Jammer, Deal 50% damage
    | group:
-   | condition: turn 5
-     | group:
-       | (9536:83) Judgment from Heaven + Divine Protection
-       | Bind 1 random subs for 20 turns + Increase damage to 150% for the next 99 turns
+   | condition: turn 5, hp <= 100
+     | (9536:83) Judgment from Heaven + Divine Protection
+     | Bind 1 random subs for 20 turns + Increase damage to 150% for the next 99 turns
    | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: 33% chance, hp <= 100
-       | (874:48) Shining Ray
-       | Change Random to Light, Deal 75% damage
-       | condition: 50% chance, hp <= 100
-       | (9537:48) Heart Break
-       | Change Heal to Jammer, Deal 50% damage
+     | condition: 33% chance, hp <= 100
+     | (874:48) Shining Ray
+     | Change Random to Light, Deal 75% damage
+     | condition: 50% chance, hp <= 100
+     | (9537:48) Heart Break
+     | Change Heal to Jammer, Deal 50% damage
  | group:
- | condition: hp <= 74
-   | group:
-   | condition: turn 1
-     | group:
-       | condition: hp <= 75
-       | (876:7) Resurrection
-       | Enemy recover 100% hp
+ | condition: turn 1, hp <= 75
+   | (876:7) Resurrection
+   | Enemy recover 100% hp

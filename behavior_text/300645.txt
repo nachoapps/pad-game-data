@@ -12,44 +12,35 @@ level: 1
  | Deal 70% damage
  group:
  | group:
-   | group:
-   | condition: repeats every 2 turns
-     | group:
-       | (675:60) Take this!
-       | Change Random 5 to Poison
+ | condition: repeats every 2 turns, hp <= 100
+   | (675:60) Take this!
+   | Change Random 5 to Poison
  | group:
  | condition: hp <= 74
    | group:
-   | condition: repeats every 2 turns
-     | group:
-       | (675:60) Take this!
-       | Change Random 5 to Poison
+   | condition: repeats every 2 turns, hp <= 100
+     | (675:60) Take this!
+     | Change Random 5 to Poison
    | group:
-   | condition: repeats every 2 turns
-     | group:
-       | condition: 70% chance, hp <= 75
-       | (676:15) Deadly Drive!
-       | Deal 120% damage (3 hits, 40% each)
+   | condition: 70% chance, repeats every 2 turns, hp <= 75
+     | (676:15) Deadly Drive!
+     | Deal 120% damage (3 hits, 40% each)
  | group:
  | condition: hp <= 39
    | group:
    | condition: turn 1
-     | group:
-       | (682:48) Not going easy anymore!
-       | Change Poison to Dark, Deal 50% damage
-       | (681:50) Not going easy anymore!
-       | Player -50% HP
+     | (682:48) Not going easy anymore!
+     | Change Poison to Dark, Deal 50% damage
+     | (681:50) Not going easy anymore!
+     | Player -50% HP
    | group:
    | condition: repeats every 2 turns
-     | group:
-       | (677:92) Sink into a sea of poison!!
-       | Change all orbs to Poison
-       | condition: hp <= 75
-       | (676:15) Deadly Drive!
-       | Deal 120% damage (3 hits, 40% each)
+     | (677:92) Sink into a sea of poison!!
+     | Change all orbs to Poison
+     | condition: hp <= 75
+     | (676:15) Deadly Drive!
+     | Deal 120% damage (3 hits, 40% each)
    | group:
-   | condition: repeats every 2 turns
-     | group:
-       | condition: hp <= 75
-       | (676:15) Deadly Drive!
-       | Deal 120% damage (3 hits, 40% each)
+   | condition: repeats every 2 turns, hp <= 75
+     | (676:15) Deadly Drive!
+     | Deal 120% damage (3 hits, 40% each)

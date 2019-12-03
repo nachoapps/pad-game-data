@@ -9,16 +9,10 @@ approved: False
 level: 5
  group:
  | group:
-   | group:
-   | condition: repeats every 2 turns
-     | group:
-       | (817:50) Grundy Stomp
-       | Player -99% HP
+ | condition: repeats every 2 turns, hp <= 100
+   | (817:50) Grundy Stomp
+   | Player -99% HP
  | group:
- | condition: hp <= 9
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: hp <= 10
-       | (816:7) Resurrection
-       | Enemy recover 100% hp
+ | condition: hp <= 10
+   | (816:7) Resurrection
+   | Enemy recover 100% hp

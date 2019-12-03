@@ -12,23 +12,14 @@ level: 4
  | Spawn random 3 Bomb orbs
  group:
  | group:
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: 50% chance, when required attributes on board, hp <= 100
-       | (9184:92) So fuuun ♪
-       | Spawn random 2 Jammer, Poison orbs, Deal 70% damage
+ | condition: 50% chance, when required attributes on board, hp <= 100
+   | (9184:92) So fuuun ♪
+   | Spawn random 2 Jammer, Poison orbs, Deal 70% damage
  | group:
- | condition: hp <= 74
-   | group:
-   | condition: turn 1
-     | group:
-       | (9185:76) Have a blast ♪
-       | Change 2nd column to Jammer, Poison orbs, 5th column to Jammer, Poison orbs
+ | condition: turn 1, hp <= 100
+   | (9185:76) Have a blast ♪
+   | Change 2nd column to Jammer, Poison orbs, 5th column to Jammer, Poison orbs
  | group:
- | condition: hp <= 29
-   | group:
-   | condition: turn 1
-     | group:
-       | (9186:103) Zip it
-       | Spawn locked Bomb orbs in the specified positions
+ | condition: turn 1, hp <= 100
+   | (9186:103) Zip it
+   | Spawn locked Bomb orbs in the specified positions

@@ -16,44 +16,36 @@ level: 1
  group:
  | group:
    | group:
-   | condition: turn 1
-     | group:
-       | (9524:83) Style Change + Fire Chain
-       | Change own attribute to Wood + Unable to match Fire orbs for 2 turns
+   | condition: turn 1, hp <= 100
+     | (9524:83) Style Change + Fire Chain
+     | Change own attribute to Wood + Unable to match Fire orbs for 2 turns
    | group:
    | condition: turns 2-5
-     | group:
-       | condition: 50% chance, hp <= 100
-       | (9525:77) Flame Sword
-       | Change 1st column to Fire orbs, Deal 130% damage
-       | condition: when required attributes on board, hp <= 100
-       | (9526:92) Wind Sword
-       | Spawn random 5 Wood orbs, Deal 130% damage
+     | condition: 50% chance, hp <= 100
+     | (9525:77) Flame Sword
+     | Change 1st column to Fire orbs, Deal 130% damage
+     | condition: when required attributes on board, hp <= 100
+     | (9526:92) Wind Sword
+     | Spawn random 5 Wood orbs, Deal 130% damage
    | group:
-   | condition: turn 6
-     | group:
-       | (9529:83) Dance of Aggression + Axe Kick
-       | Absorb damage >= 4000000 damage for 5 turns + Player -99% HP
+   | condition: turn 6, hp <= 100
+     | (9529:83) Dance of Aggression + Axe Kick
+     | Absorb damage >= 4000000 damage for 5 turns + Player -99% HP
    | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: 50% chance, hp <= 100
-       | (9525:77) Flame Sword
-       | Change 1st column to Fire orbs, Deal 130% damage
-       | condition: when required attributes on board, hp <= 100
-       | (9526:92) Wind Sword
-       | Spawn random 5 Wood orbs, Deal 130% damage
+     | condition: 50% chance, hp <= 100
+     | (9525:77) Flame Sword
+     | Change 1st column to Fire orbs, Deal 130% damage
+     | condition: when required attributes on board, hp <= 100
+     | (9526:92) Wind Sword
+     | Spawn random 5 Wood orbs, Deal 130% damage
  | group:
  | condition: hp <= 39
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: 70% chance, hp <= 40
-       | (9530:77) Twin Blade Dance
-       | Change 1st, 2nd, 3rd column to Fire orbs, 4th, 5th, 6th column to Wood orbs, Deal 180% damage
-       | condition: 50% chance, hp <= 100
-       | (9525:77) Flame Sword
-       | Change 1st column to Fire orbs, Deal 130% damage
-       | condition: when required attributes on board, hp <= 100
-       | (9526:92) Wind Sword
-       | Spawn random 5 Wood orbs, Deal 130% damage
+   | condition: 70% chance, hp <= 40
+   | (9530:77) Twin Blade Dance
+   | Change 1st, 2nd, 3rd column to Fire orbs, 4th, 5th, 6th column to Wood orbs, Deal 180% damage
+   | condition: 50% chance, hp <= 100
+   | (9525:77) Flame Sword
+   | Change 1st column to Fire orbs, Deal 130% damage
+   | condition: when required attributes on board, hp <= 100
+   | (9526:92) Wind Sword
+   | Spawn random 5 Wood orbs, Deal 130% damage

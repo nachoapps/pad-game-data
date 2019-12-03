@@ -8,23 +8,15 @@ approved: False
 
 level: 1
  group:
- | group:
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | (301:16) Thank you Kyulu
-       | Do nothing
+ | (301:16) Thank you Kyulu
+ | Do nothing
 
 level: 5
  group:
  | group:
-   | group:
-   | condition: turn 1
-     | group:
-       | (316:4) Sparkling
-       | Change Heal to Light
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | (301:16) Thank you Kyulu
-       | Do nothing
+ | condition: turn 1, hp <= 100
+   | (316:4) Sparkling
+   | Change Heal to Light
+ | group:
+   | (301:16) Thank you Kyulu
+   | Do nothing

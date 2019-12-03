@@ -12,27 +12,21 @@ level: 1
  | Reduce damage from all sources by 50% for 3 turns + Absorb combo <= 4 damage for 5 turns
  group:
  | group:
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: 34% chance, hp <= 100
-       | (15220:5) 話は読めてる
-       | Blind all orbs on the board
-       | condition: 33% chance, hp <= 100
-       | (15221:108) くらえ！
-       | Change Fire, Water, Wood to Fire, Deal 80% damage
-       | condition: 33% chance, hp <= 100
-       | (15218:15) Ｅ６の機動性を見せてやる！
-       | Deal 120% damage (2 hits, 60% each)
+   | condition: 34% chance, hp <= 100
+   | (15220:5) 話は読めてる
+   | Blind all orbs on the board
+   | condition: 33% chance, hp <= 100
+   | (15221:108) くらえ！
+   | Change Fire, Water, Wood to Fire, Deal 80% damage
+   | condition: 33% chance, hp <= 100
+   | (15218:15) Ｅ６の機動性を見せてやる！
+   | Deal 120% damage (2 hits, 60% each)
  | group:
  | condition: hp <= 49
    | group:
-   | condition: turn 1
-     | group:
-       | (15219:107) 舐めるな！
-       | Unable to match Water orbs for 3 turns
+   | condition: turn 1, hp <= 100
+     | (15219:107) 舐めるな！
+     | Unable to match Water orbs for 3 turns
    | group:
-   | condition: repeats every 1 turns
-     | group:
-       | (15222:79) グランクロス！
-       | Change 2nd row to Fire orbs, 3rd row to Wood orbs, 4th row to Fire orbs, Deal 125% damage
+     | (15222:79) グランクロス！
+     | Change 2nd row to Fire orbs, 3rd row to Wood orbs, 4th row to Fire orbs, Deal 125% damage

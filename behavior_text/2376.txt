@@ -12,22 +12,18 @@ level: 3
  | Deal 60% damage
  group:
  | group:
-   | group:
-   | condition: turn 1
-     | group:
-       | condition: 50% chance, hp <= 100
-       | (3297:79) Mow-Down
-       | Change 1st row to Fire orbs, Deal 180% damage
-       | condition: when required attributes on board, hp <= 100
-       | (3295:92) Pyro-Vapor
-       | Spawn random 5 Fire orbs, Deal 180% damage
-   | group:
-   | condition: repeats every 2 turns
-     | group:
-       | (3298:66) Raised Hand
-       | Do nothing
-   | group:
-   | condition: repeats every 2 turns
-     | group:
-       | (3296:15) Severe Blow
-       | Deal 500% damage
+ | condition: turn 1
+   | condition: 50% chance, hp <= 100
+   | (3297:79) Mow-Down
+   | Change 1st row to Fire orbs, Deal 180% damage
+   | condition: when required attributes on board, hp <= 100
+   | (3295:92) Pyro-Vapor
+   | Spawn random 5 Fire orbs, Deal 180% damage
+ | group:
+ | condition: repeats every 2 turns, hp <= 100
+   | (3298:66) Raised Hand
+   | Do nothing
+ | group:
+ | condition: repeats every 2 turns, hp <= 100
+   | (3296:15) Severe Blow
+   | Deal 500% damage

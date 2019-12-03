@@ -16,65 +16,42 @@ level: 1
  group:
  | group:
    | group:
-   | condition: repeats every 6 turns
-     | group:
-       | (5073:15) Cyclone
-       | Deal 140% damage (2 hits, 70% each)
+   | condition: repeats every 6 turns, hp <= 100
+     | (5073:15) Cyclone
+     | Deal 140% damage (2 hits, 70% each)
    | group:
-   | condition: repeats every 6 turns
-     | group:
-       | (5074:101) Flash Induction
-       | Fix orb movement starting point to random position on the board
+   | condition: repeats every 6 turns, hp <= 100
+     | (5074:101) Flash Induction
+     | Fix orb movement starting point to random position on the board
    | group:
-   | condition: repeats every 6 turns
-     | group:
-       | (5075:53) Deep Shadow
-       | Absorb Dark damage for 3 turns
+   | condition: repeats every 6 turns, hp <= 100
+     | (5075:53) Deep Shadow
+     | Absorb Dark damage for 3 turns
    | group:
-   | condition: repeats every 6 turns
-     | group:
-       | (5073:15) Cyclone
-       | Deal 140% damage (2 hits, 70% each)
+   | condition: repeats every 6 turns, hp <= 100
+     | (5073:15) Cyclone
+     | Deal 140% damage (2 hits, 70% each)
    | group:
-   | condition: repeats every 6 turns
-     | group:
-       | (5074:101) Flash Induction
-       | Fix orb movement starting point to random position on the board
+   | condition: repeats every 6 turns, hp <= 100
+     | (5074:101) Flash Induction
+     | Fix orb movement starting point to random position on the board
    | group:
-   | condition: repeats every 6 turns
-     | group:
-       | (5072:74) Shell Scale
-       | Reduce damage from all sources by 75% for 3 turns
+   | condition: repeats every 6 turns, hp <= 100
+     | (5072:74) Shell Scale
+     | Reduce damage from all sources by 75% for 3 turns
  | group:
- | condition: hp <= 69
-   | group:
-   | condition: turn 1
-     | group:
-       | condition: hp <= 70
-       | (5076:50) Fin Drive
-       | Player -99% HP
+ | condition: turn 1, hp <= 70
+   | (5076:50) Fin Drive
+   | Player -99% HP
  | group:
- | condition: hp <= 49
-   | group:
-   | condition: turn 2
-     | group:
-       | condition: hp <= 50
-       | (5077:63) Sun Jail
-       | Bind 1 random subs for 5 turns, Deal 160% damage
+ | condition: turn 2, hp <= 50
+   | (5077:63) Sun Jail
+   | Bind 1 random subs for 5 turns, Deal 160% damage
  | group:
- | condition: hp <= 14
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: hp <= 15
-       | (5078:15) Meteors Myriad
-       | Deal 900% damage (6 hits, 150% each)
+ | condition: hp <= 15
+   | (5078:15) Meteors Myriad
+   | Deal 900% damage (6 hits, 150% each)
  type: REMAINING
- condition: when 1 enemies remain
- | group:
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: when 1 enemies remain, hp <= 100
-       | (5079:52) Resuscitation
-       | Enemy ally recover 100% hp
+ condition: when 1 enemies remain, hp <= 100
+ | (5079:52) Resuscitation
+ | Enemy ally recover 100% hp

@@ -9,57 +9,40 @@ approved: False
 level: 5
  group:
  | group:
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: 50% chance, hp <= 100
-       | (1113:48) こんどは死ぬかもね
-       | Change Random to Jammer, Deal 75% damage
+ | condition: 50% chance, hp <= 100
+   | (1113:48) こんどは死ぬかもね
+   | Change Random to Jammer, Deal 75% damage
  | group:
  | condition: hp <= 74
    | group:
-   | condition: turn 1
-     | group:
-       | condition: hp <= 75
-       | (1114:20) いまのはいたかった…
-       | Voids status ailments for 999 turns
+   | condition: turn 1, hp <= 75
+     | (1114:20) いまのはいたかった…
+     | Voids status ailments for 999 turns
    | group:
-   | condition: turn 2
-     | group:
-       | condition: hp <= 75
-       | (1115:15) いたかったぞーっ!!!!!
-       | Deal 250% damage
+   | condition: turn 2, hp <= 75
+     | (1115:15) いたかったぞーっ!!!!!
+     | Deal 250% damage
  | group:
  | condition: hp <= 49
    | group:
-   | condition: turn 3
-     | group:
-       | condition: when 1 enemies remain, hp <= 50
-       | (1116:17) お待ちかね100パーセント!
-       | Increase damage to 200% for the next 999 turns
+   | condition: when 1 enemies remain, turn 3, hp <= 50
+     | (1116:17) お待ちかね100パーセント!
+     | Increase damage to 200% for the next 999 turns
    | group:
-   | condition: repeats every 2 turns
-     | group:
-       | condition: hp <= 50
-       | (1117:62) オレが負けるかーっ!!!!!
-       | Blind all orbs on the board, Deal 125% damage
+   | condition: repeats every 2 turns, hp <= 50
+     | (1117:62) オレが負けるかーっ!!!!!
+     | Blind all orbs on the board, Deal 125% damage
    | group:
-   | condition: repeats every 2 turns
-     | group:
-       | condition: 50% chance, hp <= 100
-       | (1113:48) こんどは死ぬかもね
-       | Change Random to Jammer, Deal 75% damage
+   | condition: 50% chance, repeats every 2 turns, hp <= 100
+     | (1113:48) こんどは死ぬかもね
+     | Change Random to Jammer, Deal 75% damage
  | group:
  | condition: hp <= 19
    | group:
-   | condition: repeats every 2 turns
-     | group:
-       | condition: hp <= 30
-       | (1118:66) この星を消す!!!
-       | Do nothing
+   | condition: repeats every 2 turns, hp <= 30
+     | (1118:66) この星を消す!!!
+     | Do nothing
    | group:
-   | condition: repeats every 2 turns
-     | group:
-       | condition: hp <= 30
-       | (1119:15) ふっとベーっ!!!!!
-       | Deal 1000% damage
+   | condition: repeats every 2 turns, hp <= 30
+     | (1119:15) ふっとベーっ!!!!!
+     | Deal 1000% damage

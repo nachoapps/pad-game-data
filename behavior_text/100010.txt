@@ -9,51 +9,35 @@ approved: False
 level: 4
  group:
  | group:
-   | group:
-   | condition: turn 1
-     | group:
-       | condition: when required attributes on board, hp <= 100
-       | (10321:92) Wind Breath
-       | Spawn random 3 Wood orbs, Deal 100% damage
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: 50% chance, when required attributes on board, hp <= 100
-       | (10321:92) Wind Breath
-       | Spawn random 3 Wood orbs, Deal 100% damage
-       | (10322:89) Air Reduction
-       | Delay active skills by 2 turns, Deal 95% damage
- type: REMAINING
- condition: when 2 enemies remain
+ | condition: when required attributes on board, turn 1, hp <= 100
+   | (10321:92) Wind Breath
+   | Spawn random 3 Wood orbs, Deal 100% damage
  | group:
-   | group:
-   | condition: turn 1
-     | group:
-       | condition: when required attributes on board, hp <= 100
-       | (10321:92) Wind Breath
-       | Spawn random 3 Wood orbs, Deal 100% damage
-   | group:
-   | condition: turn 2
-     | group:
-       | (10323:74) New Greenery Protection
-       | Reduce damage from all sources by 50% for 5 turns
+   | condition: 50% chance, when required attributes on board, hp <= 100
+   | (10321:92) Wind Breath
+   | Spawn random 3 Wood orbs, Deal 100% damage
+   | (10322:89) Air Reduction
+   | Delay active skills by 2 turns, Deal 95% damage
  type: REMAINING
- condition: when 1 enemies remain
+ condition: when 2 enemies remain, hp <= 100
  | group:
-   | group:
-   | condition: turn 1
-     | group:
-       | condition: when required attributes on board, hp <= 100
-       | (10321:92) Wind Breath
-       | Spawn random 3 Wood orbs, Deal 100% damage
-   | group:
-   | condition: turn 2
-     | group:
-       | condition: when 1 enemies remain, hp <= 100
-       | (10324:17) Earth's Anger
-       | Increase damage to 300% for the next 99 turns
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | (10325:15) Gaia Breath
-       | Deal 140% damage (2 hits, 70% each)
+ | condition: when required attributes on board, turn 1, hp <= 100
+   | (10321:92) Wind Breath
+   | Spawn random 3 Wood orbs, Deal 100% damage
+ | group:
+ | condition: turn 2, hp <= 100
+   | (10323:74) New Greenery Protection
+   | Reduce damage from all sources by 50% for 5 turns
+ type: REMAINING
+ condition: when 1 enemies remain, hp <= 100
+ | group:
+ | condition: when required attributes on board, turn 1, hp <= 100
+   | (10321:92) Wind Breath
+   | Spawn random 3 Wood orbs, Deal 100% damage
+ | group:
+ | condition: when 1 enemies remain, turn 2, hp <= 100
+   | (10324:17) Earth's Anger
+   | Increase damage to 300% for the next 99 turns
+ | group:
+   | (10325:15) Gaia Breath
+   | Deal 140% damage (2 hits, 70% each)

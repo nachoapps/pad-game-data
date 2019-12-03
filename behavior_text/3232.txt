@@ -12,20 +12,16 @@ level: 4
  | Void damage >= 100 for 3 turns
  group:
  | group:
-   | group:
-   | condition: repeats every 4 turns
-     | group:
-       | (5762:92) Cat Fire
-       | Spawn random 1 Fire orbs, Deal 70% damage
-   | group:
-   | condition: repeats every 4 turns
-     | group:
-       | (5763:92) Eerie Flare
-       | Spawn random 3 Poison orbs, Deal 250% damage
-       | (5762:92) Cat Fire
-       | Spawn random 1 Fire orbs, Deal 70% damage
-   | group:
-   | condition: repeats every 4 turns
-     | group:
-       | (5762:92) Cat Fire
-       | Spawn random 1 Fire orbs, Deal 70% damage
+ | condition: repeats every 4 turns, hp <= 100
+   | (5762:92) Cat Fire
+   | Spawn random 1 Fire orbs, Deal 70% damage
+ | group:
+ | condition: repeats every 4 turns
+   | (5763:92) Eerie Flare
+   | Spawn random 3 Poison orbs, Deal 250% damage
+   | (5762:92) Cat Fire
+   | Spawn random 1 Fire orbs, Deal 70% damage
+ | group:
+ | condition: repeats every 4 turns, hp <= 100
+   | (5762:92) Cat Fire
+   | Spawn random 1 Fire orbs, Deal 70% damage

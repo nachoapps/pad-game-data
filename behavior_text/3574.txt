@@ -15,30 +15,19 @@ level: 1
  | Void damage >= 10000000 for 999 turns + Rcv 200% for 9 turns + Deal 760% damage
  group:
  | group:
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | (6606:83) First Glisten + Triple Blaze
-       | Fix orb movement starting point to random position on the board + Deal 450% damage (3 hits, 150% each)
+   | (6606:83) First Glisten + Triple Blaze
+   | Fix orb movement starting point to random position on the board + Deal 450% damage (3 hits, 150% each)
  | group:
  | condition: hp <= 49
    | group:
-   | condition: turn 1
-     | group:
-       | condition: hp <= 50
-       | (6609:83) Bonfire + Guardian Dragon Formation + Pure Blaze
-       | Change own attribute to random one of Fire, Light + Voids status ailments for 999 turns + Unable to match Dark orbs for 3 turns
+   | condition: turn 1, hp <= 50
+     | (6609:83) Bonfire + Guardian Dragon Formation + Pure Blaze
+     | Change own attribute to random one of Fire, Light + Voids status ailments for 999 turns + Unable to match Dark orbs for 3 turns
    | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: hp <= 50
-       | (6612:83) First Glisten + Fanning Breath
-       | Fix orb movement starting point to random position on the board + Deal 600% damage (6 hits, 100% each)
+   | condition: hp <= 50
+     | (6612:83) First Glisten + Fanning Breath
+     | Fix orb movement starting point to random position on the board + Deal 600% damage (6 hits, 100% each)
  | group:
- | condition: hp <= 9
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: hp <= 10
-       | (6615:83) Bonfire + Burst End
-       | Change own attribute to random one of Fire, Light + Deal 10000% damage (5 hits, 2000% each)
+ | condition: hp <= 10
+   | (6615:83) Bonfire + Burst End
+   | Change own attribute to random one of Fire, Light + Deal 10000% damage (5 hits, 2000% each)

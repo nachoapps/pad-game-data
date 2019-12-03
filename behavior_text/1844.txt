@@ -14,33 +14,27 @@ level: 1
  | (2457:20) I'm honored to face you!
  | Voids status ailments for 999 turns
  type: DEATH
- | condition: when defeated, hp <= 100
+ condition: when defeated, hp <= 100
  | (2462:69) 龍騎士風ドラゴン・変身
  | Show message: 見事だ、私も戦いの中で進化しよう！
  group:
  | group:
-   | group:
-   | condition: repeats every 5 turns
-     | group:
-       | (2458:15) Ha!
-       | Deal 120% damage
-   | group:
-   | condition: repeats every 5 turns
-     | group:
-       | (2459:74) His shield is raised
-       | Reduce damage from all sources by 50% for 1 turns
-   | group:
-   | condition: repeats every 5 turns
-     | group:
-       | (2460:15) Take that!
-       | Deal 130% damage
-   | group:
-   | condition: repeats every 5 turns
-     | group:
-       | (2459:74) His shield is raised
-       | Reduce damage from all sources by 50% for 1 turns
-   | group:
-   | condition: repeats every 5 turns
-     | group:
-       | (2461:15) Triple Thrust
-       | Deal 180% damage (3 hits, 60% each)
+ | condition: repeats every 5 turns, hp <= 100
+   | (2458:15) Ha!
+   | Deal 120% damage
+ | group:
+ | condition: repeats every 5 turns, hp <= 100
+   | (2459:74) His shield is raised
+   | Reduce damage from all sources by 50% for 1 turns
+ | group:
+ | condition: repeats every 5 turns, hp <= 100
+   | (2460:15) Take that!
+   | Deal 130% damage
+ | group:
+ | condition: repeats every 5 turns, hp <= 100
+   | (2459:74) His shield is raised
+   | Reduce damage from all sources by 50% for 1 turns
+ | group:
+ | condition: repeats every 5 turns, hp <= 100
+   | (2461:15) Triple Thrust
+   | Deal 180% damage (3 hits, 60% each)

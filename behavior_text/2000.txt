@@ -8,25 +8,13 @@ approved: False
 
 level: 1
  group:
- | group:
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | (485:15) Flame Breath
-       | Deal 170% damage (2 hits, 85% each)
+ | (485:15) Flame Breath
+ | Deal 170% damage (2 hits, 85% each)
  type: REMAINING
- condition: when 2 enemies remain
- | group:
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | (2010:79) Oni Flame Slash
-       | Change 3rd row to Fire orbs, Deal 100% damage
+ condition: when 2 enemies remain, hp <= 100
+ | (2010:79) Oni Flame Slash
+ | Change 3rd row to Fire orbs, Deal 100% damage
  type: REMAINING
- condition: when 1 enemies remain
- | group:
-   | group:
-   | condition: turn 1
-     | group:
-       | (6526:67) Seastar Rock Scales
-       | Absorb combo <= 7 damage for 999 turns
+ condition: when 1 enemies remain, turn 1, hp <= 100
+ | (6526:67) Seastar Rock Scales
+ | Absorb combo <= 7 damage for 999 turns

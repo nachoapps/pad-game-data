@@ -15,30 +15,23 @@ level: 1
  | Absorb Fire damage for 5 turns
  group:
  | group:
-   | group:
-   | condition: turn 1
-     | group:
-       | (14905:92) 減らず口をたたくな！
-       | Spawn random 6 Wood orbs, Deal 70% damage
-       | (14906:100) はぁーっはっはっはぁっ！
-       | Seal 5th row for 3 turns, Deal 50% damage
-   | group:
-   | condition: turn 2
-     | group:
-       | (14906:100) はぁーっはっはっはぁっ！
-       | Seal 5th row for 3 turns, Deal 50% damage
-   | group:
-   | condition: turn 3
-     | group:
-       | (14907:104) 我が権謀術数に死角なしっ！
-       | Row of cloud appear for 2 turns at 5th column, Deal 50% damage
-   | group:
-   | condition: turn 4
-     | group:
-       | (14908:110) 決着をつけるときだ！
-       | Specific orbs change every 2.0s for 3 turns
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | (14909:15) どぅやおうぅぅぁぁ！
-       | Deal 150% damage
+ | condition: turn 1
+   | (14905:92) 減らず口をたたくな！
+   | Spawn random 6 Wood orbs, Deal 70% damage
+   | (14906:100) はぁーっはっはっはぁっ！
+   | Seal 5th row for 3 turns, Deal 50% damage
+ | group:
+ | condition: turn 2, hp <= 100
+   | (14906:100) はぁーっはっはっはぁっ！
+   | Seal 5th row for 3 turns, Deal 50% damage
+ | group:
+ | condition: turn 3, hp <= 100
+   | (14907:104) 我が権謀術数に死角なしっ！
+   | Row of cloud appear for 2 turns at 5th column, Deal 50% damage
+ | group:
+ | condition: turn 4, hp <= 100
+   | (14908:110) 決着をつけるときだ！
+   | Specific orbs change every 2.0s for 3 turns
+ | group:
+   | (14909:15) どぅやおうぅぅぁぁ！
+   | Deal 150% damage

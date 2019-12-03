@@ -12,39 +12,28 @@ level: 4
  | Voids status ailments for 5 turns
  group:
  | group:
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: 50% chance, hp <= 100
-       | (11795:15) Veno Visor
-       | Deal 100% damage
-       | condition: when required attributes on board, hp <= 100
-       | (11796:92) Veno Snaker
-       | Spawn random 3 Poison orbs, Deal 80% damage
+   | condition: 50% chance, hp <= 100
+   | (11795:15) Veno Visor
+   | Deal 100% damage
+   | condition: when required attributes on board, hp <= 100
+   | (11796:92) Veno Snaker
+   | Spawn random 3 Poison orbs, Deal 80% damage
  | group:
  | condition: hp <= 50
    | group:
-   | condition: turn 1
-     | group:
-       | condition: when 1 enemies remain, hp <= 100
-       | (11797:17) You're getting on my nerves!
-       | Increase damage to 150% for the next 5 turns
+   | condition: when 1 enemies remain, turn 1, hp <= 100
+     | (11797:17) You're getting on my nerves!
+     | Increase damage to 150% for the next 5 turns
    | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: 33% chance, hp <= 100
-       | (11798:83) Sword Vent + Veno Saber
-       | Do nothing + Deal 120% damage (3 hits, 40% each)
-       | condition: 50% chance, hp <= 100
-       | (11795:15) Veno Visor
-       | Deal 100% damage
-       | condition: when required attributes on board, hp <= 100
-       | (11796:92) Veno Snaker
-       | Spawn random 3 Poison orbs, Deal 80% damage
+     | condition: 33% chance, hp <= 100
+     | (11798:83) Sword Vent + Veno Saber
+     | Do nothing + Deal 120% damage (3 hits, 40% each)
+     | condition: 50% chance, hp <= 100
+     | (11795:15) Veno Visor
+     | Deal 100% damage
+     | condition: when required attributes on board, hp <= 100
+     | (11796:92) Veno Snaker
+     | Spawn random 3 Poison orbs, Deal 80% damage
  | group:
- | condition: hp <= 14
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | (11801:83) Final Vent + Veno Crush
-       | Do nothing + Deal 160% damage (4 hits, 40% each)
+   | (11801:83) Final Vent + Veno Crush
+   | Do nothing + Deal 160% damage (4 hits, 40% each)

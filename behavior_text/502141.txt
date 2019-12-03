@@ -9,25 +9,19 @@ approved: False
 level: 1
  group:
  | group:
-   | group:
-   | condition: turn 1
-     | group:
-       | (13931:50) You can't see yourself
-       | Player -99% HP
-   | group:
-   | condition: turn 2
-     | group:
-       | (13932:100) That's no use...
-       | Seal 1st, 5th row for 10 turns
-   | group:
-   | condition: turn 3
-     | group:
-       | (13933:88) You must not lose sight of it...
-       | Bind awoken skills for 10 turns
-       | (13934:40) It was too early for you...
-       | Reduce self HP to 0
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | (13934:40) It was too early for you...
-       | Reduce self HP to 0
+ | condition: turn 1, hp <= 100
+   | (13931:50) You can't see yourself
+   | Player -99% HP
+ | group:
+ | condition: turn 2, hp <= 100
+   | (13932:100) That's no use...
+   | Seal 1st, 5th row for 10 turns
+ | group:
+ | condition: turn 3
+   | (13933:88) You must not lose sight of it...
+   | Bind awoken skills for 10 turns
+   | (13934:40) It was too early for you...
+   | Reduce self HP to 0
+ | group:
+   | (13934:40) It was too early for you...
+   | Reduce self HP to 0

@@ -12,16 +12,9 @@ level: 1
  | Forces attacks to hit this enemy
  group:
  | group:
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | (9176:89) Shield Bash
-       | Delay active skills by 1 turns, Deal 100% damage
+   | (9176:89) Shield Bash
+   | Delay active skills by 1 turns, Deal 100% damage
  | group:
- | condition: hp <= 49
-   | group:
-   | condition: turn 1
-     | group:
-       | condition: hp <= 50
-       | (9178:74) The Purple Augite is pulsating
-       | Reduce damage from all sources by 35% for 6 turns
+ | condition: turn 1, hp <= 50
+   | (9178:74) The Purple Augite is pulsating
+   | Reduce damage from all sources by 35% for 6 turns

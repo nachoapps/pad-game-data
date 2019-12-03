@@ -13,37 +13,22 @@ level: 1
  group:
  | group:
    | group:
-   | condition: turn 1
-     | group:
-       | (2365:68) Waterways Verification
-       | Water skyfall +20% for 99 turns
+   | condition: turn 1, hp <= 100
+     | (2365:68) Waterways Verification
+     | Water skyfall +20% for 99 turns
    | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: 50% chance, hp <= 100
-       | (2367:48) Lotus Drop
-       | Change Heal to Water, Deal 150% damage
+   | condition: 50% chance, hp <= 100
+     | (2367:48) Lotus Drop
+     | Change Heal to Water, Deal 150% damage
  | group:
- | condition: hp <= 69
-   | group:
-   | condition: turn 2
-     | group:
-       | condition: hp <= 70
-       | (2366:75) Chanchala
-       | Leader changes to random sub for 3 turns
+ | condition: turn 2, hp <= 70
+   | (2366:75) Chanchala
+   | Leader changes to random sub for 3 turns
  | group:
- | condition: hp <= 49
-   | group:
-   | condition: turn 3
-     | group:
-       | condition: hp <= 50
-       | (2368:86) Magic Absorbing Eye
-       | Enemy recover 30% hp, Deal 100% damage
+ | condition: turn 3, hp <= 50
+   | (2368:86) Magic Absorbing Eye
+   | Enemy recover 30% hp, Deal 100% damage
  | group:
- | condition: hp <= 19
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: hp <= 20
-       | (2318:15) Wave Current Attack
-       | Deal 250% damage
+ | condition: hp <= 20
+   | (2318:15) Wave Current Attack
+   | Deal 250% damage

@@ -12,27 +12,21 @@ level: 1
  | Voids status ailments for 999 turns + Absorb combo <= 6 damage for 4 turns
  group:
  | group:
-   | group:
-   | condition: turn 1
-     | group:
-       | (5160:79) Wind Charge
-       | Change 1st row to Wood orbs, Deal 150% damage
-   | group:
-   | condition: turn 2
-     | group:
-       | (5161:79) Wind Charge
-       | Change 1st row to Wood orbs, Deal 150% damage
-   | group:
-   | condition: turn 3
-     | group:
-       | condition: when required attributes on board, hp <= 100
-       | (5162:92) Wind Pulse
-       | Change all orbs to Wood, Deal 150% damage
-       | condition: when required attributes on board, hp <= 100
-       | (5163:92) Wind Pulse
-       | Spawn random 6 Wood orbs, Deal 150% damage
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | (5164:15) Tempest Ball
-       | Deal 1200% damage (4 hits, 300% each)
+ | condition: turn 1, hp <= 100
+   | (5160:79) Wind Charge
+   | Change 1st row to Wood orbs, Deal 150% damage
+ | group:
+ | condition: turn 2, hp <= 100
+   | (5161:79) Wind Charge
+   | Change 1st row to Wood orbs, Deal 150% damage
+ | group:
+ | condition: turn 3
+   | condition: when required attributes on board, hp <= 100
+   | (5162:92) Wind Pulse
+   | Change all orbs to Wood, Deal 150% damage
+   | condition: when required attributes on board, hp <= 100
+   | (5163:92) Wind Pulse
+   | Spawn random 6 Wood orbs, Deal 150% damage
+ | group:
+   | (5164:15) Tempest Ball
+   | Deal 1200% damage (4 hits, 300% each)

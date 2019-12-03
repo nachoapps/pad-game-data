@@ -15,56 +15,41 @@ level: 1
  | Bind 1 random subs for 3 turns + Player -75% HP
  group:
  | group:
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: 33% chance, when required attributes on board, hp <= 100
-       | (12020:92) お主に　斬れるでござるか？
-       | Spawn random 5 Jammer orbs, Deal 90% damage
-       | condition: 33% chance, hp <= 100
-       | (12021:15) 閃光斬りっ！
-       | Deal 105% damage (3 hits, 35% each)
-       | condition: 34% chance, hp <= 100
-       | (12022:48) 旋風斬りっ！！
-       | Change Random to Wood, Deal 95% damage
+   | condition: 33% chance, when required attributes on board, hp <= 100
+   | (12020:92) お主に　斬れるでござるか？
+   | Spawn random 5 Jammer orbs, Deal 90% damage
+   | condition: 33% chance, hp <= 100
+   | (12021:15) 閃光斬りっ！
+   | Deal 105% damage (3 hits, 35% each)
+   | condition: 34% chance, hp <= 100
+   | (12022:48) 旋風斬りっ！！
+   | Change Random to Wood, Deal 95% damage
  | group:
- | condition: hp <= 49
-   | group:
-   | condition: turn 1
-     | group:
-       | (12024:83) こうなったら　奥の手でござる！ + ぬははは！　勝利はもらった！
-       | Increase damage to 150% for the next 5 turns + Absorb combo <= 5 damage for 5 turns
+ | condition: turn 1, hp <= 100
+   | (12024:83) こうなったら　奥の手でござる！ + ぬははは！　勝利はもらった！
+   | Increase damage to 150% for the next 5 turns + Absorb combo <= 5 damage for 5 turns
  | group:
  | condition: hp <= 19
    | group:
-   | condition: turn 1
-     | group:
-       | (12027:83) ぶ　武士の情け… + しばし待たれよっ！
-       | Bind 4 random subs for 1 turns + Do nothing
+   | condition: turn 1, hp <= 100
+     | (12027:83) ぶ　武士の情け… + しばし待たれよっ！
+     | Bind 4 random subs for 1 turns + Do nothing
    | group:
-   | condition: repeats every 1 turns
-     | group:
-       | (12030:15) かつおブシ斬り
-       | Deal 210% damage (6 hits, 35% each)
+     | (12030:15) かつおブシ斬り
+     | Deal 210% damage (6 hits, 35% each)
  type: REMAINING
  condition: when 1 enemies remain
  | group:
-   | group:
-   | condition: turn 1
-     | group:
-       | condition: when 1 enemies remain, hp <= 100
-       | (12023:17) 精神統一でござる…
-       | Increase damage to 200% for the next 1 turns
+ | condition: when 1 enemies remain, turn 1, hp <= 100
+   | (12023:17) 精神統一でござる…
+   | Increase damage to 200% for the next 1 turns
  | group:
  | condition: hp <= 49
    | group:
-   | condition: turn 1
-     | group:
-       | (12024:83) こうなったら　奥の手でござる！ + ぬははは！　勝利はもらった！
-       | Increase damage to 150% for the next 5 turns + Absorb combo <= 5 damage for 5 turns
+   | condition: turn 1, hp <= 100
+     | (12024:83) こうなったら　奥の手でござる！ + ぬははは！　勝利はもらった！
+     | Increase damage to 150% for the next 5 turns + Absorb combo <= 5 damage for 5 turns
    | group:
-   | condition: turn 2
-     | group:
-       | condition: when 1 enemies remain, hp <= 100
-       | (12023:17) 精神統一でござる…
-       | Increase damage to 200% for the next 1 turns
+   | condition: when 1 enemies remain, turn 2, hp <= 100
+     | (12023:17) 精神統一でござる…
+     | Increase damage to 200% for the next 1 turns

@@ -12,37 +12,29 @@ level: 1
 and none ever will.
  | Movetime -1s for 3 turns
  type: DEATH
- | condition: when defeated, hp <= 100
+ condition: when defeated, hp <= 100
  | (6957:95) You'll never beat Zarkon. + He's already defeated you.
  | Do nothing + Do nothing
  group:
  | group:
    | group:
    | condition: turns 1-3
-     | group:
-       | condition: 30% chance, hp <= 100
-       | (6953:102) Sabotage
-       | Spawn random 3 Bomb orbs, Deal 100% damage
-       | (6950:94) Cybernetic Arm
-       | Lock 4 random Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs, Deal 100% damage
+     | condition: 30% chance, hp <= 100
+     | (6953:102) Sabotage
+     | Spawn random 3 Bomb orbs, Deal 100% damage
+     | (6950:94) Cybernetic Arm
+     | Lock 4 random Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs, Deal 100% damage
    | group:
-   | condition: turn 4
-     | group:
-       | (6951:39) Luck is on our side.
-       | Movetime -1s for 3 turns
+   | condition: turn 4, hp <= 100
+     | (6951:39) Luck is on our side.
+     | Movetime -1s for 3 turns
    | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: 30% chance, hp <= 100
-       | (6953:102) Sabotage
-       | Spawn random 3 Bomb orbs, Deal 100% damage
-       | (6950:94) Cybernetic Arm
-       | Lock 4 random Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs, Deal 100% damage
+     | condition: 30% chance, hp <= 100
+     | (6953:102) Sabotage
+     | Spawn random 3 Bomb orbs, Deal 100% damage
+     | (6950:94) Cybernetic Arm
+     | Lock 4 random Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs, Deal 100% damage
  | group:
- | condition: hp <= 19
-   | group:
-   | condition: turn 1
-     | group:
-       | condition: when 1 enemies remain, hp <= 20
-       | (6952:17) Allegiance to Zarkon
-       | Increase damage to 200% for the next 999 turns
+ | condition: when 1 enemies remain, turn 1, hp <= 20
+   | (6952:17) Allegiance to Zarkon
+   | Increase damage to 200% for the next 999 turns

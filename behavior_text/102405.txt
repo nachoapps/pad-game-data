@@ -13,24 +13,17 @@ level: 1
  group:
  | group:
    | group:
-   | condition: turn 1
-     | group:
-       | condition: when required attributes on board, hp <= 100
-       | (11395:92) Hi♪ Want some sweets?
-       | Spawn random 4 Mortal Poison orbs
+   | condition: when required attributes on board, turn 1, hp <= 100
+     | (11395:92) Hi♪ Want some sweets?
+     | Spawn random 4 Mortal Poison orbs
    | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: 50% chance, hp <= 100
-       | (11396:15) Candle Nails
-       | Deal 110% damage (2 hits, 55% each)
-       | condition: when required attributes on board, hp <= 100
-       | (11398:92) Sweet Wink
-       | Spawn random 9 Poison orbs, Deal 100% damage
+     | condition: 50% chance, hp <= 100
+     | (11396:15) Candle Nails
+     | Deal 110% damage (2 hits, 55% each)
+     | condition: when required attributes on board, hp <= 100
+     | (11398:92) Sweet Wink
+     | Spawn random 9 Poison orbs, Deal 100% damage
  | group:
- | condition: hp <= 49
-   | group:
-   | condition: turn 2
-     | group:
-       | (11397:65) Pumpkin Charm
-       | Bind 4 random subs for 2~3 turns, Deal 100% damage
+ | condition: turn 2, hp <= 100
+   | (11397:65) Pumpkin Charm
+   | Bind 4 random subs for 2~3 turns, Deal 100% damage

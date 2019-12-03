@@ -11,7 +11,7 @@ level: 1
  | (1132:14) 1匹たりとも生かしてはおきませんよ…
  | Bind active skills for 3 turns
  type: DEATH
- | condition: when defeated, hp <= 100
+ condition: when defeated, hp <= 100
  | (1063:69) My true form!!!
  | Show message: Feast your eyes while you can!!
 On my final transformation!!|I'll show you a nightmare beyond the horrors of hell...
@@ -21,37 +21,28 @@ level: 5
  | (1132:14) 1匹たりとも生かしてはおきませんよ…
  | Bind active skills for 3 turns
  type: DEATH
- | condition: when defeated, hp <= 100
+ condition: when defeated, hp <= 100
  | (1063:69) My true form!!!
  | Show message: Feast your eyes while you can!!
 On my final transformation!!|I'll show you a nightmare beyond the horrors of hell...
  group:
  | group:
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | (1110:15) どぉれちょっと拝見…
-       | Deal 120% damage (4 hits, 30% each)
+   | (1110:15) どぉれちょっと拝見…
+   | Deal 120% damage (4 hits, 30% each)
  | group:
  | condition: hp <= 74
    | group:
    | condition: repeats every 2 turns
-     | group:
-       | condition: hp <= 75
-       | (1111:48) ひゃあ!!!!
-       | Change Heal to Jammer, Deal 50% damage
-       | (1110:15) どぉれちょっと拝見…
-       | Deal 120% damage (4 hits, 30% each)
+     | condition: hp <= 75
+     | (1111:48) ひゃあ!!!!
+     | Change Heal to Jammer, Deal 50% damage
+     | (1110:15) どぉれちょっと拝見…
+     | Deal 120% damage (4 hits, 30% each)
    | group:
-   | condition: repeats every 2 turns
-     | group:
-       | (1110:15) どぉれちょっと拝見…
-       | Deal 120% damage (4 hits, 30% each)
+   | condition: repeats every 2 turns, hp <= 100
+     | (1110:15) どぉれちょっと拝見…
+     | Deal 120% damage (4 hits, 30% each)
  | group:
- | condition: hp <= 29
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: hp <= 30
-       | (1112:15) ひゃひゃひゃひゃひゃ…!!!!
-       | Deal 180% damage (6 hits, 30% each)
+ | condition: hp <= 30
+   | (1112:15) ひゃひゃひゃひゃひゃ…!!!!
+   | Deal 180% damage (6 hits, 30% each)

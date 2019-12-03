@@ -15,23 +15,17 @@ level: 1
  | Jammer, Poison skyfall +10% for 4 turns
  group:
  | group:
-   | group:
-   | condition: turn 1
-     | group:
-       | (14911:110) 我は乱す光列の檻！
-       | Specific orbs change every 1.0s for 4 turns
-   | group:
-   | condition: turn 2
-     | group:
-       | (14912:67) 我は跳ぶ――天の銀嶺！
-       | Absorb combo <= 6 damage for 15 turns
-   | group:
-   | condition: turn 3
-     | group:
-       | (14913:50) 全力で撃ち込んでやる
-       | Player -99% HP
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | (14914:83) わ、我は放つ光の―― + 光の白刃！
-       | Do nothing + Change Random to Light, Deal 150% damage
+ | condition: turn 1, hp <= 100
+   | (14911:110) 我は乱す光列の檻！
+   | Specific orbs change every 1.0s for 4 turns
+ | group:
+ | condition: turn 2, hp <= 100
+   | (14912:67) 我は跳ぶ――天の銀嶺！
+   | Absorb combo <= 6 damage for 15 turns
+ | group:
+ | condition: turn 3, hp <= 100
+   | (14913:50) 全力で撃ち込んでやる
+   | Player -99% HP
+ | group:
+   | (14914:83) わ、我は放つ光の―― + 光の白刃！
+   | Do nothing + Change Random to Light, Deal 150% damage

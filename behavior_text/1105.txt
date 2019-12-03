@@ -13,41 +13,32 @@ level: 1
  group:
  | group:
    | group:
-   | condition: turn 1
-     | group:
-       | (7784:79) Moonlight Scythe
-       | Change 5th row to Light orbs, Deal 100% damage
+   | condition: turn 1, hp <= 100
+     | (7784:79) Moonlight Scythe
+     | Change 5th row to Light orbs, Deal 100% damage
    | group:
-   | condition: turn 2
-     | group:
-       | (7785:79) Moonlight Scythe
-       | Change 3rd row to Light orbs, Deal 100% damage
+   | condition: turn 2, hp <= 100
+     | (7785:79) Moonlight Scythe
+     | Change 3rd row to Light orbs, Deal 100% damage
    | group:
-   | condition: turn 3
-     | group:
-       | (7786:79) Moonlight Scythe
-       | Change 1st row to Light orbs, Deal 100% damage
+   | condition: turn 3, hp <= 100
+     | (7786:79) Moonlight Scythe
+     | Change 1st row to Light orbs, Deal 100% damage
    | group:
-   | condition: turn 4
-     | group:
-       | (7787:83) Come on! I'm falling asleep here! + Yeah, I'm just gonna go...
-       | Mortal Poison skyfall +10% for 10 turns + Reduce self HP to 0
+   | condition: turn 4, hp <= 100
+     | (7787:83) Come on! I'm falling asleep here! + Yeah, I'm just gonna go...
+     | Mortal Poison skyfall +10% for 10 turns + Reduce self HP to 0
    | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: 33% chance, hp <= 100
-       | (7784:79) Moonlight Scythe
-       | Change 5th row to Light orbs, Deal 100% damage
-       | condition: 34% chance, hp <= 100
-       | (7785:79) Moonlight Scythe
-       | Change 3rd row to Light orbs, Deal 100% damage
-       | condition: 33% chance, hp <= 100
-       | (7786:79) Moonlight Scythe
-       | Change 1st row to Light orbs, Deal 100% damage
+     | condition: 33% chance, hp <= 100
+     | (7784:79) Moonlight Scythe
+     | Change 5th row to Light orbs, Deal 100% damage
+     | condition: 34% chance, hp <= 100
+     | (7785:79) Moonlight Scythe
+     | Change 3rd row to Light orbs, Deal 100% damage
+     | condition: 33% chance, hp <= 100
+     | (7786:79) Moonlight Scythe
+     | Change 1st row to Light orbs, Deal 100% damage
  | group:
- | condition: hp <= 99
-   | group:
-   | condition: turn 4
-     | group:
-       | (7790:83) Hahaha! Now you're talking! + Let the games begin!
-       | Poison skyfall +10% for 10 turns + Increase damage to 300% for the next 99 turns
+ | condition: turn 4, hp <= 100
+   | (7790:83) Hahaha! Now you're talking! + Let the games begin!
+   | Poison skyfall +10% for 10 turns + Increase damage to 300% for the next 99 turns

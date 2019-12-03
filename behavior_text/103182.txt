@@ -16,38 +16,29 @@ level: 1
  group:
  | group:
    | group:
-   | condition: turn 1
-     | group:
-       | (13000:83) Shuffling + Hidden Ball
-       | Absorb combo <= 6 damage for 999 turns + Spawn random 1 Bomb orbs
+   | condition: turn 1, hp <= 100
+     | (13000:83) Shuffling + Hidden Ball
+     | Absorb combo <= 6 damage for 999 turns + Spawn random 1 Bomb orbs
    | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: 33% chance, hp <= 100
-       | (13003:77) Red Flash
-       | Change 1st column to Fire orbs, Deal 100% damage
-       | condition: 33% chance, hp <= 100
-       | (13004:77) Blue Flash
-       | Change 6th column to Water orbs, Deal 100% damage
-       | condition: 34% chance, hp <= 100
-       | (13005:15) Swiftness Sword Technique
-       | Deal 120% damage (3 hits, 40% each)
+     | condition: 33% chance, hp <= 100
+     | (13003:77) Red Flash
+     | Change 1st column to Fire orbs, Deal 100% damage
+     | condition: 33% chance, hp <= 100
+     | (13004:77) Blue Flash
+     | Change 6th column to Water orbs, Deal 100% damage
+     | condition: 34% chance, hp <= 100
+     | (13005:15) Swiftness Sword Technique
+     | Deal 120% damage (3 hits, 40% each)
  | group:
- | condition: hp <= 49
-   | group:
-   | condition: turn 2
-     | group:
-       | (13006:83) Swordsman's Resolution + Hidden Ball
-       | Voids status ailments for 999 turns + Spawn random 1 Bomb orbs
+ | condition: turn 2, hp <= 100
+   | (13006:83) Swordsman's Resolution + Hidden Ball
+   | Voids status ailments for 999 turns + Spawn random 1 Bomb orbs
  | group:
  | condition: hp <= 14
    | group:
-   | condition: turn 1
-     | group:
-       | (13009:83) Restricted Life + Imminent Choice
-       | Change player HP to 1000 for 1 turns + Movetime -3s for 5 turns
+   | condition: turn 1, hp <= 100
+     | (13009:83) Restricted Life + Imminent Choice
+     | Change player HP to 1000 for 1 turns + Movetime -3s for 5 turns
    | group:
-   | condition: repeats every 1 turns
-     | group:
-       | (13008:15) Double Blade Flash
-       | Deal 500% damage (2 hits, 250% each)
+     | (13008:15) Double Blade Flash
+     | Deal 500% damage (2 hits, 250% each)

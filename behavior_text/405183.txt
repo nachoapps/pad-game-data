@@ -18,30 +18,20 @@ level: 1
  group:
  | group:
    | group:
-   | condition: turn 1
-     | group:
-       | (12964:83) Poison World + Shell's Gift
-       | Poison skyfall +15% for 30 turns + Reduce damage from all sources by 75% for 1 turns, Deal 30% damage
+   | condition: turn 1, hp <= 100
+     | (12964:83) Poison World + Shell's Gift
+     | Poison skyfall +15% for 30 turns + Reduce damage from all sources by 75% for 1 turns, Deal 30% damage
    | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: 50% chance, hp <= 100
-       | (12967:97) Assault from the Darkness
-       | Blind random 3 orbs for 3 turns, Deal 130% damage
-       | condition: 50% chance, hp <= 100
-       | (12968:15) Deadly Combo
-       | Deal 135% damage (3 hits, 45% each)
+     | condition: 50% chance, hp <= 100
+     | (12967:97) Assault from the Darkness
+     | Blind random 3 orbs for 3 turns, Deal 130% damage
+     | condition: 50% chance, hp <= 100
+     | (12968:15) Deadly Combo
+     | Deal 135% damage (3 hits, 45% each)
  | group:
- | condition: hp <= 49
-   | group:
-   | condition: turn 2
-     | group:
-       | (12969:83) Devil Prince's Selfishness + Sea of Poison
-       | Bind 6 random cards for 5 turns + Change all orbs to Mortal Poison, Deal 150% damage
+ | condition: turn 2, hp <= 100
+   | (12969:83) Devil Prince's Selfishness + Sea of Poison
+   | Bind 6 random cards for 5 turns + Change all orbs to Mortal Poison, Deal 150% damage
  | group:
- | condition: hp <= 9
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | (12972:83) Annihilating Life + Sea of Hell
-       | Movetime 25% for 1 turns + Change all orbs to Mortal Poison, Deal 800% damage
+   | (12972:83) Annihilating Life + Sea of Hell
+   | Movetime 25% for 1 turns + Change all orbs to Mortal Poison, Deal 800% damage

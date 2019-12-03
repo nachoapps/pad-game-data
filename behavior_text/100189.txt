@@ -12,24 +12,18 @@ level: 1
  | Absorb combo <= 6 damage for 99 turns + Deal 100% damage
  group:
  | group:
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: 10% chance, hp <= 100
-       | (4770:13) Mischief by God
-       | Change Random 2 to Jammer
-       | condition: 50% chance, hp <= 100
-       | (4767:15) Double Slap
-       | Deal 120% damage (3 hits, 40% each)
+   | condition: 10% chance, hp <= 100
+   | (4770:13) Mischief by God
+   | Change Random 2 to Jammer
+   | condition: 50% chance, hp <= 100
+   | (4767:15) Double Slap
+   | Deal 120% damage (3 hits, 40% each)
  | group:
  | condition: hp <= 24
    | group:
-   | condition: turn 1
-     | group:
-       | (4768:88) Gathering Energy
-       | Bind awoken skills for 1 turns
+   | condition: turn 1, hp <= 100
+     | (4768:88) Gathering Energy
+     | Bind awoken skills for 1 turns
    | group:
-   | condition: repeats every 1 turns
-     | group:
-       | (4769:15) Graviton Bomb
-       | Deal 600% damage
+     | (4769:15) Graviton Bomb
+     | Deal 600% damage

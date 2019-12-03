@@ -22,46 +22,36 @@ level: 4
  | group:
    | group:
    | condition: repeats every 3 turns
-     | group:
-       | condition: 33% chance, hp <= 100
-       | (9835:108) It became a splendid color!
-       | Change Fire to Dark, Poison, Deal 105% damage
-       | condition: 33% chance, hp <= 100
-       | (9836:102) I need motivation!
-       | Spawn random 8 Bomb orbs, Deal 60% damage
-       | condition: 40% chance, hp <= 100
-       | (9837:15) Something like this?
-       | Deal 120% damage (3 hits, 40% each)
+     | condition: 33% chance, hp <= 100
+     | (9835:108) It became a splendid color!
+     | Change Fire to Dark, Poison, Deal 105% damage
+     | condition: 33% chance, hp <= 100
+     | (9836:102) I need motivation!
+     | Spawn random 8 Bomb orbs, Deal 60% damage
+     | condition: 40% chance, hp <= 100
+     | (9837:15) Something like this?
+     | Deal 120% damage (3 hits, 40% each)
    | group:
    | condition: repeats every 3 turns
-     | group:
-       | condition: 50% chance, hp <= 100
-       | (9840:83) Hey, it's daaark! + Understand how I feel!
-       | Blind orbs in specific positions for 3 turns + Spawn random 6 Poison orbs
-       | (9841:83) Hey, it's daaark! + Understand how I feel!
-       | Blind orbs in specific positions for 3 turns + Spawn random 6 Poison orbs
+     | condition: 50% chance, hp <= 100
+     | (9840:83) Hey, it's daaark! + Understand how I feel!
+     | Blind orbs in specific positions for 3 turns + Spawn random 6 Poison orbs
+     | (9841:83) Hey, it's daaark! + Understand how I feel!
+     | Blind orbs in specific positions for 3 turns + Spawn random 6 Poison orbs
  | group:
- | condition: hp <= 49
-   | group:
-   | condition: turn 1
-     | group:
-       | (9844:83) I'll give it to you like thiiis + Have this too ♪
-       | Change all orbs to Fire, Dark, Poison + Spawn Bomb orbs in the specified positions
+ | condition: turn 1, hp <= 100
+   | (9844:83) I'll give it to you like thiiis + Have this too ♪
+   | Change all orbs to Fire, Dark, Poison + Spawn Bomb orbs in the specified positions
  | group:
  | condition: hp <= 19
    | group:
-   | condition: repeats every 2 turns
-     | group:
-       | (9845:53) I won't give up!
-       | Absorb Fire, Dark damage for 1 turns
+   | condition: repeats every 2 turns, hp <= 100
+     | (9845:53) I won't give up!
+     | Absorb Fire, Dark damage for 1 turns
    | group:
-   | condition: repeats every 2 turns
-     | group:
-       | (9846:50) OK, this is the end!
-       | Player -300% HP
+   | condition: repeats every 2 turns, hp <= 100
+     | (9846:50) OK, this is the end!
+     | Player -300% HP
  | group:
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | (9849:83) It huuurts! + I won't forgive you!
-       | Enemy recover 50% hp + Deal 400% damage (4 hits, 100% each)
+   | (9849:83) It huuurts! + I won't forgive you!
+   | Enemy recover 50% hp + Deal 400% damage (4 hits, 100% each)

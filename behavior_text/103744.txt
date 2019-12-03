@@ -17,23 +17,18 @@ level: 1
  | Delay active skills by 3 turns
  group:
  | group:
-   | group:
-   | condition: turn 1
-     | group:
-       | (7398:76) Over here, Bolthas!
-       | Change 3rd, 4th column to Light, Jammer orbs
-   | group:
-   | condition: turn 2
-     | group:
-       | (7399:50) Well, Bolthas, they're all yours!
-       | Player -90% HP
-   | group:
-   | condition: repeats every 2 turns
-     | group:
-       | (7401:63) Bolthas is shaking
-       | Bind 1 random subs for 1 turns, Deal 170% damage
-   | group:
-   | condition: repeats every 2 turns
-     | group:
-       | (7400:86) Twinkle ☆ Bolt
-       | Enemy recover 50% hp
+ | condition: turn 1, hp <= 100
+   | (7398:76) Over here, Bolthas!
+   | Change 3rd, 4th column to Light, Jammer orbs
+ | group:
+ | condition: turn 2, hp <= 100
+   | (7399:50) Well, Bolthas, they're all yours!
+   | Player -90% HP
+ | group:
+ | condition: repeats every 2 turns, hp <= 100
+   | (7401:63) Bolthas is shaking
+   | Bind 1 random subs for 1 turns, Deal 170% damage
+ | group:
+ | condition: repeats every 2 turns, hp <= 100
+   | (7400:86) Twinkle ☆ Bolt
+   | Enemy recover 50% hp

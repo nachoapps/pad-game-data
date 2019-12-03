@@ -12,24 +12,18 @@ level: 4
  | Reduce damage from all sources by 50% for 5 turns + Bind 2 random subs for 2 turns
  group:
  | group:
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: 40% chance, hp <= 100
-       | (14865:15) HA HA HA!
-       | Deal 110% damage
-       | condition: 40% chance, hp <= 100
-       | (14866:48) By the power and force of lightning!
-       | Change Random to Fire, Deal 90% damage
+   | condition: 40% chance, hp <= 100
+   | (14865:15) HA HA HA!
+   | Deal 110% damage
+   | condition: 40% chance, hp <= 100
+   | (14866:48) By the power and force of lightning!
+   | Change Random to Fire, Deal 90% damage
  | group:
  | condition: hp <= 49
    | group:
-   | condition: turn 1
-     | group:
-       | (14867:100) Out of my way!
-       | Seal 1st row for 2 turns
+   | condition: turn 1, hp <= 100
+     | (14867:100) Out of my way!
+     | Seal 1st row for 2 turns
    | group:
-   | condition: repeats every 1 turns
-     | group:
-       | (14868:15) GET THOSE POWER GEEKS!
-       | Deal 150% damage
+     | (14868:15) GET THOSE POWER GEEKS!
+     | Deal 150% damage

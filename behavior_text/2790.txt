@@ -12,7 +12,7 @@ level: 1
 shall know redemption.
  | Do nothing + Do nothing
  type: DEATH
- | condition: when defeated, hp <= 100
+ condition: when defeated, hp <= 100
  | (2963:69) Orphan Transformation
  | Show message: Hahahaha!| Don't you want eternity?
 
@@ -22,72 +22,58 @@ level: 3
 shall know redemption.
  | Voids status ailments for 999 turns + Player recover 100% hp
  type: DEATH
- | condition: when defeated, hp <= 100
+ condition: when defeated, hp <= 100
  | (2963:69) Orphan Transformation
  | Show message: Hahahaha!| Don't you want eternity?
  group:
  | group:
    | group:
-   | condition: turn 1
-     | group:
-       | (3945:83) Consummate Light + Merciless Judgment
-       | Absorb combo <= 3 damage for 3 turns + Player -99% HP
+   | condition: turn 1, hp <= 100
+     | (3945:83) Consummate Light + Merciless Judgment
+     | Absorb combo <= 3 damage for 3 turns + Player -99% HP
    | group:
-   | condition: turn 2
-     | group:
-       | (3937:15) Hammer
-       | Deal 80%~120% damage (2~3 hits, 40% each)
+   | condition: turn 2, hp <= 100
+     | (3937:15) Hammer
+     | Deal 80%~120% damage (2~3 hits, 40% each)
    | group:
-   | condition: turn 3
-     | group:
-       | (3938:15) Requiem
-       | Deal 200% damage
+   | condition: turn 3, hp <= 100
+     | (3938:15) Requiem
+     | Deal 200% damage
    | group:
-   | condition: turn 4
-     | group:
-       | (3939:15) Progenitorial Wrath
-       | Deal 40%~100% damage (2~5 hits, 20% each)
+   | condition: turn 4, hp <= 100
+     | (3939:15) Progenitorial Wrath
+     | Deal 40%~100% damage (2~5 hits, 20% each)
    | group:
-   | condition: turn 5
-     | group:
-       | (3946:83) Consummate Darkness + Merciless Judgment
-       | Change own attribute to Dark + Player -99% HP
+   | condition: turn 5, hp <= 100
+     | (3946:83) Consummate Darkness + Merciless Judgment
+     | Change own attribute to Dark + Player -99% HP
    | group:
-   | condition: turn 6
-     | group:
-       | (3942:64) Chains of Torment
-       | Change Random 5 to Poison, Deal 20% damage
+   | condition: turn 6, hp <= 100
+     | (3942:64) Chains of Torment
+     | Change Random 5 to Poison, Deal 20% damage
    | group:
-   | condition: turn 7
-     | group:
-       | (3941:15) Black Ruin
-       | Deal 120% damage
+   | condition: turn 7, hp <= 100
+     | (3941:15) Black Ruin
+     | Deal 120% damage
    | group:
-   | condition: turn 8
-     | group:
-       | (3943:86) Vile Exploitation
-       | Enemy recover 10% hp, Deal 130% damage
+   | condition: turn 8, hp <= 100
+     | (3943:86) Vile Exploitation
+     | Enemy recover 10% hp, Deal 130% damage
    | group:
-   | condition: turn 9
-     | group:
-       | (3947:83) Merciless Judgment + Opposite Extremes
-       | Player -99% HP + Change own attribute to random one of Light, Dark
+   | condition: turn 9, hp <= 100
+     | (3947:83) Merciless Judgment + Opposite Extremes
+     | Player -99% HP + Change own attribute to random one of Light, Dark
    | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: 65% chance, hp <= 100
-       | (3948:86) Vile Exploitation
-       | Enemy recover 10% hp, Deal 200% damage
-       | condition: 20% chance, when 1 enemies remain, hp <= 100
-       | (3949:17) Dies Irae
-       | Increase damage to 200% for the next 999 turns, Deal 260% damage
-       | condition: 15% chance, hp <= 100
-       | (3950:15) Progenitorial Wrath
-       | Deal 200%~500% damage (2~5 hits, 100% each)
+     | condition: 65% chance, hp <= 100
+     | (3948:86) Vile Exploitation
+     | Enemy recover 10% hp, Deal 200% damage
+     | condition: 20% chance, when 1 enemies remain, hp <= 100
+     | (3949:17) Dies Irae
+     | Increase damage to 200% for the next 999 turns, Deal 260% damage
+     | condition: 15% chance, hp <= 100
+     | (3950:15) Progenitorial Wrath
+     | Deal 200%~500% damage (2~5 hits, 100% each)
  | group:
- | condition: hp <= 39
-   | group:
-   | condition: turn 1
-     | group:
-       | (3947:83) Merciless Judgment + Opposite Extremes
-       | Player -99% HP + Change own attribute to random one of Light, Dark
+ | condition: turn 1, hp <= 100
+   | (3947:83) Merciless Judgment + Opposite Extremes
+   | Player -99% HP + Change own attribute to random one of Light, Dark

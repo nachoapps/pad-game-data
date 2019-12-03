@@ -12,24 +12,17 @@ level: 1
  | Do nothing + Deal 100% damage
  group:
  | group:
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | (13928:15) Huh?
-       | Deal 810% damage
+   | (13928:15) Huh?
+   | Deal 810% damage
  | group:
  | condition: hp <= 49
    | group:
-   | condition: turn 1
-     | group:
-       | condition: hp <= 50
-       | (13929:86) I can still do it!
-       | Enemy recover 20% hp
+   | condition: turn 1, hp <= 50
+     | (13929:86) I can still do it!
+     | Enemy recover 20% hp
    | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: 50% chance, hp <= 50
-       | (13930:50) Hyaaa!
-       | Player -20% HP
-       | (13928:15) Huh?
-       | Deal 810% damage
+     | condition: 50% chance, hp <= 50
+     | (13930:50) Hyaaa!
+     | Player -20% HP
+     | (13928:15) Huh?
+     | Deal 810% damage

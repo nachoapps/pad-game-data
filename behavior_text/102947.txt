@@ -12,24 +12,13 @@ level: 1
  | Voids status ailments for 999 turns + Void damage >= 10000000 for 999 turns + Mortal Poison skyfall +5% for 5 turns
  group:
  | group:
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | (7504:68) Death Miasma
-       | Mortal Poison skyfall +5% for 5 turns
+   | (7504:68) Death Miasma
+   | Mortal Poison skyfall +5% for 5 turns
  | group:
- | condition: hp <= 49
-   | group:
-   | condition: turn 1
-     | group:
-       | condition: when 1 enemies remain, hp <= 50
-       | (7500:17) Corpse Dragon's Wail
-       | Increase damage to 150% for the next 999 turns
+ | condition: when 1 enemies remain, turn 1, hp <= 50
+   | (7500:17) Corpse Dragon's Wail
+   | Increase damage to 150% for the next 999 turns
  | group:
- | condition: hp <= 9
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: hp <= 10
-       | (7514:48) Deadly Poison Breath
-       | Change Random to Mortal Poison, Deal 1200% damage
+ | condition: hp <= 10
+   | (7514:48) Deadly Poison Breath
+   | Change Random to Mortal Poison, Deal 1200% damage

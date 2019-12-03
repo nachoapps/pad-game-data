@@ -12,35 +12,25 @@ level: 1
  | Player -99% HP + Movetime -4s for 10 turns
  group:
  | group:
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: 33% chance, hp <= 100
-       | (12865:1) Vigorous Beating
-       | Bind 1 random cards for 3 turns, Deal 110% damage
-       | condition: 33% chance, hp <= 100
-       | (12866:15) Pulverization
-       | Deal 120% damage
-       | condition: 34% chance, hp <= 100
-       | (12867:89) Troll Dance
-       | Delay active skills by 1~2 turns, Deal 100% damage
+   | condition: 33% chance, hp <= 100
+   | (12865:1) Vigorous Beating
+   | Bind 1 random cards for 3 turns, Deal 110% damage
+   | condition: 33% chance, hp <= 100
+   | (12866:15) Pulverization
+   | Deal 120% damage
+   | condition: 34% chance, hp <= 100
+   | (12867:89) Troll Dance
+   | Delay active skills by 1~2 turns, Deal 100% damage
  | group:
- | condition: hp <= 49
-   | group:
-   | condition: turn 1
-     | group:
-       | (12868:83) Leaves Turning to Ashes + Wooden Weir
-       | Jammer skyfall +20% for 10 turns + Locked random skyfall +15% for 10 turns
+ | condition: turn 1, hp <= 100
+   | (12868:83) Leaves Turning to Ashes + Wooden Weir
+   | Jammer skyfall +20% for 10 turns + Locked random skyfall +15% for 10 turns
  | group:
  | condition: hp <= 19
    | group:
-   | condition: turn 1
-     | group:
-       | condition: when 1 enemies remain, hp <= 100
-       | (12871:17) Ignis Enhancement
-       | Increase damage to 500% for the next 999 turns
+   | condition: when 1 enemies remain, turn 1, hp <= 100
+     | (12871:17) Ignis Enhancement
+     | Increase damage to 500% for the next 999 turns
    | group:
-   | condition: repeats every 1 turns
-     | group:
-       | (12872:15) Green Flame Crush
-       | Deal 200% damage (4 hits, 50% each)
+     | (12872:15) Green Flame Crush
+     | Deal 200% damage (4 hits, 50% each)

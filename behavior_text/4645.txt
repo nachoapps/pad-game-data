@@ -8,7 +8,7 @@ approved: False
 
 level: 1
  type: DEATH
- | condition: when defeated, hp <= 100
+ condition: when defeated, hp <= 100
  | (10408:69) Spe Dun Dragon Dark Transformation
  | Show message: Doltos's appearance is changing|Help has been summoned
 
@@ -17,32 +17,26 @@ level: 4
  | (10401:62) Call of Darkness
  | Blind all orbs on the board, Deal 100% damage
  type: DEATH
- | condition: when defeated, hp <= 100
+ condition: when defeated, hp <= 100
  | (10408:69) Spe Dun Dragon Dark Transformation
  | Show message: Doltos's appearance is changing|Help has been summoned
  group:
  | group:
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: 33% chance, when required attributes on board, hp <= 100
-       | (10402:92) The Chosen Darkness
-       | Spawn random 3 Dark orbs, Deal 100% damage
-       | condition: 33% chance, hp <= 100
-       | (10403:48) Dark Pillar
-       | Change Random to Dark, Deal 105% damage
-       | condition: 34% chance, hp <= 100
-       | (10404:15) Spirit Darkness
-       | Deal 120% damage (2 hits, 60% each)
+   | condition: 33% chance, when required attributes on board, hp <= 100
+   | (10402:92) The Chosen Darkness
+   | Spawn random 3 Dark orbs, Deal 100% damage
+   | condition: 33% chance, hp <= 100
+   | (10403:48) Dark Pillar
+   | Change Random to Dark, Deal 105% damage
+   | condition: 34% chance, hp <= 100
+   | (10404:15) Spirit Darkness
+   | Deal 120% damage (2 hits, 60% each)
  | group:
  | condition: hp <= 19
    | group:
-   | condition: turn 1
-     | group:
-       | (10406:83) Swallowing Darkness + Dark Pillar
-       | Blind random 8 orbs for 1 turns + Change Random to Dark, Deal 105% damage
+   | condition: turn 1, hp <= 100
+     | (10406:83) Swallowing Darkness + Dark Pillar
+     | Blind random 8 orbs for 1 turns + Change Random to Dark, Deal 105% damage
    | group:
-   | condition: repeats every 1 turns
-     | group:
-       | (10407:15) Shadow Wings
-       | Deal 150% damage (2 hits, 75% each)
+     | (10407:15) Shadow Wings
+     | Deal 150% damage (2 hits, 75% each)

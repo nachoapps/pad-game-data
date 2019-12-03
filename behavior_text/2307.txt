@@ -8,18 +8,15 @@ approved: False
 
 level: 4
  type: PREEMPT
- | condition: when required attributes on board, hp <= 100
+ condition: when required attributes on board, hp <= 100
  | (3436:92) Out of the way!
  | Spawn random 10 Jammer orbs, Deal 50% damage
  group:
  | group:
-   | group:
-   | condition: turn 1
-     | group:
-       | (3437:68) Yusui Dish
-       | Water skyfall +15% for 99 turns
-   | group:
-   | condition: repeats every 2 turns
-     | group:
-       | (3438:77) Salmon Sword
-       | Change 4th column to Water orbs, Deal 150% damage
+ | condition: turn 1, hp <= 100
+   | (3437:68) Yusui Dish
+   | Water skyfall +15% for 99 turns
+ | group:
+ | condition: repeats every 2 turns, hp <= 100
+   | (3438:77) Salmon Sword
+   | Change 4th column to Water orbs, Deal 150% damage

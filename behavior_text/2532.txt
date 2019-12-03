@@ -12,25 +12,13 @@ level: 5
  | Locked random skyfall +15% for 99 turns
  group:
  | group:
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | (3746:62) Flash
-       | Blind all orbs on the board, Deal 18% damage
+   | (3746:62) Flash
+   | Blind all orbs on the board, Deal 18% damage
  | group:
- | condition: hp <= 98
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: hp <= 99
-       | (3745:15) Water Heaven Ray
-       | Deal 65% damage
+ | condition: hp <= 99
+   | (3745:15) Water Heaven Ray
+   | Deal 65% damage
  type: REMAINING
- condition: when 1 enemies remain
- | group:
-   | group:
-   | condition: turn 1
-     | group:
-       | condition: when 1 enemies remain, hp <= 100
-       | (3592:17) Gear Charge
-       | Increase damage to 200% for the next 999 turns
+ condition: when 1 enemies remain, turn 1, hp <= 100
+ | (3592:17) Gear Charge
+ | Increase damage to 200% for the next 999 turns

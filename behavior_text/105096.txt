@@ -14,47 +14,36 @@ level: 4
  | group:
    | group:
    | condition: repeats every 4 turns
-     | group:
-       | condition: 33% chance, hp <= 100
-       | (12403:79) Tiger Shot
-       | Change 2nd row to Fire orbs, Deal 95% damage
-       | condition: 33% chance, hp <= 100
-       | (12404:79) Grand Tiger Shot
-       | Change 4th row to Fire orbs, Deal 95% damage
-       | condition: 34% chance, hp <= 100
-       | (12405:83) Tiger Knee Crush + Tiger Uppercut
-       | Player -30% HP + Deal 70% damage
+     | condition: 33% chance, hp <= 100
+     | (12403:79) Tiger Shot
+     | Change 2nd row to Fire orbs, Deal 95% damage
+     | condition: 33% chance, hp <= 100
+     | (12404:79) Grand Tiger Shot
+     | Change 4th row to Fire orbs, Deal 95% damage
+     | condition: 34% chance, hp <= 100
+     | (12405:83) Tiger Knee Crush + Tiger Uppercut
+     | Player -30% HP + Deal 70% damage
    | group:
-   | condition: repeats every 4 turns
-     | group:
-       | condition: when 1 enemies remain, hp <= 100
-       | (12408:17) Angry Charge
-       | Increase damage to 200% for the next 1 turns
+   | condition: repeats every 4 turns, when 1 enemies remain, hp <= 100
+     | (12408:17) Angry Charge
+     | Increase damage to 200% for the next 1 turns
    | group:
-   | condition: repeats every 4 turns
-     | group:
-       | (12407:15) Tiger Uppercut
-       | Deal 70% damage
+   | condition: repeats every 4 turns, hp <= 100
+     | (12407:15) Tiger Uppercut
+     | Deal 70% damage
  | group:
  | condition: hp <= 49
    | group:
-   | condition: turn 1
-     | group:
-       | (12667:83) Tiger Assault + Prepare!
-       | Absorb combo <= 5 damage for 10 turns + Do nothing
+   | condition: turn 1, hp <= 100
+     | (12667:83) Tiger Assault + Prepare!
+     | Absorb combo <= 5 damage for 10 turns + Do nothing
    | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: 50% chance, hp <= 100
-       | (12410:89) Tiger Spike
-       | Delay active skills by 2 turns, Deal 120% damage
-       | condition: 50% chance, hp <= 100
-       | (12411:15) Tiger Rush
-       | Deal 140% damage (2 hits, 70% each)
+     | condition: 50% chance, hp <= 100
+     | (12410:89) Tiger Spike
+     | Delay active skills by 2 turns, Deal 120% damage
+     | condition: 50% chance, hp <= 100
+     | (12411:15) Tiger Rush
+     | Deal 140% damage (2 hits, 70% each)
  | group:
- | condition: hp <= 14
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | (12412:15) Tiger Rampage
-       | Deal 210% damage (6 hits, 35% each)
+   | (12412:15) Tiger Rampage
+   | Deal 210% damage (6 hits, 35% each)

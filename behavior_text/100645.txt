@@ -12,47 +12,36 @@ level: 1
  | Deal 180% damage + Absorb damage >= 6000000 damage for 5 turns
  group:
  | group:
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: 50% chance, hp <= 100
-       | (9498:60) Take this!
-       | Change Random 7 to Poison
+ | condition: 50% chance, hp <= 100
+   | (9498:60) Take this!
+   | Change Random 7 to Poison
  | group:
  | condition: hp <= 74
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: 50% chance, hp <= 75
-       | (9496:15) Deadly Drive!
-       | Deal 150% damage (3 hits, 50% each)
-       | condition: 50% chance, hp <= 100
-       | (9498:60) Take this!
-       | Change Random 7 to Poison
+   | condition: 50% chance, hp <= 75
+   | (9496:15) Deadly Drive!
+   | Deal 150% damage (3 hits, 50% each)
+   | condition: 50% chance, hp <= 100
+   | (9498:60) Take this!
+   | Change Random 7 to Poison
  | group:
  | condition: hp <= 39
    | group:
    | condition: turn 1
-     | group:
-       | condition: hp <= 40
-       | (9495:48) Not going easy anymore!
-       | Change Poison to Mortal Poison, Deal 100% damage
-       | condition: when 1 enemies remain, hp <= 40
-       | (9494:17) Not going easy anymore!
-       | Increase damage to 150% for the next 99 turns
+     | condition: hp <= 40
+     | (9495:48) Not going easy anymore!
+     | Change Poison to Mortal Poison, Deal 100% damage
+     | condition: when 1 enemies remain, hp <= 40
+     | (9494:17) Not going easy anymore!
+     | Increase damage to 150% for the next 99 turns
    | group:
-   | condition: repeats every 4 turns
-     | group:
-       | (9497:84) Sink into a sea of poison!!
-       | Change all orbs to Mortal Poison
+   | condition: repeats every 4 turns, hp <= 100
+     | (9497:84) Sink into a sea of poison!!
+     | Change all orbs to Mortal Poison
    | group:
-   | condition: repeats every 4 turns
-     | group:
-       | condition: hp <= 75
-       | (9496:15) Deadly Drive!
-       | Deal 150% damage (3 hits, 50% each)
+   | condition: repeats every 4 turns, hp <= 75
+     | (9496:15) Deadly Drive!
+     | Deal 150% damage (3 hits, 50% each)
    | group:
-   | condition: repeats every 4 turns
-     | group:
-       | (9497:84) Sink into a sea of poison!!
-       | Change all orbs to Mortal Poison
+   | condition: repeats every 4 turns, hp <= 100
+     | (9497:84) Sink into a sea of poison!!
+     | Change all orbs to Mortal Poison

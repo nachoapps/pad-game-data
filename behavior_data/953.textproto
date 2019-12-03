@@ -7,27 +7,12 @@
         group {
           group_type: STANDARD
           condition {
-            hp_threshold: 74
+            hp_threshold: 75
+            use_chance: 50
           }
           children {
-            group {
-              condition {
-                repeats_every: 1
-              }
-              children {
-                group {
-                  group_type: STANDARD
-                  children {
-                    behavior {
-                      condition {
-                        hp_threshold: 75
-                        use_chance: 50
-                      }
-                      enemy_skill_id: 731
-                    }
-                  }
-                }
-              }
+            behavior {
+              enemy_skill_id: 731
             }
           }
         }
@@ -39,33 +24,21 @@
             hp_threshold: 29
           }
           children {
-            group {
+            behavior {
               condition {
-                repeats_every: 1
+                hp_threshold: 30
+                use_chance: 70
               }
-              children {
-                group {
-                  group_type: STANDARD
-                  children {
-                    behavior {
-                      condition {
-                        hp_threshold: 30
-                        use_chance: 70
-                      }
-                      enemy_skill_id: 727
-                    }
-                  }
-                  children {
-                    behavior {
-                      condition {
-                        hp_threshold: 75
-                        use_chance: 50
-                      }
-                      enemy_skill_id: 731
-                    }
-                  }
-                }
+              enemy_skill_id: 727
+            }
+          }
+          children {
+            behavior {
+              condition {
+                hp_threshold: 75
+                use_chance: 50
               }
+              enemy_skill_id: 731
             }
           }
         }

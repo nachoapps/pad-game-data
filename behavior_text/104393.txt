@@ -9,52 +9,41 @@ approved: False
 level: 4
  group:
  | group:
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | (9953:94) Bufu
-       | Lock 10 random Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs, Deal 110% damage
+   | (9953:94) Bufu
+   | Lock 10 random Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs, Deal 110% damage
  | group:
  | condition: hp <= 49
    | group:
-   | condition: turn 1
-     | group:
-       | (9953:94) Bufu
-       | Lock 10 random Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs, Deal 110% damage
+   | condition: turn 1, hp <= 100
+     | (9953:94) Bufu
+     | Lock 10 random Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs, Deal 110% damage
    | group:
-   | condition: turn 2
-     | group:
-       | (9954:48) Hee-ho!
-       | Change Random to Water, Deal 115% damage
+   | condition: turn 2, hp <= 100
+     | (9954:48) Hee-ho!
+     | Change Random to Water, Deal 115% damage
    | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: 30% chance, hp <= 100
-       | (9957:94) Mabufu
-       | Lock all Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs, Deal 130% damage
-       | condition: 30% chance, hp <= 100
-       | (9954:48) Hee-ho!
-       | Change Random to Water, Deal 115% damage
-       | condition: 40% chance, hp <= 100
-       | (9953:94) Bufu
-       | Lock 10 random Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs, Deal 110% damage
+     | condition: 30% chance, hp <= 100
+     | (9957:94) Mabufu
+     | Lock all Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs, Deal 130% damage
+     | condition: 30% chance, hp <= 100
+     | (9954:48) Hee-ho!
+     | Change Random to Water, Deal 115% damage
+     | condition: 40% chance, hp <= 100
+     | (9953:94) Bufu
+     | Lock 10 random Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs, Deal 110% damage
  type: REMAINING
- condition: when 1 enemies remain
+ condition: when 1 enemies remain, hp <= 100
  | group:
-   | group:
-   | condition: turn 1
-     | group:
-       | (9956:83) Hee-ho! + Rakunda
-       | Change Random to Water, Deal 115% damage + Rcv 50% for 3 turns
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: 30% chance, hp <= 100
-       | (9957:94) Mabufu
-       | Lock all Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs, Deal 130% damage
-       | condition: 30% chance, hp <= 100
-       | (9954:48) Hee-ho!
-       | Change Random to Water, Deal 115% damage
-       | condition: 40% chance, hp <= 100
-       | (9953:94) Bufu
-       | Lock 10 random Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs, Deal 110% damage
+ | condition: turn 1, hp <= 100
+   | (9956:83) Hee-ho! + Rakunda
+   | Change Random to Water, Deal 115% damage + Rcv 50% for 3 turns
+ | group:
+   | condition: 30% chance, hp <= 100
+   | (9957:94) Mabufu
+   | Lock all Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs, Deal 130% damage
+   | condition: 30% chance, hp <= 100
+   | (9954:48) Hee-ho!
+   | Change Random to Water, Deal 115% damage
+   | condition: 40% chance, hp <= 100
+   | (9953:94) Bufu
+   | Lock 10 random Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs, Deal 110% damage

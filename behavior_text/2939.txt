@@ -16,38 +16,26 @@ level: 1
  group:
  | group:
    | group:
-   | condition: turn 1
-     | group:
-       | (5184:50) Fresh
-       | Player -99% HP
+   | condition: turn 1, hp <= 100
+     | (5184:50) Fresh
+     | Player -99% HP
    | group:
-   | condition: repeats every 3 turns
-     | group:
-       | (5180:98) Shadow Rapier
-       | Blind orbs in specific positions for 3 turns
+   | condition: repeats every 3 turns, hp <= 100
+     | (5180:98) Shadow Rapier
+     | Blind orbs in specific positions for 3 turns
    | group:
-   | condition: repeats every 3 turns
-     | group:
-       | (5181:89) Bone Breaker
-       | Delay active skills by 1 turns, Deal 150% damage
+   | condition: repeats every 3 turns, hp <= 100
+     | (5181:89) Bone Breaker
+     | Delay active skills by 1 turns, Deal 150% damage
    | group:
-   | condition: repeats every 3 turns
-     | group:
-       | (5182:15) Asura Slash
-       | Deal 175% damage (5 hits, 35% each)
+   | condition: repeats every 3 turns, hp <= 100
+     | (5182:15) Asura Slash
+     | Deal 175% damage (5 hits, 35% each)
  | group:
- | condition: hp <= 49
-   | group:
-   | condition: turn 1
-     | group:
-       | condition: hp <= 50
-       | (5186:74) Parade
-       | Reduce damage from all sources by 75% for 3 turns
+ | condition: turn 1, hp <= 50
+   | (5186:74) Parade
+   | Reduce damage from all sources by 75% for 3 turns
  | group:
- | condition: hp <= 14
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: hp <= 15
-       | (5183:77) Sky Dashing Hundred Dragon Blades
-       | Change 1st, 3rd, 5th column to Fire orbs, 2nd, 4th, 6th column to Wood orbs, Deal 750% damage
+ | condition: hp <= 15
+   | (5183:77) Sky Dashing Hundred Dragon Blades
+   | Change 1st, 3rd, 5th column to Fire orbs, 2nd, 4th, 6th column to Wood orbs, Deal 750% damage

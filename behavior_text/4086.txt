@@ -8,7 +8,7 @@ approved: False
 
 level: 1
  type: DEATH
- | condition: when defeated, hp <= 100
+ condition: when defeated, hp <= 100
  | (8645:95) Aaaaaaah!
  | Do nothing
 
@@ -17,38 +17,32 @@ level: 4
  | (8637:102) Fulfilling mission
  | Spawn random 3 Bomb orbs
  type: DEATH
- | condition: when defeated, hp <= 100
+ condition: when defeated, hp <= 100
  | (8645:95) Aaaaaaah!
  | Do nothing
  group:
  | group:
    | group:
-   | condition: repeats every 3 turns
-     | group:
-       | (8640:98) X-Calibur
-       | Blind orbs in specific positions for 1 turns, Deal 100% damage
+   | condition: repeats every 3 turns, hp <= 100
+     | (8640:98) X-Calibur
+     | Blind orbs in specific positions for 1 turns, Deal 100% damage
    | group:
    | condition: repeats every 3 turns
-     | group:
-       | condition: 50% chance, when required attributes on board, hp <= 100
-       | (8639:92) Baltic Launcher
-       | Spawn random 1 Wood orbs, Deal 90% damage
-       | (8638:15) I-Slasher
-       | Deal 80% damage
+     | condition: 50% chance, when required attributes on board, hp <= 100
+     | (8639:92) Baltic Launcher
+     | Spawn random 1 Wood orbs, Deal 90% damage
+     | (8638:15) I-Slasher
+     | Deal 80% damage
  | group:
  | condition: hp <= 24
    | group:
-   | condition: turn 1
-     | group:
-       | (8641:15) Rebel Spark
-       | Deal 30% damage
+   | condition: turn 1, hp <= 100
+     | (8641:15) Rebel Spark
+     | Deal 30% damage
    | group:
-   | condition: turn 2
-     | group:
-       | (8642:103) Goodbye!
-       | Spawn Bomb orbs in the specified positions
+   | condition: turn 2, hp <= 100
+     | (8642:103) Goodbye!
+     | Spawn Bomb orbs in the specified positions
    | group:
-   | condition: repeats every 1 turns
-     | group:
-       | (8643:103) V-Slasher
-       | Spawn Bomb orbs in the specified positions, Deal 100% damage
+     | (8643:103) V-Slasher
+     | Spawn Bomb orbs in the specified positions, Deal 100% damage

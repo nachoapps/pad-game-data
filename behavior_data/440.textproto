@@ -8,26 +8,12 @@
           group_type: STANDARD
           condition {
             hp_threshold: 100
+            use_chance: 100
+            repeats_every: 5
           }
           children {
-            group {
-              condition {
-                repeats_every: 5
-              }
-              children {
-                group {
-                  group_type: STANDARD
-                  children {
-                    behavior {
-                      condition {
-                        hp_threshold: 100
-                        use_chance: 100
-                      }
-                      enemy_skill_id: 175
-                    }
-                  }
-                }
-              }
+            behavior {
+              enemy_skill_id: 175
             }
           }
         }
@@ -41,20 +27,13 @@
           children {
             group {
               condition {
+                hp_threshold: 100
+                use_chance: 100
                 repeats_every: 5
               }
               children {
-                group {
-                  group_type: STANDARD
-                  children {
-                    behavior {
-                      condition {
-                        hp_threshold: 100
-                        use_chance: 100
-                      }
-                      enemy_skill_id: 175
-                    }
-                  }
+                behavior {
+                  enemy_skill_id: 175
                 }
               }
             }
@@ -62,20 +41,13 @@
           children {
             group {
               condition {
+                hp_threshold: 40
+                use_chance: 40
                 repeats_every: 5
               }
               children {
-                group {
-                  group_type: STANDARD
-                  children {
-                    behavior {
-                      condition {
-                        hp_threshold: 40
-                        use_chance: 40
-                      }
-                      enemy_skill_id: 173
-                    }
-                  }
+                behavior {
+                  enemy_skill_id: 173
                 }
               }
             }
@@ -91,20 +63,13 @@
           children {
             group {
               condition {
+                hp_threshold: 100
+                use_chance: 100
                 repeats_every: 5
               }
               children {
-                group {
-                  group_type: STANDARD
-                  children {
-                    behavior {
-                      condition {
-                        hp_threshold: 100
-                        use_chance: 100
-                      }
-                      enemy_skill_id: 175
-                    }
-                  }
+                behavior {
+                  enemy_skill_id: 175
                 }
               }
             }
@@ -115,26 +80,21 @@
                 repeats_every: 5
               }
               children {
-                group {
-                  group_type: STANDARD
-                  children {
-                    behavior {
-                      condition {
-                        hp_threshold: 25
-                        use_chance: 30
-                      }
-                      enemy_skill_id: 174
-                    }
+                behavior {
+                  condition {
+                    hp_threshold: 25
+                    use_chance: 30
                   }
-                  children {
-                    behavior {
-                      condition {
-                        hp_threshold: 40
-                        use_chance: 40
-                      }
-                      enemy_skill_id: 173
-                    }
+                  enemy_skill_id: 174
+                }
+              }
+              children {
+                behavior {
+                  condition {
+                    hp_threshold: 40
+                    use_chance: 40
                   }
+                  enemy_skill_id: 173
                 }
               }
             }

@@ -8,7 +8,7 @@ approved: False
 
 level: 1
  type: DEATH
- | condition: when defeated, hp <= 100
+ condition: when defeated, hp <= 100
  | (8676:95) It can't end like this!
  | Do nothing
 
@@ -25,35 +25,30 @@ level: 4
  | (8666:94) I will end your pain.
  | Lock 4 random Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs
  type: DEATH
- | condition: when defeated, hp <= 100
+ condition: when defeated, hp <= 100
  | (8676:95) It can't end like this!
  | Do nothing
  group:
  | group:
    | group:
-   | condition: turn 1
-     | group:
-       | (8670:75) Kuzukaze
-       | Leader changes to random sub for 2 turns
+   | condition: turn 1, hp <= 100
+     | (8670:75) Kuzukaze
+     | Leader changes to random sub for 2 turns
    | group:
-   | condition: repeats every 2 turns
-     | group:
-       | (8671:79) 108 Shiki: Yamibarai
-       | Change 5th row to Dark orbs, Deal 100% damage
+   | condition: repeats every 2 turns, hp <= 100
+     | (8671:79) 108 Shiki: Yamibarai
+     | Change 5th row to Dark orbs, Deal 100% damage
    | group:
-   | condition: repeats every 2 turns
-     | group:
-       | (8672:15) 127 Shiki: Aoibana
-       | Deal 105% damage (3 hits, 35% each)
+   | condition: repeats every 2 turns, hp <= 100
+     | (8672:15) 127 Shiki: Aoibana
+     | Deal 105% damage (3 hits, 35% each)
  | group:
  | condition: hp <= 19
    | group:
-   | condition: repeats every 2 turns
-     | group:
-       | (8673:54) You won't die that easy!
-       | Bind 1 own leader for 1 turns
+   | condition: repeats every 2 turns, hp <= 100
+     | (8673:54) You won't die that easy!
+     | Bind 1 own leader for 1 turns
    | group:
-   | condition: repeats every 2 turns
-     | group:
-       | (8674:77) Ura 108 Shiki: Yasakazuki
-       | Change 2nd column to Dark orbs, 4th column to Dark orbs, 6th column to Dark orbs, Deal 150% damage
+   | condition: repeats every 2 turns, hp <= 100
+     | (8674:77) Ura 108 Shiki: Yasakazuki
+     | Change 2nd column to Dark orbs, 4th column to Dark orbs, 6th column to Dark orbs, Deal 150% damage

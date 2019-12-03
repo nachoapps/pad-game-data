@@ -12,27 +12,16 @@ level: 4
  | Absorb combo <= 4 damage for 5 turns
  group:
  | group:
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: 50% chance, hp <= 100
-       | (10574:108) On a diet?
-       | Change Heal to Jammer, Deal 80% damage
-       | condition: 50% chance, hp <= 100
-       | (10609:48) Curve
-       | Change Random to Wood, Deal 100% damage
+   | condition: 50% chance, hp <= 100
+   | (10574:108) On a diet?
+   | Change Heal to Jammer, Deal 80% damage
+   | condition: 50% chance, hp <= 100
+   | (10609:48) Curve
+   | Change Random to Wood, Deal 100% damage
  | group:
- | condition: hp <= 49
-   | group:
-   | condition: turn 1
-     | group:
-       | condition: when 1 enemies remain, hp <= 100
-       | (10573:17) What you believe in will be deceived
-       | Increase damage to 150% for the next 5 turns
+ | condition: when 1 enemies remain, turn 1, hp <= 100
+   | (10573:17) What you believe in will be deceived
+   | Increase damage to 150% for the next 5 turns
  | group:
- | condition: hp <= 9
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | (10575:79) Marine Ball
-       | Change 5th row to Water orbs, Deal 200% damage
+   | (10575:79) Marine Ball
+   | Change 5th row to Water orbs, Deal 200% damage

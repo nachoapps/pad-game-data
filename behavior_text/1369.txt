@@ -9,21 +9,16 @@ approved: False
 level: 5
  group:
  | group:
-   | group:
-   | condition: repeats every 2 turns
-     | group:
-       | (1140:48) Petit Thunder
-       | Change Random to Light, Deal 80% damage
+ | condition: repeats every 2 turns, hp <= 100
+   | (1140:48) Petit Thunder
+   | Change Random to Light, Deal 80% damage
  | group:
  | condition: hp <= 49
    | group:
-   | condition: repeats every 2 turns
-     | group:
-       | (1140:48) Petit Thunder
-       | Change Random to Light, Deal 80% damage
+   | condition: repeats every 2 turns, hp <= 100
+     | (1140:48) Petit Thunder
+     | Change Random to Light, Deal 80% damage
    | group:
-   | condition: repeats every 2 turns
-     | group:
-       | condition: 50% chance, hp <= 50
-       | (1142:15) Swinging a weapon
-       | Deal 80%~160% damage (2~4 hits, 40% each)
+   | condition: 50% chance, repeats every 2 turns, hp <= 50
+     | (1142:15) Swinging a weapon
+     | Deal 80%~160% damage (2~4 hits, 40% each)

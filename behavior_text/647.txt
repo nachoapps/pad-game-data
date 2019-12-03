@@ -12,18 +12,14 @@ level: 1
  | Deal 100% damage
  group:
  | group:
-   | group:
-   | condition: turn 1
-     | group:
-       | (269:20) Demonic Shield
-       | Voids status ailments for 999 turns
-   | group:
-   | condition: repeats every 3 turns
-     | group:
-       | (1399:63) Wave of Fear
-       | Bind 1 random subs for 1 turns, Deal 100% damage
-   | group:
-   | condition: repeats every 3 turns
-     | group:
-       | (267:15) World Ends
-       | Deal 1080% damage (6 hits, 180% each)
+ | condition: turn 1, hp <= 100
+   | (269:20) Demonic Shield
+   | Voids status ailments for 999 turns
+ | group:
+ | condition: repeats every 3 turns, hp <= 100
+   | (1399:63) Wave of Fear
+   | Bind 1 random subs for 1 turns, Deal 100% damage
+ | group:
+ | condition: repeats every 3 turns, hp <= 100
+   | (267:15) World Ends
+   | Deal 1080% damage (6 hits, 180% each)

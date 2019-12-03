@@ -16,42 +16,33 @@ level: 1
  group:
  | group:
    | group:
-   | condition: turn 1
-     | group:
-       | (11866:83) Drought + Lost Water of Life
-       | Player -99% HP + Rcv 50% for 10 turns
+   | condition: turn 1, hp <= 100
+     | (11866:83) Drought + Lost Water of Life
+     | Player -99% HP + Rcv 50% for 10 turns
    | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: 25% chance, hp <= 100
-       | (11869:65) Torrential Downpour
-       | Bind 1 random subs for 2~3 turns, Deal 95% damage
-       | condition: 25% chance, hp <= 100
-       | (11870:89) Overflow
-       | Delay active skills by 2 turns, Deal 100% damage
-       | condition: 25% chance, hp <= 100
-       | (11871:48) High Water
-       | Change Random to Water, Deal 95% damage
-       | condition: 25% chance, hp <= 100
-       | (11872:15) Overflowing
-       | Deal 105% damage (3 hits, 35% each)
+     | condition: 25% chance, hp <= 100
+     | (11869:65) Torrential Downpour
+     | Bind 1 random subs for 2~3 turns, Deal 95% damage
+     | condition: 25% chance, hp <= 100
+     | (11870:89) Overflow
+     | Delay active skills by 2 turns, Deal 100% damage
+     | condition: 25% chance, hp <= 100
+     | (11871:48) High Water
+     | Change Random to Water, Deal 95% damage
+     | condition: 25% chance, hp <= 100
+     | (11872:15) Overflowing
+     | Deal 105% damage (3 hits, 35% each)
  | group:
  | condition: hp <= 29
    | group:
    | condition: turn 1
-     | group:
-       | (11873:88) Disappearing Mist
-       | Bind awoken skills for 1 turns
-       | (11874:65) Torrential Downpour
-       | Bind 4 random subs for 1 turns
+     | (11873:88) Disappearing Mist
+     | Bind awoken skills for 1 turns
+     | (11874:65) Torrential Downpour
+     | Bind 4 random subs for 1 turns
    | group:
-   | condition: repeats every 1 turns
-     | group:
-       | (11875:85) Muddy Stream
-       | Change all orbs to Water, Deal 300% damage
+     | (11875:85) Muddy Stream
+     | Change all orbs to Water, Deal 300% damage
  | group:
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | (11876:83) Spring of Life + Arrested
-       | Enemy recover 100% hp + Lock all Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs, Deal 100% damage
+   | (11876:83) Spring of Life + Arrested
+   | Enemy recover 100% hp + Lock all Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs, Deal 100% damage

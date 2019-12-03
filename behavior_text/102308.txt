@@ -11,30 +11,18 @@ level: 1
  | (14494:20) I'm scared...
  | Voids status ailments for 999 turns
  group:
- | group:
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | (14495:74) I'm frightened....
-       | Reduce damage from all sources by 50% for 1 turns
+ | (14495:74) I'm frightened....
+ | Reduce damage from all sources by 50% for 1 turns
  type: REMAINING
- condition: when 2 enemies remain
- | group:
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | (14496:101) A helpful gust of wind
-       | Fix orb movement starting point to random position on the board, Deal 100% damage
+ condition: when 2 enemies remain, hp <= 100
+ | (14496:101) A helpful gust of wind
+ | Fix orb movement starting point to random position on the board, Deal 100% damage
  type: REMAINING
- condition: when 1 enemies remain
+ condition: when 1 enemies remain, hp <= 100
  | group:
-   | group:
-   | condition: turn 1
-     | group:
-       | (14497:67) You angered me!
-       | Absorb combo <= 9 damage for 10 turns
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | (14498:15) Windmill
-       | Deal 240% damage (4 hits, 60% each)
+ | condition: turn 1, hp <= 100
+   | (14497:67) You angered me!
+   | Absorb combo <= 9 damage for 10 turns
+ | group:
+   | (14498:15) Windmill
+   | Deal 240% damage (4 hits, 60% each)

@@ -16,28 +16,21 @@ level: 1
    | Increase damage to 200% for the next 999 turns
  | group:
    | group:
-   | condition: turn 1
-     | group:
-       | (6992:83) Bone-Shaking Bloom Hammer + Demonheart
-       | Player -99% HP + Spawn random 3 Heal orbs
+   | condition: turn 1, hp <= 100
+     | (6992:83) Bone-Shaking Bloom Hammer + Demonheart
+     | Player -99% HP + Spawn random 3 Heal orbs
    | group:
    | condition: repeats every 9 turns
-     | group:
-       | condition: 50% chance, hp <= 100
-       | (6994:48) Shadow Drop
-       | Change Water to Dark, Deal 250% damage
-       | (6993:15) Concealed Mirror Kunai
-       | Deal 280% damage (2 hits, 140% each)
+     | condition: 50% chance, hp <= 100
+     | (6994:48) Shadow Drop
+     | Change Water to Dark, Deal 250% damage
+     | (6993:15) Concealed Mirror Kunai
+     | Deal 280% damage (2 hits, 140% each)
    | group:
-   | condition: repeats every 9 turns
-     | group:
-       | (6997:83) Dark Demon Cage + Seal of Darkness
-       | Bind awoken skills for 5 turns + Voids status ailments for 9 turns
+   | condition: repeats every 9 turns, hp <= 100
+     | (6997:83) Dark Demon Cage + Seal of Darkness
+     | Bind awoken skills for 5 turns + Voids status ailments for 9 turns
  | group:
- | condition: hp <= 4
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: hp <= 5
-       | (6999:85) Darkness
-       | Change all orbs to Dark, Deal 6000% damage
+ | condition: hp <= 5
+   | (6999:85) Darkness
+   | Change all orbs to Dark, Deal 6000% damage

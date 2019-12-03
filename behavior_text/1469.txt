@@ -12,13 +12,10 @@ level: 1
  | Player recover 100% hp
  group:
  | group:
-   | group:
-   | condition: repeats every 2 turns
-     | group:
-       | (2283:63) Quick-TAMA!
-       | Bind 1 random cards for 2 turns, Deal 100% damage
-   | group:
-   | condition: repeats every 2 turns
-     | group:
-       | (589:1) Pure Smile
-       | Bind 1 random cards for 3 turns
+ | condition: repeats every 2 turns, hp <= 100
+   | (2283:63) Quick-TAMA!
+   | Bind 1 random cards for 2 turns, Deal 100% damage
+ | group:
+ | condition: repeats every 2 turns, hp <= 100
+   | (589:1) Pure Smile
+   | Bind 1 random cards for 3 turns

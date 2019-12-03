@@ -11,22 +11,16 @@ level: 1
  | group:
    | group:
    | condition: turn 1
-     | group:
-       | condition: one time only, hp <= 100
-       | (245:2) Water Prohibited
-       | Bind Water cards for 1~3 turns
-       | (246:16) Giggling...
-       | Do nothing
+     | condition: one time only, hp <= 100
+     | (245:2) Water Prohibited
+     | Bind Water cards for 1~3 turns
+     | (246:16) Giggling...
+     | Do nothing
    | group:
-   | condition: turn 2
-     | group:
-       | (246:16) Giggling...
-       | Do nothing
+   | condition: turn 2, hp <= 100
+     | (246:16) Giggling...
+     | Do nothing
  | group:
- | condition: hp <= 29
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: hp <= 30
-       | (247:15) Flaming Tail Attack
-       | Deal 150% damage (5 hits, 30% each)
+ | condition: hp <= 30
+   | (247:15) Flaming Tail Attack
+   | Deal 150% damage (5 hits, 30% each)

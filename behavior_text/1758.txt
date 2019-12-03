@@ -13,24 +13,17 @@ level: 1
  group:
  | group:
    | group:
-   | condition: turns 1-9
-     | group:
-       | (14341:83) Magical Power Transformation + Evil Restriction
-       | Change Random to Dark, Deal 50% damage + Lock 15 random Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs, Deal 50% damage
+   | condition: turns 1-9, hp <= 100
+     | (14341:83) Magical Power Transformation + Evil Restriction
+     | Change Random to Dark, Deal 50% damage + Lock 15 random Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs, Deal 50% damage
    | group:
-   | condition: turn 10
-     | group:
-       | (14347:83) Devil's Restraint + Devil Unleashed!
-       | Bind 6 random cards for 1 turns + Deal 1400% damage (7 hits, 200% each)
+   | condition: turn 10, hp <= 100
+     | (14347:83) Devil's Restraint + Devil Unleashed!
+     | Bind 6 random cards for 1 turns + Deal 1400% damage (7 hits, 200% each)
    | group:
-   | condition: repeats every 1 turns
-     | group:
-       | (14349:15) Devil Unleashed!
-       | Deal 1400% damage (7 hits, 200% each)
+     | (14349:15) Devil Unleashed!
+     | Deal 1400% damage (7 hits, 200% each)
  | group:
- | condition: hp <= 49
-   | group:
-   | condition: turn 1
-     | group:
-       | (14344:83) Solomon's Necromancy + The Devil's Guidance
-       | Voids player buff effects + Increase damage to 200% for the next 999 turns
+ | condition: turn 1, hp <= 100
+   | (14344:83) Solomon's Necromancy + The Devil's Guidance
+   | Voids player buff effects + Increase damage to 200% for the next 999 turns

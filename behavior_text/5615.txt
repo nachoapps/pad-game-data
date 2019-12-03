@@ -11,19 +11,10 @@ level: 1
  | (14735:71) Duplicitous Glare
  | Void damage >= 8000000 for 10 turns
  group:
- | group:
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: when required attributes on board, hp <= 100
-       | (14736:92) Hydro Blast
-       | Spawn random 5 Water, Mortal Poison orbs, Deal 100% damage
+ condition: when required attributes on board, hp <= 100
+ | (14736:92) Hydro Blast
+ | Spawn random 5 Water, Mortal Poison orbs, Deal 100% damage
  type: REMAINING
- condition: when 1 enemies remain
- | group:
- | condition: hp <= 49
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | (14737:15) Double Crunch
-       | Deal 300% damage (2 hits, 150% each)
+ condition: when 1 enemies remain, hp <= 100
+ | (14737:15) Double Crunch
+ | Deal 300% damage (2 hits, 150% each)

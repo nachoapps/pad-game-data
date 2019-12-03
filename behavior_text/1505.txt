@@ -12,31 +12,22 @@ level: 1
  | Movetime 50% for 2 turns
  group:
  | group:
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: 50% chance, hp <= 100
-       | (13376:79) Raging Rapids of Dirty Water
-       | Change 2nd row to Water, Poison orbs, Deal 90% damage
-       | condition: 50% chance, hp <= 100
-       | (13377:94) Dammed up Stream
-       | Lock 10 random Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs, Deal 100% damage
+   | condition: 50% chance, hp <= 100
+   | (13376:79) Raging Rapids of Dirty Water
+   | Change 2nd row to Water, Poison orbs, Deal 90% damage
+   | condition: 50% chance, hp <= 100
+   | (13377:94) Dammed up Stream
+   | Lock 10 random Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs, Deal 100% damage
  | group:
- | condition: hp <= 49
-   | group:
-   | condition: turn 1
-     | group:
-       | (13378:89) Clear Water Fall
-       | Delay active skills by 4 turns
+ | condition: turn 1, hp <= 100
+   | (13378:89) Clear Water Fall
+   | Delay active skills by 4 turns
  | group:
  | condition: hp <= 19
    | group:
-   | condition: turn 2
-     | group:
-       | (13379:104) Gathering Steam
-       | 2x3 cloud appear for 1 turns at random location
+   | condition: turn 2, hp <= 100
+     | (13379:104) Gathering Steam
+     | 2x3 cloud appear for 1 turns at random location
    | group:
-   | condition: repeats every 1 turns
-     | group:
-       | (13380:77) Water Dragon Sword
-       | Change 1st column to Water orbs, 6th column to Water orbs, Deal 300% damage
+     | (13380:77) Water Dragon Sword
+     | Change 1st column to Water orbs, 6th column to Water orbs, Deal 300% damage

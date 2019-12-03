@@ -14,67 +14,53 @@ level: 1
  | group:
    | group:
    | condition: repeats every 8 turns
-     | group:
-       | condition: 20% chance, hp <= 100
-       | (7722:15) Rake
-       | Deal 180% damage
-       | condition: 15% chance, hp <= 100
-       | (7723:88) White Breath
-       | Bind awoken skills for 1 turns, Deal 240% damage
-       | condition: 15% chance, hp <= 100
-       | (7724:63) Stone Breath
-       | Bind 1 random cards for 3~5 turns, Deal 210% damage
-       | condition: 20% chance, hp <= 100
-       | (7725:15) Combo Attack
-       | Deal 200% damage (2 hits, 100% each)
-       | condition: 20% chance, hp <= 100
-       | (7726:15) Combo Attack
-       | Deal 300% damage (3 hits, 100% each)
-       | condition: 10% chance, hp <= 100
-       | (1:82) Disable Skill
-       | Deal 100% damage
+     | condition: 20% chance, hp <= 100
+     | (7722:15) Rake
+     | Deal 180% damage
+     | condition: 15% chance, hp <= 100
+     | (7723:88) White Breath
+     | Bind awoken skills for 1 turns, Deal 240% damage
+     | condition: 15% chance, hp <= 100
+     | (7724:63) Stone Breath
+     | Bind 1 random cards for 3~5 turns, Deal 210% damage
+     | condition: 20% chance, hp <= 100
+     | (7725:15) Combo Attack
+     | Deal 200% damage (2 hits, 100% each)
+     | condition: 20% chance, hp <= 100
+     | (7726:15) Combo Attack
+     | Deal 300% damage (3 hits, 100% each)
+     | condition: 10% chance, hp <= 100
+     | (1:82) Disable Skill
+     | Deal 100% damage
+   | group:
+   | condition: repeats every 8 turns, hp <= 100
+     | (7727:68) Cyclone
+     | Poison skyfall +5% for 99 turns, Deal 240% damage
    | group:
    | condition: repeats every 8 turns
-     | group:
-       | (7727:68) Cyclone
-       | Poison skyfall +5% for 99 turns, Deal 240% damage
+     | condition: 10% chance, hp <= 100
+     | (7729:15) Death Strike
+     | Deal 700% damage
+     | (7730:15) Combo Attack
+     | Deal 350%~450% damage (7~9 hits, 50% each)
    | group:
-   | condition: repeats every 8 turns
-     | group:
-       | condition: 10% chance, hp <= 100
-       | (7729:15) Death Strike
-       | Deal 700% damage
-       | (7730:15) Combo Attack
-       | Deal 350%~450% damage (7~9 hits, 50% each)
-   | group:
-   | condition: repeats every 8 turns
-     | group:
-       | (7728:15) Cyclone
-       | Deal 240% damage
+   | condition: repeats every 8 turns, hp <= 100
+     | (7728:15) Cyclone
+     | Deal 240% damage
  | group:
- | condition: hp <= 49
-   | group:
-   | condition: turn 1
-     | group:
-       | condition: hp <= 50
-       | (7721:74) Protect
-       | Reduce damage from all sources by 50% for 20 turns
+ | condition: turn 1, hp <= 50
+   | (7721:74) Protect
+   | Reduce damage from all sources by 50% for 20 turns
  | group:
  | condition: hp <= 9
    | group:
-   | condition: turn 1
-     | group:
-       | condition: when 1 enemies remain, hp <= 10
-       | (7720:17) Growing Threat
-       | Increase damage to 200% for the next 999 turns
+   | condition: when 1 enemies remain, turn 1, hp <= 10
+     | (7720:17) Growing Threat
+     | Increase damage to 200% for the next 999 turns
    | group:
-   | condition: turn 2
-     | group:
-       | condition: hp <= 50
-       | (7721:74) Protect
-       | Reduce damage from all sources by 50% for 20 turns
+   | condition: turn 2, hp <= 50
+     | (7721:74) Protect
+     | Reduce damage from all sources by 50% for 20 turns
    | group:
-   | condition: repeats every 1 turns
-     | group:
-       | (7727:68) Cyclone
-       | Poison skyfall +5% for 99 turns, Deal 240% damage
+     | (7727:68) Cyclone
+     | Poison skyfall +5% for 99 turns, Deal 240% damage

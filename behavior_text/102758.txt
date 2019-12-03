@@ -15,49 +15,35 @@ level: 1
  | Change 2nd, 3rd row to Heal orbs, Deal 100% damage
  group:
  | group:
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: 50% chance, hp <= 100
-       | (8942:79) Stream Fan
-       | Change 1st, 5th row to Water orbs, Deal 150% damage
-       | (8944:15) Flash of Dual Water Fangs
-       | Deal 360% damage (2 hits, 180% each)
+   | condition: 50% chance, hp <= 100
+   | (8942:79) Stream Fan
+   | Change 1st, 5th row to Water orbs, Deal 150% damage
+   | (8944:15) Flash of Dual Water Fangs
+   | Deal 360% damage (2 hits, 180% each)
  | group:
- | condition: hp <= 79
-   | group:
-   | condition: turn 1
-     | group:
-       | condition: hp <= 80
-       | (8941:74) Enchanting Bamboo Grove
-       | Reduce damage from all sources by 50% for 3 turns
+ | condition: turn 1, hp <= 80
+   | (8941:74) Enchanting Bamboo Grove
+   | Reduce damage from all sources by 50% for 3 turns
  | group:
  | condition: hp <= 49
    | group:
-   | condition: repeats every 2 turns
-     | group:
-       | condition: when 1 enemies remain, hp <= 50
-       | (8943:17) Blue Season
-       | Increase damage to 150% for the next 1 turns
+   | condition: repeats every 2 turns, when 1 enemies remain, hp <= 50
+     | (8943:17) Blue Season
+     | Increase damage to 150% for the next 1 turns
    | group:
    | condition: repeats every 2 turns
-     | group:
-       | condition: 50% chance, hp <= 100
-       | (8942:79) Stream Fan
-       | Change 1st, 5th row to Water orbs, Deal 150% damage
-       | (8944:15) Flash of Dual Water Fangs
-       | Deal 360% damage (2 hits, 180% each)
+     | condition: 50% chance, hp <= 100
+     | (8942:79) Stream Fan
+     | Change 1st, 5th row to Water orbs, Deal 150% damage
+     | (8944:15) Flash of Dual Water Fangs
+     | Deal 360% damage (2 hits, 180% each)
  | group:
  | condition: hp <= 9
    | group:
-   | condition: repeats every 2 turns
-     | group:
-       | condition: when 1 enemies remain, hp <= 50
-       | (8943:17) Blue Season
-       | Increase damage to 150% for the next 1 turns
+   | condition: repeats every 2 turns, when 1 enemies remain, hp <= 50
+     | (8943:17) Blue Season
+     | Increase damage to 150% for the next 1 turns
    | group:
-   | condition: repeats every 2 turns
-     | group:
-       | condition: hp <= 10
-       | (8945:15) Thick Binding of 1000 Bamboos
-       | Deal 400% damage (10 hits, 40% each)
+   | condition: repeats every 2 turns, hp <= 10
+     | (8945:15) Thick Binding of 1000 Bamboos
+     | Deal 400% damage (10 hits, 40% each)

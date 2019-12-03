@@ -12,13 +12,10 @@ level: 4
  | Do nothing
  group:
  | group:
-   | group:
-   | condition: repeats every 3 turns
-     | group:
-       | (8995:15) Sweet Combo
-       | Deal 100% damage (2 hits, 50% each)
-   | group:
-   | condition: repeats every 3 turns
-     | group:
-       | (9216:66) You want some?...
-       | Do nothing
+ | condition: repeats every 3 turns, hp <= 100
+   | (8995:15) Sweet Combo
+   | Deal 100% damage (2 hits, 50% each)
+ | group:
+ | condition: repeats every 3 turns, hp <= 100
+   | (9216:66) You want some?...
+   | Do nothing

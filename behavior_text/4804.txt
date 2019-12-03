@@ -14,52 +14,43 @@ level: 1
  | (11162:97) W-Well, you can't get through!...
  | Blind all orbs for 10 turns
  type: DEATH
- | condition: when defeated, hp <= 100
+ condition: when defeated, hp <= 100
  | (11175:95) Oh, you are not an intruder?!...
  | Do nothing
  group:
  | group:
    | group:
-   | condition: turn 1
-     | group:
-       | (11164:83) G-Go back! + It's d-d-dangerous!
-       | Poison skyfall +15% for 10 turns + Rcv 50% for 10 turns
+   | condition: turn 1, hp <= 100
+     | (11164:83) G-Go back! + It's d-d-dangerous!
+     | Poison skyfall +15% for 10 turns + Rcv 50% for 10 turns
    | group:
    | condition: repeats every 2 turns
-     | group:
-       | (11168:108) P-Please be patient!
-       | Change Poison to Heal, Deal 150% damage
-       | condition: 50% chance, when required attributes on board, hp <= 100
-       | (11167:92) B-Be careful!
-       | Spawn random 3 Heal, Mortal Poison orbs
-       | condition: 50% chance, hp <= 100
-       | (11123:15) S-Sorry!
-       | Deal 100% damage
+     | (11168:108) P-Please be patient!
+     | Change Poison to Heal, Deal 150% damage
+     | condition: 50% chance, when required attributes on board, hp <= 100
+     | (11167:92) B-Be careful!
+     | Spawn random 3 Heal, Mortal Poison orbs
+     | condition: 50% chance, hp <= 100
+     | (11123:15) S-Sorry!
+     | Deal 100% damage
    | group:
    | condition: repeats every 2 turns
-     | group:
-       | condition: 50% chance, when required attributes on board, hp <= 100
-       | (11167:92) B-Be careful!
-       | Spawn random 3 Heal, Mortal Poison orbs
-       | condition: 50% chance, hp <= 100
-       | (11123:15) S-Sorry!
-       | Deal 100% damage
+     | condition: 50% chance, when required attributes on board, hp <= 100
+     | (11167:92) B-Be careful!
+     | Spawn random 3 Heal, Mortal Poison orbs
+     | condition: 50% chance, hp <= 100
+     | (11123:15) S-Sorry!
+     | Deal 100% damage
  | group:
- | condition: hp <= 49
-   | group:
-   | condition: turn 2
-     | group:
-       | (11169:83) Go away! + I hate p-pain...
-       | Change 1st column to Mortal Poison orbs, 6th column to Heal orbs + Reduce damage from all sources by 50% for 99 turns
+ | condition: turn 2, hp <= 100
+   | (11169:83) Go away! + I hate p-pain...
+   | Change 1st column to Mortal Poison orbs, 6th column to Heal orbs + Reduce damage from all sources by 50% for 99 turns
  | group:
  | condition: hp <= 24
    | group:
-   | condition: turn 1
-     | group:
-       | (11172:84) Any more of it and...
-       | Change all orbs to Heal
+   | condition: turn 1, hp <= 100
+     | (11172:84) Any more of it and...
+     | Change all orbs to Heal
    | group:
-   | condition: repeats every 1 turns
-     | group:
-       | (11173:85) Oh stop it already!
-       | Change all orbs to Mortal Poison, Deal 100% damage
+     | (11173:85) Oh stop it already!
+     | Change all orbs to Mortal Poison, Deal 100% damage

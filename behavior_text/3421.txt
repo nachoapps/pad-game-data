@@ -12,13 +12,10 @@ level: 4
  | Lock 3 random Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs
  group:
  | group:
-   | group:
-   | condition: repeats every 2 turns
-     | group:
-       | (6259:104) Mochi Steam
-       | 1x1 cloud appear for 2 turns at random location
-   | group:
-   | condition: repeats every 2 turns
-     | group:
-       | (6258:15) Mochi Pound
-       | Deal 100% damage (2 hits, 50% each)
+ | condition: repeats every 2 turns, hp <= 100
+   | (6259:104) Mochi Steam
+   | 1x1 cloud appear for 2 turns at random location
+ | group:
+ | condition: repeats every 2 turns, hp <= 100
+   | (6258:15) Mochi Pound
+   | Deal 100% damage (2 hits, 50% each)

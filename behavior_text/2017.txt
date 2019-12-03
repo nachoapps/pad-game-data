@@ -13,39 +13,32 @@ level: 1
  group:
  | group:
    | group:
-   | condition: turn 1
-     | group:
-       | (13073:67) OK! You'll be my opponent
-       | Absorb combo <= 5 damage for 99 turns
+   | condition: turn 1, hp <= 100
+     | (13073:67) OK! You'll be my opponent
+     | Absorb combo <= 5 damage for 99 turns
    | group:
    | condition: repeats every 3 turns
-     | group:
-       | (13074:48) Here I go!
-       | Change Heal to Jammer, Deal 75% damage
-       | condition: 30% chance, hp <= 100
-       | (13077:48) You can do it!
-       | Change Random to Water, Deal 100% damage
-       | condition: 40% chance, hp <= 100
-       | (13076:50) Are you already struggling?
-       | Player -99% HP
-       | (13078:62) It's not over yet!
-       | Blind all orbs on the board, Deal 85% damage
+     | (13074:48) Here I go!
+     | Change Heal to Jammer, Deal 75% damage
+     | condition: 30% chance, hp <= 100
+     | (13077:48) You can do it!
+     | Change Random to Water, Deal 100% damage
+     | condition: 40% chance, hp <= 100
+     | (13076:50) Are you already struggling?
+     | Player -99% HP
+     | (13078:62) It's not over yet!
+     | Blind all orbs on the board, Deal 85% damage
    | group:
    | condition: repeats every 3 turns
-     | group:
-       | condition: 30% chance, hp <= 100
-       | (13077:48) You can do it!
-       | Change Random to Water, Deal 100% damage
-       | condition: 40% chance, hp <= 100
-       | (13076:50) Are you already struggling?
-       | Player -99% HP
-       | (13078:62) It's not over yet!
-       | Blind all orbs on the board, Deal 85% damage
+     | condition: 30% chance, hp <= 100
+     | (13077:48) You can do it!
+     | Change Random to Water, Deal 100% damage
+     | condition: 40% chance, hp <= 100
+     | (13076:50) Are you already struggling?
+     | Player -99% HP
+     | (13078:62) It's not over yet!
+     | Blind all orbs on the board, Deal 85% damage
  | group:
- | condition: hp <= 29
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: hp <= 30
-       | (13079:15) Enough for today. See you tomorrow!
-       | Deal 270% damage (3 hits, 90% each)
+ | condition: hp <= 30
+   | (13079:15) Enough for today. See you tomorrow!
+   | Deal 270% damage (3 hits, 90% each)

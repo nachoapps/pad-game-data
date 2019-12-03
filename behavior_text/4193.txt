@@ -9,25 +9,19 @@ approved: False
 level: 4
  group:
  | group:
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: 50% chance, hp <= 100
-       | (9187:50) Gyah!
-       | Player -50% HP
+ | condition: 50% chance, hp <= 100
+   | (9187:50) Gyah!
+   | Player -50% HP
  | group:
  | condition: hp <= 49
    | group:
-   | condition: turn 1
-     | group:
-       | (9188:100) Gyoooun!
-       | Seal 1st row for 2 turns
+   | condition: turn 1, hp <= 100
+     | (9188:100) Gyoooun!
+     | Seal 1st row for 2 turns
    | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: 50% chance, hp <= 100
-       | (9189:15) Grrroarrr!
-       | Deal 135% damage (3 hits, 45% each)
-       | condition: 50% chance, hp <= 100
-       | (9187:50) Gyah!
-       | Player -50% HP
+     | condition: 50% chance, hp <= 100
+     | (9189:15) Grrroarrr!
+     | Deal 135% damage (3 hits, 45% each)
+     | condition: 50% chance, hp <= 100
+     | (9187:50) Gyah!
+     | Player -50% HP

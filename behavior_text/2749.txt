@@ -13,57 +13,44 @@ level: 1
  group:
  | group:
    | group:
-   | condition: turn 1
-     | group:
-       | (2932:83) Mortal Shot + Divine Protection of the Secret Stone
-       | Player -99% HP + Voids status ailments for 10 turns
+   | condition: turn 1, hp <= 100
+     | (2932:83) Mortal Shot + Divine Protection of the Secret Stone
+     | Player -99% HP + Voids status ailments for 10 turns
    | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: 30% chance, hp <= 100
-       | (2933:89) Reduce Shot
-       | Delay active skills by 2 turns, Deal 120% damage
-       | condition: 30% chance, hp <= 100
-       | (2934:79) Earth Wind Shot
-       | Change 3rd row to Wood orbs, Deal 130% damage
-       | condition: 40% chance, hp <= 100
-       | (2935:94) Snipe Shot
-       | Lock 5 random Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs, Deal 120% damage
+     | condition: 30% chance, hp <= 100
+     | (2933:89) Reduce Shot
+     | Delay active skills by 2 turns, Deal 120% damage
+     | condition: 30% chance, hp <= 100
+     | (2934:79) Earth Wind Shot
+     | Change 3rd row to Wood orbs, Deal 130% damage
+     | condition: 40% chance, hp <= 100
+     | (2935:94) Snipe Shot
+     | Lock 5 random Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs, Deal 120% damage
  | group:
  | condition: hp <= 49
    | group:
-   | condition: turn 1
-     | group:
-       | (2938:83) Hunting Breath + Drawing her bow
-       | Absorb combo <= 7 damage for 1 turns + Movetime -2s for 1 turns
+   | condition: turn 1, hp <= 100
+     | (2938:83) Hunting Breath + Drawing her bow
+     | Absorb combo <= 7 damage for 1 turns + Movetime -2s for 1 turns
    | group:
-   | condition: turn 2
-     | group:
-       | (2939:15) Rapid Shot
-       | Deal 180% damage (3 hits, 60% each)
+   | condition: turn 2, hp <= 100
+     | (2939:15) Rapid Shot
+     | Deal 180% damage (3 hits, 60% each)
  | group:
  | condition: hp <= 19
    | group:
-   | condition: turn 1
-     | group:
-       | condition: hp <= 20
-       | (2968:83) Skill Trap + Capture
-       | Bind active skills for 5 turns + Increase damage to 200% for the next 99 turns
+   | condition: turn 1, hp <= 20
+     | (2968:83) Skill Trap + Capture
+     | Bind active skills for 5 turns + Increase damage to 200% for the next 99 turns
    | group:
-   | condition: turn 2
-     | group:
-       | (2938:83) Hunting Breath + Drawing her bow
-       | Absorb combo <= 7 damage for 1 turns + Movetime -2s for 1 turns
+   | condition: turn 2, hp <= 100
+     | (2938:83) Hunting Breath + Drawing her bow
+     | Absorb combo <= 7 damage for 1 turns + Movetime -2s for 1 turns
    | group:
-   | condition: turn 3
-     | group:
-       | (2939:15) Rapid Shot
-       | Deal 180% damage (3 hits, 60% each)
+   | condition: turn 3, hp <= 100
+     | (2939:15) Rapid Shot
+     | Deal 180% damage (3 hits, 60% each)
  | group:
- | condition: hp <= 14
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: hp <= 15
-       | (2941:15) Certainty Shot
-       | Deal 500% damage (5 hits, 100% each)
+ | condition: hp <= 15
+   | (2941:15) Certainty Shot
+   | Deal 500% damage (5 hits, 100% each)

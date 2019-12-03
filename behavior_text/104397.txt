@@ -8,7 +8,7 @@ approved: False
 
 level: 1
  type: DEATH
- | condition: when defeated, hp <= 100
+ condition: when defeated, hp <= 100
  | (9971:95) Hee-ho... I surrender!
  | Do nothing
 
@@ -17,40 +17,34 @@ level: 4
  | (9966:83) Matarukaja + Null Despair
  | Increase damage to 150% for the next 3 turns + Voids status ailments for 999 turns
  type: DEATH
- | condition: when defeated, hp <= 100
+ condition: when defeated, hp <= 100
  | (9971:95) Hee-ho... I surrender!
  | Do nothing
  group:
  | group:
    | group:
-   | condition: turn 1
-     | group:
-       | (9968:15) Megaton Raid
-       | Deal 120% damage
+   | condition: turn 1, hp <= 100
+     | (9968:15) Megaton Raid
+     | Deal 120% damage
    | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: 50% chance, hp <= 100
-       | (9968:15) Megaton Raid
-       | Deal 120% damage
-       | (9967:94) Bufudyne
-       | Lock 10 random Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs, Deal 110% damage
+     | condition: 50% chance, hp <= 100
+     | (9968:15) Megaton Raid
+     | Deal 120% damage
+     | (9967:94) Bufudyne
+     | Lock 10 random Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs, Deal 110% damage
  | group:
  | condition: hp <= 49
    | group:
-   | condition: turn 2
-     | group:
-       | (9949:94) Mabufudyne
-       | Lock all Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs, Deal 150% damage
+   | condition: turn 2, hp <= 100
+     | (9949:94) Mabufudyne
+     | Lock all Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs, Deal 150% damage
    | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: 40% chance, hp <= 100
-       | (9949:94) Mabufudyne
-       | Lock all Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs, Deal 150% damage
-       | condition: 30% chance, hp <= 100
-       | (9968:15) Megaton Raid
-       | Deal 120% damage
-       | condition: 30% chance, hp <= 100
-       | (9967:94) Bufudyne
-       | Lock 10 random Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs, Deal 110% damage
+     | condition: 40% chance, hp <= 100
+     | (9949:94) Mabufudyne
+     | Lock all Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs, Deal 150% damage
+     | condition: 30% chance, hp <= 100
+     | (9968:15) Megaton Raid
+     | Deal 120% damage
+     | condition: 30% chance, hp <= 100
+     | (9967:94) Bufudyne
+     | Lock 10 random Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs, Deal 110% damage

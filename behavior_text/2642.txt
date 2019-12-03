@@ -8,36 +8,25 @@ approved: False
 
 level: 4
  type: PREEMPT
- | condition: when required attributes on board, hp <= 100
+ condition: when required attributes on board, hp <= 100
  | (2690:92) Poison Debris
  | Spawn random 3 Poison orbs
  group:
  | group:
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: 30% chance, hp <= 100
-       | (2695:48) Flame Sterilization
-       | Change Poison to Fire, Deal 150% damage
-       | condition: 35% chance, hp <= 100
-       | (2694:65) Tail Stroke
-       | Bind 1 random subs for 1 turns, Deal 100% damage
-       | condition: 35% chance, when required attributes on board, hp <= 100
-       | (2693:92) Pinpoint Venom
-       | Spawn random 1 Poison orbs, Deal 100% damage
+   | condition: 30% chance, hp <= 100
+   | (2695:48) Flame Sterilization
+   | Change Poison to Fire, Deal 150% damage
+   | condition: 35% chance, hp <= 100
+   | (2694:65) Tail Stroke
+   | Bind 1 random subs for 1 turns, Deal 100% damage
+   | condition: 35% chance, when required attributes on board, hp <= 100
+   | (2693:92) Pinpoint Venom
+   | Spawn random 1 Poison orbs, Deal 100% damage
  | group:
- | condition: hp <= 49
-   | group:
-   | condition: turn 1
-     | group:
-       | condition: when required attributes on board, hp <= 100
-       | (2691:92) Burning Scorpio's Stinger
-       | Spawn random 5 Poison orbs
+ | condition: when required attributes on board, turn 1, hp <= 100
+   | (2691:92) Burning Scorpio's Stinger
+   | Spawn random 5 Poison orbs
  | group:
- | condition: hp <= 9
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: hp <= 10
-       | (2696:15) Scorpio's Crest - Meteor
-       | Deal 600% damage
+ | condition: hp <= 10
+   | (2696:15) Scorpio's Crest - Meteor
+   | Deal 600% damage

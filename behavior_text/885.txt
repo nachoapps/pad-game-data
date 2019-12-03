@@ -12,24 +12,19 @@ level: 5
  | Deal 80% damage
  group:
  | group:
-   | group:
-   | condition: repeats every 2 turns
-     | group:
-       | (655:48) Nine-Tails Five Spirit Formation
-       | Change Random to Random, Deal 80% damage
+ | condition: repeats every 2 turns, hp <= 100
+   | (655:48) Nine-Tails Five Spirit Formation
+   | Change Random to Random, Deal 80% damage
  | group:
  | condition: hp <= 49
    | group:
    | condition: repeats every 2 turns
-     | group:
-       | condition: 50% chance, hp <= 50
-       | (657:15) Burning Heavens Strike
-       | Deal 160% damage (4 hits, 40% each)
-       | (655:48) Nine-Tails Five Spirit Formation
-       | Change Random to Random, Deal 80% damage
+     | condition: 50% chance, hp <= 50
+     | (657:15) Burning Heavens Strike
+     | Deal 160% damage (4 hits, 40% each)
+     | (655:48) Nine-Tails Five Spirit Formation
+     | Change Random to Random, Deal 80% damage
    | group:
-   | condition: repeats every 2 turns
-     | group:
-       | condition: 50% chance, hp <= 50
-       | (657:15) Burning Heavens Strike
-       | Deal 160% damage (4 hits, 40% each)
+   | condition: 50% chance, repeats every 2 turns, hp <= 50
+     | (657:15) Burning Heavens Strike
+     | Deal 160% damage (4 hits, 40% each)

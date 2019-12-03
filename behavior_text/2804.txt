@@ -14,49 +14,36 @@ level: 1
  | group:
    | group:
    | condition: turn 1
-     | group:
-       | (15120:108) My drink got stale
-       | Change Fire, Water, Wood, Light, Dark, Heal to Jammer, Deal 1000% damage
-       | (15123:15) Show me what you're made of!
-       | Deal 1000% damage (5 hits, 200% each)
+     | (15120:108) My drink got stale
+     | Change Fire, Water, Wood, Light, Dark, Heal to Jammer, Deal 1000% damage
+     | (15123:15) Show me what you're made of!
+     | Deal 1000% damage (5 hits, 200% each)
    | group:
    | condition: turn 2
-     | group:
-       | (15121:108) My drink got stale
-       | Change Fire, Water, Wood, Light, Dark, Heal to Jammer, Deal 1000% damage
-       | (15123:15) Show me what you're made of!
-       | Deal 1000% damage (5 hits, 200% each)
+     | (15121:108) My drink got stale
+     | Change Fire, Water, Wood, Light, Dark, Heal to Jammer, Deal 1000% damage
+     | (15123:15) Show me what you're made of!
+     | Deal 1000% damage (5 hits, 200% each)
    | group:
-   | condition: repeats every 1 turns
-     | group:
-       | (15122:108) My drink got stale
-       | Change Fire, Water, Wood, Light, Dark, Heal to Jammer, Deal 1000% damage
-       | (15123:15) Show me what you're made of!
-       | Deal 1000% damage (5 hits, 200% each)
+     | (15122:108) My drink got stale
+     | Change Fire, Water, Wood, Light, Dark, Heal to Jammer, Deal 1000% damage
+     | (15123:15) Show me what you're made of!
+     | Deal 1000% damage (5 hits, 200% each)
  | group:
- | condition: hp <= 74
-   | group:
-   | condition: turn 1
-     | group:
-       | (15120:108) My drink got stale
-       | Change Fire, Water, Wood, Light, Dark, Heal to Jammer, Deal 1000% damage
-       | (15106:83) How about the next turn? + Here you go!
-       | Spawn random 5 Fire, Water, Wood, Light, Dark orbs + Fix orb movement starting point to random position on the board
+ | condition: turn 1, hp <= 74
+   | (15120:108) My drink got stale
+   | Change Fire, Water, Wood, Light, Dark, Heal to Jammer, Deal 1000% damage
+   | (15106:83) How about the next turn? + Here you go!
+   | Spawn random 5 Fire, Water, Wood, Light, Dark orbs + Fix orb movement starting point to random position on the board
  | group:
- | condition: hp <= 49
-   | group:
-   | condition: turn 2
-     | group:
-       | (15121:108) My drink got stale
-       | Change Fire, Water, Wood, Light, Dark, Heal to Jammer, Deal 1000% damage
-       | (15110:83) Isn't this a struggle? + I forgot the bonus
-       | Spawn random 5 Fire, Water, Wood, Light, Dark orbs + Blind all orbs on the board
+ | condition: turn 2, hp <= 49
+   | (15121:108) My drink got stale
+   | Change Fire, Water, Wood, Light, Dark, Heal to Jammer, Deal 1000% damage
+   | (15110:83) Isn't this a struggle? + I forgot the bonus
+   | Spawn random 5 Fire, Water, Wood, Light, Dark orbs + Blind all orbs on the board
  | group:
  | condition: hp <= 24
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | (15122:108) My drink got stale
-       | Change Fire, Water, Wood, Light, Dark, Heal to Jammer, Deal 1000% damage
-       | (15115:83) I'm surprised you made it this far + This is the last chance
-       | Spawn random 3 Fire, Water, Wood, Light, Dark, Heal, Poison, Mortal Poison orbs + Absorb combo <= 7 damage for 999 turns
+   | (15122:108) My drink got stale
+   | Change Fire, Water, Wood, Light, Dark, Heal to Jammer, Deal 1000% damage
+   | (15115:83) I'm surprised you made it this far + This is the last chance
+   | Spawn random 3 Fire, Water, Wood, Light, Dark, Heal, Poison, Mortal Poison orbs + Absorb combo <= 7 damage for 999 turns

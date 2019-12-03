@@ -13,17 +13,9 @@ level: 1
  | (11639:106) Enemy's next turn changed
  | Enemy turn counter change to 1 when HP <= 50%
  group:
- | group:
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | (1294:15) Big Blade
-       | Deal 100% damage
+ | (1294:15) Big Blade
+ | Deal 100% damage
  type: REMAINING
- condition: when 1 enemies remain
- | group:
-   | group:
-   | condition: turn 1
-     | group:
-       | (11640:83) Pouring Fighting Spirit + Counterattack
-       | Enemy recover 100% hp + Reduce damage from all sources by 75% for 99 turns
+ condition: when 1 enemies remain, turn 1, hp <= 100
+ | (11640:83) Pouring Fighting Spirit + Counterattack
+ | Enemy recover 100% hp + Reduce damage from all sources by 75% for 99 turns

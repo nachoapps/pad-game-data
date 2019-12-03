@@ -11,23 +11,16 @@ level: 4
  | (5804:13) Blow it hard!
  | Change Random 2 to Jammer
  group:
- | group:
-   | group:
-   | condition: repeats every 2 turns
-     | group:
-       | (5807:85) Shakuhachi Whirlwind
-       | Change all orbs to Fire, Water, Wood, Light, Dark, Heal, Jammer, Deal 60% damage
+ condition: repeats every 2 turns, hp <= 100
+ | (5807:85) Shakuhachi Whirlwind
+ | Change all orbs to Fire, Water, Wood, Light, Dark, Heal, Jammer, Deal 60% damage
  type: REMAINING
- condition: when 1 enemies remain
+ condition: when 1 enemies remain, hp <= 100
  | group:
-   | group:
-   | condition: turn 1
-     | group:
-       | condition: when 1 enemies remain, hp <= 100
-       | (5805:17) Demon Solo
-       | Increase damage to 300% for the next 999 turns
-   | group:
-   | condition: turn 2
-     | group:
-       | (5806:68) Resonating Wood
-       | Wood skyfall +15% for 10 turns, Deal 50% damage
+ | condition: when 1 enemies remain, turn 1, hp <= 100
+   | (5805:17) Demon Solo
+   | Increase damage to 300% for the next 999 turns
+ | group:
+ | condition: turn 2, hp <= 100
+   | (5806:68) Resonating Wood
+   | Wood skyfall +15% for 10 turns, Deal 50% damage

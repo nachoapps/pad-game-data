@@ -11,34 +11,28 @@ level: 1
  | (3535:68) Did you come to see me?
  | Wood skyfall +15% for 99 turns
  type: DEATH
- | condition: when defeated, hp <= 100
+ condition: when defeated, hp <= 100
  | (3534:69) Linthia Transformation
  | Show message: You're so cruel|I wanted to play more with you...!
  group:
  | group:
    | group:
-   | condition: turn 1
-     | group:
-       | (3536:71) Floral Mirror
-       | Void damage >= 400000 for 5 turns
+   | condition: turn 1, hp <= 100
+     | (3536:71) Floral Mirror
+     | Void damage >= 400000 for 5 turns
    | group:
-   | condition: repeats every 1 turns
-     | group:
-       | (3537:15) Aero Ball
-       | Deal 110% damage
+     | (3537:15) Aero Ball
+     | Deal 110% damage
  | group:
  | condition: hp <= 49
    | group:
-   | condition: turn 2
-     | group:
-       | (3538:67) I'm having so much fun!♪
-       | Absorb combo <= 4 damage for 3 turns
+   | condition: turn 2, hp <= 100
+     | (3538:67) I'm having so much fun!♪
+     | Absorb combo <= 4 damage for 3 turns
    | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: 50% chance, hp <= 100
-       | (3539:79) Blossom Wind
-       | Change 1st row to Wood orbs, Deal 170% damage
-       | condition: when required attributes on board, hp <= 100
-       | (3540:92) Rose Cyclone
-       | Spawn random 5 Fire orbs, Deal 170% damage
+     | condition: 50% chance, hp <= 100
+     | (3539:79) Blossom Wind
+     | Change 1st row to Wood orbs, Deal 170% damage
+     | condition: when required attributes on board, hp <= 100
+     | (3540:92) Rose Cyclone
+     | Spawn random 5 Fire orbs, Deal 170% damage

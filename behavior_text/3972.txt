@@ -11,12 +11,8 @@ level: 1
  | (8358:74) I love dragons!
  | Reduce damage from all sources by 50% for 99 turns
  group:
- | group:
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | (8359:15) Dragon REM Punch!
-       | Deal 130% damage
+ | (8359:15) Dragon REM Punch!
+ | Deal 130% damage
 
 level: 2
  type: PREEMPT
@@ -25,39 +21,29 @@ level: 2
  group:
  | group:
    | group:
-   | condition: turn 1
-     | group:
-       | (8344:74) Pull it!
-       | Reduce damage from all sources by 50% for 1 turns, Deal 100% damage
+   | condition: turn 1, hp <= 100
+     | (8344:74) Pull it!
+     | Reduce damage from all sources by 50% for 1 turns, Deal 100% damage
    | group:
-   | condition: repeats every 1 turns
-     | group:
-       | (8345:74) Come on! Pull!
-       | Reduce damage from all sources by 50% for 1 turns, Deal 120% damage
+     | (8345:74) Come on! Pull!
+     | Reduce damage from all sources by 50% for 1 turns, Deal 120% damage
  | group:
  | condition: hp <= 79
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: 20% chance, hp <= 100
-       | (8352:83) It's putting some back into it + Draco Nesting Circle - Dk, Fr & Life
-       | Do nothing + Change all orbs to Fire, Dark, Heal, Deal 150% damage
-       | condition: 20% chance, hp <= 100
-       | (8353:83) It's putting some back into it + Draco Nesting Circle - Dk, Wt & Life
-       | Do nothing + Change all orbs to Water, Dark, Heal, Deal 150% damage
-       | condition: 20% chance, hp <= 100
-       | (8354:83) It's putting some back into it + Draco Nesting Circle - Dk, Wd & Life
-       | Do nothing + Change all orbs to Wood, Dark, Heal, Deal 150% damage
-       | condition: 20% chance, hp <= 100
-       | (8355:83) It's putting some back into it + Draco Nesting Circle - Dk, Lt & Life
-       | Do nothing + Change all orbs to Light, Dark, Heal, Deal 150% damage
-       | condition: 20% chance, hp <= 100
-       | (8356:83) It's putting some back into it + Draco Nesting Circle - Dk, Demon & Life
-       | Do nothing + Change all orbs to Dark, Heal, Jammer, Deal 150% damage, Deal 150% damage
+   | condition: 20% chance, hp <= 100
+   | (8352:83) It's putting some back into it + Draco Nesting Circle - Dk, Fr & Life
+   | Do nothing + Change all orbs to Fire, Dark, Heal, Deal 150% damage
+   | condition: 20% chance, hp <= 100
+   | (8353:83) It's putting some back into it + Draco Nesting Circle - Dk, Wt & Life
+   | Do nothing + Change all orbs to Water, Dark, Heal, Deal 150% damage
+   | condition: 20% chance, hp <= 100
+   | (8354:83) It's putting some back into it + Draco Nesting Circle - Dk, Wd & Life
+   | Do nothing + Change all orbs to Wood, Dark, Heal, Deal 150% damage
+   | condition: 20% chance, hp <= 100
+   | (8355:83) It's putting some back into it + Draco Nesting Circle - Dk, Lt & Life
+   | Do nothing + Change all orbs to Light, Dark, Heal, Deal 150% damage
+   | condition: 20% chance, hp <= 100
+   | (8356:83) It's putting some back into it + Draco Nesting Circle - Dk, Demon & Life
+   | Do nothing + Change all orbs to Dark, Heal, Jammer, Deal 150% damage, Deal 150% damage
  | group:
- | condition: hp <= 14
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | (8357:15) Throw me some more Magic Stones!
-       | Deal 900% damage (3 hits, 300% each)
+   | (8357:15) Throw me some more Magic Stones!
+   | Deal 900% damage (3 hits, 300% each)

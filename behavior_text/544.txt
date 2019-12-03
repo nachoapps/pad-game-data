@@ -9,24 +9,16 @@ approved: False
 level: 5
  group:
  | group:
- | condition: hp <= 74
-   | group:
-   | condition: turn 1
-     | group:
-       | condition: hp <= 75
-       | (337:3) Demonic Howl
-       | Bind Dragon cards for 2~4 turns
+ | condition: turn 1, hp <= 75
+   | (337:3) Demonic Howl
+   | Bind Dragon cards for 2~4 turns
  | group:
  | condition: hp <= 29
    | group:
-   | condition: turn 1
-     | group:
-       | condition: hp <= 75
-       | (337:3) Demonic Howl
-       | Bind Dragon cards for 2~4 turns
+   | condition: turn 1, hp <= 75
+     | (337:3) Demonic Howl
+     | Bind Dragon cards for 2~4 turns
    | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: 70% chance, hp <= 30
-       | (336:15) Triple Dragon Cannon
-       | Deal 180% damage (3 hits, 60% each)
+   | condition: 70% chance, hp <= 30
+     | (336:15) Triple Dragon Cannon
+     | Deal 180% damage (3 hits, 60% each)

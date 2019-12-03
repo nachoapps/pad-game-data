@@ -9,13 +9,9 @@ approved: False
 level: 1
  group:
  | group:
-   | group:
-   | condition: turn 1
-     | group:
-       | (228:16) Opening mouth...
-       | Do nothing
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | (87:15) Chaos Ray
-       | Deal 400% damage
+ | condition: turn 1, hp <= 100
+   | (228:16) Opening mouth...
+   | Do nothing
+ | group:
+   | (87:15) Chaos Ray
+   | Deal 400% damage

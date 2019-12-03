@@ -20,23 +20,17 @@ level: 5
  | Voids status ailments for 5 turns + Deal 200% damage
  group:
  | group:
-   | group:
-   | condition: turn 1
-     | group:
-       | (2292:83) Blaze Aura + Triple Breath
-       | Absorb combo <= 5 damage for 5 turns + Deal 120% damage (3 hits, 40% each)
-   | group:
-   | condition: turn 2
-     | group:
-       | (8245:83) Fire Armor + Fanning Breath
-       | Void damage >= 5000000 for 5 turns + Deal 120% damage (6 hits, 20% each)
-   | group:
-   | condition: turn 3
-     | group:
-       | (2294:63) Inferno Bullet
-       | Bind 5 random cards for 5 turns, Deal 150% damage
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | (2295:15) Burst End
-       | Deal 5000% damage (5 hits, 1000% each)
+ | condition: turn 1, hp <= 100
+   | (2292:83) Blaze Aura + Triple Breath
+   | Absorb combo <= 5 damage for 5 turns + Deal 120% damage (3 hits, 40% each)
+ | group:
+ | condition: turn 2, hp <= 100
+   | (8245:83) Fire Armor + Fanning Breath
+   | Void damage >= 5000000 for 5 turns + Deal 120% damage (6 hits, 20% each)
+ | group:
+ | condition: turn 3, hp <= 100
+   | (2294:63) Inferno Bullet
+   | Bind 5 random cards for 5 turns, Deal 150% damage
+ | group:
+   | (2295:15) Burst End
+   | Deal 5000% damage (5 hits, 1000% each)

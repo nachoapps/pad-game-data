@@ -14,42 +14,32 @@ level: 1
  | (11145:83) Wait! This is off limits! + I've been entrusted to be on lookout!
  | Seal 1st row for 5 turns + Absorb combo <= 6 damage for 999 turns
  type: DEATH
- | condition: when defeated, hp <= 100
+ condition: when defeated, hp <= 100
  | (11161:95) Oh, on an errand? Why didn't you say?
  | Do nothing
  group:
  | group:
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | (11151:108) Need to burn more!
-       | Change Jammer to Fire, Deal 150% damage
-       | condition: 33% chance, hp <= 100
-       | (11152:89) I'll make you suffer!
-       | Delay active skills by 2 turns, Deal 95% damage
-       | condition: 33% chance, when required attributes on board, hp <= 100
-       | (11153:92) I'll burn you to ashes!
-       | Spawn random 5 Jammer orbs, Deal 100% damage
-       | condition: 34% chance, hp <= 100
-       | (11154:15) Hey, hey, hey!
-       | Deal 110% damage (2 hits, 55% each)
+   | (11151:108) Need to burn more!
+   | Change Jammer to Fire, Deal 150% damage
+   | condition: 33% chance, hp <= 100
+   | (11152:89) I'll make you suffer!
+   | Delay active skills by 2 turns, Deal 95% damage
+   | condition: 33% chance, when required attributes on board, hp <= 100
+   | (11153:92) I'll burn you to ashes!
+   | Spawn random 5 Jammer orbs, Deal 100% damage
+   | condition: 34% chance, hp <= 100
+   | (11154:15) Hey, hey, hey!
+   | Deal 110% damage (2 hits, 55% each)
  | group:
- | condition: hp <= 49
-   | group:
-   | condition: turn 1
-     | group:
-       | (11155:83) Your life is at an end! + You will regret that
-       | Spawn Bomb orbs in the specified positions + Movetime 50% for 5 turns
+ | condition: turn 1, hp <= 100
+   | (11155:83) Your life is at an end! + You will regret that
+   | Spawn Bomb orbs in the specified positions + Movetime 50% for 5 turns
  | group:
  | condition: hp <= 19
    | group:
-   | condition: turn 1
-     | group:
-       | condition: when 1 enemies remain, hp <= 100
-       | (11158:17) I'll end this for you NOW!
-       | Increase damage to 200% for the next 99 turns
+   | condition: when 1 enemies remain, turn 1, hp <= 100
+     | (11158:17) I'll end this for you NOW!
+     | Increase damage to 200% for the next 99 turns
    | group:
-   | condition: repeats every 1 turns
-     | group:
-       | (11159:84) Get out of my sight!
-       | Change all orbs to Fire, Deal 250% damage
+     | (11159:84) Get out of my sight!
+     | Change all orbs to Fire, Deal 250% damage

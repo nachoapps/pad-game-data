@@ -8,30 +8,23 @@ approved: False
 
 level: 4
  type: PREEMPT
- | condition: when required attributes on board, hp <= 100
+ condition: when required attributes on board, hp <= 100
  | (13447:92) 魔龍のメロディー
  | Spawn random 10 Poison orbs
  group:
  | group:
    | group:
-   | condition: turn 1
-     | group:
-       | (13448:67) カデンツァグルービー
-       | Absorb combo <= 5 damage for 3 turns
+   | condition: turn 1, hp <= 100
+     | (13448:67) カデンツァグルービー
+     | Absorb combo <= 5 damage for 3 turns
    | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: 50% chance, hp <= 100
-       | (13449:15) モルトクレッシェンド
-       | Deal 105% damage (3 hits, 35% each)
-       | condition: 50% chance, hp <= 100
-       | (13450:102) ビートロック
-       | Spawn random 3 locked Bomb orbs, Deal 95% damage
+     | condition: 50% chance, hp <= 100
+     | (13449:15) モルトクレッシェンド
+     | Deal 105% damage (3 hits, 35% each)
+     | condition: 50% chance, hp <= 100
+     | (13450:102) ビートロック
+     | Spawn random 3 locked Bomb orbs, Deal 95% damage
  | group:
- | condition: hp <= 19
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: when required attributes on board, hp <= 100
-       | (13451:92) アラルガンドマルカート
-       | Spawn random 5 Poison orbs, Deal 150% damage
+ | condition: when required attributes on board, hp <= 100
+   | (13451:92) アラルガンドマルカート
+   | Spawn random 5 Poison orbs, Deal 150% damage

@@ -14,48 +14,37 @@ level: 1
  | (5353:55) Heilung Licht
  | Player recover 100% hp
  type: DEATH
- | condition: when defeated, hp <= 100
+ condition: when defeated, hp <= 100
  | (5362:69) Light Robot Transformation
  | Show message: Generator started|Attribute energy increasing
  group:
  | group:
    | group:
-   | condition: repeats every 2 turns
-     | group:
-       | condition: when required attributes on board, hp <= 100
-       | (5354:92) Angriff
-       | Spawn random 3 Heal orbs, Deal 100% damage
+   | condition: repeats every 2 turns, when required attributes on board, hp <= 100
+     | (5354:92) Angriff
+     | Spawn random 3 Heal orbs, Deal 100% damage
    | group:
    | condition: repeats every 2 turns
-     | group:
-       | condition: 20% chance, hp <= 100
-       | (5355:53) Verteidigung
-       | Absorb Fire damage for 2 turns
-       | condition: 20% chance, hp <= 100
-       | (5356:53) Verteidigung
-       | Absorb Water damage for 2 turns
-       | condition: 20% chance, hp <= 100
-       | (5357:53) Verteidigung
-       | Absorb Wood damage for 2 turns
-       | condition: 20% chance, hp <= 100
-       | (5358:53) Verteidigung
-       | Absorb Light damage for 2 turns
-       | condition: 20% chance, hp <= 100
-       | (5359:53) Verteidigung
-       | Absorb Dark damage for 2 turns
+     | condition: 20% chance, hp <= 100
+     | (5355:53) Verteidigung
+     | Absorb Fire damage for 2 turns
+     | condition: 20% chance, hp <= 100
+     | (5356:53) Verteidigung
+     | Absorb Water damage for 2 turns
+     | condition: 20% chance, hp <= 100
+     | (5357:53) Verteidigung
+     | Absorb Wood damage for 2 turns
+     | condition: 20% chance, hp <= 100
+     | (5358:53) Verteidigung
+     | Absorb Light damage for 2 turns
+     | condition: 20% chance, hp <= 100
+     | (5359:53) Verteidigung
+     | Absorb Dark damage for 2 turns
  | group:
- | condition: hp <= 69
-   | group:
-   | condition: turn 1
-     | group:
-       | condition: hp <= 70
-       | (5360:97) Beleuchten
-       | Blind random 8 orbs for 5 turns
+ | condition: turn 1, hp <= 70
+   | (5360:97) Beleuchten
+   | Blind random 8 orbs for 5 turns
  | group:
- | condition: hp <= 9
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: hp <= 10
-       | (5361:77) Sieg Speer
-       | Change 3rd, 4th column to Light orbs, Deal 300% damage
+ | condition: hp <= 10
+   | (5361:77) Sieg Speer
+   | Change 3rd, 4th column to Light orbs, Deal 300% damage

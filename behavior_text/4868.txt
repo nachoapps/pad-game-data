@@ -23,30 +23,23 @@ level: 4
  | Fix orb movement starting point to random position on the board
  group:
  | group:
-   | group:
-   | condition: turn 1
-     | group:
-       | (11441:48) Awesome!
-       | Change Random to Fire, Deal 100% damage
-   | group:
-   | condition: turn 2
-     | group:
-       | (11442:50) Huaah!
-       | Player -75% HP
-   | group:
-   | condition: turn 3
-     | group:
-       | (11443:15) That was an awesome fight!
-       | Deal 120% damage (3 hits, 40% each)
-   | group:
-   | condition: turn 4
-     | group:
-       | (11444:88) These folks know exactly
+ | condition: turn 1, hp <= 100
+   | (11441:48) Awesome!
+   | Change Random to Fire, Deal 100% damage
+ | group:
+ | condition: turn 2, hp <= 100
+   | (11442:50) Huaah!
+   | Player -75% HP
+ | group:
+ | condition: turn 3, hp <= 100
+   | (11443:15) That was an awesome fight!
+   | Deal 120% damage (3 hits, 40% each)
+ | group:
+ | condition: turn 4, hp <= 100
+   | (11444:88) These folks know exactly
 what I'm talking about.
-       | Bind awoken skills for 1 turns
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | (11445:15) Sometimes you got to fight
+   | Bind awoken skills for 1 turns
+ | group:
+   | (11445:15) Sometimes you got to fight
 to get your point across.
-       | Deal 160% damage (4 hits, 40% each)
+   | Deal 160% damage (4 hits, 40% each)

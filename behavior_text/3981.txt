@@ -20,41 +20,31 @@ level: 4
  | Voids status ailments for 10 turns + Absorb combo <= 4 damage for 5 turns
  group:
  | group:
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: 20% chance, hp <= 100
-       | (8455:50) Radion Bolt
-       | Player -99% HP
-       | condition: 30% chance, hp <= 100
-       | (8453:77) Blazing Slash
-       | Change 3rd column to Fire orbs, Deal 150% damage
-       | (8454:15) Axe Sweep
-       | Deal 190% damage
+   | condition: 20% chance, hp <= 100
+   | (8455:50) Radion Bolt
+   | Player -99% HP
+   | condition: 30% chance, hp <= 100
+   | (8453:77) Blazing Slash
+   | Change 3rd column to Fire orbs, Deal 150% damage
+   | (8454:15) Axe Sweep
+   | Deal 190% damage
  | group:
- | condition: hp <= 49
-   | group:
-   | condition: turn 1
-     | group:
-       | condition: when 1 enemies remain, hp <= 50
-       | (8456:17) Might of Apokolips
-       | Increase damage to 150% for the next 999 turns
+ | condition: when 1 enemies remain, turn 1, hp <= 50
+   | (8456:17) Might of Apokolips
+   | Increase damage to 150% for the next 999 turns
  | group:
  | condition: hp <= 29
    | group:
-   | condition: repeats every 3 turns
-     | group:
-       | condition: hp <= 30
-       | (8457:77) Splitting Swing
-       | Change 3rd, 4th column to Jammer orbs, 1st, 2nd, 5th, 6th column to Fire, Water, Wood, Light, Dark, Heal orbs, Deal 180% damage
+   | condition: repeats every 3 turns, hp <= 30
+     | (8457:77) Splitting Swing
+     | Change 3rd, 4th column to Jammer orbs, 1st, 2nd, 5th, 6th column to Fire, Water, Wood, Light, Dark, Heal orbs, Deal 180% damage
    | group:
    | condition: repeats every 3 turns
-     | group:
-       | condition: 20% chance, hp <= 100
-       | (8455:50) Radion Bolt
-       | Player -99% HP
-       | condition: 30% chance, hp <= 100
-       | (8453:77) Blazing Slash
-       | Change 3rd column to Fire orbs, Deal 150% damage
-       | (8454:15) Axe Sweep
-       | Deal 190% damage
+     | condition: 20% chance, hp <= 100
+     | (8455:50) Radion Bolt
+     | Player -99% HP
+     | condition: 30% chance, hp <= 100
+     | (8453:77) Blazing Slash
+     | Change 3rd column to Fire orbs, Deal 150% damage
+     | (8454:15) Axe Sweep
+     | Deal 190% damage

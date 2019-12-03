@@ -13,39 +13,28 @@ level: 1
  group:
  | group:
    | group:
-   | condition: repeats every 2 turns
-     | group:
-       | (6197:83) Double Slash + Skill Resistance
-       | Deal 160% damage (2 hits, 80% each) + Delay active skills by 1 turns
+   | condition: repeats every 2 turns, hp <= 100
+     | (6197:83) Double Slash + Skill Resistance
+     | Deal 160% damage (2 hits, 80% each) + Delay active skills by 1 turns
    | group:
-   | condition: repeats every 2 turns
-     | group:
-       | (6204:79) Divide Icicle
-       | Change 3rd row to Water orbs, Deal 120% damage
+   | condition: repeats every 2 turns, hp <= 100
+     | (6204:79) Divide Icicle
+     | Change 3rd row to Water orbs, Deal 120% damage
  | group:
  | condition: hp <= 49
    | group:
-   | condition: turn 1
-     | group:
-       | (6200:83) Vidur + Hnikar
-       | Mortal Poison skyfall +15% for 1 turns + Player -99% HP
+   | condition: turn 1, hp <= 100
+     | (6200:83) Vidur + Hnikar
+     | Mortal Poison skyfall +15% for 1 turns + Player -99% HP
    | group:
-   | condition: repeats every 2 turns
-     | group:
-       | condition: hp <= 50
-       | (6203:83) Triple Slash + Skill Resistance
-       | Deal 180% damage (3 hits, 60% each) + Delay active skills by 1 turns
+   | condition: repeats every 2 turns, hp <= 50
+     | (6203:83) Triple Slash + Skill Resistance
+     | Deal 180% damage (3 hits, 60% each) + Delay active skills by 1 turns
    | group:
-   | condition: repeats every 2 turns
-     | group:
-       | condition: hp <= 50
-       | (6205:79) Divide Poison
-       | Change 3rd row to Water, Poison orbs, Deal 150% damage
+   | condition: repeats every 2 turns, hp <= 50
+     | (6205:79) Divide Poison
+     | Change 3rd row to Water, Poison orbs, Deal 150% damage
  | group:
- | condition: hp <= 14
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: hp <= 15
-       | (6206:15) Vak Sigfodr
-       | Deal 500% damage (5 hits, 100% each)
+ | condition: hp <= 15
+   | (6206:15) Vak Sigfodr
+   | Deal 500% damage (5 hits, 100% each)

@@ -14,32 +14,25 @@ level: 1
  | group:
    | group:
    | condition: repeats every 3 turns
-     | group:
-       | condition: 50% chance, hp <= 100
-       | (15212:94) レーザーブラスター
-       | Lock 6 random Fire, Water, Wood, Light, Dark orbs, Deal 100% damage
-       | (15215:77) レーザーソード！
-       | Change 3rd column to Light orbs, 4th column to Water orbs, Deal 125% damage
+     | condition: 50% chance, hp <= 100
+     | (15212:94) レーザーブラスター
+     | Lock 6 random Fire, Water, Wood, Light, Dark orbs, Deal 100% damage
+     | (15215:77) レーザーソード！
+     | Change 3rd column to Light orbs, 4th column to Water orbs, Deal 125% damage
    | group:
-   | condition: repeats every 3 turns
-     | group:
-       | (15213:101) レーザースキャナー
-       | Fix orb movement starting point to random position on the board
+   | condition: repeats every 3 turns, hp <= 100
+     | (15213:101) レーザースキャナー
+     | Fix orb movement starting point to random position on the board
  | group:
  | condition: hp <= 49
    | group:
-   | condition: turn 1
-     | group:
-       | (15211:50) その程度では倒せん
-       | Player -99% HP
+   | condition: turn 1, hp <= 100
+     | (15211:50) その程度では倒せん
+     | Player -99% HP
    | group:
-   | condition: turn 2
-     | group:
-       | condition: when 1 enemies remain, hp <= 100
-       | (15214:17) 決めるぞ！
-       | Increase damage to 300% for the next 3 turns
+   | condition: when 1 enemies remain, turn 2, hp <= 100
+     | (15214:17) 決めるぞ！
+     | Increase damage to 300% for the next 3 turns
    | group:
-   | condition: repeats every 1 turns
-     | group:
-       | (15215:77) レーザーソード！
-       | Change 3rd column to Light orbs, 4th column to Water orbs, Deal 125% damage
+     | (15215:77) レーザーソード！
+     | Change 3rd column to Light orbs, 4th column to Water orbs, Deal 125% damage

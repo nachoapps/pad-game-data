@@ -12,28 +12,21 @@ level: 1
  | Voids status ailments for 2 turns + Reduce damage from all sources by 90% for 2 turns
  group:
  | group:
-   | group:
-   | condition: turns 1-2
-     | group:
-       | (10896:84) Poison Scales
-       | Change all orbs to Poison
-   | group:
-   | condition: turn 3
-     | group:
-       | (10793:84) Poison Scales
-       | Change all orbs to Poison, Deal 25% damage
-   | group:
-   | condition: turn 4
-     | group:
-       | (10794:84) Poison Scales
-       | Change all orbs to Poison, Deal 50% damage
-   | group:
-   | condition: turn 5
-     | group:
-       | (10795:84) Poison Scales
-       | Change all orbs to Poison, Deal 75% damage
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | (10796:84) Poison Scales
-       | Change all orbs to Poison, Deal 300% damage
+ | condition: turns 1-2, hp <= 100
+   | (10896:84) Poison Scales
+   | Change all orbs to Poison
+ | group:
+ | condition: turn 3, hp <= 100
+   | (10793:84) Poison Scales
+   | Change all orbs to Poison, Deal 25% damage
+ | group:
+ | condition: turn 4, hp <= 100
+   | (10794:84) Poison Scales
+   | Change all orbs to Poison, Deal 50% damage
+ | group:
+ | condition: turn 5, hp <= 100
+   | (10795:84) Poison Scales
+   | Change all orbs to Poison, Deal 75% damage
+ | group:
+   | (10796:84) Poison Scales
+   | Change all orbs to Poison, Deal 300% damage

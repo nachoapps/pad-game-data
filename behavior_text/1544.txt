@@ -12,13 +12,10 @@ level: 1
  | Absorb Light damage for 10 turns
  group:
  | group:
-   | group:
-   | condition: repeats every 2 turns
-     | group:
-       | (1586:48) Yellow Tackle
-       | Change Random to Light, Deal 75% damage
-   | group:
-   | condition: repeats every 2 turns
-     | group:
-       | (1440:15) Shield Bash
-       | Deal 100% damage
+ | condition: repeats every 2 turns, hp <= 100
+   | (1586:48) Yellow Tackle
+   | Change Random to Light, Deal 75% damage
+ | group:
+ | condition: repeats every 2 turns, hp <= 100
+   | (1440:15) Shield Bash
+   | Deal 100% damage

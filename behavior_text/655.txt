@@ -16,33 +16,22 @@ level: 1
  group:
  | group:
    | group:
-   | condition: turn 1
-     | group:
-       | condition: when 376, 377, 656, 1348, 2396 on team, hp <= 100
-       | (3457:15) Why!? Loki!!
-       | Deal 100% damage
+   | condition: when 376, 377, 656, 1348, 2396 on team, turn 1, hp <= 100
+     | (3457:15) Why!? Loki!!
+     | Deal 100% damage
    | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: 50% chance, hp <= 100
-       | (3442:94) Mjolnir
-       | Lock 5 random Fire, Water, Wood, Light, Dark orbs, Deal 90% damage
+   | condition: 50% chance, hp <= 100
+     | (3442:94) Mjolnir
+     | Lock 5 random Fire, Water, Wood, Light, Dark orbs, Deal 90% damage
  | group:
- | condition: hp <= 49
-   | group:
-   | condition: turn 1
-     | group:
-       | condition: 50% chance, hp <= 100
-       | (3443:86) Megingjord
-       | Enemy recover 30% hp
-       | condition: 50% chance, hp <= 100
-       | (3444:67) Bilskirnir's Divine Protection
-       | Absorb combo <= 5 damage for 2 turns
+ | condition: turn 1, hp <= 49
+   | condition: 50% chance, hp <= 100
+   | (3443:86) Megingjord
+   | Enemy recover 30% hp
+   | condition: 50% chance, hp <= 100
+   | (3444:67) Bilskirnir's Divine Protection
+   | Absorb combo <= 5 damage for 2 turns
  | group:
- | condition: hp <= 19
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: when required attributes on board, hp <= 20
-       | (3441:92) Heaven Lightning
-       | Spawn random 15 Jammer orbs, Deal 200% damage
+ | condition: when required attributes on board, hp <= 20
+   | (3441:92) Heaven Lightning
+   | Spawn random 15 Jammer orbs, Deal 200% damage

@@ -12,27 +12,17 @@ level: 4
  | Movetime -2s for 5 turns
  group:
  | group:
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: 50% chance, hp <= 100
-       | (14145:79) ハニーッブーメラン!!!
-       | Change 3rd row to Light orbs, Deal 95% damage
-       | condition: 50% chance, hp <= 100
-       | (14146:15) 剣の舞うけてみろ！
-       | Deal 105% damage (3 hits, 35% each)
+   | condition: 50% chance, hp <= 100
+   | (14145:79) ハニーッブーメラン!!!
+   | Change 3rd row to Light orbs, Deal 95% damage
+   | condition: 50% chance, hp <= 100
+   | (14146:15) 剣の舞うけてみろ！
+   | Deal 105% damage (3 hits, 35% each)
  | group:
- | condition: hp <= 50
-   | group:
-   | condition: turn 1
-     | group:
-       | (14144:105) 正義の刃を受けよ!!
-       | Rcv 50% for 5 turns
+ | condition: turn 1, hp <= 100
+   | (14144:105) 正義の刃を受けよ!!
+   | Rcv 50% for 5 turns
  | group:
- | condition: hp <= 20
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: when required attributes on board, hp <= 100
-       | (14147:92) シルバーフルーレ
-       | Spawn random 7 Light orbs, Deal 200% damage
+ | condition: when required attributes on board, hp <= 100
+   | (14147:92) シルバーフルーレ
+   | Spawn random 7 Light orbs, Deal 200% damage

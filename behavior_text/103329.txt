@@ -14,38 +14,24 @@ level: 1
  | group:
    | group:
    | condition: repeats every 2 turns
-     | group:
-       | condition: 50% chance, hp <= 100
-       | (6098:83) Multiple Walls + Elemental Purée
-       | Absorb combo <= 6 damage for 1 turns + Change own attribute to random one of Fire, Water, Wood, Light, Dark, Deal 135% damage
-       | (6103:83) Reflescale + Elemental Purée
-       | Reduce damage from all sources by 75% for 1 turns + Change own attribute to random one of Fire, Water, Wood, Light, Dark, Deal 135% damage
+     | condition: 50% chance, hp <= 100
+     | (6098:83) Multiple Walls + Elemental Purée
+     | Absorb combo <= 6 damage for 1 turns + Change own attribute to random one of Fire, Water, Wood, Light, Dark, Deal 135% damage
+     | (6103:83) Reflescale + Elemental Purée
+     | Reduce damage from all sources by 75% for 1 turns + Change own attribute to random one of Fire, Water, Wood, Light, Dark, Deal 135% damage
    | group:
-   | condition: repeats every 2 turns
-     | group:
-       | (6104:75) Hypno Pursuit
-       | Leader changes to random sub for 1 turns, Deal 90% damage
+   | condition: repeats every 2 turns, hp <= 100
+     | (6104:75) Hypno Pursuit
+     | Leader changes to random sub for 1 turns, Deal 90% damage
  | group:
- | condition: hp <= 49
-   | group:
-   | condition: turn 1
-     | group:
-       | condition: hp <= 50
-       | (6107:83) Mournful Meteor + Forbidden Area
-       | Poison skyfall +30% for 1 turns + Seal 1st, 5th row for 1 turns
+ | condition: turn 1, hp <= 50
+   | (6107:83) Mournful Meteor + Forbidden Area
+   | Poison skyfall +30% for 1 turns + Seal 1st, 5th row for 1 turns
  | group:
- | condition: hp <= 24
-   | group:
-   | condition: turn 1
-     | group:
-       | condition: hp <= 25
-       | (6111:83) Glitter Force + Remedy
-       | Increase damage to 200% for the next 999 turns + Enemy recover 20% hp
+ | condition: turn 1, hp <= 25
+   | (6111:83) Glitter Force + Remedy
+   | Increase damage to 200% for the next 999 turns + Enemy recover 20% hp
  | group:
- | condition: hp <= 19
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: hp <= 20
-       | (6112:15) Stardust Comet
-       | Deal 900% damage (9 hits, 100% each)
+ | condition: hp <= 20
+   | (6112:15) Stardust Comet
+   | Deal 900% damage (9 hits, 100% each)

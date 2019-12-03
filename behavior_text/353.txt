@@ -10,32 +10,24 @@ level: 1
  group:
  | group:
    | group:
-   | condition: turn 5
-     | group:
-       | (197:19) Fury
-       | Increase damage to 150% for the next 10 turns
+   | condition: turn 5, hp <= 100
+     | (197:19) Fury
+     | Increase damage to 150% for the next 10 turns
    | group:
-   | condition: turn 16
-     | group:
-       | (197:19) Fury
-       | Increase damage to 150% for the next 10 turns
+   | condition: turn 16, hp <= 100
+     | (197:19) Fury
+     | Increase damage to 150% for the next 10 turns
  | group:
  | condition: hp <= 39
    | group:
-   | condition: turns 1-4
-     | group:
-       | condition: 30% chance, hp <= 40
-       | (139:15) Flame Bullet
-       | Deal 125% damage (5 hits, 25% each)
+   | condition: 30% chance, turns 1-4, hp <= 40
+     | (139:15) Flame Bullet
+     | Deal 125% damage (5 hits, 25% each)
    | group:
-   | condition: turns 6-15
-     | group:
-       | condition: 30% chance, hp <= 40
-       | (139:15) Flame Bullet
-       | Deal 125% damage (5 hits, 25% each)
+   | condition: 30% chance, turns 6-15, hp <= 40
+     | (139:15) Flame Bullet
+     | Deal 125% damage (5 hits, 25% each)
    | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: 30% chance, hp <= 40
-       | (139:15) Flame Bullet
-       | Deal 125% damage (5 hits, 25% each)
+   | condition: 30% chance, hp <= 40
+     | (139:15) Flame Bullet
+     | Deal 125% damage (5 hits, 25% each)

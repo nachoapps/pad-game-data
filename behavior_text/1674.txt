@@ -28,62 +28,48 @@ level: 4
  | Absorb combo <= 5 damage for 99 turns + Void damage >= 10000000 for 6 turns
  group:
  | group:
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: 33% chance, hp <= 100
-       | (9282:110) Rootnir
-       | Specific orbs change every 1.0s for 2 turns, Deal 170% damage
-       | condition: 50% chance, hp <= 100
-       | (9285:83) Bifröst Obligation + Norn's Whim
-       | Change 1st column to Water orbs, 6th column to Wood orbs, Deal 155% damage + Spawn random 1 Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison orbs
-       | (9288:83) Norn's Mischief + Norn Slave
-       | Leader changes to random sub for 1 turns + Change all orbs to Water, Wood, Heal, Deal 180% damage
+   | condition: 33% chance, hp <= 100
+   | (9282:110) Rootnir
+   | Specific orbs change every 1.0s for 2 turns, Deal 170% damage
+   | condition: 50% chance, hp <= 100
+   | (9285:83) Bifröst Obligation + Norn's Whim
+   | Change 1st column to Water orbs, 6th column to Wood orbs, Deal 155% damage + Spawn random 1 Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison orbs
+   | (9288:83) Norn's Mischief + Norn Slave
+   | Leader changes to random sub for 1 turns + Change all orbs to Water, Wood, Heal, Deal 180% damage
  | group:
  | condition: hp <= 59
    | group:
-   | condition: turn 1
-     | group:
-       | (9245:99) Time Stasis
-       | Seal 1st column for 2 turns
+   | condition: turn 1, hp <= 100
+     | (9245:99) Time Stasis
+     | Seal 1st column for 2 turns
    | group:
-   | condition: repeats every 1 turns
-     | group:
-       | (9296:15) Fimbulvetr Form
-       | Deal 600% damage (6 hits, 100% each)
+     | (9296:15) Fimbulvetr Form
+     | Deal 600% damage (6 hits, 100% each)
  | group:
  | condition: hp <= 49
    | group:
-   | condition: turn 1
-     | group:
-       | (9248:83) The cogs of fate are now in motion + Nornil Curse
-       | Voids status ailments for 999 turns + Movetime 50% for 12 turns
+   | condition: turn 1, hp <= 100
+     | (9248:83) The cogs of fate are now in motion + Nornil Curse
+     | Voids status ailments for 999 turns + Movetime 50% for 12 turns
    | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: 33% chance, hp <= 100
-       | (9291:83) Bifröst Obligation + Fighting Maiden's Protection
-       | Change 1st row to Water orbs, 5th row to Wood orbs, Deal 110% damage + Reduce damage from all sources by 50% for 1 turns
-       | condition: 50% chance, hp <= 100
-       | (9294:83) Norn Slave + Time will race on
-       | Change all orbs to Water, Wood, Jammer, Deal 90% damage + Player -99% HP
-       | (9295:15) Form Tein
-       | Deal 120% damage (3 hits, 40% each)
+     | condition: 33% chance, hp <= 100
+     | (9291:83) Bifröst Obligation + Fighting Maiden's Protection
+     | Change 1st row to Water orbs, 5th row to Wood orbs, Deal 110% damage + Reduce damage from all sources by 50% for 1 turns
+     | condition: 50% chance, hp <= 100
+     | (9294:83) Norn Slave + Time will race on
+     | Change all orbs to Water, Wood, Jammer, Deal 90% damage + Player -99% HP
+     | (9295:15) Form Tein
+     | Deal 120% damage (3 hits, 40% each)
  | group:
- | condition: hp <= 9
-   | group:
-   | condition: turn 1
-     | group:
-       | (9251:88) End of Time
-       | Bind awoken skills for 1 turns
+ | condition: turn 1, hp <= 100
+   | (9251:88) End of Time
+   | Bind awoken skills for 1 turns
  | group:
    | group:
-   | condition: turn 1
-     | group:
-       | (9250:83) Healing Scratch + The cogs of fate are now in motion + Nornil Curse
-       | Enemy recover 50% hp + Voids status ailments for 999 turns + Movetime 50% for 12 turns
+   | condition: turn 1, hp <= 100
+     | (9250:83) Healing Scratch + The cogs of fate are now in motion + Nornil Curse
+     | Enemy recover 50% hp + Voids status ailments for 999 turns + Movetime 50% for 12 turns
    | group:
-   | condition: turn 2
-     | group:
-       | (9251:88) End of Time
-       | Bind awoken skills for 1 turns
+   | condition: turn 2, hp <= 100
+     | (9251:88) End of Time
+     | Bind awoken skills for 1 turns

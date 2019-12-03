@@ -20,47 +20,28 @@ level: 4
  | Player -50% HP
  group:
  | group:
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: 40% chance, hp <= 100
-       | (3623:86) Longevity Attack
-       | Enemy recover 10% hp, Deal 90% damage
-       | condition: 40% chance, when required attributes on board, hp <= 100
-       | (3622:92) Single Jet
-       | Spawn random 1 Water orbs, Deal 100% damage
-       | condition: 20% chance, hp <= 100
-       | (3624:53) Secret Plan of the Living Fossil
-       | Absorb Wood damage for 1 turns
+   | condition: 40% chance, hp <= 100
+   | (3623:86) Longevity Attack
+   | Enemy recover 10% hp, Deal 90% damage
+   | condition: 40% chance, when required attributes on board, hp <= 100
+   | (3622:92) Single Jet
+   | Spawn random 1 Water orbs, Deal 100% damage
+   | condition: 20% chance, hp <= 100
+   | (3624:53) Secret Plan of the Living Fossil
+   | Absorb Wood damage for 1 turns
  | group:
- | condition: hp <= 49
-   | group:
-   | condition: turn 1
-     | group:
-       | condition: hp <= 50
-       | (3626:62) Attack from the Deep Sea
-       | Blind all orbs on the board, Deal 150% damage
+ | condition: turn 1, hp <= 50
+   | (3626:62) Attack from the Deep Sea
+   | Blind all orbs on the board, Deal 150% damage
  | group:
- | condition: hp <= 9
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: hp <= 10
-       | (3621:15) Screw Headbutt
-       | Deal 300% damage (3 hits, 100% each)
+ | condition: hp <= 10
+   | (3621:15) Screw Headbutt
+   | Deal 300% damage (3 hits, 100% each)
  | group:
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: hp <= 1
-       | (3602:86) Longevity Invasion
-       | Enemy recover 9% hp, Deal 160% damage
+ | condition: hp <= 1
+   | (3602:86) Longevity Invasion
+   | Enemy recover 9% hp, Deal 160% damage
  type: REMAINING
- condition: when 1 enemies remain
- | group:
-   | group:
-   | condition: turn 1
-     | group:
-       | condition: when 1 enemies remain, hp <= 100
-       | (3613:17) Wind-Up Full Throttle
-       | Increase damage to 200% for the next 999 turns
+ condition: when 1 enemies remain, turn 1, hp <= 100
+ | (3613:17) Wind-Up Full Throttle
+ | Increase damage to 200% for the next 999 turns

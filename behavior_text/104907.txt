@@ -14,34 +14,28 @@ level: 4
  | group:
    | group:
    | condition: repeats every 2 turns
-     | group:
-       | condition: 50% chance, hp <= 100
-       | (11829:65) Rider Scissors
-       | Bind 1 random subs for 5 turns, Deal 80% damage
-       | (11830:50) Rider Return
-       | Player -99% HP
+     | condition: 50% chance, hp <= 100
+     | (11829:65) Rider Scissors
+     | Bind 1 random subs for 5 turns, Deal 80% damage
+     | (11830:50) Rider Return
+     | Player -99% HP
    | group:
    | condition: repeats every 2 turns
-     | group:
-       | condition: 34% chance, hp <= 100
-       | (11715:83) Rider Jump + Rider Kick
-       | Do nothing + Deal 120% damage
-       | condition: 33% chance, hp <= 100
-       | (11716:83) Rider Jump + Rider Punch
-       | Do nothing + Deal 100% damage
-       | condition: 33% chance, hp <= 100
-       | (11717:83) Rider Jump + Rider Chop
-       | Do nothing + Deal 80% damage
+     | condition: 34% chance, hp <= 100
+     | (11715:83) Rider Jump + Rider Kick
+     | Do nothing + Deal 120% damage
+     | condition: 33% chance, hp <= 100
+     | (11716:83) Rider Jump + Rider Punch
+     | Do nothing + Deal 100% damage
+     | condition: 33% chance, hp <= 100
+     | (11717:83) Rider Jump + Rider Chop
+     | Do nothing + Deal 80% damage
  | group:
  | condition: hp <= 19
    | group:
-   | condition: turn 1
-     | group:
-       | condition: when 1 enemies remain, hp <= 100
-       | (11724:17) Rider Power
-       | Increase damage to 150% for the next 5 turns
+   | condition: when 1 enemies remain, turn 1, hp <= 100
+     | (11724:17) Rider Power
+     | Increase damage to 150% for the next 5 turns
    | group:
-   | condition: repeats every 1 turns
-     | group:
-       | (11725:15) Lightning Rider Kick
-       | Deal 200% damage
+     | (11725:15) Lightning Rider Kick
+     | Deal 200% damage

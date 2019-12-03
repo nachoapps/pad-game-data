@@ -3,12 +3,12 @@
     level: 1
     groups {
       group_type: PREEMPT
+      condition {
+        hp_threshold: 100
+        use_chance: 100
+      }
       children {
         behavior {
-          condition {
-            hp_threshold: 100
-            use_chance: 100
-          }
           enemy_skill_id: 13653
         }
       }
@@ -20,26 +20,11 @@
           group_type: STANDARD
           condition {
             hp_threshold: 100
+            use_chance: 100
           }
           children {
-            group {
-              condition {
-                repeats_every: 1
-              }
-              children {
-                group {
-                  group_type: STANDARD
-                  children {
-                    behavior {
-                      condition {
-                        hp_threshold: 100
-                        use_chance: 100
-                      }
-                      enemy_skill_id: 6124
-                    }
-                  }
-                }
-              }
+            behavior {
+              enemy_skill_id: 6124
             }
           }
         }
@@ -53,20 +38,13 @@
           children {
             group {
               condition {
+                hp_threshold: 100
+                use_chance: 100
                 repeats_every: 2
               }
               children {
-                group {
-                  group_type: STANDARD
-                  children {
-                    behavior {
-                      condition {
-                        hp_threshold: 100
-                        use_chance: 100
-                      }
-                      enemy_skill_id: 6127
-                    }
-                  }
+                behavior {
+                  enemy_skill_id: 6127
                 }
               }
             }
@@ -74,20 +52,13 @@
           children {
             group {
               condition {
+                hp_threshold: 100
+                use_chance: 100
                 repeats_every: 2
               }
               children {
-                group {
-                  group_type: STANDARD
-                  children {
-                    behavior {
-                      condition {
-                        hp_threshold: 100
-                        use_chance: 100
-                      }
-                      enemy_skill_id: 6134
-                    }
-                  }
+                behavior {
+                  enemy_skill_id: 6134
                 }
               }
             }
@@ -106,30 +77,25 @@
                 trigger_turn: 1
               }
               children {
-                group {
-                  group_type: STANDARD
-                  children {
-                    behavior {
-                      condition {
-                        hp_threshold: 100
-                        use_chance: 100
-                        trigger_monsters: 2640
-                        trigger_monsters: 2641
-                        trigger_monsters: 2899
-                        trigger_monsters: 2900
-                      }
-                      enemy_skill_id: 13658
-                    }
+                behavior {
+                  condition {
+                    hp_threshold: 100
+                    use_chance: 100
+                    trigger_monsters: 2640
+                    trigger_monsters: 2641
+                    trigger_monsters: 2899
+                    trigger_monsters: 2900
                   }
-                  children {
-                    behavior {
-                      condition {
-                        hp_threshold: 100
-                        use_chance: 100
-                      }
-                      enemy_skill_id: 13656
-                    }
+                  enemy_skill_id: 13658
+                }
+              }
+              children {
+                behavior {
+                  condition {
+                    hp_threshold: 100
+                    use_chance: 100
                   }
+                  enemy_skill_id: 13656
                 }
               }
             }
@@ -137,20 +103,13 @@
           children {
             group {
               condition {
+                hp_threshold: 50
+                use_chance: 100
                 repeats_every: 2
               }
               children {
-                group {
-                  group_type: STANDARD
-                  children {
-                    behavior {
-                      condition {
-                        hp_threshold: 50
-                        use_chance: 100
-                      }
-                      enemy_skill_id: 6133
-                    }
-                  }
+                behavior {
+                  enemy_skill_id: 6133
                 }
               }
             }
@@ -158,20 +117,13 @@
           children {
             group {
               condition {
+                hp_threshold: 50
+                use_chance: 100
                 repeats_every: 2
               }
               children {
-                group {
-                  group_type: STANDARD
-                  children {
-                    behavior {
-                      condition {
-                        hp_threshold: 50
-                        use_chance: 100
-                      }
-                      enemy_skill_id: 6135
-                    }
-                  }
+                behavior {
+                  enemy_skill_id: 6135
                 }
               }
             }
@@ -182,27 +134,12 @@
         group {
           group_type: STANDARD
           condition {
-            hp_threshold: 14
+            hp_threshold: 15
+            use_chance: 100
           }
           children {
-            group {
-              condition {
-                repeats_every: 1
-              }
-              children {
-                group {
-                  group_type: STANDARD
-                  children {
-                    behavior {
-                      condition {
-                        hp_threshold: 15
-                        use_chance: 100
-                      }
-                      enemy_skill_id: 6136
-                    }
-                  }
-                }
-              }
+            behavior {
+              enemy_skill_id: 6136
             }
           }
         }

@@ -12,63 +12,50 @@ level: 1
  | Voids status ailments for 999 turns + Absorb damage >= 2000000 damage for 999 turns + Deal 400% damage (4 hits, 100% each)
  group:
  | group:
-   | group:
-   | condition: turn 1
-     | group:
-       | (4307:83) Summon Vinus + Breath of Compassion
-       | Do nothing + Player recover 100% hp
-   | group:
-   | condition: turn 2
-     | group:
-       | (4308:15) Brilliant World
-       | Deal 1000% damage (2 hits, 500% each)
-   | group:
-   | condition: turn 3
-     | group:
-       | (4309:83) Summon Mineva + Breath of Compassion
-       | Do nothing + Player recover 100% hp
-   | group:
-   | condition: turn 4
-     | group:
-       | (4310:15) Celestial Prison's Scorching Heat
-       | Deal 1250% damage (5 hits, 250% each)
-   | group:
-   | condition: turn 5
-     | group:
-       | (4311:83) Summon Seres + Breath of Compassion
-       | Do nothing + Player recover 100% hp
-   | group:
-   | condition: turn 6
-     | group:
-       | (4312:15) Soul Burst
-       | Deal 1500% damage (3 hits, 500% each)
-   | group:
-   | condition: turn 7
-     | group:
-       | (4313:83) Summon Neptunus + Breath of Compassion
-       | Do nothing + Player recover 100% hp
-   | group:
-   | condition: turn 8
-     | group:
-       | (4314:15) Abysstrom
-       | Deal 1760% damage (4 hits, 440% each)
-   | group:
-   | condition: turn 9
-     | group:
-       | (4315:83) Summon Ades + Breath of Compassion
-       | Do nothing + Player recover 100% hp
-   | group:
-   | condition: turn 10
-     | group:
-       | (4316:15) Death Scythe
-       | Deal 2100% damage (6 hits, 350% each)
-   | group:
-   | condition: repeats every 2 turns
-     | group:
-       | (4317:66) Gathering Magical Power
-       | Do nothing
-   | group:
-   | condition: repeats every 2 turns
-     | group:
-       | (4351:83) Dark Eyes + Ultra Graviton Breath
-       | Voids player buff effects + Deal 3000% damage (10 hits, 300% each)
+ | condition: turn 1, hp <= 100
+   | (4307:83) Summon Vinus + Breath of Compassion
+   | Do nothing + Player recover 100% hp
+ | group:
+ | condition: turn 2, hp <= 100
+   | (4308:15) Brilliant World
+   | Deal 1000% damage (2 hits, 500% each)
+ | group:
+ | condition: turn 3, hp <= 100
+   | (4309:83) Summon Mineva + Breath of Compassion
+   | Do nothing + Player recover 100% hp
+ | group:
+ | condition: turn 4, hp <= 100
+   | (4310:15) Celestial Prison's Scorching Heat
+   | Deal 1250% damage (5 hits, 250% each)
+ | group:
+ | condition: turn 5, hp <= 100
+   | (4311:83) Summon Seres + Breath of Compassion
+   | Do nothing + Player recover 100% hp
+ | group:
+ | condition: turn 6, hp <= 100
+   | (4312:15) Soul Burst
+   | Deal 1500% damage (3 hits, 500% each)
+ | group:
+ | condition: turn 7, hp <= 100
+   | (4313:83) Summon Neptunus + Breath of Compassion
+   | Do nothing + Player recover 100% hp
+ | group:
+ | condition: turn 8, hp <= 100
+   | (4314:15) Abysstrom
+   | Deal 1760% damage (4 hits, 440% each)
+ | group:
+ | condition: turn 9, hp <= 100
+   | (4315:83) Summon Ades + Breath of Compassion
+   | Do nothing + Player recover 100% hp
+ | group:
+ | condition: turn 10, hp <= 100
+   | (4316:15) Death Scythe
+   | Deal 2100% damage (6 hits, 350% each)
+ | group:
+ | condition: repeats every 2 turns, hp <= 100
+   | (4317:66) Gathering Magical Power
+   | Do nothing
+ | group:
+ | condition: repeats every 2 turns, hp <= 100
+   | (4351:83) Dark Eyes + Ultra Graviton Breath
+   | Voids player buff effects + Deal 3000% damage (10 hits, 300% each)

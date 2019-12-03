@@ -12,16 +12,10 @@ level: 1
  | Absorb Fire damage for 3 turns
  group:
  | group:
-   | group:
-   | condition: turn 1
-     | group:
-       | (4743:39) I'm seeing through your game!
-       | Movetime -1s for 1 turns
+ | condition: turn 1, hp <= 100
+   | (4743:39) I'm seeing through your game!
+   | Movetime -1s for 1 turns
  | group:
- | condition: hp <= 9
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: hp <= 10
-       | (4744:89) Loud Voice of Revelation
-       | Delay active skills by 1 turns
+ | condition: hp <= 10
+   | (4744:89) Loud Voice of Revelation
+   | Delay active skills by 1 turns

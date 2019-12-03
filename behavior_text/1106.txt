@@ -13,22 +13,16 @@ level: 1
  group:
  | group:
    | group:
-   | condition: turns 1-4
-     | group:
-       | (1544:64) Poison Bouquet
-       | Change Random 5 to Poison, Deal 80% damage
+   | condition: turns 1-4, hp <= 100
+     | (1544:64) Poison Bouquet
+     | Change Random 5 to Poison, Deal 80% damage
    | group:
-   | condition: repeats every 1 turns
-     | group:
-       | (1543:48) Kiss of Death
-       | Change Random to Heal, Deal 400% damage
+     | (1543:48) Kiss of Death
+     | Change Random to Heal, Deal 400% damage
  | group:
- | condition: hp <= 29
-   | group:
-   | condition: turn 1
-     | group:
-       | condition: hp <= 30
-       | (1541:14) Serpent's Temptation
-       | Bind active skills for 5 turns
-       | (1544:64) Poison Bouquet
-       | Change Random 5 to Poison, Deal 80% damage
+ | condition: turn 1, hp <= 29
+   | condition: hp <= 30
+   | (1541:14) Serpent's Temptation
+   | Bind active skills for 5 turns
+   | (1544:64) Poison Bouquet
+   | Change Random 5 to Poison, Deal 80% damage

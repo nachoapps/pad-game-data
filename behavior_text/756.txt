@@ -12,21 +12,14 @@ level: 1
  | Player -99% HP
  group:
  | group:
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | (772:48) Searing Shot
-       | Change Random to Dark, Deal 100% damage
+   | (772:48) Searing Shot
+   | Change Random to Dark, Deal 100% damage
  | group:
  | condition: hp <= 49
    | group:
-   | condition: turn 1
-     | group:
-       | condition: hp <= 50
-       | (773:1) Snake Eye Curse
-       | Bind 6 random cards for 1 turns
+   | condition: turn 1, hp <= 50
+     | (773:1) Snake Eye Curse
+     | Bind 6 random cards for 1 turns
    | group:
-   | condition: repeats every 1 turns
-     | group:
-       | (774:15) Snake King Searing Strike
-       | Deal 3000% damage
+     | (774:15) Snake King Searing Strike
+     | Deal 3000% damage

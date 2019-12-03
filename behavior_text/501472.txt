@@ -12,30 +12,23 @@ level: 1
  | Reduce damage from all sources by 75% for 3 turns
  group:
  | group:
-   | group:
-   | condition: turn 1
-     | group:
-       | (1273:48) Howling Gust
-       | Change Fire to Jammer, Deal 100% damage
-       | (1279:48) Howling Gust
-       | Change Random to Jammer, Deal 100% damage
-   | group:
-   | condition: turn 2
-     | group:
-       | (1274:15) Wild Talon Rake
-       | Deal 200% damage (4 hits, 50% each)
-   | group:
-   | condition: turn 3
-     | group:
-       | (1275:63) Tornado Seal
-       | Bind 4 random subs for 1~2 turns, Deal 80% damage
-   | group:
-   | condition: turn 4
-     | group:
-       | (1276:66) Temporary Calm
-       | Do nothing
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | (1277:15) World-Wrecking Windstorm
-       | Deal 2500% damage (5 hits, 500% each)
+ | condition: turn 1
+   | (1273:48) Howling Gust
+   | Change Fire to Jammer, Deal 100% damage
+   | (1279:48) Howling Gust
+   | Change Random to Jammer, Deal 100% damage
+ | group:
+ | condition: turn 2, hp <= 100
+   | (1274:15) Wild Talon Rake
+   | Deal 200% damage (4 hits, 50% each)
+ | group:
+ | condition: turn 3, hp <= 100
+   | (1275:63) Tornado Seal
+   | Bind 4 random subs for 1~2 turns, Deal 80% damage
+ | group:
+ | condition: turn 4, hp <= 100
+   | (1276:66) Temporary Calm
+   | Do nothing
+ | group:
+   | (1277:15) World-Wrecking Windstorm
+   | Deal 2500% damage (5 hits, 500% each)

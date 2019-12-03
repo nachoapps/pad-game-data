@@ -14,39 +14,30 @@ level: 1
  | (11124:68) Come and kill some time
  | Jammer skyfall +15% for 10 turns
  type: DEATH
- | condition: when defeated, hp <= 100
+ condition: when defeated, hp <= 100
  | (11135:95) unknown_name
  | 
  group:
  | group:
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: 33% chance, hp <= 100
-       | (11127:102) Entertain me!
-       | Spawn random 4 Bomb orbs, Deal 90% damage
-       | condition: 33% chance, hp <= 100
-       | (11128:89) This is going to get difficult
-       | Delay active skills by 2 turns, Deal 100% damage
-       | condition: 34% chance, hp <= 100
-       | (11129:15) Can you go on?
-       | Deal 105% damage (3 hits, 35% each)
+   | condition: 33% chance, hp <= 100
+   | (11127:102) Entertain me!
+   | Spawn random 4 Bomb orbs, Deal 90% damage
+   | condition: 33% chance, hp <= 100
+   | (11128:89) This is going to get difficult
+   | Delay active skills by 2 turns, Deal 100% damage
+   | condition: 34% chance, hp <= 100
+   | (11129:15) Can you go on?
+   | Deal 105% damage (3 hits, 35% each)
  | group:
- | condition: hp <= 49
-   | group:
-   | condition: turn 1
-     | group:
-       | (11130:83) That one was effective... + I'll return the favor
-       | Absorb combo <= 5 damage for 999 turns + Player -99% HP
+ | condition: turn 1, hp <= 100
+   | (11130:83) That one was effective... + I'll return the favor
+   | Absorb combo <= 5 damage for 999 turns + Player -99% HP
  | group:
  | condition: hp <= 19
    | group:
-   | condition: turn 1
-     | group:
-       | (11133:74) Give me a break!
-       | Reduce damage from all sources by 50% for 10 turns
+   | condition: turn 1, hp <= 100
+     | (11133:74) Give me a break!
+     | Reduce damage from all sources by 50% for 10 turns
    | group:
-   | condition: repeats every 1 turns
-     | group:
-       | (11134:15) Sorry but I've had enough now
-       | Deal 240% damage (4 hits, 60% each)
+     | (11134:15) Sorry but I've had enough now
+     | Deal 240% damage (4 hits, 60% each)

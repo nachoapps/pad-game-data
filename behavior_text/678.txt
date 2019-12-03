@@ -9,24 +9,16 @@ approved: False
 level: 1
  group:
  | group:
- | condition: hp <= 74
-   | group:
-   | condition: turn 1
-     | group:
-       | condition: hp <= 75
-       | (288:3) Poison Mist
-       | Bind God cards for 3~4 turns
+ | condition: turn 1, hp <= 75
+   | (288:3) Poison Mist
+   | Bind God cards for 3~4 turns
  | group:
  | condition: hp <= 49
    | group:
-   | condition: turn 1
-     | group:
-       | condition: hp <= 75
-       | (288:3) Poison Mist
-       | Bind God cards for 3~4 turns
+   | condition: turn 1, hp <= 75
+     | (288:3) Poison Mist
+     | Bind God cards for 3~4 turns
    | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: 50% chance, hp <= 50
-       | (287:15) Konohasakuya
-       | Deal 150% damage (3 hits, 50% each)
+   | condition: 50% chance, hp <= 50
+     | (287:15) Konohasakuya
+     | Deal 150% damage (3 hits, 50% each)

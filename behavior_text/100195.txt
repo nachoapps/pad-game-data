@@ -8,13 +8,10 @@ approved: False
 
 level: 1
  type: PREEMPT
- | condition: when required attributes on board, hp <= 100
+ condition: when required attributes on board, hp <= 100
  | (9352:92) Tiny Poison
  | Spawn random 1 Poison orbs, Deal 10% damage
  group:
- | group:
-   | group:
-   | condition: repeats every 4 turns
-     | group:
-       | (131:19) Anger
-       | Increase damage to 130% for the next 3 turns
+ condition: repeats every 4 turns, hp <= 100
+ | (131:19) Anger
+ | Increase damage to 130% for the next 3 turns

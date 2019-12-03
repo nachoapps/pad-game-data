@@ -12,13 +12,10 @@ level: 1
  | Do nothing
  group:
  | group:
-   | group:
-   | condition: repeats every 2 turns
-     | group:
-       | (13214:66) It's so good TAMA!
-       | Do nothing
-   | group:
-   | condition: repeats every 2 turns
-     | group:
-       | (13213:66) Thank you for waiting TAMA!
-       | Do nothing
+ | condition: repeats every 2 turns, hp <= 100
+   | (13214:66) It's so good TAMA!
+   | Do nothing
+ | group:
+ | condition: repeats every 2 turns, hp <= 100
+   | (13213:66) Thank you for waiting TAMA!
+   | Do nothing

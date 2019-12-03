@@ -8,7 +8,7 @@ approved: False
 
 level: 1
  type: DEATH
- | condition: when defeated, hp <= 100
+ condition: when defeated, hp <= 100
  | (14888:95) SHRIEK!
  | Do nothing
 
@@ -17,38 +17,28 @@ level: 4
  | (14889:83) Battle mode + Energy gathers...
  | Voids status ailments for 999 turns + Locked Wood skyfall +100% for 99 turns
  type: DEATH
- | condition: when defeated, hp <= 100
+ condition: when defeated, hp <= 100
  | (14888:95) SHRIEK!
  | Do nothing
  group:
  | group:
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: 50% chance, hp <= 100
-       | (14892:50) Thunder Breath
-       | Player -99% HP
-       | condition: 50% chance, hp <= 100
-       | (14884:48) Dragon Stomp
-       | Change Random to Wood, Deal 90% damage
+   | condition: 50% chance, hp <= 100
+   | (14892:50) Thunder Breath
+   | Player -99% HP
+   | condition: 50% chance, hp <= 100
+   | (14884:48) Dragon Stomp
+   | Change Random to Wood, Deal 90% damage
  | group:
  | condition: hp <= 50
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: 50% chance, hp <= 100
-       | (14885:101) ROAR!
-       | Fix orb movement starting point to random position on the board, Deal 100% damage
-       | condition: 50% chance, hp <= 100
-       | (14892:50) Thunder Breath
-       | Player -99% HP
-       | condition: 50% chance, hp <= 100
-       | (14884:48) Dragon Stomp
-       | Change Random to Wood, Deal 90% damage
+   | condition: 50% chance, hp <= 100
+   | (14885:101) ROAR!
+   | Fix orb movement starting point to random position on the board, Deal 100% damage
+   | condition: 50% chance, hp <= 100
+   | (14892:50) Thunder Breath
+   | Player -99% HP
+   | condition: 50% chance, hp <= 100
+   | (14884:48) Dragon Stomp
+   | Change Random to Wood, Deal 90% damage
  | group:
- | condition: hp <= 19
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | (14886:15) Planet-Destroying Thunder Breath
-       | Deal 300% damage (3 hits, 100% each)
+   | (14886:15) Planet-Destroying Thunder Breath
+   | Deal 300% damage (3 hits, 100% each)

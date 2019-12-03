@@ -9,13 +9,9 @@ approved: False
 level: 5
  group:
  | group:
-   | group:
-   | condition: turns 1-5
-     | group:
-       | (1337:66) …
-       | Do nothing
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | (1338:15) Take that!
-       | Deal 400% damage (4 hits, 100% each)
+ | condition: turns 1-5, hp <= 100
+   | (1337:66) …
+   | Do nothing
+ | group:
+   | (1338:15) Take that!
+   | Deal 400% damage (4 hits, 100% each)

@@ -12,16 +12,10 @@ level: 5
  | Change Random 2 to Jammer
  group:
  | group:
-   | group:
-   | condition: repeats every 2 turns
-     | group:
-       | (1578:50) Pummel
-       | Player -99% HP
+ | condition: repeats every 2 turns, hp <= 100
+   | (1578:50) Pummel
+   | Player -99% HP
  | group:
- | condition: hp <= 24
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: hp <= 25
-       | (1577:15) Explode
-       | Deal 200% damage
+ | condition: hp <= 25
+   | (1577:15) Explode
+   | Deal 200% damage

@@ -12,13 +12,9 @@ level: 1
  | Voids status ailments for 999 turns
  group:
  | group:
-   | group:
-   | condition: turn 1
-     | group:
-       | (354:16) Charging Energy
-       | Do nothing
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | (351:15) Critical Rejection
-       | Deal 300% damage (3 hits, 100% each)
+ | condition: turn 1, hp <= 100
+   | (354:16) Charging Energy
+   | Do nothing
+ | group:
+   | (351:15) Critical Rejection
+   | Deal 300% damage (3 hits, 100% each)

@@ -12,24 +12,19 @@ level: 3
  | Player -99% HP
  group:
  | group:
-   | group:
-   | condition: repeats every 2 turns
-     | group:
-       | (1689:48) Blaze Horn
-       | Change Random to Fire, Deal 85% damage
+ | condition: repeats every 2 turns, hp <= 100
+   | (1689:48) Blaze Horn
+   | Change Random to Fire, Deal 85% damage
  | group:
  | condition: hp <= 49
    | group:
    | condition: repeats every 2 turns
-     | group:
-       | condition: 50% chance, hp <= 50
-       | (1690:15) Gigantic Claw
-       | Deal 150% damage (2 hits, 75% each)
-       | (1689:48) Blaze Horn
-       | Change Random to Fire, Deal 85% damage
+     | condition: 50% chance, hp <= 50
+     | (1690:15) Gigantic Claw
+     | Deal 150% damage (2 hits, 75% each)
+     | (1689:48) Blaze Horn
+     | Change Random to Fire, Deal 85% damage
    | group:
-   | condition: repeats every 2 turns
-     | group:
-       | condition: 50% chance, hp <= 50
-       | (1690:15) Gigantic Claw
-       | Deal 150% damage (2 hits, 75% each)
+   | condition: 50% chance, repeats every 2 turns, hp <= 50
+     | (1690:15) Gigantic Claw
+     | Deal 150% damage (2 hits, 75% each)

@@ -13,71 +13,57 @@ level: 4
  group:
  | group:
    | group:
-   | condition: turn 1
-     | group:
-       | (10359:107) Blue Exception
-       | Unable to match Water orbs for 3 turns, Deal 100% damage
+   | condition: turn 1, hp <= 100
+     | (10359:107) Blue Exception
+     | Unable to match Water orbs for 3 turns, Deal 100% damage
    | group:
    | condition: repeats every 3 turns
-     | group:
-       | condition: 25% chance, hp <= 100
-       | (10363:48) Wind Pillar
-       | Change Random to Wood, Deal 110% damage
-       | condition: 25% chance, hp <= 100
-       | (10364:77) Double Vertical Slash
-       | Change 1st, 6th column to Wood, Light orbs, Deal 105% damage
-       | condition: 25% chance, hp <= 100
-       | (10365:79) Double Vertical Slash
-       | Change 1st, 5th row to Wood, Light orbs, Deal 105% damage
-       | condition: 25% chance, hp <= 100
-       | (10366:15) Forceful Rush
-       | Deal 120% damage (4 hits, 30% each)
+     | condition: 25% chance, hp <= 100
+     | (10363:48) Wind Pillar
+     | Change Random to Wood, Deal 110% damage
+     | condition: 25% chance, hp <= 100
+     | (10364:77) Double Vertical Slash
+     | Change 1st, 6th column to Wood, Light orbs, Deal 105% damage
+     | condition: 25% chance, hp <= 100
+     | (10365:79) Double Vertical Slash
+     | Change 1st, 5th row to Wood, Light orbs, Deal 105% damage
+     | condition: 25% chance, hp <= 100
+     | (10366:15) Forceful Rush
+     | Deal 120% damage (4 hits, 30% each)
    | group:
-   | condition: repeats every 3 turns
-     | group:
-       | (10362:85) Wind Enclosure
-       | Change all orbs to Wood, Light, Dark, Heal, Deal 120% damage
+   | condition: repeats every 3 turns, hp <= 100
+     | (10362:85) Wind Enclosure
+     | Change all orbs to Wood, Light, Dark, Heal, Deal 120% damage
  | group:
- | condition: hp <= 14
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | (10370:15) Double Slash
-       | Deal 180% damage (2 hits, 90% each)
+   | (10370:15) Double Slash
+   | Deal 180% damage (2 hits, 90% each)
  type: REMAINING
- condition: when 2 enemies remain
+ condition: when 2 enemies remain, hp <= 100
  | group:
-   | group:
-   | condition: repeats every 3 turns
-     | group:
-       | condition: 25% chance, hp <= 100
-       | (10363:48) Wind Pillar
-       | Change Random to Wood, Deal 110% damage
-       | condition: 25% chance, hp <= 100
-       | (10364:77) Double Vertical Slash
-       | Change 1st, 6th column to Wood, Light orbs, Deal 105% damage
-       | condition: 25% chance, hp <= 100
-       | (10365:79) Double Vertical Slash
-       | Change 1st, 5th row to Wood, Light orbs, Deal 105% damage
-       | condition: 25% chance, hp <= 100
-       | (10366:15) Forceful Rush
-       | Deal 120% damage (4 hits, 30% each)
-   | group:
-   | condition: repeats every 3 turns
-     | group:
-       | condition: when required attributes on board, hp <= 100
-       | (10360:92) Double Burying
-       | Spawn random 6 Wood orbs, Deal 110% damage
+ | condition: repeats every 3 turns
+   | condition: 25% chance, hp <= 100
+   | (10363:48) Wind Pillar
+   | Change Random to Wood, Deal 110% damage
+   | condition: 25% chance, hp <= 100
+   | (10364:77) Double Vertical Slash
+   | Change 1st, 6th column to Wood, Light orbs, Deal 105% damage
+   | condition: 25% chance, hp <= 100
+   | (10365:79) Double Vertical Slash
+   | Change 1st, 5th row to Wood, Light orbs, Deal 105% damage
+   | condition: 25% chance, hp <= 100
+   | (10366:15) Forceful Rush
+   | Deal 120% damage (4 hits, 30% each)
+ | group:
+ | condition: repeats every 3 turns, when required attributes on board, hp <= 100
+   | (10360:92) Double Burying
+   | Spawn random 6 Wood orbs, Deal 110% damage
  type: REMAINING
- condition: when 1 enemies remain
+ condition: when 1 enemies remain, hp <= 100
  | group:
-   | group:
-   | condition: turn 1
-     | group:
-       | (10359:107) Blue Exception
-       | Unable to match Water orbs for 3 turns, Deal 100% damage
-   | group:
-   | condition: turn 2
-     | group:
-       | (10369:83) All Restrain + Serene Zephyr
-       | Bind 6 random cards for 1 turns + Increase damage to 200% for the next 99 turns
+ | condition: turn 1, hp <= 100
+   | (10359:107) Blue Exception
+   | Unable to match Water orbs for 3 turns, Deal 100% damage
+ | group:
+ | condition: turn 2, hp <= 100
+   | (10369:83) All Restrain + Serene Zephyr
+   | Bind 6 random cards for 1 turns + Increase damage to 200% for the next 99 turns

@@ -3,6 +3,22 @@
     level: 3
     groups {
       group_type: PREEMPT
+      condition {
+        hp_threshold: 100
+        use_chance: 100
+        if_attributes_available: true
+      }
+      children {
+        behavior {
+          enemy_skill_id: 4258
+        }
+      }
+    }
+    groups {
+      group_type: STANDARD
+      condition {
+        hp_threshold: 100
+      }
       children {
         behavior {
           condition {
@@ -10,49 +26,16 @@
             use_chance: 100
             if_attributes_available: true
           }
-          enemy_skill_id: 4258
+          enemy_skill_id: 4253
         }
       }
-    }
-    groups {
-      group_type: STANDARD
       children {
-        group {
-          group_type: STANDARD
+        behavior {
           condition {
             hp_threshold: 100
+            use_chance: 100
           }
-          children {
-            group {
-              condition {
-                repeats_every: 1
-              }
-              children {
-                group {
-                  group_type: STANDARD
-                  children {
-                    behavior {
-                      condition {
-                        hp_threshold: 100
-                        use_chance: 100
-                        if_attributes_available: true
-                      }
-                      enemy_skill_id: 4253
-                    }
-                  }
-                  children {
-                    behavior {
-                      condition {
-                        hp_threshold: 100
-                        use_chance: 100
-                      }
-                      enemy_skill_id: 4257
-                    }
-                  }
-                }
-              }
-            }
-          }
+          enemy_skill_id: 4257
         }
       }
     }

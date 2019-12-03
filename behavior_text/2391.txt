@@ -12,23 +12,17 @@ level: 1
  | Rcv 50% for 6 turns + Reduce damage from all sources by 75% for 6 turns + Player -99% HP
  group:
  | group:
-   | group:
-   | condition: turn 1
-     | group:
-       | (7759:83) Ark Protection + Dusky Glimmer + Hope on the Horizon
-       | Voids status ailments for 999 turns + Change all orbs to Water, Deal 100% damage + Specific orbs change every 2.0s for 5 turns
-   | group:
-   | condition: turn 2
-     | group:
-       | (7763:83) Dusky Glimmer + Judgment Rain
-       | Change all orbs to Water, Deal 100% damage + Jammer skyfall +20% for 3 turns
-   | group:
-   | condition: turn 3
-     | group:
-       | (7765:83) Dusky Glimmer + Calvary Rain
-       | Change all orbs to Water, Deal 100% damage + Locked random skyfall +100% for 1 turns
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | (7767:15) Punishment Bolt
-       | Deal 2000% damage (2 hits, 1000% each)
+ | condition: turn 1, hp <= 100
+   | (7759:83) Ark Protection + Dusky Glimmer + Hope on the Horizon
+   | Voids status ailments for 999 turns + Change all orbs to Water, Deal 100% damage + Specific orbs change every 2.0s for 5 turns
+ | group:
+ | condition: turn 2, hp <= 100
+   | (7763:83) Dusky Glimmer + Judgment Rain
+   | Change all orbs to Water, Deal 100% damage + Jammer skyfall +20% for 3 turns
+ | group:
+ | condition: turn 3, hp <= 100
+   | (7765:83) Dusky Glimmer + Calvary Rain
+   | Change all orbs to Water, Deal 100% damage + Locked random skyfall +100% for 1 turns
+ | group:
+   | (7767:15) Punishment Bolt
+   | Deal 2000% damage (2 hits, 1000% each)

@@ -13,65 +13,49 @@ level: 1
  group:
  | group:
    | group:
-   | condition: turn 1
-     | group:
-       | (13085:83) I'll keep everything under strict control + I won't forgive any mistakes!
-       | Voids status ailments for 999 turns + Bind 1 random subs for 4 turns, Deal 150% damage
+   | condition: turn 1, hp <= 100
+     | (13085:83) I'll keep everything under strict control + I won't forgive any mistakes!
+     | Voids status ailments for 999 turns + Bind 1 random subs for 4 turns, Deal 150% damage
    | group:
-   | condition: turn 2
-     | group:
-       | (13086:104) Do you have any probem?
-       | 2x2 cloud appear for 1 turns at random location, Deal 140% damage
+   | condition: turn 2, hp <= 100
+     | (13086:104) Do you have any probem?
+     | 2x2 cloud appear for 1 turns at random location, Deal 140% damage
    | group:
-   | condition: turn 3
-     | group:
-       | (13087:98) What's this?
-       | Blind orbs in specific positions for 1 turns, Deal 140% damage
+   | condition: turn 3, hp <= 100
+     | (13087:98) What's this?
+     | Blind orbs in specific positions for 1 turns, Deal 140% damage
    | group:
-   | condition: turn 4
-     | group:
-       | (13088:86) Closing eyes and thinking...
-       | Enemy recover 100% hp
+   | condition: turn 4, hp <= 100
+     | (13088:86) Closing eyes and thinking...
+     | Enemy recover 100% hp
    | group:
-   | condition: turn 5
-     | group:
-       | (13089:86) Ummm
-       | Enemy recover 20% hp
+   | condition: turn 5, hp <= 100
+     | (13089:86) Ummm
+     | Enemy recover 20% hp
    | group:
-   | condition: turn 6
-     | group:
-       | (13090:86) Humm!
-       | Enemy recover 20% hp
+   | condition: turn 6, hp <= 100
+     | (13090:86) Humm!
+     | Enemy recover 20% hp
    | group:
-   | condition: turn 7
-     | group:
-       | (13094:83) Beep! + Let's forget for this time!
-       | Do nothing + Do nothing
+   | condition: turn 7, hp <= 100
+     | (13094:83) Beep! + Let's forget for this time!
+     | Do nothing + Do nothing
    | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: 50% chance, hp <= 100
-       | (13100:104) Disciplinary Committee Dash
-       | 1x3 cloud appear for 1 turns at random location, Deal 140% damage
-       | (13101:98) Disciplinary Committee Spear
-       | Blind orbs in specific positions for 1 turns, Deal 140% damage
+     | condition: 50% chance, hp <= 100
+     | (13100:104) Disciplinary Committee Dash
+     | 1x3 cloud appear for 1 turns at random location, Deal 140% damage
+     | (13101:98) Disciplinary Committee Spear
+     | Blind orbs in specific positions for 1 turns, Deal 140% damage
  | group:
- | condition: hp <= 98
-   | group:
-   | condition: turn 7
-     | group:
-       | condition: hp <= 99
-       | (13095:83) Beep! + Penalty!
-       | Do nothing + Increase damage to 150% for the next 999 turns
+ | condition: turn 7, hp <= 99
+   | (13095:83) Beep! + Penalty!
+   | Do nothing + Increase damage to 150% for the next 999 turns
  | group:
  | condition: hp <= 19
    | group:
-   | condition: turn 5
-     | group:
-       | (13103:83) I can't miss that! + I'll correct this!
-       | Reduce damage from all sources by 75% for 3 turns + Increase damage to 200% for the next 999 turns
+   | condition: turn 5, hp <= 100
+     | (13103:83) I can't miss that! + I'll correct this!
+     | Reduce damage from all sources by 75% for 3 turns + Increase damage to 200% for the next 999 turns
    | group:
-   | condition: repeats every 1 turns
-     | group:
-       | (13099:15) Undisciplined Burst
-       | Deal 900% damage (3 hits, 300% each)
+     | (13099:15) Undisciplined Burst
+     | Deal 900% damage (3 hits, 300% each)

@@ -12,13 +12,9 @@ level: 1
  | Absorb Dark damage for 3 turns
  group:
  | group:
-   | group:
-   | condition: turns 1-2
-     | group:
-       | (939:15) Punch
-       | Deal 100% damage
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | (920:15) Hand of Destruction
-       | Deal 1000% damage (2 hits, 500% each)
+ | condition: turns 1-2, hp <= 100
+   | (939:15) Punch
+   | Deal 100% damage
+ | group:
+   | (920:15) Hand of Destruction
+   | Deal 1000% damage (2 hits, 500% each)

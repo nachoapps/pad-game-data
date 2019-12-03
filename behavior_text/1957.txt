@@ -20,42 +20,28 @@ level: 5
  | Bind active skills for 2 turns
  group:
  | group:
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | (2054:48) Surreptitious Snack
-       | Change Fire to Jammer, Deal 150% damage
+   | (2054:48) Surreptitious Snack
+   | Change Fire to Jammer, Deal 150% damage
  | group:
  | condition: hp <= 49
    | group:
-   | condition: repeats every 2 turns
-     | group:
-       | condition: hp <= 50
-       | (2055:77) Flame Meow Slash
-       | Change 4th, 6th column to Fire orbs, Deal 300% damage
+   | condition: repeats every 2 turns, hp <= 50
+     | (2055:77) Flame Meow Slash
+     | Change 4th, 6th column to Fire orbs, Deal 300% damage
    | group:
-   | condition: repeats every 2 turns
-     | group:
-       | (2054:48) Surreptitious Snack
-       | Change Fire to Jammer, Deal 150% damage
+   | condition: repeats every 2 turns, hp <= 100
+     | (2054:48) Surreptitious Snack
+     | Change Fire to Jammer, Deal 150% damage
  | group:
- | condition: hp <= 29
-   | group:
-   | condition: turn 1
-     | group:
-       | condition: hp <= 30
-       | (2056:85) Lick Lick Meow!
-       | Change all orbs to Fire, Deal 200% damage
+ | condition: turn 1, hp <= 30
+   | (2056:85) Lick Lick Meow!
+   | Change all orbs to Fire, Deal 200% damage
  | group:
    | group:
-   | condition: turn 1
-     | group:
-       | condition: hp <= 1
-       | (2092:63) 9 Lives!
-       | Bind 6 random cards for 1 turns, Deal 200% damage
+   | condition: turn 1, hp <= 1
+     | (2092:63) 9 Lives!
+     | Bind 6 random cards for 1 turns, Deal 200% damage
    | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: hp <= 1
-       | (2052:15) Irritated Swat
-       | Deal 1000% damage
+   | condition: hp <= 1
+     | (2052:15) Irritated Swat
+     | Deal 1000% damage

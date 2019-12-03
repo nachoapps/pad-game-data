@@ -12,58 +12,43 @@ level: 4
  | Voids status ailments for 999 turns
  group:
  | group:
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: 20% chance, hp <= 100
-       | (3423:63) Play-Bite
-       | Bind 1 random subs for 2 turns, Deal 50% damage
-       | condition: 35% chance, hp <= 100
-       | (3426:15) Slash Woof
-       | Deal 110% damage
-       | condition: 35% chance, hp <= 100
-       | (3530:77) Warming Beam
-       | Change 3rd column to Wood orbs, Deal 100% damage
-       | condition: 10% chance, hp <= 100
-       | (3424:5) Dig a Hole
-       | Blind all orbs on the board
+   | condition: 20% chance, hp <= 100
+   | (3423:63) Play-Bite
+   | Bind 1 random subs for 2 turns, Deal 50% damage
+   | condition: 35% chance, hp <= 100
+   | (3426:15) Slash Woof
+   | Deal 110% damage
+   | condition: 35% chance, hp <= 100
+   | (3530:77) Warming Beam
+   | Change 3rd column to Wood orbs, Deal 100% damage
+   | condition: 10% chance, hp <= 100
+   | (3424:5) Dig a Hole
+   | Blind all orbs on the board
  | group:
- | condition: hp <= 69
-   | group:
-   | condition: turn 1
-     | group:
-       | condition: hp <= 70
-       | (3425:74) Stay
-       | Reduce damage from all sources by 30% for 5 turns
+ | condition: turn 1, hp <= 70
+   | (3425:74) Stay
+   | Reduce damage from all sources by 30% for 5 turns
  | group:
  | condition: hp <= 9
    | group:
-   | condition: repeats every 2 turns
-     | group:
-       | condition: hp <= 10
-       | (3428:50) Wonder Bark
-       | Player -100% HP
+   | condition: repeats every 2 turns, hp <= 10
+     | (3428:50) Wonder Bark
+     | Player -100% HP
    | group:
    | condition: repeats every 2 turns
-     | group:
-       | condition: 20% chance, hp <= 100
-       | (3423:63) Play-Bite
-       | Bind 1 random subs for 2 turns, Deal 50% damage
-       | condition: 35% chance, hp <= 100
-       | (3426:15) Slash Woof
-       | Deal 110% damage
-       | condition: 35% chance, hp <= 100
-       | (3530:77) Warming Beam
-       | Change 3rd column to Wood orbs, Deal 100% damage
-       | condition: 10% chance, hp <= 100
-       | (3424:5) Dig a Hole
-       | Blind all orbs on the board
+     | condition: 20% chance, hp <= 100
+     | (3423:63) Play-Bite
+     | Bind 1 random subs for 2 turns, Deal 50% damage
+     | condition: 35% chance, hp <= 100
+     | (3426:15) Slash Woof
+     | Deal 110% damage
+     | condition: 35% chance, hp <= 100
+     | (3530:77) Warming Beam
+     | Change 3rd column to Wood orbs, Deal 100% damage
+     | condition: 10% chance, hp <= 100
+     | (3424:5) Dig a Hole
+     | Blind all orbs on the board
  type: REMAINING
- condition: when 1 enemies remain
- | group:
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: when 1 enemies remain, hp <= 100
-       | (3422:52) Friendly Thought
-       | Enemy ally recover 45% hp
+ condition: when 1 enemies remain, hp <= 100
+ | (3422:52) Friendly Thought
+ | Enemy ally recover 45% hp

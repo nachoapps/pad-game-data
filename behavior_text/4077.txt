@@ -8,7 +8,7 @@ approved: False
 
 level: 1
  type: DEATH
- | condition: when defeated, hp <= 100
+ condition: when defeated, hp <= 100
  | (8625:95) Aaaaaaaaah!
  | Do nothing
 
@@ -23,40 +23,35 @@ level: 4
  | (8608:68) Let's go!
  | Jammer skyfall +15% for 3 turns
  type: DEATH
- | condition: when defeated, hp <= 100
+ condition: when defeated, hp <= 100
  | (8625:95) Aaaaaaaaah!
  | Do nothing
  group:
  | group:
    | group:
    | condition: repeats every 4 turns
-     | group:
-       | condition: 33% chance, hp <= 100
-       | (8617:83) 114 Shiki: Aragami + 128 Shiki: Konokizu
-       | Change 2nd row to Fire orbs, Deal 30% damage + Change 4th column to Fire orbs, Deal 40% damage
-       | condition: 50% chance, hp <= 100
-       | (8618:83) 114 Shiki: Aragami + 127 Shiki: Yanosabi
-       | Change 2nd row to Fire orbs, Deal 30% damage + Change 3rd row to Fire orbs, Deal 50% damage
-       | (8619:83) 114 Shiki: Aragami + 125 Shiki: Nanase
-       | Change 2nd row to Fire orbs, Deal 30% damage + Deal 60% damage
+     | condition: 33% chance, hp <= 100
+     | (8617:83) 114 Shiki: Aragami + 128 Shiki: Konokizu
+     | Change 2nd row to Fire orbs, Deal 30% damage + Change 4th column to Fire orbs, Deal 40% damage
+     | condition: 50% chance, hp <= 100
+     | (8618:83) 114 Shiki: Aragami + 127 Shiki: Yanosabi
+     | Change 2nd row to Fire orbs, Deal 30% damage + Change 3rd row to Fire orbs, Deal 50% damage
+     | (8619:83) 114 Shiki: Aragami + 125 Shiki: Nanase
+     | Change 2nd row to Fire orbs, Deal 30% damage + Deal 60% damage
    | group:
    | condition: repeats every 4 turns
-     | group:
-       | condition: 50% chance, hp <= 100
-       | (8620:15) R.E.D. Kick
-       | Deal 60% damage
-       | (8621:15) 75 Shiki: Kai
-       | Deal 80% damage (2 hits, 40% each)
+     | condition: 50% chance, hp <= 100
+     | (8620:15) R.E.D. Kick
+     | Deal 60% damage
+     | (8621:15) 75 Shiki: Kai
+     | Deal 80% damage (2 hits, 40% each)
  | group:
  | condition: hp <= 24
    | group:
-   | condition: repeats every 2 turns
-     | group:
-       | condition: when 1 enemies remain, hp <= 100
-       | (8622:17) Haaaa...
-       | Increase damage to 150% for the next 1 turns
+   | condition: repeats every 2 turns, when 1 enemies remain, hp <= 100
+     | (8622:17) Haaaa...
+     | Increase damage to 150% for the next 1 turns
    | group:
-   | condition: repeats every 2 turns
-     | group:
-       | (8623:79) Ura 108 Shiki: Orochinagi
-       | Change 2nd row to Fire orbs, 3rd row to Fire orbs, 4th row to Fire orbs, Deal 100% damage
+   | condition: repeats every 2 turns, hp <= 100
+     | (8623:79) Ura 108 Shiki: Orochinagi
+     | Change 2nd row to Fire orbs, 3rd row to Fire orbs, 4th row to Fire orbs, Deal 100% damage

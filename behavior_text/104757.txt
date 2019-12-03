@@ -15,24 +15,17 @@ level: 4
  | Blind all orbs on the board
  group:
  | group:
-   | group:
-   | condition: turn 1
-     | group:
-       | (11027:20) Stop playing house
-       | Voids status ailments for 999 turns, Deal 200% damage
-   | group:
-   | condition: turn 2
-     | group:
-       | (11028:94) My resolution was decided long ago
-       | Lock all Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs
-   | group:
-   | condition: turn 3
-     | group:
-       | condition: when 1 enemies remain, hp <= 100
-       | (11029:17) I am the destroyer of this world
-       | Increase damage to 300% for the next 99 turns
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | (11030:15) Sleep in Hell
-       | Deal 300% damage
+ | condition: turn 1, hp <= 100
+   | (11027:20) Stop playing house
+   | Voids status ailments for 999 turns, Deal 200% damage
+ | group:
+ | condition: turn 2, hp <= 100
+   | (11028:94) My resolution was decided long ago
+   | Lock all Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs
+ | group:
+ | condition: when 1 enemies remain, turn 3, hp <= 100
+   | (11029:17) I am the destroyer of this world
+   | Increase damage to 300% for the next 99 turns
+ | group:
+   | (11030:15) Sleep in Hell
+   | Deal 300% damage

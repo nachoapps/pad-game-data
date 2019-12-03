@@ -12,27 +12,16 @@ level: 1
  | Poison skyfall +15% for 3 turns
  group:
  | group:
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: 50% chance, hp <= 100
-       | (10766:89) Death Voice
-       | Delay active skills by 1 turns, Deal 100% damage
-       | (10767:15) Needle Rain
-       | Deal 117% damage (9 hits, 13% each)
+   | condition: 50% chance, hp <= 100
+   | (10766:89) Death Voice
+   | Delay active skills by 1 turns, Deal 100% damage
+   | (10767:15) Needle Rain
+   | Deal 117% damage (9 hits, 13% each)
  | group:
- | condition: hp <= 49
-   | group:
-   | condition: turn 1
-     | group:
-       | condition: hp <= 50
-       | (10770:83) Abomination + Black Pain
-       | Movetime 50% for 2 turns + Player -99% HP
+ | condition: turn 1, hp <= 50
+   | (10770:83) Abomination + Black Pain
+   | Movetime 50% for 2 turns + Player -99% HP
  | group:
- | condition: hp <= 9
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: hp <= 10
-       | (10771:15) The Destroyer
-       | Deal 250% damage
+ | condition: hp <= 10
+   | (10771:15) The Destroyer
+   | Deal 250% damage

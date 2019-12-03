@@ -12,23 +12,18 @@ level: 1
  | Deal 85% damage
  group:
  | group:
-   | group:
-   | condition: repeats every 4 turns
-     | group:
-       | (3178:-1) Countdown Message
-       | Display '0' and skip turn
-   | group:
-   | condition: repeats every 4 turns
-     | group:
-       | (2178:-1) Countdown Message
-       | Display '0' and skip turn
-   | group:
-   | condition: repeats every 4 turns
-     | group:
-       | (1178:-1) Countdown Message
-       | Display '0' and skip turn
-   | group:
-   | condition: repeats every 4 turns
-     | group:
-       | (863:15) Hellfire Breath
-       | Deal 1500% damage (3 hits, 500% each)
+ | condition: repeats every 4 turns, hp <= 100
+   | (3178:-1) Countdown Message
+   | Display '0' and skip turn
+ | group:
+ | condition: repeats every 4 turns, hp <= 100
+   | (2178:-1) Countdown Message
+   | Display '0' and skip turn
+ | group:
+ | condition: repeats every 4 turns, hp <= 100
+   | (1178:-1) Countdown Message
+   | Display '0' and skip turn
+ | group:
+ | condition: repeats every 4 turns, hp <= 100
+   | (863:15) Hellfire Breath
+   | Deal 1500% damage (3 hits, 500% each)

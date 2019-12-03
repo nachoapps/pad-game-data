@@ -13,35 +13,26 @@ level: 1
  group:
  | group:
    | group:
-   | condition: turn 1
-     | group:
-       | (90:20) Protection of the Gods
-       | Voids status ailments for 999 turns
+   | condition: turn 1, hp <= 100
+     | (90:20) Protection of the Gods
+     | Voids status ailments for 999 turns
    | group:
-   | condition: repeats every 1 turns
-     | group:
-       | (53:48) Flame-Extinguishing Gale
-       | Change Fire to Jammer, Deal 80% damage
+     | (53:48) Flame-Extinguishing Gale
+     | Change Fire to Jammer, Deal 80% damage
  | group:
  | condition: hp <= 49
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: hp <= 50
-       | (54:48) Evil Vanquishing Divine Light
-       | Change Dark to Jammer, Deal 90% damage
-       | (53:48) Flame-Extinguishing Gale
-       | Change Fire to Jammer, Deal 80% damage
+   | condition: hp <= 50
+   | (54:48) Evil Vanquishing Divine Light
+   | Change Dark to Jammer, Deal 90% damage
+   | (53:48) Flame-Extinguishing Gale
+   | Change Fire to Jammer, Deal 80% damage
  | group:
  | condition: hp <= 29
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: 75% chance, hp <= 30
-       | (327:15) Jupiter Genesis
-       | Deal 200% damage
-       | condition: hp <= 50
-       | (54:48) Evil Vanquishing Divine Light
-       | Change Dark to Jammer, Deal 90% damage
-       | (53:48) Flame-Extinguishing Gale
-       | Change Fire to Jammer, Deal 80% damage
+   | condition: 75% chance, hp <= 30
+   | (327:15) Jupiter Genesis
+   | Deal 200% damage
+   | condition: hp <= 50
+   | (54:48) Evil Vanquishing Divine Light
+   | Change Dark to Jammer, Deal 90% damage
+   | (53:48) Flame-Extinguishing Gale
+   | Change Fire to Jammer, Deal 80% damage

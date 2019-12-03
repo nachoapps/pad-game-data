@@ -13,47 +13,37 @@ level: 4
  group:
  | group:
    | group:
-   | condition: turn 1
-     | group:
-       | (10592:50) Phantom Ball
-       | Player -99% HP
+   | condition: turn 1, hp <= 100
+     | (10592:50) Phantom Ball
+     | Player -99% HP
    | group:
    | condition: turn 2
-     | group:
-       | condition: 33% chance, hp <= 100
-       | (10608:48) Slider
-       | Change Random to Water, Deal 100% damage
-       | condition: 34% chance, hp <= 100
-       | (10611:48) Sinker
-       | Change Random to Dark, Deal 100% damage
+     | condition: 33% chance, hp <= 100
+     | (10608:48) Slider
+     | Change Random to Water, Deal 100% damage
+     | condition: 34% chance, hp <= 100
+     | (10611:48) Sinker
+     | Change Random to Dark, Deal 100% damage
    | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: 33% chance, hp <= 100
-       | (10592:50) Phantom Ball
-       | Player -99% HP
-       | condition: 33% chance, hp <= 100
-       | (10608:48) Slider
-       | Change Random to Water, Deal 100% damage
-       | condition: 34% chance, hp <= 100
-       | (10611:48) Sinker
-       | Change Random to Dark, Deal 100% damage
+     | condition: 33% chance, hp <= 100
+     | (10592:50) Phantom Ball
+     | Player -99% HP
+     | condition: 33% chance, hp <= 100
+     | (10608:48) Slider
+     | Change Random to Water, Deal 100% damage
+     | condition: 34% chance, hp <= 100
+     | (10611:48) Sinker
+     | Change Random to Dark, Deal 100% damage
  | group:
- | condition: hp <= 49
-   | group:
-   | condition: turn 2
-     | group:
-       | (10595:83) Black Stars + Black Vanguard
-       | Spawn random 9 Dark orbs + Blind all orbs on the board
+ | condition: turn 2, hp <= 100
+   | (10595:83) Black Stars + Black Vanguard
+   | Spawn random 9 Dark orbs + Blind all orbs on the board
  | group:
  | condition: hp <= 19
    | group:
-   | condition: turn 3
-     | group:
-       | (10596:74) YOU'RE here
-       | Reduce damage from all sources by 50% for 5 turns
+   | condition: turn 3, hp <= 100
+     | (10596:74) YOU'RE here
+     | Reduce damage from all sources by 50% for 5 turns
    | group:
-   | condition: repeats every 1 turns
-     | group:
-       | (10597:62) Gloomy Star Cloud
-       | Blind all orbs on the board, Deal 300% damage
+     | (10597:62) Gloomy Star Cloud
+     | Blind all orbs on the board, Deal 300% damage

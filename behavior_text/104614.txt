@@ -13,47 +13,37 @@ level: 4
  group:
  | group:
    | group:
-   | condition: turn 1
-     | group:
-       | condition: one time only, hp <= 100
-       | (10295:1) Grasp of Darkness
-       | Bind 1 random cards for 4 turns, Deal 95% damage
+   | condition: one time only, turn 1, hp <= 100
+     | (10295:1) Grasp of Darkness
+     | Bind 1 random cards for 4 turns, Deal 95% damage
    | group:
    | condition: repeats every 3 turns
-     | group:
-       | condition: 50% chance, hp <= 100
-       | (10293:89) Duress
-       | Delay active skills by 1~2 turns, Deal 100% damage
-       | (10294:86) Drain Life
-       | Enemy recover 10% hp, Deal 150% damage
+     | condition: 50% chance, hp <= 100
+     | (10293:89) Duress
+     | Delay active skills by 1~2 turns, Deal 100% damage
+     | (10294:86) Drain Life
+     | Enemy recover 10% hp, Deal 150% damage
  | group:
  | condition: hp <= 49
    | group:
-   | condition: turn 1
-     | group:
-       | (10296:74) Rite of Belzenlok I
-       | Reduce damage from all sources by 50% for 4 turns
+   | condition: turn 1, hp <= 100
+     | (10296:74) Rite of Belzenlok I
+     | Reduce damage from all sources by 50% for 4 turns
    | group:
-   | condition: turn 2
-     | group:
-       | (10297:1) Rite of Belzenlok II
-       | Bind 6 random cards for 2 turns
+   | condition: turn 2, hp <= 100
+     | (10297:1) Rite of Belzenlok II
+     | Bind 6 random cards for 2 turns
    | group:
    | condition: turn 3
-     | group:
-       | (10298:88) Rite of Belzenlok III
-       | Bind awoken skills for 1 turns
-       | condition: when required attributes on board, hp <= 100
-       | (10299:92) Dark Ritual
-       | Spawn random 3 Dark orbs
+     | (10298:88) Rite of Belzenlok III
+     | Bind awoken skills for 1 turns
+     | condition: when required attributes on board, hp <= 100
+     | (10299:92) Dark Ritual
+     | Spawn random 3 Dark orbs
    | group:
-   | condition: turn 4
-     | group:
-       | condition: when required attributes on board, hp <= 100
-       | (10299:92) Dark Ritual
-       | Spawn random 3 Dark orbs
+   | condition: when required attributes on board, turn 4, hp <= 100
+     | (10299:92) Dark Ritual
+     | Spawn random 3 Dark orbs
    | group:
-   | condition: repeats every 1 turns
-     | group:
-       | (10300:85) Damnation
-       | Change all orbs to Poison, Deal 350% damage
+     | (10300:85) Damnation
+     | Change all orbs to Poison, Deal 350% damage

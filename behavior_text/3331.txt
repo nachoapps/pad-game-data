@@ -8,18 +8,15 @@ approved: False
 
 level: 1
  type: DEATH
- | condition: when defeated, hp <= 100
+ condition: when defeated, hp <= 100
  | (6070:69) Eldora Transformation
  | Show message: I will protect the geyser!|Appearance starts to change
  group:
  | group:
-   | group:
-   | condition: repeats every 2 turns
-     | group:
-       | (6068:74) Mirage Dance
-       | Reduce damage from all sources by 20% for 1 turns
-   | group:
-   | condition: repeats every 2 turns
-     | group:
-       | (6069:15) Blade Dance
-       | Deal 50% damage (5 hits, 10% each)
+ | condition: repeats every 2 turns, hp <= 100
+   | (6068:74) Mirage Dance
+   | Reduce damage from all sources by 20% for 1 turns
+ | group:
+ | condition: repeats every 2 turns, hp <= 100
+   | (6069:15) Blade Dance
+   | Deal 50% damage (5 hits, 10% each)

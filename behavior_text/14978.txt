@@ -8,34 +8,28 @@ approved: False
 
 level: 4
  type: PREEMPT
- | condition: when required attributes on board, hp <= 100
+ condition: when required attributes on board, hp <= 100
  | (14871:92) I am Lord Zedd, emperor of all I see.
  | Spawn random 3 Poison orbs
  group:
  | group:
    | group:
-   | condition: turn 1
-     | group:
-       | (14874:105) Terror and desperation. I love it.
-       | Rcv 50% for 3 turns
+   | condition: turn 1, hp <= 100
+     | (14874:105) Terror and desperation. I love it.
+     | Rcv 50% for 3 turns
    | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: 40% chance, hp <= 100
-       | (14872:15) Your efforts are futile.
-       | Deal 110% damage
-       | condition: 40% chance, hp <= 100
-       | (14873:48) I am invincible!
-       | Change Random to Jammer, Deal 90% damage
+     | condition: 40% chance, hp <= 100
+     | (14872:15) Your efforts are futile.
+     | Deal 110% damage
+     | condition: 40% chance, hp <= 100
+     | (14873:48) I am invincible!
+     | Change Random to Jammer, Deal 90% damage
  | group:
  | condition: hp <= 19
    | group:
-   | condition: turn 1
-     | group:
-       | (14876:75) Your dreams will become nightmares.
-       | Leader changes to random sub for 1 turns
+   | condition: turn 1, hp <= 100
+     | (14876:75) Your dreams will become nightmares.
+     | Leader changes to random sub for 1 turns
    | group:
-   | condition: repeats every 1 turns
-     | group:
-       | (14875:15) The entire universe trembles before me!
-       | Deal 200% damage
+     | (14875:15) The entire universe trembles before me!
+     | Deal 200% damage

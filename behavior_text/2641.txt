@@ -12,23 +12,17 @@ level: 1
  | Unable to match Heal orbs for 3 turns + Absorb combo <= 7 damage for 999 turns
  group:
  | group:
-   | group:
-   | condition: turns 1-2
-     | group:
-       | (10544:50) Pitch Black Aura
-       | Player -99% HP
-   | group:
-   | condition: turn 3
-     | group:
-       | condition: when 1 enemies remain, hp <= 100
-       | (10545:17) Unbinding
-       | Increase damage to 200% for the next 999 turns
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: 50% chance, hp <= 100
-       | (10546:108) Call of a Jealous God
-       | Change Heal to Jammer, Deal 100% damage
-       | condition: 50% chance, hp <= 100
-       | (10547:15) Crunch
-       | Deal 120% damage (3 hits, 40% each)
+ | condition: turns 1-2, hp <= 100
+   | (10544:50) Pitch Black Aura
+   | Player -99% HP
+ | group:
+ | condition: when 1 enemies remain, turn 3, hp <= 100
+   | (10545:17) Unbinding
+   | Increase damage to 200% for the next 999 turns
+ | group:
+   | condition: 50% chance, hp <= 100
+   | (10546:108) Call of a Jealous God
+   | Change Heal to Jammer, Deal 100% damage
+   | condition: 50% chance, hp <= 100
+   | (10547:15) Crunch
+   | Deal 120% damage (3 hits, 40% each)

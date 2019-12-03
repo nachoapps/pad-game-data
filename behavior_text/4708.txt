@@ -15,27 +15,16 @@ level: 1
  | Voids status ailments for 999 turns + Blind all orbs on the board
  group:
  | group:
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: 30% chance, hp <= 100
-       | (10721:108) Draw Attack - Demon
-       | Change Heal to Dark, Deal 90% damage
-       | (10723:15) Attack
-       | Deal 100% damage
+   | condition: 30% chance, hp <= 100
+   | (10721:108) Draw Attack - Demon
+   | Change Heal to Dark, Deal 90% damage
+   | (10723:15) Attack
+   | Deal 100% damage
  | group:
- | condition: hp <= 74
-   | group:
-   | condition: turn 1
-     | group:
-       | condition: hp <= 75
-       | (10722:75) Demonic Magic
-       | Leader changes to random sub for 2 turns
+ | condition: turn 1, hp <= 75
+   | (10722:75) Demonic Magic
+   | Leader changes to random sub for 2 turns
  | group:
- | condition: hp <= 29
-   | group:
-   | condition: turn 2
-     | group:
-       | condition: when 1 enemies remain, hp <= 30
-       | (10724:17) Level Up
-       | Increase damage to 300% for the next 999 turns
+ | condition: when 1 enemies remain, turn 2, hp <= 30
+   | (10724:17) Level Up
+   | Increase damage to 300% for the next 999 turns

@@ -13,55 +13,39 @@ level: 4
  group:
  | group:
    | group:
-   | condition: turn 1
-     | group:
-       | condition: when 1 enemies remain, hp <= 100
-       | (6080:17) Viper Tree Ascension
-       | Increase damage to 200% for the next 8 turns
+   | condition: when 1 enemies remain, turn 1, hp <= 100
+     | (6080:17) Viper Tree Ascension
+     | Increase damage to 200% for the next 8 turns
    | group:
-   | condition: repeats every 4 turns
-     | group:
-       | (6084:64) Harmful Poison
-       | Change Random 6 to Poison, Deal 50% damage
+   | condition: repeats every 4 turns, hp <= 100
+     | (6084:64) Harmful Poison
+     | Change Random 6 to Poison, Deal 50% damage
    | group:
-   | condition: repeats every 4 turns
-     | group:
-       | (6085:79) Crystal Stream
-       | Change 1st, 5th row to Water orbs, Deal 100% damage
+   | condition: repeats every 4 turns, hp <= 100
+     | (6085:79) Crystal Stream
+     | Change 1st, 5th row to Water orbs, Deal 100% damage
    | group:
-   | condition: repeats every 4 turns
-     | group:
-       | (6086:50) Harmful Ocean
-       | Player -99% HP
+   | condition: repeats every 4 turns, hp <= 100
+     | (6086:50) Harmful Ocean
+     | Player -99% HP
    | group:
-   | condition: repeats every 4 turns
-     | group:
-       | (6087:15) Dragon Stream
-       | Deal 200% damage (4 hits, 50% each)
+   | condition: repeats every 4 turns, hp <= 100
+     | (6087:15) Dragon Stream
+     | Deal 200% damage (4 hits, 50% each)
  | group:
- | condition: hp <= 89
-   | group:
-   | condition: turn 1
-     | group:
-       | (6079:100) Lingering Snaketracks
-       | Seal 5th row for 4 turns
+ | condition: turn 1, hp <= 100
+   | (6079:100) Lingering Snaketracks
+   | Seal 5th row for 4 turns
  | group:
- | condition: hp <= 49
-   | group:
-   | condition: turn 2
-     | group:
-       | condition: hp <= 50
-       | (6082:67) Vitality Spiral
-       | Absorb combo <= 6 damage for 6 turns
+ | condition: turn 2, hp <= 50
+   | (6082:67) Vitality Spiral
+   | Absorb combo <= 6 damage for 6 turns
  | group:
  | condition: hp <= 19
    | group:
-   | condition: turn 2
-     | group:
-       | (6081:83) Nectar of the Dragon + Soaring Lotus Strike
-       | Reduce damage from all sources by 75% for 2 turns + Change all orbs to Fire, Water, Wood, Heal, Deal 150% damage
+   | condition: turn 2, hp <= 100
+     | (6081:83) Nectar of the Dragon + Soaring Lotus Strike
+     | Reduce damage from all sources by 75% for 2 turns + Change all orbs to Fire, Water, Wood, Heal, Deal 150% damage
    | group:
-   | condition: repeats every 1 turns
-     | group:
-       | (6083:15) Enlightened Dragon Stream
-       | Deal 800% damage (8 hits, 100% each)
+     | (6083:15) Enlightened Dragon Stream
+     | Deal 800% damage (8 hits, 100% each)

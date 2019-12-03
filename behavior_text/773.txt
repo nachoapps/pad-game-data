@@ -12,35 +12,27 @@ level: 1
  | Deal 40% damage
  group:
  | group:
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | (474:15) Breath of the Blue Sky
-       | Deal 80%~120% damage (2~3 hits, 40% each)
+   | (474:15) Breath of the Blue Sky
+   | Deal 80%~120% damage (2~3 hits, 40% each)
  | group:
  | condition: hp <= 99
    | group:
-   | condition: turn 1
-     | group:
-       | (483:66) Roar of Ruin
-       | Do nothing
+   | condition: turn 1, hp <= 100
+     | (483:66) Roar of Ruin
+     | Do nothing
    | group:
-   | condition: repeats every 4 turns
-     | group:
-       | (3178:-1) Countdown Message
-       | Display '0' and skip turn
+   | condition: repeats every 4 turns, hp <= 100
+     | (3178:-1) Countdown Message
+     | Display '0' and skip turn
    | group:
-   | condition: repeats every 4 turns
-     | group:
-       | (2178:-1) Countdown Message
-       | Display '0' and skip turn
+   | condition: repeats every 4 turns, hp <= 100
+     | (2178:-1) Countdown Message
+     | Display '0' and skip turn
    | group:
-   | condition: repeats every 4 turns
-     | group:
-       | (1178:-1) Countdown Message
-       | Display '0' and skip turn
+   | condition: repeats every 4 turns, hp <= 100
+     | (1178:-1) Countdown Message
+     | Display '0' and skip turn
    | group:
-   | condition: repeats every 4 turns
-     | group:
-       | (484:15) Lost Utopia
-       | Deal 1100% damage (5 hits, 220% each)
+   | condition: repeats every 4 turns, hp <= 100
+     | (484:15) Lost Utopia
+     | Deal 1100% damage (5 hits, 220% each)

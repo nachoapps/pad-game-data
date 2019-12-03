@@ -15,23 +15,18 @@ level: 1
  | Player recover 100% hp
  group:
  | group:
-   | group:
-   | condition: repeats every 4 turns
-     | group:
-       | (2177:81) Northern Seven-Star Formation
-       | Change all orbs to Wood, Light, Dark, Deal 100% damage
-   | group:
-   | condition: repeats every 4 turns
-     | group:
-       | (2178:79) Holy Water - Star Drop
-       | Change 1st row to Heal orbs, Deal 150% damage
-   | group:
-   | condition: repeats every 4 turns
-     | group:
-       | (2179:15) Blade Dance
-       | Deal 125%~175% damage (5~7 hits, 25% each)
-   | group:
-   | condition: repeats every 4 turns
-     | group:
-       | (2224:83) Here I go! + Seven Star Formation - Genbu
-       | Delay active skills by 1 turns + Change all orbs to Wood, Light, Dark, Deal 300% damage
+ | condition: repeats every 4 turns, hp <= 100
+   | (2177:81) Northern Seven-Star Formation
+   | Change all orbs to Wood, Light, Dark, Deal 100% damage
+ | group:
+ | condition: repeats every 4 turns, hp <= 100
+   | (2178:79) Holy Water - Star Drop
+   | Change 1st row to Heal orbs, Deal 150% damage
+ | group:
+ | condition: repeats every 4 turns, hp <= 100
+   | (2179:15) Blade Dance
+   | Deal 125%~175% damage (5~7 hits, 25% each)
+ | group:
+ | condition: repeats every 4 turns, hp <= 100
+   | (2224:83) Here I go! + Seven Star Formation - Genbu
+   | Delay active skills by 1 turns + Change all orbs to Wood, Light, Dark, Deal 300% damage

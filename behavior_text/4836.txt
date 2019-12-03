@@ -13,52 +13,39 @@ level: 1
  group:
  | group:
    | group:
-   | condition: turns 1-4
-     | group:
-       | (11681:15) Divine King's Imperial Lightning
-       | Deal 200% damage
+   | condition: turns 1-4, hp <= 100
+     | (11681:15) Divine King's Imperial Lightning
+     | Deal 200% damage
    | group:
-   | condition: turn 5
-     | group:
-       | (11679:83) Divine King's Changing Cloak + Divine King's Imperial Lightning
-       | Change own attribute to random one of Fire, Water, Wood, Light, Dark + Deal 200% damage
+   | condition: turn 5, hp <= 100
+     | (11679:83) Divine King's Changing Cloak + Divine King's Imperial Lightning
+     | Change own attribute to random one of Fire, Water, Wood, Light, Dark + Deal 200% damage
    | group:
-   | condition: turns 6-9
-     | group:
-       | (11681:15) Divine King's Imperial Lightning
-       | Deal 200% damage
+   | condition: turns 6-9, hp <= 100
+     | (11681:15) Divine King's Imperial Lightning
+     | Deal 200% damage
    | group:
-   | condition: turn 10
-     | group:
-       | (11684:74) Divine King's Lightning Cloak
-       | Reduce damage from all sources by 75% for 999 turns
+   | condition: turn 10, hp <= 100
+     | (11684:74) Divine King's Lightning Cloak
+     | Reduce damage from all sources by 75% for 999 turns
    | group:
-   | condition: repeats every 5 turns
-     | group:
-       | (11679:83) Divine King's Changing Cloak + Divine King's Imperial Lightning
-       | Change own attribute to random one of Fire, Water, Wood, Light, Dark + Deal 200% damage
+   | condition: repeats every 5 turns, hp <= 100
+     | (11679:83) Divine King's Changing Cloak + Divine King's Imperial Lightning
+     | Change own attribute to random one of Fire, Water, Wood, Light, Dark + Deal 200% damage
    | group:
-   | condition: repeats every 5 turns
-     | group:
-       | (11681:15) Divine King's Imperial Lightning
-       | Deal 200% damage
+   | condition: repeats every 5 turns, hp <= 100
+     | (11681:15) Divine King's Imperial Lightning
+     | Deal 200% damage
  | group:
- | condition: hp <= 49
-   | group:
-   | condition: turn 1
-     | group:
-       | (11682:83) Almighty Gods' Majesty + Divine King's Imperial Lightning
-       | Voids player buff effects + Deal 200% damage
+ | condition: turn 1, hp <= 100
+   | (11682:83) Almighty Gods' Majesty + Divine King's Imperial Lightning
+   | Voids player buff effects + Deal 200% damage
  | group:
  | condition: hp <= 6
    | group:
-   | condition: turn 1
-     | group:
-       | condition: when 1 enemies remain, hp <= 100
-       | (11683:17) Almighty Gods' Fighting Spirit
-       | Increase damage to 500% for the next 99 turns
+   | condition: when 1 enemies remain, turn 1, hp <= 100
+     | (11683:17) Almighty Gods' Fighting Spirit
+     | Increase damage to 500% for the next 99 turns
    | group:
-   | condition: repeats every 1 turns
-     | group:
-       | (11685:83) Divine King's Wave + Divine King's Imperial Lightning
-       | Bind awoken skills for 1 turns + Deal 200% damage
+     | (11685:83) Divine King's Wave + Divine King's Imperial Lightning
+     | Bind awoken skills for 1 turns + Deal 200% damage

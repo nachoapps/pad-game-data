@@ -12,23 +12,18 @@ level: 1
  | Absorb combo <= 7 damage for 10 turns
  group:
  | group:
-   | group:
-   | condition: repeats every 4 turns
-     | group:
-       | (3178:-1) Countdown Message
-       | Display '0' and skip turn
-   | group:
-   | condition: repeats every 4 turns
-     | group:
-       | (2178:-1) Countdown Message
-       | Display '0' and skip turn
-   | group:
-   | condition: repeats every 4 turns
-     | group:
-       | (1178:-1) Countdown Message
-       | Display '0' and skip turn
-   | group:
-   | condition: repeats every 4 turns
-     | group:
-       | (13322:15) This is... the end...
-       | Deal 20000% damage (10 hits, 2000% each)
+ | condition: repeats every 4 turns, hp <= 100
+   | (3178:-1) Countdown Message
+   | Display '0' and skip turn
+ | group:
+ | condition: repeats every 4 turns, hp <= 100
+   | (2178:-1) Countdown Message
+   | Display '0' and skip turn
+ | group:
+ | condition: repeats every 4 turns, hp <= 100
+   | (1178:-1) Countdown Message
+   | Display '0' and skip turn
+ | group:
+ | condition: repeats every 4 turns, hp <= 100
+   | (13322:15) This is... the end...
+   | Deal 20000% damage (10 hits, 2000% each)

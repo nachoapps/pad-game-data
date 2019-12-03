@@ -9,17 +9,13 @@ approved: False
 level: 4
  group:
  | group:
-   | group:
-   | condition: turn 1
-     | group:
-       | (8967:77) I'll only give you half!
-       | Change 6th column to Heal orbs, Deal 120% damage
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: 20% chance, hp <= 100
-       | (8969:63) Play-Bite
-       | Bind 1 random subs for 1 turns, Deal 100% damage
-       | condition: 60% chance, hp <= 100
-       | (8968:15) Sweet Slash
-       | Deal 120% damage (3 hits, 40% each)
+ | condition: turn 1, hp <= 100
+   | (8967:77) I'll only give you half!
+   | Change 6th column to Heal orbs, Deal 120% damage
+ | group:
+   | condition: 20% chance, hp <= 100
+   | (8969:63) Play-Bite
+   | Bind 1 random subs for 1 turns, Deal 100% damage
+   | condition: 60% chance, hp <= 100
+   | (8968:15) Sweet Slash
+   | Deal 120% damage (3 hits, 40% each)

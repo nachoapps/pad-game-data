@@ -8,7 +8,7 @@ approved: False
 
 level: 1
  type: DEATH
- | condition: when defeated, hp <= 100
+ condition: when defeated, hp <= 100
  | (9709:95) Tears of the Sacred Divinity
  | Movetime 50% for 2 turns
 
@@ -17,38 +17,30 @@ level: 4
  | (9701:83) Let's go! + Protection of the Ether and the Sun
  | 2x3 cloud appear for 6 turns at random location + Reduce damage from all sources by 75% for 5 turns
  type: DEATH
- | condition: when defeated, hp <= 100
+ condition: when defeated, hp <= 100
  | (9709:95) Tears of the Sacred Divinity
  | Movetime 50% for 2 turns
  group:
  | group:
-   | group:
-   | condition: turn 1
-     | group:
-       | (9702:105) How long can you bear through this?
-       | Rcv 10% for 5 turns, Deal 15% damage
-   | group:
-   | condition: turn 2
-     | group:
-       | (9703:15) Eternity's Judgment
-       | Deal 30% damage (2 hits, 15% each)
-   | group:
-   | condition: turn 3
-     | group:
-       | (9704:15) Eternity's Judgment
-       | Deal 45% damage (3 hits, 15% each)
-   | group:
-   | condition: turn 4
-     | group:
-       | (9705:15) Eternity's Judgment
-       | Deal 60% damage (4 hits, 15% each)
-   | group:
-   | condition: turn 5
-     | group:
-       | (9706:15) Eternity's Judgment
-       | Deal 75% damage (5 hits, 15% each)
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | (9707:15) Guidance to the Underworld
-       | Deal 900% damage (6 hits, 150% each)
+ | condition: turn 1, hp <= 100
+   | (9702:105) How long can you bear through this?
+   | Rcv 10% for 5 turns, Deal 15% damage
+ | group:
+ | condition: turn 2, hp <= 100
+   | (9703:15) Eternity's Judgment
+   | Deal 30% damage (2 hits, 15% each)
+ | group:
+ | condition: turn 3, hp <= 100
+   | (9704:15) Eternity's Judgment
+   | Deal 45% damage (3 hits, 15% each)
+ | group:
+ | condition: turn 4, hp <= 100
+   | (9705:15) Eternity's Judgment
+   | Deal 60% damage (4 hits, 15% each)
+ | group:
+ | condition: turn 5, hp <= 100
+   | (9706:15) Eternity's Judgment
+   | Deal 75% damage (5 hits, 15% each)
+ | group:
+   | (9707:15) Guidance to the Underworld
+   | Deal 900% damage (6 hits, 150% each)

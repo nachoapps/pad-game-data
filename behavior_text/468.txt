@@ -9,30 +9,24 @@ approved: False
 level: 1
  group:
  | group:
-   | group:
-   | condition: turn 1
-     | group:
-       | (188:20) Mighty Guard
-       | Voids status ailments for 999 turns
+ | condition: turn 1, hp <= 100
+   | (188:20) Mighty Guard
+   | Voids status ailments for 999 turns
  | group:
  | condition: hp <= 49
    | group:
-   | condition: repeats every 4 turns
-     | group:
-       | (3178:-1) Countdown Message
-       | Display '0' and skip turn
+   | condition: repeats every 4 turns, hp <= 100
+     | (3178:-1) Countdown Message
+     | Display '0' and skip turn
    | group:
-   | condition: repeats every 4 turns
-     | group:
-       | (2178:-1) Countdown Message
-       | Display '0' and skip turn
+   | condition: repeats every 4 turns, hp <= 100
+     | (2178:-1) Countdown Message
+     | Display '0' and skip turn
    | group:
-   | condition: repeats every 4 turns
-     | group:
-       | (1178:-1) Countdown Message
-       | Display '0' and skip turn
+   | condition: repeats every 4 turns, hp <= 100
+     | (1178:-1) Countdown Message
+     | Display '0' and skip turn
    | group:
-   | condition: repeats every 4 turns
-     | group:
-       | (187:15) Mega Flare
-       | Deal 2000% damage (10 hits, 200% each)
+   | condition: repeats every 4 turns, hp <= 100
+     | (187:15) Mega Flare
+     | Deal 2000% damage (10 hits, 200% each)

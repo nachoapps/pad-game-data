@@ -16,37 +16,24 @@ level: 1
  group:
  | group:
    | group:
-   | condition: turn 1
-     | group:
-       | (5636:83) Raging Fire + Orb Flash
-       | Blind all orbs on the board, Deal 50% damage + Lock all Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs
+   | condition: turn 1, hp <= 100
+     | (5636:83) Raging Fire + Orb Flash
+     | Blind all orbs on the board, Deal 50% damage + Lock all Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs
    | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: 50% chance, hp <= 100
-       | (5638:103) Zelvarn
-       | Spawn Bomb orbs in the specified positions, Deal 120% damage
-       | (5637:77) Cruel Flare
-       | Change 2nd, 5th column to Jammer orbs, Deal 150% damage
+     | condition: 50% chance, hp <= 100
+     | (5638:103) Zelvarn
+     | Spawn Bomb orbs in the specified positions, Deal 120% damage
+     | (5637:77) Cruel Flare
+     | Change 2nd, 5th column to Jammer orbs, Deal 150% damage
  | group:
- | condition: hp <= 49
-   | group:
-   | condition: turn 1
-     | group:
-       | condition: hp <= 50
-       | (5639:67) Nine Seek
-       | Absorb combo <= 8 damage for 9 turns, Deal 20% damage
+ | condition: turn 1, hp <= 50
+   | (5639:67) Nine Seek
+   | Absorb combo <= 8 damage for 9 turns, Deal 20% damage
  | group:
- | condition: hp <= 19
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: hp <= 20
-       | (5641:103) Void Burn
-       | Spawn Bomb orbs in the specified positions, Deal 5000% damage
+ | condition: hp <= 20
+   | (5641:103) Void Burn
+   | Spawn Bomb orbs in the specified positions, Deal 5000% damage
  | group:
-   | group:
-   | condition: turns 1-2
-     | group:
-       | (5676:83) Death Avoidance + Nampulse
-       | Enemy recover 100% hp + Bind 1 random cards for 9 turns, Deal 200% damage
+ | condition: turns 1-2, hp <= 100
+   | (5676:83) Death Avoidance + Nampulse
+   | Enemy recover 100% hp + Bind 1 random cards for 9 turns, Deal 200% damage

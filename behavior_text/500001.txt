@@ -9,24 +9,17 @@ approved: False
 level: 1
  group:
  | group:
-   | group:
-   | condition: repeats every 1 turns
-     | group:
-       | (13925:15) Take this Tyrra!
-       | Deal 100% damage (2 hits, 50% each)
+   | (13925:15) Take this Tyrra!
+   | Deal 100% damage (2 hits, 50% each)
  | group:
  | condition: hp <= 49
    | group:
-   | condition: turn 1
-     | group:
-       | condition: hp <= 50
-       | (13926:74) Not bad Tyrra!
-       | Reduce damage from all sources by 30% for 1 turns
+   | condition: turn 1, hp <= 50
+     | (13926:74) Not bad Tyrra!
+     | Reduce damage from all sources by 30% for 1 turns
    | group:
-   | condition: repeats every 1 turns
-     | group:
-       | condition: 50% chance, when required attributes on board, hp <= 50
-       | (13927:92) Heat Breath!
-       | Spawn random 1 Fire orbs, Deal 120% damage
-       | (13925:15) Take this Tyrra!
-       | Deal 100% damage (2 hits, 50% each)
+     | condition: 50% chance, when required attributes on board, hp <= 50
+     | (13927:92) Heat Breath!
+     | Spawn random 1 Fire orbs, Deal 120% damage
+     | (13925:15) Take this Tyrra!
+     | Deal 100% damage (2 hits, 50% each)

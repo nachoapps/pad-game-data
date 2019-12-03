@@ -46,298 +46,442 @@
     "en_ls_text": "May survive when HP is reduced to 0 (HP>70%)",
     "enemy_behavior": [
         {
-            "behavior": {
-                "_name": "ERROR18",
-                "branch_condition": "hp",
-                "branch_value": 50,
-                "compare": "<",
-                "enemy_skill_id": 18,
-                "extra_description": null,
-                "params": [
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    4,
-                    null,
-                    null,
-                    null
-                ],
-                "target_round": 4,
-                "type": 28
-            },
-            "condition": null,
             "enemy_skill_id": 18,
-            "extra_description": null
-        },
-        {
-            "behavior": {
-                "_name": "Energy Charge",
-                "attack": null,
-                "enemy_skill_id": 8,
-                "extra_description": null,
-                "multiplier": 200,
-                "params": [
-                    "Stores power for the next attack",
-                    100,
-                    100,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    50,
-                    4,
-                    null,
-                    null,
-                    null
-                ],
-                "turns": 0,
-                "type": 8
-            },
-            "condition": {
-                "_ai": 0,
-                "_rnd": 50,
-                "condition_attributes": null,
-                "enemies_remaining": null,
-                "forced_one_time": null,
-                "hp_threshold": null,
-                "on_death": null,
-                "one_time": null
-            },
-            "enemy_skill_id": 8,
-            "extra_description": null
-        },
-        {
-            "behavior": {
-                "_name": "ERROR26",
-                "enemy_skill_id": 26,
-                "extra_description": null,
-                "params": [
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    4,
-                    null,
-                    null,
-                    null
-                ],
-                "type": 36
-            },
-            "condition": null,
-            "enemy_skill_id": 26,
-            "extra_description": null
-        },
-        {
-            "behavior": {
-                "_name": "Rock Strike",
-                "attack": {
-                    "atk_multiplier": 150,
-                    "max_hits": 1,
-                    "min_hits": 1
+            "jp_skill": {
+                "behavior": {
+                    "_name": "※HPが ai %以下の時 rnd に分岐",
+                    "branch_condition": "hp",
+                    "branch_value": 50,
+                    "compare": "<",
+                    "enemy_skill_id": 18,
+                    "params": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        4,
+                        null,
+                        null,
+                        null
+                    ],
+                    "target_round": 4,
+                    "type": 28
                 },
-                "enemy_skill_id": 424,
-                "extra_description": null,
-                "params": [
-                    null,
-                    1,
-                    1,
-                    150,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null
-                ],
-                "type": 15
+                "condition": null,
+                "enemy_skill_id": 18
             },
-            "condition": {
-                "_ai": 100,
-                "_rnd": 0,
-                "condition_attributes": null,
-                "enemies_remaining": null,
-                "forced_one_time": null,
-                "hp_threshold": null,
-                "on_death": null,
-                "one_time": null
-            },
-            "enemy_skill_id": 424,
-            "extra_description": null
-        }
-    ],
-    "enemy_behavior_jp": [
-        {
-            "behavior": {
-                "_name": "※HPが ai %以下の時 rnd に分岐",
-                "branch_condition": "hp",
-                "branch_value": 50,
-                "compare": "<",
-                "enemy_skill_id": 18,
-                "extra_description": null,
-                "params": [
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    4,
-                    null,
-                    null,
-                    null
-                ],
-                "target_round": 4,
-                "type": 28
-            },
-            "condition": null,
-            "enemy_skill_id": 18,
-            "extra_description": null
-        },
-        {
-            "behavior": {
-                "_name": "気合溜め",
-                "attack": null,
-                "enemy_skill_id": 8,
-                "extra_description": null,
-                "multiplier": 200,
-                "params": [
-                    "次の攻撃に備えている",
-                    100,
-                    100,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    50,
-                    4,
-                    null,
-                    null,
-                    null
-                ],
-                "turns": 0,
-                "type": 8
-            },
-            "condition": {
-                "_ai": 0,
-                "_rnd": 50,
-                "condition_attributes": null,
-                "enemies_remaining": null,
-                "forced_one_time": null,
-                "hp_threshold": null,
-                "on_death": null,
-                "one_time": null
-            },
-            "enemy_skill_id": 8,
-            "extra_description": null
-        },
-        {
-            "behavior": {
-                "_name": "※パース終了",
-                "enemy_skill_id": 26,
-                "extra_description": null,
-                "params": [
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    4,
-                    null,
-                    null,
-                    null
-                ],
-                "type": 36
-            },
-            "condition": null,
-            "enemy_skill_id": 26,
-            "extra_description": null
-        },
-        {
-            "behavior": {
-                "_name": "ロックストライク",
-                "attack": {
-                    "atk_multiplier": 150,
-                    "max_hits": 1,
-                    "min_hits": 1
+            "kr_skill": {
+                "behavior": {
+                    "_name": "테스트예비",
+                    "branch_condition": "hp",
+                    "branch_value": 50,
+                    "compare": "<",
+                    "enemy_skill_id": 18,
+                    "params": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        4,
+                        null,
+                        null,
+                        null
+                    ],
+                    "target_round": 4,
+                    "type": 28
                 },
-                "enemy_skill_id": 424,
-                "extra_description": null,
-                "params": [
-                    null,
-                    1,
-                    1,
-                    150,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null
-                ],
-                "type": 15
+                "condition": null,
+                "enemy_skill_id": 18
             },
-            "condition": {
-                "_ai": 100,
-                "_rnd": 0,
-                "condition_attributes": null,
-                "enemies_remaining": null,
-                "forced_one_time": null,
-                "hp_threshold": null,
-                "on_death": null,
-                "one_time": null
+            "na_skill": {
+                "behavior": {
+                    "_name": "ERROR18",
+                    "branch_condition": "hp",
+                    "branch_value": 50,
+                    "compare": "<",
+                    "enemy_skill_id": 18,
+                    "params": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        4,
+                        null,
+                        null,
+                        null
+                    ],
+                    "target_round": 4,
+                    "type": 28
+                },
+                "condition": null,
+                "enemy_skill_id": 18
+            }
+        },
+        {
+            "enemy_skill_id": 8,
+            "jp_skill": {
+                "behavior": {
+                    "_name": "気合溜め",
+                    "attack": null,
+                    "enemy_skill_id": 8,
+                    "multiplier": 200,
+                    "params": [
+                        "次の攻撃に備えている",
+                        100,
+                        100,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        50,
+                        4,
+                        null,
+                        null,
+                        null
+                    ],
+                    "turns": 0,
+                    "type": 8
+                },
+                "condition": {
+                    "_ai": 0,
+                    "_rnd": 50,
+                    "cards_on_team": [],
+                    "combos_made": null,
+                    "condition_attributes": [],
+                    "enemies_remaining": null,
+                    "forced_one_time": null,
+                    "hp_threshold": null,
+                    "on_death": null,
+                    "one_time": null
+                },
+                "enemy_skill_id": 8
             },
+            "kr_skill": {
+                "behavior": {
+                    "_name": "기 충전",
+                    "attack": null,
+                    "enemy_skill_id": 8,
+                    "multiplier": 200,
+                    "params": [
+                        "다음 공격에 대비하고 있다",
+                        100,
+                        100,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        50,
+                        4,
+                        null,
+                        null,
+                        null
+                    ],
+                    "turns": 0,
+                    "type": 8
+                },
+                "condition": {
+                    "_ai": 0,
+                    "_rnd": 50,
+                    "cards_on_team": [],
+                    "combos_made": null,
+                    "condition_attributes": [],
+                    "enemies_remaining": null,
+                    "forced_one_time": null,
+                    "hp_threshold": null,
+                    "on_death": null,
+                    "one_time": null
+                },
+                "enemy_skill_id": 8
+            },
+            "na_skill": {
+                "behavior": {
+                    "_name": "Energy Charge",
+                    "attack": null,
+                    "enemy_skill_id": 8,
+                    "multiplier": 200,
+                    "params": [
+                        "Stores power for the next attack",
+                        100,
+                        100,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        50,
+                        4,
+                        null,
+                        null,
+                        null
+                    ],
+                    "turns": 0,
+                    "type": 8
+                },
+                "condition": {
+                    "_ai": 0,
+                    "_rnd": 50,
+                    "cards_on_team": [],
+                    "combos_made": null,
+                    "condition_attributes": [],
+                    "enemies_remaining": null,
+                    "forced_one_time": null,
+                    "hp_threshold": null,
+                    "on_death": null,
+                    "one_time": null
+                },
+                "enemy_skill_id": 8
+            }
+        },
+        {
+            "enemy_skill_id": 26,
+            "jp_skill": {
+                "behavior": {
+                    "_name": "※パース終了",
+                    "enemy_skill_id": 26,
+                    "params": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        4,
+                        null,
+                        null,
+                        null
+                    ],
+                    "type": 36
+                },
+                "condition": null,
+                "enemy_skill_id": 26
+            },
+            "kr_skill": {
+                "behavior": {
+                    "_name": "테스트예비",
+                    "enemy_skill_id": 26,
+                    "params": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        4,
+                        null,
+                        null,
+                        null
+                    ],
+                    "type": 36
+                },
+                "condition": null,
+                "enemy_skill_id": 26
+            },
+            "na_skill": {
+                "behavior": {
+                    "_name": "ERROR26",
+                    "enemy_skill_id": 26,
+                    "params": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        4,
+                        null,
+                        null,
+                        null
+                    ],
+                    "type": 36
+                },
+                "condition": null,
+                "enemy_skill_id": 26
+            }
+        },
+        {
             "enemy_skill_id": 424,
-            "extra_description": null
+            "jp_skill": {
+                "behavior": {
+                    "_name": "ロックストライク",
+                    "attack": {
+                        "atk_multiplier": 150,
+                        "max_hits": 1,
+                        "min_hits": 1
+                    },
+                    "enemy_skill_id": 424,
+                    "params": [
+                        null,
+                        1,
+                        1,
+                        150,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null
+                    ],
+                    "type": 15
+                },
+                "condition": {
+                    "_ai": 100,
+                    "_rnd": 0,
+                    "cards_on_team": [],
+                    "combos_made": null,
+                    "condition_attributes": [],
+                    "enemies_remaining": null,
+                    "forced_one_time": null,
+                    "hp_threshold": null,
+                    "on_death": null,
+                    "one_time": null
+                },
+                "enemy_skill_id": 424
+            },
+            "kr_skill": {
+                "behavior": {
+                    "_name": "록 스트라이크",
+                    "attack": {
+                        "atk_multiplier": 150,
+                        "max_hits": 1,
+                        "min_hits": 1
+                    },
+                    "enemy_skill_id": 424,
+                    "params": [
+                        null,
+                        1,
+                        1,
+                        150,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null
+                    ],
+                    "type": 15
+                },
+                "condition": {
+                    "_ai": 100,
+                    "_rnd": 0,
+                    "cards_on_team": [],
+                    "combos_made": null,
+                    "condition_attributes": [],
+                    "enemies_remaining": null,
+                    "forced_one_time": null,
+                    "hp_threshold": null,
+                    "on_death": null,
+                    "one_time": null
+                },
+                "enemy_skill_id": 424
+            },
+            "na_skill": {
+                "behavior": {
+                    "_name": "Rock Strike",
+                    "attack": {
+                        "atk_multiplier": 150,
+                        "max_hits": 1,
+                        "min_hits": 1
+                    },
+                    "enemy_skill_id": 424,
+                    "params": [
+                        null,
+                        1,
+                        1,
+                        150,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null
+                    ],
+                    "type": 15
+                },
+                "condition": {
+                    "_ai": 100,
+                    "_rnd": 0,
+                    "cards_on_team": [],
+                    "combos_made": null,
+                    "condition_attributes": [],
+                    "enemies_remaining": null,
+                    "forced_one_time": null,
+                    "hp_threshold": null,
+                    "on_death": null,
+                    "one_time": null
+                },
+                "enemy_skill_id": 424
+            }
         }
     ],
     "has_animation": false,
@@ -466,7 +610,6 @@
                     "branch_value": 50,
                     "compare": "<",
                     "enemy_skill_id": 18,
-                    "extra_description": null,
                     "params": [
                         null,
                         null,
@@ -489,15 +632,13 @@
                     "type": 28
                 },
                 "condition": null,
-                "enemy_skill_id": 18,
-                "extra_description": null
+                "enemy_skill_id": 18
             },
             {
                 "behavior": {
                     "_name": "気合溜め",
                     "attack": null,
                     "enemy_skill_id": 8,
-                    "extra_description": null,
                     "multiplier": 200,
                     "params": [
                         "次の攻撃に備えている",
@@ -523,21 +664,21 @@
                 "condition": {
                     "_ai": 0,
                     "_rnd": 50,
-                    "condition_attributes": null,
+                    "cards_on_team": [],
+                    "combos_made": null,
+                    "condition_attributes": [],
                     "enemies_remaining": null,
                     "forced_one_time": null,
                     "hp_threshold": null,
                     "on_death": null,
                     "one_time": null
                 },
-                "enemy_skill_id": 8,
-                "extra_description": null
+                "enemy_skill_id": 8
             },
             {
                 "behavior": {
                     "_name": "※パース終了",
                     "enemy_skill_id": 26,
-                    "extra_description": null,
                     "params": [
                         null,
                         null,
@@ -559,8 +700,7 @@
                     "type": 36
                 },
                 "condition": null,
-                "enemy_skill_id": 26,
-                "extra_description": null
+                "enemy_skill_id": 26
             },
             {
                 "behavior": {
@@ -571,7 +711,6 @@
                         "min_hits": 1
                     },
                     "enemy_skill_id": 424,
-                    "extra_description": null,
                     "params": [
                         null,
                         1,
@@ -595,15 +734,16 @@
                 "condition": {
                     "_ai": 100,
                     "_rnd": 0,
-                    "condition_attributes": null,
+                    "cards_on_team": [],
+                    "combos_made": null,
+                    "condition_attributes": [],
                     "enemies_remaining": null,
                     "forced_one_time": null,
                     "hp_threshold": null,
                     "on_death": null,
                     "one_time": null
                 },
-                "enemy_skill_id": 424,
-                "extra_description": null
+                "enemy_skill_id": 424
             }
         ],
         "leader_skill": {
@@ -746,7 +886,6 @@
                     "branch_value": 50,
                     "compare": "<",
                     "enemy_skill_id": 18,
-                    "extra_description": null,
                     "params": [
                         null,
                         null,
@@ -769,15 +908,13 @@
                     "type": 28
                 },
                 "condition": null,
-                "enemy_skill_id": 18,
-                "extra_description": null
+                "enemy_skill_id": 18
             },
             {
                 "behavior": {
                     "_name": "기 충전",
                     "attack": null,
                     "enemy_skill_id": 8,
-                    "extra_description": null,
                     "multiplier": 200,
                     "params": [
                         "다음 공격에 대비하고 있다",
@@ -803,21 +940,21 @@
                 "condition": {
                     "_ai": 0,
                     "_rnd": 50,
-                    "condition_attributes": null,
+                    "cards_on_team": [],
+                    "combos_made": null,
+                    "condition_attributes": [],
                     "enemies_remaining": null,
                     "forced_one_time": null,
                     "hp_threshold": null,
                     "on_death": null,
                     "one_time": null
                 },
-                "enemy_skill_id": 8,
-                "extra_description": null
+                "enemy_skill_id": 8
             },
             {
                 "behavior": {
                     "_name": "테스트예비",
                     "enemy_skill_id": 26,
-                    "extra_description": null,
                     "params": [
                         null,
                         null,
@@ -839,8 +976,7 @@
                     "type": 36
                 },
                 "condition": null,
-                "enemy_skill_id": 26,
-                "extra_description": null
+                "enemy_skill_id": 26
             },
             {
                 "behavior": {
@@ -851,7 +987,6 @@
                         "min_hits": 1
                     },
                     "enemy_skill_id": 424,
-                    "extra_description": null,
                     "params": [
                         null,
                         1,
@@ -875,15 +1010,16 @@
                 "condition": {
                     "_ai": 100,
                     "_rnd": 0,
-                    "condition_attributes": null,
+                    "cards_on_team": [],
+                    "combos_made": null,
+                    "condition_attributes": [],
                     "enemies_remaining": null,
                     "forced_one_time": null,
                     "hp_threshold": null,
                     "on_death": null,
                     "one_time": null
                 },
-                "enemy_skill_id": 424,
-                "extra_description": null
+                "enemy_skill_id": 424
             }
         ],
         "leader_skill": {
@@ -1067,7 +1203,6 @@
                     "branch_value": 50,
                     "compare": "<",
                     "enemy_skill_id": 18,
-                    "extra_description": null,
                     "params": [
                         null,
                         null,
@@ -1090,15 +1225,13 @@
                     "type": 28
                 },
                 "condition": null,
-                "enemy_skill_id": 18,
-                "extra_description": null
+                "enemy_skill_id": 18
             },
             {
                 "behavior": {
                     "_name": "Energy Charge",
                     "attack": null,
                     "enemy_skill_id": 8,
-                    "extra_description": null,
                     "multiplier": 200,
                     "params": [
                         "Stores power for the next attack",
@@ -1124,21 +1257,21 @@
                 "condition": {
                     "_ai": 0,
                     "_rnd": 50,
-                    "condition_attributes": null,
+                    "cards_on_team": [],
+                    "combos_made": null,
+                    "condition_attributes": [],
                     "enemies_remaining": null,
                     "forced_one_time": null,
                     "hp_threshold": null,
                     "on_death": null,
                     "one_time": null
                 },
-                "enemy_skill_id": 8,
-                "extra_description": null
+                "enemy_skill_id": 8
             },
             {
                 "behavior": {
                     "_name": "ERROR26",
                     "enemy_skill_id": 26,
-                    "extra_description": null,
                     "params": [
                         null,
                         null,
@@ -1160,8 +1293,7 @@
                     "type": 36
                 },
                 "condition": null,
-                "enemy_skill_id": 26,
-                "extra_description": null
+                "enemy_skill_id": 26
             },
             {
                 "behavior": {
@@ -1172,7 +1304,6 @@
                         "min_hits": 1
                     },
                     "enemy_skill_id": 424,
-                    "extra_description": null,
                     "params": [
                         null,
                         1,
@@ -1196,15 +1327,16 @@
                 "condition": {
                     "_ai": 100,
                     "_rnd": 0,
-                    "condition_attributes": null,
+                    "cards_on_team": [],
+                    "combos_made": null,
+                    "condition_attributes": [],
                     "enemies_remaining": null,
                     "forced_one_time": null,
                     "hp_threshold": null,
                     "on_death": null,
                     "one_time": null
                 },
-                "enemy_skill_id": 424,
-                "extra_description": null
+                "enemy_skill_id": 424
             }
         ],
         "leader_skill": {

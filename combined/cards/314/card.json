@@ -46,308 +46,457 @@
     "en_ls_text": "May survive when HP is reduced to 0 (HP>70%)",
     "enemy_behavior": [
         {
-            "behavior": {
-                "_name": "ERROR18",
-                "branch_condition": "hp",
-                "branch_value": 50,
-                "compare": "<",
-                "enemy_skill_id": 18,
-                "extra_description": null,
-                "params": [
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    4,
-                    null,
-                    null,
-                    null
-                ],
-                "target_round": 4,
-                "type": 28
-            },
-            "condition": null,
             "enemy_skill_id": 18,
-            "extra_description": null
-        },
-        {
-            "behavior": {
-                "_name": "Water Bind",
-                "attack": null,
-                "enemy_skill_id": 366,
-                "extra_description": null,
-                "max_turns": 4,
-                "min_turns": 2,
-                "params": [
-                    "Binds Water Att. allies for a number of turns",
-                    1,
-                    2,
-                    4,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    1,
-                    null,
-                    null
-                ],
-                "target_attribute": 1,
-                "target_count": null,
-                "targets": [
-                    "TargetType.attributes"
-                ],
-                "type": 2
-            },
-            "condition": {
-                "_ai": 100,
-                "_rnd": 0,
-                "condition_attributes": null,
-                "enemies_remaining": null,
-                "forced_one_time": null,
-                "hp_threshold": null,
-                "on_death": null,
-                "one_time": 1
-            },
-            "enemy_skill_id": 366,
-            "extra_description": null
-        },
-        {
-            "behavior": {
-                "_name": "ERROR26",
-                "enemy_skill_id": 26,
-                "extra_description": null,
-                "params": [
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    4,
-                    null,
-                    null,
-                    null
-                ],
-                "type": 36
-            },
-            "condition": null,
-            "enemy_skill_id": 26,
-            "extra_description": null
-        },
-        {
-            "behavior": {
-                "_name": "Flame Strike",
-                "attack": {
-                    "atk_multiplier": 150,
-                    "max_hits": 1,
-                    "min_hits": 1
+            "jp_skill": {
+                "behavior": {
+                    "_name": "※HPが ai %以下の時 rnd に分岐",
+                    "branch_condition": "hp",
+                    "branch_value": 50,
+                    "compare": "<",
+                    "enemy_skill_id": 18,
+                    "params": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        4,
+                        null,
+                        null,
+                        null
+                    ],
+                    "target_round": 4,
+                    "type": 28
                 },
-                "enemy_skill_id": 365,
-                "extra_description": null,
-                "params": [
-                    null,
-                    1,
-                    1,
-                    150,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null
-                ],
-                "type": 15
+                "condition": null,
+                "enemy_skill_id": 18
             },
-            "condition": {
-                "_ai": 100,
-                "_rnd": 0,
-                "condition_attributes": null,
-                "enemies_remaining": null,
-                "forced_one_time": null,
-                "hp_threshold": null,
-                "on_death": null,
-                "one_time": null
-            },
-            "enemy_skill_id": 365,
-            "extra_description": null
-        }
-    ],
-    "enemy_behavior_jp": [
-        {
-            "behavior": {
-                "_name": "※HPが ai %以下の時 rnd に分岐",
-                "branch_condition": "hp",
-                "branch_value": 50,
-                "compare": "<",
-                "enemy_skill_id": 18,
-                "extra_description": null,
-                "params": [
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    4,
-                    null,
-                    null,
-                    null
-                ],
-                "target_round": 4,
-                "type": 28
-            },
-            "condition": null,
-            "enemy_skill_id": 18,
-            "extra_description": null
-        },
-        {
-            "behavior": {
-                "_name": "ウォーターバインド",
-                "attack": null,
-                "enemy_skill_id": 366,
-                "extra_description": null,
-                "max_turns": 4,
-                "min_turns": 2,
-                "params": [
-                    "水属性が数ターンの間、行動不能",
-                    1,
-                    2,
-                    4,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    1,
-                    null,
-                    null
-                ],
-                "target_attribute": 1,
-                "target_count": null,
-                "targets": [
-                    "TargetType.attributes"
-                ],
-                "type": 2
-            },
-            "condition": {
-                "_ai": 100,
-                "_rnd": 0,
-                "condition_attributes": null,
-                "enemies_remaining": null,
-                "forced_one_time": null,
-                "hp_threshold": null,
-                "on_death": null,
-                "one_time": 1
-            },
-            "enemy_skill_id": 366,
-            "extra_description": null
-        },
-        {
-            "behavior": {
-                "_name": "※パース終了",
-                "enemy_skill_id": 26,
-                "extra_description": null,
-                "params": [
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    4,
-                    null,
-                    null,
-                    null
-                ],
-                "type": 36
-            },
-            "condition": null,
-            "enemy_skill_id": 26,
-            "extra_description": null
-        },
-        {
-            "behavior": {
-                "_name": "フレイムストライク",
-                "attack": {
-                    "atk_multiplier": 150,
-                    "max_hits": 1,
-                    "min_hits": 1
+            "kr_skill": {
+                "behavior": {
+                    "_name": "테스트예비",
+                    "branch_condition": "hp",
+                    "branch_value": 50,
+                    "compare": "<",
+                    "enemy_skill_id": 18,
+                    "params": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        4,
+                        null,
+                        null,
+                        null
+                    ],
+                    "target_round": 4,
+                    "type": 28
                 },
-                "enemy_skill_id": 365,
-                "extra_description": null,
-                "params": [
-                    null,
-                    1,
-                    1,
-                    150,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null
-                ],
-                "type": 15
+                "condition": null,
+                "enemy_skill_id": 18
             },
-            "condition": {
-                "_ai": 100,
-                "_rnd": 0,
-                "condition_attributes": null,
-                "enemies_remaining": null,
-                "forced_one_time": null,
-                "hp_threshold": null,
-                "on_death": null,
-                "one_time": null
+            "na_skill": {
+                "behavior": {
+                    "_name": "ERROR18",
+                    "branch_condition": "hp",
+                    "branch_value": 50,
+                    "compare": "<",
+                    "enemy_skill_id": 18,
+                    "params": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        4,
+                        null,
+                        null,
+                        null
+                    ],
+                    "target_round": 4,
+                    "type": 28
+                },
+                "condition": null,
+                "enemy_skill_id": 18
+            }
+        },
+        {
+            "enemy_skill_id": 366,
+            "jp_skill": {
+                "behavior": {
+                    "_name": "ウォーターバインド",
+                    "attack": null,
+                    "enemy_skill_id": 366,
+                    "max_turns": 4,
+                    "min_turns": 2,
+                    "params": [
+                        "水属性が数ターンの間、行動不能",
+                        1,
+                        2,
+                        4,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        1,
+                        null,
+                        null
+                    ],
+                    "target_attribute": 1,
+                    "target_count": null,
+                    "targets": [
+                        "TargetType.attributes"
+                    ],
+                    "type": 2
+                },
+                "condition": {
+                    "_ai": 100,
+                    "_rnd": 0,
+                    "cards_on_team": [],
+                    "combos_made": null,
+                    "condition_attributes": [],
+                    "enemies_remaining": null,
+                    "forced_one_time": null,
+                    "hp_threshold": null,
+                    "on_death": null,
+                    "one_time": 1
+                },
+                "enemy_skill_id": 366
             },
+            "kr_skill": {
+                "behavior": {
+                    "_name": "워터 바인드",
+                    "attack": null,
+                    "enemy_skill_id": 366,
+                    "max_turns": 4,
+                    "min_turns": 2,
+                    "params": [
+                        "물속성이 몇 턴 동안 행동불능",
+                        1,
+                        2,
+                        4,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        1,
+                        null,
+                        null
+                    ],
+                    "target_attribute": 1,
+                    "target_count": null,
+                    "targets": [
+                        "TargetType.attributes"
+                    ],
+                    "type": 2
+                },
+                "condition": {
+                    "_ai": 100,
+                    "_rnd": 0,
+                    "cards_on_team": [],
+                    "combos_made": null,
+                    "condition_attributes": [],
+                    "enemies_remaining": null,
+                    "forced_one_time": null,
+                    "hp_threshold": null,
+                    "on_death": null,
+                    "one_time": 1
+                },
+                "enemy_skill_id": 366
+            },
+            "na_skill": {
+                "behavior": {
+                    "_name": "Water Bind",
+                    "attack": null,
+                    "enemy_skill_id": 366,
+                    "max_turns": 4,
+                    "min_turns": 2,
+                    "params": [
+                        "Binds Water Att. allies for a number of turns",
+                        1,
+                        2,
+                        4,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        1,
+                        null,
+                        null
+                    ],
+                    "target_attribute": 1,
+                    "target_count": null,
+                    "targets": [
+                        "TargetType.attributes"
+                    ],
+                    "type": 2
+                },
+                "condition": {
+                    "_ai": 100,
+                    "_rnd": 0,
+                    "cards_on_team": [],
+                    "combos_made": null,
+                    "condition_attributes": [],
+                    "enemies_remaining": null,
+                    "forced_one_time": null,
+                    "hp_threshold": null,
+                    "on_death": null,
+                    "one_time": 1
+                },
+                "enemy_skill_id": 366
+            }
+        },
+        {
+            "enemy_skill_id": 26,
+            "jp_skill": {
+                "behavior": {
+                    "_name": "※パース終了",
+                    "enemy_skill_id": 26,
+                    "params": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        4,
+                        null,
+                        null,
+                        null
+                    ],
+                    "type": 36
+                },
+                "condition": null,
+                "enemy_skill_id": 26
+            },
+            "kr_skill": {
+                "behavior": {
+                    "_name": "테스트예비",
+                    "enemy_skill_id": 26,
+                    "params": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        4,
+                        null,
+                        null,
+                        null
+                    ],
+                    "type": 36
+                },
+                "condition": null,
+                "enemy_skill_id": 26
+            },
+            "na_skill": {
+                "behavior": {
+                    "_name": "ERROR26",
+                    "enemy_skill_id": 26,
+                    "params": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        4,
+                        null,
+                        null,
+                        null
+                    ],
+                    "type": 36
+                },
+                "condition": null,
+                "enemy_skill_id": 26
+            }
+        },
+        {
             "enemy_skill_id": 365,
-            "extra_description": null
+            "jp_skill": {
+                "behavior": {
+                    "_name": "フレイムストライク",
+                    "attack": {
+                        "atk_multiplier": 150,
+                        "max_hits": 1,
+                        "min_hits": 1
+                    },
+                    "enemy_skill_id": 365,
+                    "params": [
+                        null,
+                        1,
+                        1,
+                        150,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null
+                    ],
+                    "type": 15
+                },
+                "condition": {
+                    "_ai": 100,
+                    "_rnd": 0,
+                    "cards_on_team": [],
+                    "combos_made": null,
+                    "condition_attributes": [],
+                    "enemies_remaining": null,
+                    "forced_one_time": null,
+                    "hp_threshold": null,
+                    "on_death": null,
+                    "one_time": null
+                },
+                "enemy_skill_id": 365
+            },
+            "kr_skill": {
+                "behavior": {
+                    "_name": "플레임 스트라이크",
+                    "attack": {
+                        "atk_multiplier": 150,
+                        "max_hits": 1,
+                        "min_hits": 1
+                    },
+                    "enemy_skill_id": 365,
+                    "params": [
+                        null,
+                        1,
+                        1,
+                        150,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null
+                    ],
+                    "type": 15
+                },
+                "condition": {
+                    "_ai": 100,
+                    "_rnd": 0,
+                    "cards_on_team": [],
+                    "combos_made": null,
+                    "condition_attributes": [],
+                    "enemies_remaining": null,
+                    "forced_one_time": null,
+                    "hp_threshold": null,
+                    "on_death": null,
+                    "one_time": null
+                },
+                "enemy_skill_id": 365
+            },
+            "na_skill": {
+                "behavior": {
+                    "_name": "Flame Strike",
+                    "attack": {
+                        "atk_multiplier": 150,
+                        "max_hits": 1,
+                        "min_hits": 1
+                    },
+                    "enemy_skill_id": 365,
+                    "params": [
+                        null,
+                        1,
+                        1,
+                        150,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null
+                    ],
+                    "type": 15
+                },
+                "condition": {
+                    "_ai": 100,
+                    "_rnd": 0,
+                    "cards_on_team": [],
+                    "combos_made": null,
+                    "condition_attributes": [],
+                    "enemies_remaining": null,
+                    "forced_one_time": null,
+                    "hp_threshold": null,
+                    "on_death": null,
+                    "one_time": null
+                },
+                "enemy_skill_id": 365
+            }
         }
     ],
     "has_animation": false,
@@ -476,7 +625,6 @@
                     "branch_value": 50,
                     "compare": "<",
                     "enemy_skill_id": 18,
-                    "extra_description": null,
                     "params": [
                         null,
                         null,
@@ -499,15 +647,13 @@
                     "type": 28
                 },
                 "condition": null,
-                "enemy_skill_id": 18,
-                "extra_description": null
+                "enemy_skill_id": 18
             },
             {
                 "behavior": {
                     "_name": "ウォーターバインド",
                     "attack": null,
                     "enemy_skill_id": 366,
-                    "extra_description": null,
                     "max_turns": 4,
                     "min_turns": 2,
                     "params": [
@@ -538,21 +684,21 @@
                 "condition": {
                     "_ai": 100,
                     "_rnd": 0,
-                    "condition_attributes": null,
+                    "cards_on_team": [],
+                    "combos_made": null,
+                    "condition_attributes": [],
                     "enemies_remaining": null,
                     "forced_one_time": null,
                     "hp_threshold": null,
                     "on_death": null,
                     "one_time": 1
                 },
-                "enemy_skill_id": 366,
-                "extra_description": null
+                "enemy_skill_id": 366
             },
             {
                 "behavior": {
                     "_name": "※パース終了",
                     "enemy_skill_id": 26,
-                    "extra_description": null,
                     "params": [
                         null,
                         null,
@@ -574,8 +720,7 @@
                     "type": 36
                 },
                 "condition": null,
-                "enemy_skill_id": 26,
-                "extra_description": null
+                "enemy_skill_id": 26
             },
             {
                 "behavior": {
@@ -586,7 +731,6 @@
                         "min_hits": 1
                     },
                     "enemy_skill_id": 365,
-                    "extra_description": null,
                     "params": [
                         null,
                         1,
@@ -610,15 +754,16 @@
                 "condition": {
                     "_ai": 100,
                     "_rnd": 0,
-                    "condition_attributes": null,
+                    "cards_on_team": [],
+                    "combos_made": null,
+                    "condition_attributes": [],
                     "enemies_remaining": null,
                     "forced_one_time": null,
                     "hp_threshold": null,
                     "on_death": null,
                     "one_time": null
                 },
-                "enemy_skill_id": 365,
-                "extra_description": null
+                "enemy_skill_id": 365
             }
         ],
         "leader_skill": {
@@ -761,7 +906,6 @@
                     "branch_value": 50,
                     "compare": "<",
                     "enemy_skill_id": 18,
-                    "extra_description": null,
                     "params": [
                         null,
                         null,
@@ -784,15 +928,13 @@
                     "type": 28
                 },
                 "condition": null,
-                "enemy_skill_id": 18,
-                "extra_description": null
+                "enemy_skill_id": 18
             },
             {
                 "behavior": {
                     "_name": "워터 바인드",
                     "attack": null,
                     "enemy_skill_id": 366,
-                    "extra_description": null,
                     "max_turns": 4,
                     "min_turns": 2,
                     "params": [
@@ -823,21 +965,21 @@
                 "condition": {
                     "_ai": 100,
                     "_rnd": 0,
-                    "condition_attributes": null,
+                    "cards_on_team": [],
+                    "combos_made": null,
+                    "condition_attributes": [],
                     "enemies_remaining": null,
                     "forced_one_time": null,
                     "hp_threshold": null,
                     "on_death": null,
                     "one_time": 1
                 },
-                "enemy_skill_id": 366,
-                "extra_description": null
+                "enemy_skill_id": 366
             },
             {
                 "behavior": {
                     "_name": "테스트예비",
                     "enemy_skill_id": 26,
-                    "extra_description": null,
                     "params": [
                         null,
                         null,
@@ -859,8 +1001,7 @@
                     "type": 36
                 },
                 "condition": null,
-                "enemy_skill_id": 26,
-                "extra_description": null
+                "enemy_skill_id": 26
             },
             {
                 "behavior": {
@@ -871,7 +1012,6 @@
                         "min_hits": 1
                     },
                     "enemy_skill_id": 365,
-                    "extra_description": null,
                     "params": [
                         null,
                         1,
@@ -895,15 +1035,16 @@
                 "condition": {
                     "_ai": 100,
                     "_rnd": 0,
-                    "condition_attributes": null,
+                    "cards_on_team": [],
+                    "combos_made": null,
+                    "condition_attributes": [],
                     "enemies_remaining": null,
                     "forced_one_time": null,
                     "hp_threshold": null,
                     "on_death": null,
                     "one_time": null
                 },
-                "enemy_skill_id": 365,
-                "extra_description": null
+                "enemy_skill_id": 365
             }
         ],
         "leader_skill": {
@@ -1087,7 +1228,6 @@
                     "branch_value": 50,
                     "compare": "<",
                     "enemy_skill_id": 18,
-                    "extra_description": null,
                     "params": [
                         null,
                         null,
@@ -1110,15 +1250,13 @@
                     "type": 28
                 },
                 "condition": null,
-                "enemy_skill_id": 18,
-                "extra_description": null
+                "enemy_skill_id": 18
             },
             {
                 "behavior": {
                     "_name": "Water Bind",
                     "attack": null,
                     "enemy_skill_id": 366,
-                    "extra_description": null,
                     "max_turns": 4,
                     "min_turns": 2,
                     "params": [
@@ -1149,21 +1287,21 @@
                 "condition": {
                     "_ai": 100,
                     "_rnd": 0,
-                    "condition_attributes": null,
+                    "cards_on_team": [],
+                    "combos_made": null,
+                    "condition_attributes": [],
                     "enemies_remaining": null,
                     "forced_one_time": null,
                     "hp_threshold": null,
                     "on_death": null,
                     "one_time": 1
                 },
-                "enemy_skill_id": 366,
-                "extra_description": null
+                "enemy_skill_id": 366
             },
             {
                 "behavior": {
                     "_name": "ERROR26",
                     "enemy_skill_id": 26,
-                    "extra_description": null,
                     "params": [
                         null,
                         null,
@@ -1185,8 +1323,7 @@
                     "type": 36
                 },
                 "condition": null,
-                "enemy_skill_id": 26,
-                "extra_description": null
+                "enemy_skill_id": 26
             },
             {
                 "behavior": {
@@ -1197,7 +1334,6 @@
                         "min_hits": 1
                     },
                     "enemy_skill_id": 365,
-                    "extra_description": null,
                     "params": [
                         null,
                         1,
@@ -1221,15 +1357,16 @@
                 "condition": {
                     "_ai": 100,
                     "_rnd": 0,
-                    "condition_attributes": null,
+                    "cards_on_team": [],
+                    "combos_made": null,
+                    "condition_attributes": [],
                     "enemies_remaining": null,
                     "forced_one_time": null,
                     "hp_threshold": null,
                     "on_death": null,
                     "one_time": null
                 },
-                "enemy_skill_id": 365,
-                "extra_description": null
+                "enemy_skill_id": 365
             }
         ],
         "leader_skill": {

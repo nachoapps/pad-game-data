@@ -128,506 +128,751 @@
     "en_ls_text": "2x ATK for Dark Att.; Increase orb movement time by 2 seconds",
     "enemy_behavior": [
         {
-            "behavior": {
-                "_name": "ERROR25",
-                "branch_condition": "level",
-                "branch_value": 5,
-                "compare": ">",
-                "enemy_skill_id": 25,
-                "extra_description": null,
-                "params": [
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    4,
-                    null,
-                    null,
-                    null
-                ],
-                "target_round": 3,
-                "type": 35
-            },
-            "condition": null,
             "enemy_skill_id": 25,
-            "extra_description": null
-        },
-        {
-            "behavior": {
-                "_name": "ERROR26",
-                "enemy_skill_id": 26,
-                "extra_description": null,
-                "params": [
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    4,
-                    null,
-                    null,
-                    null
-                ],
-                "type": 36
-            },
-            "condition": null,
-            "enemy_skill_id": 26,
-            "extra_description": null
-        },
-        {
-            "behavior": {
-                "_name": "Auto Recover",
-                "attack": null,
-                "enemy_skill_id": 84,
-                "extra_description": null,
-                "max_amount": 50,
-                "min_amount": 40,
-                "params": [
-                    "Enemy's HP is partially recovered",
-                    40,
-                    50,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    50,
-                    null,
-                    1,
-                    null,
-                    null
-                ],
-                "target": "enemy",
-                "type": 7
-            },
-            "condition": {
-                "_ai": 75,
-                "_rnd": 0,
-                "condition_attributes": null,
-                "enemies_remaining": null,
-                "forced_one_time": null,
-                "hp_threshold": 50,
-                "on_death": null,
-                "one_time": 1
-            },
-            "enemy_skill_id": 84,
-            "extra_description": null
-        },
-        {
-            "behavior": {
-                "_name": "ERROR18",
-                "branch_condition": "hp",
-                "branch_value": 25,
-                "compare": "<",
-                "enemy_skill_id": 18,
-                "extra_description": null,
-                "params": [
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    4,
-                    null,
-                    null,
-                    null
-                ],
-                "target_round": 7,
-                "type": 28
-            },
-            "condition": null,
-            "enemy_skill_id": 18,
-            "extra_description": null
-        },
-        {
-            "behavior": {
-                "_name": "High Energy Charge",
-                "attack": null,
-                "enemy_skill_id": 117,
-                "extra_description": null,
-                "multiplier": 300,
-                "params": [
-                    "Stores power for the next attack",
-                    200,
-                    200,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    75,
-                    null,
-                    null,
-                    null,
-                    null
-                ],
-                "turns": 0,
-                "type": 8
-            },
-            "condition": {
-                "_ai": 50,
-                "_rnd": 0,
-                "condition_attributes": null,
-                "enemies_remaining": null,
-                "forced_one_time": null,
-                "hp_threshold": 75,
-                "on_death": null,
-                "one_time": null
-            },
-            "enemy_skill_id": 117,
-            "extra_description": null
-        },
-        {
-            "behavior": {
-                "_name": "ERROR26",
-                "enemy_skill_id": 26,
-                "extra_description": null,
-                "params": [
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    4,
-                    null,
-                    null,
-                    null
-                ],
-                "type": 36
-            },
-            "condition": null,
-            "enemy_skill_id": 26,
-            "extra_description": null
-        },
-        {
-            "behavior": {
-                "_name": "Genocide Missile",
-                "attack": {
-                    "atk_multiplier": 90,
-                    "max_hits": 3,
-                    "min_hits": 3
+            "jp_skill": {
+                "behavior": {
+                    "_name": "※自分のレベルが ai 以上の時 rnd に分岐",
+                    "branch_condition": "level",
+                    "branch_value": 5,
+                    "compare": ">",
+                    "enemy_skill_id": 25,
+                    "params": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        4,
+                        null,
+                        null,
+                        null
+                    ],
+                    "target_round": 3,
+                    "type": 35
                 },
-                "enemy_skill_id": 109,
-                "extra_description": null,
-                "params": [
-                    null,
-                    3,
-                    3,
-                    90,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null
-                ],
-                "type": 15
+                "condition": null,
+                "enemy_skill_id": 25
             },
-            "condition": {
-                "_ai": 100,
-                "_rnd": 0,
-                "condition_attributes": null,
-                "enemies_remaining": null,
-                "forced_one_time": null,
-                "hp_threshold": null,
-                "on_death": null,
-                "one_time": null
-            },
-            "enemy_skill_id": 109,
-            "extra_description": null
-        }
-    ],
-    "enemy_behavior_jp": [
-        {
-            "behavior": {
-                "_name": "※自分のレベルが ai 以上の時 rnd に分岐",
-                "branch_condition": "level",
-                "branch_value": 5,
-                "compare": ">",
-                "enemy_skill_id": 25,
-                "extra_description": null,
-                "params": [
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    4,
-                    null,
-                    null,
-                    null
-                ],
-                "target_round": 3,
-                "type": 35
-            },
-            "condition": null,
-            "enemy_skill_id": 25,
-            "extra_description": null
-        },
-        {
-            "behavior": {
-                "_name": "※パース終了",
-                "enemy_skill_id": 26,
-                "extra_description": null,
-                "params": [
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    4,
-                    null,
-                    null,
-                    null
-                ],
-                "type": 36
-            },
-            "condition": null,
-            "enemy_skill_id": 26,
-            "extra_description": null
-        },
-        {
-            "behavior": {
-                "_name": "オートリペア",
-                "attack": null,
-                "enemy_skill_id": 84,
-                "extra_description": null,
-                "max_amount": 50,
-                "min_amount": 40,
-                "params": [
-                    "敵のHPが中回復",
-                    40,
-                    50,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    50,
-                    null,
-                    1,
-                    null,
-                    null
-                ],
-                "target": "enemy",
-                "type": 7
-            },
-            "condition": {
-                "_ai": 75,
-                "_rnd": 0,
-                "condition_attributes": null,
-                "enemies_remaining": null,
-                "forced_one_time": null,
-                "hp_threshold": 50,
-                "on_death": null,
-                "one_time": 1
-            },
-            "enemy_skill_id": 84,
-            "extra_description": null
-        },
-        {
-            "behavior": {
-                "_name": "※HPが ai %以下の時 rnd に分岐",
-                "branch_condition": "hp",
-                "branch_value": 25,
-                "compare": "<",
-                "enemy_skill_id": 18,
-                "extra_description": null,
-                "params": [
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    4,
-                    null,
-                    null,
-                    null
-                ],
-                "target_round": 7,
-                "type": 28
-            },
-            "condition": null,
-            "enemy_skill_id": 18,
-            "extra_description": null
-        },
-        {
-            "behavior": {
-                "_name": "エネルギーチャージ",
-                "attack": null,
-                "enemy_skill_id": 117,
-                "extra_description": null,
-                "multiplier": 300,
-                "params": [
-                    "次の攻撃に備えている",
-                    200,
-                    200,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    75,
-                    null,
-                    null,
-                    null,
-                    null
-                ],
-                "turns": 0,
-                "type": 8
-            },
-            "condition": {
-                "_ai": 50,
-                "_rnd": 0,
-                "condition_attributes": null,
-                "enemies_remaining": null,
-                "forced_one_time": null,
-                "hp_threshold": 75,
-                "on_death": null,
-                "one_time": null
-            },
-            "enemy_skill_id": 117,
-            "extra_description": null
-        },
-        {
-            "behavior": {
-                "_name": "※パース終了",
-                "enemy_skill_id": 26,
-                "extra_description": null,
-                "params": [
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    4,
-                    null,
-                    null,
-                    null
-                ],
-                "type": 36
-            },
-            "condition": null,
-            "enemy_skill_id": 26,
-            "extra_description": null
-        },
-        {
-            "behavior": {
-                "_name": "ジェノサイドミサイル",
-                "attack": {
-                    "atk_multiplier": 90,
-                    "max_hits": 3,
-                    "min_hits": 3
+            "kr_skill": {
+                "behavior": {
+                    "_name": "테스트예비",
+                    "branch_condition": "level",
+                    "branch_value": 5,
+                    "compare": ">",
+                    "enemy_skill_id": 25,
+                    "params": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        4,
+                        null,
+                        null,
+                        null
+                    ],
+                    "target_round": 3,
+                    "type": 35
                 },
-                "enemy_skill_id": 109,
-                "extra_description": null,
-                "params": [
-                    null,
-                    3,
-                    3,
-                    90,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null
-                ],
-                "type": 15
+                "condition": null,
+                "enemy_skill_id": 25
             },
-            "condition": {
-                "_ai": 100,
-                "_rnd": 0,
-                "condition_attributes": null,
-                "enemies_remaining": null,
-                "forced_one_time": null,
-                "hp_threshold": null,
-                "on_death": null,
-                "one_time": null
+            "na_skill": {
+                "behavior": {
+                    "_name": "ERROR25",
+                    "branch_condition": "level",
+                    "branch_value": 5,
+                    "compare": ">",
+                    "enemy_skill_id": 25,
+                    "params": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        4,
+                        null,
+                        null,
+                        null
+                    ],
+                    "target_round": 3,
+                    "type": 35
+                },
+                "condition": null,
+                "enemy_skill_id": 25
+            }
+        },
+        {
+            "enemy_skill_id": 26,
+            "jp_skill": {
+                "behavior": {
+                    "_name": "※パース終了",
+                    "enemy_skill_id": 26,
+                    "params": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        4,
+                        null,
+                        null,
+                        null
+                    ],
+                    "type": 36
+                },
+                "condition": null,
+                "enemy_skill_id": 26
             },
+            "kr_skill": {
+                "behavior": {
+                    "_name": "테스트예비",
+                    "enemy_skill_id": 26,
+                    "params": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        4,
+                        null,
+                        null,
+                        null
+                    ],
+                    "type": 36
+                },
+                "condition": null,
+                "enemy_skill_id": 26
+            },
+            "na_skill": {
+                "behavior": {
+                    "_name": "ERROR26",
+                    "enemy_skill_id": 26,
+                    "params": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        4,
+                        null,
+                        null,
+                        null
+                    ],
+                    "type": 36
+                },
+                "condition": null,
+                "enemy_skill_id": 26
+            }
+        },
+        {
+            "enemy_skill_id": 84,
+            "jp_skill": {
+                "behavior": {
+                    "_name": "オートリペア",
+                    "attack": null,
+                    "enemy_skill_id": 84,
+                    "max_amount": 50,
+                    "min_amount": 40,
+                    "params": [
+                        "敵のHPが中回復",
+                        40,
+                        50,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        50,
+                        null,
+                        1,
+                        null,
+                        null
+                    ],
+                    "target": "enemy",
+                    "type": 7
+                },
+                "condition": {
+                    "_ai": 75,
+                    "_rnd": 0,
+                    "cards_on_team": [],
+                    "combos_made": null,
+                    "condition_attributes": [],
+                    "enemies_remaining": null,
+                    "forced_one_time": null,
+                    "hp_threshold": 50,
+                    "on_death": null,
+                    "one_time": 1
+                },
+                "enemy_skill_id": 84
+            },
+            "kr_skill": {
+                "behavior": {
+                    "_name": "자동회복",
+                    "attack": null,
+                    "enemy_skill_id": 84,
+                    "max_amount": 50,
+                    "min_amount": 40,
+                    "params": [
+                        "적의 HP가 중 회복",
+                        40,
+                        50,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        50,
+                        null,
+                        1,
+                        null,
+                        null
+                    ],
+                    "target": "enemy",
+                    "type": 7
+                },
+                "condition": {
+                    "_ai": 75,
+                    "_rnd": 0,
+                    "cards_on_team": [],
+                    "combos_made": null,
+                    "condition_attributes": [],
+                    "enemies_remaining": null,
+                    "forced_one_time": null,
+                    "hp_threshold": 50,
+                    "on_death": null,
+                    "one_time": 1
+                },
+                "enemy_skill_id": 84
+            },
+            "na_skill": {
+                "behavior": {
+                    "_name": "Auto Recover",
+                    "attack": null,
+                    "enemy_skill_id": 84,
+                    "max_amount": 50,
+                    "min_amount": 40,
+                    "params": [
+                        "Enemy's HP is partially recovered",
+                        40,
+                        50,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        50,
+                        null,
+                        1,
+                        null,
+                        null
+                    ],
+                    "target": "enemy",
+                    "type": 7
+                },
+                "condition": {
+                    "_ai": 75,
+                    "_rnd": 0,
+                    "cards_on_team": [],
+                    "combos_made": null,
+                    "condition_attributes": [],
+                    "enemies_remaining": null,
+                    "forced_one_time": null,
+                    "hp_threshold": 50,
+                    "on_death": null,
+                    "one_time": 1
+                },
+                "enemy_skill_id": 84
+            }
+        },
+        {
+            "enemy_skill_id": 18,
+            "jp_skill": {
+                "behavior": {
+                    "_name": "※HPが ai %以下の時 rnd に分岐",
+                    "branch_condition": "hp",
+                    "branch_value": 25,
+                    "compare": "<",
+                    "enemy_skill_id": 18,
+                    "params": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        4,
+                        null,
+                        null,
+                        null
+                    ],
+                    "target_round": 7,
+                    "type": 28
+                },
+                "condition": null,
+                "enemy_skill_id": 18
+            },
+            "kr_skill": {
+                "behavior": {
+                    "_name": "테스트예비",
+                    "branch_condition": "hp",
+                    "branch_value": 25,
+                    "compare": "<",
+                    "enemy_skill_id": 18,
+                    "params": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        4,
+                        null,
+                        null,
+                        null
+                    ],
+                    "target_round": 7,
+                    "type": 28
+                },
+                "condition": null,
+                "enemy_skill_id": 18
+            },
+            "na_skill": {
+                "behavior": {
+                    "_name": "ERROR18",
+                    "branch_condition": "hp",
+                    "branch_value": 25,
+                    "compare": "<",
+                    "enemy_skill_id": 18,
+                    "params": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        4,
+                        null,
+                        null,
+                        null
+                    ],
+                    "target_round": 7,
+                    "type": 28
+                },
+                "condition": null,
+                "enemy_skill_id": 18
+            }
+        },
+        {
+            "enemy_skill_id": 117,
+            "jp_skill": {
+                "behavior": {
+                    "_name": "エネルギーチャージ",
+                    "attack": null,
+                    "enemy_skill_id": 117,
+                    "multiplier": 300,
+                    "params": [
+                        "次の攻撃に備えている",
+                        200,
+                        200,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        75,
+                        null,
+                        null,
+                        null,
+                        null
+                    ],
+                    "turns": 0,
+                    "type": 8
+                },
+                "condition": {
+                    "_ai": 50,
+                    "_rnd": 0,
+                    "cards_on_team": [],
+                    "combos_made": null,
+                    "condition_attributes": [],
+                    "enemies_remaining": null,
+                    "forced_one_time": null,
+                    "hp_threshold": 75,
+                    "on_death": null,
+                    "one_time": null
+                },
+                "enemy_skill_id": 117
+            },
+            "kr_skill": {
+                "behavior": {
+                    "_name": "에너지 충전",
+                    "attack": null,
+                    "enemy_skill_id": 117,
+                    "multiplier": 300,
+                    "params": [
+                        "다음 공격에 대비하고 있다",
+                        200,
+                        200,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        75,
+                        null,
+                        null,
+                        null,
+                        null
+                    ],
+                    "turns": 0,
+                    "type": 8
+                },
+                "condition": {
+                    "_ai": 50,
+                    "_rnd": 0,
+                    "cards_on_team": [],
+                    "combos_made": null,
+                    "condition_attributes": [],
+                    "enemies_remaining": null,
+                    "forced_one_time": null,
+                    "hp_threshold": 75,
+                    "on_death": null,
+                    "one_time": null
+                },
+                "enemy_skill_id": 117
+            },
+            "na_skill": {
+                "behavior": {
+                    "_name": "High Energy Charge",
+                    "attack": null,
+                    "enemy_skill_id": 117,
+                    "multiplier": 300,
+                    "params": [
+                        "Stores power for the next attack",
+                        200,
+                        200,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        75,
+                        null,
+                        null,
+                        null,
+                        null
+                    ],
+                    "turns": 0,
+                    "type": 8
+                },
+                "condition": {
+                    "_ai": 50,
+                    "_rnd": 0,
+                    "cards_on_team": [],
+                    "combos_made": null,
+                    "condition_attributes": [],
+                    "enemies_remaining": null,
+                    "forced_one_time": null,
+                    "hp_threshold": 75,
+                    "on_death": null,
+                    "one_time": null
+                },
+                "enemy_skill_id": 117
+            }
+        },
+        {
+            "enemy_skill_id": 26,
+            "jp_skill": {
+                "behavior": {
+                    "_name": "※パース終了",
+                    "enemy_skill_id": 26,
+                    "params": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        4,
+                        null,
+                        null,
+                        null
+                    ],
+                    "type": 36
+                },
+                "condition": null,
+                "enemy_skill_id": 26
+            },
+            "kr_skill": {
+                "behavior": {
+                    "_name": "테스트예비",
+                    "enemy_skill_id": 26,
+                    "params": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        4,
+                        null,
+                        null,
+                        null
+                    ],
+                    "type": 36
+                },
+                "condition": null,
+                "enemy_skill_id": 26
+            },
+            "na_skill": {
+                "behavior": {
+                    "_name": "ERROR26",
+                    "enemy_skill_id": 26,
+                    "params": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        4,
+                        null,
+                        null,
+                        null
+                    ],
+                    "type": 36
+                },
+                "condition": null,
+                "enemy_skill_id": 26
+            }
+        },
+        {
             "enemy_skill_id": 109,
-            "extra_description": null
+            "jp_skill": {
+                "behavior": {
+                    "_name": "ジェノサイドミサイル",
+                    "attack": {
+                        "atk_multiplier": 90,
+                        "max_hits": 3,
+                        "min_hits": 3
+                    },
+                    "enemy_skill_id": 109,
+                    "params": [
+                        null,
+                        3,
+                        3,
+                        90,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null
+                    ],
+                    "type": 15
+                },
+                "condition": {
+                    "_ai": 100,
+                    "_rnd": 0,
+                    "cards_on_team": [],
+                    "combos_made": null,
+                    "condition_attributes": [],
+                    "enemies_remaining": null,
+                    "forced_one_time": null,
+                    "hp_threshold": null,
+                    "on_death": null,
+                    "one_time": null
+                },
+                "enemy_skill_id": 109
+            },
+            "kr_skill": {
+                "behavior": {
+                    "_name": "제노사이드 미사일",
+                    "attack": {
+                        "atk_multiplier": 90,
+                        "max_hits": 3,
+                        "min_hits": 3
+                    },
+                    "enemy_skill_id": 109,
+                    "params": [
+                        null,
+                        3,
+                        3,
+                        90,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null
+                    ],
+                    "type": 15
+                },
+                "condition": {
+                    "_ai": 100,
+                    "_rnd": 0,
+                    "cards_on_team": [],
+                    "combos_made": null,
+                    "condition_attributes": [],
+                    "enemies_remaining": null,
+                    "forced_one_time": null,
+                    "hp_threshold": null,
+                    "on_death": null,
+                    "one_time": null
+                },
+                "enemy_skill_id": 109
+            },
+            "na_skill": {
+                "behavior": {
+                    "_name": "Genocide Missile",
+                    "attack": {
+                        "atk_multiplier": 90,
+                        "max_hits": 3,
+                        "min_hits": 3
+                    },
+                    "enemy_skill_id": 109,
+                    "params": [
+                        null,
+                        3,
+                        3,
+                        90,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null
+                    ],
+                    "type": 15
+                },
+                "condition": {
+                    "_ai": 100,
+                    "_rnd": 0,
+                    "cards_on_team": [],
+                    "combos_made": null,
+                    "condition_attributes": [],
+                    "enemies_remaining": null,
+                    "forced_one_time": null,
+                    "hp_threshold": null,
+                    "on_death": null,
+                    "one_time": null
+                },
+                "enemy_skill_id": 109
+            }
         }
     ],
     "has_animation": false,
@@ -798,7 +1043,6 @@
                     "branch_value": 5,
                     "compare": ">",
                     "enemy_skill_id": 25,
-                    "extra_description": null,
                     "params": [
                         null,
                         null,
@@ -821,14 +1065,12 @@
                     "type": 35
                 },
                 "condition": null,
-                "enemy_skill_id": 25,
-                "extra_description": null
+                "enemy_skill_id": 25
             },
             {
                 "behavior": {
                     "_name": "※パース終了",
                     "enemy_skill_id": 26,
-                    "extra_description": null,
                     "params": [
                         null,
                         null,
@@ -850,15 +1092,13 @@
                     "type": 36
                 },
                 "condition": null,
-                "enemy_skill_id": 26,
-                "extra_description": null
+                "enemy_skill_id": 26
             },
             {
                 "behavior": {
                     "_name": "オートリペア",
                     "attack": null,
                     "enemy_skill_id": 84,
-                    "extra_description": null,
                     "max_amount": 50,
                     "min_amount": 40,
                     "params": [
@@ -885,15 +1125,16 @@
                 "condition": {
                     "_ai": 75,
                     "_rnd": 0,
-                    "condition_attributes": null,
+                    "cards_on_team": [],
+                    "combos_made": null,
+                    "condition_attributes": [],
                     "enemies_remaining": null,
                     "forced_one_time": null,
                     "hp_threshold": 50,
                     "on_death": null,
                     "one_time": 1
                 },
-                "enemy_skill_id": 84,
-                "extra_description": null
+                "enemy_skill_id": 84
             },
             {
                 "behavior": {
@@ -902,7 +1143,6 @@
                     "branch_value": 25,
                     "compare": "<",
                     "enemy_skill_id": 18,
-                    "extra_description": null,
                     "params": [
                         null,
                         null,
@@ -925,15 +1165,13 @@
                     "type": 28
                 },
                 "condition": null,
-                "enemy_skill_id": 18,
-                "extra_description": null
+                "enemy_skill_id": 18
             },
             {
                 "behavior": {
                     "_name": "エネルギーチャージ",
                     "attack": null,
                     "enemy_skill_id": 117,
-                    "extra_description": null,
                     "multiplier": 300,
                     "params": [
                         "次の攻撃に備えている",
@@ -959,21 +1197,21 @@
                 "condition": {
                     "_ai": 50,
                     "_rnd": 0,
-                    "condition_attributes": null,
+                    "cards_on_team": [],
+                    "combos_made": null,
+                    "condition_attributes": [],
                     "enemies_remaining": null,
                     "forced_one_time": null,
                     "hp_threshold": 75,
                     "on_death": null,
                     "one_time": null
                 },
-                "enemy_skill_id": 117,
-                "extra_description": null
+                "enemy_skill_id": 117
             },
             {
                 "behavior": {
                     "_name": "※パース終了",
                     "enemy_skill_id": 26,
-                    "extra_description": null,
                     "params": [
                         null,
                         null,
@@ -995,8 +1233,7 @@
                     "type": 36
                 },
                 "condition": null,
-                "enemy_skill_id": 26,
-                "extra_description": null
+                "enemy_skill_id": 26
             },
             {
                 "behavior": {
@@ -1007,7 +1244,6 @@
                         "min_hits": 3
                     },
                     "enemy_skill_id": 109,
-                    "extra_description": null,
                     "params": [
                         null,
                         3,
@@ -1031,15 +1267,16 @@
                 "condition": {
                     "_ai": 100,
                     "_rnd": 0,
-                    "condition_attributes": null,
+                    "cards_on_team": [],
+                    "combos_made": null,
+                    "condition_attributes": [],
                     "enemies_remaining": null,
                     "forced_one_time": null,
                     "hp_threshold": null,
                     "on_death": null,
                     "one_time": null
                 },
-                "enemy_skill_id": 109,
-                "extra_description": null
+                "enemy_skill_id": 109
             }
         ],
         "leader_skill": {
@@ -1253,7 +1490,6 @@
                     "branch_value": 5,
                     "compare": ">",
                     "enemy_skill_id": 25,
-                    "extra_description": null,
                     "params": [
                         null,
                         null,
@@ -1276,14 +1512,12 @@
                     "type": 35
                 },
                 "condition": null,
-                "enemy_skill_id": 25,
-                "extra_description": null
+                "enemy_skill_id": 25
             },
             {
                 "behavior": {
                     "_name": "테스트예비",
                     "enemy_skill_id": 26,
-                    "extra_description": null,
                     "params": [
                         null,
                         null,
@@ -1305,15 +1539,13 @@
                     "type": 36
                 },
                 "condition": null,
-                "enemy_skill_id": 26,
-                "extra_description": null
+                "enemy_skill_id": 26
             },
             {
                 "behavior": {
                     "_name": "자동회복",
                     "attack": null,
                     "enemy_skill_id": 84,
-                    "extra_description": null,
                     "max_amount": 50,
                     "min_amount": 40,
                     "params": [
@@ -1340,15 +1572,16 @@
                 "condition": {
                     "_ai": 75,
                     "_rnd": 0,
-                    "condition_attributes": null,
+                    "cards_on_team": [],
+                    "combos_made": null,
+                    "condition_attributes": [],
                     "enemies_remaining": null,
                     "forced_one_time": null,
                     "hp_threshold": 50,
                     "on_death": null,
                     "one_time": 1
                 },
-                "enemy_skill_id": 84,
-                "extra_description": null
+                "enemy_skill_id": 84
             },
             {
                 "behavior": {
@@ -1357,7 +1590,6 @@
                     "branch_value": 25,
                     "compare": "<",
                     "enemy_skill_id": 18,
-                    "extra_description": null,
                     "params": [
                         null,
                         null,
@@ -1380,15 +1612,13 @@
                     "type": 28
                 },
                 "condition": null,
-                "enemy_skill_id": 18,
-                "extra_description": null
+                "enemy_skill_id": 18
             },
             {
                 "behavior": {
                     "_name": "에너지 충전",
                     "attack": null,
                     "enemy_skill_id": 117,
-                    "extra_description": null,
                     "multiplier": 300,
                     "params": [
                         "다음 공격에 대비하고 있다",
@@ -1414,21 +1644,21 @@
                 "condition": {
                     "_ai": 50,
                     "_rnd": 0,
-                    "condition_attributes": null,
+                    "cards_on_team": [],
+                    "combos_made": null,
+                    "condition_attributes": [],
                     "enemies_remaining": null,
                     "forced_one_time": null,
                     "hp_threshold": 75,
                     "on_death": null,
                     "one_time": null
                 },
-                "enemy_skill_id": 117,
-                "extra_description": null
+                "enemy_skill_id": 117
             },
             {
                 "behavior": {
                     "_name": "테스트예비",
                     "enemy_skill_id": 26,
-                    "extra_description": null,
                     "params": [
                         null,
                         null,
@@ -1450,8 +1680,7 @@
                     "type": 36
                 },
                 "condition": null,
-                "enemy_skill_id": 26,
-                "extra_description": null
+                "enemy_skill_id": 26
             },
             {
                 "behavior": {
@@ -1462,7 +1691,6 @@
                         "min_hits": 3
                     },
                     "enemy_skill_id": 109,
-                    "extra_description": null,
                     "params": [
                         null,
                         3,
@@ -1486,15 +1714,16 @@
                 "condition": {
                     "_ai": 100,
                     "_rnd": 0,
-                    "condition_attributes": null,
+                    "cards_on_team": [],
+                    "combos_made": null,
+                    "condition_attributes": [],
                     "enemies_remaining": null,
                     "forced_one_time": null,
                     "hp_threshold": null,
                     "on_death": null,
                     "one_time": null
                 },
-                "enemy_skill_id": 109,
-                "extra_description": null
+                "enemy_skill_id": 109
             }
         ],
         "leader_skill": {
@@ -1837,7 +2066,6 @@
                     "branch_value": 5,
                     "compare": ">",
                     "enemy_skill_id": 25,
-                    "extra_description": null,
                     "params": [
                         null,
                         null,
@@ -1860,14 +2088,12 @@
                     "type": 35
                 },
                 "condition": null,
-                "enemy_skill_id": 25,
-                "extra_description": null
+                "enemy_skill_id": 25
             },
             {
                 "behavior": {
                     "_name": "ERROR26",
                     "enemy_skill_id": 26,
-                    "extra_description": null,
                     "params": [
                         null,
                         null,
@@ -1889,15 +2115,13 @@
                     "type": 36
                 },
                 "condition": null,
-                "enemy_skill_id": 26,
-                "extra_description": null
+                "enemy_skill_id": 26
             },
             {
                 "behavior": {
                     "_name": "Auto Recover",
                     "attack": null,
                     "enemy_skill_id": 84,
-                    "extra_description": null,
                     "max_amount": 50,
                     "min_amount": 40,
                     "params": [
@@ -1924,15 +2148,16 @@
                 "condition": {
                     "_ai": 75,
                     "_rnd": 0,
-                    "condition_attributes": null,
+                    "cards_on_team": [],
+                    "combos_made": null,
+                    "condition_attributes": [],
                     "enemies_remaining": null,
                     "forced_one_time": null,
                     "hp_threshold": 50,
                     "on_death": null,
                     "one_time": 1
                 },
-                "enemy_skill_id": 84,
-                "extra_description": null
+                "enemy_skill_id": 84
             },
             {
                 "behavior": {
@@ -1941,7 +2166,6 @@
                     "branch_value": 25,
                     "compare": "<",
                     "enemy_skill_id": 18,
-                    "extra_description": null,
                     "params": [
                         null,
                         null,
@@ -1964,15 +2188,13 @@
                     "type": 28
                 },
                 "condition": null,
-                "enemy_skill_id": 18,
-                "extra_description": null
+                "enemy_skill_id": 18
             },
             {
                 "behavior": {
                     "_name": "High Energy Charge",
                     "attack": null,
                     "enemy_skill_id": 117,
-                    "extra_description": null,
                     "multiplier": 300,
                     "params": [
                         "Stores power for the next attack",
@@ -1998,21 +2220,21 @@
                 "condition": {
                     "_ai": 50,
                     "_rnd": 0,
-                    "condition_attributes": null,
+                    "cards_on_team": [],
+                    "combos_made": null,
+                    "condition_attributes": [],
                     "enemies_remaining": null,
                     "forced_one_time": null,
                     "hp_threshold": 75,
                     "on_death": null,
                     "one_time": null
                 },
-                "enemy_skill_id": 117,
-                "extra_description": null
+                "enemy_skill_id": 117
             },
             {
                 "behavior": {
                     "_name": "ERROR26",
                     "enemy_skill_id": 26,
-                    "extra_description": null,
                     "params": [
                         null,
                         null,
@@ -2034,8 +2256,7 @@
                     "type": 36
                 },
                 "condition": null,
-                "enemy_skill_id": 26,
-                "extra_description": null
+                "enemy_skill_id": 26
             },
             {
                 "behavior": {
@@ -2046,7 +2267,6 @@
                         "min_hits": 3
                     },
                     "enemy_skill_id": 109,
-                    "extra_description": null,
                     "params": [
                         null,
                         3,
@@ -2070,15 +2290,16 @@
                 "condition": {
                     "_ai": 100,
                     "_rnd": 0,
-                    "condition_attributes": null,
+                    "cards_on_team": [],
+                    "combos_made": null,
+                    "condition_attributes": [],
                     "enemies_remaining": null,
                     "forced_one_time": null,
                     "hp_threshold": null,
                     "on_death": null,
                     "one_time": null
                 },
-                "enemy_skill_id": 109,
-                "extra_description": null
+                "enemy_skill_id": 109
             }
         ],
         "leader_skill": {

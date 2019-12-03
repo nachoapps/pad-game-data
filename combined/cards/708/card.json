@@ -55,308 +55,457 @@
     "en_ls_text": "Reduce damage taken by 10%",
     "enemy_behavior": [
         {
-            "behavior": {
-                "_name": "ERROR25",
-                "branch_condition": "level",
-                "branch_value": 5,
-                "compare": ">",
-                "enemy_skill_id": 25,
-                "extra_description": null,
-                "params": [
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    4,
-                    null,
-                    null,
-                    null
-                ],
-                "target_round": 3,
-                "type": 35
-            },
-            "condition": null,
             "enemy_skill_id": 25,
-            "extra_description": null
-        },
-        {
-            "behavior": {
-                "_name": "ERROR26",
-                "enemy_skill_id": 26,
-                "extra_description": null,
-                "params": [
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    4,
-                    null,
-                    null,
-                    null
-                ],
-                "type": 36
-            },
-            "condition": null,
-            "enemy_skill_id": 26,
-            "extra_description": null
-        },
-        {
-            "behavior": {
-                "_name": "Tentacles",
-                "attack": null,
-                "enemy_skill_id": 346,
-                "extra_description": null,
-                "max_turns": 4,
-                "min_turns": 2,
-                "params": [
-                    "Binds God Type allies for a number of turns",
-                    5,
-                    2,
-                    4,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    50,
-                    null,
-                    1,
-                    null,
-                    null
-                ],
-                "target_count": null,
-                "target_typing": 5,
-                "targets": [
-                    "TargetType.types"
-                ],
-                "type": 3
-            },
-            "condition": {
-                "_ai": 100,
-                "_rnd": 0,
-                "condition_attributes": null,
-                "enemies_remaining": null,
-                "forced_one_time": null,
-                "hp_threshold": 50,
-                "on_death": null,
-                "one_time": 1
-            },
-            "enemy_skill_id": 346,
-            "extra_description": null
-        },
-        {
-            "behavior": {
-                "_name": "Cut Down",
-                "attack": {
-                    "atk_multiplier": 30,
-                    "max_hits": 5,
-                    "min_hits": 3
+            "jp_skill": {
+                "behavior": {
+                    "_name": "※自分のレベルが ai 以上の時 rnd に分岐",
+                    "branch_condition": "level",
+                    "branch_value": 5,
+                    "compare": ">",
+                    "enemy_skill_id": 25,
+                    "params": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        4,
+                        null,
+                        null,
+                        null
+                    ],
+                    "target_round": 3,
+                    "type": 35
                 },
-                "enemy_skill_id": 347,
-                "extra_description": null,
-                "params": [
-                    null,
-                    3,
-                    5,
-                    30,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    75,
-                    null,
-                    null,
-                    null,
-                    null
-                ],
-                "type": 15
+                "condition": null,
+                "enemy_skill_id": 25
             },
-            "condition": {
-                "_ai": 70,
-                "_rnd": 0,
-                "condition_attributes": null,
-                "enemies_remaining": null,
-                "forced_one_time": null,
-                "hp_threshold": 75,
-                "on_death": null,
-                "one_time": null
-            },
-            "enemy_skill_id": 347,
-            "extra_description": null
-        }
-    ],
-    "enemy_behavior_jp": [
-        {
-            "behavior": {
-                "_name": "※自分のレベルが ai 以上の時 rnd に分岐",
-                "branch_condition": "level",
-                "branch_value": 5,
-                "compare": ">",
-                "enemy_skill_id": 25,
-                "extra_description": null,
-                "params": [
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    4,
-                    null,
-                    null,
-                    null
-                ],
-                "target_round": 3,
-                "type": 35
-            },
-            "condition": null,
-            "enemy_skill_id": 25,
-            "extra_description": null
-        },
-        {
-            "behavior": {
-                "_name": "※パース終了",
-                "enemy_skill_id": 26,
-                "extra_description": null,
-                "params": [
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    4,
-                    null,
-                    null,
-                    null
-                ],
-                "type": 36
-            },
-            "condition": null,
-            "enemy_skill_id": 26,
-            "extra_description": null
-        },
-        {
-            "behavior": {
-                "_name": "触手",
-                "attack": null,
-                "enemy_skill_id": 346,
-                "extra_description": null,
-                "max_turns": 4,
-                "min_turns": 2,
-                "params": [
-                    "神タイプが数ターンの間、行動不能",
-                    5,
-                    2,
-                    4,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    50,
-                    null,
-                    1,
-                    null,
-                    null
-                ],
-                "target_count": null,
-                "target_typing": 5,
-                "targets": [
-                    "TargetType.types"
-                ],
-                "type": 3
-            },
-            "condition": {
-                "_ai": 100,
-                "_rnd": 0,
-                "condition_attributes": null,
-                "enemies_remaining": null,
-                "forced_one_time": null,
-                "hp_threshold": 50,
-                "on_death": null,
-                "one_time": 1
-            },
-            "enemy_skill_id": 346,
-            "extra_description": null
-        },
-        {
-            "behavior": {
-                "_name": "なぎ払う",
-                "attack": {
-                    "atk_multiplier": 30,
-                    "max_hits": 5,
-                    "min_hits": 3
+            "kr_skill": {
+                "behavior": {
+                    "_name": "테스트예비",
+                    "branch_condition": "level",
+                    "branch_value": 5,
+                    "compare": ">",
+                    "enemy_skill_id": 25,
+                    "params": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        4,
+                        null,
+                        null,
+                        null
+                    ],
+                    "target_round": 3,
+                    "type": 35
                 },
-                "enemy_skill_id": 347,
-                "extra_description": null,
-                "params": [
-                    null,
-                    3,
-                    5,
-                    30,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    75,
-                    null,
-                    null,
-                    null,
-                    null
-                ],
-                "type": 15
+                "condition": null,
+                "enemy_skill_id": 25
             },
-            "condition": {
-                "_ai": 70,
-                "_rnd": 0,
-                "condition_attributes": null,
-                "enemies_remaining": null,
-                "forced_one_time": null,
-                "hp_threshold": 75,
-                "on_death": null,
-                "one_time": null
+            "na_skill": {
+                "behavior": {
+                    "_name": "ERROR25",
+                    "branch_condition": "level",
+                    "branch_value": 5,
+                    "compare": ">",
+                    "enemy_skill_id": 25,
+                    "params": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        4,
+                        null,
+                        null,
+                        null
+                    ],
+                    "target_round": 3,
+                    "type": 35
+                },
+                "condition": null,
+                "enemy_skill_id": 25
+            }
+        },
+        {
+            "enemy_skill_id": 26,
+            "jp_skill": {
+                "behavior": {
+                    "_name": "※パース終了",
+                    "enemy_skill_id": 26,
+                    "params": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        4,
+                        null,
+                        null,
+                        null
+                    ],
+                    "type": 36
+                },
+                "condition": null,
+                "enemy_skill_id": 26
             },
+            "kr_skill": {
+                "behavior": {
+                    "_name": "테스트예비",
+                    "enemy_skill_id": 26,
+                    "params": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        4,
+                        null,
+                        null,
+                        null
+                    ],
+                    "type": 36
+                },
+                "condition": null,
+                "enemy_skill_id": 26
+            },
+            "na_skill": {
+                "behavior": {
+                    "_name": "ERROR26",
+                    "enemy_skill_id": 26,
+                    "params": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        4,
+                        null,
+                        null,
+                        null
+                    ],
+                    "type": 36
+                },
+                "condition": null,
+                "enemy_skill_id": 26
+            }
+        },
+        {
+            "enemy_skill_id": 346,
+            "jp_skill": {
+                "behavior": {
+                    "_name": "触手",
+                    "attack": null,
+                    "enemy_skill_id": 346,
+                    "max_turns": 4,
+                    "min_turns": 2,
+                    "params": [
+                        "神タイプが数ターンの間、行動不能",
+                        5,
+                        2,
+                        4,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        50,
+                        null,
+                        1,
+                        null,
+                        null
+                    ],
+                    "target_count": null,
+                    "target_typing": 5,
+                    "targets": [
+                        "TargetType.types"
+                    ],
+                    "type": 3
+                },
+                "condition": {
+                    "_ai": 100,
+                    "_rnd": 0,
+                    "cards_on_team": [],
+                    "combos_made": null,
+                    "condition_attributes": [],
+                    "enemies_remaining": null,
+                    "forced_one_time": null,
+                    "hp_threshold": 50,
+                    "on_death": null,
+                    "one_time": 1
+                },
+                "enemy_skill_id": 346
+            },
+            "kr_skill": {
+                "behavior": {
+                    "_name": "촉수",
+                    "attack": null,
+                    "enemy_skill_id": 346,
+                    "max_turns": 4,
+                    "min_turns": 2,
+                    "params": [
+                        "신타입이 몇 턴 동안 행동불능",
+                        5,
+                        2,
+                        4,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        50,
+                        null,
+                        1,
+                        null,
+                        null
+                    ],
+                    "target_count": null,
+                    "target_typing": 5,
+                    "targets": [
+                        "TargetType.types"
+                    ],
+                    "type": 3
+                },
+                "condition": {
+                    "_ai": 100,
+                    "_rnd": 0,
+                    "cards_on_team": [],
+                    "combos_made": null,
+                    "condition_attributes": [],
+                    "enemies_remaining": null,
+                    "forced_one_time": null,
+                    "hp_threshold": 50,
+                    "on_death": null,
+                    "one_time": 1
+                },
+                "enemy_skill_id": 346
+            },
+            "na_skill": {
+                "behavior": {
+                    "_name": "Tentacles",
+                    "attack": null,
+                    "enemy_skill_id": 346,
+                    "max_turns": 4,
+                    "min_turns": 2,
+                    "params": [
+                        "Binds God Type allies for a number of turns",
+                        5,
+                        2,
+                        4,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        50,
+                        null,
+                        1,
+                        null,
+                        null
+                    ],
+                    "target_count": null,
+                    "target_typing": 5,
+                    "targets": [
+                        "TargetType.types"
+                    ],
+                    "type": 3
+                },
+                "condition": {
+                    "_ai": 100,
+                    "_rnd": 0,
+                    "cards_on_team": [],
+                    "combos_made": null,
+                    "condition_attributes": [],
+                    "enemies_remaining": null,
+                    "forced_one_time": null,
+                    "hp_threshold": 50,
+                    "on_death": null,
+                    "one_time": 1
+                },
+                "enemy_skill_id": 346
+            }
+        },
+        {
             "enemy_skill_id": 347,
-            "extra_description": null
+            "jp_skill": {
+                "behavior": {
+                    "_name": "なぎ払う",
+                    "attack": {
+                        "atk_multiplier": 30,
+                        "max_hits": 5,
+                        "min_hits": 3
+                    },
+                    "enemy_skill_id": 347,
+                    "params": [
+                        null,
+                        3,
+                        5,
+                        30,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        75,
+                        null,
+                        null,
+                        null,
+                        null
+                    ],
+                    "type": 15
+                },
+                "condition": {
+                    "_ai": 70,
+                    "_rnd": 0,
+                    "cards_on_team": [],
+                    "combos_made": null,
+                    "condition_attributes": [],
+                    "enemies_remaining": null,
+                    "forced_one_time": null,
+                    "hp_threshold": 75,
+                    "on_death": null,
+                    "one_time": null
+                },
+                "enemy_skill_id": 347
+            },
+            "kr_skill": {
+                "behavior": {
+                    "_name": "가로베기",
+                    "attack": {
+                        "atk_multiplier": 30,
+                        "max_hits": 5,
+                        "min_hits": 3
+                    },
+                    "enemy_skill_id": 347,
+                    "params": [
+                        null,
+                        3,
+                        5,
+                        30,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        75,
+                        null,
+                        null,
+                        null,
+                        null
+                    ],
+                    "type": 15
+                },
+                "condition": {
+                    "_ai": 70,
+                    "_rnd": 0,
+                    "cards_on_team": [],
+                    "combos_made": null,
+                    "condition_attributes": [],
+                    "enemies_remaining": null,
+                    "forced_one_time": null,
+                    "hp_threshold": 75,
+                    "on_death": null,
+                    "one_time": null
+                },
+                "enemy_skill_id": 347
+            },
+            "na_skill": {
+                "behavior": {
+                    "_name": "Cut Down",
+                    "attack": {
+                        "atk_multiplier": 30,
+                        "max_hits": 5,
+                        "min_hits": 3
+                    },
+                    "enemy_skill_id": 347,
+                    "params": [
+                        null,
+                        3,
+                        5,
+                        30,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        75,
+                        null,
+                        null,
+                        null,
+                        null
+                    ],
+                    "type": 15
+                },
+                "condition": {
+                    "_ai": 70,
+                    "_rnd": 0,
+                    "cards_on_team": [],
+                    "combos_made": null,
+                    "condition_attributes": [],
+                    "enemies_remaining": null,
+                    "forced_one_time": null,
+                    "hp_threshold": 75,
+                    "on_death": null,
+                    "one_time": null
+                },
+                "enemy_skill_id": 347
+            }
         }
     ],
     "has_animation": false,
@@ -487,7 +636,6 @@
                     "branch_value": 5,
                     "compare": ">",
                     "enemy_skill_id": 25,
-                    "extra_description": null,
                     "params": [
                         null,
                         null,
@@ -510,14 +658,12 @@
                     "type": 35
                 },
                 "condition": null,
-                "enemy_skill_id": 25,
-                "extra_description": null
+                "enemy_skill_id": 25
             },
             {
                 "behavior": {
                     "_name": "※パース終了",
                     "enemy_skill_id": 26,
-                    "extra_description": null,
                     "params": [
                         null,
                         null,
@@ -539,15 +685,13 @@
                     "type": 36
                 },
                 "condition": null,
-                "enemy_skill_id": 26,
-                "extra_description": null
+                "enemy_skill_id": 26
             },
             {
                 "behavior": {
                     "_name": "触手",
                     "attack": null,
                     "enemy_skill_id": 346,
-                    "extra_description": null,
                     "max_turns": 4,
                     "min_turns": 2,
                     "params": [
@@ -578,15 +722,16 @@
                 "condition": {
                     "_ai": 100,
                     "_rnd": 0,
-                    "condition_attributes": null,
+                    "cards_on_team": [],
+                    "combos_made": null,
+                    "condition_attributes": [],
                     "enemies_remaining": null,
                     "forced_one_time": null,
                     "hp_threshold": 50,
                     "on_death": null,
                     "one_time": 1
                 },
-                "enemy_skill_id": 346,
-                "extra_description": null
+                "enemy_skill_id": 346
             },
             {
                 "behavior": {
@@ -597,7 +742,6 @@
                         "min_hits": 3
                     },
                     "enemy_skill_id": 347,
-                    "extra_description": null,
                     "params": [
                         null,
                         3,
@@ -621,15 +765,16 @@
                 "condition": {
                     "_ai": 70,
                     "_rnd": 0,
-                    "condition_attributes": null,
+                    "cards_on_team": [],
+                    "combos_made": null,
+                    "condition_attributes": [],
                     "enemies_remaining": null,
                     "forced_one_time": null,
                     "hp_threshold": 75,
                     "on_death": null,
                     "one_time": null
                 },
-                "enemy_skill_id": 347,
-                "extra_description": null
+                "enemy_skill_id": 347
             }
         ],
         "leader_skill": {
@@ -773,7 +918,6 @@
                     "branch_value": 5,
                     "compare": ">",
                     "enemy_skill_id": 25,
-                    "extra_description": null,
                     "params": [
                         null,
                         null,
@@ -796,14 +940,12 @@
                     "type": 35
                 },
                 "condition": null,
-                "enemy_skill_id": 25,
-                "extra_description": null
+                "enemy_skill_id": 25
             },
             {
                 "behavior": {
                     "_name": "테스트예비",
                     "enemy_skill_id": 26,
-                    "extra_description": null,
                     "params": [
                         null,
                         null,
@@ -825,15 +967,13 @@
                     "type": 36
                 },
                 "condition": null,
-                "enemy_skill_id": 26,
-                "extra_description": null
+                "enemy_skill_id": 26
             },
             {
                 "behavior": {
                     "_name": "촉수",
                     "attack": null,
                     "enemy_skill_id": 346,
-                    "extra_description": null,
                     "max_turns": 4,
                     "min_turns": 2,
                     "params": [
@@ -864,15 +1004,16 @@
                 "condition": {
                     "_ai": 100,
                     "_rnd": 0,
-                    "condition_attributes": null,
+                    "cards_on_team": [],
+                    "combos_made": null,
+                    "condition_attributes": [],
                     "enemies_remaining": null,
                     "forced_one_time": null,
                     "hp_threshold": 50,
                     "on_death": null,
                     "one_time": 1
                 },
-                "enemy_skill_id": 346,
-                "extra_description": null
+                "enemy_skill_id": 346
             },
             {
                 "behavior": {
@@ -883,7 +1024,6 @@
                         "min_hits": 3
                     },
                     "enemy_skill_id": 347,
-                    "extra_description": null,
                     "params": [
                         null,
                         3,
@@ -907,15 +1047,16 @@
                 "condition": {
                     "_ai": 70,
                     "_rnd": 0,
-                    "condition_attributes": null,
+                    "cards_on_team": [],
+                    "combos_made": null,
+                    "condition_attributes": [],
                     "enemies_remaining": null,
                     "forced_one_time": null,
                     "hp_threshold": 75,
                     "on_death": null,
                     "one_time": null
                 },
-                "enemy_skill_id": 347,
-                "extra_description": null
+                "enemy_skill_id": 347
             }
         ],
         "leader_skill": {
@@ -1097,7 +1238,6 @@
                     "branch_value": 5,
                     "compare": ">",
                     "enemy_skill_id": 25,
-                    "extra_description": null,
                     "params": [
                         null,
                         null,
@@ -1120,14 +1260,12 @@
                     "type": 35
                 },
                 "condition": null,
-                "enemy_skill_id": 25,
-                "extra_description": null
+                "enemy_skill_id": 25
             },
             {
                 "behavior": {
                     "_name": "ERROR26",
                     "enemy_skill_id": 26,
-                    "extra_description": null,
                     "params": [
                         null,
                         null,
@@ -1149,15 +1287,13 @@
                     "type": 36
                 },
                 "condition": null,
-                "enemy_skill_id": 26,
-                "extra_description": null
+                "enemy_skill_id": 26
             },
             {
                 "behavior": {
                     "_name": "Tentacles",
                     "attack": null,
                     "enemy_skill_id": 346,
-                    "extra_description": null,
                     "max_turns": 4,
                     "min_turns": 2,
                     "params": [
@@ -1188,15 +1324,16 @@
                 "condition": {
                     "_ai": 100,
                     "_rnd": 0,
-                    "condition_attributes": null,
+                    "cards_on_team": [],
+                    "combos_made": null,
+                    "condition_attributes": [],
                     "enemies_remaining": null,
                     "forced_one_time": null,
                     "hp_threshold": 50,
                     "on_death": null,
                     "one_time": 1
                 },
-                "enemy_skill_id": 346,
-                "extra_description": null
+                "enemy_skill_id": 346
             },
             {
                 "behavior": {
@@ -1207,7 +1344,6 @@
                         "min_hits": 3
                     },
                     "enemy_skill_id": 347,
-                    "extra_description": null,
                     "params": [
                         null,
                         3,
@@ -1231,15 +1367,16 @@
                 "condition": {
                     "_ai": 70,
                     "_rnd": 0,
-                    "condition_attributes": null,
+                    "cards_on_team": [],
+                    "combos_made": null,
+                    "condition_attributes": [],
                     "enemies_remaining": null,
                     "forced_one_time": null,
                     "hp_threshold": 75,
                     "on_death": null,
                     "one_time": null
                 },
-                "enemy_skill_id": 347,
-                "extra_description": null
+                "enemy_skill_id": 347
             }
         ],
         "leader_skill": {

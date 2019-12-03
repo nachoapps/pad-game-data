@@ -125,1356 +125,1999 @@
     "en_ls_text": "3x ATK and reduce damage taken by 35% when above 50% HP; 2.5x ATK when matching 2+ Fire combos",
     "enemy_behavior": [
         {
-            "behavior": {
-                "_name": "※先制コマンドLV1",
-                "enemy_skill_id": 318,
-                "extra_description": null,
-                "level": 1,
-                "params": [
-                    null,
-                    1,
-                    100,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null
-                ],
-                "type": 49
-            },
-            "condition": null,
             "enemy_skill_id": 318,
-            "extra_description": null
-        },
-        {
-            "behavior": {
-                "_name": "※ai フラグが立っていたら rnd の数値に分岐",
-                "branch_condition": "flag",
-                "branch_value": 1,
-                "compare": "&",
-                "enemy_skill_id": 10,
-                "extra_description": null,
-                "params": [
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    50,
-                    4,
-                    null,
-                    null,
-                    null
-                ],
-                "target_round": 6,
-                "type": 43
-            },
-            "condition": null,
-            "enemy_skill_id": 10,
-            "extra_description": null
-        },
-        {
-            "behavior": {
-                "_name": "※フラグを ai にセット",
-                "enemy_skill_id": 12,
-                "extra_description": null,
-                "flag": 1,
-                "flag_bin": "0b1",
-                "operation": "SET",
-                "params": [
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    4,
-                    null,
-                    null,
-                    null
-                ],
-                "type": 22
-            },
-            "condition": null,
-            "enemy_skill_id": 12,
-            "extra_description": null
-        },
-        {
-            "behavior": {
-                "_name": "ふぅん…　キミが遊び相手かい",
-                "attack": null,
-                "cloud_height": 1,
-                "cloud_width": 4,
-                "enemy_skill_id": 12005,
-                "extra_description": null,
-                "origin_x": 3,
-                "origin_y": 2,
-                "params": [
-                    "3ターンの間、盤面に雲が発生",
-                    3,
-                    4,
-                    1,
-                    2,
-                    3,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null
-                ],
-                "turns": 3,
-                "type": 104
-            },
-            "condition": {
-                "_ai": 100,
-                "_rnd": 0,
-                "condition_attributes": null,
-                "enemies_remaining": null,
-                "forced_one_time": null,
-                "hp_threshold": null,
-                "on_death": null,
-                "one_time": null
-            },
-            "enemy_skill_id": 12005,
-            "extra_description": null
-        },
-        {
-            "behavior": {
-                "_name": "※パース終了",
-                "enemy_skill_id": 26,
-                "extra_description": null,
-                "params": [
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    4,
-                    null,
-                    null,
-                    null
-                ],
-                "type": 36
-            },
-            "condition": null,
-            "enemy_skill_id": 26,
-            "extra_description": null
-        },
-        {
-            "behavior": {
-                "_name": "※HPが ai %以下の時 rnd に分岐",
-                "branch_condition": "hp",
-                "branch_value": 15,
-                "compare": "<",
-                "enemy_skill_id": 18,
-                "extra_description": null,
-                "params": [
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    4,
-                    null,
-                    null,
-                    null
-                ],
-                "target_round": 12,
-                "type": 28
-            },
-            "condition": null,
-            "enemy_skill_id": 18,
-            "extra_description": null
-        },
-        {
-            "behavior": {
-                "_name": "※HPが ai %以上の時 rnd に分岐",
-                "branch_condition": "hp",
-                "branch_value": 51,
-                "compare": ">",
-                "enemy_skill_id": 19,
-                "extra_description": null,
-                "params": [
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    4,
-                    null,
-                    null,
-                    null
-                ],
-                "target_round": 9,
-                "type": 29
-            },
-            "condition": null,
-            "enemy_skill_id": 19,
-            "extra_description": null
-        },
-        {
-            "behavior": {
-                "_name": "50%以下通常3回",
-                "attack": null,
-                "enemy_skill_id": 12012,
-                "extra_description": null,
-                "params": [
-                    null,
-                    12013,
-                    12014,
-                    12015,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    1,
-                    null,
-                    null
-                ],
-                "skill_ids": [
-                    12013,
-                    12014,
-                    12015
-                ],
-                "skills": [
-                    {
-                        "_name": "へぇ　少しは遊べるじゃないか…",
-                        "attack": {
-                            "atk_multiplier": 90,
-                            "max_hits": 1,
-                            "min_hits": 1
-                        },
-                        "enemy_skill_id": 12013,
-                        "extra_description": null,
-                        "params": [
-                            null,
-                            1,
-                            1,
-                            90,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null
-                        ],
-                        "type": 15
-                    },
-                    {
-                        "_name": "それじゃ　こんなのはどうだい？",
-                        "attack": null,
-                        "enemy_count": 1,
-                        "enemy_skill_id": 12014,
-                        "extra_description": null,
-                        "multiplier": 150,
-                        "params": [
-                            "1ターンの間、攻撃力が1.5倍に上昇した",
-                            1,
-                            1,
-                            150,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null
-                        ],
-                        "turns": 1,
-                        "type": 17
-                    },
-                    {
-                        "_name": "さあ　もっと楽しませてよ！",
-                        "amount": 50,
-                        "attack": null,
-                        "debuff_type": "RCV",
-                        "enemy_skill_id": 12015,
-                        "extra_description": null,
-                        "params": [
-                            "1ターンの間、回復力が半減",
-                            1,
-                            50,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null
-                        ],
-                        "turns": 1,
-                        "type": 105,
-                        "unit": "%"
-                    }
-                ],
-                "type": 83
-            },
-            "condition": {
-                "_ai": 100,
-                "_rnd": 0,
-                "condition_attributes": null,
-                "enemies_remaining": null,
-                "forced_one_time": null,
-                "hp_threshold": null,
-                "on_death": null,
-                "one_time": 1
-            },
-            "enemy_skill_id": 12012,
-            "extra_description": null
-        },
-        {
-            "behavior": {
-                "_name": "通常2回Ａ",
-                "attack": null,
-                "enemy_skill_id": 12006,
-                "extra_description": null,
-                "params": [
-                    null,
-                    12008,
-                    12010,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null
-                ],
-                "skill_ids": [
-                    12008,
-                    12010
-                ],
-                "skills": [
-                    {
-                        "_name": "キュンキュンさせてあげるよ…",
-                        "attack": {
-                            "atk_multiplier": 95,
-                            "max_hits": 1,
-                            "min_hits": 1
-                        },
-                        "enemy_skill_id": 12008,
-                        "extra_description": null,
-                        "orb_from": -1,
-                        "orb_to": null,
-                        "params": [
-                            null,
-                            95,
-                            -1,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null
-                        ],
-                        "random_count": null,
-                        "type": 48
-                    },
-                    {
-                        "_name": "ヤケドしても　知らないけどね！",
-                        "attack": null,
-                        "attributes": [
-                            0
-                        ],
-                        "chance": 100,
-                        "enemy_skill_id": 12010,
-                        "extra_description": null,
-                        "max_turns": 10,
-                        "min_turns": 10,
-                        "params": [
-                            "10ターンの間、火ドロップがロック状態で落ちる",
-                            1,
-                            10,
-                            10,
-                            100,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null
-                        ],
-                        "type": 96
-                    }
-                ],
-                "type": 83
-            },
-            "condition": {
-                "_ai": 0,
-                "_rnd": 50,
-                "condition_attributes": null,
-                "enemies_remaining": null,
-                "forced_one_time": null,
-                "hp_threshold": null,
-                "on_death": null,
-                "one_time": null
-            },
-            "enemy_skill_id": 12006,
-            "extra_description": null
-        },
-        {
-            "behavior": {
-                "_name": "通常2回Ｂ",
-                "attack": null,
-                "enemy_skill_id": 12007,
-                "extra_description": null,
-                "params": [
-                    null,
-                    12009,
-                    12011,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null
-                ],
-                "skill_ids": [
-                    12009,
-                    12011
-                ],
-                "skills": [
-                    {
-                        "_name": "ほら　こっちだよ！",
-                        "attack": null,
-                        "enemy_skill_id": 12009,
-                        "extra_description": null,
-                        "params": [
-                            null,
-                            30,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null
-                        ],
-                        "percent": 30,
-                        "type": 50
-                    },
-                    {
-                        "_name": "だらしがないねえ！",
-                        "attack": {
-                            "atk_multiplier": 60,
-                            "max_hits": 2,
-                            "min_hits": 2
-                        },
-                        "enemy_skill_id": 12011,
-                        "extra_description": null,
-                        "params": [
-                            null,
-                            2,
-                            2,
-                            60,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null
-                        ],
-                        "type": 15
-                    }
-                ],
-                "type": 83
-            },
-            "condition": {
-                "_ai": 0,
-                "_rnd": 50,
-                "condition_attributes": null,
-                "enemies_remaining": null,
-                "forced_one_time": null,
-                "hp_threshold": null,
-                "on_death": null,
-                "one_time": null
-            },
-            "enemy_skill_id": 12007,
-            "extra_description": null
-        },
-        {
-            "behavior": {
-                "_name": "※パース終了",
-                "enemy_skill_id": 26,
-                "extra_description": null,
-                "params": [
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    4,
-                    null,
-                    null,
-                    null
-                ],
-                "type": 36
-            },
-            "condition": null,
-            "enemy_skill_id": 26,
-            "extra_description": null
-        },
-        {
-            "behavior": {
-                "_name": "紅蓮地獄",
-                "attack": {
-                    "atk_multiplier": 250,
-                    "max_hits": 1,
-                    "min_hits": 1
+            "jp_skill": {
+                "behavior": {
+                    "_name": "※先制コマンドLV1",
+                    "enemy_skill_id": 318,
+                    "level": 1,
+                    "params": [
+                        null,
+                        1,
+                        100,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null
+                    ],
+                    "type": 49
                 },
-                "enemy_skill_id": 12016,
-                "extra_description": null,
-                "params": [
-                    null,
-                    1,
-                    1,
-                    250,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null
-                ],
-                "type": 15
+                "condition": null,
+                "enemy_skill_id": 318
             },
-            "condition": {
-                "_ai": 100,
-                "_rnd": 0,
-                "condition_attributes": null,
-                "enemies_remaining": null,
-                "forced_one_time": null,
-                "hp_threshold": null,
-                "on_death": null,
-                "one_time": null
-            },
-            "enemy_skill_id": 12016,
-            "extra_description": null
-        },
-        {
-            "behavior": {
-                "_name": "※パース終了",
-                "enemy_skill_id": 26,
-                "extra_description": null,
-                "params": [
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    4,
-                    null,
-                    null,
-                    null
-                ],
-                "type": 36
-            },
-            "condition": null,
-            "enemy_skill_id": 26,
-            "extra_description": null
-        }
-    ],
-    "enemy_behavior_jp": [
-        {
-            "behavior": {
-                "_name": "※先制コマンドLV1",
-                "enemy_skill_id": 318,
-                "extra_description": null,
-                "level": 1,
-                "params": [
-                    null,
-                    1,
-                    100,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null
-                ],
-                "type": 49
-            },
-            "condition": null,
-            "enemy_skill_id": 318,
-            "extra_description": null
-        },
-        {
-            "behavior": {
-                "_name": "※ai フラグが立っていたら rnd の数値に分岐",
-                "branch_condition": "flag",
-                "branch_value": 1,
-                "compare": "&",
-                "enemy_skill_id": 10,
-                "extra_description": null,
-                "params": [
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    50,
-                    4,
-                    null,
-                    null,
-                    null
-                ],
-                "target_round": 6,
-                "type": 43
-            },
-            "condition": null,
-            "enemy_skill_id": 10,
-            "extra_description": null
-        },
-        {
-            "behavior": {
-                "_name": "※フラグを ai にセット",
-                "enemy_skill_id": 12,
-                "extra_description": null,
-                "flag": 1,
-                "flag_bin": "0b1",
-                "operation": "SET",
-                "params": [
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    4,
-                    null,
-                    null,
-                    null
-                ],
-                "type": 22
-            },
-            "condition": null,
-            "enemy_skill_id": 12,
-            "extra_description": null
-        },
-        {
-            "behavior": {
-                "_name": "ふぅん…　キミが遊び相手かい",
-                "attack": null,
-                "cloud_height": 1,
-                "cloud_width": 4,
-                "enemy_skill_id": 12005,
-                "extra_description": null,
-                "origin_x": 3,
-                "origin_y": 2,
-                "params": [
-                    "3ターンの間、盤面に雲が発生",
-                    3,
-                    4,
-                    1,
-                    2,
-                    3,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null
-                ],
-                "turns": 3,
-                "type": 104
-            },
-            "condition": {
-                "_ai": 100,
-                "_rnd": 0,
-                "condition_attributes": null,
-                "enemies_remaining": null,
-                "forced_one_time": null,
-                "hp_threshold": null,
-                "on_death": null,
-                "one_time": null
-            },
-            "enemy_skill_id": 12005,
-            "extra_description": null
-        },
-        {
-            "behavior": {
-                "_name": "※パース終了",
-                "enemy_skill_id": 26,
-                "extra_description": null,
-                "params": [
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    4,
-                    null,
-                    null,
-                    null
-                ],
-                "type": 36
-            },
-            "condition": null,
-            "enemy_skill_id": 26,
-            "extra_description": null
-        },
-        {
-            "behavior": {
-                "_name": "※HPが ai %以下の時 rnd に分岐",
-                "branch_condition": "hp",
-                "branch_value": 15,
-                "compare": "<",
-                "enemy_skill_id": 18,
-                "extra_description": null,
-                "params": [
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    4,
-                    null,
-                    null,
-                    null
-                ],
-                "target_round": 12,
-                "type": 28
-            },
-            "condition": null,
-            "enemy_skill_id": 18,
-            "extra_description": null
-        },
-        {
-            "behavior": {
-                "_name": "※HPが ai %以上の時 rnd に分岐",
-                "branch_condition": "hp",
-                "branch_value": 51,
-                "compare": ">",
-                "enemy_skill_id": 19,
-                "extra_description": null,
-                "params": [
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    4,
-                    null,
-                    null,
-                    null
-                ],
-                "target_round": 9,
-                "type": 29
-            },
-            "condition": null,
-            "enemy_skill_id": 19,
-            "extra_description": null
-        },
-        {
-            "behavior": {
-                "_name": "50%以下通常3回",
-                "attack": null,
-                "enemy_skill_id": 12012,
-                "extra_description": null,
-                "params": [
-                    null,
-                    12013,
-                    12014,
-                    12015,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    1,
-                    null,
-                    null
-                ],
-                "skill_ids": [
-                    12013,
-                    12014,
-                    12015
-                ],
-                "skills": [
-                    {
-                        "_name": "へぇ　少しは遊べるじゃないか…",
-                        "attack": {
-                            "atk_multiplier": 90,
-                            "max_hits": 1,
-                            "min_hits": 1
-                        },
-                        "enemy_skill_id": 12013,
-                        "extra_description": null,
-                        "params": [
-                            null,
-                            1,
-                            1,
-                            90,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null
-                        ],
-                        "type": 15
-                    },
-                    {
-                        "_name": "それじゃ　こんなのはどうだい？",
-                        "attack": null,
-                        "enemy_count": 1,
-                        "enemy_skill_id": 12014,
-                        "extra_description": null,
-                        "multiplier": 150,
-                        "params": [
-                            "1ターンの間、攻撃力が1.5倍に上昇した",
-                            1,
-                            1,
-                            150,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null
-                        ],
-                        "turns": 1,
-                        "type": 17
-                    },
-                    {
-                        "_name": "さあ　もっと楽しませてよ！",
-                        "amount": 50,
-                        "attack": null,
-                        "debuff_type": "RCV",
-                        "enemy_skill_id": 12015,
-                        "extra_description": null,
-                        "params": [
-                            "1ターンの間、回復力が半減",
-                            1,
-                            50,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null
-                        ],
-                        "turns": 1,
-                        "type": 105,
-                        "unit": "%"
-                    }
-                ],
-                "type": 83
-            },
-            "condition": {
-                "_ai": 100,
-                "_rnd": 0,
-                "condition_attributes": null,
-                "enemies_remaining": null,
-                "forced_one_time": null,
-                "hp_threshold": null,
-                "on_death": null,
-                "one_time": 1
-            },
-            "enemy_skill_id": 12012,
-            "extra_description": null
-        },
-        {
-            "behavior": {
-                "_name": "通常2回Ａ",
-                "attack": null,
-                "enemy_skill_id": 12006,
-                "extra_description": null,
-                "params": [
-                    null,
-                    12008,
-                    12010,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null
-                ],
-                "skill_ids": [
-                    12008,
-                    12010
-                ],
-                "skills": [
-                    {
-                        "_name": "キュンキュンさせてあげるよ…",
-                        "attack": {
-                            "atk_multiplier": 95,
-                            "max_hits": 1,
-                            "min_hits": 1
-                        },
-                        "enemy_skill_id": 12008,
-                        "extra_description": null,
-                        "orb_from": -1,
-                        "orb_to": null,
-                        "params": [
-                            null,
-                            95,
-                            -1,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null
-                        ],
-                        "random_count": null,
-                        "type": 48
-                    },
-                    {
-                        "_name": "ヤケドしても　知らないけどね！",
-                        "attack": null,
-                        "attributes": [
-                            0
-                        ],
-                        "chance": 100,
-                        "enemy_skill_id": 12010,
-                        "extra_description": null,
-                        "max_turns": 10,
-                        "min_turns": 10,
-                        "params": [
-                            "10ターンの間、火ドロップがロック状態で落ちる",
-                            1,
-                            10,
-                            10,
-                            100,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null
-                        ],
-                        "type": 96
-                    }
-                ],
-                "type": 83
-            },
-            "condition": {
-                "_ai": 0,
-                "_rnd": 50,
-                "condition_attributes": null,
-                "enemies_remaining": null,
-                "forced_one_time": null,
-                "hp_threshold": null,
-                "on_death": null,
-                "one_time": null
-            },
-            "enemy_skill_id": 12006,
-            "extra_description": null
-        },
-        {
-            "behavior": {
-                "_name": "通常2回Ｂ",
-                "attack": null,
-                "enemy_skill_id": 12007,
-                "extra_description": null,
-                "params": [
-                    null,
-                    12009,
-                    12011,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null
-                ],
-                "skill_ids": [
-                    12009,
-                    12011
-                ],
-                "skills": [
-                    {
-                        "_name": "ほら　こっちだよ！",
-                        "attack": null,
-                        "enemy_skill_id": 12009,
-                        "extra_description": null,
-                        "params": [
-                            null,
-                            30,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null
-                        ],
-                        "percent": 30,
-                        "type": 50
-                    },
-                    {
-                        "_name": "だらしがないねえ！",
-                        "attack": {
-                            "atk_multiplier": 60,
-                            "max_hits": 2,
-                            "min_hits": 2
-                        },
-                        "enemy_skill_id": 12011,
-                        "extra_description": null,
-                        "params": [
-                            null,
-                            2,
-                            2,
-                            60,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null
-                        ],
-                        "type": 15
-                    }
-                ],
-                "type": 83
-            },
-            "condition": {
-                "_ai": 0,
-                "_rnd": 50,
-                "condition_attributes": null,
-                "enemies_remaining": null,
-                "forced_one_time": null,
-                "hp_threshold": null,
-                "on_death": null,
-                "one_time": null
-            },
-            "enemy_skill_id": 12007,
-            "extra_description": null
-        },
-        {
-            "behavior": {
-                "_name": "※パース終了",
-                "enemy_skill_id": 26,
-                "extra_description": null,
-                "params": [
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    4,
-                    null,
-                    null,
-                    null
-                ],
-                "type": 36
-            },
-            "condition": null,
-            "enemy_skill_id": 26,
-            "extra_description": null
-        },
-        {
-            "behavior": {
-                "_name": "紅蓮地獄",
-                "attack": {
-                    "atk_multiplier": 250,
-                    "max_hits": 1,
-                    "min_hits": 1
+            "kr_skill": {
+                "behavior": {
+                    "_name": "※先制コマンドLV1",
+                    "enemy_skill_id": 318,
+                    "level": 1,
+                    "params": [
+                        null,
+                        1,
+                        100,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null
+                    ],
+                    "type": 49
                 },
-                "enemy_skill_id": 12016,
-                "extra_description": null,
-                "params": [
-                    null,
-                    1,
-                    1,
-                    250,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null
-                ],
-                "type": 15
+                "condition": null,
+                "enemy_skill_id": 318
             },
-            "condition": {
-                "_ai": 100,
-                "_rnd": 0,
-                "condition_attributes": null,
-                "enemies_remaining": null,
-                "forced_one_time": null,
-                "hp_threshold": null,
-                "on_death": null,
-                "one_time": null
-            },
-            "enemy_skill_id": 12016,
-            "extra_description": null
+            "na_skill": {
+                "behavior": {
+                    "_name": "※先制コマンドLV1",
+                    "enemy_skill_id": 318,
+                    "level": 1,
+                    "params": [
+                        null,
+                        1,
+                        100,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null
+                    ],
+                    "type": 49
+                },
+                "condition": null,
+                "enemy_skill_id": 318
+            }
         },
         {
-            "behavior": {
-                "_name": "※パース終了",
-                "enemy_skill_id": 26,
-                "extra_description": null,
-                "params": [
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    4,
-                    null,
-                    null,
-                    null
-                ],
-                "type": 36
+            "enemy_skill_id": 10,
+            "jp_skill": {
+                "behavior": {
+                    "_name": "※ai フラグが立っていたら rnd の数値に分岐",
+                    "branch_condition": "flag",
+                    "branch_value": 1,
+                    "compare": "&",
+                    "enemy_skill_id": 10,
+                    "params": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        50,
+                        4,
+                        null,
+                        null,
+                        null
+                    ],
+                    "target_round": 6,
+                    "type": 43
+                },
+                "condition": null,
+                "enemy_skill_id": 10
             },
-            "condition": null,
+            "kr_skill": {
+                "behavior": {
+                    "_name": "※ai フラグが立っていたら rnd の数値に分岐",
+                    "branch_condition": "flag",
+                    "branch_value": 1,
+                    "compare": "&",
+                    "enemy_skill_id": 10,
+                    "params": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        50,
+                        4,
+                        null,
+                        null,
+                        null
+                    ],
+                    "target_round": 6,
+                    "type": 43
+                },
+                "condition": null,
+                "enemy_skill_id": 10
+            },
+            "na_skill": {
+                "behavior": {
+                    "_name": "※ai フラグが立っていたら rnd の数値に分岐",
+                    "branch_condition": "flag",
+                    "branch_value": 1,
+                    "compare": "&",
+                    "enemy_skill_id": 10,
+                    "params": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        50,
+                        4,
+                        null,
+                        null,
+                        null
+                    ],
+                    "target_round": 6,
+                    "type": 43
+                },
+                "condition": null,
+                "enemy_skill_id": 10
+            }
+        },
+        {
+            "enemy_skill_id": 12,
+            "jp_skill": {
+                "behavior": {
+                    "_name": "※フラグを ai にセット",
+                    "enemy_skill_id": 12,
+                    "flag": 1,
+                    "flag_bin": "0b1",
+                    "operation": "SET",
+                    "params": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        4,
+                        null,
+                        null,
+                        null
+                    ],
+                    "type": 22
+                },
+                "condition": null,
+                "enemy_skill_id": 12
+            },
+            "kr_skill": {
+                "behavior": {
+                    "_name": "※フラグを ai にセット",
+                    "enemy_skill_id": 12,
+                    "flag": 1,
+                    "flag_bin": "0b1",
+                    "operation": "SET",
+                    "params": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        4,
+                        null,
+                        null,
+                        null
+                    ],
+                    "type": 22
+                },
+                "condition": null,
+                "enemy_skill_id": 12
+            },
+            "na_skill": {
+                "behavior": {
+                    "_name": "※フラグを ai にセット",
+                    "enemy_skill_id": 12,
+                    "flag": 1,
+                    "flag_bin": "0b1",
+                    "operation": "SET",
+                    "params": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        4,
+                        null,
+                        null,
+                        null
+                    ],
+                    "type": 22
+                },
+                "condition": null,
+                "enemy_skill_id": 12
+            }
+        },
+        {
+            "enemy_skill_id": 12005,
+            "jp_skill": {
+                "behavior": {
+                    "_name": "ふぅん…　キミが遊び相手かい",
+                    "attack": null,
+                    "cloud_height": 1,
+                    "cloud_width": 4,
+                    "enemy_skill_id": 12005,
+                    "origin_x": 3,
+                    "origin_y": 2,
+                    "params": [
+                        "3ターンの間、盤面に雲が発生",
+                        3,
+                        4,
+                        1,
+                        2,
+                        3,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null
+                    ],
+                    "turns": 3,
+                    "type": 104
+                },
+                "condition": {
+                    "_ai": 100,
+                    "_rnd": 0,
+                    "cards_on_team": [],
+                    "combos_made": null,
+                    "condition_attributes": [],
+                    "enemies_remaining": null,
+                    "forced_one_time": null,
+                    "hp_threshold": null,
+                    "on_death": null,
+                    "one_time": null
+                },
+                "enemy_skill_id": 12005
+            },
+            "kr_skill": {
+                "behavior": {
+                    "_name": "ふぅん…　キミが遊び相手かい",
+                    "attack": null,
+                    "cloud_height": 1,
+                    "cloud_width": 4,
+                    "enemy_skill_id": 12005,
+                    "origin_x": 3,
+                    "origin_y": 2,
+                    "params": [
+                        "3ターンの間、盤面に雲が発生",
+                        3,
+                        4,
+                        1,
+                        2,
+                        3,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null
+                    ],
+                    "turns": 3,
+                    "type": 104
+                },
+                "condition": {
+                    "_ai": 100,
+                    "_rnd": 0,
+                    "cards_on_team": [],
+                    "combos_made": null,
+                    "condition_attributes": [],
+                    "enemies_remaining": null,
+                    "forced_one_time": null,
+                    "hp_threshold": null,
+                    "on_death": null,
+                    "one_time": null
+                },
+                "enemy_skill_id": 12005
+            },
+            "na_skill": {
+                "behavior": {
+                    "_name": "ふぅん…　キミが遊び相手かい",
+                    "attack": null,
+                    "cloud_height": 1,
+                    "cloud_width": 4,
+                    "enemy_skill_id": 12005,
+                    "origin_x": 3,
+                    "origin_y": 2,
+                    "params": [
+                        "3ターンの間、盤面に雲が発生",
+                        3,
+                        4,
+                        1,
+                        2,
+                        3,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null
+                    ],
+                    "turns": 3,
+                    "type": 104
+                },
+                "condition": {
+                    "_ai": 100,
+                    "_rnd": 0,
+                    "cards_on_team": [],
+                    "combos_made": null,
+                    "condition_attributes": [],
+                    "enemies_remaining": null,
+                    "forced_one_time": null,
+                    "hp_threshold": null,
+                    "on_death": null,
+                    "one_time": null
+                },
+                "enemy_skill_id": 12005
+            }
+        },
+        {
             "enemy_skill_id": 26,
-            "extra_description": null
+            "jp_skill": {
+                "behavior": {
+                    "_name": "※パース終了",
+                    "enemy_skill_id": 26,
+                    "params": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        4,
+                        null,
+                        null,
+                        null
+                    ],
+                    "type": 36
+                },
+                "condition": null,
+                "enemy_skill_id": 26
+            },
+            "kr_skill": {
+                "behavior": {
+                    "_name": "※パース終了",
+                    "enemy_skill_id": 26,
+                    "params": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        4,
+                        null,
+                        null,
+                        null
+                    ],
+                    "type": 36
+                },
+                "condition": null,
+                "enemy_skill_id": 26
+            },
+            "na_skill": {
+                "behavior": {
+                    "_name": "※パース終了",
+                    "enemy_skill_id": 26,
+                    "params": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        4,
+                        null,
+                        null,
+                        null
+                    ],
+                    "type": 36
+                },
+                "condition": null,
+                "enemy_skill_id": 26
+            }
+        },
+        {
+            "enemy_skill_id": 18,
+            "jp_skill": {
+                "behavior": {
+                    "_name": "※HPが ai %以下の時 rnd に分岐",
+                    "branch_condition": "hp",
+                    "branch_value": 15,
+                    "compare": "<",
+                    "enemy_skill_id": 18,
+                    "params": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        4,
+                        null,
+                        null,
+                        null
+                    ],
+                    "target_round": 12,
+                    "type": 28
+                },
+                "condition": null,
+                "enemy_skill_id": 18
+            },
+            "kr_skill": {
+                "behavior": {
+                    "_name": "※HPが ai %以下の時 rnd に分岐",
+                    "branch_condition": "hp",
+                    "branch_value": 15,
+                    "compare": "<",
+                    "enemy_skill_id": 18,
+                    "params": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        4,
+                        null,
+                        null,
+                        null
+                    ],
+                    "target_round": 12,
+                    "type": 28
+                },
+                "condition": null,
+                "enemy_skill_id": 18
+            },
+            "na_skill": {
+                "behavior": {
+                    "_name": "※HPが ai %以下の時 rnd に分岐",
+                    "branch_condition": "hp",
+                    "branch_value": 15,
+                    "compare": "<",
+                    "enemy_skill_id": 18,
+                    "params": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        4,
+                        null,
+                        null,
+                        null
+                    ],
+                    "target_round": 12,
+                    "type": 28
+                },
+                "condition": null,
+                "enemy_skill_id": 18
+            }
+        },
+        {
+            "enemy_skill_id": 19,
+            "jp_skill": {
+                "behavior": {
+                    "_name": "※HPが ai %以上の時 rnd に分岐",
+                    "branch_condition": "hp",
+                    "branch_value": 51,
+                    "compare": ">",
+                    "enemy_skill_id": 19,
+                    "params": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        4,
+                        null,
+                        null,
+                        null
+                    ],
+                    "target_round": 9,
+                    "type": 29
+                },
+                "condition": null,
+                "enemy_skill_id": 19
+            },
+            "kr_skill": {
+                "behavior": {
+                    "_name": "※HPが ai %以上の時 rnd に分岐",
+                    "branch_condition": "hp",
+                    "branch_value": 51,
+                    "compare": ">",
+                    "enemy_skill_id": 19,
+                    "params": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        4,
+                        null,
+                        null,
+                        null
+                    ],
+                    "target_round": 9,
+                    "type": 29
+                },
+                "condition": null,
+                "enemy_skill_id": 19
+            },
+            "na_skill": {
+                "behavior": {
+                    "_name": "※HPが ai %以上の時 rnd に分岐",
+                    "branch_condition": "hp",
+                    "branch_value": 51,
+                    "compare": ">",
+                    "enemy_skill_id": 19,
+                    "params": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        4,
+                        null,
+                        null,
+                        null
+                    ],
+                    "target_round": 9,
+                    "type": 29
+                },
+                "condition": null,
+                "enemy_skill_id": 19
+            }
+        },
+        {
+            "enemy_skill_id": 12012,
+            "jp_skill": {
+                "behavior": {
+                    "_name": "50%以下通常3回",
+                    "attack": null,
+                    "enemy_skill_id": 12012,
+                    "params": [
+                        null,
+                        12013,
+                        12014,
+                        12015,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        1,
+                        null,
+                        null
+                    ],
+                    "skill_ids": [
+                        12013,
+                        12014,
+                        12015
+                    ],
+                    "skills": [
+                        {
+                            "_name": "へぇ　少しは遊べるじゃないか…",
+                            "attack": {
+                                "atk_multiplier": 90,
+                                "max_hits": 1,
+                                "min_hits": 1
+                            },
+                            "enemy_skill_id": 12013,
+                            "params": [
+                                null,
+                                1,
+                                1,
+                                90,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null
+                            ],
+                            "type": 15
+                        },
+                        {
+                            "_name": "それじゃ　こんなのはどうだい？",
+                            "attack": null,
+                            "enemy_count": 1,
+                            "enemy_skill_id": 12014,
+                            "multiplier": 150,
+                            "params": [
+                                "1ターンの間、攻撃力が1.5倍に上昇した",
+                                1,
+                                1,
+                                150,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null
+                            ],
+                            "turns": 1,
+                            "type": 17
+                        },
+                        {
+                            "_name": "さあ　もっと楽しませてよ！",
+                            "amount": 50,
+                            "attack": null,
+                            "debuff_type": "RCV",
+                            "enemy_skill_id": 12015,
+                            "params": [
+                                "1ターンの間、回復力が半減",
+                                1,
+                                50,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null
+                            ],
+                            "turns": 1,
+                            "type": 105,
+                            "unit": "%"
+                        }
+                    ],
+                    "type": 83
+                },
+                "condition": {
+                    "_ai": 100,
+                    "_rnd": 0,
+                    "cards_on_team": [],
+                    "combos_made": null,
+                    "condition_attributes": [],
+                    "enemies_remaining": null,
+                    "forced_one_time": null,
+                    "hp_threshold": null,
+                    "on_death": null,
+                    "one_time": 1
+                },
+                "enemy_skill_id": 12012
+            },
+            "kr_skill": {
+                "behavior": {
+                    "_name": "50%以下通常3回",
+                    "attack": null,
+                    "enemy_skill_id": 12012,
+                    "params": [
+                        null,
+                        12013,
+                        12014,
+                        12015,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        1,
+                        null,
+                        null
+                    ],
+                    "skill_ids": [
+                        12013,
+                        12014,
+                        12015
+                    ],
+                    "skills": [
+                        {
+                            "_name": "へぇ　少しは遊べるじゃないか…",
+                            "attack": {
+                                "atk_multiplier": 90,
+                                "max_hits": 1,
+                                "min_hits": 1
+                            },
+                            "enemy_skill_id": 12013,
+                            "params": [
+                                null,
+                                1,
+                                1,
+                                90,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null
+                            ],
+                            "type": 15
+                        },
+                        {
+                            "_name": "それじゃ　こんなのはどうだい？",
+                            "attack": null,
+                            "enemy_count": 1,
+                            "enemy_skill_id": 12014,
+                            "multiplier": 150,
+                            "params": [
+                                "1ターンの間、攻撃力が1.5倍に上昇した",
+                                1,
+                                1,
+                                150,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null
+                            ],
+                            "turns": 1,
+                            "type": 17
+                        },
+                        {
+                            "_name": "さあ　もっと楽しませてよ！",
+                            "amount": 50,
+                            "attack": null,
+                            "debuff_type": "RCV",
+                            "enemy_skill_id": 12015,
+                            "params": [
+                                "1ターンの間、回復力が半減",
+                                1,
+                                50,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null
+                            ],
+                            "turns": 1,
+                            "type": 105,
+                            "unit": "%"
+                        }
+                    ],
+                    "type": 83
+                },
+                "condition": {
+                    "_ai": 100,
+                    "_rnd": 0,
+                    "cards_on_team": [],
+                    "combos_made": null,
+                    "condition_attributes": [],
+                    "enemies_remaining": null,
+                    "forced_one_time": null,
+                    "hp_threshold": null,
+                    "on_death": null,
+                    "one_time": 1
+                },
+                "enemy_skill_id": 12012
+            },
+            "na_skill": {
+                "behavior": {
+                    "_name": "50%以下通常3回",
+                    "attack": null,
+                    "enemy_skill_id": 12012,
+                    "params": [
+                        null,
+                        12013,
+                        12014,
+                        12015,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        1,
+                        null,
+                        null
+                    ],
+                    "skill_ids": [
+                        12013,
+                        12014,
+                        12015
+                    ],
+                    "skills": [
+                        {
+                            "_name": "へぇ　少しは遊べるじゃないか…",
+                            "attack": {
+                                "atk_multiplier": 90,
+                                "max_hits": 1,
+                                "min_hits": 1
+                            },
+                            "enemy_skill_id": 12013,
+                            "params": [
+                                null,
+                                1,
+                                1,
+                                90,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null
+                            ],
+                            "type": 15
+                        },
+                        {
+                            "_name": "それじゃ　こんなのはどうだい？",
+                            "attack": null,
+                            "enemy_count": 1,
+                            "enemy_skill_id": 12014,
+                            "multiplier": 150,
+                            "params": [
+                                "1ターンの間、攻撃力が1.5倍に上昇した",
+                                1,
+                                1,
+                                150,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null
+                            ],
+                            "turns": 1,
+                            "type": 17
+                        },
+                        {
+                            "_name": "さあ　もっと楽しませてよ！",
+                            "amount": 50,
+                            "attack": null,
+                            "debuff_type": "RCV",
+                            "enemy_skill_id": 12015,
+                            "params": [
+                                "1ターンの間、回復力が半減",
+                                1,
+                                50,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null
+                            ],
+                            "turns": 1,
+                            "type": 105,
+                            "unit": "%"
+                        }
+                    ],
+                    "type": 83
+                },
+                "condition": {
+                    "_ai": 100,
+                    "_rnd": 0,
+                    "cards_on_team": [],
+                    "combos_made": null,
+                    "condition_attributes": [],
+                    "enemies_remaining": null,
+                    "forced_one_time": null,
+                    "hp_threshold": null,
+                    "on_death": null,
+                    "one_time": 1
+                },
+                "enemy_skill_id": 12012
+            }
+        },
+        {
+            "enemy_skill_id": 12006,
+            "jp_skill": {
+                "behavior": {
+                    "_name": "通常2回Ａ",
+                    "attack": null,
+                    "enemy_skill_id": 12006,
+                    "params": [
+                        null,
+                        12008,
+                        12010,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null
+                    ],
+                    "skill_ids": [
+                        12008,
+                        12010
+                    ],
+                    "skills": [
+                        {
+                            "_name": "キュンキュンさせてあげるよ…",
+                            "attack": {
+                                "atk_multiplier": 95,
+                                "max_hits": 1,
+                                "min_hits": 1
+                            },
+                            "enemy_skill_id": 12008,
+                            "orb_from": -1,
+                            "orb_to": null,
+                            "params": [
+                                null,
+                                95,
+                                -1,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null
+                            ],
+                            "random_count": null,
+                            "type": 48
+                        },
+                        {
+                            "_name": "ヤケドしても　知らないけどね！",
+                            "attack": null,
+                            "attributes": [
+                                0
+                            ],
+                            "chance": 100,
+                            "enemy_skill_id": 12010,
+                            "max_turns": 10,
+                            "min_turns": 10,
+                            "params": [
+                                "10ターンの間、火ドロップがロック状態で落ちる",
+                                1,
+                                10,
+                                10,
+                                100,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null
+                            ],
+                            "type": 96
+                        }
+                    ],
+                    "type": 83
+                },
+                "condition": {
+                    "_ai": 0,
+                    "_rnd": 50,
+                    "cards_on_team": [],
+                    "combos_made": null,
+                    "condition_attributes": [],
+                    "enemies_remaining": null,
+                    "forced_one_time": null,
+                    "hp_threshold": null,
+                    "on_death": null,
+                    "one_time": null
+                },
+                "enemy_skill_id": 12006
+            },
+            "kr_skill": {
+                "behavior": {
+                    "_name": "通常2回Ａ",
+                    "attack": null,
+                    "enemy_skill_id": 12006,
+                    "params": [
+                        null,
+                        12008,
+                        12010,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null
+                    ],
+                    "skill_ids": [
+                        12008,
+                        12010
+                    ],
+                    "skills": [
+                        {
+                            "_name": "キュンキュンさせてあげるよ…",
+                            "attack": {
+                                "atk_multiplier": 95,
+                                "max_hits": 1,
+                                "min_hits": 1
+                            },
+                            "enemy_skill_id": 12008,
+                            "orb_from": -1,
+                            "orb_to": null,
+                            "params": [
+                                null,
+                                95,
+                                -1,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null
+                            ],
+                            "random_count": null,
+                            "type": 48
+                        },
+                        {
+                            "_name": "ヤケドしても　知らないけどね！",
+                            "attack": null,
+                            "attributes": [
+                                0
+                            ],
+                            "chance": 100,
+                            "enemy_skill_id": 12010,
+                            "max_turns": 10,
+                            "min_turns": 10,
+                            "params": [
+                                "10ターンの間、火ドロップがロック状態で落ちる",
+                                1,
+                                10,
+                                10,
+                                100,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null
+                            ],
+                            "type": 96
+                        }
+                    ],
+                    "type": 83
+                },
+                "condition": {
+                    "_ai": 0,
+                    "_rnd": 50,
+                    "cards_on_team": [],
+                    "combos_made": null,
+                    "condition_attributes": [],
+                    "enemies_remaining": null,
+                    "forced_one_time": null,
+                    "hp_threshold": null,
+                    "on_death": null,
+                    "one_time": null
+                },
+                "enemy_skill_id": 12006
+            },
+            "na_skill": {
+                "behavior": {
+                    "_name": "通常2回Ａ",
+                    "attack": null,
+                    "enemy_skill_id": 12006,
+                    "params": [
+                        null,
+                        12008,
+                        12010,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null
+                    ],
+                    "skill_ids": [
+                        12008,
+                        12010
+                    ],
+                    "skills": [
+                        {
+                            "_name": "キュンキュンさせてあげるよ…",
+                            "attack": {
+                                "atk_multiplier": 95,
+                                "max_hits": 1,
+                                "min_hits": 1
+                            },
+                            "enemy_skill_id": 12008,
+                            "orb_from": -1,
+                            "orb_to": null,
+                            "params": [
+                                null,
+                                95,
+                                -1,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null
+                            ],
+                            "random_count": null,
+                            "type": 48
+                        },
+                        {
+                            "_name": "ヤケドしても　知らないけどね！",
+                            "attack": null,
+                            "attributes": [
+                                0
+                            ],
+                            "chance": 100,
+                            "enemy_skill_id": 12010,
+                            "max_turns": 10,
+                            "min_turns": 10,
+                            "params": [
+                                "10ターンの間、火ドロップがロック状態で落ちる",
+                                1,
+                                10,
+                                10,
+                                100,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null
+                            ],
+                            "type": 96
+                        }
+                    ],
+                    "type": 83
+                },
+                "condition": {
+                    "_ai": 0,
+                    "_rnd": 50,
+                    "cards_on_team": [],
+                    "combos_made": null,
+                    "condition_attributes": [],
+                    "enemies_remaining": null,
+                    "forced_one_time": null,
+                    "hp_threshold": null,
+                    "on_death": null,
+                    "one_time": null
+                },
+                "enemy_skill_id": 12006
+            }
+        },
+        {
+            "enemy_skill_id": 12007,
+            "jp_skill": {
+                "behavior": {
+                    "_name": "通常2回Ｂ",
+                    "attack": null,
+                    "enemy_skill_id": 12007,
+                    "params": [
+                        null,
+                        12009,
+                        12011,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null
+                    ],
+                    "skill_ids": [
+                        12009,
+                        12011
+                    ],
+                    "skills": [
+                        {
+                            "_name": "ほら　こっちだよ！",
+                            "attack": null,
+                            "enemy_skill_id": 12009,
+                            "params": [
+                                null,
+                                30,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null
+                            ],
+                            "percent": 30,
+                            "type": 50
+                        },
+                        {
+                            "_name": "だらしがないねえ！",
+                            "attack": {
+                                "atk_multiplier": 60,
+                                "max_hits": 2,
+                                "min_hits": 2
+                            },
+                            "enemy_skill_id": 12011,
+                            "params": [
+                                null,
+                                2,
+                                2,
+                                60,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null
+                            ],
+                            "type": 15
+                        }
+                    ],
+                    "type": 83
+                },
+                "condition": {
+                    "_ai": 0,
+                    "_rnd": 50,
+                    "cards_on_team": [],
+                    "combos_made": null,
+                    "condition_attributes": [],
+                    "enemies_remaining": null,
+                    "forced_one_time": null,
+                    "hp_threshold": null,
+                    "on_death": null,
+                    "one_time": null
+                },
+                "enemy_skill_id": 12007
+            },
+            "kr_skill": {
+                "behavior": {
+                    "_name": "通常2回Ｂ",
+                    "attack": null,
+                    "enemy_skill_id": 12007,
+                    "params": [
+                        null,
+                        12009,
+                        12011,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null
+                    ],
+                    "skill_ids": [
+                        12009,
+                        12011
+                    ],
+                    "skills": [
+                        {
+                            "_name": "ほら　こっちだよ！",
+                            "attack": null,
+                            "enemy_skill_id": 12009,
+                            "params": [
+                                null,
+                                30,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null
+                            ],
+                            "percent": 30,
+                            "type": 50
+                        },
+                        {
+                            "_name": "だらしがないねえ！",
+                            "attack": {
+                                "atk_multiplier": 60,
+                                "max_hits": 2,
+                                "min_hits": 2
+                            },
+                            "enemy_skill_id": 12011,
+                            "params": [
+                                null,
+                                2,
+                                2,
+                                60,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null
+                            ],
+                            "type": 15
+                        }
+                    ],
+                    "type": 83
+                },
+                "condition": {
+                    "_ai": 0,
+                    "_rnd": 50,
+                    "cards_on_team": [],
+                    "combos_made": null,
+                    "condition_attributes": [],
+                    "enemies_remaining": null,
+                    "forced_one_time": null,
+                    "hp_threshold": null,
+                    "on_death": null,
+                    "one_time": null
+                },
+                "enemy_skill_id": 12007
+            },
+            "na_skill": {
+                "behavior": {
+                    "_name": "通常2回Ｂ",
+                    "attack": null,
+                    "enemy_skill_id": 12007,
+                    "params": [
+                        null,
+                        12009,
+                        12011,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null
+                    ],
+                    "skill_ids": [
+                        12009,
+                        12011
+                    ],
+                    "skills": [
+                        {
+                            "_name": "ほら　こっちだよ！",
+                            "attack": null,
+                            "enemy_skill_id": 12009,
+                            "params": [
+                                null,
+                                30,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null
+                            ],
+                            "percent": 30,
+                            "type": 50
+                        },
+                        {
+                            "_name": "だらしがないねえ！",
+                            "attack": {
+                                "atk_multiplier": 60,
+                                "max_hits": 2,
+                                "min_hits": 2
+                            },
+                            "enemy_skill_id": 12011,
+                            "params": [
+                                null,
+                                2,
+                                2,
+                                60,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null
+                            ],
+                            "type": 15
+                        }
+                    ],
+                    "type": 83
+                },
+                "condition": {
+                    "_ai": 0,
+                    "_rnd": 50,
+                    "cards_on_team": [],
+                    "combos_made": null,
+                    "condition_attributes": [],
+                    "enemies_remaining": null,
+                    "forced_one_time": null,
+                    "hp_threshold": null,
+                    "on_death": null,
+                    "one_time": null
+                },
+                "enemy_skill_id": 12007
+            }
+        },
+        {
+            "enemy_skill_id": 26,
+            "jp_skill": {
+                "behavior": {
+                    "_name": "※パース終了",
+                    "enemy_skill_id": 26,
+                    "params": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        4,
+                        null,
+                        null,
+                        null
+                    ],
+                    "type": 36
+                },
+                "condition": null,
+                "enemy_skill_id": 26
+            },
+            "kr_skill": {
+                "behavior": {
+                    "_name": "※パース終了",
+                    "enemy_skill_id": 26,
+                    "params": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        4,
+                        null,
+                        null,
+                        null
+                    ],
+                    "type": 36
+                },
+                "condition": null,
+                "enemy_skill_id": 26
+            },
+            "na_skill": {
+                "behavior": {
+                    "_name": "※パース終了",
+                    "enemy_skill_id": 26,
+                    "params": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        4,
+                        null,
+                        null,
+                        null
+                    ],
+                    "type": 36
+                },
+                "condition": null,
+                "enemy_skill_id": 26
+            }
+        },
+        {
+            "enemy_skill_id": 12016,
+            "jp_skill": {
+                "behavior": {
+                    "_name": "紅蓮地獄",
+                    "attack": {
+                        "atk_multiplier": 250,
+                        "max_hits": 1,
+                        "min_hits": 1
+                    },
+                    "enemy_skill_id": 12016,
+                    "params": [
+                        null,
+                        1,
+                        1,
+                        250,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null
+                    ],
+                    "type": 15
+                },
+                "condition": {
+                    "_ai": 100,
+                    "_rnd": 0,
+                    "cards_on_team": [],
+                    "combos_made": null,
+                    "condition_attributes": [],
+                    "enemies_remaining": null,
+                    "forced_one_time": null,
+                    "hp_threshold": null,
+                    "on_death": null,
+                    "one_time": null
+                },
+                "enemy_skill_id": 12016
+            },
+            "kr_skill": {
+                "behavior": {
+                    "_name": "紅蓮地獄",
+                    "attack": {
+                        "atk_multiplier": 250,
+                        "max_hits": 1,
+                        "min_hits": 1
+                    },
+                    "enemy_skill_id": 12016,
+                    "params": [
+                        null,
+                        1,
+                        1,
+                        250,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null
+                    ],
+                    "type": 15
+                },
+                "condition": {
+                    "_ai": 100,
+                    "_rnd": 0,
+                    "cards_on_team": [],
+                    "combos_made": null,
+                    "condition_attributes": [],
+                    "enemies_remaining": null,
+                    "forced_one_time": null,
+                    "hp_threshold": null,
+                    "on_death": null,
+                    "one_time": null
+                },
+                "enemy_skill_id": 12016
+            },
+            "na_skill": {
+                "behavior": {
+                    "_name": "紅蓮地獄",
+                    "attack": {
+                        "atk_multiplier": 250,
+                        "max_hits": 1,
+                        "min_hits": 1
+                    },
+                    "enemy_skill_id": 12016,
+                    "params": [
+                        null,
+                        1,
+                        1,
+                        250,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null
+                    ],
+                    "type": 15
+                },
+                "condition": {
+                    "_ai": 100,
+                    "_rnd": 0,
+                    "cards_on_team": [],
+                    "combos_made": null,
+                    "condition_attributes": [],
+                    "enemies_remaining": null,
+                    "forced_one_time": null,
+                    "hp_threshold": null,
+                    "on_death": null,
+                    "one_time": null
+                },
+                "enemy_skill_id": 12016
+            }
+        },
+        {
+            "enemy_skill_id": 26,
+            "jp_skill": {
+                "behavior": {
+                    "_name": "※パース終了",
+                    "enemy_skill_id": 26,
+                    "params": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        4,
+                        null,
+                        null,
+                        null
+                    ],
+                    "type": 36
+                },
+                "condition": null,
+                "enemy_skill_id": 26
+            },
+            "kr_skill": {
+                "behavior": {
+                    "_name": "※パース終了",
+                    "enemy_skill_id": 26,
+                    "params": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        4,
+                        null,
+                        null,
+                        null
+                    ],
+                    "type": 36
+                },
+                "condition": null,
+                "enemy_skill_id": 26
+            },
+            "na_skill": {
+                "behavior": {
+                    "_name": "※パース終了",
+                    "enemy_skill_id": 26,
+                    "params": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        4,
+                        null,
+                        null,
+                        null
+                    ],
+                    "type": 36
+                },
+                "condition": null,
+                "enemy_skill_id": 26
+            }
         }
     ],
     "has_animation": false,
@@ -1681,7 +2324,6 @@
                 "behavior": {
                     "_name": "※先制コマンドLV1",
                     "enemy_skill_id": 318,
-                    "extra_description": null,
                     "level": 1,
                     "params": [
                         null,
@@ -1704,8 +2346,7 @@
                     "type": 49
                 },
                 "condition": null,
-                "enemy_skill_id": 318,
-                "extra_description": null
+                "enemy_skill_id": 318
             },
             {
                 "behavior": {
@@ -1714,7 +2355,6 @@
                     "branch_value": 1,
                     "compare": "&",
                     "enemy_skill_id": 10,
-                    "extra_description": null,
                     "params": [
                         null,
                         null,
@@ -1737,14 +2377,12 @@
                     "type": 43
                 },
                 "condition": null,
-                "enemy_skill_id": 10,
-                "extra_description": null
+                "enemy_skill_id": 10
             },
             {
                 "behavior": {
                     "_name": "※フラグを ai にセット",
                     "enemy_skill_id": 12,
-                    "extra_description": null,
                     "flag": 1,
                     "flag_bin": "0b1",
                     "operation": "SET",
@@ -1769,8 +2407,7 @@
                     "type": 22
                 },
                 "condition": null,
-                "enemy_skill_id": 12,
-                "extra_description": null
+                "enemy_skill_id": 12
             },
             {
                 "behavior": {
@@ -1779,7 +2416,6 @@
                     "cloud_height": 1,
                     "cloud_width": 4,
                     "enemy_skill_id": 12005,
-                    "extra_description": null,
                     "origin_x": 3,
                     "origin_y": 2,
                     "params": [
@@ -1806,21 +2442,21 @@
                 "condition": {
                     "_ai": 100,
                     "_rnd": 0,
-                    "condition_attributes": null,
+                    "cards_on_team": [],
+                    "combos_made": null,
+                    "condition_attributes": [],
                     "enemies_remaining": null,
                     "forced_one_time": null,
                     "hp_threshold": null,
                     "on_death": null,
                     "one_time": null
                 },
-                "enemy_skill_id": 12005,
-                "extra_description": null
+                "enemy_skill_id": 12005
             },
             {
                 "behavior": {
                     "_name": "※パース終了",
                     "enemy_skill_id": 26,
-                    "extra_description": null,
                     "params": [
                         null,
                         null,
@@ -1842,8 +2478,7 @@
                     "type": 36
                 },
                 "condition": null,
-                "enemy_skill_id": 26,
-                "extra_description": null
+                "enemy_skill_id": 26
             },
             {
                 "behavior": {
@@ -1852,7 +2487,6 @@
                     "branch_value": 15,
                     "compare": "<",
                     "enemy_skill_id": 18,
-                    "extra_description": null,
                     "params": [
                         null,
                         null,
@@ -1875,8 +2509,7 @@
                     "type": 28
                 },
                 "condition": null,
-                "enemy_skill_id": 18,
-                "extra_description": null
+                "enemy_skill_id": 18
             },
             {
                 "behavior": {
@@ -1885,7 +2518,6 @@
                     "branch_value": 51,
                     "compare": ">",
                     "enemy_skill_id": 19,
-                    "extra_description": null,
                     "params": [
                         null,
                         null,
@@ -1908,15 +2540,13 @@
                     "type": 29
                 },
                 "condition": null,
-                "enemy_skill_id": 19,
-                "extra_description": null
+                "enemy_skill_id": 19
             },
             {
                 "behavior": {
                     "_name": "50%以下通常3回",
                     "attack": null,
                     "enemy_skill_id": 12012,
-                    "extra_description": null,
                     "params": [
                         null,
                         12013,
@@ -1949,7 +2579,6 @@
                                 "min_hits": 1
                             },
                             "enemy_skill_id": 12013,
-                            "extra_description": null,
                             "params": [
                                 null,
                                 1,
@@ -1975,7 +2604,6 @@
                             "attack": null,
                             "enemy_count": 1,
                             "enemy_skill_id": 12014,
-                            "extra_description": null,
                             "multiplier": 150,
                             "params": [
                                 "1ターンの間、攻撃力が1.5倍に上昇した",
@@ -2004,7 +2632,6 @@
                             "attack": null,
                             "debuff_type": "RCV",
                             "enemy_skill_id": 12015,
-                            "extra_description": null,
                             "params": [
                                 "1ターンの間、回復力が半減",
                                 1,
@@ -2033,22 +2660,22 @@
                 "condition": {
                     "_ai": 100,
                     "_rnd": 0,
-                    "condition_attributes": null,
+                    "cards_on_team": [],
+                    "combos_made": null,
+                    "condition_attributes": [],
                     "enemies_remaining": null,
                     "forced_one_time": null,
                     "hp_threshold": null,
                     "on_death": null,
                     "one_time": 1
                 },
-                "enemy_skill_id": 12012,
-                "extra_description": null
+                "enemy_skill_id": 12012
             },
             {
                 "behavior": {
                     "_name": "通常2回Ａ",
                     "attack": null,
                     "enemy_skill_id": 12006,
-                    "extra_description": null,
                     "params": [
                         null,
                         12008,
@@ -2080,7 +2707,6 @@
                                 "min_hits": 1
                             },
                             "enemy_skill_id": 12008,
-                            "extra_description": null,
                             "orb_from": -1,
                             "orb_to": null,
                             "params": [
@@ -2112,7 +2738,6 @@
                             ],
                             "chance": 100,
                             "enemy_skill_id": 12010,
-                            "extra_description": null,
                             "max_turns": 10,
                             "min_turns": 10,
                             "params": [
@@ -2141,22 +2766,22 @@
                 "condition": {
                     "_ai": 0,
                     "_rnd": 50,
-                    "condition_attributes": null,
+                    "cards_on_team": [],
+                    "combos_made": null,
+                    "condition_attributes": [],
                     "enemies_remaining": null,
                     "forced_one_time": null,
                     "hp_threshold": null,
                     "on_death": null,
                     "one_time": null
                 },
-                "enemy_skill_id": 12006,
-                "extra_description": null
+                "enemy_skill_id": 12006
             },
             {
                 "behavior": {
                     "_name": "通常2回Ｂ",
                     "attack": null,
                     "enemy_skill_id": 12007,
-                    "extra_description": null,
                     "params": [
                         null,
                         12009,
@@ -2184,7 +2809,6 @@
                             "_name": "ほら　こっちだよ！",
                             "attack": null,
                             "enemy_skill_id": 12009,
-                            "extra_description": null,
                             "params": [
                                 null,
                                 30,
@@ -2214,7 +2838,6 @@
                                 "min_hits": 2
                             },
                             "enemy_skill_id": 12011,
-                            "extra_description": null,
                             "params": [
                                 null,
                                 2,
@@ -2241,21 +2864,21 @@
                 "condition": {
                     "_ai": 0,
                     "_rnd": 50,
-                    "condition_attributes": null,
+                    "cards_on_team": [],
+                    "combos_made": null,
+                    "condition_attributes": [],
                     "enemies_remaining": null,
                     "forced_one_time": null,
                     "hp_threshold": null,
                     "on_death": null,
                     "one_time": null
                 },
-                "enemy_skill_id": 12007,
-                "extra_description": null
+                "enemy_skill_id": 12007
             },
             {
                 "behavior": {
                     "_name": "※パース終了",
                     "enemy_skill_id": 26,
-                    "extra_description": null,
                     "params": [
                         null,
                         null,
@@ -2277,8 +2900,7 @@
                     "type": 36
                 },
                 "condition": null,
-                "enemy_skill_id": 26,
-                "extra_description": null
+                "enemy_skill_id": 26
             },
             {
                 "behavior": {
@@ -2289,7 +2911,6 @@
                         "min_hits": 1
                     },
                     "enemy_skill_id": 12016,
-                    "extra_description": null,
                     "params": [
                         null,
                         1,
@@ -2313,21 +2934,21 @@
                 "condition": {
                     "_ai": 100,
                     "_rnd": 0,
-                    "condition_attributes": null,
+                    "cards_on_team": [],
+                    "combos_made": null,
+                    "condition_attributes": [],
                     "enemies_remaining": null,
                     "forced_one_time": null,
                     "hp_threshold": null,
                     "on_death": null,
                     "one_time": null
                 },
-                "enemy_skill_id": 12016,
-                "extra_description": null
+                "enemy_skill_id": 12016
             },
             {
                 "behavior": {
                     "_name": "※パース終了",
                     "enemy_skill_id": 26,
-                    "extra_description": null,
                     "params": [
                         null,
                         null,
@@ -2349,8 +2970,7 @@
                     "type": 36
                 },
                 "condition": null,
-                "enemy_skill_id": 26,
-                "extra_description": null
+                "enemy_skill_id": 26
             }
         ],
         "leader_skill": {
@@ -2623,7 +3243,6 @@
                 "behavior": {
                     "_name": "※先制コマンドLV1",
                     "enemy_skill_id": 318,
-                    "extra_description": null,
                     "level": 1,
                     "params": [
                         null,
@@ -2646,8 +3265,7 @@
                     "type": 49
                 },
                 "condition": null,
-                "enemy_skill_id": 318,
-                "extra_description": null
+                "enemy_skill_id": 318
             },
             {
                 "behavior": {
@@ -2656,7 +3274,6 @@
                     "branch_value": 1,
                     "compare": "&",
                     "enemy_skill_id": 10,
-                    "extra_description": null,
                     "params": [
                         null,
                         null,
@@ -2679,14 +3296,12 @@
                     "type": 43
                 },
                 "condition": null,
-                "enemy_skill_id": 10,
-                "extra_description": null
+                "enemy_skill_id": 10
             },
             {
                 "behavior": {
                     "_name": "※フラグを ai にセット",
                     "enemy_skill_id": 12,
-                    "extra_description": null,
                     "flag": 1,
                     "flag_bin": "0b1",
                     "operation": "SET",
@@ -2711,8 +3326,7 @@
                     "type": 22
                 },
                 "condition": null,
-                "enemy_skill_id": 12,
-                "extra_description": null
+                "enemy_skill_id": 12
             },
             {
                 "behavior": {
@@ -2721,7 +3335,6 @@
                     "cloud_height": 1,
                     "cloud_width": 4,
                     "enemy_skill_id": 12005,
-                    "extra_description": null,
                     "origin_x": 3,
                     "origin_y": 2,
                     "params": [
@@ -2748,21 +3361,21 @@
                 "condition": {
                     "_ai": 100,
                     "_rnd": 0,
-                    "condition_attributes": null,
+                    "cards_on_team": [],
+                    "combos_made": null,
+                    "condition_attributes": [],
                     "enemies_remaining": null,
                     "forced_one_time": null,
                     "hp_threshold": null,
                     "on_death": null,
                     "one_time": null
                 },
-                "enemy_skill_id": 12005,
-                "extra_description": null
+                "enemy_skill_id": 12005
             },
             {
                 "behavior": {
                     "_name": "※パース終了",
                     "enemy_skill_id": 26,
-                    "extra_description": null,
                     "params": [
                         null,
                         null,
@@ -2784,8 +3397,7 @@
                     "type": 36
                 },
                 "condition": null,
-                "enemy_skill_id": 26,
-                "extra_description": null
+                "enemy_skill_id": 26
             },
             {
                 "behavior": {
@@ -2794,7 +3406,6 @@
                     "branch_value": 15,
                     "compare": "<",
                     "enemy_skill_id": 18,
-                    "extra_description": null,
                     "params": [
                         null,
                         null,
@@ -2817,8 +3428,7 @@
                     "type": 28
                 },
                 "condition": null,
-                "enemy_skill_id": 18,
-                "extra_description": null
+                "enemy_skill_id": 18
             },
             {
                 "behavior": {
@@ -2827,7 +3437,6 @@
                     "branch_value": 51,
                     "compare": ">",
                     "enemy_skill_id": 19,
-                    "extra_description": null,
                     "params": [
                         null,
                         null,
@@ -2850,15 +3459,13 @@
                     "type": 29
                 },
                 "condition": null,
-                "enemy_skill_id": 19,
-                "extra_description": null
+                "enemy_skill_id": 19
             },
             {
                 "behavior": {
                     "_name": "50%以下通常3回",
                     "attack": null,
                     "enemy_skill_id": 12012,
-                    "extra_description": null,
                     "params": [
                         null,
                         12013,
@@ -2891,7 +3498,6 @@
                                 "min_hits": 1
                             },
                             "enemy_skill_id": 12013,
-                            "extra_description": null,
                             "params": [
                                 null,
                                 1,
@@ -2917,7 +3523,6 @@
                             "attack": null,
                             "enemy_count": 1,
                             "enemy_skill_id": 12014,
-                            "extra_description": null,
                             "multiplier": 150,
                             "params": [
                                 "1ターンの間、攻撃力が1.5倍に上昇した",
@@ -2946,7 +3551,6 @@
                             "attack": null,
                             "debuff_type": "RCV",
                             "enemy_skill_id": 12015,
-                            "extra_description": null,
                             "params": [
                                 "1ターンの間、回復力が半減",
                                 1,
@@ -2975,22 +3579,22 @@
                 "condition": {
                     "_ai": 100,
                     "_rnd": 0,
-                    "condition_attributes": null,
+                    "cards_on_team": [],
+                    "combos_made": null,
+                    "condition_attributes": [],
                     "enemies_remaining": null,
                     "forced_one_time": null,
                     "hp_threshold": null,
                     "on_death": null,
                     "one_time": 1
                 },
-                "enemy_skill_id": 12012,
-                "extra_description": null
+                "enemy_skill_id": 12012
             },
             {
                 "behavior": {
                     "_name": "通常2回Ａ",
                     "attack": null,
                     "enemy_skill_id": 12006,
-                    "extra_description": null,
                     "params": [
                         null,
                         12008,
@@ -3022,7 +3626,6 @@
                                 "min_hits": 1
                             },
                             "enemy_skill_id": 12008,
-                            "extra_description": null,
                             "orb_from": -1,
                             "orb_to": null,
                             "params": [
@@ -3054,7 +3657,6 @@
                             ],
                             "chance": 100,
                             "enemy_skill_id": 12010,
-                            "extra_description": null,
                             "max_turns": 10,
                             "min_turns": 10,
                             "params": [
@@ -3083,22 +3685,22 @@
                 "condition": {
                     "_ai": 0,
                     "_rnd": 50,
-                    "condition_attributes": null,
+                    "cards_on_team": [],
+                    "combos_made": null,
+                    "condition_attributes": [],
                     "enemies_remaining": null,
                     "forced_one_time": null,
                     "hp_threshold": null,
                     "on_death": null,
                     "one_time": null
                 },
-                "enemy_skill_id": 12006,
-                "extra_description": null
+                "enemy_skill_id": 12006
             },
             {
                 "behavior": {
                     "_name": "通常2回Ｂ",
                     "attack": null,
                     "enemy_skill_id": 12007,
-                    "extra_description": null,
                     "params": [
                         null,
                         12009,
@@ -3126,7 +3728,6 @@
                             "_name": "ほら　こっちだよ！",
                             "attack": null,
                             "enemy_skill_id": 12009,
-                            "extra_description": null,
                             "params": [
                                 null,
                                 30,
@@ -3156,7 +3757,6 @@
                                 "min_hits": 2
                             },
                             "enemy_skill_id": 12011,
-                            "extra_description": null,
                             "params": [
                                 null,
                                 2,
@@ -3183,21 +3783,21 @@
                 "condition": {
                     "_ai": 0,
                     "_rnd": 50,
-                    "condition_attributes": null,
+                    "cards_on_team": [],
+                    "combos_made": null,
+                    "condition_attributes": [],
                     "enemies_remaining": null,
                     "forced_one_time": null,
                     "hp_threshold": null,
                     "on_death": null,
                     "one_time": null
                 },
-                "enemy_skill_id": 12007,
-                "extra_description": null
+                "enemy_skill_id": 12007
             },
             {
                 "behavior": {
                     "_name": "※パース終了",
                     "enemy_skill_id": 26,
-                    "extra_description": null,
                     "params": [
                         null,
                         null,
@@ -3219,8 +3819,7 @@
                     "type": 36
                 },
                 "condition": null,
-                "enemy_skill_id": 26,
-                "extra_description": null
+                "enemy_skill_id": 26
             },
             {
                 "behavior": {
@@ -3231,7 +3830,6 @@
                         "min_hits": 1
                     },
                     "enemy_skill_id": 12016,
-                    "extra_description": null,
                     "params": [
                         null,
                         1,
@@ -3255,21 +3853,21 @@
                 "condition": {
                     "_ai": 100,
                     "_rnd": 0,
-                    "condition_attributes": null,
+                    "cards_on_team": [],
+                    "combos_made": null,
+                    "condition_attributes": [],
                     "enemies_remaining": null,
                     "forced_one_time": null,
                     "hp_threshold": null,
                     "on_death": null,
                     "one_time": null
                 },
-                "enemy_skill_id": 12016,
-                "extra_description": null
+                "enemy_skill_id": 12016
             },
             {
                 "behavior": {
                     "_name": "※パース終了",
                     "enemy_skill_id": 26,
-                    "extra_description": null,
                     "params": [
                         null,
                         null,
@@ -3291,8 +3889,7 @@
                     "type": 36
                 },
                 "condition": null,
-                "enemy_skill_id": 26,
-                "extra_description": null
+                "enemy_skill_id": 26
             }
         ],
         "leader_skill": {
@@ -3763,7 +4360,6 @@
                 "behavior": {
                     "_name": "※先制コマンドLV1",
                     "enemy_skill_id": 318,
-                    "extra_description": null,
                     "level": 1,
                     "params": [
                         null,
@@ -3786,8 +4382,7 @@
                     "type": 49
                 },
                 "condition": null,
-                "enemy_skill_id": 318,
-                "extra_description": null
+                "enemy_skill_id": 318
             },
             {
                 "behavior": {
@@ -3796,7 +4391,6 @@
                     "branch_value": 1,
                     "compare": "&",
                     "enemy_skill_id": 10,
-                    "extra_description": null,
                     "params": [
                         null,
                         null,
@@ -3819,14 +4413,12 @@
                     "type": 43
                 },
                 "condition": null,
-                "enemy_skill_id": 10,
-                "extra_description": null
+                "enemy_skill_id": 10
             },
             {
                 "behavior": {
                     "_name": "※フラグを ai にセット",
                     "enemy_skill_id": 12,
-                    "extra_description": null,
                     "flag": 1,
                     "flag_bin": "0b1",
                     "operation": "SET",
@@ -3851,8 +4443,7 @@
                     "type": 22
                 },
                 "condition": null,
-                "enemy_skill_id": 12,
-                "extra_description": null
+                "enemy_skill_id": 12
             },
             {
                 "behavior": {
@@ -3861,7 +4452,6 @@
                     "cloud_height": 1,
                     "cloud_width": 4,
                     "enemy_skill_id": 12005,
-                    "extra_description": null,
                     "origin_x": 3,
                     "origin_y": 2,
                     "params": [
@@ -3888,21 +4478,21 @@
                 "condition": {
                     "_ai": 100,
                     "_rnd": 0,
-                    "condition_attributes": null,
+                    "cards_on_team": [],
+                    "combos_made": null,
+                    "condition_attributes": [],
                     "enemies_remaining": null,
                     "forced_one_time": null,
                     "hp_threshold": null,
                     "on_death": null,
                     "one_time": null
                 },
-                "enemy_skill_id": 12005,
-                "extra_description": null
+                "enemy_skill_id": 12005
             },
             {
                 "behavior": {
                     "_name": "※パース終了",
                     "enemy_skill_id": 26,
-                    "extra_description": null,
                     "params": [
                         null,
                         null,
@@ -3924,8 +4514,7 @@
                     "type": 36
                 },
                 "condition": null,
-                "enemy_skill_id": 26,
-                "extra_description": null
+                "enemy_skill_id": 26
             },
             {
                 "behavior": {
@@ -3934,7 +4523,6 @@
                     "branch_value": 15,
                     "compare": "<",
                     "enemy_skill_id": 18,
-                    "extra_description": null,
                     "params": [
                         null,
                         null,
@@ -3957,8 +4545,7 @@
                     "type": 28
                 },
                 "condition": null,
-                "enemy_skill_id": 18,
-                "extra_description": null
+                "enemy_skill_id": 18
             },
             {
                 "behavior": {
@@ -3967,7 +4554,6 @@
                     "branch_value": 51,
                     "compare": ">",
                     "enemy_skill_id": 19,
-                    "extra_description": null,
                     "params": [
                         null,
                         null,
@@ -3990,15 +4576,13 @@
                     "type": 29
                 },
                 "condition": null,
-                "enemy_skill_id": 19,
-                "extra_description": null
+                "enemy_skill_id": 19
             },
             {
                 "behavior": {
                     "_name": "50%以下通常3回",
                     "attack": null,
                     "enemy_skill_id": 12012,
-                    "extra_description": null,
                     "params": [
                         null,
                         12013,
@@ -4031,7 +4615,6 @@
                                 "min_hits": 1
                             },
                             "enemy_skill_id": 12013,
-                            "extra_description": null,
                             "params": [
                                 null,
                                 1,
@@ -4057,7 +4640,6 @@
                             "attack": null,
                             "enemy_count": 1,
                             "enemy_skill_id": 12014,
-                            "extra_description": null,
                             "multiplier": 150,
                             "params": [
                                 "1ターンの間、攻撃力が1.5倍に上昇した",
@@ -4086,7 +4668,6 @@
                             "attack": null,
                             "debuff_type": "RCV",
                             "enemy_skill_id": 12015,
-                            "extra_description": null,
                             "params": [
                                 "1ターンの間、回復力が半減",
                                 1,
@@ -4115,22 +4696,22 @@
                 "condition": {
                     "_ai": 100,
                     "_rnd": 0,
-                    "condition_attributes": null,
+                    "cards_on_team": [],
+                    "combos_made": null,
+                    "condition_attributes": [],
                     "enemies_remaining": null,
                     "forced_one_time": null,
                     "hp_threshold": null,
                     "on_death": null,
                     "one_time": 1
                 },
-                "enemy_skill_id": 12012,
-                "extra_description": null
+                "enemy_skill_id": 12012
             },
             {
                 "behavior": {
                     "_name": "通常2回Ａ",
                     "attack": null,
                     "enemy_skill_id": 12006,
-                    "extra_description": null,
                     "params": [
                         null,
                         12008,
@@ -4162,7 +4743,6 @@
                                 "min_hits": 1
                             },
                             "enemy_skill_id": 12008,
-                            "extra_description": null,
                             "orb_from": -1,
                             "orb_to": null,
                             "params": [
@@ -4194,7 +4774,6 @@
                             ],
                             "chance": 100,
                             "enemy_skill_id": 12010,
-                            "extra_description": null,
                             "max_turns": 10,
                             "min_turns": 10,
                             "params": [
@@ -4223,22 +4802,22 @@
                 "condition": {
                     "_ai": 0,
                     "_rnd": 50,
-                    "condition_attributes": null,
+                    "cards_on_team": [],
+                    "combos_made": null,
+                    "condition_attributes": [],
                     "enemies_remaining": null,
                     "forced_one_time": null,
                     "hp_threshold": null,
                     "on_death": null,
                     "one_time": null
                 },
-                "enemy_skill_id": 12006,
-                "extra_description": null
+                "enemy_skill_id": 12006
             },
             {
                 "behavior": {
                     "_name": "通常2回Ｂ",
                     "attack": null,
                     "enemy_skill_id": 12007,
-                    "extra_description": null,
                     "params": [
                         null,
                         12009,
@@ -4266,7 +4845,6 @@
                             "_name": "ほら　こっちだよ！",
                             "attack": null,
                             "enemy_skill_id": 12009,
-                            "extra_description": null,
                             "params": [
                                 null,
                                 30,
@@ -4296,7 +4874,6 @@
                                 "min_hits": 2
                             },
                             "enemy_skill_id": 12011,
-                            "extra_description": null,
                             "params": [
                                 null,
                                 2,
@@ -4323,21 +4900,21 @@
                 "condition": {
                     "_ai": 0,
                     "_rnd": 50,
-                    "condition_attributes": null,
+                    "cards_on_team": [],
+                    "combos_made": null,
+                    "condition_attributes": [],
                     "enemies_remaining": null,
                     "forced_one_time": null,
                     "hp_threshold": null,
                     "on_death": null,
                     "one_time": null
                 },
-                "enemy_skill_id": 12007,
-                "extra_description": null
+                "enemy_skill_id": 12007
             },
             {
                 "behavior": {
                     "_name": "※パース終了",
                     "enemy_skill_id": 26,
-                    "extra_description": null,
                     "params": [
                         null,
                         null,
@@ -4359,8 +4936,7 @@
                     "type": 36
                 },
                 "condition": null,
-                "enemy_skill_id": 26,
-                "extra_description": null
+                "enemy_skill_id": 26
             },
             {
                 "behavior": {
@@ -4371,7 +4947,6 @@
                         "min_hits": 1
                     },
                     "enemy_skill_id": 12016,
-                    "extra_description": null,
                     "params": [
                         null,
                         1,
@@ -4395,21 +4970,21 @@
                 "condition": {
                     "_ai": 100,
                     "_rnd": 0,
-                    "condition_attributes": null,
+                    "cards_on_team": [],
+                    "combos_made": null,
+                    "condition_attributes": [],
                     "enemies_remaining": null,
                     "forced_one_time": null,
                     "hp_threshold": null,
                     "on_death": null,
                     "one_time": null
                 },
-                "enemy_skill_id": 12016,
-                "extra_description": null
+                "enemy_skill_id": 12016
             },
             {
                 "behavior": {
                     "_name": "※パース終了",
                     "enemy_skill_id": 26,
-                    "extra_description": null,
                     "params": [
                         null,
                         null,
@@ -4431,8 +5006,7 @@
                     "type": 36
                 },
                 "condition": null,
-                "enemy_skill_id": 26,
-                "extra_description": null
+                "enemy_skill_id": 26
             }
         ],
         "leader_skill": {

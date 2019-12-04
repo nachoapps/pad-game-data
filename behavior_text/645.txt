@@ -12,17 +12,17 @@ level: 1
  | Deal 70% damage
  group:
  | group:
- | condition: repeats every 2 turns, hp <= 100
+ | condition: repeats every 2 turns, turn 1, hp <= 100
    | (675:60) Take this!
    | Change Random 5 to Poison
  | group:
  | condition: hp <= 74
    | group:
-   | condition: repeats every 2 turns, hp <= 100
+   | condition: repeats every 2 turns, turn 1, hp <= 100
      | (675:60) Take this!
      | Change Random 5 to Poison
    | group:
-   | condition: 70% chance, repeats every 2 turns, hp <= 75
+   | condition: 70% chance, repeats every 2 turns, turn 2, hp <= 75
      | (676:15) Deadly Drive!
      | Deal 120% damage (3 hits, 40% each)
  | group:
@@ -34,13 +34,13 @@ level: 1
      | (681:50) Not going easy anymore!
      | Player -50% HP
    | group:
-   | condition: repeats every 2 turns
+   | condition: repeats every 2 turns, turn 1
      | (677:92) Sink into a sea of poison!!
      | Change all orbs to Poison
      | condition: hp <= 75
      | (676:15) Deadly Drive!
      | Deal 120% damage (3 hits, 40% each)
    | group:
-   | condition: repeats every 2 turns, hp <= 75
+   | condition: repeats every 2 turns, turn 2, hp <= 75
      | (676:15) Deadly Drive!
      | Deal 120% damage (3 hits, 40% each)

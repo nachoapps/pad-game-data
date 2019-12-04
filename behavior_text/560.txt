@@ -9,20 +9,20 @@ approved: False
 level: 5
  group:
  | group:
- | condition: repeats every 3 turns, hp <= 100
+ | condition: repeats every 3 turns, turn 1, hp <= 100
    | (416:48) Flame Quenching Technique
    | Change Fire to Wood, Deal 70% damage
  | group:
  | condition: hp <= 74
    | group:
-   | condition: repeats every 3 turns
+   | condition: repeats every 3 turns, turn 1
      | (416:48) Flame Quenching Technique
      | Change Fire to Wood, Deal 70% damage
      | condition: 70% chance, hp <= 75
      | (415:15) Ninjutsu - Fuma Shuriken Attack
      | Deal 140% damage (7 hits, 20% each)
    | group:
-   | condition: 70% chance, repeats every 3 turns, hp <= 75
+   | condition: 70% chance, repeats every 3 turns, turn 2, hp <= 75
      | (415:15) Ninjutsu - Fuma Shuriken Attack
      | Deal 140% damage (7 hits, 20% each)
  | group:

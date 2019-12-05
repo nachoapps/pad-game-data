@@ -22,7 +22,7 @@ level: 4
  | Do nothing
  group:
  | group:
-   | condition: 50% chance, when required attributes on board, hp <= 100
+   | condition: 50% chance, when required attributes on board
    | (8648:92) Ryuuenbu
    | Spawn random 3 Fire orbs, Deal 80% damage
    | (8649:15) Hissatsu Shinobi-Bachi
@@ -30,15 +30,16 @@ level: 4
  | group:
  | condition: hp <= 49
    | group:
-   | condition: turn 1, hp <= 100
+   | condition: turn 1
      | (8650:50) Musasabi no Mai
      | Player -80% HP
    | group:
-     | condition: 50% chance, when required attributes on board, hp <= 100
+     | condition: 50% chance, when required attributes on board
      | (8651:92) Hisho-Ryu-Enjin
      | Spawn random 6 Fire orbs, Deal 120% damage
      | (8649:15) Hissatsu Shinobi-Bachi
      | Deal 100% damage
  | group:
+ | condition: hp <= 14
    | (8652:15) Chou Hissatsu Shinobi-Bachi
    | Deal 180% damage (3 hits, 60% each)

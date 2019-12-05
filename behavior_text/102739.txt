@@ -18,16 +18,17 @@ level: 1
    | (4802:15) Blazing Cutting Dance
    | Deal 150% damage (3 hits, 50% each)
  | group:
+ | condition: hp <= 74
    | (4805:83) Flame Eating Net + Scold
    | Enemy recover 10% hp + Player -99% HP
  | group:
  | condition: hp <= 49
    | group:
-   | condition: turn 1, hp <= 100
+   | condition: turn 1
      | (4806:74) High Temperature
      | Reduce damage from all sources by 75% for 3 turns
    | group:
-   | condition: when required attributes on board, hp <= 100
+   | condition: when required attributes on board
      | (4807:92) Ash followed by Flare
      | Spawn random 5 Jammer orbs, Deal 50% damage
  | group:

@@ -1,0 +1,22 @@
+#501166  - 紅の華龍・バルバドス
+True : use_new_ai
+1 : starting/max counter
+0 : counter increment
+
+ESPreemptive(49:318) -> ESPreemptive
+Enable preempt if level 1
+
+ESBindRandomSub(65:15419) -> プラントネット
+	Condition: One-time use (ai:100 rnd:0) (one-time: 1)
+Bind 4 random subs for 3 turns
+
+ESAttackMultihit(15:15421) -> レイジオブアース
+	Condition: 30% chance when < 20% hp (ai:30 rnd:0)
+Deal 300% damage
+
+ESAttackMultihit(15:15420) -> ペタルストーム
+Deal 80%~160% damage (4~8 hits, 20% each)
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+

@@ -6,8 +6,16 @@ True : use_new_ai
 ESPreemptive(49:318) -> ESPreemptive
 Enable preempt if level 1
 
-ESNone(0:15661) -> ESNone
-nothing
+SkillSet:
+	Condition: One-time use (ai:100 rnd:0) (one-time: 1)
+	[0] ESStatusShield(20:15662) -> あなたならできるかしら？
+	Voids status ailments for 999 turns
+	[1] ESBindAwoken(88:15663) -> この状況でも…
+	Bind awoken skills for 5 turns
+	[2] ESAbsorbCombo(67:15664) -> さぁ、希望をつかみとってみて…
+	Absorb combo <= 9 damage for 1 turns
+	[3] ESRandomSpawn(92:15665) -> パンドラの箱
+	Spawn random 6 Dark, Heal, Jammer, Poison, Mortal Poison orbs
 
 ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 1, target rnd 10
@@ -18,20 +26,23 @@ flag SET 0b1
 ESBranchCombo(113:6528) -> ESBranchCombo
 Branch on combo >= 10, target rnd 8
 
-ESNone(0:15669) -> ESNone
-nothing
+ESBindAwoken(88:15669) -> ズルはダメ…
+Bind awoken skills for 10 turns
 
-ESNone(0:15670) -> ESNone
-nothing
+ESBindRandomSub(65:15670) -> 悪夢の贈り物
+Bind 4 random subs for 6 turns
 
-ESNone(0:15666) -> ESNone
-nothing
+SkillSet:
+	[0] ESDebuffMovetime(39:15667) -> おめでとう
+	Movetime 110% for 99 turns
+	[1] ESAbsorbCombo(67:15668) -> それじゃあ全力でいきますよ
+	Absorb combo <= 7 damage for 999 turns
 
 ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESNone(0:15671) -> ESNone
-nothing
+ESAttackMultihit(15:15671) -> 終わりなき災厄
+Deal 100% damage (4 hits, 25% each)
 
 ESEndPath(36:26) -> ESEndPath
 end_turn

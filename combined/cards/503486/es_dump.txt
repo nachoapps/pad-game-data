@@ -1,0 +1,48 @@
+#503486  - 転生ロキ
+True : use_new_ai
+7 : starting/max counter
+0 : counter increment
+
+ESPreemptive(49:318) -> ESPreemptive
+Enable preempt if level 1
+
+ESDeathCry(69:15528) -> ロキ変身
+	Condition: On death (ai:0 rnd:0)
+Show message: 甘いぞ|神々はすべて我にひれ伏す…
+
+SkillSet:
+	Condition: One-time use (ai:100 rnd:0) (one-time: 4)
+	[0] ESDebuffRCV(105:15529) -> 来るがいい、愚かな神どもよ
+	Rcv 50% for 5 turns
+	[1] ESVoidShield(71:15530) -> 反逆の結界
+	Void damage >= 4000000 for 10 turns
+
+ESAbsorbAttribute(53:15534) -> ぬるいぞ
+	Condition: When < 50% hp , one-time use (ai:100 rnd:0) (one-time: 2)
+Absorb Wood damage for 2 turns
+
+ESAttackUPRemainingEnemies(17:15535) -> ルーンエンハンス
+	Condition: When < 20% hp , one-time use, when <= 1 enemies remain (ai:100 rnd:0) (one-time: 1)
+Increase damage to 130% for the next 3 turns
+
+ESBranchCounter(32:22) -> ESBranchCounter
+Branch on counter > 3, target rnd 10
+
+ESSetCounter(26:16) -> ESSetCounter
+counter + 1
+
+ESAttackMultihit(15:15532) -> 終焉の刃
+Deal 105% damage (3 hits, 35% each)
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESSetCounter(25:15) -> ESSetCounter
+counter = 0
+
+ESBlindStickyRandom(97:15533) -> ディスペアー
+Blind random 3~6 orbs for 2 turns
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+

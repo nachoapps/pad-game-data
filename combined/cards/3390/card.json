@@ -1,6 +1,6 @@
 {
     "active_skill": {
-        "en_text": "Deal 50x ATK Light damage to an enemy and recover 15% of the damage as HP; Reduce binds and awoken skill binds by 5 turns",
+        "en_text": "Deal 100x ATK Light damage to an enemy and recover 15% of the damage as HP; Reduce binds and awoken skill binds by 7 turns",
         "jp_skill": {
             "child_ids": [
                 2763,
@@ -8,7 +8,7 @@
             ],
             "child_skills": [
                 {
-                    "atk_multiplier": 50.0,
+                    "atk_multiplier": 100.0,
                     "attribute": 3,
                     "levels": 6,
                     "mass_attack": false,
@@ -21,8 +21,8 @@
                     "turn_min": 5
                 },
                 {
-                    "awoken_bind": 5,
-                    "card_bind": 5,
+                    "awoken_bind": 7,
+                    "card_bind": 7,
                     "hp": 0,
                     "levels": 6,
                     "name": "",
@@ -37,7 +37,7 @@
             ],
             "levels": 9,
             "name": "グングニール",
-            "raw_description": "敵1体に攻撃力×50倍の光属性で攻撃、HPを少し回復。 バインド状態と覚醒無効状態を5ターン回復。",
+            "raw_description": "敵1体に攻撃力×100倍の光属性で攻撃、HPを少し回復。 バインド状態と覚醒無効状態を7ターン回復。",
             "skill_id": 168,
             "skill_type": 116,
             "turn_max": 17,
@@ -135,8 +135,8 @@
             "AsCondition.BIND_AWOKEN_INVALID_RECOVERY"
         ]
     },
-    "en_as_text": "Deal 50x ATK Light damage to an enemy and recover 15% of the damage as HP; Reduce binds and awoken skill binds by 5 turns",
-    "en_ls_text": "Reduce damage taken by 80% when HP is not full; 2.5x ATK & RCV when matching 4 or more connected Wood orbs",
+    "en_as_text": "Deal 100x ATK Light damage to an enemy and recover 15% of the damage as HP; Reduce binds and awoken skill binds by 7 turns",
+    "en_ls_text": "Reduce damage taken by 80% when HP is not full; 8x ATK and 3x RCV when matching 4 or more connected Wood orbs; Increase orb movement time by 4 seconds",
     "enemy_behavior": [],
     "has_animation": false,
     "has_hqimage": false,
@@ -148,7 +148,7 @@
             ],
             "child_skills": [
                 {
-                    "atk_multiplier": 50.0,
+                    "atk_multiplier": 100.0,
                     "attribute": 3,
                     "levels": 6,
                     "mass_attack": false,
@@ -161,8 +161,8 @@
                     "turn_min": 5
                 },
                 {
-                    "awoken_bind": 5,
-                    "card_bind": 5,
+                    "awoken_bind": 7,
+                    "card_bind": 7,
                     "hp": 0,
                     "levels": 6,
                     "name": "",
@@ -177,7 +177,7 @@
             ],
             "levels": 9,
             "name": "グングニール",
-            "raw_description": "敵1体に攻撃力×50倍の光属性で攻撃、HPを少し回復。 バインド状態と覚醒無効状態を5ターン回復。",
+            "raw_description": "敵1体に攻撃力×100倍の光属性で攻撃、HPを少し回復。 バインド状態と覚醒無効状態を7ターン回復。",
             "skill_id": 168,
             "skill_type": 116,
             "turn_max": 17,
@@ -190,13 +190,14 @@
             "atk_scale": 1.0,
             "attr_id": 2,
             "awakenings": [
-                21,
+                56,
                 10,
                 10,
                 21,
                 9,
                 20,
-                21,
+                27,
+                27,
                 27
             ],
             "base_id": 362,
@@ -233,7 +234,7 @@
             "is_ult": true,
             "latent_on_feed": 0,
             "leader_skill_id": 6489,
-            "limit_mult": 0,
+            "limit_mult": 15,
             "max_atk": 1903,
             "max_hp": 4349,
             "max_level": 99,
@@ -254,7 +255,11 @@
             "sell_gold_per_level": 960,
             "sell_mp": 15000,
             "sub_attr_id": -1,
-            "super_awakenings": [],
+            "super_awakenings": [
+                48,
+                21,
+                43
+            ],
             "type_1_id": 5,
             "type_2_id": 6,
             "type_3_id": -1,
@@ -279,7 +284,8 @@
             "_shield": 0,
             "child_ids": [
                 6490,
-                6491
+                6491,
+                6573
             ],
             "child_skills": [
                 {
@@ -295,29 +301,40 @@
                     "threshold_type": "ThresholdType.BELOW"
                 },
                 {
-                    "_atk": 2.5,
+                    "_atk": 8.0,
                     "_hp": 1,
-                    "_rcv": 2.5,
+                    "_rcv": 3.0,
                     "_shield": 0,
                     "atk_step": 0.0,
                     "match_attributes": [
                         2
                     ],
-                    "max_atk": 2.5,
+                    "max_atk": 8.0,
                     "max_count": 0,
-                    "max_rcv": 2.5,
-                    "min_atk": 2.5,
+                    "max_rcv": 3.0,
+                    "min_atk": 8.0,
                     "min_count": 4,
-                    "min_rcv": 2.5,
+                    "min_rcv": 3.0,
                     "name": "",
                     "raw_description": "",
                     "rcv_step": 0.0,
                     "skill_id": 6491,
                     "skill_type": 167
+                },
+                {
+                    "_atk": 1,
+                    "_hp": 1,
+                    "_rcv": 1,
+                    "_shield": 0,
+                    "name": "",
+                    "raw_description": "",
+                    "skill_id": 6573,
+                    "skill_type": 15,
+                    "time": 4.0
                 }
             ],
             "name": "サイト・オブ・アスガルド",
-            "raw_description": "HP満タン時に受けるダメージを激減。 木を4個以上つなげて消すと攻撃力と回復力が2.5倍。",
+            "raw_description": "HP満タン時に受けるダメージを激減。ドロップ操作を4秒延長。 木を4個以上つなげて消すと攻撃力が8倍、回復力は3倍。",
             "skill_id": 6489,
             "skill_type": 138
         },
@@ -513,7 +530,7 @@
         "server": "Server.kr"
     },
     "leader_skill": {
-        "en_text": "Reduce damage taken by 80% when HP is not full; 2.5x ATK & RCV when matching 4 or more connected Wood orbs",
+        "en_text": "Reduce damage taken by 80% when HP is not full; 8x ATK and 3x RCV when matching 4 or more connected Wood orbs; Increase orb movement time by 4 seconds",
         "jp_skill": {
             "_atk": 1,
             "_hp": 1,
@@ -521,7 +538,8 @@
             "_shield": 0,
             "child_ids": [
                 6490,
-                6491
+                6491,
+                6573
             ],
             "child_skills": [
                 {
@@ -537,29 +555,40 @@
                     "threshold_type": "ThresholdType.BELOW"
                 },
                 {
-                    "_atk": 2.5,
+                    "_atk": 8.0,
                     "_hp": 1,
-                    "_rcv": 2.5,
+                    "_rcv": 3.0,
                     "_shield": 0,
                     "atk_step": 0.0,
                     "match_attributes": [
                         2
                     ],
-                    "max_atk": 2.5,
+                    "max_atk": 8.0,
                     "max_count": 0,
-                    "max_rcv": 2.5,
-                    "min_atk": 2.5,
+                    "max_rcv": 3.0,
+                    "min_atk": 8.0,
                     "min_count": 4,
-                    "min_rcv": 2.5,
+                    "min_rcv": 3.0,
                     "name": "",
                     "raw_description": "",
                     "rcv_step": 0.0,
                     "skill_id": 6491,
                     "skill_type": 167
+                },
+                {
+                    "_atk": 1,
+                    "_hp": 1,
+                    "_rcv": 1,
+                    "_shield": 0,
+                    "name": "",
+                    "raw_description": "",
+                    "skill_id": 6573,
+                    "skill_type": 15,
+                    "time": 4.0
                 }
             ],
             "name": "サイト・オブ・アスガルド",
-            "raw_description": "HP満タン時に受けるダメージを激減。 木を4個以上つなげて消すと攻撃力と回復力が2.5倍。",
+            "raw_description": "HP満タン時に受けるダメージを激減。ドロップ操作を4秒延長。 木を4個以上つなげて消すと攻撃力が8倍、回復力は3倍。",
             "skill_id": 6489,
             "skill_type": 138
         },
@@ -664,7 +693,8 @@
         "skill_id": 6489,
         "skill_type_tags": [
             "LsCondition.ENHANCED_ATK_RCV",
-            "LsCondition.REDUCE_DAMAGE"
+            "LsCondition.REDUCE_DAMAGE",
+            "LsCondition.EXTEND_TIME"
         ]
     },
     "monster_id": 3390,

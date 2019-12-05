@@ -1,5 +1,59 @@
 #4948  - Holy Ritual Psychopomp Princess, Grida
-False : use_new_ai
-0 : starting/max counter
+True : use_new_ai
+3 : starting/max counter
 0 : counter increment
+
+ESPreemptive(49:318) -> ESPreemptive
+Enable preempt if level 1
+
+ESNone(0:15924) -> ESNone
+nothing
+
+ESBranchHP(28:18) -> ESBranchHP
+Branch on hp < 15, target rnd 8
+
+ESBranchHP(28:18) -> ESBranchHP
+Branch on hp < 50, target rnd 14
+
+ESNone(0:15920) -> ESNone
+nothing
+
+ESNone(0:15919) -> ESNone
+nothing
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESBranchCounter(32:22) -> ESBranchCounter
+Branch on counter > 1, target rnd 12
+
+ESSetCounter(26:16) -> ESSetCounter
+counter + 1
+
+ESNone(0:15922) -> ESNone
+nothing
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESNone(0:15923) -> ESNone
+nothing
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 1, target rnd 6
+
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b1
+
+ESNone(0:15921) -> ESNone
+nothing
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESNone(0:15952) -> ESNone
+nothing
 

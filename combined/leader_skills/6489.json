@@ -1,5 +1,5 @@
 {
-    "en_text": "Reduce damage taken by 80% when HP is not full; 2.5x ATK & RCV when matching 4 or more connected Wood orbs",
+    "en_text": "Reduce damage taken by 80% when HP is not full; 8x ATK and 3x RCV when matching 4 or more connected Wood orbs; Increase orb movement time by 4 seconds",
     "jp_skill": {
         "_atk": 1,
         "_hp": 1,
@@ -7,7 +7,8 @@
         "_shield": 0,
         "child_ids": [
             6490,
-            6491
+            6491,
+            6573
         ],
         "child_skills": [
             {
@@ -23,29 +24,40 @@
                 "threshold_type": "ThresholdType.BELOW"
             },
             {
-                "_atk": 2.5,
+                "_atk": 8.0,
                 "_hp": 1,
-                "_rcv": 2.5,
+                "_rcv": 3.0,
                 "_shield": 0,
                 "atk_step": 0.0,
                 "match_attributes": [
                     2
                 ],
-                "max_atk": 2.5,
+                "max_atk": 8.0,
                 "max_count": 0,
-                "max_rcv": 2.5,
-                "min_atk": 2.5,
+                "max_rcv": 3.0,
+                "min_atk": 8.0,
                 "min_count": 4,
-                "min_rcv": 2.5,
+                "min_rcv": 3.0,
                 "name": "",
                 "raw_description": "",
                 "rcv_step": 0.0,
                 "skill_id": 6491,
                 "skill_type": 167
+            },
+            {
+                "_atk": 1,
+                "_hp": 1,
+                "_rcv": 1,
+                "_shield": 0,
+                "name": "",
+                "raw_description": "",
+                "skill_id": 6573,
+                "skill_type": 15,
+                "time": 4.0
             }
         ],
         "name": "サイト・オブ・アスガルド",
-        "raw_description": "HP満タン時に受けるダメージを激減。 木を4個以上つなげて消すと攻撃力と回復力が2.5倍。",
+        "raw_description": "HP満タン時に受けるダメージを激減。ドロップ操作を4秒延長。 木を4個以上つなげて消すと攻撃力が8倍、回復力は3倍。",
         "skill_id": 6489,
         "skill_type": 138
     },
@@ -150,6 +162,7 @@
     "skill_id": 6489,
     "skill_type_tags": [
         "LsCondition.ENHANCED_ATK_RCV",
-        "LsCondition.REDUCE_DAMAGE"
+        "LsCondition.REDUCE_DAMAGE",
+        "LsCondition.EXTEND_TIME"
     ]
 }

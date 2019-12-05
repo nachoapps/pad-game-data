@@ -6,8 +6,12 @@ True : use_new_ai
 ESPreemptive(49:318) -> ESPreemptive
 Enable preempt if level 1
 
-ESNone(0:15310) -> ESNone
-nothing
+SkillSet:
+	Condition: One-time use (ai:100 rnd:0) (one-time: 1)
+	[0] ESSpinnersFixed(110:15311) -> 私と舞い踊りましょう
+	Specific orbs change every 1.0s for 2 turns
+	[1] ESAbsorbCombo(67:15312) -> ゲコ分身
+	Absorb combo <= 7 damage for 10 turns
 
 ESBranchCounter(32:22) -> ESBranchCounter
 Branch on counter > 9, target rnd 8
@@ -15,11 +19,13 @@ Branch on counter > 9, target rnd 8
 ESSetCounter(26:16) -> ESSetCounter
 counter + 1
 
-ESNone(0:15313) -> ESNone
-nothing
+ESSpinnersFixed(110:15313) -> 踊扇の舞
+	Condition: 50% chance (ai:0 rnd:50)
+Specific orbs change every 2.0s for 2 turns, Deal 100% damage
 
-ESNone(0:15314) -> ESNone
-nothing
+ESSpinnersFixed(110:15314) -> 踊扇の舞
+	Condition: 50% chance (ai:0 rnd:50)
+Specific orbs change every 1.0s for 2 turns, Deal 100% damage
 
 ESEndPath(36:26) -> ESEndPath
 end_turn
@@ -30,8 +36,11 @@ Branch on counter > 10, target rnd 5
 ESSetCounter(26:16) -> ESSetCounter
 counter + 1
 
-ESNone(0:15315) -> ESNone
-nothing
+SkillSet:
+	[0] ESVoidShield(71:15316) -> 疲れちゃった？
+	Void damage >= 10000000 for 999 turns
+	[1] ESDebuffRCV(105:15317) -> まだ私踊り足りないの
+	Rcv 25% for 10 turns
 
 ESEndPath(36:26) -> ESEndPath
 end_turn

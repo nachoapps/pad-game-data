@@ -1,4 +1,4 @@
-#5653  - 相良宗介
+#5653  - Sousuke Sagara
 True : use_new_ai
 3 : starting/max counter
 0 : counter increment
@@ -12,7 +12,7 @@ Branch on level > 4, target rnd 4
 ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESCloud(104:14966) -> 戦闘開始だ
+ESCloud(104:14966) -> Battle, commence.
 	Condition: One-time use (ai:100 rnd:0) (one-time: 2)
 2x2 cloud appear for 3 turns at random location
 
@@ -22,19 +22,19 @@ Branch on hp < 50, target rnd 12
 ESBranchHP(29:19) -> ESBranchHP
 Branch on hp > 76, target rnd 8
 
-ESSpinnersRandom(109:14969) -> 次は貴様を撃つ
+ESSpinnersRandom(109:14969) -> The next one goes at you.
 	Condition: One-time use (ai:100 rnd:0) (one-time: 1)
 Random 2 orbs change every 1.0s for 5 turns
 
-ESRandomSpawn(92:14967) -> 安心するのはまだ早い
+ESRandomSpawn(92:14967) -> It's not over yet.
 	Condition: 33% chance (ai:0 rnd:33)
 Spawn random 5 Dark orbs, Deal 95% damage
 
-ESAttackMultihit(15:14968) -> くそっ
+ESAttackMultihit(15:14968) -> Dammit
 	Condition: 33% chance (ai:0 rnd:33)
 Deal 100% damage
 
-ESAttackMultihit(15:14971) -> くたばれ……！
+ESAttackMultihit(15:14971) -> Die!
 	Condition: 34% chance (ai:0 rnd:34)
 Deal 105% damage (3 hits, 35% each)
 
@@ -47,7 +47,7 @@ Branch on flag & 1, target rnd 6
 ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b1
 
-ESAttackUPRemainingEnemies(17:14970) -> やってみるしかない
+ESAttackUPRemainingEnemies(17:14970) -> I'll just have to try.
 	Condition: when <= 1 enemies remain (ai:100 rnd:0)
 Increase damage to 150% for the next 5 turns
 

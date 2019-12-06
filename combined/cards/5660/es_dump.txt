@@ -1,4 +1,4 @@
-#5660  - ゼルガディス＝グレイワーズ
+#5660  - Zelgadis = Greywords
 True : use_new_ai
 3 : starting/max counter
 0 : counter increment
@@ -6,7 +6,7 @@ True : use_new_ai
 ESPreemptive(49:318) -> ESPreemptive
 Enable preempt if level 1
 
-ESLeaderSwap(75:14925) -> 踊らされるのは気に入らんな
+ESLeaderSwap(75:14925) -> I don't chase carrots.
 	Condition: One-time use (ai:100 rnd:0) (one-time: 2)
 Leader changes to random sub for 2 turns
 
@@ -16,19 +16,19 @@ Branch on hp < 50, target rnd 10
 ESBranchHP(29:19) -> ESBranchHP
 Branch on hp > 76, target rnd 6
 
-ESOrbSealRow(100:14930) -> 底が浅いぜ
+ESOrbSealRow(100:14930) -> Is that all you got?
 	Condition: One-time use (ai:100 rnd:0) (one-time: 1)
 Seal 5th row for 4 turns
 
-ESColumnSpawnMulti(77:14926) -> 地撃衝雷
+ESColumnSpawnMulti(77:14926) -> Dug Haut
 	Condition: 33% chance (ai:0 rnd:33)
 Change 2nd, 5th column to Wood orbs, Deal 60% damage
 
-ESRowSpawnMulti(79:14927) -> 烈閃咆
+ESRowSpawnMulti(79:14927) -> Elmekia Flame
 	Condition: 33% chance (ai:0 rnd:33)
 Change 3rd row to Light orbs, Deal 65% damage
 
-ESRandomSpawn(92:14928) -> 冥壊屍
+ESRandomSpawn(92:14928) -> Gozu Vrow
 	Condition: 34% chance (ai:0 rnd:34)
 Spawn random 5 Dark orbs, Deal 70% damage
 
@@ -41,7 +41,7 @@ Branch on flag & 1, target rnd 14
 ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b1
 
-ESAttackUPRemainingEnemies(17:14929) -> 魔皇霊斬
+ESAttackUPRemainingEnemies(17:14929) -> Astral Vine
 	Condition: when <= 1 enemies remain (ai:100 rnd:0)
 Increase damage to 150% for the next 999 turns
 
@@ -51,12 +51,12 @@ end_turn
 ESBranchHP(29:19) -> ESBranchHP
 Branch on hp > 21, target rnd 4
 
-ESColumnSpawnMulti(77:14931) -> 崩霊裂
+ESColumnSpawnMulti(77:14931) -> Ra Tilt
 Change 3rd, 4th column to Light orbs, Deal 100% damage
 
 ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESTypeResist(118:14965) -> 回復ドラゴン
+ESTypeResist(118:14965) -> Recovery Dragon
 Reduce damage from Healer, Dragon by 50%
 

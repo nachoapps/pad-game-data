@@ -1,0 +1,28 @@
+#200915 - エンジェリット
+monster size: 4
+new AI: False
+start/max counter: 1
+counter increment: 0
+monster_id: 200915
+approved: False
+
+level: 1
+ type: PREEMPT
+ | (735:55) 天使の慈悲
+ | Player recover 100% hp
+ group:
+ | group:
+   | (720:48) ハートアタック
+   | Change Random to Heal, Deal 100% damage
+ | group:
+ | condition: turn 1, hp <= 49
+   | (719:54) エンジェリットハイロウ
+   | Bind 1 both leaders for 4 turns
+ | group:
+ | condition: hp <= 19
+   | (722:15) ヘル＆ヘブン
+   | Deal 200% damage (4 hits, 50% each)
+ type: REMAINING
+ condition: when 1 enemies remain, turn 1, hp <= 100
+ | (721:17) 怒リット！
+ | Increase damage to 300% for the next 999 turns

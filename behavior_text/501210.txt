@@ -1,0 +1,40 @@
+#501210 - 久遠の不死鳥・フェニックス
+monster size: 5
+new AI: True
+start/max counter: 5
+counter increment: 1
+monster_id: 501210
+approved: False
+
+level: 1
+ type: PREEMPT
+ | (1158:55) 不死鳥の輝き
+ | Player recover 100% hp
+ group:
+ | group:
+   | group:
+   | condition: execute repeatedly, turn 1 of 6
+     | (1160:48) イモータルフレイム
+     | Change Water to Heal, Deal 75% damage
+   | group:
+   | condition: execute repeatedly, turn 6 of 6
+     | (1161:15) エターナルフレア
+     | Deal 400% damage (5 hits, 80% each)
+ | group:
+ | condition: hp <= 49
+   | group:
+   | condition: turn 1
+     | (1159:7) 転生の炎
+     | Enemy recover 100% hp
+   | group:
+   | condition: execute repeatedly, turn 1 of 6
+     | (1160:48) イモータルフレイム
+     | Change Water to Heal, Deal 75% damage
+   | group:
+   | condition: execute repeatedly, turn 5 of 6
+     | (1161:15) エターナルフレア
+     | Deal 400% damage (5 hits, 80% each)
+   | group:
+   | condition: execute repeatedly, turn 6 of 6
+     | (1160:48) イモータルフレイム
+     | Change Water to Heal, Deal 75% damage

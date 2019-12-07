@@ -1,0 +1,75 @@
+#104419 - 裏雲天の魔海獣・白鯨
+monster size: 5
+new AI: True
+start/max counter: 63
+counter increment: 0
+monster_id: 104419
+approved: False
+
+level: 1
+ type: PASSIVE
+ | (9942:73) 50％根性
+ | Survive attacks with 1 HP when HP > 50%
+ type: PREEMPT
+ | (15699:83) クラウドクラスター + 雲海の防護壁 + レインボーフォッグ + 硬軟な朧雲
+ | 6x2 cloud appear for 1 turns at 4th row, 1st column + Voids status ailments for 99 turns + Absorb combo <= 7 damage for 1 turns + Reduce damage from all sources by 75% for 5 turns
+ group:
+ | group:
+   | group:
+   | condition: turn 1
+     | (9914:83) クラウドクラスター + プリズムフォッグ + 雷球放出
+     | 6x2 cloud appear for 1 turns at 1st row, 1st column + Absorb combo <= 4 damage for 5 turns + Deal 270% damage (9 hits, 30% each)
+   | group:
+   | condition: turn 2
+     | (9918:83) クラウドクラスター + 白鯨の大咆哮 + ライジングフリップ
+     | 6x2 cloud appear for 1 turns at 3rd row, 1st column + Delay active skills by 1~3 turns + Leader changes to random sub for 1 turns
+   | group:
+   | condition: turn 3
+     | (9922:83) クラウドクラスター + ストームブロー
+     | 3x3 cloud appear for 1 turns at 2nd row, 3rd column + Deal 240% damage (2 hits, 120% each)
+   | group:
+   | condition: turn 4
+     | (9925:83) クラウドクラスター + ディバインクラウド + フラッシュストーム
+     | 3x3 cloud appear for 1 turns at 3rd row, 2nd column + Absorb Light damage for 5 turns + Change all orbs to Light
+   | group:
+   | condition: turn 5
+     | (9929:83) クラウドクラスター + プラズマブレス
+     | 3x3 cloud appear for 1 turns at 2nd row, 4th column + Change Random to Light, Deal 250% damage
+   | group:
+   | condition: turn 6
+     | (9932:88) マイクロバースト
+     | Bind awoken skills for 5 turns
+     | (9933:108) ヘブンズブリーチング
+     | Change Jammer to Light, Deal 260% damage
+     | (9934:108) ダーティクラウド
+     | Change Light, Heal to Jammer, Deal 210% damage
+     | (9935:48) ダーティクラウド
+     | Change Random to Jammer, Deal 210% damage
+   | group:
+     | (9933:108) ヘブンズブリーチング
+     | Change Jammer to Light, Deal 260% damage
+     | (9934:108) ダーティクラウド
+     | Change Light, Heal to Jammer, Deal 210% damage
+     | (9935:48) ダーティクラウド
+     | Change Random to Jammer, Deal 210% damage
+ | group:
+ | condition: hp <= 49
+   | group:
+   | condition: turn 1
+     | (9936:83) 巨大積乱雲 + プラズマチェイン
+     | Reduce damage from all sources by 75% for 10 turns + Bind 1 both leaders for 3 turns
+   | group:
+   | condition: execute repeatedly, turn 1 of 2
+     | (9939:84) グライミークラウド
+     | Change all orbs to Fire, Light, Heal, Jammer, Poison, Deal 246% damage
+   | group:
+   | condition: execute repeatedly, turn 2 of 2
+     | (9940:65) ライトニングチェイン
+     | Bind 2 random subs for 1~2 turns, Deal 220% damage
+ | group:
+ | condition: hp <= 9
+   | (9941:15) メゾサイクロン
+   | Deal 1300% damage (10 hits, 130% each)
+ | group:
+   | (9943:83) 上昇気流 + 雲が膨れ上がる + ディザスタークラウド
+   | Enemy recover 75% hp + Increase damage to 150% for the next 99 turns + 2x5 cloud appear for 1 turns at 1st row, 3rd column

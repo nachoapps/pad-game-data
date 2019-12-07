@@ -1,0 +1,37 @@
+  monster_id: 500271
+  levels {
+    level: 1
+    groups {
+      group_type: DEATH
+      condition {
+        if_defeated: true
+      }
+      children {
+        behavior {
+          enemy_skill_id: 15371
+        }
+      }
+    }
+    groups {
+      group_type: STANDARD
+      condition {
+        hp_threshold: 74
+      }
+      children {
+        behavior {
+          condition {
+            use_chance: 40
+          }
+          enemy_skill_id: 101
+        }
+      }
+      children {
+        behavior {
+          condition {
+            use_chance: 40
+          }
+          enemy_skill_id: 32
+        }
+      }
+    }
+  }

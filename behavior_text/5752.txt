@@ -1,0 +1,139 @@
+#5752 - 瞬撃の英雄士・アキレウス
+monster size: 5
+new AI: True
+start/max counter: 0
+counter increment: 0
+monster_id: 5752
+approved: False
+
+level: 1
+ type: PASSIVE
+ | (15587:73) 根性
+ | Survive attacks with 1 HP when HP > 50%
+ type: PREEMPT
+ | (15588:83) おらぁ！ + 少しはやるみたいだな + 不死の体 + 英雄の盾
+ | Change all orbs to Fire, Water, Wood, Light, Dark, Heal, Deal 200% damage + Delay active skills by 10 turns + Voids status ailments for 999 turns + Reduce damage from all sources by 75% for 5 turns
+ group:
+ | group:
+   | group:
+   | condition: execute repeatedly, turn 1 of 3
+     | (15621:83) 覚悟はいいか？ + 俺の動きについてこい + ぶっとばしてやるぜ！
+     | Rcv 50% for 3 turns + Absorb combo <= 6 damage for 3 turns + Increase damage to 120% for the next 2 turns, Deal 100% damage
+   | group:
+   | condition: execute repeatedly, turn 2 of 3
+     | condition: 33% chance
+     | (15605:83) カラーズレイン + リストレイントアタック
+     | Spawn random 2 Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison orbs + Lock 15 random Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs, Deal 105% damage
+     | condition: 33% chance
+     | (15608:83) ブラインドアウト + シールドブロー
+     | Blind random 5~10 orbs for 2 turns + Delay active skills by 1~2 turns, Deal 100% damage
+     | condition: 34% chance
+     | (15611:83) スイフトストライク + ウィンドエッジ
+     | Player -25% HP + Deal 100% damage (5 hits, 20% each)
+ | group:
+ | condition: hp <= 74
+   | group:
+   | condition: execute repeatedly, turn 1 of 3
+     | (15622:83) 覚悟はいいか？ + 俺の動きについてこい + ぶっとばしてやるぜ！
+     | No skyfall for 3 turns + Absorb combo <= 5 damage for 3 turns + Increase damage to 150% for the next 2 turns, Deal 100% damage
+   | group:
+   | condition: execute repeatedly, turn 2 of 3
+     | condition: 33% chance
+     | (15605:83) カラーズレイン + リストレイントアタック
+     | Spawn random 2 Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison orbs + Lock 15 random Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs, Deal 105% damage
+     | condition: 33% chance
+     | (15608:83) ブラインドアウト + シールドブロー
+     | Blind random 5~10 orbs for 2 turns + Delay active skills by 1~2 turns, Deal 100% damage
+     | condition: 34% chance
+     | (15611:83) スイフトストライク + ウィンドエッジ
+     | Player -25% HP + Deal 100% damage (5 hits, 20% each)
+ | group:
+ | condition: hp <= 49
+   | group:
+   | condition: execute repeatedly, turn 1 of 3
+     | (15623:83) 覚悟はいいか？ + 俺の動きについてこい + ぶっとばしてやるぜ！
+     | Movetime 50% for 3 turns + Absorb combo <= 4 damage for 3 turns + Increase damage to 200% for the next 2 turns, Deal 100% damage
+   | group:
+   | condition: execute repeatedly, turn 2 of 3
+     | condition: 33% chance
+     | (15605:83) カラーズレイン + リストレイントアタック
+     | Spawn random 2 Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison orbs + Lock 15 random Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs, Deal 105% damage
+     | condition: 33% chance
+     | (15608:83) ブラインドアウト + シールドブロー
+     | Blind random 5~10 orbs for 2 turns + Delay active skills by 1~2 turns, Deal 100% damage
+     | condition: 34% chance
+     | (15611:83) スイフトストライク + ウィンドエッジ
+     | Player -25% HP + Deal 100% damage (5 hits, 20% each)
+ | group:
+ | condition: hp <= 9
+   | (15614:83) 風向きが変わった + ディストラクトファンクション
+   | Change own attribute to random one of Fire, Water, Wood, Light, Dark + Deal 1000% damage (10 hits, 100% each)
+ | group:
+   | (15625:83) 今のは効いたぜ + 準備はいいか？ + 本気で行くぜ！
+   | Enemy recover 75% hp + Absorb combo <= 6 damage for 999 turns + Increase damage to 200% for the next 2 turns, Deal 100% damage
+
+level: 6
+ type: PASSIVE
+ | (15587:73) 根性
+ | Survive attacks with 1 HP when HP > 50%
+ type: PREEMPT
+ | (15588:83) おらぁ！ + 少しはやるみたいだな + 不死の体 + 英雄の盾
+ | Change all orbs to Fire, Water, Wood, Light, Dark, Heal, Deal 200% damage + Delay active skills by 10 turns + Voids status ailments for 999 turns + Reduce damage from all sources by 75% for 5 turns
+ group:
+ | group:
+   | group:
+   | condition: execute repeatedly, turn 1 of 3
+     | (15593:83) 覚悟はいいか？ + 俺の動きについてこい + ぶっとばしてやるぜ！
+     | Rcv 50% for 3 turns + Absorb combo <= 7 damage for 3 turns + Increase damage to 120% for the next 2 turns, Deal 100% damage
+   | group:
+   | condition: execute repeatedly, turn 2 of 3
+     | condition: 33% chance
+     | (15605:83) カラーズレイン + リストレイントアタック
+     | Spawn random 2 Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison orbs + Lock 15 random Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs, Deal 105% damage
+     | condition: 33% chance
+     | (15608:83) ブラインドアウト + シールドブロー
+     | Blind random 5~10 orbs for 2 turns + Delay active skills by 1~2 turns, Deal 100% damage
+     | condition: 34% chance
+     | (15611:83) スイフトストライク + ウィンドエッジ
+     | Player -25% HP + Deal 100% damage (5 hits, 20% each)
+ | group:
+ | condition: hp <= 74
+   | group:
+   | condition: execute repeatedly, turn 1 of 3
+     | (15597:83) 覚悟はいいか？ + 俺の動きについてこい + ぶっとばしてやるぜ！
+     | No skyfall for 3 turns + Absorb combo <= 6 damage for 3 turns + Increase damage to 150% for the next 2 turns, Deal 100% damage
+   | group:
+   | condition: execute repeatedly, turn 2 of 3
+     | condition: 33% chance
+     | (15605:83) カラーズレイン + リストレイントアタック
+     | Spawn random 2 Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison orbs + Lock 15 random Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs, Deal 105% damage
+     | condition: 33% chance
+     | (15608:83) ブラインドアウト + シールドブロー
+     | Blind random 5~10 orbs for 2 turns + Delay active skills by 1~2 turns, Deal 100% damage
+     | condition: 34% chance
+     | (15611:83) スイフトストライク + ウィンドエッジ
+     | Player -25% HP + Deal 100% damage (5 hits, 20% each)
+ | group:
+ | condition: hp <= 49
+   | group:
+   | condition: execute repeatedly, turn 1 of 3
+     | (15601:83) 覚悟はいいか？ + 俺の動きについてこい + ぶっとばしてやるぜ！
+     | Movetime 50% for 3 turns + Absorb combo <= 5 damage for 3 turns + Increase damage to 200% for the next 2 turns, Deal 100% damage
+   | group:
+   | condition: execute repeatedly, turn 2 of 3
+     | condition: 33% chance
+     | (15605:83) カラーズレイン + リストレイントアタック
+     | Spawn random 2 Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison orbs + Lock 15 random Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs, Deal 105% damage
+     | condition: 33% chance
+     | (15608:83) ブラインドアウト + シールドブロー
+     | Blind random 5~10 orbs for 2 turns + Delay active skills by 1~2 turns, Deal 100% damage
+     | condition: 34% chance
+     | (15611:83) スイフトストライク + ウィンドエッジ
+     | Player -25% HP + Deal 100% damage (5 hits, 20% each)
+ | group:
+ | condition: hp <= 9
+   | (15614:83) 風向きが変わった + ディストラクトファンクション
+   | Change own attribute to random one of Fire, Water, Wood, Light, Dark + Deal 1000% damage (10 hits, 100% each)
+ | group:
+   | (15617:83) 今のは効いたぜ + 準備はいいか？ + 本気で行くぜ！
+   | Enemy recover 75% hp + Absorb combo <= 7 damage for 3 turns + Increase damage to 200% for the next 2 turns, Deal 100% damage

@@ -1,0 +1,28 @@
+#201086 - ブルードラゴンフルーツ
+monster size: 3
+new AI: False
+start/max counter: 1
+counter increment: 0
+monster_id: 201086
+approved: False
+
+level: 1
+ type: PREEMPT
+ | (205:20) 豊穣の守り
+ | Voids status ailments for 999 turns
+ group:
+ | group:
+   | condition: 50% chance
+   | (808:48) ブルーフルーツ
+   | Change Random to Water, Deal 100% damage
+   | (812:15) ガブガブ！
+   | Deal 160% damage (2 hits, 80% each)
+ | group:
+ | condition: turn 1, hp <= 49
+   | (809:14) スキルバインドウィップ
+   | Bind active skills for 5 turns
+   | condition: 50% chance
+   | (808:48) ブルーフルーツ
+   | Change Random to Water, Deal 100% damage
+   | (812:15) ガブガブ！
+   | Deal 160% damage (2 hits, 80% each)

@@ -1,0 +1,34 @@
+#3598 - Dark Star Crusher Machine, Despharion
+monster size: 5
+new AI: True
+start/max counter: 1
+counter increment: 1
+monster_id: 3598
+approved: False
+
+level: 1
+ type: PASSIVE
+ | (15288:73) 根性
+ | Survive attacks with 1 HP when HP > 50%
+ | (15289:72) 光半減
+ | Reduce damage from Light by 50%
+ type: PREEMPT
+ | (15290:83) 刻め、デスファリオンという名を + エテルニタムーロ + インフェルノアーラ
+ | Voids status ailments for 999 turns + Reduce damage from all sources by 75% for 99 turns + Absorb damage >= 60000000 damage for 999 turns
+ group:
+ | group:
+ | condition: when hp is full
+   | (15294:83) ディスペラツィオーネ + アヴィドヴィゴーレ
+   | Delay active skills by 99 turns + Deal 300% damage (3 hits, 100% each)
+ | group:
+ | condition: hp <= 99
+   | condition: 50% chance
+   | (15298:97) オスクリタヴィヴァーチェ
+   | Blind random 10 orbs for 2 turns, Deal 100% damage
+   | condition: 50% chance
+   | (15300:102) エスプロジオーネテンペスタ
+   | Spawn random 10 Bomb orbs, Deal 96% damage
+ | group:
+ | condition: hp <= 49
+   | (15301:83) ディアーヴォロサングエ + インヌメレーヴォレモルテ
+   | Voids player buff effects + Deal 1000% damage (10 hits, 100% each)

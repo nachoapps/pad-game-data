@@ -1,0 +1,60 @@
+#103597 - 裏冥翼機・デモニアス
+monster size: 5
+new AI: True
+start/max counter: 2
+counter increment: 1
+monster_id: 103597
+approved: False
+
+level: 1
+ type: PASSIVE
+ | (6677:72) ロボ光半減
+ | Reduce damage from Light by 50%
+ | (6680:73) ロボ根性
+ | Survive attacks with 1 HP when HP > 50%
+ type: PREEMPT
+ | (15308:83) ヘルズアーマー + デモンフレア + カオスフィールド + ダークネスウェーブ
+ | Voids status ailments for 999 turns + Spawn locked Bomb orbs in the specified positions + Locked random skyfall +100% for 1 turns + Player -100% HP
+ type: DEATH
+ condition: when defeated
+ | (15309:69) ＿デモニアス変身
+ | Show message: 天空よりパーツが現れた|デモニアスとパーツが合体していく
+ group:
+ | group:
+   | group:
+   | condition: turn 1
+     | (6664:101) エナジーレイ
+     | Fix orb movement starting point to random position on the board, Deal 200% damage
+   | group:
+     | condition: 15% chance
+     | (6666:39) ブラックメタルグレア
+     | Movetime -2s for 2 turns, Deal 130% damage
+     | condition: 15% chance
+     | (6667:89) サプレスパルス
+     | Delay active skills by 2 turns, Deal 130% damage
+     | condition: 70% chance
+     | (6665:102) イービルボム
+     | Spawn random 3 Bomb orbs, Deal 130% damage
+ | group:
+ | condition: hp <= 49
+   | group:
+   | condition: turn 2
+     | (6670:83) オーディールディメンション + ジャミング
+     | Absorb combo <= 5 damage for 999 turns + Jammer skyfall +20% for 10 turns
+   | group:
+     | condition: 20% chance
+     | (6681:83) サプレスパルス + デッドウィング
+     | Delay active skills by 2 turns + Deal 210% damage (3 hits, 70% each)
+     | condition: 20% chance
+     | (6682:83) ブラックメタルグレア + パラリシスダート
+     | Movetime -2s for 2 turns + Bind 1 random cards for 3 turns, Deal 180% damage
+     | condition: 60% chance
+     | (6683:102) イービルボム
+     | Spawn random 3 Bomb orbs, Deal 160% damage
+ | group:
+ | condition: hp <= 19
+   | (6676:15) リミットブレイク
+   | Deal 6000% damage (3 hits, 2000% each)
+ | group:
+   | (6679:83) セルプラリファレイト + フォースアモク
+   | Enemy recover 51% hp + Increase damage to 200% for the next 999 turns

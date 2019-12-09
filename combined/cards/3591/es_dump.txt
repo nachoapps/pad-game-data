@@ -6,8 +6,9 @@ True : use_new_ai
 ESPreemptive(49:318) -> ESPreemptive
 Enable preempt if level 1
 
-ESNone(0:16024) -> ESNone
-nothing
+ESDamageShield(74:16024) -> 星詠のカウントダウン
+	Condition: One-time use (ai:100 rnd:0) (one-time: 1)
+Reduce damage from all sources by 75% for 10 turns
 
 ESBranchCounter(32:22) -> ESBranchCounter
 Branch on counter > 9, target rnd 11
@@ -18,23 +19,25 @@ counter + 1
 ESBranchCombo(113:6528) -> ESBranchCombo
 Branch on combo >= 6, target rnd 9
 
-ESNone(0:16028) -> ESNone
-nothing
+ESRandomSpawn(92:16028) -> 夢喰い
+	Condition: When dark, jammer, poison, mortal poison orbs are on the board (ai:100 rnd:0)
+Spawn random 3 Light orbs
 
-ESNone(0:16025) -> ESNone
-nothing
-
-ESEndPath(36:26) -> ESEndPath
-end_turn
-
-ESNone(0:16029) -> ESNone
-nothing
+ESRandomSpawn(92:16025) -> 星分け
+	Condition: When fire, water, wood, light, heal, jammer, poison, mortal poison orbs are on the board (ai:100 rnd:0)
+Spawn random 3 Dark orbs
 
 ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESNone(0:16030) -> ESNone
-nothing
+ESInactivity(66:16029) -> …チョキチョキ
+Do nothing
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESAttackMultihit(15:16030) -> 命糸裁断
+Deal 1000% damage
 
 ESEndPath(36:26) -> ESEndPath
 end_turn

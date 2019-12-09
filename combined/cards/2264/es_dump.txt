@@ -6,14 +6,19 @@ True : use_new_ai
 ESPreemptive(49:318) -> ESPreemptive
 Enable preempt if level 1
 
-ESNone(0:16008) -> ESNone
-nothing
+SkillSet:
+	Condition: One-time use (ai:100 rnd:0) (one-time: 6)
+	[0] ESAbsorbCombo(67:16009) -> この俺を打ち取れるか？
+	Absorb combo <= 3 damage for 6 turns
+	[1] ESRandomSpawn(92:16031) -> 覚悟を見せろ
+	Spawn random 6 Water, Wood, Light, Dark, Heal orbs
 
-ESNone(0:16010) -> ESNone
-nothing
+ESRandomSpawn(92:16010) -> 本気でぶつけて来いよ
+	Condition: One-time use & when Wood, Light, Dark, Jammer, Poison, Mortal Poison orbs are on the board (ai:100 rnd:0) (one-time: 1)
+Spawn random 3 Heal orbs
 
-ESNone(0:16011) -> ESNone
-nothing
+ESAttackMultihit(15:16011) -> 十文字連槍撃
+Deal 1000% damage (10 hits, 100% each)
 
 ESEndPath(36:26) -> ESEndPath
 end_turn

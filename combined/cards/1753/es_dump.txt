@@ -6,14 +6,19 @@ True : use_new_ai
 ESPreemptive(49:318) -> ESPreemptive
 Enable preempt if level 1
 
-ESNone(0:16012) -> ESNone
-nothing
+SkillSet:
+	Condition: One-time use (ai:100 rnd:0) (one-time: 5)
+	[0] ESDebuffMovetime(39:16013) -> ソロモンの鍵
+	Movetime 150% for 5 turns
+	[1] ESRandomSpawn(92:16014) -> グリモワール・エレメント
+	Spawn random 10 Fire orbs
 
-ESNone(0:16014) -> ESNone
-nothing
+ESRandomSpawn(92:16014) -> グリモワール・エレメント
+	Condition: One-time use (ai:100 rnd:0) (one-time: 1)
+Spawn random 10 Fire orbs
 
-ESNone(0:16015) -> ESNone
-nothing
+ESAttackMultihit(15:16015) -> グラウンドブレイク
+Deal 1000% damage (10 hits, 100% each)
 
 ESEndPath(36:26) -> ESEndPath
 end_turn

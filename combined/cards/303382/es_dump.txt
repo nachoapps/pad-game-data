@@ -1,0 +1,37 @@
+#303382  - 聖堂の料理魔・パイロデーモン
+True : use_new_ai
+1 : starting/max counter
+1 : counter increment
+
+ESPreemptive(49:3402) -> ESPreemptive
+Enable preempt if level 4
+
+ESBranchLevel(35:25) -> ESBranchLevel
+Branch on level > 4, target rnd 4
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 1, target rnd 8
+
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b1
+
+ESStatusShield(20:6191) -> 悪魔の料理開始だ！
+Voids status ailments for 999 turns
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESRandomSpawn(92:6187) -> レッドホットフレイム
+	Condition: One-time use & when Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs are on the board (ai:100 rnd:0) (one-time: 1)
+Spawn random 3 Fire orbs, Deal 100% damage
+
+ESRandomSpawn(92:6188) -> イービルスパイス
+	Condition: When fire, water, wood, light, dark, heal, jammer, mortal poison orbs are on the board (ai:100 rnd:0)
+Spawn random 3 Poison orbs, Deal 100% damage
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+

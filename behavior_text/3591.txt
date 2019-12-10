@@ -1,0 +1,33 @@
+#3591 - Dream Shredder Mechanical Star God, Hamal
+monster size: 5
+new AI: True
+start/max counter: 1
+counter increment: 0
+monster_id: 3591
+approved: False
+
+level: 1
+ type: PREEMPT
+ | (16029:66) …チョキチョキ
+ | Do nothing
+ | condition: when required attributes on board
+ | (16028:92) 夢喰い
+ | Spawn random 3 Light orbs
+ | condition: when required attributes on board
+ | (16025:92) 星分け
+ | Spawn random 3 Dark orbs
+ group:
+ | group:
+ | condition: turns 1-8
+   | condition: when 6 combos last turn
+   | (16029:66) …チョキチョキ
+   | Do nothing
+   | condition: when required attributes on board
+   | (16028:92) 夢喰い
+   | Spawn random 3 Light orbs
+   | condition: when required attributes on board
+   | (16025:92) 星分け
+   | Spawn random 3 Dark orbs
+ | group:
+   | (16030:15) 命糸裁断
+   | Deal 1000% damage

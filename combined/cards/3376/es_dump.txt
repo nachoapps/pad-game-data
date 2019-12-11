@@ -6,8 +6,12 @@ True : use_new_ai
 ESPreemptive(49:318) -> ESPreemptive
 Enable preempt if level 1
 
-ESNone(0:15880) -> ESNone
-nothing
+SkillSet:
+	Condition: One-time use (ai:100 rnd:0) (one-time: 2)
+	[0] ESStatusShield(20:15874) -> みんなと暖まりませんか？
+	Voids status ailments for 999 turns
+	[1] ESGravity(50:15875) -> キャットダンス
+	Player -50% HP
 
 ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 15, target rnd 7
@@ -15,17 +19,18 @@ Branch on hp < 15, target rnd 7
 ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 50, target rnd 10
 
-ESNone(0:15876) -> ESNone
-nothing
+ESAttackMultihit(15:15876) -> ジングルベール♪
+Deal 94% damage (2 hits, 47% each)
 
 ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESNone(0:15878) -> ESNone
-nothing
+ESAttackUPRemainingEnemies(17:15878) -> アースエンハンス
+	Condition: One-time use, when <= 1 enemies remain (ai:100 rnd:12) (one-time: 1)
+Increase damage to 150% for the next 3 turns
 
-ESNone(0:15879) -> ESNone
-nothing
+ESRandomSpawn(92:15879) -> スノーガイアブレイク
+Spawn random 6 Wood orbs, Deal 100% damage
 
 ESEndPath(36:26) -> ESEndPath
 end_turn
@@ -36,12 +41,12 @@ Branch on counter > 1, target rnd 5
 ESSetCounter(26:16) -> ESSetCounter
 counter + 1
 
-ESNone(0:15877) -> ESNone
-nothing
+ESDamageShield(74:15877) -> おいでネコさんたち
+Reduce damage from all sources by 30% for 3 turns
 
 ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESNone(0:15946) -> ESNone
-nothing
+ESTypeResist(118:15946) -> バランス神半減
+Reduce damage from Balanced, God by 50%
 

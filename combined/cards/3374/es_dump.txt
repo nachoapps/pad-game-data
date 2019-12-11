@@ -6,33 +6,36 @@ True : use_new_ai
 ESPreemptive(49:318) -> ESPreemptive
 Enable preempt if level 1
 
-ESNone(0:15896) -> ESNone
-nothing
+ESGravity(50:15896) -> …来ちゃだめ
+	Condition: One-time use (ai:100 rnd:0) (one-time: 2)
+Player -99% HP
 
 ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 50, target rnd 7
 
-ESNone(0:15897) -> ESNone
-nothing
+ESDamageShield(74:15897) -> あったか手袋
+	Condition: 50% chance (ai:50 rnd:0)
+Reduce damage from all sources by 50% for 1 turns, Deal 95% damage
 
-ESNone(0:15898) -> ESNone
-nothing
+ESAttackMultihit(15:15898) -> ダブルリーススイング
+Deal 100% damage (4 hits, 25% each)
 
 ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESNone(0:15899) -> ESNone
-nothing
+ESBindAwoken(88:15899) -> だめって言ったのに…
+	Condition: One-time use (ai:100 rnd:0) (one-time: 1)
+Bind awoken skills for 3 turns
 
 ESBranchHP(29:19) -> ESBranchHP
 Branch on hp > 21, target rnd 4
 
-ESNone(0:15900) -> ESNone
-nothing
+ESAttackMultihit(15:15900) -> 西方七星陣
+Deal 175% damage (7 hits, 25% each)
 
 ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESNone(0:15944) -> ESNone
-nothing
+ESTypeResist(118:15944) -> ドラゴン神半減
+Reduce damage from Dragon, God by 50%
 

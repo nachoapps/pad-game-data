@@ -6,20 +6,26 @@ True : use_new_ai
 ESPreemptive(49:318) -> ESPreemptive
 Enable preempt if level 1
 
-ESNone(0:15932) -> ESNone
-nothing
+SkillSet:
+	Condition: One-time use (ai:100 rnd:0) (one-time: 2)
+	[0] ESAbsorbCombo(67:15925) -> ちょっとお邪魔するねっ！
+	Absorb combo <= 6 damage for 10 turns
+	[1] ESOrbSealColumn(99:15926) -> キミは何が欲しいのかなっ？
+	Seal 6th column for 4 turns, Deal 100% damage
 
 ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 50, target rnd 8
 
-ESNone(0:15927) -> ESNone
-nothing
+ESDebuffMovetime(39:15927) -> ブラッククリスマス
+	Condition: One-time use (ai:100 rnd:0) (one-time: 1)
+Movetime 25% for 3 turns
 
-ESNone(0:15928) -> ESNone
-nothing
+EnemySkillUnknown(57:15928) -> 黒い雪
+	Condition: 50% chance (ai:50 rnd:0)
+No description set
 
-ESNone(0:15929) -> ESNone
-nothing
+ESAttackMultihit(15:15929) -> 悪魔のいたずら
+Deal 93% damage (3 hits, 31% each)
 
 ESEndPath(36:26) -> ESEndPath
 end_turn
@@ -30,14 +36,14 @@ Branch on counter > 1, target rnd 12
 ESSetCounter(26:16) -> ESSetCounter
 counter + 1
 
-ESNone(0:15930) -> ESNone
-nothing
+ESNoSkyfall(127:15930) -> プレゼントあげるねっ！
+No skyfall for 5 turns
 
 ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESNone(0:15931) -> ESNone
-nothing
+ESRandomSpawn(92:15931) -> スイートワード
+Spawn random 3 Fire, Heal orbs, Deal 156% damage
 
 ESEndPath(36:26) -> ESEndPath
 end_turn

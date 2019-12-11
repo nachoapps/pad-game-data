@@ -6,8 +6,12 @@ True : use_new_ai
 ESPreemptive(49:318) -> ESPreemptive
 Enable preempt if level 1
 
-ESNone(0:15941) -> ESNone
-nothing
+SkillSet:
+	Condition: One-time use (ai:100 rnd:0) (one-time: 2)
+	[0] ESStatusShield(20:15933) -> 聖祭な世界の排他的概念
+	Voids status ailments for 999 turns
+	[1] ESVoidShield(71:15934) -> 限りのない聖夜
+	Void damage >= 20000000 for 999 turns
 
 ESBranchCounter(32:22) -> ESBranchCounter
 Branch on counter > 1, target rnd 13
@@ -18,11 +22,12 @@ Branch on hp < 15, target rnd 9
 ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 50, target rnd 15
 
-ESNone(0:15936) -> ESNone
-nothing
+ESAttackMultihit(15:15936) -> ベツレヘムの星
+	Condition: 50% chance (ai:50 rnd:0)
+Deal 104% damage (2 hits, 52% each)
 
-ESNone(0:15937) -> ESNone
-nothing
+ESRowSpawnMulti(79:15937) -> 聖典の媒介
+Change 1st row to Fire orbs, Deal 95% damage
 
 ESEndPath(36:26) -> ESEndPath
 end_turn
@@ -33,33 +38,38 @@ Branch on counter > 1, target rnd 13
 ESSetCounter(26:16) -> ESSetCounter
 counter + 1
 
-ESNone(0:15942) -> ESNone
-nothing
+SkillSet:
+	[0] ESRecoverEnemy(86:15938) -> 全にして一なる者
+	Enemy recover 50% hp
+	[1] ESAttackUPRemainingEnemies(17:15939) -> 一にして全なる者
+	Increase damage to 500% for the next 1 turns
 
 ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESNone(0:15940) -> ESNone
-nothing
+ESBoardChangeAttackBits(85:15940) -> 溢れ出す灯火
+Change all orbs to Fire, Heal, Jammer, Poison, Deal 200% damage
 
 ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESNone(0:15935) -> ESNone
-nothing
+ESBindRandomSub(65:15935) -> 聖音禁戒せし真名
+	Condition: One-time use (ai:100 rnd:0) (one-time: 1)
+Bind 4 random subs for 3 turns
 
-ESNone(0:15936) -> ESNone
-nothing
+ESAttackMultihit(15:15936) -> ベツレヘムの星
+	Condition: 50% chance (ai:50 rnd:0)
+Deal 104% damage (2 hits, 52% each)
 
-ESNone(0:15937) -> ESNone
-nothing
+ESRowSpawnMulti(79:15937) -> 聖典の媒介
+Change 1st row to Fire orbs, Deal 95% damage
 
 ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESNone(0:15943) -> ESNone
-nothing
+ESResolve(73:15943) -> 根性
+Survive attacks with 1 HP when HP > 50%
 
-ESNone(0:15951) -> ESNone
-nothing
+ESTypeResist(118:15951) -> ドラゴン悪魔半減
+Reduce damage from Dragon, Devil by 50%
 

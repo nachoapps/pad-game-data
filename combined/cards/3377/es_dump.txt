@@ -6,20 +6,26 @@ True : use_new_ai
 ESPreemptive(49:318) -> ESPreemptive
 Enable preempt if level 1
 
-ESNone(0:15888) -> ESNone
-nothing
+SkillSet:
+	Condition: One-time use (ai:100 rnd:0) (one-time: 2)
+	[0] ESDebuffMovetime(39:15881) -> しーっ
+	Movetime -2s for 5 turns
+	[1] ESBlind(5:15882) -> 良い子は静かに寝ててね♪
+	Blind all orbs on the board
 
 ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 30, target rnd 8
 
-ESNone(0:15883) -> ESNone
-nothing
+ESSpinnersRandom(109:15883) -> 聖心法の秘伝
+	Condition: One-time use (ai:100 rnd:0) (one-time: 1)
+Random 3 orbs change every 1.0s for 4 turns
 
-ESNone(0:15885) -> ESNone
-nothing
+ESOrbChangeAttackBits(108:15885) -> 贈物変化の術
+	Condition: 50% chance (ai:50 rnd:0)
+Change Wood to Fire, Deal 90% damage
 
-ESNone(0:15884) -> ESNone
-nothing
+ESAttackMultihit(15:15884) -> 騒いじゃいけないよっ
+Deal 100% damage
 
 ESEndPath(36:26) -> ESEndPath
 end_turn
@@ -30,18 +36,18 @@ Branch on counter > 1, target rnd 12
 ESSetCounter(26:16) -> ESSetCounter
 counter + 1
 
-ESNone(0:15886) -> ESNone
-nothing
+ESBindAwoken(88:15886) -> 起こしちゃダメだよっ
+Bind awoken skills for 1 turns
 
 ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESNone(0:15887) -> ESNone
-nothing
+ESRowSpawnMulti(79:15887) -> 聖の炎舞
+Change 1st row to Light orbs, 5th row to Fire orbs, Deal 190% damage
 
 ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESNone(0:15949) -> ESNone
-nothing
+ESTypeResist(118:15949) -> 回復悪魔半減
+Reduce damage from Healer, Devil by 50%
 

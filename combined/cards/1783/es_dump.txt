@@ -6,8 +6,9 @@ True : use_new_ai
 ESPreemptive(49:318) -> ESPreemptive
 Enable preempt if level 1
 
-ESNone(0:15901) -> ESNone
-nothing
+ESDamageShield(74:15901) -> みなさん、いい子にしてますか？
+	Condition: One-time use (ai:100 rnd:0) (one-time: 2)
+Reduce damage from all sources by 50% for 5 turns
 
 ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 15, target rnd 12
@@ -15,11 +16,12 @@ Branch on hp < 15, target rnd 12
 ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 50, target rnd 8
 
-ESNone(0:15902) -> ESNone
-nothing
+ESBombRandomSpawn(102:15902) -> はい！プレゼントです！
+	Condition: 50% chance (ai:50 rnd:0)
+Spawn random 3 Bomb orbs, Deal 90% damage
 
-ESNone(0:15903) -> ESNone
-nothing
+ESFixedStart(101:15903) -> 次はきみです！
+Fix orb movement starting point to random position on the board, Deal 90% damage
 
 ESEndPath(36:26) -> ESEndPath
 end_turn
@@ -30,21 +32,22 @@ Branch on counter > 1, target rnd 5
 ESSetCounter(26:16) -> ESSetCounter
 counter + 1
 
-ESNone(0:15904) -> ESNone
-nothing
+ESAbsorbAttribute(53:15904) -> ふぅ、少し休憩です…
+Absorb Water, Dark damage for 5 turns
 
 ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESNone(0:15905) -> ESNone
-nothing
+ESAttackUPRemainingEnemies(17:15905) -> 聖夜の舞
+	Condition: One-time use, when <= 1 enemies remain (ai:100 rnd:0) (one-time: 1)
+Increase damage to 150% for the next 1 turns
 
-ESNone(0:15906) -> ESNone
-nothing
+ESAttackMultihit(15:15906) -> 四神乱舞
+Deal 140% damage (4 hits, 35% each)
 
 ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESNone(0:15952) -> ESNone
-nothing
+ESTypeResist(118:15952) -> 回復神半減
+Reduce damage from Healer, God by 50%
 

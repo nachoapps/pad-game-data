@@ -1,0 +1,21 @@
+#203382 - 聖堂の料理魔・パイロデーモン
+monster size: 4
+new AI: True
+start/max counter: 1
+counter increment: 1
+monster_id: 203382
+approved: False
+
+level: 4
+ type: PREEMPT
+ | (6191:20) 悪魔の料理開始だ！
+ | Voids status ailments for 999 turns
+ group:
+ | group:
+ | condition: when required attributes on board, execute repeatedly, turn 1 of 2
+   | (6187:92) レッドホットフレイム
+   | Spawn random 3 Fire orbs, Deal 100% damage
+ | group:
+ | condition: when required attributes on board, execute repeatedly, turn 2 of 2
+   | (6188:92) イービルスパイス
+   | Spawn random 3 Poison orbs, Deal 100% damage

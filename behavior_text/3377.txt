@@ -1,0 +1,33 @@
+#3377 - Holy Ritual Ninja Princess, Hatsume
+monster size: 5
+new AI: True
+start/max counter: 3
+counter increment: 0
+monster_id: 3377
+approved: False
+
+level: 1
+ type: PASSIVE
+ | (15949:118) 回復悪魔半減
+ | Reduce damage from Healer, Devil by 50%
+ type: PREEMPT
+ | (15885:108) 贈物変化の術
+ | Change Wood to Fire, Deal 90% damage
+ | (15884:15) 騒いじゃいけないよっ
+ | Deal 100% damage
+ group:
+ | group:
+   | condition: 50% chance
+   | (15885:108) 贈物変化の術
+   | Change Wood to Fire, Deal 90% damage
+   | (15884:15) 騒いじゃいけないよっ
+   | Deal 100% damage
+ | group:
+ | condition: hp <= 29
+   | group:
+   | condition: turn 1
+     | (15886:88) 起こしちゃダメだよっ
+     | Bind awoken skills for 1 turns
+   | group:
+     | (15887:79) 聖の炎舞
+     | Change 1st row to Light orbs, 5th row to Fire orbs, Deal 190% damage

@@ -1,0 +1,29 @@
+#4067 - Holy Ritual Love Deity, Venus
+monster size: 5
+new AI: True
+start/max counter: 3
+counter increment: 0
+monster_id: 4067
+approved: False
+
+level: 1
+ type: PASSIVE
+ | (15946:118) バランス神半減
+ | Reduce damage from Balanced, God by 50%
+ type: PREEMPT
+ | condition: when required attributes on board
+ | (15891:92) キューピッドソング
+ | Spawn random 3 Jammer orbs, Deal 100% damage
+ | (15893:63) ビューティフル・ワールド
+ | Bind 2 random cards for 1~2 turns, Deal 90% damage
+ group:
+ | group:
+   | condition: 50% chance, when required attributes on board
+   | (15891:92) キューピッドソング
+   | Spawn random 3 Jammer orbs, Deal 100% damage
+   | (15893:63) ビューティフル・ワールド
+   | Bind 2 random cards for 1~2 turns, Deal 90% damage
+ | group:
+ | condition: hp <= 49
+   | (15894:63) キャロル・ワールド
+   | Bind 5 random cards for 1~2 turns, Deal 200% damage

@@ -1,0 +1,147 @@
+  monster_id: 3375
+  levels {
+    level: 1
+    groups {
+      group_type: PASSIVE
+      children {
+        behavior {
+          enemy_skill_id: 15945
+        }
+      }
+    }
+    groups {
+      group_type: PREEMPT
+      children {
+        behavior {
+          enemy_skill_id: 15907
+        }
+      }
+    }
+    groups {
+      group_type: STANDARD
+      children {
+        group {
+          group_type: STANDARD
+          condition {
+            hp_threshold: 100
+          }
+          children {
+            group {
+              condition {
+                use_chance: 100
+                trigger_monsters: 1424
+                trigger_monsters: 1425
+                trigger_monsters: 1241
+                trigger_monsters: 1242
+                trigger_monsters: 1243
+                trigger_monsters: 1244
+                trigger_turn: 1
+              }
+              children {
+                behavior {
+                  enemy_skill_id: 15914
+                }
+              }
+            }
+          }
+          children {
+            group {
+              children {
+                behavior {
+                  condition {
+                    use_chance: 50
+                  }
+                  enemy_skill_id: 15912
+                }
+              }
+              children {
+                behavior {
+                  condition {
+                    use_chance: 100
+                  }
+                  enemy_skill_id: 15911
+                }
+              }
+            }
+          }
+        }
+      }
+      children {
+        group {
+          group_type: STANDARD
+          condition {
+            hp_threshold: 49
+            trigger_turn: 1
+          }
+          children {
+            behavior {
+              condition {
+                use_chance: 100
+                trigger_monsters: 1424
+                trigger_monsters: 1425
+                trigger_monsters: 1241
+                trigger_monsters: 1242
+                trigger_monsters: 1243
+                trigger_monsters: 1244
+              }
+              enemy_skill_id: 15914
+            }
+          }
+          children {
+            behavior {
+              condition {
+                use_chance: 100
+              }
+              enemy_skill_id: 15915
+            }
+          }
+        }
+      }
+      children {
+        group {
+          group_type: STANDARD
+          condition {
+            hp_threshold: 24
+          }
+          children {
+            group {
+              condition {
+                use_chance: 100
+                repeats_every: 3
+                trigger_turn: 1
+              }
+              children {
+                behavior {
+                  enemy_skill_id: 15916
+                }
+              }
+            }
+          }
+          children {
+            group {
+              condition {
+                repeats_every: 3
+                trigger_turn: 2
+              }
+              children {
+                behavior {
+                  condition {
+                    use_chance: 50
+                  }
+                  enemy_skill_id: 15912
+                }
+              }
+              children {
+                behavior {
+                  condition {
+                    use_chance: 100
+                  }
+                  enemy_skill_id: 15911
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }

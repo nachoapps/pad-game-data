@@ -1,0 +1,47 @@
+#3375 - Dragon Hero of the Holy Feast, Liu Bei
+monster size: 5
+new AI: True
+start/max counter: 3
+counter increment: 1
+monster_id: 3375
+approved: False
+
+level: 1
+ type: PASSIVE
+ | (15945:118) ドラゴン攻撃半減
+ | Reduce damage from Dragon, Attacker by 50%
+ type: PREEMPT
+ | (15907:68) 燃えるぜ！！
+ | Fire skyfall +15% for 10 turns
+ group:
+ | group:
+   | group:
+   | condition: when 1424, 1425, 1241, 1242, 1243, 1244 on team, turn 1
+     | (15914:55) 我が弟よ！燃えているか！
+     | Player recover 100% hp
+   | group:
+     | condition: 50% chance
+     | (15912:48) 緑火変
+     | Change Wood to Fire, Deal 85% damage
+     | (15911:15) 炎龍剣
+     | Deal 90% damage
+ | group:
+ | condition: turn 1, hp <= 49
+   | condition: when 1424, 1425, 1241, 1242, 1243, 1244 on team
+   | (15914:55) 我が弟よ！燃えているか！
+   | Player recover 100% hp
+   | (15915:62) 草塵炎舞
+   | Blind all orbs on the board, Deal 95% damage
+ | group:
+ | condition: hp <= 24
+   | group:
+   | condition: execute repeatedly, turn 1 of 3
+     | (15916:39) 灼宴冬華
+     | Movetime -2s for 3 turns, Deal 155% damage
+   | group:
+   | condition: execute repeatedly, turn 2 of 3
+     | condition: 50% chance
+     | (15912:48) 緑火変
+     | Change Wood to Fire, Deal 85% damage
+     | (15911:15) 炎龍剣
+     | Deal 90% damage

@@ -1,0 +1,35 @@
+#4946 - Yog-Sothoth, the Holy Night One
+monster size: 5
+new AI: True
+start/max counter: 3
+counter increment: 0
+monster_id: 4946
+approved: False
+
+level: 1
+ type: PASSIVE
+ | (15943:73) 根性
+ | Survive attacks with 1 HP when HP > 50%
+ | (15951:118) ドラゴン悪魔半減
+ | Reduce damage from Dragon, Devil by 50%
+ type: PREEMPT
+ | (15936:15) ベツレヘムの星
+ | Deal 104% damage (2 hits, 52% each)
+ | (15937:79) 聖典の媒介
+ | Change 1st row to Fire orbs, Deal 95% damage
+ group:
+ | group:
+   | condition: 50% chance
+   | (15936:15) ベツレヘムの星
+   | Deal 104% damage (2 hits, 52% each)
+   | (15937:79) 聖典の媒介
+   | Change 1st row to Fire orbs, Deal 95% damage
+ | group:
+ | condition: hp <= 14
+   | group:
+   | condition: turn 1
+     | (15942:83) 全にして一なる者 + 一にして全なる者
+     | Enemy recover 50% hp + Increase damage to 500% for the next 1 turns
+   | group:
+     | (15940:85) 溢れ出す灯火
+     | Change all orbs to Fire, Heal, Jammer, Poison, Deal 200% damage

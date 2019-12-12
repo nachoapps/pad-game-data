@@ -1,0 +1,32 @@
+#4948 - Holy Ritual Psychopomp Princess, Grida
+monster size: 5
+new AI: True
+start/max counter: 3
+counter increment: 0
+monster_id: 4948
+approved: False
+
+level: 1
+ type: PASSIVE
+ | (15953:118) 悪魔半減
+ | Reduce damage from Devil by 50%
+ type: PREEMPT
+ | (15919:15) 楽しみだ！
+ | Deal 89% damage
+ group:
+ | group:
+   | (15919:15) 楽しみだ！
+   | Deal 89% damage
+ | group:
+ | condition: turn 1, hp <= 49
+   | (15921:74) 他に何をくれるのかなぁ?
+   | Reduce damage from all sources by 75% for 3 turns
+ | group:
+ | condition: hp <= 14
+   | group:
+   | condition: when 1 enemies remain, turn 1
+     | (15922:17) そろそろ終りにしてやろう！
+     | Increase damage to 150% for the next 3 turns
+   | group:
+     | (15923:85) クリスマスゲイザー
+     | Change all orbs to Dark, Heal, Jammer, Deal 148% damage

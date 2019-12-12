@@ -1,0 +1,177 @@
+#204722  - デュランダルフ
+True : use_new_ai
+11 : starting/max counter
+0 : counter increment
+
+ESPreemptive(49:3402) -> ESPreemptive
+Enable preempt if level 4
+
+ESBranchLevel(35:25) -> ESBranchLevel
+Branch on level > 4, target rnd 4
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 1, target rnd 8
+
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b1
+
+SkillSet:
+	[0] ESRandomSpawn(92:10667) -> マギアポイントが回復した
+	Spawn random 3 Wood orbs
+	[1] ESStatusShield(20:10668) -> 浄化の守り
+	Voids status ailments for 999 turns
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESBranchCounter(32:22) -> ESBranchCounter
+Branch on counter > 9, target rnd 40
+
+ESBranchHP(28:18) -> ESBranchHP
+Branch on hp < 25, target rnd 40
+
+ESBranchHP(28:18) -> ESBranchHP
+Branch on hp < 50, target rnd 36
+
+ESBranchHP(28:18) -> ESBranchHP
+Branch on hp < 75, target rnd 32
+
+ESSetCounter(26:16) -> ESSetCounter
+counter + 1
+
+ESSetCounter(26:16) -> ESSetCounter
+counter + 1
+
+ESSetCounter(26:16) -> ESSetCounter
+counter + 1
+
+ESBranchCounter(31:21) -> ESBranchCounter
+Branch on counter = 7, target rnd 25
+
+ESBranchCounter(31:21) -> ESBranchCounter
+Branch on counter = 6, target rnd 23
+
+ESSetCounter(27:17) -> ESSetCounter
+counter - 1
+
+SkillSet:
+	Condition: One-time use (ai:25 rnd:0) (one-time: 2)
+	[0] ESRandomSpawn(92:10667) -> マギアポイントが回復した
+	Spawn random 3 Wood orbs
+	[1] ESColumnSpawnMulti(77:10669) -> ライトニング
+	Change 4th column to Light orbs, Deal 80% damage
+
+SkillSet:
+	Condition: One-time use (ai:33 rnd:0) (one-time: 2)
+	[0] ESRandomSpawn(92:10667) -> マギアポイントが回復した
+	Spawn random 3 Wood orbs
+	[1] ESAttackMultihit(15:10670) -> アルテミスの矢
+	Deal 120% damage
+
+ESSetCounter(27:17) -> ESSetCounter
+counter - 1
+
+SkillSet:
+	Condition: One-time use (ai:50 rnd:0) (one-time: 2)
+	[0] ESRandomSpawn(92:10667) -> マギアポイントが回復した
+	Spawn random 3 Wood orbs
+	[1] ESAttackMultihit(15:10671) -> ヘラの狂気
+	Deal 60%~120% damage (2~4 hits, 30% each)
+
+SkillSet:
+	Condition: One-time use (ai:100 rnd:0) (one-time: 2)
+	[0] ESRandomSpawn(92:10667) -> マギアポイントが回復した
+	Spawn random 3 Wood orbs
+	[1] ESBindAttack(63:10672) -> ゴルゴンの眼差し
+	Bind 1 random subs for 2 turns, Deal 100% damage
+
+ESSetCounter(25:15) -> ESSetCounter
+counter = 1
+
+SkillSet:
+	Condition: One-time use (ai:100 rnd:0) (one-time: 2)
+	[0] ESRandomSpawn(92:10667) -> マギアポイントが回復した
+	Spawn random 3 Wood orbs
+	[1] ESSkillDelay(89:10673) -> 牛泥棒
+	Delay active skills by 2 turns
+
+ESSetCounter(25:15) -> ESSetCounter
+counter = 1
+
+SkillSet:
+	Condition: One-time use (ai:100 rnd:0) (one-time: 2)
+	[0] ESRandomSpawn(92:10667) -> マギアポイントが回復した
+	Spawn random 3 Wood orbs
+	[1] ESAttackMultihit(15:10674) -> 有翼の靴タラリア
+	Deal 150% damage (2 hits, 75% each)
+
+ESSetCounter(25:15) -> ESSetCounter
+counter = 9
+
+SkillSet:
+	Condition: One-time use (ai:100 rnd:0) (one-time: 1)
+	[0] ESRandomSpawn(92:10667) -> マギアポイントが回復した
+	Spawn random 3 Wood orbs
+	[1] ESAttackUPRemainingEnemies(17:10678) -> ペルセポネの帰還
+	Increase damage to 200% for the next 1 turns
+
+ESSetCounter(25:15) -> ESSetCounter
+counter = 10
+
+SkillSet:
+	[0] ESRandomSpawn(92:10667) -> マギアポイントが回復した
+	Spawn random 3 Wood orbs
+	[1] ESAttackMultihit(15:10679) -> オーバードライブ
+	Deal 150% damage
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 2, target rnd 12
+
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b11
+
+SkillSet:
+	[0] ESRandomSpawn(92:10667) -> マギアポイントが回復した
+	Spawn random 3 Wood orbs
+	[1] ESSkyfall(68:10675) -> ヒュドラの毒
+	Poison skyfall +20% for 3 turns
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 4, target rnd 12
+
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b111
+
+SkillSet:
+	[0] ESRandomSpawn(92:10667) -> マギアポイントが回復した
+	Spawn random 3 Wood orbs
+	[1] ESDamageShield(74:10676) -> アイギスの盾
+	Reduce damage from all sources by 50% for 3 turns
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESBranchCounter(31:21) -> ESBranchCounter
+Branch on counter = 9, target rnd 29
+
+ESSetCounter(25:15) -> ESSetCounter
+counter = 9
+
+SkillSet:
+	[0] ESRandomSpawn(92:10667) -> マギアポイントが回復した
+	Spawn random 3 Wood orbs
+	[1] ESAttackUPRemainingEnemies(17:10677) -> マギア活性化
+	Increase damage to 200% for the next 1 turns
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+

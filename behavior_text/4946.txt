@@ -8,28 +8,30 @@ approved: False
 
 level: 1
  type: PASSIVE
- | (15943:73) 根性
+ | (15943:73) Resolve
  | Survive attacks with 1 HP when HP > 50%
- | (15951:118) ドラゴン悪魔半減
+ | (15951:118) Dragon Devil Halved
  | Reduce damage from Dragon, Devil by 50%
  type: PREEMPT
- | (15936:15) ベツレヘムの星
- | Deal 104% damage (2 hits, 52% each)
- | (15937:79) 聖典の媒介
- | Change 1st row to Fire orbs, Deal 95% damage
+ | (15941:83) Concept of Ritual Worlds + Interminate Holy Night
+ | Voids status ailments for 999 turns + Void damage >= 20000000 for 999 turns
  group:
  | group:
    | condition: 50% chance
-   | (15936:15) ベツレヘムの星
+   | (15936:15) The Star of Bethlehem
    | Deal 104% damage (2 hits, 52% each)
-   | (15937:79) 聖典の媒介
+   | (15937:79) Intermediary of the Holy Book
    | Change 1st row to Fire orbs, Deal 95% damage
+ | group:
+ | condition: turn 1, hp <= 49
+   | (15935:65) The Holy Being Who Shall Not Be Named
+   | Bind 4 random subs for 3 turns
  | group:
  | condition: hp <= 14
    | group:
    | condition: turn 1
-     | (15942:83) 全にして一なる者 + 一にして全なる者
+     | (15942:83) The All-in-One + The One-in-All
      | Enemy recover 50% hp + Increase damage to 500% for the next 1 turns
    | group:
-     | (15940:85) 溢れ出す灯火
+     | (15940:85) Overflowing Lights
      | Change all orbs to Fire, Heal, Jammer, Poison, Deal 200% damage

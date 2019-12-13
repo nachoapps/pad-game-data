@@ -8,23 +8,26 @@ approved: False
 
 level: 1
  type: PREEMPT
- | (15928:57) 黒い雪
- | No description set
- | (15929:15) 悪魔のいたずら
- | Deal 93% damage (3 hits, 31% each)
+ | (15932:83) Oh don't mind me! + What do you want?
+ | Absorb combo <= 6 damage for 10 turns + Seal 6th column for 4 turns, Deal 100% damage
  group:
  | group:
-   | condition: 50% chance
-   | (15928:57) 黒い雪
-   | No description set
-   | (15929:15) 悪魔のいたずら
-   | Deal 93% damage (3 hits, 31% each)
+   | group:
+   | condition: turn 1
+     | (15927:39) Black Christmas
+     | Movetime 25% for 3 turns
+   | group:
+     | condition: 50% chance
+     | (15928:57) Dark Snow
+     | No description set
+     | (15929:15) Devil's Mischief
+     | Deal 93% damage (3 hits, 31% each)
  | group:
  | condition: hp <= 49
    | group:
    | condition: turn 1
-     | (15930:127) プレゼントあげるねっ！
+     | (15930:127) Here's a present for you!
      | No skyfall for 5 turns
    | group:
-     | (15931:92) スイートワード
+     | (15931:92) Sweet Word
      | Spawn random 3 Fire, Heal orbs, Deal 156% damage

@@ -8,21 +8,33 @@ approved: False
 
 level: 1
  type: PASSIVE
- | (15944:118) ドラゴン神半減
+ | (15944:118) Dragon God Halved
  | Reduce damage from Dragon, God by 50%
  type: PREEMPT
- | (15897:74) あったか手袋
- | Reduce damage from all sources by 50% for 1 turns, Deal 95% damage
- | (15898:15) ダブルリーススイング
- | Deal 100% damage (4 hits, 25% each)
+ | (15896:50) Don't come...
+ | Player -99% HP
  group:
  | group:
    | condition: 50% chance
-   | (15897:74) あったか手袋
+   | (15897:74) Warm Gloves
    | Reduce damage from all sources by 50% for 1 turns, Deal 95% damage
-   | (15898:15) ダブルリーススイング
+   | (15898:15) Double Wreath Swing
+   | Deal 100% damage (4 hits, 25% each)
+ | group:
+ | condition: turn 1, hp <= 49
+   | (15899:88) I told you not to...
+   | Bind awoken skills for 3 turns
+   | condition: 50% chance
+   | (15897:74) Warm Gloves
+   | Reduce damage from all sources by 50% for 1 turns, Deal 95% damage
+   | (15898:15) Double Wreath Swing
    | Deal 100% damage (4 hits, 25% each)
  | group:
  | condition: hp <= 20
-   | (15900:15) 西方七星陣
-   | Deal 175% damage (7 hits, 25% each)
+   | group:
+   | condition: turn 1
+     | (15899:88) I told you not to...
+     | Bind awoken skills for 3 turns
+   | group:
+     | (15900:15) Western Seven-Star Formation
+     | Deal 175% damage (7 hits, 25% each)

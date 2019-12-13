@@ -8,26 +8,29 @@ approved: False
 
 level: 1
  type: PASSIVE
- | (15949:118) 回復悪魔半減
+ | (15949:118) Heal Devil Halved
  | Reduce damage from Healer, Devil by 50%
  type: PREEMPT
- | (15885:108) 贈物変化の術
- | Change Wood to Fire, Deal 90% damage
- | (15884:15) 騒いじゃいけないよっ
- | Deal 100% damage
+ | (15888:83) Shh! + Sleep well my good child♪
+ | Movetime -2s for 5 turns + Blind all orbs on the board
  group:
  | group:
-   | condition: 50% chance
-   | (15885:108) 贈物変化の術
-   | Change Wood to Fire, Deal 90% damage
-   | (15884:15) 騒いじゃいけないよっ
-   | Deal 100% damage
+   | group:
+   | condition: turn 1
+     | (15883:109) Secret Laws of the Sacred Heart
+     | Random 3 orbs change every 1.0s for 4 turns
+   | group:
+     | condition: 50% chance
+     | (15885:108) Present Changing Technique
+     | Change Wood to Fire, Deal 90% damage
+     | (15884:15) Don't be noisy now
+     | Deal 100% damage
  | group:
  | condition: hp <= 29
    | group:
    | condition: turn 1
-     | (15886:88) 起こしちゃダメだよっ
+     | (15886:88) Don't wake him up
      | Bind awoken skills for 1 turns
    | group:
-     | (15887:79) 聖の炎舞
+     | (15887:79) Dance of the Holy Flame
      | Change 1st row to Light orbs, 5th row to Fire orbs, Deal 190% damage

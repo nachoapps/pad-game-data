@@ -13,7 +13,7 @@
       group_type: PREEMPT
       children {
         behavior {
-          enemy_skill_id: 15919
+          enemy_skill_id: 15924
         }
       }
     }
@@ -24,11 +24,30 @@
           group_type: STANDARD
           condition {
             hp_threshold: 100
-            use_chance: 100
           }
           children {
-            behavior {
-              enemy_skill_id: 15919
+            group {
+              condition {
+                use_chance: 100
+                trigger_turn: 1
+              }
+              children {
+                behavior {
+                  enemy_skill_id: 15920
+                }
+              }
+            }
+          }
+          children {
+            group {
+              condition {
+                use_chance: 100
+              }
+              children {
+                behavior {
+                  enemy_skill_id: 15919
+                }
+              }
             }
           }
         }

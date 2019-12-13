@@ -8,22 +8,24 @@ approved: False
 
 level: 1
  type: PASSIVE
- | (15946:118) バランス神半減
+ | (15946:118) Balance God Halved
  | Reduce damage from Balanced, God by 50%
  type: PREEMPT
- | condition: when required attributes on board
- | (15891:92) キューピッドソング
- | Spawn random 3 Jammer orbs, Deal 100% damage
- | (15893:63) ビューティフル・ワールド
- | Bind 2 random cards for 1~2 turns, Deal 90% damage
+ | (15895:83) Come everyone, all together now! + Let's sing a hymn!
+ | Voids status ailments for 999 turns + Absorb combo <= 5 damage for 6 turns
  group:
  | group:
    | condition: 50% chance, when required attributes on board
-   | (15891:92) キューピッドソング
+   | (15891:92) Cupid Song
    | Spawn random 3 Jammer orbs, Deal 100% damage
-   | (15893:63) ビューティフル・ワールド
+   | (15893:63) Beautiful World
    | Bind 2 random cards for 1~2 turns, Deal 90% damage
  | group:
  | condition: hp <= 49
-   | (15894:63) キャロル・ワールド
-   | Bind 5 random cards for 1~2 turns, Deal 200% damage
+   | group:
+   | condition: turn 1
+     | (15892:39) I'm going to keep on singing♪
+     | Movetime -3s for 1 turns
+   | group:
+     | (15894:63) Carol World
+     | Bind 5 random cards for 1~2 turns, Deal 200% damage

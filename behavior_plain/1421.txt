@@ -1,0 +1,30 @@
+#1421 - Thorn Princess, Sleeping Beauty
+monster size: 4
+new AI: True
+start/max counter: 0
+counter increment: 0
+
+ESPreemptive(49:318) -> ESPreemptive
+Enable preempt if level 1
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 1, target rnd 6
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b1
+ESBindRandom(1:10891) -> Sleeping Forest
+Condition: One-time use (ai:100 rnd:0) (one-time only)
+Bind 6 random cards for 5 turns
+ESEndPath(36:26) -> ESEndPath
+end_turn
+ESBranchCounter(32:22) -> ESBranchCounter
+Branch on counter > 4, target rnd 10
+ESSetCounter(26:16) -> ESSetCounter
+counter + 1
+ESRandomSpawn(92:10892) -> Growing Roses
+Condition: When fire, water, wood, light, dark, heal, poison, mortal poison orbs are on the board (ai:100 rnd:0)
+Spawn random 5 Jammer orbs
+ESEndPath(36:26) -> ESEndPath
+end_turn
+ESAttackMultihit(15:10893) -> Waking Time
+Deal 1000% damage (5 hits, 200% each)
+ESEndPath(36:26) -> ESEndPath
+end_turn

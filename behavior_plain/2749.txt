@@ -1,0 +1,76 @@
+#2749 - Awoken Artemis
+monster size: 5
+new AI: True
+start/max counter: 1
+counter increment: 0
+
+ESPreemptive(49:318) -> ESPreemptive
+Enable preempt if level 1
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 1, target rnd 6
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b1
+SkillSet:
+	[0] ESAttackMultihit(15:2927) -> Holy Shot
+	Deal 290% damage
+	[1] ESBindAwoken(88:2928) -> Purification
+	Bind awoken skills for 5 turns
+ESEndPath(36:26) -> ESEndPath
+end_turn
+ESAttackMultihit(15:2941) -> Certainty Shot
+Condition: When < 15% hp (ai:100 rnd:0)
+Deal 500% damage (5 hits, 100% each)
+SkillSet:
+	Condition: When < 20% hp , one-time use (ai:100 rnd:0) (one-time: 1)
+	[0] ESBindSkill(14:2967) -> Skill Trap
+	Bind active skills for 5 turns
+	[1] ESAttackUPRemainingEnemies(17:2940) -> Capture
+	Increase damage to 200% for the next 99 turns
+ESBranchHP(28:18) -> ESBranchHP
+Branch on hp < 50, target rnd 16
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 2, target rnd 12
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b11
+SkillSet:
+	[0] ESGravity(50:2930) -> Mortal Shot
+	Player -99% HP
+	[1] ESStatusShield(20:2931) -> Divine Protection of the Secret Stone
+	Voids status ailments for 10 turns
+ESSkillDelay(89:2933) -> Reduce Shot
+Condition: 30% chance (ai:0 rnd:30)
+Delay active skills by 2 turns, Deal 120% damage
+ESRowSpawnMulti(79:2934) -> Earth Wind Shot
+Condition: 30% chance (ai:0 rnd:30)
+Change 3rd row to Wood orbs, Deal 130% damage
+ESOrbLock(94:2935) -> Snipe Shot
+Condition: 40% chance (ai:0 rnd:40)
+Lock 5 random Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs, Deal 120% damage
+ESEndPath(36:26) -> ESEndPath
+end_turn
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 4, target rnd 19
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b111
+SkillSet:
+	[0] ESAbsorbCombo(67:2936) -> Hunting Breath
+	Absorb combo <= 7 damage for 1 turns
+	[1] ESDebuffMovetime(39:2937) -> Drawing her bow
+	Movetime -2s for 1 turns
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 8, target rnd 22
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b1111
+ESAttackMultihit(15:2939) -> Rapid Shot
+Deal 180% damage (3 hits, 60% each)
+ESSkillDelay(89:2933) -> Reduce Shot
+Condition: 30% chance (ai:0 rnd:30)
+Delay active skills by 2 turns, Deal 120% damage
+ESRowSpawnMulti(79:2934) -> Earth Wind Shot
+Condition: 30% chance (ai:0 rnd:30)
+Change 3rd row to Wood orbs, Deal 130% damage
+ESOrbLock(94:2935) -> Snipe Shot
+Condition: 40% chance (ai:0 rnd:40)
+Lock 5 random Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs, Deal 120% damage
+ESEndPath(36:26) -> ESEndPath
+end_turn

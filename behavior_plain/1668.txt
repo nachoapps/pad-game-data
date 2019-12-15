@@ -1,0 +1,86 @@
+#1668 - Goddess of the Dead, Nephthys
+monster size: 5
+new AI: True
+start/max counter: 1
+counter increment: 1
+
+ESPreemptive(49:3402) -> ESPreemptive
+Enable preempt if level 4
+ESBranchLevel(35:25) -> ESBranchLevel
+Branch on level > 4, target rnd 4
+ESEndPath(36:26) -> ESEndPath
+end_turn
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 1, target rnd 8
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b1
+SkillSet:
+	[0] ESBlindStickyFixed(98:9832) -> Hey, it's daaark!
+	Blind orbs in specific positions for 3 turns
+	[1] ESBindTyping(3:9833) -> You're no good!
+	Bind God cards for 10 turns
+ESEndPath(36:26) -> ESEndPath
+end_turn
+ESBranchHP(28:18) -> ESBranchHP
+Branch on hp < 1, target rnd 28
+ESBranchHP(28:18) -> ESBranchHP
+Branch on hp < 20, target rnd 25
+ESBranchHP(28:18) -> ESBranchHP
+Branch on hp < 50, target rnd 21
+ESSetCounter(26:16) -> ESSetCounter
+counter + 1
+ESBranchCounter(31:21) -> ESBranchCounter
+Branch on counter = 3, target rnd 17
+ESOrbChangeAttackBits(108:9835) -> It became a splendid color!
+Condition: 33% chance (ai:0 rnd:33)
+Change Fire to Dark, Poison, Deal 105% damage
+ESBombRandomSpawn(102:9836) -> I need motivation!
+Condition: 33% chance (ai:0 rnd:33)
+Spawn random 8 Bomb orbs, Deal 60% damage
+ESAttackMultihit(15:9837) -> Something like this?
+Condition: 40% chance (ai:0 rnd:40)
+Deal 120% damage (3 hits, 40% each)
+ESEndPath(36:26) -> ESEndPath
+end_turn
+ESSetCounter(25:15) -> ESSetCounter
+counter = 0
+SkillSet:
+	Condition: 50% chance (ai:50 rnd:0)
+	[0] ESBlindStickyFixed(98:9838) -> Hey, it's daaark!
+	Blind orbs in specific positions for 3 turns
+	[1] ESRandomSpawn(92:9839) -> Understand how I feel!
+	Spawn random 6 Poison orbs
+SkillSet:
+	[0] ESBlindStickyFixed(98:9832) -> Hey, it's daaark!
+	Blind orbs in specific positions for 3 turns
+	[1] ESRandomSpawn(92:9839) -> Understand how I feel!
+	Spawn random 6 Poison orbs
+ESEndPath(36:26) -> ESEndPath
+end_turn
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 2, target rnd 11
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b11
+SkillSet:
+	[0] ESBoardChange(84:9842) -> I'll give it to you like thiiis
+	Change all orbs to Fire, Dark, Poison
+	[1] ESBombFixedSpawn(103:9843) -> Have this too ♪
+	Spawn Bomb orbs in the specified positions
+ESEndPath(36:26) -> ESEndPath
+end_turn
+ESAbsorbAttribute(53:9845) -> I won't give up!
+Condition: One-time use (ai:100 rnd:0) (one-time: 1)
+Absorb Fire, Dark damage for 1 turns
+ESGravity(50:9846) -> OK, this is the end!
+Player -300% HP
+ESEndPath(36:26) -> ESEndPath
+end_turn
+SkillSet:
+	[0] ESRecoverEnemy(86:9847) -> It huuurts!
+	Enemy recover 50% hp
+	[1] ESAttackMultihit(15:9848) -> I won't forgive you!
+	Deal 400% damage (4 hits, 100% each)
+ESEndPath(36:26) -> ESEndPath
+end_turn
+ESResolve(73:9831) -> Nephthys Resolve
+Survive attacks with 1 HP when HP > 50%

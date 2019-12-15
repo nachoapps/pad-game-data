@@ -1,0 +1,58 @@
+#503732 - Violent Dragon Lord of Tyranny, Valten
+monster size: 5
+new AI: True
+start/max counter: 3
+counter increment: 0
+
+ESPreemptive(49:318) -> ESPreemptive
+Enable preempt if level 1
+SkillSet:
+	Condition: One-time use (ai:100 rnd:0) (one-time: 2)
+	[0] ESDamageShield(74:14589) -> I am truly legendary
+	Reduce damage from all sources by 80% for 5 turns
+	[1] ESAbsorbCombo(67:14573) -> Right, show me what you've got!
+	Absorb combo <= 4 damage for 10 turns
+	[2] ESSpinnersRandom(109:14574) -> Confusion
+	Random 1 orbs change every 1.0s for 10 turns
+ESSkyfall(96:14581) -> Indelible Flare
+Condition: When < 50% hp , one-time use (ai:100 rnd:0) (one-time: 1)
+Locked random skyfall +20% for 5 turns
+ESBranchCounter(32:22) -> ESBranchCounter
+Branch on counter > 9, target rnd 12
+ESSetCounter(26:16) -> ESSetCounter
+counter + 1
+ESBombRandomSpawn(102:14576) -> Ignited
+Condition: 20% chance (ai:0 rnd:20)
+Spawn random 3 Bomb orbs, Deal 98% damage
+ESOrbChangeAttack(48:14577) -> Flare Breath
+Condition: 20% chance (ai:0 rnd:20)
+Change Random to Fire, Deal 100% damage
+ESOrbLock(94:14578) -> Nova
+Condition: 20% chance (ai:0 rnd:20)
+Lock 4 random Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs, Deal 103% damage
+ESCloud(104:14579) -> Heat Haze
+Condition: 20% chance (ai:0 rnd:20)
+1x1 cloud appear for 1 turns at random location, Deal 101% damage
+ESAttackMultihit(15:14580) -> Meteor
+Condition: 20% chance (ai:0 rnd:20)
+Deal 108% damage (3 hits, 36% each)
+ESEndPath(36:26) -> ESEndPath
+end_turn
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 1, target rnd 16
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b1
+SkillSet:
+	[0] ESAttackUPRemainingEnemies(17:14582) -> You put up a good fight
+	Increase damage to 1000% for the next 1 turns
+	[1] ESOrbSealColumn(99:14583) -> Now let's finish it
+	Seal 1st, 6th column for 1 turns
+ESEndPath(36:26) -> ESEndPath
+end_turn
+ESAttackMultihit(15:14585) -> X Burst
+Deal 1500% damage (10 hits, 150% each)
+ESEndPath(36:26) -> ESEndPath
+end_turn
+ESDeathCry(69:14588) -> Valten's Curtain Call
+Condition: On death (ai:0 rnd:0)
+Show death effect

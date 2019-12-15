@@ -1,0 +1,57 @@
+#5129 - Wandering Ancient Dragon Knight - Rex
+monster size: 5
+new AI: True
+start/max counter: 3
+counter increment: 1
+
+ESPreemptive(49:318) -> ESPreemptive
+Enable preempt if level 1
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 1, target rnd 7
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b1
+ESSetCounter(25:15) -> ESSetCounter
+counter = 3
+SkillSet:
+	[0] ESStatusShield(20:12750) -> Rock Barrier
+	Voids status ailments for 999 turns
+	[1] ESAbsorbCombo(67:12751) -> Spirit of the Ancient Dragon Knight
+	Absorb combo <= 8 damage for 1 turns
+ESEndPath(36:26) -> ESEndPath
+end_turn
+ESBranchHP(28:18) -> ESBranchHP
+Branch on hp < 20, target rnd 17
+ESBranchHP(28:18) -> ESBranchHP
+Branch on hp < 80, target rnd 13
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 2, target rnd 13
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b11
+ESSkyfall(96:12752) -> Sword of Wandering
+Locked random skyfall +100% for 99 turns, Deal 300% damage
+ESEndPath(36:26) -> ESEndPath
+end_turn
+ESGravity(50:12755) -> Nothingness Life
+Condition: One-time use (ai:33 rnd:0) (one-time: 2)
+Player -99% HP
+ESDamageShield(74:12756) -> Rock-Slicing Destruction
+Condition: 50% chance (ai:0 rnd:50)
+Reduce damage from all sources by 50% for 1 turns, Deal 100% damage
+ESAttackMultihit(15:12753) -> Rock Breaking Hell Guidance
+Condition: 50% chance (ai:0 rnd:50)
+Deal 105% damage (3 hits, 35% each)
+ESEndPath(36:26) -> ESEndPath
+end_turn
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 4, target rnd 21
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b111
+ESAttackUPRemainingEnemies(17:12757) -> Power Released
+Condition: when <= 1 enemies remain (ai:100 rnd:0)
+Increase damage to 300% for the next 999 turns
+ESEndPath(36:26) -> ESEndPath
+end_turn
+ESAttackMultihit(15:12758) -> Celestial Life Exorcism
+Deal 300% damage (10 hits, 30% each)
+ESEndPath(36:26) -> ESEndPath
+end_turn

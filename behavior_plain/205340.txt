@@ -1,0 +1,18 @@
+#205340 - 叩龍楽士・ティリー
+monster size: 5
+new AI: True
+start/max counter: 1
+counter increment: 0
+
+ESPreemptive(49:318) -> ESPreemptive
+Enable preempt if level 1
+ESSpinnersFixed(110:15566) -> スプラッシュロール
+Condition: One-time use (ai:100 rnd:0) (one-time: 1)
+Specific orbs change every 0.5s for 1 turns
+SkillSet:
+	[0] ESAbsorbCombo(67:15559) -> メロディオーラ
+	Absorb combo <= 3 damage for 1 turns
+	[1] ESAttackMultihit(15:15567) -> フレットパルス
+	Deal 105% damage (3 hits, 35% each)
+ESEndPath(36:26) -> ESEndPath
+end_turn

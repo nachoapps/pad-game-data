@@ -1,0 +1,65 @@
+#5131 - Crimson Lotus Warrior, Echidna - Sara
+monster size: 5
+new AI: True
+start/max counter: 7
+counter increment: 0
+
+ESPreemptive(49:318) -> ESPreemptive
+Enable preempt if level 1
+SkillSet:
+	Condition: One-time use (ai:100 rnd:0) (one-time: 4)
+	[0] ESStatusShield(20:13402) -> Crimson Fire Dance
+	Voids status ailments for 999 turns
+	[1] ESSkillDelay(89:13403) -> Menace
+	Delay active skills by 1~10 turns
+	[2] ESDamageShield(74:13404) -> Glamorous Boasting
+	Reduce damage from all sources by 75% for 1 turns
+ESBranchHP(28:18) -> ESBranchHP
+Branch on hp < 50, target rnd 7
+ESBranchCombo(113:6528) -> ESBranchCombo
+Branch on combo >= 8, target rnd 15
+SkillSet:
+	[0] ESGravity(50:13407) -> Crimson Lotus Dance
+	Player -50% HP
+	[1] ESAttackMultihit(15:13408) -> Final Blow
+	Deal 50% damage
+ESEndPath(36:26) -> ESEndPath
+end_turn
+ESAbsorbThreshold(87:13405) -> Heroine Spear Dance
+Condition: One-time use (ai:100 rnd:0) (one-time: 2)
+Absorb damage >= 20000000 damage for 3 turns, Deal 250% damage
+ESBranchHP(28:18) -> ESBranchHP
+Branch on hp < 20, target rnd 12
+ESBranchCombo(113:6528) -> ESBranchCombo
+Branch on combo >= 8, target rnd 15
+SkillSet:
+	[0] ESGravity(50:13410) -> Crimson Lotus Flower Dance
+	Player -75% HP
+	[1] ESAttackMultihit(15:13408) -> Final Blow
+	Deal 50% damage
+ESEndPath(36:26) -> ESEndPath
+end_turn
+SkillSet:
+	Condition: One-time use (ai:100 rnd:0) (one-time: 1)
+	[0] ESBindRandom(1:13412) -> Crimson Fire Menace
+	Bind 6 random cards for 5 turns
+	[1] ESBlind(5:13413) -> Purgatory Black Smoke
+	Blind all orbs on the board
+ESAttackMultihit(15:13414) -> Flare Rouge
+Deal 800% damage (8 hits, 100% each)
+ESEndPath(36:26) -> ESEndPath
+end_turn
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 1, target rnd 19
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b1
+ESNoSkyfall(127:13415) -> Clear Sky Dance
+No skyfall for 5 turns
+ESEndPath(36:26) -> ESEndPath
+end_turn
+ESBranchHP(28:18) -> ESBranchHP
+Branch on hp < 50, target rnd 10
+ESBranchHP(28:18) -> ESBranchHP
+Branch on hp < 100, target rnd 5
+ESEndPath(36:26) -> ESEndPath
+end_turn

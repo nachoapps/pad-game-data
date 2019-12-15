@@ -1,0 +1,45 @@
+#100002 - Alt. Tyran
+monster size: 2
+new AI: True
+start/max counter: 1
+counter increment: 0
+
+ESBranchLevel(35:25) -> ESBranchLevel
+Branch on level > 4, target rnd 3
+ESEndPath(36:26) -> ESEndPath
+end_turn
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 1, target rnd 7
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b1
+ESRandomSpawn(92:10346) -> Heat Breath
+Condition: When water, wood, light, dark, heal, jammer, poison, mortal poison orbs are on the board (ai:100 rnd:0)
+Spawn random 3 Fire orbs, Deal 100% damage
+ESEndPath(36:26) -> ESEndPath
+end_turn
+ESBranchRemainingEnemies(120:8595) -> ESBranchRemainingEnemies
+Branch on remaining enemies <= 1, target rnd 16
+ESBranchRemainingEnemies(120:8595) -> ESBranchRemainingEnemies
+Branch on remaining enemies <= 2, target rnd 12
+ESRandomSpawn(92:10346) -> Heat Breath
+Condition: 50% chance & when Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs are on the board (ai:50 rnd:0)
+Spawn random 3 Fire orbs, Deal 100% damage
+ESSkillDelay(89:10347) -> Easing Friction
+Delay active skills by 2 turns, Deal 95% damage
+ESEndPath(36:26) -> ESEndPath
+end_turn
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 2, target rnd 9
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b11
+ESDamageShield(74:10348) -> Mountain Protection
+Reduce damage from all sources by 50% for 5 turns
+ESEndPath(36:26) -> ESEndPath
+end_turn
+ESAttackUPRemainingEnemies(17:10349) -> Jagged Mountain Range
+Condition: One-time use, when <= 1 enemies remain (ai:100 rnd:0) (one-time: 1)
+Increase damage to 300% for the next 99 turns
+ESAttackMultihit(15:10350) -> Magma Breath
+Deal 140% damage (2 hits, 70% each)
+ESEndPath(36:26) -> ESEndPath
+end_turn

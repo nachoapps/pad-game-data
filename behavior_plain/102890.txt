@@ -1,0 +1,92 @@
+#102890 - Alt. Heaven Winged Machine, Seraphis
+monster size: 5
+new AI: True
+start/max counter: 1
+counter increment: 1
+
+ESPreemptive(49:318) -> ESPreemptive
+Enable preempt if level 1
+ESDeathCry(69:5868) -> Orpharion Transformation
+Condition: On death (ai:0 rnd:0)
+Show message: Parts fall from the heavens|Seraphis and the parts are combining
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 1, target rnd 7
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b1
+SkillSet:
+	[0] ESStatusShield(20:4280) -> Heaven's Armor
+	Voids status ailments for 999 turns
+	[1] ESDamageShield(74:4281) -> Limited Barrier
+	Reduce damage from all sources by 50% for 5 turns
+	[2] ESSkyfall(96:4282) -> Electromagnetic Field
+	Locked random skyfall +15% for 10 turns
+ESEndPath(36:26) -> ESEndPath
+end_turn
+SkillSet:
+	Condition: When < 1% hp (ai:100 rnd:0)
+	[0] ESRecoverEnemy(86:4478) -> Holy Repair
+	Enemy recover 19% hp
+	[1] ESAttackMultihit(15:4296) -> Limit Break
+	Deal 800% damage (2 hits, 400% each)
+ESAttackMultihit(15:4296) -> Limit Break
+Condition: When < 20% hp (ai:100 rnd:0)
+Deal 800% damage (2 hits, 400% each)
+ESBranchHP(28:18) -> ESBranchHP
+Branch on hp < 50, target rnd 28
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 2, target rnd 17
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b11
+ESOrbLock(94:4284) -> Shock Ray
+Condition: One-time use (ai:0 rnd:25) (one-time: 1)
+Lock 3 random Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs, Deal 120% damage
+ESRandomSpawn(92:4285) -> Flash Bomb
+Condition: One-time use & when Fire, Water, Wood, Dark, Heal, Jammer, Poison, Mortal Poison orbs are on the board (ai:0 rnd:25) (one-time: 1)
+Spawn random 3 Light orbs, Deal 120% damage
+ESDebuffMovetime(39:4286) -> Machine Glare
+Condition: One-time use (ai:0 rnd:25) (one-time: 1)
+Movetime -1s for 1 turns, Deal 120% damage
+ESInactivity(66:4287) -> Gathering magical power
+Condition: 25% chance (ai:0 rnd:25)
+Do nothing
+ESEndPath(36:26) -> ESEndPath
+end_turn
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 4, target rnd 24
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b111
+ESInactivity(66:4291) -> Full Charge
+Condition: One-time use (ai:0 rnd:25) (one-time: 1)
+Do nothing
+ESSkillDelay(89:4288) -> Suppressive Wave
+Condition: 25% chance (ai:0 rnd:25)
+Delay active skills by 3 turns, Deal 140% damage
+ESAbsorbCombo(67:4289) -> Ordeal Section
+Condition: 25% chance (ai:0 rnd:25)
+Absorb combo <= 6 damage for 1 turns, Deal 140% damage
+ESSkyfall(68:4290) -> Jamming
+Condition: 25% chance (ai:0 rnd:25)
+Jammer skyfall +20% for 1 turns, Deal 140% damage
+ESEndPath(36:26) -> ESEndPath
+end_turn
+ESFlagOperation(24:14) -> ESFlagOperation
+flag UNSET 0b110
+ESAttackMultihit(15:4292) -> Steel Wing
+Condition: One-time use (ai:60 rnd:0) (one-time: 1)
+Deal 180% damage (3 hits, 60% each)
+ESBindAttack(63:4293) -> Paralysis Sight
+Condition: One-time use (ai:100 rnd:0) (one-time: 1)
+Bind 1 random cards for 3 turns, Deal 170% damage
+ESAttackMultihit(15:4294) -> Core Full Burst
+Deal 520% damage (4 hits, 130% each)
+ESAttackUPRemainingEnemies(17:4295) -> Awaken Force
+Condition: when <= 1 enemies remain (ai:100 rnd:0)
+Increase damage to 200% for the next 999 turns
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 1, target rnd 10
+ESEndPath(36:26) -> ESEndPath
+end_turn
+ESAttributeResist(72:4477) -> Robot Dark Halven
+Reduce damage from Dark by 50%
+ESResolve(73:4480) -> Robot Resolve
+Survive attacks with 1 HP when HP > 50%

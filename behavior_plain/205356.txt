@@ -1,0 +1,33 @@
+#205356 - ヒカフエドラ
+monster size: 4
+new AI: True
+start/max counter: 3
+counter increment: 0
+
+ESPreemptive(49:3402) -> ESPreemptive
+Enable preempt if level 4
+ESBranchLevel(35:25) -> ESBranchLevel
+Branch on level > 4, target rnd 4
+ESEndPath(36:26) -> ESEndPath
+end_turn
+ESRandomSpawn(92:13442) -> 癒しの旋律
+Condition: One-time use (ai:100 rnd:0) (one-time: 2)
+Spawn random 10 Heal orbs
+ESDebuffRCV(105:13443) -> シンフォニックハーモニー
+Condition: One-time use (ai:100 rnd:0) (one-time: 1)
+Rcv 50% for 3 turns
+ESBranchHP(28:18) -> ESBranchHP
+Branch on hp < 20, target rnd 10
+ESRandomSpawn(92:13444) -> スフォルツァートペザンテ
+Condition: 50% chance & when Fire, Water, Wood, Light, Dark, Jammer, Poison, Mortal Poison orbs are on the board (ai:0 rnd:50)
+Spawn random 1 Heal orbs, Deal 105% damage
+ESOrbChangeAttack(48:13445) -> アダージョカランド
+Condition: 50% chance (ai:0 rnd:50)
+Change Random to Light, Deal 95% damage
+ESEndPath(36:26) -> ESEndPath
+end_turn
+ESRandomSpawn(92:13446) -> リタルダンドアンビエント
+Condition: When fire, water, wood, dark, heal, jammer, poison, mortal poison orbs are on the board (ai:100 rnd:0)
+Spawn random 8 Light orbs, Deal 150% damage
+ESEndPath(36:26) -> ESEndPath
+end_turn

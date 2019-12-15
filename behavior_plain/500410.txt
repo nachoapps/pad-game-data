@@ -1,0 +1,21 @@
+#500410 - 究極島龍・ユグドラシル
+monster size: 5
+new AI: True
+start/max counter: 3
+counter increment: 0
+
+ESPreemptive(49:318) -> ESPreemptive
+Enable preempt if level 1
+ESAbsorbAttribute(53:15411) -> 大樹の防壁
+Condition: One-time use (ai:100 rnd:0) (one-time: 2)
+Absorb Wood damage for 3 turns
+ESCloud(104:15413) -> 天空の龍雲
+Condition: When < 50% hp , one-time use (ai:100 rnd:0) (one-time: 1)
+Row of cloud appear for 3 turns at 1st column
+ESAttackMultihit(15:15412) -> ゴッドガイアブレス
+Condition: 10% chance when < 50% hp (ai:10 rnd:0)
+Deal 150% damage (2 hits, 75% each)
+ESAttackMultihit(15:15414) -> 世界樹の怒り
+Deal 120% damage (6 hits, 20% each)
+ESEndPath(36:26) -> ESEndPath
+end_turn

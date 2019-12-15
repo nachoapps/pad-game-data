@@ -1,0 +1,35 @@
+#792 - Hominal Beast, Centaur
+monster size: 4
+new AI: False
+start/max counter: 1
+counter increment: 1
+
+ESPreemptive(49:355) -> ESPreemptive
+Enable preempt if level 5
+ESBranchLevel(33:23) -> ESBranchLevel
+Branch on level < 4, target rnd 7
+ESNone(0:0) -> ESNone
+nothing
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 1, target rnd 8
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b1
+ESAttackMultihit(15:534) -> Gale Thrust
+Deal 60% damage
+ESEndPath(36:26) -> ESEndPath
+end_turn
+ESAttackUPRemainingEnemies(17:270) -> Lone Force
+Condition: when <= 1 enemies remain (ai:100 rnd:0)
+Increase damage to 300% for the next 999 turns
+ESBranchHP(29:19) -> ESBranchHP
+Branch on hp > 30, target rnd 13
+ESAttackMultihit(15:536) -> A little closer...
+Condition: One-time use (ai:100 rnd:0) (one-time: 1)
+Deal 10% damage
+ESAttackMultihit(15:537) -> Critical Charge
+Deal 200% damage
+ESEndPath(36:26) -> ESEndPath
+end_turn
+ESAttackMultihit(15:535) -> Rainfall Thrust
+Condition: 70% chance (ai:70 rnd:0)
+Deal 105%~140% damage (3~4 hits, 35% each)

@@ -1,0 +1,67 @@
+#2948 - Almighty Awoken Zeus-Dios
+monster size: 5
+new AI: True
+start/max counter: 1
+counter increment: 0
+
+ESPreemptive(49:318) -> ESPreemptive
+Enable preempt if level 1
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 1, target rnd 6
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b1
+SkillSet:
+	[0] ESDamageShield(74:7119) -> Atmospheric Barrier
+	Reduce damage from all sources by 99% for 6 turns
+	[1] ESAttackMultihit(15:7120) -> Jupiter Judgment
+	Deal 200% damage
+ESEndPath(36:26) -> ESEndPath
+end_turn
+SkillSet:
+	Condition: One-time use (ai:100 rnd:0) (one-time: 1)
+	[0] ESStatusShield(20:7122) -> Protection of the Gods
+	Voids status ailments for 999 turns
+	[1] ESAbsorbThreshold(87:7123) -> Storm Vesture
+	Absorb damage >= 3000000 damage for 5 turns
+	[2] ESOrbLock(94:7124) -> Shall we begin?
+	Lock all Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 2, target rnd 11
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b11
+ESBoardChangeAttackBits(85:7125) -> Jupiter Genesis
+Change all orbs to Wood, Deal 100% damage
+ESEndPath(36:26) -> ESEndPath
+end_turn
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 4, target rnd 15
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b111
+ESBoardChangeAttackBits(85:7125) -> Jupiter Genesis
+Change all orbs to Wood, Deal 100% damage
+ESEndPath(36:26) -> ESEndPath
+end_turn
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 8, target rnd 19
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b1111
+ESBoardChangeAttackBits(85:7125) -> Jupiter Genesis
+Change all orbs to Wood, Deal 100% damage
+ESEndPath(36:26) -> ESEndPath
+end_turn
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 16, target rnd 23
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b11111
+ESBoardChangeAttackBits(85:7125) -> Jupiter Genesis
+Change all orbs to Wood, Deal 100% damage
+ESEndPath(36:26) -> ESEndPath
+end_turn
+ESFlagOperation(24:14) -> ESFlagOperation
+flag UNSET 0b11110
+ESOrbLock(94:7126) -> Catching breath
+Lock all Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs
+ESInactivity(66:7127) -> Catching breath
+Do nothing
+ESEndPath(36:26) -> ESEndPath
+end_turn

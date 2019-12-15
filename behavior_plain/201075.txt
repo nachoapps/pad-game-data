@@ -1,0 +1,40 @@
+#201075 - Strawberry Dragon
+monster size: 3
+new AI: True
+start/max counter: 0
+counter increment: 0
+
+ESPreemptive(49:697) -> ESPreemptive
+Enable preempt if level 3
+ESBranchLevel(35:25) -> ESBranchLevel
+Branch on level > 3, target rnd 4
+ESEndPath(36:26) -> ESEndPath
+end_turn
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 1, target rnd 8
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b1
+ESRandomSpawn(92:4263) -> I leave you some strawberries
+Condition: When water, wood, light, dark, heal, jammer, poison, mortal poison orbs are on the board (ai:100 rnd:0)
+Spawn random 3 Fire orbs
+ESEndPath(36:26) -> ESEndPath
+end_turn
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 2, target rnd 15
+ESOrbChangeAttack(48:4260) -> Clean when you're done!
+Change Jammer to Heal, Deal 150% damage
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b11
+ESRandomSpawn(92:4259) -> Let's eat one!
+Condition: When fire orbs are on the board (ai:100 rnd:0)
+Spawn random 1 Jammer orbs, Deal 100% damage
+ESFlagOperation(24:14) -> ESFlagOperation
+flag UNSET 0b10
+ESBindAttack(63:4261) -> Food bitterness is scary right?
+Bind 6 random cards for 1 turns, Deal 100% damage
+ESEndPath(36:26) -> ESEndPath
+end_turn
+ESFlagOperation(24:14) -> ESFlagOperation
+flag UNSET 0b10
+ESDamageShield(74:4262) -> Strawberries are the best!!!
+Reduce damage from all sources by 75% for 1 turns

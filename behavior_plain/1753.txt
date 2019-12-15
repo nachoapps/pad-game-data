@@ -1,0 +1,21 @@
+#1753 - Green Grimoire, Almadel
+monster size: 5
+new AI: True
+start/max counter: 9
+counter increment: 0
+
+ESPreemptive(49:318) -> ESPreemptive
+Enable preempt if level 1
+SkillSet:
+	Condition: One-time use (ai:100 rnd:0) (one-time: 5)
+	[0] ESDebuffMovetime(39:16013) -> ソロモンの鍵
+	Movetime 150% for 5 turns
+	[1] ESRandomSpawn(92:16014) -> グリモワール・エレメント
+	Spawn random 10 Fire orbs
+ESRandomSpawn(92:16014) -> グリモワール・エレメント
+Condition: One-time use (ai:100 rnd:0) (one-time: 1)
+Spawn random 10 Fire orbs
+ESAttackMultihit(15:16015) -> グラウンドブレイク
+Deal 1000% damage (10 hits, 100% each)
+ESEndPath(36:26) -> ESEndPath
+end_turn

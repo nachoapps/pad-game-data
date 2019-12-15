@@ -1,0 +1,60 @@
+#104395 - Guard Dog of Hades, Cerberus
+monster size: 3
+new AI: True
+start/max counter: 0
+counter increment: 0
+
+ESBranchLevel(35:25) -> ESBranchLevel
+Branch on level > 4, target rnd 3
+ESEndPath(36:26) -> ESEndPath
+end_turn
+ESBranchRemainingEnemies(120:8595) -> ESBranchRemainingEnemies
+Branch on remaining enemies <= 1, target rnd 13
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 1, target rnd 8
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b1
+ESOrbChangeAttack(48:9958) -> Agidyne
+Change Random to Jammer, Deal 130% damage
+ESEndPath(36:26) -> ESEndPath
+end_turn
+ESRowSpawnMulti(79:9960) -> Maragi
+Condition: 20% chance (ai:0 rnd:20)
+Change 1st, 2nd row to Fire, Jammer orbs, Deal 100% damage
+ESRowSpawnMulti(79:9961) -> Maragi
+Condition: 20% chance (ai:0 rnd:20)
+Change 2nd, 4th row to Fire, Jammer orbs, Deal 100% damage
+ESRowSpawnMulti(79:9962) -> Maragi
+Condition: 20% chance (ai:0 rnd:20)
+Change 4th, 5th row to Fire, Jammer orbs, Deal 100% damage
+ESOrbChangeAttack(48:9958) -> Agidyne
+Condition: 40% chance (ai:0 rnd:40)
+Change Random to Jammer, Deal 130% damage
+ESEndPath(36:26) -> ESEndPath
+end_turn
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 2, target rnd 17
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b11
+ESAttackUPRemainingEnemies(17:9963) -> Rebellion
+Condition: when <= 1 enemies remain (ai:100 rnd:0)
+Increase damage to 150% for the next 3 turns
+ESEndPath(36:26) -> ESEndPath
+end_turn
+ESRowSpawnMulti(79:9960) -> Maragi
+Condition: 10% chance (ai:0 rnd:10)
+Change 1st, 2nd row to Fire, Jammer orbs, Deal 100% damage
+ESRowSpawnMulti(79:9961) -> Maragi
+Condition: 10% chance (ai:0 rnd:10)
+Change 2nd, 4th row to Fire, Jammer orbs, Deal 100% damage
+ESRowSpawnMulti(79:9962) -> Maragi
+Condition: 10% chance (ai:0 rnd:10)
+Change 4th, 5th row to Fire, Jammer orbs, Deal 100% damage
+ESAttackMultihit(15:9959) -> Megaton Raid
+Condition: 40% chance (ai:0 rnd:40)
+Deal 120% damage
+ESOrbChangeAttack(48:9958) -> Agidyne
+Condition: 30% chance (ai:0 rnd:30)
+Change Random to Jammer, Deal 130% damage
+ESEndPath(36:26) -> ESEndPath
+end_turn

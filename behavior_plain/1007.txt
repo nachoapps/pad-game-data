@@ -1,0 +1,29 @@
+#1007 - Gold Pirate
+monster size: 3
+new AI: False
+start/max counter: 1
+counter increment: 1
+
+ESPreemptive(49:355) -> ESPreemptive
+Enable preempt if level 5
+ESBranchLevel(35:25) -> ESBranchLevel
+Branch on level > 5, target rnd 4
+ESEndPath(36:26) -> ESEndPath
+end_turn
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 1, target rnd 11
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b1
+ESOrbChangeSingle(4:854) -> Light Orb change
+Change Dark to Light
+ESOrbChangeSingle(4:855) -> Light Orb change
+Change Fire to Light
+ESOrbChangeSingle(4:861) -> Light Orb change
+Change Water to Light
+ESOrbChangeSingle(4:862) -> Light Orb change
+Change Wood to Light
+ESEndPath(36:26) -> ESEndPath
+end_turn
+ESOrbChangeAttack(48:856) -> Flash Edge
+Condition: One-time use (ai:100 rnd:0) (one-time: 1)
+Change Random to Light, Deal 80% damage

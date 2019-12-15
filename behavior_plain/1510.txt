@@ -1,0 +1,59 @@
+#1510 - Awoken Mephistopheles
+monster size: 5
+new AI: False
+start/max counter: 1
+counter increment: 1
+
+ESPreemptive(49:318) -> ESPreemptive
+Enable preempt if level 1
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 1, target rnd 6
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b1
+ESStatusShield(20:1318) -> Nightmare Cloak
+Voids status ailments for 4 turns
+ESEndPath(36:26) -> ESEndPath
+end_turn
+ESBranchHP(28:18) -> ESBranchHP
+Branch on hp < 75, target rnd 11
+ESBranchHP(28:18) -> ESBranchHP
+Branch on hp < 40, target rnd 15
+ESBlind(62:1320) -> Mist of Darkness
+Condition: One-time use (ai:100 rnd:0) (one-time: 1)
+Blind all orbs on the board, Deal 50% damage
+ESAttackMultihit(15:1321) -> Chaos Ray
+Deal 70% damage
+ESEndPath(36:26) -> ESEndPath
+end_turn
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 2, target rnd 7
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b11
+ESBindTyping(3:1319) -> Blasphemy
+Condition: When < 75% hp (ai:100 rnd:0)
+Bind God cards for 3 turns
+ESEndPath(36:26) -> ESEndPath
+end_turn
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 4, target rnd 19
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b111
+ESInactivity(66:1322) -> 3
+Condition: When < 40% hp (ai:100 rnd:0)
+Do nothing
+ESEndPath(36:26) -> ESEndPath
+end_turn
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 8, target rnd 23
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b1111
+ESOrbChangeAttack(48:1323) -> Hidden Dagger
+Condition: When < 40% hp (ai:100 rnd:0)
+Change Random to Jammer, Deal 125% damage
+ESEndPath(36:26) -> ESEndPath
+end_turn
+ESAttackMultihit(15:1324) -> Endless Nightmare
+Condition: When < 40% hp (ai:100 rnd:0)
+Deal 360% damage (6 hits, 60% each)
+ESEndPath(36:26) -> ESEndPath
+end_turn

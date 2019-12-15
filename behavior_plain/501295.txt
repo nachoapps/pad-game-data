@@ -1,0 +1,16 @@
+#501295 - 古代の碧神面
+monster size: 4
+new AI: True
+start/max counter: 0
+counter increment: 0
+
+ESRecoverEnemyAlly(52:15373) -> 古代の力
+Condition: when <= 1 enemies remain (ai:100 rnd:0)
+Enemy ally recover 50% hp
+ESDebuffRCV(105:15374) -> 碧眼
+Condition: 60% chance (ai:60 rnd:0)
+Rcv 50% for 1 turns, Deal 100% damage
+ESGravity(50:15375) -> グリーンパワー
+Player -99% HP
+ESEndPath(36:26) -> ESEndPath
+end_turn

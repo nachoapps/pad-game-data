@@ -1,0 +1,55 @@
+#2479 - 堕転したマギ・ジュダル
+monster size: 5
+new AI: True
+start/max counter: 1
+counter increment: 0
+
+ESPreemptive(49:3402) -> ESPreemptive
+Enable preempt if level 4
+ESBranchLevel(35:25) -> ESBranchLevel
+Branch on level > 4, target rnd 4
+ESEndPath(36:26) -> ESEndPath
+end_turn
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 1, target rnd 8
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b1
+ESAttackMultihit(15:3474) -> Here I go!
+Deal 50% damage
+ESEndPath(36:26) -> ESEndPath
+end_turn
+ESBranchHP(29:19) -> ESBranchHP
+Branch on hp > 90, target rnd 19
+ESAttackUPRemainingEnemies(17:3479) -> That hurts!
+Condition: When < 50% hp , one-time use, when <= 1 enemies remain (ai:100 rnd:0) (one-time: 1)
+Increase damage to 200% for the next 999 turns
+ESBranchHP(28:18) -> ESBranchHP
+Branch on hp < 20, target rnd 22
+ESBranchCard(90:3482) -> ESBranchCard
+Branch on player_cards HAS [2472, 2473], target rnd 16
+ESColumnSpawnMulti(77:3477) -> Wind Magic
+Condition: 35% chance (ai:0 rnd:35)
+Change 6th column to Wood orbs, Deal 100% damage
+ESColumnSpawnMulti(77:3478) -> Ice Magic
+Condition: 35% chance (ai:0 rnd:35)
+Change 1st column to Water orbs, Deal 100% damage
+ESRandomSpawn(92:3476) -> Rain of Ice Spears
+Condition: 30% chance & when Fire, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs are on the board (ai:0 rnd:30)
+Spawn random 8 Water orbs, Deal 120% damage
+ESEndPath(36:26) -> ESEndPath
+end_turn
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 4, target rnd 12
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b111
+ESAttackMultihit(15:3483) -> Hey, fellow Magi!
+Deal 100% damage
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 2, target rnd 9
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b11
+ESStatusShield(20:3475) -> Magic Barrier
+Voids status ailments for 999 turns
+ESRandomSpawn(92:3481) -> Black Lightning Spears
+Condition: When fire, water, wood, heal, jammer, poison, mortal poison orbs are on the board (ai:100 rnd:0)
+Spawn random 8 Light, Dark orbs, Deal 300% damage

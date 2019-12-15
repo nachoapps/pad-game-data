@@ -1,0 +1,24 @@
+#4189 - Enigmatic Onlooker Dragonbound, Distel
+monster size: 5
+new AI: True
+start/max counter: 1
+counter increment: 0
+
+ESPreemptive(49:318) -> ESPreemptive
+Enable preempt if level 1
+SkillSet:
+	Condition: One-time use (ai:100 rnd:0) (one-time: 1)
+	[0] ESBindAwoken(88:14010) -> Living Dragon's Miraculous Medicine
+	Bind awoken skills for 3 turns
+	[1] ESRandomSpawn(92:14011) -> Independent Action
+	Spawn random 3 Jammer, Poison orbs
+	[2] ESOrbLock(94:14012) -> Law's Binding Spell
+	Lock all Jammer, Poison orbs
+ESOrbChangeAttack(48:14013) -> Aqua Chaos
+Condition: 50% chance (ai:0 rnd:50)
+Change Random to Water, Deal 95% damage
+ESAttackMultihit(15:14014) -> Decline of Order
+Condition: 50% chance (ai:0 rnd:50)
+Deal 100% damage (4 hits, 25% each)
+ESEndPath(36:26) -> ESEndPath
+end_turn

@@ -1,0 +1,30 @@
+#785 - Mystic Crystal Dragon, CrystalSkull
+monster size: 5
+new AI: False
+start/max counter: 2
+counter increment: 1
+
+ESPreemptive(49:355) -> ESPreemptive
+Enable preempt if level 5
+ESBranchLevel(35:25) -> ESBranchLevel
+Branch on level > 5, target rnd 4
+ESEndPath(36:26) -> ESEndPath
+end_turn
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 1, target rnd 7
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b1
+ESBlind(5:614) -> Hollow Eye Glint
+Blind all orbs on the board
+ESBindRandom(1:601) -> Cursing Light of the Crystal
+Condition: One-time use (ai:100 rnd:0) (one-time: 2)
+Bind 2 random cards for 3 turns
+ESBranchHP(29:19) -> ESBranchHP
+Branch on hp > 40, target rnd 11
+ESOrbChangeAttack(48:602) -> False Light of Mystery
+Change Random to Jammer, Deal 150% damage
+ESEndPath(36:26) -> ESEndPath
+end_turn
+ESAttackMultihit(15:600) -> Crystal Fang
+Condition: 70% chance (ai:70 rnd:0)
+Deal 120% damage (2 hits, 60% each)

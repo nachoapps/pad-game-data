@@ -1,0 +1,29 @@
+#1578 - 魔導師バビディ
+monster size: 5
+new AI: False
+start/max counter: 1
+counter increment: 0
+
+ESPreemptive(49:355) -> ESPreemptive
+Enable preempt if level 5
+ESBranchLevel(35:25) -> ESBranchLevel
+Branch on level > 5, target rnd 4
+ESEndPath(36:26) -> ESEndPath
+end_turn
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 1, target rnd 8
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b1
+ESAbsorbCombo(67:1481) -> バッ バリヤーッ!!!
+Absorb combo <= 3 damage for 5 turns
+ESEndPath(36:26) -> ESEndPath
+end_turn
+ESBindRandomSub(65:1484) -> はああああ…!!!
+Condition: When < 50% hp , one-time use (ai:100 rnd:0) (one-time: 1)
+Bind 1 random subs for 3 turns
+ESAttackMultihit(15:1483) -> もうおまえたちは御用済みだよ
+Condition: When < 50% hp (ai:100 rnd:0)
+Deal 200% damage
+ESOrbChangeAttack(48:1482) -> パッパラパーー!!
+Condition: 50% chance when < 75% hp (ai:50 rnd:0)
+Change Random to Jammer, Deal 50% damage

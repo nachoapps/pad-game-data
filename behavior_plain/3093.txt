@@ -1,0 +1,41 @@
+#3093 - Green Whirlwind, Adekazakiri
+monster size: 5
+new AI: True
+start/max counter: 0
+counter increment: 0
+
+ESPreemptive(49:318) -> ESPreemptive
+Enable preempt if level 1
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 1, target rnd 6
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b1
+SkillSet:
+	[0] ESAbsorbCombo(67:5224) -> Green Whirlwind's Dance
+	Absorb combo <= 6 damage for 1 turns
+	[1] ESBoardChangeAttackBits(85:5225) -> Feather Rain
+	Change all orbs to Fire, Water, Wood, Light, Dark, Jammer, Deal 80% damage
+ESEndPath(36:26) -> ESEndPath
+end_turn
+ESBranchHP(29:19) -> ESBranchHP
+Branch on hp > 100, target rnd 16
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 2, target rnd 10
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b11
+ESRowSpawnMulti(79:5226) -> Wind Spiral
+Change 1st row to Wood orbs, Deal 100% damage
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 4, target rnd 13
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b111
+ESAbsorbAttribute(53:5227) -> Fire-Extinguishing Wind
+Absorb Fire damage for 3 turns
+ESOrbChangeAttack(48:5228) -> Lightning
+Change Jammer to Light, Deal 150% damage
+ESBranchHP(28:18) -> ESBranchHP
+Branch on hp < 50, target rnd 16
+ESOrbChangeAttack(48:5229) -> Gale
+Change Random to Jammer, Deal 100% damage
+ESBoardChangeAttackBits(85:5225) -> Feather Rain
+Change all orbs to Fire, Water, Wood, Light, Dark, Jammer, Deal 80% damage

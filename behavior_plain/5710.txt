@@ -1,0 +1,48 @@
+#5710 - セイリュウ＆ブラックシンカリオン 紅
+monster size: 5
+new AI: True
+start/max counter: 3
+counter increment: 0
+
+ESPreemptive(49:318) -> ESPreemptive
+Enable preempt if level 1
+SkillSet:
+	Condition: One-time use (ai:100 rnd:0) (one-time: 2)
+	[0] ESNoSkyfall(127:15202) -> お前は俺が倒す！
+	No skyfall for 6 turns
+	[1] ESAbsorbCombo(67:15203) -> ついてこれるか
+	Absorb combo <= 5 damage for 6 turns
+ESBranchHP(28:18) -> ESBranchHP
+Branch on hp < 15, target rnd 12
+ESBranchHP(28:18) -> ESBranchHP
+Branch on hp < 50, target rnd 8
+ESBoardChangeAttackBits(85:15204) -> はぁぁっ！
+Condition: 90% chance (ai:0 rnd:90)
+Change all orbs to Fire, Water, Wood, Light, Dark, Heal, Deal 90% damage
+ESColumnSpawnMulti(77:15208) -> 超ダークカイサツソード
+Condition: 10% chance (ai:0 rnd:10)
+Change 3rd column to Dark orbs, 4th column to Fire orbs, Deal 130% damage
+ESEndPath(36:26) -> ESEndPath
+end_turn
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 1, target rnd 5
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b1
+ESVoidShield(71:15207) -> やってやる！
+Condition: One-time use (ai:100 rnd:0) (one-time: 1)
+Void damage >= 5000000 for 6 turns
+ESEndPath(36:26) -> ESEndPath
+end_turn
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 2, target rnd 5
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b11
+SkillSet:
+	[0] ESRecoverEnemy(7:15205) -> させるか！
+	Enemy recover 100% hp
+	[1] ESDebuffMovetime(39:15206) -> まだだ！
+	Movetime 50% for 1 turns
+ESEndPath(36:26) -> ESEndPath
+end_turn
+ESResolve(73:15286) -> セイリュウ根性
+Survive attacks with 1 HP when HP > 50%

@@ -1,0 +1,17 @@
+#500588 - 月夜の魔人・ワーウルフ
+monster size: 3
+new AI: True
+start/max counter: 1
+counter increment: 0
+
+ESBranchRemainingEnemies(120:8595) -> ESBranchRemainingEnemies
+Branch on remaining enemies <= 1, target rnd 3
+ESAttackMultihit(15:15448) -> ムーンスラッシュ
+Deal 105% damage (3 hits, 35% each)
+ESCloud(104:15449) -> 月狼の遠吠え
+Condition: One-time use (ai:100 rnd:0) (one-time: 1)
+2x2 cloud appear for 3 turns at random location
+ESAttackMultihit(15:15448) -> ムーンスラッシュ
+Deal 105% damage (3 hits, 35% each)
+ESEndPath(36:26) -> ESEndPath
+end_turn

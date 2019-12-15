@@ -1,0 +1,59 @@
+#1844 - Knight Dragon King, Nordis
+monster size: 5
+new AI: True
+start/max counter: 0
+counter increment: 0
+
+ESPreemptive(49:318) -> ESPreemptive
+Enable preempt if level 1
+ESDeathCry(69:2462) -> 龍騎士風ドラゴン・変身
+Condition: On death (ai:0 rnd:0)
+Show message: 見事だ、私も戦いの中で進化しよう！
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 1, target rnd 7
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b1
+ESStatusShield(20:2457) -> I'm honored to face you!
+Voids status ailments for 999 turns
+ESEndPath(36:26) -> ESEndPath
+end_turn
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 2, target rnd 11
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b11
+ESAttackMultihit(15:2458) -> Ha!
+Deal 120% damage
+ESEndPath(36:26) -> ESEndPath
+end_turn
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 4, target rnd 15
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b111
+ESDamageShield(74:2459) -> His shield is raised
+Reduce damage from all sources by 50% for 1 turns
+ESEndPath(36:26) -> ESEndPath
+end_turn
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 8, target rnd 19
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b1111
+ESAttackMultihit(15:2460) -> Take that!
+Deal 130% damage
+ESEndPath(36:26) -> ESEndPath
+end_turn
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 16, target rnd 23
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b11111
+ESDamageShield(74:2459) -> His shield is raised
+Reduce damage from all sources by 50% for 1 turns
+ESEndPath(36:26) -> ESEndPath
+end_turn
+ESFlagOperation(24:14) -> ESFlagOperation
+flag UNSET 0b11110
+ESAttackMultihit(15:2461) -> Triple Thrust
+Deal 180% damage (3 hits, 60% each)
+ESEndPath(36:26) -> ESEndPath
+end_turn
+ESAttributeResist(72:2456) -> 龍騎士風ドラゴン・パッシブ
+Reduce damage from Wood, Light by 50%

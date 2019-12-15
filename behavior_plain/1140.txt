@@ -1,0 +1,22 @@
+#1140 - Kitty Woodie
+monster size: 1
+new AI: False
+start/max counter: 0
+counter increment: 0
+
+ESBranchLevel(35:25) -> ESBranchLevel
+Branch on level > 5, target rnd 4
+ESInactivity(66:886) -> Bouncing Merrily!
+Condition: 30% chance (ai:30 rnd:0)
+Do nothing
+ESEndPath(36:26) -> ESEndPath
+end_turn
+ESAttackMultihit(15:887) -> Jump Attack!
+Condition: 70% chance when < 30% hp (ai:70 rnd:0)
+Deal 150% damage
+ESInactivity(66:886) -> Bouncing Merrily!
+Condition: 30% chance (ai:30 rnd:0)
+Do nothing
+ESOrbChangeSingle(4:890) -> Melon Drop!
+Condition: 30% chance (ai:30 rnd:0)
+Change Fire to Wood

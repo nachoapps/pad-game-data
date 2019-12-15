@@ -1,0 +1,23 @@
+#773 - Omega Blue Skydragon, Nirai Kanai
+monster size: 5
+new AI: False
+start/max counter: 1
+counter increment: 0
+
+ESAttackPreemptive(47:478) -> Skydragon Flight
+Deal 40% damage
+ESBranchHP(29:19) -> ESBranchHP
+Branch on hp > 100, target rnd 8
+ESInactivity(66:483) -> Roar of Ruin
+Condition: One-time use (ai:100 rnd:0) (one-time: 1)
+Do nothing
+ESSetCounterIf(38:177) -> ESSetCounterIf
+set counter = 4 if counter == 0
+ESCountdown(37:178) -> ESCountdown
+countdown
+ESAttackMultihit(15:484) -> Lost Utopia
+Deal 1100% damage (5 hits, 220% each)
+ESEndPath(36:26) -> ESEndPath
+end_turn
+ESAttackMultihit(15:474) -> Breath of the Blue Sky
+Deal 80%~120% damage (2~3 hits, 40% each)

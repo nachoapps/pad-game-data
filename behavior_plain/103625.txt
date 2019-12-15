@@ -1,0 +1,80 @@
+#103625 - Warlock, Fei Wang Reed
+monster size: 5
+new AI: True
+start/max counter: 1
+counter increment: 0
+
+ESPreemptive(49:318) -> ESPreemptive
+Enable preempt if level 1
+ESBranchCard(90:6713) -> ESBranchCard
+Branch on player_cards HAS [3611, 3612], target rnd 5
+ESBranchCard(90:6711) -> ESBranchCard
+Branch on player_cards HAS [3613], target rnd 6
+SkillSet:
+	Condition: One-time use (ai:100 rnd:0) (one-time: 1)
+	[0] ESStatusShield(20:6703) -> Let me grant your wish
+	Voids status ailments for 4 turns
+	[1] ESGravity(50:6704) -> Death Seal
+	Player -99% HP
+SkillSet:
+	Condition: One-time use (ai:100 rnd:0) (one-time: 1)
+	[0] ESStatusShield(20:6714) -> I shall erase you from all dimensions!
+	Voids status ailments for 4 turns
+	[1] ESGravity(50:6704) -> Death Seal
+	Player -99% HP
+SkillSet:
+	Condition: One-time use (ai:100 rnd:0) (one-time: 1)
+	[0] ESStatusShield(20:6712) -> You're nothing more than a puppet!
+	Voids status ailments for 4 turns
+	[1] ESGravity(50:6704) -> Death Seal
+	Player -99% HP
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 1, target rnd 11
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b1
+ESRandomSpawn(92:6706) -> Black wings overturn the corpses
+Condition: When fire, water, wood, light, dark, heal, poison, mortal poison orbs are on the board (ai:100 rnd:0)
+Spawn random 3 Jammer orbs
+ESEndPath(36:26) -> ESEndPath
+end_turn
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 2, target rnd 15
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b11
+ESRandomSpawn(92:6707) -> Black wings overturn the corpses
+Condition: When fire, water, wood, light, dark, heal, poison, mortal poison orbs are on the board (ai:100 rnd:0)
+Spawn random 6 Jammer orbs
+ESEndPath(36:26) -> ESEndPath
+end_turn
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 4, target rnd 19
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b111
+ESRandomSpawn(92:6708) -> Black wings overturn the corpses
+Condition: When fire, water, wood, light, dark, heal, poison, mortal poison orbs are on the board (ai:100 rnd:0)
+Spawn random 12 Jammer orbs
+ESEndPath(36:26) -> ESEndPath
+end_turn
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 8, target rnd 23
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b1111
+ESRandomSpawn(92:6709) -> Black wings overturn the corpses
+Condition: When fire, water, wood, light, dark, heal, poison, mortal poison orbs are on the board (ai:100 rnd:0)
+Spawn random 24 Jammer orbs
+ESEndPath(36:26) -> ESEndPath
+end_turn
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 16, target rnd 27
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b11111
+ESBoardChangeAttackBits(85:6710) -> Black wings overturned all the corpses
+Change all orbs to Jammer, Deal 500% damage
+ESEndPath(36:26) -> ESEndPath
+end_turn
+ESFlagOperation(24:14) -> ESFlagOperation
+flag UNSET 0b11111
+ESGravity(50:6704) -> Death Seal
+Player -99% HP
+ESEndPath(36:26) -> ESEndPath
+end_turn

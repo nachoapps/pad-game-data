@@ -1,0 +1,48 @@
+#114973 - Zeo Megazord
+monster size: 5
+new AI: True
+start/max counter: 1
+counter increment: 0
+
+ESPreemptive(49:3402) -> ESPreemptive
+Enable preempt if level 4
+ESBranchLevel(35:25) -> ESBranchLevel
+Branch on level > 4, target rnd 4
+ESEndPath(36:26) -> ESEndPath
+end_turn
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 1, target rnd 8
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b1
+ESRandomSpawn(92:12064) -> Babaan! (I'm here!)
+Condition: When fire, water, wood, light, dark, heal, jammer, poison orbs are on the board (ai:100 rnd:0)
+Spawn random 3 Mortal Poison orbs
+ESEndPath(36:26) -> ESEndPath
+end_turn
+ESBranchHP(28:18) -> ESBranchHP
+Branch on hp < 20, target rnd 17
+ESBranchRemainingEnemies(120:8595) -> ESBranchRemainingEnemies
+Branch on remaining enemies <= 1, target rnd 13
+ESAttackMultihit(15:11903) -> Baba!
+Condition: 40% chance (ai:40 rnd:0)
+Deal 110% damage
+ESOrbChangeAttack(48:11904) -> Babaan? (Do you want some tea?)
+Condition: 40% chance (ai:40 rnd:0)
+Change Random to Heal, Deal 90% damage
+ESEndPath(36:26) -> ESEndPath
+end_turn
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 2, target rnd 10
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b11
+ESDebuffRCV(105:12065) -> Babaan... (It's hard for you too)
+Rcv 50% for 5 turns
+ESEndPath(36:26) -> ESEndPath
+end_turn
+ESLeaderSwap(75:11907) -> Babaan! (Don't cave in)
+Condition: One-time use (ai:100 rnd:0) (one-time: 1)
+Leader changes to random sub for 1 turns
+ESAttackMultihit(15:11906) -> Loving Slap
+Deal 200% damage
+ESEndPath(36:26) -> ESEndPath
+end_turn

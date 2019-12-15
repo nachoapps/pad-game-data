@@ -1,0 +1,33 @@
+#2822 - Newspaper Club's New Member, Waron
+monster size: 4
+new AI: True
+start/max counter: 1
+counter increment: 1
+
+ESPreemptive(49:3402) -> ESPreemptive
+Enable preempt if level 4
+ESBranchLevel(35:25) -> ESBranchLevel
+Branch on level > 4, target rnd 4
+ESEndPath(36:26) -> ESEndPath
+end_turn
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 1, target rnd 7
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b1
+ESOrbLock(94:4109) -> Can I get an interview?
+Lock 5 random Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs
+ESBranchCard(90:4113) -> ESBranchCard
+Branch on player_cards HAS [2815], target rnd 10
+ESColumnSpawnMulti(77:4111) -> Ice Camera
+Condition: One-time use (ai:100 rnd:0) (one-time: 1)
+Change 1st column to Water orbs, Deal 100% damage
+ESRandomSpawn(92:4110) -> Newspaper Extra
+Condition: When fire, water, wood, light, dark, heal, poison, mortal poison orbs are on the board (ai:100 rnd:0)
+Spawn random 3 Jammer orbs, Deal 100% damage
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 2, target rnd 8
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b11
+ESRandomSpawn(92:4112) -> Are you here for the interview too, boss?
+Condition: When fire, water, wood, light, dark, jammer, poison, mortal poison orbs are on the board (ai:100 rnd:0)
+Spawn random 3 Heal orbs

@@ -1,0 +1,43 @@
+#1958 - Water Cat Dragon, Russian Nyadra
+monster size: 5
+new AI: True
+start/max counter: 1
+counter increment: 0
+
+ESPreemptive(49:355) -> ESPreemptive
+Enable preempt if level 5
+ESBranchLevel(35:25) -> ESBranchLevel
+Branch on level > 5, target rnd 4
+ESEndPath(36:26) -> ESEndPath
+end_turn
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 1, target rnd 8
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b1
+ESAttackMultihit(15:2099) -> Preemptive Swat
+Deal 100% damage
+ESEndPath(36:26) -> ESEndPath
+end_turn
+ESBranchHP(28:18) -> ESBranchHP
+Branch on hp < 10, target rnd 14
+ESStatusShield(20:2096) -> Emerald Eye
+Condition: When < 80% hp , one-time use (ai:100 rnd:0) (one-time: 1)
+Voids status ailments for 3 turns
+ESRowSpawnMulti(79:2100) -> Poison-Dripping Claws
+Condition: 50% chance when < 30% hp (ai:50 rnd:0)
+Change 2nd, 4th row to Water, Poison orbs, Deal 200% damage
+ESAttackMultihit(15:2095) -> Triple Swat
+Condition: 50% chance when < 50% hp (ai:50 rnd:0)
+Deal 180% damage (3 hits, 60% each)
+ESRowSpawnMulti(79:2097) -> Watery Claws
+Condition: When < 30% hp (ai:100 rnd:0)
+Change 2nd, 4th row to Water orbs, Deal 200% damage
+ESPoisonChangeRandomAttack(64:2094) -> Poison Claws
+Change Random 4 to Poison, Deal 110% damage
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 2, target rnd 9
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b11
+ESBindRandom(1:2098) -> Blue-Eyed Grudge
+Condition: When < 10% hp , one-time use (ai:100 rnd:0) (one-time only)
+Bind 6 random cards for 10 turns

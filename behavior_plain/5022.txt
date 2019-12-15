@@ -1,0 +1,42 @@
+#5022 - Servant, True Assassin
+monster size: 5
+new AI: True
+start/max counter: 7
+counter increment: 0
+
+ESPreemptive(49:3402) -> ESPreemptive
+Enable preempt if level 4
+ESBranchLevel(35:25) -> ESBranchLevel
+Branch on level > 4, target rnd 4
+ESEndPath(36:26) -> ESEndPath
+end_turn
+ESGravity(50:12225) -> Unleash me.
+Condition: One-time use (ai:100 rnd:0) (one-time: 4)
+Player -99% HP
+ESBranchHP(29:19) -> ESBranchHP
+Branch on hp > 100, target rnd 10
+ESRandomSpawn(92:12226) -> You saw my face, did you?
+Condition: One-time use & when Fire, Water, Wood, Light, Dark, Heal, Jammer, Mortal Poison orbs are on the board (ai:100 rnd:0) (one-time: 2)
+Spawn random 6 Poison orbs
+ESBranchHP(29:19) -> ESBranchHP
+Branch on hp > 51, target rnd 10
+ESAbsorbCombo(67:12229) -> Protection Against the Wind
+Condition: One-time use (ai:100 rnd:0) (one-time: 1)
+Absorb combo <= 4 damage for 5 turns
+ESBranchHP(28:18) -> ESBranchHP
+Branch on hp < 20, target rnd 13
+ESBlindStickyRandom(97:12227) -> Knives painted black
+Condition: 50% chance (ai:0 rnd:50)
+Blind random 3~6 orbs for 1 turns, Deal 100% damage
+ESBlind(62:12228) -> If you don't move, it will swallow you.
+Condition: 50% chance (ai:0 rnd:50)
+Blind all orbs on the board, Deal 95% damage
+ESEndPath(36:26) -> ESEndPath
+end_turn
+SkillSet:
+	[0] ESGravity(50:12231) -> Noble Phantasm... Zabaniya!
+	Player -50% HP
+	[1] ESAttackMultihit(15:12232) -> You... lose!
+	Deal 100% damage
+ESEndPath(36:26) -> ESEndPath
+end_turn

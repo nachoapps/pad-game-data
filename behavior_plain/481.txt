@@ -1,0 +1,23 @@
+#481 - Icedragon Depth Plesios
+monster size: 5
+new AI: False
+start/max counter: 1
+counter increment: 1
+
+ESBranchLevel(35:25) -> ESBranchLevel
+Branch on level > 3, target rnd 3
+ESEndPath(36:26) -> ESEndPath
+end_turn
+ESNone(0:0) -> ESNone
+nothing
+ESBranchHP(29:19) -> ESBranchHP
+Branch on hp > 25, target rnd 7
+ESAttackMultihit(15:229) -> God Blizzard Breath
+Deal 1000% damage (5 hits, 200% each)
+ESEndPath(36:26) -> ESEndPath
+end_turn
+ESOrbChangeAttack(48:693) -> Freezing Breath
+Condition: When < 75% hp , one-time use (ai:70 rnd:0) (one-time: 1)
+Change Random to Jammer, Deal 80% damage
+ESAttackMultihit(15:249) -> Blizzard Breath
+Deal 100% damage (2 hits, 50% each)

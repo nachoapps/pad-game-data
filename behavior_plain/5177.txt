@@ -1,0 +1,107 @@
+#5177 - Azure Riverdragon, Unma
+monster size: 5
+new AI: True
+start/max counter: 1
+counter increment: 1
+
+ESPreemptive(49:318) -> ESPreemptive
+Enable preempt if level 1
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 1, target rnd 10
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b1
+SkillSet:
+	Condition: One-time use (ai:0 rnd:20) (one-time: 1)
+	[0] ESStatusShield(20:12826) -> Water & Light Divine View
+	Voids status ailments for 999 turns
+	[1] ESVoidShield(71:12827) -> A Wisp of the Rain Dragon's Cloud
+	Void damage >= 25000000 for 999 turns
+	[2] ESAttributeBlock(107:12828) -> Leaving it to the Fortune of Chance
+	Unable to match Fire orbs for 1 turns, Deal 120% damage
+SkillSet:
+	Condition: One-time use (ai:0 rnd:20) (one-time: 1)
+	[0] ESStatusShield(20:12826) -> Water & Light Divine View
+	Voids status ailments for 999 turns
+	[1] ESVoidShield(71:12827) -> A Wisp of the Rain Dragon's Cloud
+	Void damage >= 25000000 for 999 turns
+	[2] ESAttributeBlock(107:12829) -> Leaving it to the Fortune of Chance
+	Unable to match Water orbs for 1 turns, Deal 120% damage
+SkillSet:
+	Condition: One-time use (ai:0 rnd:20) (one-time: 1)
+	[0] ESStatusShield(20:12826) -> Water & Light Divine View
+	Voids status ailments for 999 turns
+	[1] ESVoidShield(71:12827) -> A Wisp of the Rain Dragon's Cloud
+	Void damage >= 25000000 for 999 turns
+	[2] ESAttributeBlock(107:12830) -> Leaving it to the Fortune of Chance
+	Unable to match Wood orbs for 1 turns, Deal 120% damage
+SkillSet:
+	Condition: One-time use (ai:0 rnd:20) (one-time: 1)
+	[0] ESStatusShield(20:12826) -> Water & Light Divine View
+	Voids status ailments for 999 turns
+	[1] ESVoidShield(71:12827) -> A Wisp of the Rain Dragon's Cloud
+	Void damage >= 25000000 for 999 turns
+	[2] ESAttributeBlock(107:12831) -> Leaving it to the Fortune of Chance
+	Unable to match Light orbs for 1 turns, Deal 120% damage
+SkillSet:
+	Condition: One-time use (ai:0 rnd:20) (one-time: 1)
+	[0] ESStatusShield(20:12826) -> Water & Light Divine View
+	Voids status ailments for 999 turns
+	[1] ESVoidShield(71:12827) -> A Wisp of the Rain Dragon's Cloud
+	Void damage >= 25000000 for 999 turns
+	[2] ESAttributeBlock(107:12832) -> Leaving it to the Fortune of Chance
+	Unable to match Dark orbs for 1 turns, Deal 120% damage
+ESEndPath(36:26) -> ESEndPath
+end_turn
+ESBranchHP(28:18) -> ESBranchHP
+Branch on hp < 10, target rnd 24
+ESBranchHP(28:18) -> ESBranchHP
+Branch on hp < 50, target rnd 20
+ESAttributeBlock(107:12828) -> Leaving it to the Fortune of Chance
+Condition: One-time use (ai:20 rnd:0) (one-time: 1)
+Unable to match Fire orbs for 1 turns, Deal 120% damage
+ESAttributeBlock(107:12829) -> Leaving it to the Fortune of Chance
+Condition: One-time use (ai:25 rnd:0) (one-time: 1)
+Unable to match Water orbs for 1 turns, Deal 120% damage
+ESAttributeBlock(107:12830) -> Leaving it to the Fortune of Chance
+Condition: One-time use (ai:33 rnd:0) (one-time: 1)
+Unable to match Wood orbs for 1 turns, Deal 120% damage
+ESAttributeBlock(107:12831) -> Leaving it to the Fortune of Chance
+Condition: One-time use (ai:50 rnd:0) (one-time: 1)
+Unable to match Light orbs for 1 turns, Deal 120% damage
+ESAttributeBlock(107:12832) -> Leaving it to the Fortune of Chance
+Condition: One-time use (ai:100 rnd:0) (one-time: 1)
+Unable to match Dark orbs for 1 turns, Deal 120% damage
+SkillSet:
+	Condition: 50% chance (ai:0 rnd:50)
+	[0] ESColumnSpawnMulti(77:12834) -> Ocean Wave of the Mighty Rivals
+	Change 1st, 6th column to Water, Jammer, Poison orbs, Deal 50% damage
+	[1] ESDamageShield(74:12835) -> Attack and Defense Splash
+	Reduce damage from all sources by 50% for 1 turns, Deal 50% damage
+SkillSet:
+	Condition: 50% chance (ai:0 rnd:50)
+	[0] ESRowSpawnMulti(79:12837) -> Ocean Wave of the Mighty Rivals
+	Change 1st, 5th row to Water, Jammer, Poison orbs, Deal 50% damage
+	[1] ESBindAttack(63:12838) -> God's Will of the Playful Dream
+	Bind 2 random subs for 1~2 turns, Deal 50% damage
+ESEndPath(36:26) -> ESEndPath
+end_turn
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 2, target rnd 12
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b11
+SkillSet:
+	[0] ESBlindStickyRandom(97:12840) -> Finishing Touch Towards Accomplishment
+	Blind random 15 orbs for 5 turns
+	[1] ESCloud(104:12841) -> Fury Overflow of Righteous Indignation
+	2x5 cloud appear for 10 turns at 1st row, 3rd column
+ESEndPath(36:26) -> ESEndPath
+end_turn
+SkillSet:
+	[0] ESDispel(6:12843) -> A Bolt Out of the Blue
+	Voids player buff effects
+	[1] ESAttackMultihit(15:12844) -> Life & Death are ruled by fate
+	Deal 1600% damage (4 hits, 400% each)
+ESEndPath(36:26) -> ESEndPath
+end_turn
+ESAttributeResist(72:12845) -> Water Halved
+Reduce damage from Water by 50%

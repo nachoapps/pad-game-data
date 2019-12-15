@@ -1,0 +1,49 @@
+#1168 - Green Flower Dragon, Casablanca
+monster size: 5
+new AI: False
+start/max counter: 1
+counter increment: 1
+
+ESPreemptive(49:355) -> ESPreemptive
+Enable preempt if level 5
+ESBranchLevel(35:25) -> ESBranchLevel
+Branch on level > 5, target rnd 4
+ESEndPath(36:26) -> ESEndPath
+end_turn
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 1, target rnd 8
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b1
+ESStatusShield(20:205) -> Fertile Guard
+Voids status ailments for 999 turns
+ESEndPath(36:26) -> ESEndPath
+end_turn
+ESBranchHP(28:18) -> ESBranchHP
+Branch on hp < 50, target rnd 16
+ESAttackMultihit(15:982) -> Mystic Blossom
+Condition: When < 30% hp (ai:100 rnd:0)
+Deal 240% damage (3 hits, 80% each)
+ESOrbChangeAttack(48:977) -> Mystic Bulb
+Condition: One-time use (ai:100 rnd:0) (one-time: 1)
+Change Random to Heal, Deal 200% damage
+ESGravity(50:978) -> Mystic Bulb
+Condition: 30% chance (ai:30 rnd:0)
+Player -50% HP
+ESBlind(62:979) -> Mystic Bulb
+Condition: 30% chance (ai:30 rnd:0)
+Blind all orbs on the board, Deal 75% damage
+ESOrbChangeAttack(48:980) -> Mystic Bulb
+Condition: 30% chance (ai:30 rnd:0)
+Change Fire to Wood, Deal 75% damage
+ESNone(0:0) -> ESNone
+nothing
+ESEndPath(36:26) -> ESEndPath
+end_turn
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 2, target rnd 9
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b11
+ESAbsorbAttribute(53:976) -> Gabriel's Protection
+Absorb Fire damage for 3 turns
+ESEndPath(36:26) -> ESEndPath
+end_turn

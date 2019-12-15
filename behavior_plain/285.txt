@@ -1,0 +1,22 @@
+#285 - Wind Mechdragon, Canopus
+monster size: 5
+new AI: False
+start/max counter: 1
+counter increment: 0
+
+ESBranchLevel(35:25) -> ESBranchLevel
+Branch on level > 5, target rnd 3
+ESEndPath(36:26) -> ESEndPath
+end_turn
+ESRecoverEnemy(7:84) -> Auto Recover
+Condition: When < 50% hp , one-time use (ai:75 rnd:0) (one-time: 1)
+Enemy recover 40%~50% hp
+ESBranchHP(28:18) -> ESBranchHP
+Branch on hp < 25, target rnd 7
+ESStorePower(8:117) -> High Energy Charge
+Condition: 50% chance when < 75% hp (ai:50 rnd:0)
+Increase damage to 300% for the next attack
+ESEndPath(36:26) -> ESEndPath
+end_turn
+ESAttackMultihit(15:107) -> Cyclone Blast
+Deal 250% damage (5 hits, 50% each)

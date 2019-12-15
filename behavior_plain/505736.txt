@@ -1,0 +1,40 @@
+#505736 - 煽惑の狡知神・ロキ
+monster size: 5
+new AI: True
+start/max counter: 7
+counter increment: 0
+
+ESPreemptive(49:318) -> ESPreemptive
+Enable preempt if level 1
+SkillSet:
+	Condition: One-time use (ai:100 rnd:0) (one-time: 4)
+	[0] ESSkyfall(68:15536) -> 終焉の時は来たのだ！
+	Jammer, Poison skyfall +16% for 10 turns
+	[1] ESDamageShield(74:15537) -> 終末の刻印
+	Reduce damage from all sources by 75% for 3 turns
+ESDebuffMovetime(39:15541) -> 許さんぞぉ！！
+Condition: When < 50% hp , one-time use (ai:100 rnd:0) (one-time: 2)
+Movetime 50% for 5 turns
+ESBranchHP(28:18) -> ESBranchHP
+Branch on hp < 20, target rnd 12
+ESBranchCounter(32:22) -> ESBranchCounter
+Branch on counter > 2, target rnd 9
+ESSetCounter(26:16) -> ESSetCounter
+counter + 1
+ESAttackMultihit(15:15539) -> 逆乱の刃
+Deal 100% damage (4 hits, 25% each)
+ESEndPath(36:26) -> ESEndPath
+end_turn
+ESSetCounter(25:15) -> ESSetCounter
+counter = 0
+ESSpinnersRandom(109:15540) -> 混沌のルーン
+Random 2 orbs change every 1.0s for 3 turns
+ESEndPath(36:26) -> ESEndPath
+end_turn
+ESAttackUPRemainingEnemies(17:15535) -> ルーンエンハンス
+Condition: When < 20% hp , one-time use, when <= 1 enemies remain (ai:100 rnd:0) (one-time: 1)
+Increase damage to 130% for the next 3 turns
+ESAttackMultihit(15:15542) -> 消え去るがいい！
+Deal 105% damage (3 hits, 35% each)
+ESEndPath(36:26) -> ESEndPath
+end_turn

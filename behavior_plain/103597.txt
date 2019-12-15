@@ -1,0 +1,87 @@
+#103597 - 裏冥翼機・デモニアス
+monster size: 5
+new AI: True
+start/max counter: 2
+counter increment: 1
+
+ESPreemptive(49:318) -> ESPreemptive
+Enable preempt if level 1
+ESDeathCry(69:15309) -> ＿デモニアス変身
+Condition: On death (ai:0 rnd:0)
+Show message: 天空よりパーツが現れた|デモニアスとパーツが合体していく
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 1, target rnd 7
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b1
+SkillSet:
+	[0] ESStatusShield(20:15304) -> ヘルズアーマー
+	Voids status ailments for 999 turns
+	[1] ESBombFixedSpawn(103:15305) -> デモンフレア
+	Spawn locked Bomb orbs in the specified positions
+	[2] ESSkyfall(96:15306) -> カオスフィールド
+	Locked random skyfall +100% for 1 turns
+	[3] ESGravity(50:15307) -> ダークネスウェーブ
+	Player -100% HP
+ESEndPath(36:26) -> ESEndPath
+end_turn
+SkillSet:
+	Condition: When < 1% hp (ai:100 rnd:0)
+	[0] ESRecoverEnemy(86:6678) -> セルプラリファレイト
+	Enemy recover 51% hp
+	[1] ESAttackUPRemainingEnemies(17:6675) -> フォースアモク
+	Increase damage to 200% for the next 999 turns
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 2, target rnd 11
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b11
+ESFixedStart(101:6664) -> エナジーレイ
+Fix orb movement starting point to random position on the board, Deal 200% damage
+ESBranchHP(28:18) -> ESBranchHP
+Branch on hp < 50, target rnd 16
+ESDebuffMovetime(39:6666) -> ブラックメタルグレア
+Condition: One-time use (ai:0 rnd:15) (one-time: 2)
+Movetime -2s for 2 turns, Deal 130% damage
+ESSkillDelay(89:6667) -> サプレスパルス
+Condition: One-time use (ai:0 rnd:15) (one-time: 2)
+Delay active skills by 2 turns, Deal 130% damage
+ESBombRandomSpawn(102:6665) -> イービルボム
+Condition: 70% chance (ai:0 rnd:70)
+Spawn random 3 Bomb orbs, Deal 130% damage
+ESEndPath(36:26) -> ESEndPath
+end_turn
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 4, target rnd 20
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b111
+SkillSet:
+	Condition: When < 50% hp (ai:100 rnd:0)
+	[0] ESAbsorbCombo(67:6668) -> オーディールディメンション
+	Absorb combo <= 5 damage for 999 turns
+	[1] ESSkyfall(68:6669) -> ジャミング
+	Jammer skyfall +20% for 10 turns
+ESEndPath(36:26) -> ESEndPath
+end_turn
+ESAttackMultihit(15:6676) -> リミットブレイク
+Condition: When < 20% hp (ai:100 rnd:0)
+Deal 6000% damage (3 hits, 2000% each)
+SkillSet:
+	Condition: One-time use (ai:0 rnd:20) (one-time: 2)
+	[0] ESSkillDelay(89:6672) -> サプレスパルス
+	Delay active skills by 2 turns
+	[1] ESAttackMultihit(15:6673) -> デッドウィング
+	Deal 210% damage (3 hits, 70% each)
+SkillSet:
+	Condition: One-time use (ai:0 rnd:20) (one-time: 2)
+	[0] ESDebuffMovetime(39:6671) -> ブラックメタルグレア
+	Movetime -2s for 2 turns
+	[1] ESBindAttack(63:6674) -> パラリシスダート
+	Bind 1 random cards for 3 turns, Deal 180% damage
+ESBombRandomSpawn(102:6683) -> イービルボム
+Condition: 60% chance (ai:0 rnd:60)
+Spawn random 3 Bomb orbs, Deal 160% damage
+ESEndPath(36:26) -> ESEndPath
+end_turn
+ESAttributeResist(72:6677) -> ロボ光半減
+Reduce damage from Light by 50%
+ESResolve(73:6680) -> ロボ根性
+Survive attacks with 1 HP when HP > 50%

@@ -1,0 +1,15 @@
+#312 - Blazing Ice Ogre
+monster size: 4
+new AI: False
+start/max counter: 1
+counter increment: 0
+
+ESBranchHP(28:18) -> ESBranchHP
+Branch on hp < 50, target rnd 4
+ESBindRandom(1:367) -> Binding Move
+Condition: One-time use (ai:100 rnd:0) (one-time: 1)
+Bind 1 random cards for 10 turns
+ESEndPath(36:26) -> ESEndPath
+end_turn
+ESAttackMultihit(15:365) -> Flame Strike
+Deal 150% damage

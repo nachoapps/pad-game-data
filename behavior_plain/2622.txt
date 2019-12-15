@@ -1,0 +1,64 @@
+#2622 - スネイク・ヘッズ副頭・陣内公平
+monster size: 5
+new AI: True
+start/max counter: 0
+counter increment: 0
+
+ESPreemptive(49:3402) -> ESPreemptive
+Enable preempt if level 4
+ESBranchLevel(35:25) -> ESBranchLevel
+Branch on level > 4, target rnd 4
+ESEndPath(36:26) -> ESEndPath
+end_turn
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 1, target rnd 8
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b1
+SkillSet:
+	[0] ESInactivity(66:2688) -> もういい…
+	Do nothing
+	[1] ESStatusShield(20:2674) -> 最後はオレがきっちりカタをつける
+	Voids status ailments for 999 turns
+ESEndPath(36:26) -> ESEndPath
+end_turn
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 2, target rnd 11
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b11
+ESBranchCard(90:2686) -> ESBranchCard
+Branch on player_cards HAS [2617, 2618], target rnd 23
+ESBranchHP(28:18) -> ESBranchHP
+Branch on hp < 50, target rnd 20
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 4, target rnd 15
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b111
+ESSkillDelay(89:2675) -> おまえらとりあえずワビを入れろや
+Delay active skills by 2~5 turns
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 8, target rnd 18
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b1111
+ESRowSpawnMulti(79:2676) -> ここに頭をこすりつけてな！
+Change 5th row to Poison orbs, Deal 100% damage
+ESOrbChangeAttack(48:2677) -> あんまり調子にのんなよてめー
+Change Heal to Fire, Deal 100% damage
+ESRandomSpawn(92:2678) -> あんまり調子にのんなよてめー
+Condition: When water, wood, light, dark, heal, jammer, poison, mortal poison orbs are on the board (ai:100 rnd:0)
+Spawn random 6 Fire orbs, Deal 100% damage
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 16, target rnd 18
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b11111
+SkillSet:
+	[0] ESAttackUPRemainingEnemies(17:2679) -> タイマンか それとも全員でふくろか…
+	Increase damage to 200% for the next 99 turns
+	[1] ESDamageShield(74:2680) -> 今日のオレはそう簡単にくたばんねーぞ
+	Reduce damage from all sources by 50% for 1 turns
+ESRandomSpawn(92:2687) -> 久しぶりだなパルコ
+Condition: When fire, water, light, dark, heal, jammer, poison, mortal poison orbs are on the board (ai:100 rnd:0)
+Spawn random 8 Wood orbs
+SkillSet:
+	Condition: On death (ai:100 rnd:0)
+	[0] ESSkillSet(83:2685) -> オレも何かを見つけてこようと思う！ + テルの言う光ってやつさ… そしたら…
+	Do nothing + Do nothing

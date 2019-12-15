@@ -1,0 +1,82 @@
+#3015 - War Machine King, Liberty Geist
+monster size: 5
+new AI: True
+start/max counter: 11
+counter increment: 0
+
+ESPreemptive(49:318) -> ESPreemptive
+Enable preempt if level 1
+ESBranchLevel(35:25) -> ESBranchLevel
+Branch on level > 7, target rnd 4
+SkillSet:
+	Condition: One-time use (ai:100 rnd:0) (one-time: 6)
+	[0] ESAbsorbCombo(67:4925) -> Burning Flame
+	Absorb combo <= 5 damage for 99 turns
+	[1] ESOrbLock(94:4926) -> Power Claw
+	Lock all Fire, Wood orbs
+SkillSet:
+	Condition: One-time use (ai:100 rnd:0) (one-time: 6)
+	[0] ESAbsorbCombo(67:4925) -> Burning Flame
+	Absorb combo <= 5 damage for 99 turns
+	[1] ESOrbLock(94:4926) -> Power Claw
+	Lock all Fire, Wood orbs
+SkillSet:
+	Condition: When < 70% hp , one-time use (ai:100 rnd:0) (one-time: 3)
+	[0] ESVoidShield(71:4931) -> Power Erase
+	Void damage >= 500000 for 3 turns
+	[1] ESGravity(50:4932) -> Metal Slicer
+	Player -99% HP
+ESDamageShield(74:4930) -> Flare Armor
+Condition: One-time use (ai:100 rnd:0) (one-time: 4)
+Reduce damage from all sources by 50% for 3 turns
+ESOrbLock(94:4942) -> Explosive Skewer
+Condition: When < 15% hp (ai:100 rnd:0)
+Lock all Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs, Deal 750% damage
+ESOrbLock(94:4935) -> Power Claw
+Condition: When < 70% hp , one-time use (ai:100 rnd:0) (one-time: 2)
+Lock 8 random Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs, Deal 80% damage
+ESBlind(62:4934) -> Dark Flare
+Condition: One-time use (ai:100 rnd:0) (one-time: 1)
+Blind all orbs on the board, Deal 170% damage
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 1, target rnd 16
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b1
+ESAttackUPRemainingEnemies(17:4943) -> Heat Up
+Condition: When < 50% hp, when <= 1 enemies remain (ai:100 rnd:0)
+Increase damage to 150% for the next 999 turns
+ESRandomSpawn(92:4944) -> Destroying Claw
+Condition: When < 30% hp & when Fire, Water, Wood, Light, Dark, Heal, Mortal Poison orbs are on the board (ai:100 rnd:0)
+Spawn random 4 Jammer, Poison orbs, Deal 110% damage
+ESOrbChangeAttack(48:4936) -> Death Claw
+Condition: 50% chance (ai:50 rnd:0)
+Change Random to Poison, Deal 110% damage
+ESOrbChangeAttack(48:4937) -> Crushing Claw
+Change Random to Jammer, Deal 110% damage
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 2, target rnd 21
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b11
+ESAttackUPRemainingEnemies(17:4943) -> Heat Up
+Condition: When < 50% hp, when <= 1 enemies remain (ai:100 rnd:0)
+Increase damage to 150% for the next 999 turns
+ESOrbLock(94:4939) -> Evil Hold
+Condition: 50% chance (ai:50 rnd:0)
+Lock all Jammer, Poison orbs, Deal 120% damage
+ESOrbLock(94:4938) -> Element Hold
+Lock 7 random Fire, Water, Wood, Light, Dark, Heal orbs, Deal 120% damage
+ESFlagOperation(24:14) -> ESFlagOperation
+flag UNSET 0b11
+ESAttackUPRemainingEnemies(17:4943) -> Heat Up
+Condition: When < 50% hp, when <= 1 enemies remain (ai:100 rnd:0)
+Increase damage to 150% for the next 999 turns
+ESAttackMultihit(15:4945) -> Melting Claw
+Condition: When < 30% hp (ai:100 rnd:0)
+Deal 160% damage (4 hits, 40% each)
+ESBindSkill(14:4940) -> Heat Chain
+Condition: 50% chance (ai:50 rnd:0)
+Bind active skills for 3 turns, Deal 130% damage
+ESAttackMultihit(15:4941) -> Cleave Rush
+Deal 140% damage (4 hits, 35% each)
+ESAttributeResist(72:4928) -> Halves Light-Dark
+Reduce damage from Light, Dark by 50%

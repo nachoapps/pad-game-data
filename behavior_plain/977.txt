@@ -1,0 +1,35 @@
+#977 - Gold Pirate Dragon, Anne & Mary
+monster size: 5
+new AI: False
+start/max counter: 1
+counter increment: 1
+
+ESPreemptive(49:355) -> ESPreemptive
+Enable preempt if level 5
+ESBranchLevel(35:25) -> ESBranchLevel
+Branch on level > 5, target rnd 4
+ESEndPath(36:26) -> ESEndPath
+end_turn
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 1, target rnd 8
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b1
+ESAttackMultihit(15:857) -> Blitz Attack
+Deal 100% damage
+ESEndPath(36:26) -> ESEndPath
+end_turn
+ESBranchHP(29:19) -> ESBranchHP
+Branch on hp > 50, target rnd 12
+ESAttackUPRemainingEnemies(17:860) -> Triple Combination
+Condition: When < 50% hp, when <= 1 enemies remain (ai:100 rnd:0)
+Increase damage to 150% for the next 5 turns
+ESAttackMultihit(15:858) -> Cross Cutlass
+Deal 120% damage (2 hits, 60% each)
+ESEndPath(36:26) -> ESEndPath
+end_turn
+ESGravity(50:859) -> Rackham's Broadside
+Condition: One-time use (ai:70 rnd:0) (one-time: 1)
+Player -99% HP
+ESAttackMultihit(15:858) -> Cross Cutlass
+Condition: 70% chance (ai:70 rnd:0)
+Deal 120% damage (2 hits, 60% each)

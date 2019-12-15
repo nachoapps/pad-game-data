@@ -1,0 +1,19 @@
+#204729 - リーフトレント
+monster size: 4
+new AI: True
+start/max counter: 0
+counter increment: 0
+
+ESBranchLevel(35:25) -> ESBranchLevel
+Branch on level > 4, target rnd 3
+ESEndPath(36:26) -> ESEndPath
+end_turn
+ESBranchHP(28:18) -> ESBranchHP
+Branch on hp < 99, target rnd 5
+ESEndPath(36:26) -> ESEndPath
+end_turn
+ESRandomSpawn(92:10654) -> 木樹の呪い
+Condition: When fire, water, wood, light, dark, heal, jammer, mortal poison orbs are on the board (ai:100 rnd:0)
+Spawn random 4 Poison orbs
+ESEndPath(36:26) -> ESEndPath
+end_turn

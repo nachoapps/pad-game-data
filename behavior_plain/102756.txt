@@ -6,19 +6,24 @@ counter increment: 0
 
 ESPreemptive(49:318) -> ESPreemptive
 Enable preempt if level 1
+
 SkillSet:
 	Condition: One-time use (ai:100 rnd:0) (one-time: 1)
 	[0] ESRandomSpawn(92:10160) -> Colorful Melody
 	Spawn random 8 Fire, Water, Wood, Heal orbs
 	[1] ESRandomSpawn(92:10161) -> Love of Fair Crimson
 	Spawn random 1 Heal orbs
+
 ESAttackMultihit(15:10165) -> Compassionate Butterfly
 Condition: When < 10% hp (ai:100 rnd:0)
 Deal 200% damage (10 hits, 20% each)
+
 ESRandomSpawn(92:10163) -> Flame Bloom
 Condition: 50% chance & when Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs are on the board (ai:50 rnd:0)
 Spawn random 4 Fire orbs, Deal 100% damage
+
 ESAttackMultihit(15:10164) -> Crimson Wing Dance
 Deal 120% damage (3 hits, 40% each)
+
 ESEndPath(36:26) -> ESEndPath
 end_turn

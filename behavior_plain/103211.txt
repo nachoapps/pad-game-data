@@ -6,14 +6,19 @@ counter increment: 1
 
 ESPreemptive(49:3402) -> ESPreemptive
 Enable preempt if level 4
+
 ESBranchLevel(35:25) -> ESBranchLevel
 Branch on level > 4, target rnd 4
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 1, target rnd 8
+
 ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b1
+
 SkillSet:
 	Condition: One-time use (ai:100 rnd:0) (one-time: 2)
 	[0] ESStatusShield(20:15337) -> 骨骸の形象
@@ -22,50 +27,70 @@ SkillSet:
 	Player -99% HP
 	[2] ESSkyfall(68:15339) -> 死屍の来訪
 	Poison skyfall +20% for 5 turns
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 4, target rnd 24
+
 ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 10, target rnd 21
+
 ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 2, target rnd 17
+
 ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b11
+
 ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 75, target rnd 15
+
 ESRandomSpawn(92:5907) -> 宝棒生滅
 Condition: When fire, water, wood, light, dark, jammer, poison, mortal poison orbs are on the board (ai:100 rnd:0)
 Spawn random 6 Heal orbs, Deal 140% damage
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESDebuffMovetime(39:5908) -> 宝棒苦烙
 Movetime -2s for 6 turns
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESSkillDelay(89:5915) -> 畏怖の怨弾
 Condition: One-time use (ai:100 rnd:0) (one-time: 2)
 Delay active skills by 1~3 turns, Deal 120% damage
+
 ESOrbChangeAttack(48:5913) -> 破邪咬
 Change Jammer to Light, Deal 150% damage
+
 ESRandomSpawn(92:5914) -> 霧黒吼
 Condition: 50% chance when < 75% hp & when Heal orbs are on the board (ai:50 rnd:0)
 Spawn random 2 Jammer orbs, Deal 80% damage
+
 ESRandomSpawn(92:5912) -> 六骨鎌
 Condition: When fire, water, wood, light, dark, heal, poison, mortal poison orbs are on the board (ai:100 rnd:0)
 Spawn random 6 Jammer orbs, Deal 100% damage
+
 ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b111
+
 SkillSet:
 	[0] ESGravity(50:5906) -> 護法の冥域
 	Player -99% HP
 	[1] ESBoardChange(84:5910) -> ドロップが死の色に染まる
 	Change all orbs to Dark, Mortal Poison
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESGravity(50:5911) -> 無明
 Player -134% HP
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESResolve(73:5916) -> 根性闇明王龍
 Survive attacks with 1 HP when HP > 76%

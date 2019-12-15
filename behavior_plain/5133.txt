@@ -6,10 +6,13 @@ counter increment: 1
 
 ESPreemptive(49:318) -> ESPreemptive
 Enable preempt if level 1
+
 ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 1, target rnd 6
+
 ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b1
+
 SkillSet:
 	[0] ESAttackMultihit(15:13826) -> Divine Queen's Rite
 	Deal 300% damage
@@ -17,58 +20,83 @@ SkillSet:
 	Voids status ailments for 3 turns
 	[2] ESAbsorbCombo(67:13828) -> Divine Queen's Trial
 	Absorb combo <= 7 damage for 3 turns
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESBranchCounter(32:22) -> ESBranchCounter
 Branch on counter > 3, target rnd 15
+
 ESSetCounter(26:16) -> ESSetCounter
 counter + 1
+
 ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 1, target rnd 27
+
 ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 20, target rnd 21
+
 ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 99, target rnd 12
+
 ESJammerChangeRandom(13:13832) -> Mischief by God
 Change Random 2 to Jammer, Deal 80% damage
+
 ESAttackMultihit(15:13833) -> Double Slap
 Condition: 50% chance (ai:0 rnd:50)
 Deal 105% damage (3 hits, 35% each)
+
 ESBindAttack(63:13834) -> Shadow Shackler
 Condition: 50% chance (ai:0 rnd:50)
 Bind 1 friend leader for 2 turns, Deal 100% damage
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESBranchCounter(32:22) -> ESBranchCounter
 Branch on counter > 4, target rnd 8
+
 ESSetCounter(26:16) -> ESSetCounter
 counter + 1
+
 ESBranchHP(29:19) -> ESBranchHP
 Branch on hp > 100, target rnd 19
+
 ESAbsorbCombo(67:13830) -> Dark Matter
 Absorb combo <= 6 damage for 99 turns
+
 SkillSet:
 	[0] ESAbsorbCombo(67:13830) -> Dark Matter
 	Absorb combo <= 6 damage for 99 turns
 	[1] ESBindRandom(1:13831) -> Divine Queen's Breath
 	Bind 6 random cards for 3 turns
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 2, target rnd 25
+
 ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b11
+
 ESBindAwoken(88:13835) -> Charging Magical Power
 Bind awoken skills for 3 turns
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESAttackMultihit(15:13836) -> Meteor Graviton Bomb
 Deal 800% damage
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESRecoverEnemy(86:13837) -> Praise of the Gods
 Enemy recover 85% hp
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESResolve(73:13824) -> Resolve
 Survive attacks with 1 HP when HP > 85%

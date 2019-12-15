@@ -6,26 +6,37 @@ counter increment: 1
 
 ESPreemptive(49:355) -> ESPreemptive
 Enable preempt if level 5
+
 ESBranchLevel(35:25) -> ESBranchLevel
 Branch on level > 5, target rnd 4
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 1, target rnd 8
+
 ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b1
+
 ESBlind(5:1474) -> どいつから食ってやろうかな
 Blind all orbs on the board
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 2, target rnd 12
+
 ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b11
+
 ESAbsorbAttribute(53:1475) -> ア～～ン
 Absorb Light damage for 3 turns
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESOrbChangeAttack(48:1476) -> デヘヘヘヘヘ…!!
 Condition: When < 50% hp , one-time use (ai:100 rnd:0) (one-time: 1)
 Change Random to Dark, Deal 125% damage

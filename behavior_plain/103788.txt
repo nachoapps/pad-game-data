@@ -6,31 +6,44 @@ counter increment: 0
 
 ESPreemptive(49:318) -> ESPreemptive
 Enable preempt if level 1
+
 ESNoSkyfall(127:15322) -> オーバーアクセル
 Condition: One-time use (ai:100 rnd:0) (one-time: 2)
 No skyfall for 10 turns
+
 ESSetCounter(26:16) -> ESSetCounter
 counter + 1
+
 ESBranchHP(29:19) -> ESBranchHP
 Branch on hp > 51, target rnd 6
+
 ESAttackUPRemainingEnemies(17:15326) -> イグナイトブースト
 Condition: One-time use, when <= 1 enemies remain (ai:100 rnd:0) (one-time: 1)
 Increase damage to 120% for the next 999 turns
+
 ESBranchCounter(32:22) -> ESBranchCounter
 Branch on counter > 3, target rnd 9
+
 ESBombFixedSpawn(103:15323) -> カタストロフィソード
 Spawn Bomb orbs in the specified positions, Deal 100% damage
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESSetCounter(25:15) -> ESSetCounter
 counter = 0
+
 ESSkillDelay(89:15710) -> イグニッションバースト
 Delay active skills by 6 turns
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESTypeResist(118:15704) -> 体力半減
 Reduce damage from Physical by 50%
+
 ESTypeResist(118:15705) -> ドラゴン半減
 Reduce damage from Dragon by 50%
+
 ESTypeResist(118:15706) -> 神半減
 Reduce damage from God by 50%

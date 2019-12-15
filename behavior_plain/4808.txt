@@ -6,55 +6,81 @@ counter increment: 0
 
 ESPreemptive(49:318) -> ESPreemptive
 Enable preempt if level 1
+
 ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 1, target rnd 8
+
 ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b1
+
 ESBranchCard(90:11138) -> ESBranchCard
 Branch on player_cards HAS [4806, 4807], target rnd 6
+
 ESAbsorbCombo(67:11136) -> I hope you're a good training partner
 Absorb combo <= 10 damage for 999 turns
+
 ESAbsorbCombo(67:11137) -> Let's practice together once in a while
 Absorb combo <= 10 damage for 999 turns
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 2, target rnd 12
+
 ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b11
+
 ESSpinnersFixed(110:11139) -> Show me what you've got
 Specific orbs change every 1.0s for 4 turns
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 4, target rnd 16
+
 ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b111
+
 ESBombRandomSpawn(102:11140) -> How about...this!
 Spawn random 3 Bomb orbs
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 8, target rnd 20
+
 ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b1111
+
 ESColumnSpawnMulti(77:11141) -> Let's see how you handle this!
 Change 1st column to Water, Light orbs, 6th column to Water, Light orbs, Deal 100% damage
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 16, target rnd 24
+
 ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b11111
+
 ESBindAwoken(88:11142) -> Let's end it now...
 Bind awoken skills for 1 turns
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b1
+
 ESAttackMultihit(15:11143) -> I look forward to next time
 Deal 3000% damage (6 hits, 500% each)
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 SkillSet:
 	Condition: On death (ai:0 rnd:0)

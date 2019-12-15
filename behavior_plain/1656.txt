@@ -6,49 +6,63 @@ counter increment: 0
 
 ESPreemptive(49:318) -> ESPreemptive
 Enable preempt if level 1
+
 SkillSet:
 	Condition: One-time use (ai:100 rnd:0) (one-time: 4)
 	[0] ESStatusShield(20:11622) -> Resolute Justice
 	Voids status ailments for 999 turns
 	[1] ESAbsorbThreshold(87:11623) -> Pierced Belief
 	Absorb damage >= 5000000 damage for 3 turns
+
 ESSetCounter(26:16) -> ESSetCounter
 counter + 1
+
 ESBranchCounter(31:21) -> ESBranchCounter
 Branch on counter = 9, target rnd 13
+
 ESBranchCounter(31:21) -> ESBranchCounter
 Branch on counter = 6, target rnd 12
+
 ESBranchCounter(31:21) -> ESBranchCounter
 Branch on counter = 3, target rnd 11
+
 ESOrbChangeAttack(48:11633) -> Lame du Tonnerre
 Condition: 33% chance (ai:0 rnd:33)
 Change Random to Light, Deal 100% damage
+
 ESRecoverEnemy(86:11634) -> Épée Consolatrice
 Condition: 33% chance (ai:0 rnd:33)
 Enemy recover 5% hp, Deal 90% damage
+
 ESAttackMultihit(15:11635) -> Atout Durée
 Condition: 34% chance (ai:0 rnd:34)
 Deal 111% damage (3 hits, 37% each)
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 SkillSet:
 	Condition: One-time use (ai:100 rnd:0) (one-time: 2)
 	[0] ESAbsorbThreshold(87:11625) -> Pierced Belief
 	Absorb damage >= 10000000 damage for 3 turns
 	[1] ESAttackUPRemainingEnemies(17:11626) -> Sharpened Mind
 	Increase damage to 150% for the next 2 turns
+
 SkillSet:
 	Condition: One-time use (ai:100 rnd:0) (one-time: 1)
 	[0] ESAbsorbThreshold(87:11628) -> Pierced Belief
 	Absorb damage >= 15000000 damage for 99 turns
 	[1] ESAttackUPRemainingEnemies(17:11629) -> Sharpened Mind
 	Increase damage to 200% for the next 99 turns
+
 ESSetCounter(25:15) -> ESSetCounter
 counter = 6
+
 SkillSet:
 	[0] ESGravity(50:11631) -> Convicting Justice
 	Player -99% HP
 	[1] ESDebuffRCV(105:11632) -> Life Deprivation
 	Rcv 50% for 3 turns
+
 ESEndPath(36:26) -> ESEndPath
 end_turn

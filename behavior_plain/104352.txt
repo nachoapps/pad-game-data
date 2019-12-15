@@ -6,14 +6,19 @@ counter increment: 1
 
 ESPreemptive(49:3402) -> ESPreemptive
 Enable preempt if level 4
+
 ESBranchLevel(35:25) -> ESBranchLevel
 Branch on level > 4, target rnd 4
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 1, target rnd 8
+
 ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b1
+
 SkillSet:
 	[0] ESStatusShield(20:9651) -> Flaming Feather Robes
 	Voids status ailments for 999 turns
@@ -21,48 +26,63 @@ SkillSet:
 	Void damage >= 15000000 for 999 turns
 	[2] ESBombFixedSpawn(103:9653) -> Guidance Fire of Ruin
 	Spawn locked Bomb orbs in the specified positions
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 50, target rnd 18
+
 ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 75, target rnd 14
+
 SkillSet:
 	Condition: 33% chance (ai:33 rnd:0)
 	[0] ESBoardChangeAttackBits(85:9655) -> All Encompassing Conflagration
 	Change all orbs to Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Deal 30% damage
 	[1] ESAttackMultihit(15:9658) -> Rigid Flametail Attack
 	Deal 60% damage (3 hits, 20% each)
+
 SkillSet:
 	Condition: 50% chance (ai:50 rnd:0)
 	[0] ESOrbChangeAttack(48:9656) -> Sacred Flame Jet
 	Change Random to Jammer, Deal 35% damage
 	[1] ESAttackMultihit(15:9658) -> Rigid Flametail Attack
 	Deal 60% damage (3 hits, 20% each)
+
 SkillSet:
 	[0] ESGravity(50:9657) -> Great Mauve Flame
 	Player -30% HP
 	[1] ESAttackMultihit(15:9658) -> Rigid Flametail Attack
 	Deal 60% damage (3 hits, 20% each)
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 2, target rnd 10
+
 ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b11
+
 SkillSet:
 	[0] ESAttributeBlock(107:9662) -> The Gates of Hell
 	Unable to match Fire orbs for 3 turns
 	[1] ESSkyfall(68:9663) -> Beacon Fire from the Underworld
 	Fire skyfall +15% for 3 turns
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 10, target rnd 29
+
 ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 4, target rnd 23
+
 ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b111
+
 SkillSet:
 	[0] ESBoardChangeAttackBits(85:9665) -> Purgatory Flames of Damnation
 	Change all orbs to Fire, Jammer, Deal 100% damage
@@ -70,44 +90,55 @@ SkillSet:
 	Row of cloud appear for 3 turns at 1st column
 	[2] ESAbsorbCombo(67:9667) -> Flame Dance Incarnation
 	Absorb combo <= 7 damage for 99 turns
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 SkillSet:
 	Condition: One-time use (ai:50 rnd:0) (one-time: 1)
 	[0] ESRandomSpawn(92:9672) -> Alabaster Flame
 	Spawn random 3 Light, Heal, Jammer, Poison, Mortal Poison orbs
 	[1] ESGravity(50:9677) -> Judgment Carving
 	Player -75% HP
+
 SkillSet:
 	Condition: One-time use (ai:100 rnd:0) (one-time: 1)
 	[0] ESRandomSpawn(92:9673) -> Obsidian Flame
 	Spawn random 6 Dark, Poison orbs
 	[1] ESAttackMultihit(15:9678) -> Judgment Carving
 	Deal 105% damage (3 hits, 35% each)
+
 SkillSet:
 	Condition: 33% chance (ai:33 rnd:0)
 	[0] ESBoardChangeAttackBits(85:9669) -> Scarlet Flame
 	Change all orbs to Fire, Water, Wood, Light, Dark, Heal, Jammer, Deal 115% damage
 	[1] ESBindAwoken(88:9674) -> Judgment Carving
 	Bind awoken skills for 1 turns
+
 SkillSet:
 	Condition: 50% chance (ai:50 rnd:0)
 	[0] ESColumnSpawnMulti(77:9670) -> Cerulean Flame
 	Change 2nd, 5th column to Water, Jammer orbs, Deal 115% damage
 	[1] ESSkillDelay(89:9675) -> Judgment Carving
 	Delay active skills by 1~2 turns
+
 SkillSet:
 	[0] ESRowSpawnMulti(79:9671) -> Virescent Flame
 	Change 2nd, 4th row to Wood, Heal, Poison orbs, Deal 115% damage
 	[1] ESLeaderSwap(75:9676) -> Judgment Carving
 	Leader changes to random sub for 1 turns
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESAttackMultihit(15:9684) -> Conflagration of Hell
 Deal 2500% damage (5 hits, 500% each)
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESAttributeResist(72:9650) -> Fire Att. Half Reduced
 Reduce damage from Fire by 50%
+
 ESResolve(73:12175) -> Dragonbound Soul Spirit
 Survive attacks with 1 HP when HP > 99%

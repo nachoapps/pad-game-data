@@ -6,31 +6,43 @@ counter increment: 0
 
 ESPreemptive(49:318) -> ESPreemptive
 Enable preempt if level 1
+
 ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 1, target rnd 6
+
 ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b1
+
 ESAbsorbAttribute(53:9353) -> Dark Barrier
 Absorb Light damage for 3 turns
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 50, target rnd 9
+
 ESRandomSpawn(92:9354) -> Dark Spark
 Condition: When fire, water, wood, light, dark, heal, jammer, poison orbs are on the board (ai:100 rnd:0)
 Spawn random 4 Mortal Poison orbs, Deal 150% damage
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESAttackUPRemainingEnemies(17:151) -> Attack Stance
 Condition: 30% chance when < 50% hp, when <= 1 enemies remain (ai:30 rnd:0)
 Increase damage to 125% for the next 5 turns
+
 ESAttackMultihit(15:159) -> Genocide Bit
 Condition: 40% chance when < 40% hp (ai:40 rnd:0)
 Deal 60%~180% damage (2~6 hits, 30% each)
+
 ESRandomSpawn(92:9354) -> Dark Spark
 Condition: When fire, water, wood, light, dark, heal, jammer, poison orbs are on the board (ai:100 rnd:0)
 Spawn random 4 Mortal Poison orbs, Deal 150% damage
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESTurnChangePassive(106:9355) -> Enemy's next turn changed
 Enemy turn counter change to 1 when HP <= 50%

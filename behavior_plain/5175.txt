@@ -6,6 +6,7 @@ counter increment: 0
 
 ESPreemptive(49:318) -> ESPreemptive
 Enable preempt if level 1
+
 SkillSet:
 	Condition: One-time use (ai:100 rnd:0) (one-time: 4)
 	[0] ESStatusShield(20:12781) -> Cool Breeze of Summer's First Night
@@ -14,8 +15,10 @@ SkillSet:
 	Absorb combo <= 9 damage for 1 turns
 	[2] ESVoidShield(71:12783) -> Springtime full of Flowery Fragrance
 	Void damage >= 50000000 for 999 turns
+
 ESBranchLevel(35:25) -> ESBranchLevel
 Branch on level > 6, target rnd 5
+
 SkillSet:
 	Condition: One-time use (ai:100 rnd:0) (one-time: 2)
 	[0] ESAbsorbCombo(67:12778) -> Dawn's Longing Zephyr
@@ -24,6 +27,7 @@ SkillSet:
 	Random 1 orbs change every 0.5s for 3 turns
 	[2] ESFixedStart(101:12786) -> Murmuring Southerly Wind
 	Fix orb movement starting point to random position on the board, Deal 100% damage
+
 SkillSet:
 	Condition: One-time use (ai:100 rnd:0) (one-time: 2)
 	[0] ESAbsorbCombo(67:12779) -> Dawn's Longing Zephyr
@@ -32,59 +36,79 @@ SkillSet:
 	Random 1 orbs change every 0.5s for 3 turns
 	[2] ESFixedStart(101:12786) -> Murmuring Southerly Wind
 	Fix orb movement starting point to random position on the board, Deal 100% damage
+
 ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 10, target rnd 23
+
 ESBranchHP(29:19) -> ESBranchHP
 Branch on hp > 100, target rnd 13
+
 ESBranchCounter(32:22) -> ESBranchCounter
 Branch on counter > 9, target rnd 19
+
 ESSetCounter(26:16) -> ESSetCounter
 counter + 1
+
 ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 75, target rnd 15
+
 SkillSet:
 	[0] ESSpinnersRandom(109:12785) -> Shade of a Tree After Rain
 	Random 1 orbs change every 0.5s for 3 turns
 	[1] ESFixedStart(101:12786) -> Murmuring Southerly Wind
 	Fix orb movement starting point to random position on the board, Deal 100% damage
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESMaxHPChange(111:12789) -> Shadowy Lull
 Change player HP to 50% for 1 turns, Deal 110% damage
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 50, target rnd 19
+
 SkillSet:
 	Condition: One-time use (ai:100 rnd:0) (one-time: 1)
 	[0] ESDebuffMovetime(39:12788) -> Blustery Haze
 	Movetime -2s for 99 turns
 	[1] ESMaxHPChange(111:12789) -> Shadowy Lull
 	Change player HP to 50% for 1 turns, Deal 110% damage
+
 SkillSet:
 	[0] ESSpinnersRandom(109:12785) -> Shade of a Tree After Rain
 	Random 1 orbs change every 0.5s for 3 turns
 	[1] ESFixedStart(101:12786) -> Murmuring Southerly Wind
 	Fix orb movement starting point to random position on the board, Deal 100% damage
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 1, target rnd 16
+
 ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b1
+
 SkillSet:
 	[0] ESBindAwoken(88:12791) -> Downpour's Cessation
 	Bind awoken skills for 10 turns
 	[1] ESAttackUPRemainingEnemies(17:12792) -> Relentless Rushing Reeds
 	Increase damage to 200% for the next 999 turns
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 SkillSet:
 	[0] ESChangeAttribute(46:12794) -> Changing Southeasterly Winds
 	Change own attribute to random one of Fire, Water, Wood, Light, Dark
 	[1] ESAttackMultihit(15:12795) -> Summer's Blooming Beams
 	Deal 1500% damage (5 hits, 300% each)
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESAttributeResist(72:12796) -> Fire Halved
 Reduce damage from Fire by 50%

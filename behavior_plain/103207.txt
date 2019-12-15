@@ -6,14 +6,19 @@ counter increment: 1
 
 ESPreemptive(49:3402) -> ESPreemptive
 Enable preempt if level 4
+
 ESBranchLevel(35:25) -> ESBranchLevel
 Branch on level > 4, target rnd 4
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 1, target rnd 8
+
 ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b1
+
 SkillSet:
 	[0] ESAbsorbCombo(67:15333) -> 教導の篝火
 	Absorb combo <= 7 damage for 1 turns
@@ -21,49 +26,69 @@ SkillSet:
 	Change 1st column to Heal orbs, 2nd column to Dark orbs, 3rd column to Fire orbs, Deal 140% damage
 	[2] ESNoSkyfall(127:15335) -> 不落の遮煙
 	No skyfall for 5 turns
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 4, target rnd 24
+
 ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 20, target rnd 21
+
 ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 2, target rnd 17
+
 ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b11
+
 ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 60, target rnd 15
+
 ESBlindStickyRandom(97:5702) -> 教導の散炭
 Blind random 8 orbs for 5 turns
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESDamageShield(74:5701) -> 冥罰の火護
 Reduce damage from all sources by 50% for 10 turns
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESOrbLock(94:5707) -> 調伏浄火
 Lock all Jammer, Poison orbs, Deal 150% damage
+
 ESBoardChangeAttackBits(85:5708) -> 珠炎方爆
 Condition: One-time use (ai:100 rnd:0) (one-time: 2)
 Change all orbs to Fire, Dark, Heal, Poison, Deal 120% damage
+
 ESRandomSpawn(92:5706) -> 三滅染火
 Condition: When fire, water, wood, light, dark, heal, poison, mortal poison orbs are on the board (ai:100 rnd:0)
 Spawn random 3 Jammer orbs, Deal 100% damage
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b111
+
 SkillSet:
 	Condition: When < 20% hp (ai:100 rnd:0)
 	[0] ESAbsorbCombo(67:5699) -> 教導の篝火
 	Absorb combo <= 7 damage for 1 turns
 	[1] ESDebuffMovetime(39:5704) -> 冥罰の刻熱
 	Movetime 25% for 1 turns
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESFlagOperation(24:14) -> ESFlagOperation
 flag UNSET 0b100
+
 ESBoardChangeAttackBits(85:5705) -> 珠炎滅却
 Change all orbs to Fire, Jammer, Deal 600% damage
+
 ESEndPath(36:26) -> ESEndPath
 end_turn

@@ -6,56 +6,74 @@ counter increment: 0
 
 ESPreemptive(49:318) -> ESPreemptive
 Enable preempt if level 1
+
 SkillSet:
 	Condition: One-time use (ai:100 rnd:0) (one-time: 2)
 	[0] ESBindRandomSub(65:12998) -> Warrior's Dignity
 	Bind 4 random subs for 10 turns
 	[1] ESBindSkill(14:12999) -> Power Control
 	Bind active skills for 10 turns
+
 ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 15, target rnd 14
+
 SkillSet:
 	Condition: One-time use (ai:100 rnd:0) (one-time: 1)
 	[0] ESAbsorbCombo(67:13001) -> Shuffling
 	Absorb combo <= 6 damage for 999 turns
 	[1] ESBombRandomSpawn(102:13002) -> Hidden Ball
 	Spawn random 1 Bomb orbs
+
 ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 50, target rnd 10
+
 ESColumnSpawnMulti(77:13003) -> Red Flash
 Condition: 33% chance (ai:0 rnd:33)
 Change 1st column to Fire orbs, Deal 100% damage
+
 ESColumnSpawnMulti(77:13004) -> Blue Flash
 Condition: 33% chance (ai:0 rnd:33)
 Change 6th column to Water orbs, Deal 100% damage
+
 ESAttackMultihit(15:13005) -> Swiftness Sword Technique
 Condition: 34% chance (ai:0 rnd:34)
 Deal 120% damage (3 hits, 40% each)
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 1, target rnd 6
+
 ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b1
+
 SkillSet:
 	[0] ESStatusShield(20:13007) -> Swordsman's Resolution
 	Voids status ailments for 999 turns
 	[1] ESBombRandomSpawn(102:13002) -> Hidden Ball
 	Spawn random 1 Bomb orbs
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESBranchCounter(32:22) -> ESBranchCounter
 Branch on counter > 1, target rnd 17
+
 ESSetCounter(26:16) -> ESSetCounter
 counter + 1
+
 SkillSet:
 	[0] ESMaxHPChange(111:13010) -> Restricted Life
 	Change player HP to 1000 for 1 turns
 	[1] ESDebuffMovetime(39:13011) -> Imminent Choice
 	Movetime -3s for 5 turns
+
 ESAttackMultihit(15:13008) -> Double Blade Flash
 Deal 500% damage (2 hits, 250% each)
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESResolve(73:12996) -> Resolve
 Survive attacks with 1 HP when HP > 50%

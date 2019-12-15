@@ -6,22 +6,30 @@ counter increment: 0
 
 ESPreemptive(49:318) -> ESPreemptive
 Enable preempt if level 1
+
 ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 1, target rnd 6
+
 ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b1
+
 ESRecoverPlayer(55:735) -> 天使の慈悲
 Player recover 100% hp
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESAttackUPRemainingEnemies(17:721) -> 怒リット！
 Condition: when <= 1 enemies remain (ai:100 rnd:0)
 Increase damage to 300% for the next 999 turns
+
 ESAttackMultihit(15:722) -> ヘル＆ヘブン
 Condition: When < 20% hp (ai:100 rnd:0)
 Deal 200% damage (4 hits, 50% each)
+
 ESBindTarget(54:719) -> エンジェリットハイロウ
 Condition: When < 50% hp , one-time use (ai:100 rnd:0) (one-time: 1)
 Bind 1 both leaders for 4 turns
+
 ESOrbChangeAttack(48:720) -> ハートアタック
 Change Random to Heal, Deal 100% damage

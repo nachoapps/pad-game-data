@@ -6,38 +6,53 @@ counter increment: 0
 
 ESPreemptive(49:318) -> ESPreemptive
 Enable preempt if level 1
+
 ESStatusShield(20:15248) -> ぶち面白くなってきたぁ！
 Condition: One-time use (ai:100 rnd:0) (one-time: 2)
 Voids status ailments for 999 turns
+
 ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 15, target rnd 13
+
 ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 50, target rnd 9
+
 ESAttackMultihit(15:15251) -> ぶち当たるぜ！
 Condition: 34% chance (ai:0 rnd:34)
 Deal 80% damage (2 hits, 40% each)
+
 ESCloud(104:15252) -> ぶち面白れぇ！
 Condition: 33% chance (ai:0 rnd:33)
 2x1 cloud appear for 1 turns at random location
+
 ESOrbChangeAttackBits(108:15253) -> カンカンガン
 Condition: 33% chance (ai:0 rnd:33)
 Change Fire, Water, Wood to Light, Deal 100% damage
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 1, target rnd 7
+
 ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b1
+
 ESAbsorbCombo(67:15250) -> ぶち面白くねぇ……！
 Absorb combo <= 3 damage for 3 turns
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 2, target rnd 7
+
 ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b11
+
 ESDamageShield(74:15249) -> ぶち無茶な奴だぜ
 Condition: One-time use (ai:100 rnd:0) (one-time: 1)
 Reduce damage from all sources by 30% for 2 turns
+
 ESEndPath(36:26) -> ESEndPath
 end_turn

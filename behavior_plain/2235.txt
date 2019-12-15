@@ -6,66 +6,87 @@ counter increment: 0
 
 ESPreemptive(49:318) -> ESPreemptive
 Enable preempt if level 1
+
 ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 1, target rnd 6
+
 ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b1
+
 SkillSet:
 	[0] ESStatusShield(20:3987) -> War Deity's Ambition
 	Voids status ailments for 999 turns
 	[1] ESRowSpawnMulti(79:4002) -> Rapid Scalding
 	Change 3rd row to Jammer orbs, Deal 1000% damage
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 SkillSet:
 	Condition: When < 10% hp , one-time use (ai:100 rnd:0) (one-time: 1)
 	[0] ESRecoverEnemy(86:4004) -> Blazing Spirit
 	Enemy recover 40% hp
 	[1] ESVoidShield(71:4003) -> Divine Body's Shining Flames
 	Void damage >= 1000000 for 10 turns
+
 ESVoidShield(71:4003) -> Divine Body's Shining Flames
 Condition: When < 50% hp , one-time use (ai:100 rnd:0) (one-time: 1)
 Void damage >= 1000000 for 10 turns
+
 SkillSet:
 	Condition: When < 10% hp (ai:100 rnd:0)
 	[0] ESRecoverEnemy(86:4004) -> Blazing Spirit
 	Enemy recover 40% hp
 	[1] ESColumnSpawnMulti(77:3999) -> Wall Eruption
 	Change 1st, 3rd, 4th, 6th column to Fire orbs, Deal 1500% damage
+
 ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 2, target rnd 15
+
 ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b11
+
 ESBindAttribute(2:4001) -> Revenge Full of Hatred
 Condition: When < 70% hp , one-time use (ai:100 rnd:0) (one-time only)
 Bind Water cards for 5 turns
+
 ESBindAttack(63:3994) -> Trembling Lance
 Condition: 20% chance (ai:20 rnd:0)
 Bind 4 random subs for 1 turns, Deal 900% damage
+
 SkillSet:
 	Condition: 50% chance (ai:50 rnd:0)
 	[0] ESBlind(62:3991) -> Cinder Storm
 	Blind all orbs on the board, Deal 100% damage
 	[1] ESOrbChangeAttack(48:3992) -> Hidden Ember
 	Change Random to Fire, Deal 600% damage
+
 ESJammerChangeRandom(13:3990) -> Wall Burst
 Change Random 3 to Jammer, Deal 800% damage
+
 ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 4, target rnd 20
+
 ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b111
+
 ESOrbChangeAttack(48:3995) -> Rubble Incineration
 Change Jammer to Fire, Deal 3000% damage
+
 ESOrbLock(94:3996) -> Constant Grimness
 Lock all Fire, Light orbs, Deal 700% damage
+
 ESAttackMultihit(15:3997) -> Thrust Combination
 Deal 750%~1250% damage (3~5 hits, 250% each)
+
 ESFlagOperation(24:14) -> ESFlagOperation
 flag UNSET 0b110
+
 SkillSet:
 	[0] ESAbsorbAttribute(53:3998) -> Mars Core
 	Absorb Fire damage for 1 turns
 	[1] ESColumnSpawnMulti(77:3999) -> Wall Eruption
 	Change 1st, 3rd, 4th, 6th column to Fire orbs, Deal 1500% damage
+
 ESResolve(73:3989) -> アレス根性
 Survive attacks with 1 HP when HP > 50%

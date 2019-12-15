@@ -6,62 +6,87 @@ counter increment: 0
 
 ESPreemptive(49:318) -> ESPreemptive
 Enable preempt if level 1
+
 ESDeathCry(69:4575) -> Time Dragonbound Transformation
 Condition: On death (ai:0 rnd:0)
 Show message: Time is under my control... |Enemy's time is flowing
+
 ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 1, target rnd 7
+
 ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b1
+
 ESDebuffMovetime(39:4563) -> Try to find my real form!
 Movetime -2s for 5 turns
+
 ESBlind(62:4598) -> Try to find my real form!
 Blind all orbs on the board, Deal 120% damage
+
 ESGravity(50:4574) -> War Claws
 Condition: When < 10% hp (ai:100 rnd:0)
 Player -200% HP
+
 ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 50, target rnd 24
+
 ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 2, target rnd 14
+
 ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b11
+
 ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 50, target rnd 13
+
 ESGravity(50:4564) -> Life Bender
 Player -80% HP
+
 ESGravity(50:4571) -> Life Bender
 Player -99% HP
+
 ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 4, target rnd 19
+
 ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b111
+
 ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 50, target rnd 18
+
 ESRandomSpawn(92:4565) -> Color Stealing Forgotten Sword
 Condition: When fire, water, wood, light, dark, heal, poison, mortal poison orbs are on the board (ai:100 rnd:0)
 Spawn random 5 Jammer orbs, Deal 140% damage
+
 ESRandomSpawn(92:4572) -> Color Stealing Forgotten Sword
 Condition: When fire, water, wood, light, dark, heal, poison, mortal poison orbs are on the board (ai:100 rnd:0)
 Spawn random 10 Jammer orbs, Deal 160% damage
+
 ESFlagOperation(24:14) -> ESFlagOperation
 flag UNSET 0b110
+
 ESDispel(6:4567) -> Time Skip
 Voids player buff effects
+
 ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 50, target rnd 23
+
 ESBindRandomSub(65:4566) -> Time Bind
 Bind 2 random subs for 1 turns
+
 ESBindRandom(1:4573) -> Time Bind
 Condition: One-time use (ai:100 rnd:0) (one-time only)
 Bind 3 random cards for 1 turns
+
 SkillSet:
 	Condition: One-time use (ai:100 rnd:0) (one-time: 1)
 	[0] ESAbsorbCombo(67:4568) -> Strain
 	Absorb combo <= 5 damage for 1 turns
 	[1] ESFixedStart(101:4569) -> Time Warp
 	Fix orb movement starting point to random position on the board
+
 ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 1, target rnd 9
+
 ESAttributeResist(72:4704) -> Time Dark Halven
 Reduce damage from Dark by 50%

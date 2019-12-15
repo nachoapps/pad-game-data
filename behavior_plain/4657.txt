@@ -6,32 +6,45 @@ counter increment: 0
 
 ESPreemptive(49:3402) -> ESPreemptive
 Enable preempt if level 4
+
 ESBranchLevel(35:25) -> ESBranchLevel
 Branch on level > 4, target rnd 4
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 1, target rnd 8
+
 ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b1
+
 ESStatusShield(20:10602) -> Knowledge
 Voids status ailments for 5 turns
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 75, target rnd 11
+
 ESOrbChangeAttack(48:10608) -> Slider
 Change Random to Water, Deal 100% damage
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESDamageShield(74:10603) -> Don't panic!
 Condition: One-time use (ai:100 rnd:0) (one-time: 1)
 Reduce damage from all sources by 50% for 3 turns
+
 ESRandomSpawn(92:10604) -> Raging Shot
 Condition: 50% chance & when Fire, Water, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs are on the board (ai:0 rnd:50)
 Spawn random 5 Wood orbs, Deal 120% damage
+
 ESRandomSpawn(92:10605) -> Raging Cannon
 Condition: 50% chance & when Fire, Water, Wood, Dark, Heal, Jammer, Poison, Mortal Poison orbs are on the board (ai:0 rnd:50)
 Spawn random 5 Light orbs, Deal 120% damage
+
 ESEndPath(36:26) -> ESEndPath
 end_turn

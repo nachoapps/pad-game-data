@@ -6,69 +6,97 @@ counter increment: 1
 
 ESPreemptive(49:318) -> ESPreemptive
 Enable preempt if level 1
+
 ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 1, target rnd 8
+
 ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b1
+
 ESBranchCard(90:11150) -> ESBranchCard
 Branch on player_cards HAS [4796, 4797], target rnd 6
+
 ESBlindStickyRandom(97:11162) -> W-Well, you can't get through!...
 Blind all orbs for 10 turns
+
 ESBlindStickyRandom(97:11163) -> Huh, oh, Suou?!...
 Blind all orbs for 10 turns
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 25, target rnd 22
+
 ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 2, target rnd 13
+
 ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b11
+
 SkillSet:
 	[0] ESSkyfall(68:11165) -> G-Go back!
 	Poison skyfall +15% for 10 turns
 	[1] ESDebuffRCV(105:11166) -> It's d-d-dangerous!
 	Rcv 50% for 10 turns
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 50, target rnd 18
+
 ESOrbChangeAttackBits(108:11168) -> P-Please be patient!
 Condition: One-time use (ai:100 rnd:0) (one-time: 1)
 Change Poison to Heal, Deal 150% damage
+
 ESRandomSpawn(92:11167) -> B-Be careful!
 Condition: 50% chance & when Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison orbs are on the board (ai:0 rnd:50)
 Spawn random 3 Heal, Mortal Poison orbs
+
 ESAttackMultihit(15:11123) -> S-Sorry!
 Condition: 50% chance (ai:0 rnd:50)
 Deal 100% damage
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 4, target rnd 14
+
 ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b111
+
 SkillSet:
 	[0] ESColumnSpawnMulti(76:11170) -> Go away!
 	Change 1st column to Mortal Poison orbs, 6th column to Heal orbs
 	[1] ESDamageShield(74:11171) -> I hate p-pain...
 	Reduce damage from all sources by 50% for 99 turns
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 8, target rnd 26
+
 ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b1111
+
 ESBoardChange(84:11172) -> Any more of it and...
 Change all orbs to Heal
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESBoardChangeAttackBits(85:11173) -> Oh stop it already!
 Change all orbs to Mortal Poison, Deal 100% damage
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 SkillSet:
 	Condition: On death (ai:0 rnd:0)
 	[0] ESInactivity(66:11174) -> Oh, you are not an intruder?!...

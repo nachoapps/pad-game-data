@@ -6,55 +6,75 @@ counter increment: 0
 
 ESPreemptive(49:3402) -> ESPreemptive
 Enable preempt if level 4
+
 ESBranchLevel(35:25) -> ESBranchLevel
 Branch on level > 4, target rnd 4
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 1, target rnd 8
+
 ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b1
+
 ESStatusShield(20:11814) -> I'm the Game Master, I'm God!
 Voids status ailments for 999 turns
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 SkillSet:
 	Condition: One-time use (ai:100 rnd:0) (one-time: 2)
 	[0] ESDebuffMovetime(39:11816) -> Anti Bugster Area
 	Movetime -3s for 10 turns
 	[1] ESDamageShield(74:11817) -> Dangerous Breaker
 	Reduce damage from all sources by 50% for 10 turns
+
 ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 50, target rnd 13
+
 ESAttackMultihit(15:11818) -> Living Dead Shoes α
 Condition: 50% chance (ai:0 rnd:50)
 Deal 100% damage
+
 ESRandomSpawn(92:11819) -> Spike Attack
 Condition: 50% chance & when Fire, Water, Wood, Light, Dark, Heal, Poison, Mortal Poison orbs are on the board (ai:0 rnd:50)
 Spawn random 4 Jammer orbs, Deal 95% damage
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 20, target rnd 18
+
 ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 2, target rnd 10
+
 ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b11
+
 ESAttackUPRemainingEnemies(17:11820) -> Gain Riser
 Condition: when <= 1 enemies remain (ai:100 rnd:0)
 Increase damage to 150% for the next 999 turns
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 SkillSet:
 	Condition: One-time use (ai:100 rnd:0) (one-time: 1)
 	[0] ESOrbLock(94:11822) -> Revenant Dischargers
 	Lock all Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs
 	[1] ESAbsorbCombo(67:11823) -> Bone Build Guard
 	Absorb combo <= 6 damage for 10 turns
+
 ESAttackMultihit(15:11824) -> Dangerous Critical Strike
 Deal 300% damage
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 SkillSet:
 	Condition: On death (ai:0 rnd:0)
 	[0] ESInactivity(66:11825) -> I am God!

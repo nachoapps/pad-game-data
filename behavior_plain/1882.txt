@@ -6,59 +6,81 @@ counter increment: 1
 
 ESPreemptive(49:318) -> ESPreemptive
 Enable preempt if level 1
+
 ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 1, target rnd 6
+
 ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b1
+
 ESAbsorbThreshold(87:10972) -> Respect for the Weak
 Absorb damage >= 6000000 damage for 5 turns
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 2, target rnd 13
+
 ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b11
+
 ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 50, target rnd 11
+
 SkillSet:
 	[0] ESStatusShield(20:10974) -> Immovable Faith
 	Voids status ailments for 5 turns
 	[1] ESChangeAttribute(46:10975) -> Rigorous Obedience
 	Change own attribute to Fire
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 SkillSet:
 	[0] ESStatusShield(20:10974) -> Immovable Faith
 	Voids status ailments for 5 turns
 	[1] ESSkillDelay(89:10977) -> Duty to one's Lord
 	Delay active skills by 2~3 turns
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 20, target rnd 20
+
 ESBranchCounter(32:22) -> ESBranchCounter
 Branch on counter > 3, target rnd 22
+
 ESSetCounter(26:16) -> ESSetCounter
 counter + 1
+
 ESRowSpawnMulti(79:10979) -> Flash of Affection
 Condition: One-time use (ai:0 rnd:50) (one-time: 1)
 Change 3rd row to Heal orbs, Deal 120% damage
+
 ESRowSpawnMulti(79:10980) -> One Sword, Two Outcomes
 Condition: 25% chance (ai:0 rnd:25)
 Change 2nd row to Fire orbs, 4th row to Water orbs, Deal 100% damage
+
 ESAttackMultihit(15:10981) -> Sublime Sword Technique
 Condition: 25% chance (ai:0 rnd:25)
 Deal 105% damage (3 hits, 35% each)
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESAttackMultihit(15:10982) -> Righteous Judgment
 Deal 400% damage (4 hits, 100% each)
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 SkillSet:
 	[0] ESBlindStickyRandom(97:10971) -> Frivolous Dark Moon
 	Blind random 5~10 orbs for 1 turns
 	[1] ESAttackMultihit(15:10789) -> Holy Boisterous Dance of the Sword
 	Deal 150% damage (5 hits, 30% each)
+
 ESEndPath(36:26) -> ESEndPath
 end_turn

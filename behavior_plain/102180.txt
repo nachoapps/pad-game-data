@@ -6,10 +6,13 @@ counter increment: 0
 
 ESPreemptive(49:318) -> ESPreemptive
 Enable preempt if level 1
+
 ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 1, target rnd 5
+
 ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b1
+
 SkillSet:
 	[0] ESStatusShield(20:6457) -> Dark Protection of Yomi
 	Voids status ailments for 10 turns
@@ -17,6 +20,7 @@ SkillSet:
 	Reduce damage from all sources by 50% for 3 turns
 	[2] ESDebuffMovetime(39:6459) -> Malicious Laughter
 	Movetime 50% for 10 turns
+
 SkillSet:
 	Condition: When < 1% hp , one-time use (ai:100 rnd:0) (one-time: 1)
 	[0] ESRecoverEnemy(86:6510) -> Unwavering Light
@@ -27,6 +31,7 @@ SkillSet:
 	Blind orbs in specific positions for 4 turns
 	[3] ESAttackUPRemainingEnemies(17:6470) -> The Nature of Death
 	Increase damage to 400% for the next 999 turns
+
 SkillSet:
 	Condition: When < 50% hp , one-time use (ai:100 rnd:0) (one-time: 1)
 	[0] ESAbsorbCombo(67:6468) -> Protection of the Eight Thunders
@@ -35,47 +40,66 @@ SkillSet:
 	Blind orbs in specific positions for 4 turns
 	[2] ESAttackUPRemainingEnemies(17:6470) -> The Nature of Death
 	Increase damage to 400% for the next 999 turns
+
 ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 5, target rnd 23
+
 ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 2, target rnd 13
+
 ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b11
+
 ESDebuffMovetime(39:6459) -> Malicious Laughter
 Movetime 50% for 10 turns
+
 SkillSet:
 	[0] ESPoisonChangeRandom(60:6461) -> An Invitation to Death & Decay
 	Change Random 11 to Poison
 	[1] ESOrbLock(94:6462) -> Curse of the Eternal Land
 	Lock all Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 4, target rnd 19
+
 ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b111
+
 ESDebuffMovetime(39:6459) -> Malicious Laughter
 Movetime 50% for 10 turns
+
 ESOrbChangeAttack(48:6463) -> Anguished Wailing
 Change Heal to Jammer, Deal 100% damage
+
 ESAttackMultihit(15:6464) -> Fires of Deicide
 Deal 150% damage (5 hits, 30% each)
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESFlagOperation(24:14) -> ESFlagOperation
 flag UNSET 0b110
+
 ESDebuffMovetime(39:6459) -> Malicious Laughter
 Movetime 50% for 10 turns
+
 SkillSet:
 	[0] ESDamageShield(74:6458) -> The Feathered Garment of Yomi
 	Reduce damage from all sources by 50% for 3 turns
 	[1] ESGravity(50:6466) -> Last Embrace
 	Player -100% HP
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESAttackMultihit(15:6464) -> Fires of Deicide
 Deal 150% damage (5 hits, 30% each)
+
 ESAttributeResist(72:8260) -> Dark Izanami Dark Fire Halved
 Reduce damage from Fire, Dark by 50%
+
 ESResolve(73:6508) -> Dark Izanami Resolve
 Survive attacks with 1 HP when HP > 88%

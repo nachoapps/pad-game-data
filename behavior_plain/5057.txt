@@ -6,10 +6,13 @@ counter increment: 1
 
 ESPreemptive(49:318) -> ESPreemptive
 Enable preempt if level 1
+
 ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 1, target rnd 6
+
 ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b1
+
 SkillSet:
 	[0] ESStatusShield(20:12257) -> Halo of the Goddess
 	Voids status ailments for 999 turns
@@ -17,119 +20,158 @@ SkillSet:
 	Bind awoken skills for 1 turns
 	[2] ESBindSkill(14:12259) -> Well, win your freedom
 	Bind active skills for 1 turns
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 2, target rnd 13
+
 ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b11
+
 ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 95, target rnd 10
+
 SkillSet:
 	[0] ESAbsorbAttribute(53:12262) -> Until you can be free
 	Absorb Wood, Dark damage for 10 turns
 	[1] ESDamageShield(74:12261) -> This is the time you have left
 	Reduce damage from all sources by 75% for 10 turns
+
 ESSetCounter(25:15) -> ESSetCounter
 counter = 10
+
 SkillSet:
 	[0] ESOrbSealRow(100:12265) -> While impaired
 	Seal 1st, 5th row for 5 turns
 	[1] ESVoidShield(71:12264) -> Find your freedom
 	Void damage >= 15000000 for 99 turns
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 5, target rnd 41
+
 ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 50, target rnd 31
+
 ESSetCounter(26:16) -> ESSetCounter
 counter + 1
+
 ESBranchCounter(32:22) -> ESBranchCounter
 Branch on counter > 11, target rnd 24
+
 ESBranchCounter(32:22) -> ESBranchCounter
 Branch on counter > 10, target rnd 28
+
 SkillSet:
 	Condition: One-time use (ai:100 rnd:0) (one-time: 2)
 	[0] ESDebuffMovetime(39:12275) -> Value of Freedom
 	Movetime 25% for 1 turns
 	[1] ESBombRandomSpawn(102:12276) -> Independent Assembly
 	Spawn random 10 Bomb orbs
+
 SkillSet:
 	Condition: 25% chance (ai:0 rnd:25)
 	[0] ESRowSpawnMulti(79:12270) -> Seven Lands and Seas
 	Change 2nd, 3rd, 4th row to Fire, Water, Wood, Light, Dark, Heal, Poison orbs, Deal 52% damage
 	[1] ESBlindStickyRandom(97:12272) -> Torch Light
 	Blind random 7~10 orbs for 1 turns, Deal 48% damage
+
 SkillSet:
 	Condition: 25% chance (ai:0 rnd:25)
 	[0] ESBoardChangeAttackBits(85:12271) -> Seven Lands and Seas
 	Change all orbs to Fire, Water, Wood, Light, Dark, Heal, Mortal Poison, Deal 50% damage
 	[1] ESBlindStickyRandom(97:12272) -> Torch Light
 	Blind random 7~10 orbs for 1 turns, Deal 48% damage
+
 SkillSet:
 	Condition: 25% chance (ai:0 rnd:25)
 	[0] ESRowSpawnMulti(79:12270) -> Seven Lands and Seas
 	Change 2nd, 3rd, 4th row to Fire, Water, Wood, Light, Dark, Heal, Poison orbs, Deal 52% damage
 	[1] ESOrbLock(94:12273) -> Starlight Road
 	Lock 15 random Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs, Deal 50% damage
+
 SkillSet:
 	Condition: 25% chance (ai:0 rnd:25)
 	[0] ESBoardChangeAttackBits(85:12271) -> Seven Lands and Seas
 	Change all orbs to Fire, Water, Wood, Light, Dark, Heal, Mortal Poison, Deal 50% damage
 	[1] ESOrbLock(94:12273) -> Starlight Road
 	Lock 15 random Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs, Deal 50% damage
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESBranchCounter(30:20) -> ESBranchCounter
 Branch on counter < 14, target rnd 18
+
 ESSetCounter(25:15) -> ESSetCounter
 counter = 10
+
 ESSpinnersRandom(109:12282) -> Flowing Agony
 Random 3 orbs change every 1.0s for 5 turns, Deal 200% damage
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESSetCounter(25:15) -> ESSetCounter
 counter = 0
+
 SkillSet:
 	[0] ESSpinnersRandom(109:12311) -> Flowing Agony
 	Random 2 orbs change every 1.0s for 10 turns
 	[1] ESBoardChangeAttackBits(85:12285) -> Light of Hope and Despair
 	Change all orbs to Light, Jammer, Deal 700% damage
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 4, target rnd 36
+
 ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b111
+
 ESSetCounter(25:15) -> ESSetCounter
 counter = 0
+
 SkillSet:
 	[0] ESBindAwoken(88:12278) -> I won't let you do as you like
 	Bind awoken skills for 5 turns
 	[1] ESDispel(6:12279) -> Saint Judge
 	Voids player buff effects
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 8, target rnd 15
+
 ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b1111
+
 ESSetCounter(26:16) -> ESSetCounter
 counter + 1
+
 SkillSet:
 	[0] ESBindSkill(14:12281) -> I will seal your power
 	Bind active skills for 10 turns
 	[1] ESDispel(6:12279) -> Saint Judge
 	Voids player buff effects
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 SkillSet:
 	[0] ESChangeAttribute(46:12284) -> Liberation
 	Change own attribute to random one of Fire, Water, Wood, Light, Dark
 	[1] ESBoardChangeAttackBits(85:12285) -> Light of Hope and Despair
 	Change all orbs to Light, Jammer, Deal 700% damage
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESResolve(73:12255) -> Resolve
 Survive attacks with 1 HP when HP > 95%

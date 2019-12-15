@@ -6,6 +6,7 @@ counter increment: 0
 
 ESPreemptive(49:318) -> ESPreemptive
 Enable preempt if level 1
+
 SkillSet:
 	Condition: One-time use (ai:100 rnd:0) (one-time: 16)
 	[0] ESStatusShield(20:14417) -> Can't you hang out for a while?
@@ -14,28 +15,37 @@ SkillSet:
 	Absorb combo <= 14 damage for 999 turns
 	[2] ESVoidShield(71:14408) -> Try to overthrow me
 	Void damage >= 999 for 999 turns
+
 ESBranchCombo(113:6528) -> ESBranchCombo
 Branch on combo >= 15, target rnd 10
+
 ESInactivity(66:14409) -> Let's start the countdown
 Condition: One-time use (ai:100 rnd:0) (one-time: 8)
 Do nothing
+
 ESInactivity(66:14410) -> You still have time
 Condition: One-time use (ai:100 rnd:0) (one-time: 4)
 Do nothing
+
 ESInactivity(66:14411) -> You should probably hurry up
 Condition: One-time use (ai:100 rnd:0) (one-time: 2)
 Do nothing
+
 ESInactivity(66:14412) -> You're on the edge now
 Condition: One-time use (ai:100 rnd:0) (one-time: 1)
 Do nothing
+
 SkillSet:
 	[0] ESChangeAttribute(46:14415) -> You're out of time
 	Change own attribute to random one of Fire, Water, Wood, Dark
 	[1] ESGravity(50:14416) -> Let's meet again♪
 	Player -2000% HP
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESEndBattle(40:14413) -> Wow, amazing!
 Reduce self HP to 0
+
 ESEndPath(36:26) -> ESEndPath
 end_turn

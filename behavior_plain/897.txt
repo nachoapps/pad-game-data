@@ -6,19 +6,26 @@ counter increment: 1
 
 ESBranchLevel(35:25) -> ESBranchLevel
 Branch on level > 5, target rnd 3
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESAttackUPRemainingEnemies(17:638) -> Chase Mode
 Condition: When < 50% hp, when <= 1 enemies remain (ai:100 rnd:0)
 Increase damage to 200% for the next 5 turns
+
 ESBranchHP(29:19) -> ESBranchHP
 Branch on hp > 25, target rnd 7
+
 ESOrbChangeAttack(48:637) -> Overheat
 Change Random to Fire, Deal 160% damage
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESOrbChangeAttack(48:636) -> Red Heat
 Condition: One-time use (ai:100 rnd:0) (one-time: 1)
 Change Random to Fire, Deal 80% damage
+
 ESAttackMultihit(15:635) -> Flame Blade
 Deal 100% damage (2 hits, 50% each)

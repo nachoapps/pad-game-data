@@ -6,51 +6,74 @@ counter increment: 1
 
 ESPreemptive(49:355) -> ESPreemptive
 Enable preempt if level 5
+
 ESBranchLevel(35:25) -> ESBranchLevel
 Branch on level > 5, target rnd 4
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 1, target rnd 7
+
 ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b1
+
 ESAttackMultihit(15:545) -> Glyph of First Strike, Hummingbird
 Deal 150% damage
+
 ESNone(0:0) -> ESNone
 nothing
+
 ESBranchHP(29:19) -> ESBranchHP
 Branch on hp > 30, target rnd 11
+
 ESGravity(50:543) -> Glyph of Weight, Whale
 Condition: One-time use (ai:100 rnd:0) (one-time: 1)
 Player -99% HP
+
 ESAttackMultihit(15:544) -> Glyph of Regret, Titan
 Deal 200% damage
+
 ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 2, target rnd 14
+
 ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b11
+
 ESOrbChangeAttack(48:540) -> Glyph of Plunder, Monkey
 Change Random to Jammer, Deal 80% damage
+
 ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 4, target rnd 17
+
 ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b111
+
 ESBindRandom(1:542) -> Glyph of Restraint, Spider
 Bind 1 random cards for 3 turns
+
 ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 8, target rnd 20
+
 ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b1111
+
 ESAttackMultihit(15:539) -> Glyph of Fierce Assault, Condor
 Deal 150% damage (3 hits, 50% each)
+
 ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 16, target rnd 23
+
 ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b11111
+
 ESAttackUPRemainingEnemies(17:541) -> Glyph of Hunting, Hound
 Condition: when <= 1 enemies remain (ai:100 rnd:0)
 Increase damage to 200% for the next 3 turns
+
 ESFlagOperation(24:14) -> ESFlagOperation
 flag UNSET 0b11110
+
 ESBranchHP(29:19) -> ESBranchHP
 Branch on hp > 30, target rnd 11

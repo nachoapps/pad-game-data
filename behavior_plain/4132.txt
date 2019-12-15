@@ -6,26 +6,37 @@ counter increment: 0
 
 ESBranchLevel(35:25) -> ESBranchLevel
 Branch on level > 4, target rnd 3
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESSetCounter(26:16) -> ESSetCounter
 counter + 1
+
 ESBranchCounter(32:22) -> ESBranchCounter
 Branch on counter > 3, target rnd 10
+
 ESBranchCounter(32:22) -> ESBranchCounter
 Branch on counter > 2, target rnd 8
+
 ESAttackMultihit(15:8771) -> Shrine Visit!
 Deal 60% damage (2 hits, 30% each)
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESRandomSpawn(92:8772) -> Monetary Offering!
 Condition: When fire, water, wood, dark, heal, jammer, poison, mortal poison orbs are on the board (ai:100 rnd:0)
 Spawn random 2 Light orbs, Deal 100% damage
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESSetCounter(25:15) -> ESSetCounter
 counter = 0
+
 ESAttackMultihit(15:8773) -> A Bow
 Deal 140% damage
+
 ESEndPath(36:26) -> ESEndPath
 end_turn

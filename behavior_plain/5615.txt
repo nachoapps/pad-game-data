@@ -6,22 +6,30 @@ counter increment: 0
 
 ESPreemptive(49:318) -> ESPreemptive
 Enable preempt if level 1
+
 ESVoidShield(71:14735) -> Duplicitous Glare
 Condition: One-time use (ai:100 rnd:0) (one-time: 1)
 Void damage >= 8000000 for 10 turns
+
 ESBranchRemainingEnemies(120:8595) -> ESBranchRemainingEnemies
 Branch on remaining enemies <= 1, target rnd 6
+
 ESRandomSpawn(92:14736) -> Hydro Blast
 Condition: When fire, wood, light, dark, heal, jammer, poison orbs are on the board (ai:100 rnd:0)
 Spawn random 5 Water, Mortal Poison orbs, Deal 100% damage
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 50, target rnd 8
+
 ESRandomSpawn(92:14736) -> Hydro Blast
 Condition: When fire, wood, light, dark, heal, jammer, poison orbs are on the board (ai:100 rnd:0)
 Spawn random 5 Water, Mortal Poison orbs, Deal 100% damage
+
 ESAttackMultihit(15:14737) -> Double Crunch
 Deal 300% damage (2 hits, 150% each)
+
 ESEndPath(36:26) -> ESEndPath
 end_turn

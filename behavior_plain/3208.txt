@@ -6,69 +6,98 @@ counter increment: 0
 
 ESPreemptive(49:3402) -> ESPreemptive
 Enable preempt if level 4
+
 ESBranchLevel(35:25) -> ESBranchLevel
 Branch on level > 4, target rnd 4
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 1, target rnd 8
+
 ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b1
+
 SkillSet:
 	[0] ESDamageShield(74:6077) -> Nectar of the Dragon
 	Reduce damage from all sources by 75% for 2 turns
 	[1] ESBoardChangeAttackBits(85:6078) -> Soaring Lotus Strike
 	Change all orbs to Fire, Water, Wood, Heal, Deal 150% damage
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 2, target rnd 14
+
 ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b11
+
 ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 90, target rnd 12
+
 ESAttackUPRemainingEnemies(17:6080) -> Viper Tree Ascension
 Condition: when <= 1 enemies remain (ai:100 rnd:0)
 Increase damage to 200% for the next 8 turns
+
 ESOrbSealRow(100:6079) -> Lingering Snaketracks
 Seal 5th row for 4 turns
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 32, target rnd 30
+
 ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 20, target rnd 28
+
 ESAbsorbCombo(67:6082) -> Vitality Spiral
 Condition: When < 50% hp , one-time use (ai:100 rnd:0) (one-time: 1)
 Absorb combo <= 6 damage for 6 turns
+
 ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 4, target rnd 20
+
 ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b111
+
 ESPoisonChangeRandomAttack(64:6084) -> Harmful Poison
 Change Random 6 to Poison, Deal 50% damage
+
 ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 8, target rnd 23
+
 ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b1111
+
 ESRowSpawnMulti(79:6085) -> Crystal Stream
 Change 1st, 5th row to Water orbs, Deal 100% damage
+
 ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 16, target rnd 26
+
 ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b11111
+
 ESGravity(50:6086) -> Harmful Ocean
 Player -99% HP
+
 ESFlagOperation(24:14) -> ESFlagOperation
 flag UNSET 0b11100
+
 ESAttackMultihit(15:6087) -> Dragon Stream
 Deal 200% damage (4 hits, 50% each)
+
 ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b111111
+
 SkillSet:
 	[0] ESDamageShield(74:6077) -> Nectar of the Dragon
 	Reduce damage from all sources by 75% for 2 turns
 	[1] ESBoardChangeAttackBits(85:6078) -> Soaring Lotus Strike
 	Change all orbs to Fire, Water, Wood, Heal, Deal 150% damage
+
 ESAttackMultihit(15:6083) -> Enlightened Dragon Stream
 Deal 800% damage (8 hits, 100% each)

@@ -6,51 +6,69 @@ counter increment: 1
 
 ESPreemptive(49:318) -> ESPreemptive
 Enable preempt if level 1
+
 ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 1, target rnd 6
+
 ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b1
+
 ESDebuffMovetime(39:12489) -> I'm not very fond of conflict.
 Movetime -1s for 5 turns
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 50, target rnd 13
+
 ESAbsorbCombo(67:12490) -> Yoga Teleport
 Condition: One-time use (ai:50 rnd:0) (one-time: 2)
 Absorb combo <= 3 damage for 3 turns
+
 ESCloud(104:12491) -> Yoga Float
 Condition: One-time use (ai:100 rnd:0) (one-time: 2)
 2x1 cloud appear for 3 turns at random location
+
 ESRandomSpawn(92:12492) -> Yoga Flame
 Condition: 34% chance & when Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs are on the board (ai:0 rnd:34)
 Spawn random 4 Fire orbs, Deal 100% damage
+
 SkillSet:
 	Condition: 33% chance (ai:0 rnd:33)
 	[0] ESAttackMultihit(15:12494) -> Divine Kick
 	Deal 45% damage
 	[1] ESOrbSealColumn(99:12495) -> Yoga Anvil
 	Seal 1st column for 1 turns, Deal 45% damage
+
 SkillSet:
 	Condition: 33% chance (ai:0 rnd:33)
 	[0] ESRowSpawnMulti(79:12497) -> Yoga Fire
 	Change 3rd row to Fire orbs, Deal 45% damage
 	[1] ESOrbChangeAttack(48:12498) -> Yoga Gale
 	Change Random to Fire, Deal 50% damage
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 10, target rnd 18
+
 ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 2, target rnd 7
+
 ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b11
+
 ESRowSpawnMulti(79:12499) -> Yoga Burner
 Change 5th row to Fire orbs, Deal 150% damage
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESRandomSpawn(92:12500) -> Yoga Sunburst
 Condition: When water, wood, light, dark, heal, jammer, poison, mortal poison orbs are on the board (ai:100 rnd:0)
 Spawn random 6 Fire orbs, Deal 200% damage
+
 ESEndPath(36:26) -> ESEndPath
 end_turn

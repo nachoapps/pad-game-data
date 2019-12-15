@@ -6,30 +6,42 @@ counter increment: 0
 
 ESPreemptive(49:355) -> ESPreemptive
 Enable preempt if level 5
+
 ESBranchLevel(35:25) -> ESBranchLevel
 Branch on level > 5, target rnd 4
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 1, target rnd 8
+
 ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b1
+
 ESSkillDelay(89:2034) -> Found the new kid in the class!
 Delay active skills by 2 turns
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESAttackUPRemainingEnemies(17:2037) -> Now I'm mad!!
 Condition: When < 70% hp , one-time use, when <= 1 enemies remain (ai:100 rnd:0) (one-time: 1)
 Increase damage to 200% for the next 1 turns
+
 ESAttackMultihit(15:2038) -> Ur FEVER!
 Condition: When < 30% hp (ai:100 rnd:0)
 Deal 210% damage (3 hits, 70% each)
+
 ESNone(0:0) -> ESNone
 nothing
+
 ESOrbChangeAttack(48:2035) -> OMG!!
 Condition: 50% chance (ai:50 rnd:0)
 Change Water to Fire, Deal 180% damage
+
 ESAttackMultihit(15:2036) -> Take that!
 Deal 200% damage (2 hits, 100% each)
+
 ESEndPath(36:26) -> ESEndPath
 end_turn

@@ -6,36 +6,52 @@ counter increment: 1
 
 ESPreemptive(49:318) -> ESPreemptive
 Enable preempt if level 1
+
 ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 1, target rnd 6
+
 ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b1
+
 ESBindSkill(14:7392) -> Aww... Do we really have to fight?
 Bind active skills for 3 turns
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 2, target rnd 10
+
 ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b11
+
 ESColumnSpawnMulti(76:7393) -> Wilgo! Help me!
 Change 3rd, 4th column to Wood, Jammer orbs
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 4, target rnd 14
+
 ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b111
+
 ESGravity(50:7394) -> Sorry, Wilgo... Again...
 Player -90% HP
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESSkillDelay(89:7396) -> Wilgo's creating a gust
 Condition: One-time use (ai:100 rnd:0) (one-time: 1)
 Delay active skills by 1 turns, Deal 160% damage
+
 ESRecoverEnemy(86:7395) -> Twinkle ☆ Wind
 Enemy recover 50% hp
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESAttributeResist(72:7445) -> Water damage halved
 Reduce damage from Water by 50%

@@ -6,74 +6,100 @@ counter increment: 0
 
 ESPreemptive(49:3402) -> ESPreemptive
 Enable preempt if level 4
+
 ESBranchLevel(35:25) -> ESBranchLevel
 Branch on level > 4, target rnd 4
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 1, target rnd 8
+
 ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b1
+
 SkillSet:
 	[0] ESInactivity(66:5448) -> Watch and learn!
 	Do nothing
 	[1] ESLeaderSwap(75:5449) -> Psycho Phoenix Wave
 	Leader changes to random sub for 2 turns
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESAttackMultihit(15:5464) -> Muscle Revenger
 Condition: When < 10% hp (ai:100 rnd:0)
 Deal 360% damage (6 hits, 60% each)
+
 ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 2, target rnd 21
+
 ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b11
+
 ESVoidShield(71:5466) -> God of Flight's Power
 Condition: When < 90% hp , one-time use (ai:100 rnd:0) (one-time: 384)
 Void damage >= 500000 for 1 turns
+
 ESVoidShield(71:5456) -> God of Flight's Power
 Condition: When < 90% hp , one-time use (ai:100 rnd:0) (one-time: 128)
 Void damage >= 500000 for 1 turns
+
 ESAbsorbCombo(67:5458) -> God of Technique's Power
 Condition: When < 70% hp , one-time use (ai:100 rnd:0) (one-time: 32)
 Absorb combo <= 6 damage for 1 turns
+
 ESAttackUPRemainingEnemies(17:5460) -> God of Brute Strength's Power
 Condition: When < 50% hp , one-time use, when <= 1 enemies remain (ai:100 rnd:0) (one-time: 8)
 Increase damage to 200% for the next 1 turns
+
 ESBindTarget(54:5462) -> God of Brutality's Power
 Condition: When < 30% hp , one-time use (ai:100 rnd:0) (one-time: 2)
 Bind 1 both leaders for 1 turns
+
 ESFlagOperation(24:14) -> ESFlagOperation
 flag UNSET 0b10
+
 ESBranchCard(90:5465) -> ESBranchCard
 Branch on player_cards HAS [3124, 3125, 3850], target rnd 26
+
 ESOrbChangeAttack(48:5452) -> Face Flash
 Condition: 20% chance (ai:20 rnd:0)
 Change Random to Light, Deal 100% damage
+
 ESOrbChangeAttack(48:5453) -> Face Flash
 Condition: 50% chance (ai:50 rnd:0)
 Change Random to Light, Deal 100% damage
+
 ESOrbChangeAttack(48:5454) -> Face Flash
 Change Random to Light, Deal 100% damage
+
 ESFlagOperation(24:14) -> ESFlagOperation
 flag UNSET 0b10
+
 ESBindAttack(63:5457) -> Phoenix Stretch
 Condition: One-time use (ai:100 rnd:0) (one-time: 64)
 Bind 3 random cards for 1 turns, Deal 100% damage
+
 ESRowSpawnMulti(79:5459) -> Muscle Inferno
 Condition: One-time use (ai:100 rnd:0) (one-time: 16)
 Change 3rd row to Fire orbs, Deal 150% damage
+
 ESSkillDelay(89:5461) -> Pendulum Backbreaker
 Condition: One-time use (ai:100 rnd:0) (one-time: 4)
 Delay active skills by 2 turns, Deal 80% damage
+
 ESBindSkill(14:5463) -> Choujin Raging Ox Execution
 Condition: One-time use (ai:100 rnd:0) (one-time: 1)
 Bind active skills for 3 turns, Deal 150% damage
+
 SkillSet:
 	Condition: One-time use (ai:100 rnd:0) (one-time: 256)
 	[0] ESInactivity(66:5451) -> Yo, Kinnikuman!
 	Do nothing
 	[1] ESOrbChangeAttack(48:5454) -> Face Flash
 	Change Random to Light, Deal 100% damage
+
 ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 1, target rnd 18

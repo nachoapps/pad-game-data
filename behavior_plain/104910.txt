@@ -6,51 +6,68 @@ counter increment: 0
 
 ESPreemptive(49:3402) -> ESPreemptive
 Enable preempt if level 4
+
 ESBranchLevel(35:25) -> ESBranchLevel
 Branch on level > 4, target rnd 4
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESStatusShield(20:11834) -> Multi Eye
 Condition: One-time use (ai:100 rnd:0) (one-time: 1)
 Voids status ailments for 999 turns
+
 ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 50, target rnd 10
+
 SkillSet:
 	Condition: 34% chance (ai:0 rnd:34)
 	[0] ESInactivity(66:11718) -> Rider Jump
 	Do nothing
 	[1] ESAttackMultihit(15:11719) -> Rider Kick
 	Deal 120% damage
+
 SkillSet:
 	Condition: 33% chance (ai:0 rnd:33)
 	[0] ESInactivity(66:11718) -> Rider Jump
 	Do nothing
 	[1] ESAttackMultihit(15:11720) -> Rider Punch
 	Deal 100% damage
+
 SkillSet:
 	Condition: 33% chance (ai:0 rnd:33)
 	[0] ESInactivity(66:11718) -> Rider Jump
 	Do nothing
 	[1] ESAttackMultihit(15:11721) -> Rider Chop
 	Deal 80% damage
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 20, target rnd 15
+
 ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 1, target rnd 6
+
 ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b1
+
 ESLeaderSwap(75:11714) -> Rider Throw
 Leader changes to random sub for 1 turns
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 2, target rnd 6
+
 ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b11
+
 ESAttackUPRemainingEnemies(17:11835) -> Vital Charge
 Condition: when <= 1 enemies remain (ai:100 rnd:0)
 Increase damage to 150% for the next 999 turns
+
 ESEndPath(36:26) -> ESEndPath
 end_turn

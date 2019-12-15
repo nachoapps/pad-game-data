@@ -6,10 +6,13 @@ counter increment: 1
 
 ESPreemptive(49:318) -> ESPreemptive
 Enable preempt if level 1
+
 ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 1, target rnd 6
+
 ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b1
+
 SkillSet:
 	Condition: One-time use (ai:100 rnd:0) (one-time: 1)
 	[0] ESBombFixedSpawn(103:12874) -> Rock You! Baby!
@@ -18,16 +21,22 @@ SkillSet:
 	Void damage >= 25000000 for 999 turns
 	[2] ESLeaderSwap(75:12876) -> Eighth Note Beats
 	Leader changes to random sub for 8 turns
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 10, target rnd 20
+
 ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 50, target rnd 15
+
 ESBranchCounter(32:22) -> ESBranchCounter
 Branch on counter > 7, target rnd 16
+
 ESSetCounter(26:16) -> ESSetCounter
 counter + 1
+
 SkillSet:
 	Condition: One-time use (ai:100 rnd:0) (one-time: 1)
 	[0] ESBombFixedSpawn(103:12874) -> Rock You! Baby!
@@ -36,47 +45,60 @@ SkillSet:
 	Void damage >= 25000000 for 999 turns
 	[2] ESLeaderSwap(75:12876) -> Eighth Note Beats
 	Leader changes to random sub for 8 turns
+
 SkillSet:
 	Condition: 33% chance (ai:0 rnd:33)
 	[0] ESAttackMultihit(15:12880) -> Head Banging-Mosh
 	Deal 60% damage (3 hits, 20% each)
 	[1] ESBindAttack(63:12881) -> Overdrive-Death Growl
 	Bind 2 random cards for 1~2 turns, Deal 50% damage
+
 SkillSet:
 	Condition: 33% chance (ai:0 rnd:33)
 	[0] ESAttackMultihit(15:12880) -> Head Banging-Mosh
 	Deal 60% damage (3 hits, 20% each)
 	[1] ESSkillDelay(89:12882) -> Howling-Shout
 	Delay active skills by 1~2 turns, Deal 45% damage
+
 SkillSet:
 	Condition: 34% chance (ai:0 rnd:34)
 	[0] ESAttackMultihit(15:12880) -> Head Banging-Mosh
 	Deal 60% damage (3 hits, 20% each)
 	[1] ESOrbLock(94:12883) -> Accent-Fuzz
 	Lock 15 random Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs, Deal 40% damage
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 2, target rnd 8
+
 ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b11
+
 ESSetCounter(25:15) -> ESSetCounter
 counter = 0
+
 SkillSet:
 	[0] ESDamageShield(74:12885) -> Stage Diving
 	Reduce damage from all sources by 50% for 8 turns
 	[1] ESStatusShield(20:12886) -> Crowd Surfing
 	Voids status ailments for 999 turns
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 SkillSet:
 	[0] ESLeaderSwap(75:12888) -> Mic Turn
 	Leader changes to random sub for 1 turns
 	[1] ESAttackMultihit(15:12889) -> Wall of Death
 	Deal 1800%~2700% damage (6~9 hits, 300% each)
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESAttributeResist(72:12890) -> Wood Halved
 Reduce damage from Wood by 50%
+
 ESResolve(73:13563) -> 根性
 Survive attacks with 1 HP when HP > 90%

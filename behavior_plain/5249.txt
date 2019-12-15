@@ -6,37 +6,52 @@ counter increment: 0
 
 ESPreemptive(49:3402) -> ESPreemptive
 Enable preempt if level 4
+
 ESBranchLevel(35:25) -> ESBranchLevel
 Branch on level > 4, target rnd 4
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESDamageShield(74:13242) -> All right.
 Condition: One-time use (ai:100 rnd:0) (one-time: 1)
 Reduce damage from all sources by 50% for 5 turns
+
 ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 50, target rnd 10
+
 ESBindAttack(63:13244) -> Fools. I told you to fight me all at once.
 Condition: 33% chance (ai:0 rnd:33)
 Bind 1 random subs for 5 turns, Deal 95% damage
+
 ESSkillDelay(89:13245) -> Your sacrifices will all be in vain.
 Condition: 33% chance (ai:0 rnd:33)
 Delay active skills by 2 turns, Deal 100% damage
+
 ESRandomSpawn(92:13246) -> Be careful how you speak.
 Condition: 34% chance & when Fire, Water, Wood, Light, Dark, Heal, Poison, Mortal Poison orbs are on the board (ai:0 rnd:34)
 Spawn random 8 Jammer orbs, Deal 90% damage
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 1, target rnd 14
+
 ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b1
+
 ESAbsorbCombo(67:13243) -> Weaklings.
 Absorb combo <= 5 damage for 10 turns
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESBranchHP(29:19) -> ESBranchHP
 Branch on hp > 21, target rnd 6
+
 ESAttackMultihit(15:13247) -> I didn't mean to upset you.
 Deal 240% damage (8 hits, 30% each)
+
 ESEndPath(36:26) -> ESEndPath
 end_turn

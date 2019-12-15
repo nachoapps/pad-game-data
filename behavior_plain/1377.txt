@@ -7,29 +7,42 @@ counter increment: 0
 ESDeathCry(69:1062) -> It's the first time I ever used this transformation!
 Condition: On death (ai:0 rnd:0)
 Show message: You are the first ones to ever see this!|Thank you for waiting...
+
 ESBranchLevel(35:25) -> ESBranchLevel
 Branch on level > 5, target rnd 4
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 1, target rnd 7
+
 ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b1
+
 ESOrbChangeAttack(48:1106) -> ばっ!!!!
 Change Random to Fire, Deal 75% damage
+
 ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 2, target rnd 10
+
 ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b11
+
 ESInactivity(66:1107) -> どいつから地獄をみせてやろうか…
 Do nothing
+
 ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 4, target rnd 13
+
 ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b111
+
 ESBindAttack(63:1108) -> きめた!!!
 Bind 1 random subs for 3 turns, Deal 125% damage
+
 ESFlagOperation(24:14) -> ESFlagOperation
 flag UNSET 0b111
+
 ESAttackMultihit(15:1109) -> フィニッシュだ!!
 Deal 150% damage

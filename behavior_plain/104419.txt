@@ -6,10 +6,13 @@ counter increment: 0
 
 ESPreemptive(49:318) -> ESPreemptive
 Enable preempt if level 1
+
 ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 1, target rnd 6
+
 ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b1
+
 SkillSet:
 	[0] ESCloud(104:15700) -> クラウドクラスター
 	6x2 cloud appear for 1 turns at 4th row, 1st column
@@ -19,8 +22,10 @@ SkillSet:
 	Absorb combo <= 7 damage for 1 turns
 	[3] ESDamageShield(74:15703) -> 硬軟な朧雲
 	Reduce damage from all sources by 75% for 5 turns
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 SkillSet:
 	Condition: When < 1% hp (ai:100 rnd:0)
 	[0] ESRecoverEnemy(86:9944) -> 上昇気流
@@ -29,10 +34,13 @@ SkillSet:
 	Increase damage to 150% for the next 99 turns
 	[2] ESCloud(104:9946) -> ディザスタークラウド
 	2x5 cloud appear for 1 turns at 1st row, 3rd column
+
 ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 10, target rnd 30
+
 ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 50, target rnd 19
+
 SkillSet:
 	Condition: One-time use (ai:100 rnd:0) (one-time: 32)
 	[0] ESCloud(104:9915) -> クラウドクラスター
@@ -41,6 +49,7 @@ SkillSet:
 	Absorb combo <= 4 damage for 5 turns
 	[2] ESAttackMultihit(15:9917) -> 雷球放出
 	Deal 270% damage (9 hits, 30% each)
+
 SkillSet:
 	Condition: One-time use (ai:100 rnd:0) (one-time: 16)
 	[0] ESCloud(104:9919) -> クラウドクラスター
@@ -49,12 +58,14 @@ SkillSet:
 	Delay active skills by 1~3 turns
 	[2] ESLeaderSwap(75:9921) -> ライジングフリップ
 	Leader changes to random sub for 1 turns
+
 SkillSet:
 	Condition: One-time use (ai:100 rnd:0) (one-time: 8)
 	[0] ESCloud(104:9923) -> クラウドクラスター
 	3x3 cloud appear for 1 turns at 2nd row, 3rd column
 	[1] ESAttackMultihit(15:9924) -> ストームブロー
 	Deal 240% damage (2 hits, 120% each)
+
 SkillSet:
 	Condition: One-time use (ai:100 rnd:0) (one-time: 4)
 	[0] ESCloud(104:9926) -> クラウドクラスター
@@ -63,49 +74,68 @@ SkillSet:
 	Absorb Light damage for 5 turns
 	[2] ESBoardChange(84:9928) -> フラッシュストーム
 	Change all orbs to Light
+
 SkillSet:
 	Condition: One-time use (ai:100 rnd:0) (one-time: 2)
 	[0] ESCloud(104:9930) -> クラウドクラスター
 	3x3 cloud appear for 1 turns at 2nd row, 4th column
 	[1] ESOrbChangeAttack(48:9931) -> プラズマブレス
 	Change Random to Light, Deal 250% damage
+
 ESBindAwoken(88:9932) -> マイクロバースト
 Condition: One-time use (ai:100 rnd:0) (one-time: 1)
 Bind awoken skills for 5 turns
+
 ESOrbChangeAttackBits(108:9933) -> ヘブンズブリーチング
 Change Jammer to Light, Deal 260% damage
+
 ESOrbChangeAttackBits(108:9934) -> ダーティクラウド
 Change Light, Heal to Jammer, Deal 210% damage
+
 ESOrbChangeAttack(48:9935) -> ダーティクラウド
 Change Random to Jammer, Deal 210% damage
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 2, target rnd 23
+
 ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b11
+
 SkillSet:
 	[0] ESDamageShield(74:9937) -> 巨大積乱雲
 	Reduce damage from all sources by 75% for 10 turns
 	[1] ESBindTarget(54:9938) -> プラズマチェイン
 	Bind 1 both leaders for 3 turns
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 4, target rnd 27
+
 ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b111
+
 ESBoardChange(84:9939) -> グライミークラウド
 Change all orbs to Fire, Light, Heal, Jammer, Poison, Deal 246% damage
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESFlagOperation(24:14) -> ESFlagOperation
 flag UNSET 0b100
+
 ESBindRandomSub(65:9940) -> ライトニングチェイン
 Bind 2 random subs for 1~2 turns, Deal 220% damage
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESAttackMultihit(15:9941) -> メゾサイクロン
 Deal 1300% damage (10 hits, 130% each)
+
 ESResolve(73:9942) -> 50％根性
 Survive attacks with 1 HP when HP > 50%

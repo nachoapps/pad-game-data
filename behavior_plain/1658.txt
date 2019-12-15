@@ -6,21 +6,29 @@ counter increment: 1
 
 ESPreemptive(49:318) -> ESPreemptive
 Enable preempt if level 1
+
 ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 1, target rnd 6
+
 ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b1
+
 ESSpinnersFixed(110:7695) -> Purge
 Condition: One-time use (ai:100 rnd:0) (one-time: 3)
 Specific orbs change every 1.0s for 5 turns
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESAttackUPCooldown(19:7697) -> Evil Crest
 Condition: One-time use (ai:100 rnd:0) (one-time: 3)
 Increase damage to 250% for the next 1 turns
+
 ESAttackMultihit(15:7696) -> Death Viper Slash
 Deal 500% damage (2 hits, 250% each)
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESAttributeResist(72:7698) -> Dark & Water damage halved
 Reduce damage from Water, Dark by 50%

@@ -6,39 +6,55 @@ counter increment: 1
 
 ESPreemptive(49:318) -> ESPreemptive
 Enable preempt if level 1
+
 ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 1, target rnd 6
+
 ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b1
+
 ESAbsorbThreshold(87:14465) -> What did you come here for?
 Absorb damage >= 10000000 damage for 5 turns
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 2, target rnd 10
+
 ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b11
+
 ESBoardChangeAttackBits(85:5839) -> Western Seven-Star Formation
 Change all orbs to Fire, Water, Dark, Deal 100% damage
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 15, target rnd 14
+
 ESGravity(50:5838) -> Unbreakable Fangs
 Condition: One-time use (ai:100 rnd:0) (one-time: 1)
 Player -99% HP
+
 ESBlindStickyFixed(98:5837) -> Dark Tiger Claw
 Blind orbs in specific positions for 1 turns, Deal 100% damage
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESFlagOperation(24:14) -> ESFlagOperation
 flag UNSET 0b10
+
 SkillSet:
 	[0] ESSkillDelay(89:5840) -> I'm sorry...
 	Delay active skills by 1 turns
 	[1] ESBoardChangeAttackBits(85:5841) -> Byakko Seven-Star Formation
 	Change all orbs to Fire, Water, Dark, Deal 300% damage
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESAttributeResist(72:5843) -> Fire Water Dark Reduced Damage
 Reduce damage from Fire, Water, Dark by 30%

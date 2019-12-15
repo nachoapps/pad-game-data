@@ -6,35 +6,49 @@ counter increment: 1
 
 ESPreemptive(49:318) -> ESPreemptive
 Enable preempt if level 1
+
 ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 1, target rnd 6
+
 ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b1
+
 ESGravity(50:1129) -> お命頂戴!!!とうっ!!!
 Player -99% HP
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 30, target rnd 11
+
 ESInactivity(66:1127) -> リクーム…
 Condition: One-time use (ai:100 rnd:0) (one-time: 1)
 Do nothing
+
 ESOrbChangeAttack(48:1093) -> イレイザーガン!!!!
 Condition: When < 50% hp (ai:100 rnd:0)
 Change Random to Jammer, Deal 150% damage
+
 ESAttackMultihit(15:1092) -> キック！
 Deal 100% damage
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 2, target rnd 14
+
 ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b11
+
 ESInactivity(66:1094) -> リクーム…ウルトラ…ファイティング…
 Condition: When < 30% hp (ai:100 rnd:0)
 Do nothing
+
 ESFlagOperation(24:14) -> ESFlagOperation
 flag UNSET 0b10
+
 ESAttackMultihit(15:1095) -> ボンバー!!!
 Condition: When < 30% hp (ai:100 rnd:0)
 Deal 500% damage (5 hits, 100% each)

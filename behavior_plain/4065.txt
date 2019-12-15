@@ -6,25 +6,34 @@ counter increment: 0
 
 ESPreemptive(49:318) -> ESPreemptive
 Enable preempt if level 1
+
 ESStatusShield(20:12662) -> Oh! Are you being nice?
 Condition: One-time use (ai:100 rnd:0) (one-time: 2)
 Voids status ailments for 999 turns, Deal 80% damage
+
 ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 50, target rnd 7
+
 ESBombRandomSpawn(102:12663) -> A present for you!
 Condition: 50% chance (ai:0 rnd:50)
 Spawn random 5 Bomb orbs, Deal 90% damage
+
 ESFixedStart(101:12664) -> Hmm, where to next...?
 Condition: 50% chance (ai:0 rnd:50)
 Fix orb movement starting point to random position on the board, Deal 100% damage
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESAbsorbAttribute(53:12665) -> Aaah! I'm so tired...
 Condition: One-time use (ai:100 rnd:0) (one-time: 1)
 Absorb Fire, Dark damage for 10 turns
+
 ESBranchHP(29:19) -> ESBranchHP
 Branch on hp > 21, target rnd 4
+
 ESAttackMultihit(15:12666) -> True Boisterous Dance
 Deal 280% damage (4 hits, 70% each)
+
 ESEndPath(36:26) -> ESEndPath
 end_turn

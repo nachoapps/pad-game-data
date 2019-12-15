@@ -6,25 +6,35 @@ counter increment: 1
 
 ESPreemptive(49:318) -> ESPreemptive
 Enable preempt if level 1
+
 ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 1, target rnd 6
+
 ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b1
+
 ESAbsorbThreshold(87:3102) -> Translucent Cold
 Absorb damage >= 400000 damage for 99 turns
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESBranchHP(29:19) -> ESBranchHP
 Branch on hp > 100, target rnd 11
+
 ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 20, target rnd 11
+
 ESSkillDelay(89:3105) -> Sigh of Sadness
 Condition: One-time use (ai:20 rnd:0) (one-time: 2)
 Delay active skills by 2 turns
+
 ESOrbLock(94:3104) -> Glass Leaf
 Condition: 70% chance (ai:70 rnd:0)
 Lock all Wood orbs, Deal 120% damage
+
 ESColumnSpawnMulti(77:3103) -> Ice and Roses
 Change 1st column to Water orbs, 2nd column to Wood orbs, 3rd column to Poison orbs, Deal 80% damage
+
 ESBoardChangeAttackBits(85:3106) -> Frozen Pain
 Change all orbs to Water, Poison, Deal 300% damage

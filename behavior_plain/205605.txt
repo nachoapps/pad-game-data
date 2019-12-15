@@ -6,10 +6,13 @@ counter increment: 0
 
 ESPreemptive(49:3402) -> ESPreemptive
 Enable preempt if level 4
+
 ESBranchLevel(35:25) -> ESBranchLevel
 Branch on level > 4, target rnd 4
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 SkillSet:
 	Condition: One-time use (ai:100 rnd:0) (one-time: 2)
 	[0] ESVoidShield(71:14702) -> Hate... Hate, hate, hate!
@@ -18,40 +21,57 @@ SkillSet:
 	Do nothing
 	[2] ESGravity(50:14704) -> Quavering Drums - Tempest
 	Player -99% HP
+
 ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 20, target rnd 18
+
 ESSetCounter(26:16) -> ESSetCounter
 counter + 1
+
 ESBranchCounter(32:22) -> ESBranchCounter
 Branch on counter > 5, target rnd 15
+
 ESBranchCounter(32:22) -> ESBranchCounter
 Branch on counter > 4, target rnd 14
+
 ESBranchCounter(32:22) -> ESBranchCounter
 Branch on counter > 3, target rnd 13
+
 ESBranchCounter(32:22) -> ESBranchCounter
 Branch on counter > 2, target rnd 12
+
 ESAttackMultihit(15:14695) -> Slicing Wind
 Deal 100% damage
+
 ESRandomSpawn(92:14696) -> Torrential Rain
 Condition: When fire, water, wood, light, heal, jammer, poison, mortal poison orbs are on the board (ai:100 rnd:0)
 Spawn random 6 Dark orbs, Deal 105% damage
+
 ESBindAttack(63:14697) -> Vortex Drop
 Bind 1 random subs for 2~3 turns, Deal 110% damage
+
 ESAttackMultihit(15:14698) -> Ravaging Wind
 Deal 120% damage (10 hits, 12% each)
+
 ESSetCounter(25:15) -> ESSetCounter
 counter = 0
+
 ESColumnSpawnMulti(77:14699) -> Waterfall Cascade
 Change 1st, 3rd, 5th column to Dark orbs, Deal 115% damage
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESRowSpawnMulti(79:14706) -> Quavering Drums - Vengeful Arrow
 Condition: One-time use (ai:50 rnd:0) (one-time: 1)
 Change 3rd row to Dark orbs, Deal 300% damage
+
 ESColumnSpawnMulti(77:14705) -> Soul Storm of Enmity
 Change 3rd, 4th column to Dark orbs, Deal 250% damage
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 SkillSet:
 	Condition: On death (ai:0 rnd:0)
 	[0] ESInactivity(66:14707) -> Aaugggghhhhh!

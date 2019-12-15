@@ -6,36 +6,50 @@ counter increment: 1
 
 ESPreemptive(49:318) -> ESPreemptive
 Enable preempt if level 1
+
 ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 1, target rnd 6
+
 ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b1
+
 SkillSet:
 	[0] ESOrbSealColumn(99:15515) -> カタストロフィドライブ
 	Seal 6th column for 5 turns
 	[1] ESDamageShield(74:15499) -> 終末の刻印
 	Reduce damage from all sources by 75% for 2 turns
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 20, target rnd 11
+
 ESAttackUPRemainingEnemies(17:15519) -> パワーチャージ
 Condition: When < 50% hp, when <= 1 enemies remain (ai:100 rnd:0)
 Increase damage to 130% for the next 3 turns
+
 ESVoidShield(71:15517) -> シールドブラスト
 Condition: One-time use (ai:50 rnd:0) (one-time: 1)
 Void damage >= 500000 for 1 turns, Deal 150% damage
+
 ESAttackMultihit(15:15518) -> 一斉射撃
 Deal 100% damage (5 hits, 20% each)
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 2, target rnd 14
+
 ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b11
+
 ESBindAwoken(88:15520) -> パワーデリート
 Bind awoken skills for 1 turns
+
 ESAttackMultihit(15:15521) -> カタストロフィバースト
 Deal 2400% damage (8 hits, 300% each)
+
 ESEndPath(36:26) -> ESEndPath
 end_turn

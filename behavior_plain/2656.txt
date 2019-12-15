@@ -6,20 +6,28 @@ counter increment: 1
 
 ESPreemptive(49:3402) -> ESPreemptive
 Enable preempt if level 4
+
 ESBranchLevel(35:25) -> ESBranchLevel
 Branch on level > 4, target rnd 4
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 1, target rnd 8
+
 ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b1
+
 ESBlind(62:2706) -> Blacken Star
 Blind all orbs on the board, Deal 50% damage
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESOrbLock(94:2707) -> black chaos
 Condition: One-time use (ai:30 rnd:0) (one-time: 1)
 Lock all Dark orbs, Deal 70% damage
+
 ESEndPath(36:26) -> ESEndPath
 end_turn

@@ -6,46 +6,61 @@ counter increment: 0
 
 ESPreemptive(49:3402) -> ESPreemptive
 Enable preempt if level 4
+
 ESBranchLevel(35:25) -> ESBranchLevel
 Branch on level > 4, target rnd 4
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESAttackMultihit(15:11740) -> Mighty Kick
 Condition: One-time use (ai:100 rnd:0) (one-time: 2)
 Deal 80% damage
+
 ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 50, target rnd 10
+
 ESBindRandomSub(65:11741) -> Roundhouse Kick
 Condition: 33% chance (ai:0 rnd:33)
 Bind 1 random subs for 1 turns, Deal 80% damage
+
 ESAttackMultihit(15:11742) -> Punch
 Condition: 33% chance (ai:0 rnd:33)
 Deal 90% damage (2 hits, 45% each)
+
 ESAttackMultihit(15:11743) -> Kick
 Condition: 34% chance (ai:0 rnd:34)
 Deal 100% damage
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESRecoverEnemy(86:11744) -> Amadum's Power
 Condition: One-time use (ai:100 rnd:0) (one-time: 1)
 Enemy recover 100% hp
+
 ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 15, target rnd 15
+
 SkillSet:
 	Condition: 50% chance (ai:0 rnd:50)
 	[0] ESInactivity(66:11747) -> Jump
 	Do nothing
 	[1] ESAttackMultihit(15:11742) -> Punch
 	Deal 90% damage (2 hits, 45% each)
+
 SkillSet:
 	Condition: 50% chance (ai:0 rnd:50)
 	[0] ESInactivity(66:11747) -> Jump
 	Do nothing
 	[1] ESAttackMultihit(15:11743) -> Kick
 	Deal 100% damage
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESAttackMultihit(15:11748) -> Mighty Kick
 Deal 150% damage
+
 ESEndPath(36:26) -> ESEndPath
 end_turn

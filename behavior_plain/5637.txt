@@ -6,10 +6,13 @@ counter increment: 1
 
 ESPreemptive(49:318) -> ESPreemptive
 Enable preempt if level 1
+
 ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 1, target rnd 7
+
 ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b1
+
 SkillSet:
 	Condition: 50% chance (ai:0 rnd:50)
 	[0] ESSkyfall(68:15041) -> Wake Up!
@@ -18,47 +21,66 @@ SkillSet:
 	Blind all orbs on the board
 	[2] ESRandomSpawn(92:15042) -> Wood Orbs...
 	Spawn random 3 Wood orbs
+
 ESSkyfall(68:15041) -> Wake Up!
 Fire, Water, Light, Dark skyfall +100% for 1 turns
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 SkillSet:
 	Condition: One-time use (ai:0 rnd:100) (one-time: 1)
 	[0] ESAbsorbCombo(67:15030) -> Ocean Vestments
 	Absorb combo <= 7 damage for 999 turns
 	[1] ESRandomSpawn(92:15031) -> Curse of the Sea God
 	Spawn random 6 Fire, Water, Wood, Light, Heal orbs
+
 ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 10, target rnd 14
+
 ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 50, target rnd 20
+
 ESSkyfall(68:15034) -> Wake Up!
 Water, Wood, Light, Dark skyfall +100% for 1 turns
+
 ESRandomSpawn(92:15035) -> Fire Orbs...
 Condition: 50% chance (ai:50 rnd:0)
 Spawn random 3 Fire orbs
+
 ESBlind(5:15036) -> Into Darkness
 Blind all orbs on the board
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESBranchCounter(31:21) -> ESBranchCounter
 Branch on counter = 1, target rnd 18
+
 ESSetCounter(25:15) -> ESSetCounter
 counter = 1
+
 ESAbsorbCombo(67:15030) -> Ocean Vestments
 Absorb combo <= 7 damage for 999 turns
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESRandomSpawn(92:15031) -> Curse of the Sea God
 Spawn random 6 Fire, Water, Wood, Light, Heal orbs
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESBranchCombo(113:6528) -> ESBranchCombo
 Branch on combo >= 6, target rnd 29
+
 ESBranchCounter(32:22) -> ESBranchCounter
 Branch on counter > 2, target rnd 25
+
 ESSetCounter(25:15) -> ESSetCounter
 counter = 2
+
 SkillSet:
 	Condition: One-time use (ai:0 rnd:100) (one-time: 1)
 	[0] ESSkyfall(68:15034) -> Wake Up!
@@ -67,10 +89,13 @@ SkillSet:
 	Blind all orbs on the board
 	[2] ESRandomSpawn(92:15035) -> Fire Orbs...
 	Spawn random 3 Fire orbs
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESRandomSpawn(92:15039) -> Water Orbs...
 Spawn random 3 Water orbs
+
 SkillSet:
 	Condition: 50% chance (ai:0 rnd:50)
 	[0] ESSkyfall(68:15038) -> Wake Up!
@@ -79,15 +104,21 @@ SkillSet:
 	Blind all orbs on the board
 	[2] ESRandomSpawn(92:15039) -> Water Orbs...
 	Spawn random 3 Water orbs
+
 ESSkyfall(68:15038) -> Wake Up!
 Fire, Wood, Light, Dark skyfall +100% for 1 turns
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESBranchCounter(32:22) -> ESBranchCounter
 Branch on counter > 2, target rnd 25
+
 ESSetCounter(25:15) -> ESSetCounter
 counter = 2
+
 ESSkyfall(68:15032) -> Wake Up!
 Fire, Water, Wood, Light, Dark skyfall +100% for 1 turns
+
 ESEndPath(36:26) -> ESEndPath
 end_turn

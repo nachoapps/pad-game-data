@@ -6,37 +6,52 @@ counter increment: 0
 
 ESPreemptive(49:3402) -> ESPreemptive
 Enable preempt if level 4
+
 ESBranchLevel(35:25) -> ESBranchLevel
 Branch on level > 4, target rnd 4
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESDamageShield(74:8442) -> Flight
 Condition: One-time use (ai:100 rnd:0) (one-time: 2)
 Reduce damage from all sources by 75% for 1 turns
+
 ESGravity(50:8443) -> Swooping Attack
 Condition: One-time use (ai:100 rnd:0) (one-time: 1)
 Player -80% HP
+
 ESBranchCounter(31:21) -> ESBranchCounter
 Branch on counter = 3, target rnd 11
+
 ESSetCounter(26:16) -> ESSetCounter
 counter + 1
+
 ESAttackMultihit(15:8437) -> Swarm Tactics
 Condition: 50% chance (ai:50 rnd:0)
 Deal 120% damage (2 hits, 60% each)
+
 ESAttackMultihit(15:8438) -> Vicious Attack
 Deal 150% damage (5 hits, 30% each)
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 1, target rnd 8
+
 ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b1
+
 ESAttackUPRemainingEnemies(17:8444) -> Mindless Loyalty
 Condition: when <= 1 enemies remain (ai:100 rnd:0)
 Increase damage to 300% for the next 999 turns
+
 ESAttackMultihit(15:8445) -> All-Out Attack
 Deal 195% damage (3 hits, 65% each)
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESAttributeResist(72:8447) -> Halve Water
 Reduce damage from Water by 50%

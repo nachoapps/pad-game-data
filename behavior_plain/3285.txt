@@ -6,68 +6,93 @@ counter increment: 0
 
 ESPreemptive(49:3402) -> ESPreemptive
 Enable preempt if level 4
+
 ESBranchLevel(35:25) -> ESBranchLevel
 Branch on level > 4, target rnd 4
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 1, target rnd 10
+
 ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b1
+
 ESBranchCard(90:5971) -> ESBranchCard
 Branch on player_cards HAS [2744], target rnd 8
+
 SkillSet:
 	[0] ESGravity(50:5955) -> Uwahahaha! Respect my authority!
 	Player -99% HP
 	[1] ESStatusShield(20:5956) -> I'm the baddest of the bad!
 	Voids status ailments for 5 turns
+
 SkillSet:
 	[0] ESGravity(50:5955) -> Uwahahaha! Respect my authority!
 	Player -99% HP
 	[1] ESStatusShield(20:5972) -> Sure, I'll let you go...if you win!
 	Voids status ailments for 5 turns
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 50, target rnd 20
+
 ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 2, target rnd 17
+
 ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b11
+
 ESBranchCard(90:5958) -> ESBranchCard
 Branch on player_cards HAS [1849], target rnd 15
+
 ESRowSpawnMulti(79:5960) -> Scythe of Divine Judgment
 Change 1st row to Jammer orbs, Deal 120% damage
+
 ESInactivity(66:5959) -> Oh, hello Father♪
 Do nothing
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESRowSpawnMulti(79:5960) -> Scythe of Divine Judgment
 Condition: 60% chance (ai:60 rnd:0)
 Change 1st row to Jammer orbs, Deal 120% damage
+
 ESMortalPoisonChangeRandom(61:5961) -> Dead Gift
 Change Random 2 to Mortal Poison
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 SkillSet:
 	Condition: One-time use (ai:100 rnd:0) (one-time: 8)
 	[0] ESInactivity(66:5962) -> You've got some nerve! I will end you!
 	Do nothing
 	[1] ESGravity(50:5963) -> Death Sentence
 	Player -99% HP
+
 ESMortalPoisonChangeRandom(61:5965) -> 3
 Condition: One-time use (ai:100 rnd:0) (one-time: 4)
 Change Random 3 to Mortal Poison
+
 ESMortalPoisonChangeRandom(61:5966) -> 2
 Condition: One-time use (ai:100 rnd:0) (one-time: 2)
 Change Random 3 to Mortal Poison
+
 ESMortalPoisonChangeRandom(61:5967) -> 1
 Condition: One-time use (ai:100 rnd:0) (one-time: 1)
 Change Random 3 to Mortal Poison
+
 ESAttackMultihit(15:5968) -> Catastrophe
 Deal 2000% damage (2 hits, 1000% each)
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 SkillSet:
 	Condition: On death (ai:0 rnd:0)
 	[0] ESRandomSpawn(92:5970) -> I-I lost...*sniff*

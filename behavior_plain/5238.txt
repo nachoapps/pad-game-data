@@ -6,41 +6,55 @@ counter increment: 0
 
 ESPreemptive(49:318) -> ESPreemptive
 Enable preempt if level 1
+
 ESSpinnersFixed(110:13304) -> Let's do it, Amidamaru.
 Condition: One-time use (ai:100 rnd:0) (one-time: 2)
 Specific orbs change every 1.0s for 5 turns
+
 ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 1, target rnd 8
+
 ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 50, target rnd 8
+
 ESAttackMultihit(15:13305) -> If you hurt people, they'll hurt you back.
 Condition: 50% chance (ai:0 rnd:50)
 Deal 110% damage (2 hits, 55% each)
+
 ESRandomSpawn(92:13306) -> I can't lose anymore.
 Condition: 50% chance & when Fire, Water, Dark, Heal, Jammer, Poison, Mortal Poison orbs are on the board (ai:0 rnd:50)
 Spawn random 4 Wood, Light orbs, Deal 100% damage
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 1, target rnd 12
+
 ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b1
+
 SkillSet:
 	[0] ESAttackUPRemainingEnemies(17:13308) -> I'm gonna use force.
 	Increase damage to 150% for the next 5 turns
 	[1] ESAbsorbCombo(67:13309) -> Shamanic Oracle
 	Absorb combo <= 5 damage for 5 turns
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESBranchHP(29:19) -> ESBranchHP
 Branch on hp > 21, target rnd 5
+
 ESDamageShield(74:13312) -> All right. One more try.
 Condition: One-time use (ai:100 rnd:0) (one-time: 1)
 Reduce damage from all sources by 50% for 1 turns
+
 SkillSet:
 	[0] ESBlind(5:13310) -> Here I go.
 	Blind all orbs on the board
 	[1] ESAttackMultihit(15:13311) -> Amida-Style Halo Giant Blade
 	Deal 200% damage (5 hits, 40% each)
+
 ESEndPath(36:26) -> ESEndPath
 end_turn

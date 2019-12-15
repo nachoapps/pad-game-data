@@ -6,33 +6,45 @@ counter increment: 1
 
 ESPreemptive(49:318) -> ESPreemptive
 Enable preempt if level 1
+
 ESDeathCry(69:4884) -> Robot Transformation
 Condition: On death (ai:0 rnd:0)
 Show message: Justice Gate!! |Equipping External Unit
+
 ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 1, target rnd 7
+
 ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b1
+
 ESGravity(50:4885) -> Justice Execution
 Player -99% HP
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 2, target rnd 10
+
 ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b11
+
 SkillSet:
 	[0] ESRandomSpawn(92:4888) -> Justice Jamming
 	Spawn random 3 Heal, Jammer, Poison orbs
 	[1] ESFixedStart(101:4889) -> Justice Road
 	Fix orb movement starting point to random position on the board
+
 ESDebuffMovetime(39:4891) -> Justice Beam Cannon
 Condition: When < 30% hp , one-time use (ai:100 rnd:0) (one-time: 1)
 Movetime -2s for 1 turns, Deal 150% damage
+
 ESAttackMultihit(15:4886) -> Justice Gatling
 Condition: 50% chance (ai:50 rnd:0)
 Deal 120% damage (6 hits, 20% each)
+
 ESRowSpawnMulti(79:4887) -> Justice Cutter
 Change 2nd row to Wood, Heal orbs, Deal 130% damage
+
 ESEndPath(36:26) -> ESEndPath
 end_turn

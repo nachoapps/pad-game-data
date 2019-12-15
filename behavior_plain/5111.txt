@@ -6,45 +6,62 @@ counter increment: 0
 
 ESPreemptive(49:318) -> ESPreemptive
 Enable preempt if level 1
+
 SkillSet:
 	[0] ESInactivity(66:12608) -> Away with you!
 	Do nothing
 	[1] ESRowSpawnMulti(79:12460) -> Ultimate Psycho Crusher
 	Change 3rd, 4th row to Dark orbs, Deal 500% damage
+
 ESSetCounter(26:16) -> ESSetCounter
 counter + 1
+
 ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 50, target rnd 12
+
 ESBranchCounter(32:22) -> ESBranchCounter
 Branch on counter > 10, target rnd 16
+
 ESBranchHP(29:19) -> ESBranchHP
 Branch on hp > 51, target rnd 8
+
 ESNone(0:12619) -> ESNone
 nothing
+
 ESInactivity(66:12608) -> Away with you!
 Condition: 33% chance (ai:0 rnd:33)
 Do nothing
+
 SkillSet:
 	Condition: 33% chance (ai:0 rnd:33)
 	[0] ESInactivity(66:12609) -> You are lucky to meet me
 	Do nothing
 	[1] ESEndBattle(40:12610) -> For you!
 	Reduce self HP to 0
+
 ESNone(0:12614) -> ESNone
 nothing
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESNone(0:12618) -> ESNone
 nothing
+
 ESBranchHP(29:19) -> ESBranchHP
 Branch on hp > 11, target rnd 5
+
 ESNone(0:12620) -> ESNone
 nothing
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESSetCounter(25:15) -> ESSetCounter
 counter = 0
+
 ESNone(0:12673) -> ESNone
 nothing
+
 ESEndPath(36:26) -> ESEndPath
 end_turn

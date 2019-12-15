@@ -6,19 +6,26 @@ counter increment: 1
 
 ESPreemptive(49:318) -> ESPreemptive
 Enable preempt if level 1
+
 ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 1, target rnd 6
+
 ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b1
+
 ESBlind(5:671) -> Let's have some fun!
 Blind all orbs on the board
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESAttackMultihit(15:673) -> Do it Cauchemar!
 Condition: When < 30% hp (ai:100 rnd:0)
 Deal 140% damage (4 hits, 35% each)
+
 ESOrbChangeAttack(48:672) -> No healing for you!
 Condition: One-time use (ai:100 rnd:0) (one-time: 1)
 Change Heal to Random, Deal 50% damage
+
 ESGravity(50:670) -> Here I come!
 Player -75% HP

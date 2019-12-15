@@ -6,69 +6,90 @@ counter increment: 0
 
 ESPreemptive(49:318) -> ESPreemptive
 Enable preempt if level 1
+
 ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 1, target rnd 6
+
 ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b1
+
 SkillSet:
 	[0] ESSkyfall(68:2554) -> Trimurti [Prosperity]
 	Heal, Jammer skyfall +15% for 99 turns
 	[1] ESAbsorbThreshold(87:2555) -> Garuda's Wind Guard
 	Absorb damage >= 1000000 damage for 999 turns
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESBranchCard(90:2552) -> ESBranchCard
 Branch on player_cards HAS [238, 239, 1114, 1115, 1955], target rnd 13
+
 SkillSet:
 	Condition: When < 50% hp , one-time use (ai:100 rnd:0) (one-time: 1)
 	[0] ESBindAttack(63:2561) -> Shankha
 	Bind 5 random cards for 2 turns, Deal 70% damage
 	[1] ESRecoverEnemy(86:2562) -> Avatar
 	Enemy recover 10% hp, Deal 10% damage
+
 ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 30, target rnd 17
+
 SkillSet:
 	Condition: 30% chance (ai:0 rnd:30)
 	[0] ESOrbChangeAttack(48:2558) -> Khakkhara of the Creation
 	Change Heal to Jammer, Deal 80% damage
 	[1] ESRecoverEnemy(86:2562) -> Avatar
 	Enemy recover 10% hp, Deal 10% damage
+
 SkillSet:
 	Condition: 30% chance (ai:0 rnd:30)
 	[0] ESAttackMultihit(15:2559) -> Chakram of Order
 	Deal 140% damage (4 hits, 35% each)
 	[1] ESRecoverEnemy(86:2562) -> Avatar
 	Enemy recover 10% hp, Deal 10% damage
+
 SkillSet:
 	Condition: 30% chance (ai:0 rnd:30)
 	[0] ESRowSpawnMulti(79:2560) -> Lotus Flower of Prosperity
 	Change 1st row to Heal orbs, 5th row to Wood orbs, Deal 120% damage
 	[1] ESRecoverEnemy(86:2562) -> Avatar
 	Enemy recover 10% hp, Deal 10% damage
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 2, target rnd 7
+
 ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b11
+
 SkillSet:
 	[0] ESInactivity(66:2556) -> hng...!
 	Do nothing
 	[1] ESStatusShield(20:2557) -> Meditation
 	Voids status ailments for 999 turns
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 4, target rnd 21
+
 ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b111
+
 ESBlind(5:2563) -> Giant Form
 Condition: When < 30% hp (ai:100 rnd:0)
 Blind all orbs on the board
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESAttackMultihit(15:2551) -> Trivikrama
 Condition: When < 30% hp (ai:100 rnd:0)
 Deal 3000% damage (3 hits, 1000% each)
+
 ESEndPath(36:26) -> ESEndPath
 end_turn

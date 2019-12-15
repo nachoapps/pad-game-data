@@ -6,21 +6,28 @@ counter increment: 0
 
 ESPreemptive(49:318) -> ESPreemptive
 Enable preempt if level 1
+
 ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 1, target rnd 6
+
 ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b1
+
 ESAttackMultihit(15:15318) -> ぱーんち
 Deal 400% damage
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 SkillSet:
 	Condition: One-time use (ai:100 rnd:0) (one-time: 1)
 	[0] ESDebuffMovetime(39:15320) -> むぅ結構丈夫だね
 	Movetime 50% for 5 turns
 	[1] ESAttackUPRemainingEnemies(17:15321) -> 次からは本気でいくよ
 	Increase damage to 150% for the next 999 turns
+
 ESAttackMultihit(15:15318) -> ぱーんち
 Deal 400% damage
+
 ESEndPath(36:26) -> ESEndPath
 end_turn

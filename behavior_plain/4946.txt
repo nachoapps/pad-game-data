@@ -6,51 +6,70 @@ counter increment: 0
 
 ESPreemptive(49:318) -> ESPreemptive
 Enable preempt if level 1
+
 SkillSet:
 	Condition: One-time use (ai:100 rnd:0) (one-time: 2)
 	[0] ESStatusShield(20:15933) -> Concept of Ritual Worlds
 	Voids status ailments for 999 turns
 	[1] ESVoidShield(71:15934) -> Interminate Holy Night
 	Void damage >= 20000000 for 999 turns
+
 ESBranchCounter(32:22) -> ESBranchCounter
 Branch on counter > 1, target rnd 13
+
 ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 15, target rnd 9
+
 ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 50, target rnd 15
+
 ESAttackMultihit(15:15936) -> The Star of Bethlehem
 Condition: 50% chance (ai:50 rnd:0)
 Deal 104% damage (2 hits, 52% each)
+
 ESRowSpawnMulti(79:15937) -> Intermediary of the Holy Book
 Change 1st row to Fire orbs, Deal 95% damage
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESBranchCounter(32:22) -> ESBranchCounter
 Branch on counter > 1, target rnd 13
+
 ESSetCounter(26:16) -> ESSetCounter
 counter + 1
+
 SkillSet:
 	[0] ESRecoverEnemy(86:15938) -> The All-in-One
 	Enemy recover 50% hp
 	[1] ESAttackUPRemainingEnemies(17:15939) -> The One-in-All
 	Increase damage to 500% for the next 1 turns
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESBoardChangeAttackBits(85:15940) -> Overflowing Lights
 Change all orbs to Fire, Heal, Jammer, Poison, Deal 200% damage
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESBindRandomSub(65:15935) -> The Holy Being Who Shall Not Be Named
 Condition: One-time use (ai:100 rnd:0) (one-time: 1)
 Bind 4 random subs for 3 turns
+
 ESAttackMultihit(15:15936) -> The Star of Bethlehem
 Condition: 50% chance (ai:50 rnd:0)
 Deal 104% damage (2 hits, 52% each)
+
 ESRowSpawnMulti(79:15937) -> Intermediary of the Holy Book
 Change 1st row to Fire orbs, Deal 95% damage
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESResolve(73:15943) -> Resolve
 Survive attacks with 1 HP when HP > 50%
+
 ESTypeResist(118:15951) -> Dragon Devil Halved
 Reduce damage from Dragon, Devil by 50%

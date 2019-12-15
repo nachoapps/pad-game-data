@@ -6,10 +6,13 @@ counter increment: 1
 
 ESPreemptive(49:318) -> ESPreemptive
 Enable preempt if level 1
+
 ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 1, target rnd 6
+
 ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b1
+
 SkillSet:
 	[0] ESStatusShield(20:13481) -> Scorn of Dissension
 	Voids status ailments for 999 turns
@@ -17,197 +20,257 @@ SkillSet:
 	Void damage >= 20000000 for 999 turns
 	[2] ESLeaderAlter(125:13483) -> Confusion Provocation
 	Change leader to [3238] for 10 turns
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 15, target rnd 61
+
 ESSetCounter(26:16) -> ESSetCounter
 counter + 1
+
 ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 50, target rnd 43
+
 ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 8, target rnd 43
+
 ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 70, target rnd 32
+
 ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 4, target rnd 32
+
 ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 80, target rnd 20
+
 ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 2, target rnd 20
+
 ESBranchCounter(32:22) -> ESBranchCounter
 Branch on counter > 10, target rnd 64
+
 ESDispel(6:13487) -> Sacred Flame Breath
 Condition: 10% chance (ai:0 rnd:10)
 Voids player buff effects, Deal 200% damage
+
 SkillSet:
 	Condition: 30% chance (ai:0 rnd:30)
 	[0] ESBombFixedSpawn(103:13488) -> Fruit of Dissension
 	Spawn locked Bomb orbs in the specified positions
 	[1] ESFixedStart(101:13489) -> Ugly Competition
 	Fix orb movement starting point to random position on the board, Deal 200% damage
+
 SkillSet:
 	Condition: 30% chance (ai:0 rnd:30)
 	[0] ESRandomSpawn(92:13490) -> Sporadic Incineration
 	Spawn random 4 Jammer, Poison orbs
 	[1] ESBindAttack(63:13491) -> Cruel Dispute
 	Bind 3 random subs for 2 turns, Deal 190% damage
+
 SkillSet:
 	Condition: 30% chance (ai:0 rnd:30)
 	[0] ESAttackMultihit(15:13492) -> Hateful Rush
 	Deal 120% damage (3 hits, 40% each)
 	[1] ESSkillDelay(89:13493) -> Holding a Grudge
 	Delay active skills by 2 turns, Deal 100% damage
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 2, target rnd 26
+
 ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b11
+
 ESSetCounter(25:15) -> ESSetCounter
 counter = 0
+
 ESBranchLevel(35:25) -> ESBranchLevel
 Branch on level > 6, target rnd 25
+
 SkillSet:
 	[0] ESLeaderAlter(125:13495) -> Confusion Provocation
 	Change leader to [190] for 10 turns
 	[1] ESAbsorbCombo(67:13534) -> Battle of Discord
 	Absorb combo <= 6 damage for 5 turns
+
 SkillSet:
 	[0] ESLeaderAlter(125:13495) -> Confusion Provocation
 	Change leader to [190] for 10 turns
 	[1] ESAbsorbCombo(67:13496) -> Battle of Discord
 	Absorb combo <= 6 damage for 10 turns
+
 ESBranchCounter(32:22) -> ESBranchCounter
 Branch on counter > 10, target rnd 64
+
 ESDispel(6:13500) -> Sacred Flame Breath
 Condition: 10% chance (ai:0 rnd:10)
 Voids player buff effects, Deal 100% damage
+
 SkillSet:
 	Condition: 30% chance (ai:0 rnd:30)
 	[0] ESBombFixedSpawn(103:13501) -> Fruit of Dissension
 	Spawn locked Bomb orbs in the specified positions
 	[1] ESFixedStart(101:13502) -> Ugly Competition
 	Fix orb movement starting point to random position on the board, Deal 100% damage
+
 SkillSet:
 	Condition: 30% chance (ai:0 rnd:30)
 	[0] ESRandomSpawn(92:13503) -> Sporadic Incineration
 	Spawn random 4 Jammer, Poison orbs
 	[1] ESBindAttack(63:13504) -> Cruel Dispute
 	Bind 3 random subs for 2 turns, Deal 95% damage
+
 SkillSet:
 	Condition: 30% chance (ai:0 rnd:30)
 	[0] ESAttackMultihit(15:13505) -> Hateful Rush
 	Deal 60% damage (3 hits, 20% each)
 	[1] ESSkillDelay(89:13506) -> Holding a Grudge
 	Delay active skills by 2 turns, Deal 50% damage
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 4, target rnd 36
+
 ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b111
+
 ESSetCounter(25:15) -> ESSetCounter
 counter = 0
+
 SkillSet:
 	[0] ESLeaderAlter(125:13508) -> Confusion Provocation
 	Change leader to [188] for 10 turns
 	[1] ESGravity(50:13509) -> Cause of Extinction
 	Player -99% HP
+
 ESBranchCounter(32:22) -> ESBranchCounter
 Branch on counter > 10, target rnd 64
+
 ESBlindStickyRandom(97:13510) -> Light Stealing Shadow
 Condition: One-time use (ai:100 rnd:0) (one-time: 1)
 Blind random 10 orbs for 1 turns
+
 ESDispel(6:13500) -> Sacred Flame Breath
 Condition: 10% chance (ai:0 rnd:10)
 Voids player buff effects, Deal 100% damage
+
 SkillSet:
 	Condition: 30% chance (ai:0 rnd:30)
 	[0] ESBombFixedSpawn(103:13501) -> Fruit of Dissension
 	Spawn locked Bomb orbs in the specified positions
 	[1] ESFixedStart(101:13502) -> Ugly Competition
 	Fix orb movement starting point to random position on the board, Deal 100% damage
+
 SkillSet:
 	Condition: 30% chance (ai:0 rnd:30)
 	[0] ESRandomSpawn(92:13503) -> Sporadic Incineration
 	Spawn random 4 Jammer, Poison orbs
 	[1] ESBindAttack(63:13504) -> Cruel Dispute
 	Bind 3 random subs for 2 turns, Deal 95% damage
+
 SkillSet:
 	Condition: 30% chance (ai:0 rnd:30)
 	[0] ESAttackMultihit(15:13505) -> Hateful Rush
 	Deal 60% damage (3 hits, 20% each)
 	[1] ESSkillDelay(89:13506) -> Holding a Grudge
 	Delay active skills by 2 turns, Deal 50% damage
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 8, target rnd 47
+
 ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b1111
+
 ESSetCounter(25:15) -> ESSetCounter
 counter = 0
+
 SkillSet:
 	[0] ESDamageShield(74:13512) -> Goddess Barrier
 	Reduce damage from all sources by 75% for 99 turns
 	[1] ESLeaderAlter(125:13513) -> Confusion Provocation
 	Change leader to [5058] for 3 turns, Deal 120% damage
+
 ESBranchCounter(32:22) -> ESBranchCounter
 Branch on counter > 3, target rnd 54
+
 ESSpinnersRandom(109:13518) -> Hectic Transformation
 Condition: One-time use (ai:0 rnd:45) (one-time: 1)
 Random 2 orbs change every 1.0s for 2 turns, Deal 130% damage
+
 ESDispel(6:13522) -> Sacred Flame Breath
 Condition: 10% chance (ai:0 rnd:10)
 Voids player buff effects, Deal 125% damage
+
 SkillSet:
 	Condition: 15% chance (ai:0 rnd:15)
 	[0] ESBombFixedSpawn(103:13523) -> Fruit of Dissension
 	Spawn locked Bomb orbs in the specified positions
 	[1] ESFixedStart(101:13524) -> Ugly Competition
 	Fix orb movement starting point to random position on the board, Deal 125% damage
+
 SkillSet:
 	Condition: 15% chance (ai:0 rnd:15)
 	[0] ESRandomSpawn(92:13525) -> Sporadic Incineration
 	Spawn random 4 Jammer, Poison orbs
 	[1] ESBindAttack(63:13526) -> Cruel Dispute
 	Bind 3 random subs for 2 turns, Deal 120% damage
+
 SkillSet:
 	Condition: 15% chance (ai:0 rnd:15)
 	[0] ESAttackMultihit(15:13527) -> Hateful Rush
 	Deal 75% damage (3 hits, 25% each)
 	[1] ESSkillDelay(89:13528) -> Holding a Grudge
 	Delay active skills by 2 turns, Deal 55% damage
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESSetCounter(25:15) -> ESSetCounter
 counter = 0
+
 ESLeaderAlter(125:13513) -> Confusion Provocation
 Condition: 20% chance (ai:0 rnd:20)
 Change leader to [5058] for 3 turns, Deal 120% damage
+
 ESLeaderAlter(125:13514) -> Confusion Provocation
 Condition: 20% chance (ai:0 rnd:20)
 Change leader to [5059] for 3 turns, Deal 120% damage
+
 ESLeaderAlter(125:13515) -> Confusion Provocation
 Condition: 20% chance (ai:0 rnd:20)
 Change leader to [5060] for 3 turns, Deal 120% damage
+
 ESLeaderAlter(125:13516) -> Confusion Provocation
 Condition: 20% chance (ai:0 rnd:20)
 Change leader to [5061] for 3 turns, Deal 120% damage
+
 ESLeaderAlter(125:13517) -> Confusion Provocation
 Condition: 20% chance (ai:0 rnd:20)
 Change leader to [5062] for 3 turns, Deal 120% damage
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 16, target rnd 64
+
 ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b11111
+
 SkillSet:
 	[0] ESBindAwoken(88:13530) -> Scary Scream
 	Bind awoken skills for 5 turns
 	[1] ESAttackUPRemainingEnemies(17:13531) -> Mad Slaughter
 	Increase damage to 200% for the next 999 turns
+
 ESAttackMultihit(15:13532) -> Raging Eruption
 Deal 1000% damage (5 hits, 200% each)

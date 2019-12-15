@@ -6,36 +6,47 @@ counter increment: 0
 
 ESPreemptive(49:318) -> ESPreemptive
 Enable preempt if level 1
+
 ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 1, target rnd 6
+
 ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b1
+
 SkillSet:
 	[0] ESSkillDelay(89:7293) -> Threaten
 	Delay active skills by 3~5 turns
 	[1] ESBindAttack(63:7294) -> Roar
 	Bind 2 random cards for 2 turns, Deal 150% damage
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 SkillSet:
 	Condition: When < 70% hp , one-time use (ai:100 rnd:0) (one-time: 1)
 	[0] ESAttackUPRemainingEnemies(17:7301) -> Rage
 	Increase damage to 130% for the next 10 turns
 	[1] ESBindAttack(63:7300) -> Roar
 	Bind 2 random cards for 2 turns, Deal 150% damage
+
 ESRandomSpawn(92:7296) -> Dash Attack
 Condition: 25% chance (ai:0 rnd:25)
 Spawn random 2 Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs, Deal 200% damage
+
 ESAbsorbCombo(67:7297) -> Frontal Spin
 Condition: 25% chance (ai:0 rnd:25)
 Absorb combo <= 6 damage for 1 turns, Deal 200% damage
+
 ESColumnSpawnMulti(77:7298) -> Boulder Throw
 Condition: 25% chance (ai:0 rnd:25)
 Change 1st, 3rd, 5th column to Jammer orbs, Deal 200% damage
+
 ESBlind(62:7299) -> Jump Strike
 Condition: 25% chance (ai:0 rnd:25)
 Blind all orbs on the board, Deal 200% damage
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESTurnChangePassive(106:7303) -> Enemy's next turn changed
 Enemy turn counter change to 1 when HP <= 70%

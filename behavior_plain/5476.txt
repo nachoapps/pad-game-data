@@ -6,64 +6,87 @@ counter increment: 0
 
 ESPreemptive(49:318) -> ESPreemptive
 Enable preempt if level 1
+
 SkillSet:
 	Condition: One-time use (ai:100 rnd:0) (one-time: 2)
 	[0] ESInactivity(66:14066) -> 愚地流の空手というものを――
 	Do nothing
 	[1] ESDebuffRCV(105:14067) -> キミタチにお見せしよう
 	Rcv 50% for 5 turns
+
 ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 50, target rnd 13
+
 ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 20, target rnd 17
+
 SkillSet:
 	Condition: One-time use (ai:100 rnd:0) (one-time: 1)
 	[0] ESInactivity(66:14069) -> 三戦
 	Do nothing
 	[1] ESDamageShield(74:14070) -> 呼ッ
 	Reduce damage from all sources by 50% for 3 turns
+
 ESBranchCounter(32:22) -> ESBranchCounter
 Branch on counter > 2, target rnd 21
+
 ESSetCounter(26:16) -> ESSetCounter
 counter + 1
+
 ESBlind(62:14072) -> 虎口拳
 Condition: 25% chance (ai:0 rnd:25)
 Blind all orbs on the board, Deal 100% damage
+
 ESGravity(50:14181) -> Toe Kick
 Condition: 25% chance (ai:0 rnd:25)
 Player -25% HP
+
 ESAttackMultihit(15:14074) -> 風摩殺
 Condition: 25% chance (ai:0 rnd:25)
 Deal 105% damage
+
 ESRandomSpawn(92:14075) -> 六波返し
 Condition: 25% chance & when Fire, Water, Wood, Light, Dark, Heal, Jammer, Mortal Poison orbs are on the board (ai:0 rnd:25)
 Spawn random 3 Poison orbs, Deal 95% damage
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 1, target rnd 4
+
 ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b1
+
 ESAbsorbCombo(67:14076) -> 天上天下の構え
 Absorb combo <= 5 damage for 5 turns
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 2, target rnd 5
+
 ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b11
+
 SkillSet:
 	[0] ESInactivity(66:14078) -> 計算もクソもないッッ
 	Do nothing
 	[1] ESAttackUPRemainingEnemies(17:14079) -> 全てを肉体に委ねる
 	Increase damage to 150% for the next 99 turns
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESBranchCounter(32:22) -> ESBranchCounter
 Branch on counter > 3, target rnd 8
+
 ESSetCounter(26:16) -> ESSetCounter
 counter + 1
+
 ESDamageShield(74:14071) -> 前羽の構え
 Reduce damage from all sources by 75% for 2 turns
+
 ESEndPath(36:26) -> ESEndPath
 end_turn

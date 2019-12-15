@@ -6,55 +6,77 @@ counter increment: 0
 
 ESPreemptive(49:318) -> ESPreemptive
 Enable preempt if level 1
+
 ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 1, target rnd 6
+
 ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b1
+
 ESBindRandom(1:10919) -> Entahaz Masaka
 Condition: One-time use (ai:100 rnd:0) (one-time only)
 Bind 4 random cards for 1~2 turns, Deal 100% damage
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 50, target rnd 15
+
 ESSetCounter(26:16) -> ESSetCounter
 counter + 1
+
 ESBranchCounter(31:21) -> ESBranchCounter
 Branch on counter = 4, target rnd 13
+
 ESBlind(62:10920) -> Kokzaram
 Condition: 33% chance (ai:0 rnd:33)
 Blind all orbs on the board, Deal 100% damage
+
 ESRandomSpawn(92:10921) -> Sanaa Aswad
 Condition: 33% chance & when Fire, Water, Wood, Light, Heal, Jammer, Poison, Mortal Poison orbs are on the board (ai:0 rnd:33)
 Spawn random 6 Dark orbs, Deal 100% damage
+
 ESBindAwoken(88:10922) -> Mahatuha
 Condition: 34% chance (ai:0 rnd:34)
 Bind awoken skills for 3 turns
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESBlindStickyRandom(97:10929) -> Secret Key of Solomon
 Blind all orbs for 3 turns
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 10, target rnd 22
+
 ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 2, target rnd 20
+
 ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b11
+
 ESAttackMultihit(15:10925) -> Sout Yadoreb
 Deal 108% damage (3 hits, 36% each)
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 SkillSet:
 	[0] ESAttackMultihit(15:10925) -> Sout Yadoreb
 	Deal 108% damage (3 hits, 36% each)
 	[1] ESBlindStickyRandom(97:10926) -> Yasurek Sitta
 	Blind random 6 orbs for 1 turns
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESAttackMultihit(15:10930) -> Pentacle of the Demonic Sword
 Deal 60% damage (2 hits, 30% each)
+
 SkillSet:
 	[0] ESStatusShield(20:10932) -> I wonder if your life means anything
 	Voids status ailments for 999 turns
@@ -64,34 +86,48 @@ SkillSet:
 	Change player HP to 500000 for 99 turns
 	[3] ESDispel(6:10955) -> Requiem
 	Voids player buff effects
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESAttackMultihit(15:10915) -> Intee Kamkadam
 Deal 2000% damage (4 hits, 500% each)
+
 ESNone(0:0) -> ESNone
 nothing
+
 ESNone(0:0) -> ESNone
 nothing
+
 ESNone(0:0) -> ESNone
 nothing
+
 ESNone(0:0) -> ESNone
 nothing
+
 ESNone(0:0) -> ESNone
 nothing
+
 ESNone(0:0) -> ESNone
 nothing
+
 ESNone(0:0) -> ESNone
 nothing
+
 SkillSet:
 	[0] ESDamageShield(74:10330) -> Defense Instinct
 	Reduce damage from all sources by 50% for 3 turns
 	[1] ESCloud(104:10331) -> Mass Clouds
 	3x3 cloud appear for 1 turns at random location
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESAttributeBlock(107:10335) -> Red Exception
 Unable to match Fire orbs for 3 turns
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESBombRandomSpawn(102:10316) -> Affliction Bombing
 Spawn random 3 Bomb orbs

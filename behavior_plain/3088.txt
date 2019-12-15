@@ -6,98 +6,129 @@ counter increment: 0
 
 ESPreemptive(49:318) -> ESPreemptive
 Enable preempt if level 1
+
 ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 1, target rnd 6
+
 ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b1
+
 SkillSet:
 	[0] ESStatusShield(20:5253) -> Cross On!
 	Voids status ailments for 3 turns
 	[1] ESOrbChangeAttack(48:5254) -> Mercy Flash
 	Change Random to Heal, Deal 130% damage
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESRecoverEnemy(86:5255) -> Resurrection
 Condition: When < 35% hp , one-time use (ai:100 rnd:0) (one-time: 8)
 Enemy recover 100% hp
+
 SkillSet:
 	Condition: When < 35% hp , one-time use (ai:100 rnd:0) (one-time: 4)
 	[0] ESRecoverEnemy(86:5278) -> Resurrection
 	Enemy recover 79% hp
 	[1] ESOrbChangeAttack(48:5266) -> Life Cutting Flash
 	Change Heal to Light, Deal 100% damage
+
 SkillSet:
 	Condition: When < 35% hp , one-time use (ai:100 rnd:0) (one-time: 2)
 	[0] ESRecoverEnemy(86:5280) -> Resurrection
 	Enemy recover 59% hp
 	[1] ESOrbChangeAttack(48:5254) -> Mercy Flash
 	Change Random to Heal, Deal 130% damage
+
 SkillSet:
 	Condition: When < 35% hp , one-time use (ai:100 rnd:0) (one-time: 1)
 	[0] ESRecoverEnemy(86:5257) -> Resurrection
 	Enemy recover 19% hp
 	[1] ESDamageShield(74:5258) -> Pure Plumage
 	Reduce damage from all sources by 75% for 3 turns
+
 SkillSet:
 	Condition: When < 20% hp (ai:100 rnd:0)
 	[0] ESAttackMultihit(15:5260) -> 10 combos!!
 	Deal 200% damage (10 hits, 20% each)
 	[1] ESOrbChangeAttack(48:5266) -> Life Cutting Flash
 	Change Heal to Light, Deal 100% damage
+
 ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 2, target rnd 17
+
 ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b11
+
 ESAttackUPRemainingEnemies(17:5265) -> Innocent Bravery
 Condition: When < 40% hp, when <= 1 enemies remain (ai:100 rnd:0)
 Increase damage to 400% for the next 1 turns
+
 ESAttackUPRemainingEnemies(17:5264) -> Innocent Soul
 Condition: When < 60% hp, when <= 1 enemies remain (ai:100 rnd:0)
 Increase damage to 300% for the next 1 turns
+
 ESAttackUPRemainingEnemies(17:5263) -> Innocent Will
 Condition: When < 80% hp, when <= 1 enemies remain (ai:100 rnd:0)
 Increase damage to 200% for the next 1 turns
+
 ESAttackUPRemainingEnemies(17:5262) -> Innocent Mind
 Condition: when <= 1 enemies remain (ai:100 rnd:0)
 Increase damage to 150% for the next 1 turns
+
 ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 4, target rnd 24
+
 ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b111
+
 ESOrbChangeAttack(48:5266) -> Life Cutting Flash
 Change Heal to Light, Deal 100% damage
+
 ESBindAttack(63:5270) -> Deadly Thorn Shackles
 Condition: When < 40% hp (ai:100 rnd:0)
 Bind 4 random subs for 3 turns, Deal 50% damage
+
 ESBindAttack(63:5269) -> Scattering Thorn Shackles
 Condition: When < 60% hp (ai:100 rnd:0)
 Bind 3 random subs for 3 turns, Deal 50% damage
+
 ESBindAttack(63:5268) -> Double Thorn Shackles
 Condition: When < 80% hp (ai:100 rnd:0)
 Bind 2 random subs for 3 turns, Deal 50% damage
+
 ESBindAttack(63:5267) -> Thorn Shackles
 Bind 1 random subs for 3 turns, Deal 50% damage
+
 ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 8, target rnd 30
+
 ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b1111
+
 ESSkillDelay(89:5274) -> Divine Law's Aura
 Condition: When < 40% hp (ai:100 rnd:0)
 Delay active skills by 4 turns
+
 ESSkillDelay(89:5273) -> Fighting Maiden's Aura
 Condition: When < 60% hp (ai:100 rnd:0)
 Delay active skills by 3 turns
+
 ESSkillDelay(89:5272) -> Goddess' Aura
 Condition: When < 80% hp (ai:100 rnd:0)
 Delay active skills by 2 turns
+
 ESSkillDelay(89:5271) -> Maiden's Aura
 Delay active skills by 1 turns
+
 ESFlagOperation(24:14) -> ESFlagOperation
 flag UNSET 0b1110
+
 SkillSet:
 	[0] ESStatusShield(20:5276) -> White Shield Protection
 	Voids status ailments for 3 turns
 	[1] ESOrbChangeAttack(48:5254) -> Mercy Flash
 	Change Random to Heal, Deal 130% damage
+
 ESResolve(73:5261) -> Ana resolve
 Survive attacks with 1 HP when HP > 50%

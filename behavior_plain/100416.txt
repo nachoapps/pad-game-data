@@ -6,42 +6,58 @@ counter increment: 0
 
 ESPreemptive(49:318) -> ESPreemptive
 Enable preempt if level 1
+
 ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 1, target rnd 6
+
 ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b1
+
 ESBindAttribute(2:5498) -> Water Prohibited
 Condition: One-time use (ai:100 rnd:0) (one-time only)
 Bind Water cards for 1~3 turns
+
 ESCloud(104:5506) -> Thin Mist of Inari
 2x2 cloud appear for 2 turns at random location
+
 ESAttackMultihit(15:5500) -> Flaming Tail Attack
 Condition: When < 20% hp (ai:100 rnd:0)
 Deal 250% damage (5 hits, 50% each)
+
 ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 2, target rnd 11
+
 ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b11
+
 ESSkillDelay(89:5499) -> Giggling...
 Delay active skills by 1 turns
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESFlagOperation(24:14) -> ESFlagOperation
 flag UNSET 0b10
+
 ESAbsorbAttribute(53:5501) -> Dance of the Celestial Fox
 Condition: 20% chance (ai:0 rnd:20)
 Absorb Fire damage for 1 turns, Deal 120% damage
+
 ESAbsorbAttribute(53:5502) -> Dance of the Celestial Fox
 Condition: 20% chance (ai:0 rnd:20)
 Absorb Water damage for 1 turns, Deal 120% damage
+
 ESAbsorbAttribute(53:5503) -> Dance of the Celestial Fox
 Condition: 20% chance (ai:0 rnd:20)
 Absorb Wood damage for 1 turns, Deal 120% damage
+
 ESAbsorbAttribute(53:5504) -> Dance of the Celestial Fox
 Condition: 20% chance (ai:0 rnd:20)
 Absorb Light damage for 1 turns, Deal 120% damage
+
 ESAbsorbAttribute(53:5505) -> Dance of the Celestial Fox
 Condition: 20% chance (ai:0 rnd:20)
 Absorb Dark damage for 1 turns, Deal 120% damage
+
 ESEndPath(36:26) -> ESEndPath
 end_turn

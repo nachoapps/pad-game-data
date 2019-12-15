@@ -6,68 +6,98 @@ counter increment: 0
 
 ESPreemptive(49:697) -> ESPreemptive
 Enable preempt if level 3
+
 ESBranchLevel(35:25) -> ESBranchLevel
 Branch on level > 3, target rnd 4
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 1, target rnd 8
+
 ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b1
+
 ESStatusShield(20:7566) -> Peculiar Stance
 Voids status ailments for 9 turns
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESBranchCard(90:3309) -> ESBranchCard
 Branch on player_cards HAS [2355], target rnd 17
+
 ESBranchCard(90:3313) -> ESBranchCard
 Branch on player_cards HAS [2358, 2359, 2360], target rnd 20
+
 ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 20, target rnd 28
+
 ESBranchCard(90:3315) -> ESBranchCard
 Branch on player_cards HAS [2363, 2364, 2361, 2362], target rnd 23
+
 ESDamageShield(74:7569) -> Hard Form
 Condition: When < 50% hp , one-time use (ai:100 rnd:0) (one-time: 1)
 Reduce damage from all sources by 50% for 3 turns
+
 ESSkillDelay(89:7567) -> Quick Low Kick
 Condition: 40% chance (ai:0 rnd:40)
 Delay active skills by 2 turns, Deal 100% damage
+
 ESBlind(62:7568) -> Powerful High Kick
 Condition: 40% chance (ai:0 rnd:40)
 Blind all orbs on the board, Deal 150% damage
+
 ESAttackSinglehit(82:1) -> Disable Skill
 Condition: 20% chance (ai:0 rnd:20)
 Deal 100% damage
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 2, target rnd 9
+
 ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b11
+
 ESAttackMultihit(15:7572) -> Heavy Middle Kick
 Deal 110% damage
+
 ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 4, target rnd 10
+
 ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b111
+
 ESDamageShield(74:7576) -> Protecting her nape
 Reduce damage from all sources by 20% for 1 turns
+
 ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 8, target rnd 12
+
 ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b1111
+
 ESBranchCard(90:3311) -> ESBranchCard
 Branch on player_cards HAS [2361, 2362], target rnd 27
+
 ESInactivity(66:7578) -> Stops moving about
 Do nothing
+
 ESInactivity(66:7574) -> Checking your identity
 Do nothing
+
 ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 16, target rnd 31
+
 ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b11111
+
 ESBindRandom(1:7570) -> Binding
 Condition: One-time use (ai:100 rnd:0) (one-time only)
 Bind 6 random cards for 3 turns
+
 ESAttackMultihit(15:7579) -> Calm and Calculated Finishing Strike
 Deal 900% damage

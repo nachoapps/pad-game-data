@@ -6,58 +6,82 @@ counter increment: 0
 
 ESPreemptive(49:3402) -> ESPreemptive
 Enable preempt if level 4
+
 ESBranchLevel(35:25) -> ESBranchLevel
 Branch on level > 4, target rnd 4
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESRecoverPlayer(55:8996) -> Happy Valentine's Day! ♪
 Condition: One-time use (ai:100 rnd:0) (one-time: 2)
 Player recover 100% hp
+
 ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 20, target rnd 18
+
 ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 1, target rnd 22
+
 ESDebuffMovetime(39:9001) -> Devil's Devotion
 Condition: When < 50% hp , one-time use (ai:100 rnd:0) (one-time: 1)
 Movetime 150% for 3 turns
+
 ESBranchCounter(32:22) -> ESBranchCounter
 Branch on counter > 2, target rnd 11
+
 ESSetCounter(26:16) -> ESSetCounter
 counter + 1
+
 ESAttackMultihit(15:8995) -> Sweet Combo
 Deal 100% damage (2 hits, 50% each)
+
 ESSetCounter(25:15) -> ESSetCounter
 counter = 0
+
 ESOrbSealColumn(99:8997) -> Wrapping Arrow
 Condition: 20% chance (ai:0 rnd:20)
 Seal 1st column for 1 turns, Deal 130% damage
+
 ESOrbSealColumn(99:8998) -> Wrapping Arrow
 Condition: 20% chance (ai:0 rnd:20)
 Seal 6th column for 1 turns, Deal 130% damage
+
 ESOrbSealRow(100:8999) -> Wrapping Arrow
 Condition: 20% chance (ai:0 rnd:20)
 Seal 1st row for 1 turns, Deal 130% damage
+
 ESOrbSealRow(100:9000) -> Wrapping Arrow
 Condition: 20% chance (ai:0 rnd:20)
 Seal 5th row for 1 turns, Deal 130% damage
+
 ESSpinnersRandom(109:9002) -> Bitter Spot
 Condition: 20% chance (ai:0 rnd:20)
 Random 1 orbs change every 1.0s for 1 turns, Deal 130% damage
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 1, target rnd 22
+
 ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b1
+
 ESAbsorbCombo(67:9003) -> Test of One's True Feelings
 Absorb combo <= 6 damage for 1 turns
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b0
+
 ESBranchCombo(113:6528) -> ESBranchCombo
 Branch on combo >= 7, target rnd 7
+
 ESBoardChangeAttackBits(85:9004) -> Chocolate Smothering
 Change all orbs to Heal, Jammer, Poison, Deal 200% damage
+
 ESEndPath(36:26) -> ESEndPath
 end_turn

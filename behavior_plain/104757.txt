@@ -6,28 +6,38 @@ counter increment: 0
 
 ESPreemptive(49:3402) -> ESPreemptive
 Enable preempt if level 4
+
 ESBranchLevel(35:25) -> ESBranchLevel
 Branch on level > 4, target rnd 4
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESBranchCard(90:11031) -> ESBranchCard
 Branch on player_cards HAS [4748, 4749], target rnd 6
+
 ESBlind(5:11025) -> I'll just destroy this rotten world
 Condition: One-time use (ai:100 rnd:0) (one-time: 8)
 Blind all orbs on the board
+
 ESBlind(5:11026) -> You will lose everything
 Condition: One-time use (ai:100 rnd:0) (one-time: 8)
 Blind all orbs on the board
+
 ESStatusShield(20:11027) -> Stop playing house
 Condition: One-time use (ai:100 rnd:0) (one-time: 4)
 Voids status ailments for 999 turns, Deal 200% damage
+
 ESOrbLock(94:11028) -> My resolution was decided long ago
 Condition: One-time use (ai:100 rnd:0) (one-time: 2)
 Lock all Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs
+
 ESAttackUPRemainingEnemies(17:11029) -> I am the destroyer of this world
 Condition: One-time use, when <= 1 enemies remain (ai:100 rnd:0) (one-time: 1)
 Increase damage to 300% for the next 99 turns
+
 ESAttackMultihit(15:11030) -> Sleep in Hell
 Deal 300% damage
+
 ESEndPath(36:26) -> ESEndPath
 end_turn

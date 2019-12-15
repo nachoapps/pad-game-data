@@ -6,42 +6,60 @@ counter increment: 1
 
 ESPreemptive(49:318) -> ESPreemptive
 Enable preempt if level 1
+
 ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 1, target rnd 6
+
 ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b1
+
 ESNoSkyfall(127:14898) -> Here we are to start the battle!
 No skyfall for 5 turns
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESBranchHP(29:19) -> ESBranchHP
 Branch on hp > 51, target rnd 9
+
 ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 50, target rnd 12
+
 ESGravity(50:14901) -> All right. Initiate counterattack.
 Condition: One-time use (ai:30 rnd:0) (one-time: 1)
 Player -99% HP
+
 ESAttackMultihit(15:14899) -> Damn!
 Condition: 50% chance (ai:0 rnd:50)
 Deal 70% damage
+
 ESRandomSpawn(92:14900) -> ...This sucks.
 Condition: 50% chance & when Fire, Water, Wood, Light, Dark, Heal, Jammer, Mortal Poison orbs are on the board (ai:0 rnd:50)
 Spawn random 4 Poison orbs, Deal 60% damage
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 2, target rnd 16
+
 ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b11
+
 ESSkyfall(96:14902) -> You read, crew?!
 Locked random skyfall +50% for 6 turns
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESBranchHP(29:19) -> ESBranchHP
 Branch on hp > 21, target rnd 8
+
 ESAttackMultihit(15:14903) -> Rock 'n' roll!
 Deal 150% damage (5 hits, 30% each)
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESTypeResist(118:14961) -> Balance Machine Halved
 Reduce damage from Balanced, Machine by 50%

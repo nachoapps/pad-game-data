@@ -6,12 +6,16 @@ counter increment: 0
 
 ESPreemptive(49:318) -> ESPreemptive
 Enable preempt if level 1
+
 ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 1, target rnd 57
+
 ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 1, target rnd 7
+
 ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b1
+
 SkillSet:
 	[0] ESStatusShield(20:10167) -> Ladies & Gentlemen!
 	Voids status ailments for 999 turns
@@ -21,14 +25,19 @@ SkillSet:
 	Reduce damage from all sources by 99% for 5 turns
 	[3] ESRandomSpawn(92:10170) -> Show me your best combos!
 	Spawn random 9 Heal, Jammer, Poison, Mortal Poison orbs
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 2, target rnd 13
+
 ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b11
+
 ESBranchCombo(113:6528) -> ESBranchCombo
 Branch on combo >= 10, target rnd 11
+
 SkillSet:
 	[0] ESGravity(50:10176) -> No, no, you can do better!
 	Player -99% HP
@@ -36,6 +45,7 @@ SkillSet:
 	Blind random 15 orbs for 4 turns
 	[2] ESMaxHPChange(111:10174) -> It's SHOWTIME!!!
 	Change player HP to 50% for 5 turns
+
 SkillSet:
 	[0] ESRecoverPlayer(55:10172) -> Well done!
 	Player recover 100% hp
@@ -43,33 +53,46 @@ SkillSet:
 	Blind random 15 orbs for 4 turns
 	[2] ESMaxHPChange(111:10174) -> It's SHOWTIME!!!
 	Change player HP to 50% for 5 turns
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESSetCounter(26:16) -> ESSetCounter
 counter + 1
+
 ESBranchCounter(31:21) -> ESBranchCounter
 Branch on counter = 4, target rnd 53
+
 ESBranchCounter(32:22) -> ESBranchCounter
 Branch on counter > 5, target rnd 20
+
 ESLeaderSwap(75:10178) -> Super Illusion
 Condition: 33% chance (ai:0 rnd:33)
 Leader changes to random sub for 1 turns, Deal 40% damage
+
 ESOrbSealRow(100:10179) -> Acrobat Parade
 Condition: 33% chance (ai:0 rnd:33)
 Seal 5th row for 1 turns, Deal 40% damage
+
 ESCloud(104:10180) -> Mysterious Fog
 Condition: 34% chance (ai:0 rnd:34)
 Row of cloud appear for 1 turns at random location, Deal 40% damage
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 4, target rnd 27
+
 ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b111
+
 ESSetCounter(25:15) -> ESSetCounter
 counter = 5
+
 ESBranchCombo(113:6528) -> ESBranchCombo
 Branch on combo >= 10, target rnd 25
+
 SkillSet:
 	[0] ESDebuffRCV(105:10188) -> No, no, you can do better!
 	Rcv 50% for 4 turns
@@ -77,6 +100,7 @@ SkillSet:
 	Locked Heal skyfall +100% for 3 turns
 	[2] ESMaxHPChange(111:10186) -> It's SHOWTIME!!!
 	Change player HP to 100000 for 5 turns
+
 SkillSet:
 	[0] ESRecoverPlayer(55:10172) -> Well done!
 	Player recover 100% hp
@@ -84,31 +108,43 @@ SkillSet:
 	Locked Heal skyfall +100% for 3 turns
 	[2] ESMaxHPChange(111:10186) -> It's SHOWTIME!!!
 	Change player HP to 100000 for 5 turns
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESBranchCounter(31:21) -> ESBranchCounter
 Branch on counter = 9, target rnd 55
+
 ESBranchCounter(32:22) -> ESBranchCounter
 Branch on counter > 10, target rnd 33
+
 ESAttackMultihit(15:10190) -> Juggling Spectacle
 Condition: 33% chance (ai:0 rnd:33)
 Deal 90% damage (3 hits, 30% each)
+
 ESRandomSpawn(92:10191) -> Colorful Loop
 Condition: 33% chance (ai:0 rnd:33)
 Spawn random 6 Fire, Water, Wood, Light, Dark, Jammer, Poison orbs, Deal 81% damage
+
 ESBombRandomSpawn(102:10192) -> Dangerous Bomb
 Condition: 34% chance (ai:0 rnd:34)
 Spawn random 6 Bomb orbs, Deal 81% damage
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 8, target rnd 40
+
 ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b1111
+
 ESSetCounter(25:15) -> ESSetCounter
 counter = 10
+
 ESBranchCombo(113:6528) -> ESBranchCombo
 Branch on combo >= 10, target rnd 38
+
 SkillSet:
 	[0] ESDebuffMovetime(39:10196) -> No, no, you can do better!
 	Movetime -1s for 4 turns
@@ -116,6 +152,7 @@ SkillSet:
 	Random 3 orbs change every 1.0s for 4 turns
 	[2] ESMaxHPChange(111:10194) -> It's SHOWTIME!!!
 	Change player HP to 11111 for 5 turns
+
 SkillSet:
 	[0] ESDebuffMovetime(39:10184) -> Well done!
 	Movetime 200% for 1 turns
@@ -123,63 +160,85 @@ SkillSet:
 	Random 3 orbs change every 1.0s for 4 turns
 	[2] ESMaxHPChange(111:10194) -> It's SHOWTIME!!!
 	Change player HP to 11111 for 5 turns
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESBranchCounter(32:22) -> ESBranchCounter
 Branch on counter > 14, target rnd 43
+
 ESOrbLock(94:10198) -> Amazing Ring
 Lock 4 random Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs, Deal 20% damage
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 16, target rnd 47
+
 ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b11111
+
 SkillSet:
 	[0] ESDebuffRCV(105:10199) -> It's almost over !
 	Rcv 50% for 1 turns
 	[1] ESMaxHPChange(111:10200) -> It's SHOWTIME!!!
 	Change player HP to 500000 for 2 turns
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 32, target rnd 51
+
 ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b111111
+
 ESAttackMultihit(15:10202) -> Grand Finale
 Deal 1000% damage
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 SkillSet:
 	[0] ESBindAwoken(88:10203) -> Eh? The show is over!
 	Bind awoken skills for 1 turns
 	[1] ESAttackMultihit(15:10204) -> Thank you for coming!
 	Deal 2500% damage (5 hits, 500% each)
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 SkillSet:
 	[0] ESDamageShield(74:10181) -> Amuse me more!
 	Reduce damage from all sources by 50% for 15 turns
 	[1] ESRandomSpawn(92:10182) -> Show me your best combos!
 	Spawn random 9 Heal, Jammer, Poison, Mortal Poison orbs
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESRandomSpawn(92:10182) -> Show me your best combos!
 Spawn random 9 Heal, Jammer, Poison, Mortal Poison orbs
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 SkillSet:
 	Condition: One-time use (ai:100 rnd:0) (one-time: 1)
 	[0] ESRecoverEnemy(86:10206) -> It's just the beginning!
 	Enemy recover 50% hp
 	[1] ESMaxHPChange(111:10207) -> It's SHOWTIME!!!
 	Change player HP to 10000 for 4 turns
+
 SkillSet:
 	[0] ESBindAwoken(88:10136) -> Ah!
 	Bind awoken skills for 1 turns
 	[1] ESAttackMultihit(15:10137) -> Destructive Illusion Miss
 	Deal 2500% damage (5 hits, 500% each)
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESResolve(73:10166) -> Resolve
 Survive attacks with 1 HP when HP > 50%

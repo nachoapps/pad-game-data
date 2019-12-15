@@ -6,48 +6,67 @@ counter increment: 1
 
 ESPreemptive(49:3402) -> ESPreemptive
 Enable preempt if level 4
+
 ESBranchLevel(35:25) -> ESBranchLevel
 Branch on level > 4, target rnd 4
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 1, target rnd 8
+
 ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b1
+
 ESStatusShield(20:12236) -> Do you honestly think
 you can defeat me?
 Voids status ailments for 999 turns
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 20, target rnd 14
+
 ESBranchHP(29:19) -> ESBranchHP
 Branch on hp > 51, target rnd 11
+
 ESGravity(50:12237) -> You are a nuisance, so die!
 Condition: One-time use (ai:50 rnd:0) (one-time: 1)
 Player -99% HP
+
 ESOrbChangeAttack(48:12199) -> How does that feel?
 Condition: 50% chance (ai:0 rnd:50)
 Change Random to Dark, Deal 95% damage
+
 ESAttackMultihit(15:12200) -> I have no use for you,
 Condition: 50% chance (ai:0 rnd:50)
 Deal 120% damage (3 hits, 40% each)
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 2, target rnd 18
+
 ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b11
+
 ESBindAwoken(88:12202) -> Rule Breaker
 Bind awoken skills for 1 turns
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b1
+
 SkillSet:
 	[0] ESInactivity(66:12203) -> Are you surprised?
 	Do nothing
 	[1] ESAttackMultihit(15:12204) -> This is my Noble Phantasm, Rule Breaker.
 	Deal 200% damage (2 hits, 100% each)
+
 ESEndPath(36:26) -> ESEndPath
 end_turn

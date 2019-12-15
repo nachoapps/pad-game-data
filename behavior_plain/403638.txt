@@ -6,46 +6,61 @@ counter increment: 1
 
 ESPreemptive(49:318) -> ESPreemptive
 Enable preempt if level 1
+
 ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 1, target rnd 6
+
 ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b1
+
 SkillSet:
 	[0] ESStatusShield(20:6787) -> Concept of Boundless Worlds
 	Voids status ailments for 999 turns
 	[1] ESCloud(104:6788) -> Dormant Oceanic Evil
 	Row of cloud appear for 30 turns at 1st column
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 SkillSet:
 	Condition: When < 1% hp (ai:100 rnd:0)
 	[0] ESRecoverEnemy(86:6797) -> Eternal Cell Regeneration
 	Enemy recover 100% hp
 	[1] ESAttackMultihit(15:6794) -> Veracity of the Cosmic Grotesque
 	Deal 30000% damage (10 hits, 3000% each)
+
 ESAttackMultihit(15:6794) -> Veracity of the Cosmic Grotesque
 Condition: When < 10% hp (ai:100 rnd:0)
 Deal 30000% damage (10 hits, 3000% each)
+
 ESSkyfall(68:6790) -> Nature's Encroaching Nightmare
 Condition: One-time use (ai:100 rnd:0) (one-time: 10)
 Mortal Poison skyfall +15% for 15 turns, Deal 550% damage
+
 ESAbsorbCombo(67:13763) -> Doomsday Sanctuary
 Absorb combo <= 7 damage for 999 turns
+
 ESRandomSpawn(92:6792) -> Ruler of the One and Only Ocean
 Condition: 25% chance & when Fire, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs are on the board (ai:0 rnd:25)
 Spawn random 9 Water orbs, Deal 340% damage
+
 ESAttackMultihit(15:6793) -> Father Dagon and His Deep Ones
 Condition: 25% chance (ai:0 rnd:25)
 Deal 400% damage (8 hits, 50% each)
+
 ESDebuffMovetime(39:6795) -> Sealing Silence of the Deep
 Condition: 25% chance (ai:0 rnd:25)
 Movetime 25% for 1 turns, Deal 360% damage
+
 ESOrbLock(94:6796) -> Dreaded Celestial
 Condition: 25% chance (ai:0 rnd:25)
 Lock 15 random Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs, Deal 380% damage
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESResolve(73:6799) -> Resolve
 Survive attacks with 1 HP when HP > 50%
+
 ESAttributeResist(72:13762) -> Half Water Wood
 Reduce damage from Water, Wood by 50%

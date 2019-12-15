@@ -6,10 +6,13 @@ counter increment: 0
 
 ESPreemptive(49:318) -> ESPreemptive
 Enable preempt if level 1
+
 ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 1, target rnd 6
+
 ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b1
+
 SkillSet:
 	[0] ESRecoverPlayer(55:2066) -> Hello and welcome!
 	Player recover 100% hp
@@ -17,8 +20,10 @@ SkillSet:
 	Absorb damage >= 500000 damage for 2 turns
 	[2] ESStatusShield(20:2068) -> Who are YOU?
 	Voids status ailments for 2 turns
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 SkillSet:
 	Condition: When < 50% hp , one-time use (ai:100 rnd:0) (one-time: 1)
 	[0] ESAttackUPRemainingEnemies(17:2078) -> What did you do to my face?
@@ -27,6 +32,7 @@ SkillSet:
 	Change Random 6 to Poison
 	[2] ESBindSkill(14:2080) -> Oh no! Aamir's precious face!
 	Bind active skills for 2 turns
+
 SkillSet:
 	Condition: When < 20% hp (ai:100 rnd:0)
 	[0] ESAttackMultihit(15:2086) -> Nobody likes a pest!
@@ -35,6 +41,7 @@ SkillSet:
 	Deal 40% damage (2 hits, 20% each)
 	[2] ESAttackMultihit(15:2088) -> Time for you to go home
 	Deal 35% damage
+
 SkillSet:
 	Condition: When < 50% hp (ai:100 rnd:0)
 	[0] ESAttackMultihit(15:2082) -> I'd rather play with them...
@@ -43,6 +50,7 @@ SkillSet:
 	Enemy recover 1% hp
 	[2] ESBlind(5:2084) -> Could you quit gawking?
 	Blind all orbs on the board
+
 SkillSet:
 	Condition: 50% chance (ai:50 rnd:0)
 	[0] ESColumnSpawnMulti(77:2074) -> You come over here, too
@@ -51,6 +59,7 @@ SkillSet:
 	Bind 1 random subs for 2 turns
 	[2] ESAttackMultihit(15:2076) -> You're an eyesore!
 	Deal 20% damage (2 hits, 10% each)
+
 SkillSet:
 	[0] ESAttackMultihit(15:2070) -> How about THIS?
 	Deal 200% damage (2 hits, 100% each)

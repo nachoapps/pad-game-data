@@ -6,46 +6,63 @@ counter increment: 0
 
 ESPreemptive(49:318) -> ESPreemptive
 Enable preempt if level 1
+
 ESDebuffRCV(105:12589) -> Bow down before my Psycho Power!
 Condition: One-time use (ai:100 rnd:0) (one-time: 2)
 Rcv 50% for 10 turns
+
 ESSetCounter(26:16) -> ESSetCounter
 counter + 1
+
 ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 50, target rnd 12
+
 ESBranchCounter(32:22) -> ESBranchCounter
 Branch on counter > 10, target rnd 16
+
 ESBranchHP(29:19) -> ESBranchHP
 Branch on hp > 51, target rnd 8
+
 ESAttackMultihit(15:12454) -> Psycho Inferno
 Condition: 25% chance (ai:25 rnd:0)
 Deal 120% damage (4 hits, 30% each)
+
 ESOrbChangeAttack(48:12449) -> Somersault Skull Diver
 Condition: 33% chance (ai:0 rnd:33)
 Change Random to Dark, Deal 110% damage
+
 ESAttackMultihit(15:12448) -> Head Press
 Condition: 33% chance (ai:0 rnd:33)
 Deal 100% damage
+
 ESAttackMultihit(15:12453) -> Double Knee Press
 Condition: 34% chance (ai:0 rnd:34)
 Deal 110% damage (2 hits, 55% each)
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESDamageShield(74:12455) -> Scurry! Psycho Nightmare
 Condition: One-time use (ai:100 rnd:0) (one-time: 1)
 Reduce damage from all sources by 50% for 10 turns
+
 ESBranchHP(29:19) -> ESBranchHP
 Branch on hp > 11, target rnd 5
+
 SkillSet:
 	[0] ESInactivity(66:12608) -> Away with you!
 	Do nothing
 	[1] ESRowSpawnMulti(79:12460) -> Ultimate Psycho Crusher
 	Change 3rd, 4th row to Dark orbs, Deal 500% damage
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESSetCounter(25:15) -> ESSetCounter
 counter = 0
+
 ESRowSpawnMulti(79:12459) -> Psycho Crusher
 Change 3rd row to Dark orbs, Deal 250% damage
+
 ESEndPath(36:26) -> ESEndPath
 end_turn

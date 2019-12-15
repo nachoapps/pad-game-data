@@ -6,56 +6,78 @@ counter increment: 1
 
 ESPreemptive(49:3402) -> ESPreemptive
 Enable preempt if level 4
+
 ESBranchLevel(35:25) -> ESBranchLevel
 Branch on level > 4, target rnd 4
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 1, target rnd 8
+
 ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b1
+
 ESStatusShield(20:3884) -> Insolent fools!
 Voids status ailments for 999 turns
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 20, target rnd 19
+
 ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 60, target rnd 16
+
 ESDispel(6:3889) -> Dispel
 Condition: 50% chance (ai:50 rnd:0)
 Voids player buff effects
+
 ESOrbChangeAttack(48:3886) -> Tornado
 Condition: One-time use (ai:100 rnd:0) (one-time: 1)
 Change Random to Wood, Deal 150% damage
+
 ESPoisonChangeRandomAttack(64:3885) -> Bio
 Condition: 25% chance (ai:0 rnd:25)
 Change Random 5 to Poison, Deal 80% damage
+
 ESJammerChangeRandom(13:3887) -> Meltdown
 Condition: 50% chance (ai:0 rnd:50)
 Change Random 2 to Jammer, Deal 100% damage
+
 ESBindRandom(1:3888) -> Stop
 Condition: 25% chance (ai:0 rnd:25)
 Bind 1 random cards for 1~3 turns
+
 ESEndPath(36:26) -> ESEndPath
 end_turn
+
 ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 2, target rnd 10
+
 ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b11
+
 ESGravity(50:3891) -> Maelstrom
 Player -60% HP
+
 ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 4, target rnd 22
+
 ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b111
+
 ESInactivity(66:3890) -> Double
 Do nothing
+
 SkillSet:
 	[0] ESOrbChangeAttack(48:3886) -> Tornado
 	Change Random to Wood, Deal 150% damage
 	[1] ESOrbChangeAttack(48:3886) -> Tornado
 	Change Random to Wood, Deal 150% damage
+
 SkillSet:
 	Condition: On death (ai:100 rnd:0)
 	[0] ESInactivity(66:3892) -> HAHAHA...

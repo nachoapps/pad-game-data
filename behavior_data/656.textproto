@@ -25,7 +25,6 @@
               children {
                 behavior {
                   condition {
-                    use_chance: 100
                     trigger_monsters: 374
                     trigger_monsters: 375
                     trigger_monsters: 655
@@ -47,12 +46,14 @@
           children {
             group {
               condition {
-                use_chance: 60
                 repeats_every: 3
                 trigger_turn: 1
               }
               children {
                 behavior {
+                  condition {
+                    use_chance: 60
+                  }
                   enemy_skill_id: 3322
                 }
               }
@@ -61,7 +62,6 @@
           children {
             group {
               condition {
-                use_chance: 100
                 repeats_every: 3
                 trigger_turn: 2
               }
@@ -75,12 +75,14 @@
           children {
             group {
               condition {
-                use_chance: 60
                 repeats_every: 3
                 trigger_turn: 3
               }
               children {
                 behavior {
+                  condition {
+                    use_chance: 60
+                  }
                   enemy_skill_id: 3322
                 }
               }
@@ -98,7 +100,6 @@
           children {
             behavior {
               condition {
-                use_chance: 100
                 trigger_monsters: 374
                 trigger_monsters: 375
                 trigger_monsters: 655
@@ -109,9 +110,6 @@
           }
           children {
             behavior {
-              condition {
-                use_chance: 100
-              }
               enemy_skill_id: 3327
             }
           }
@@ -122,11 +120,12 @@
           group_type: STANDARD
           condition {
             hp_threshold: 19
-            use_chance: 100
-            if_attributes_available: true
           }
           children {
             behavior {
+              condition {
+                if_attributes_available: true
+              }
               enemy_skill_id: 3326
             }
           }

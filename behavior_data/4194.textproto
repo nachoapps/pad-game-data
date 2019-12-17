@@ -8,10 +8,12 @@
           group_type: STANDARD
           condition {
             hp_threshold: 100
-            use_chance: 50
           }
           children {
             behavior {
+              condition {
+                use_chance: 50
+              }
               enemy_skill_id: 9190
             }
           }
@@ -26,7 +28,6 @@
           children {
             group {
               condition {
-                use_chance: 100
                 trigger_turn: 1
               }
               children {
@@ -39,7 +40,6 @@
           children {
             group {
               condition {
-                use_chance: 100
                 repeats_every: 2
                 trigger_turn: 1
               }

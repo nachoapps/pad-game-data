@@ -28,7 +28,6 @@
           children {
             group {
               condition {
-                use_chance: 100
                 repeats_every: 3
                 trigger_turn: 1
               }
@@ -78,12 +77,13 @@
           group_type: STANDARD
           condition {
             hp_threshold: 49
-            use_chance: 100
-            if_attributes_available: true
             trigger_turn: 1
           }
           children {
             behavior {
+              condition {
+                if_attributes_available: true
+              }
               enemy_skill_id: 2634
             }
           }
@@ -98,7 +98,6 @@
           children {
             group {
               condition {
-                use_chance: 100
                 trigger_turn: 2
               }
               children {
@@ -110,9 +109,6 @@
           }
           children {
             group {
-              condition {
-                use_chance: 100
-              }
               children {
                 behavior {
                   enemy_skill_id: 2636
@@ -125,9 +121,6 @@
       children {
         group {
           group_type: STANDARD
-          condition {
-            use_chance: 100
-          }
           children {
             behavior {
               enemy_skill_id: 13567

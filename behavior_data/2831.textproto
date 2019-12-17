@@ -49,9 +49,6 @@
       children {
         group {
           group_type: DISPEL_PLAYER
-          condition {
-            use_chance: 100
-          }
           children {
             behavior {
               enemy_skill_id: 4128
@@ -68,12 +65,14 @@
           children {
             group {
               condition {
-                use_chance: 50
                 trigger_turn: 1
                 trigger_turn_end: 6
               }
               children {
                 behavior {
+                  condition {
+                    use_chance: 50
+                  }
                   enemy_skill_id: 4127
                 }
               }
@@ -81,11 +80,11 @@
           }
           children {
             group {
-              condition {
-                use_chance: 50
-              }
               children {
                 behavior {
+                  condition {
+                    use_chance: 50
+                  }
                   enemy_skill_id: 4127
                 }
               }
@@ -98,7 +97,6 @@
           group_type: STANDARD
           condition {
             hp_threshold: 69
-            use_chance: 100
             trigger_turn: 1
           }
           children {
@@ -113,7 +111,6 @@
           group_type: STANDARD
           condition {
             hp_threshold: 49
-            use_chance: 100
             trigger_turn: 2
           }
           children {
@@ -128,7 +125,6 @@
           group_type: STANDARD
           condition {
             hp_threshold: 9
-            use_chance: 100
           }
           children {
             behavior {

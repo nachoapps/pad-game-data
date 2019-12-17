@@ -5,10 +5,12 @@
       group_type: STANDARD
       condition {
         hp_threshold: 69
-        use_chance: 70
       }
       children {
         behavior {
+          condition {
+            use_chance: 70
+          }
           enemy_skill_id: 240
         }
       }
@@ -27,12 +29,13 @@
           children {
             group {
               condition {
-                use_chance: 100
-                trigger_enemies_remaining: 1
                 trigger_turn: 1
               }
               children {
                 behavior {
+                  condition {
+                    trigger_enemies_remaining: 1
+                  }
                   enemy_skill_id: 516
                 }
               }
@@ -41,12 +44,13 @@
           children {
             group {
               condition {
-                use_chance: 100
-                trigger_enemies_remaining: 1
                 trigger_turn: 12
               }
               children {
                 behavior {
+                  condition {
+                    trigger_enemies_remaining: 1
+                  }
                   enemy_skill_id: 516
                 }
               }
@@ -59,12 +63,14 @@
           group_type: STANDARD
           condition {
             hp_threshold: 69
-            use_chance: 70
             trigger_turn: 2
             trigger_turn_end: 11
           }
           children {
             behavior {
+              condition {
+                use_chance: 70
+              }
               enemy_skill_id: 240
             }
           }

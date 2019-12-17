@@ -8,21 +8,25 @@ approved: False
 
 level: 5
  group:
- condition: 70% chance, hp <= 69
+ condition: hp <= 69
+ | condition: 70% chance
  | (240:15) Wolf Combo
  | Deal 125% damage (5 hits, 25% each)
  type: REMAINING
  condition: when 1 enemies remain
  | group:
    | group:
-   | condition: when 1 enemies remain, turn 1
+   | condition: turn 1
+     | condition: when 1 enemies remain
      | (516:17) Howl of Anger
      | Increase damage to 300% for the next 10 turns
    | group:
-   | condition: when 1 enemies remain, turn 12
+   | condition: turn 12
+     | condition: when 1 enemies remain
      | (516:17) Howl of Anger
      | Increase damage to 300% for the next 10 turns
  | group:
- | condition: 70% chance, turns 2-11, hp <= 69
+ | condition: turns 2-11, hp <= 69
+   | condition: 70% chance
    | (240:15) Wolf Combo
    | Deal 125% damage (5 hits, 25% each)

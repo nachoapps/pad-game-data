@@ -25,7 +25,6 @@
       children {
         group {
           condition {
-            use_chance: 100
             trigger_turn: 1
           }
           children {
@@ -37,9 +36,6 @@
       }
       children {
         group {
-          condition {
-            use_chance: 100
-          }
           children {
             behavior {
               enemy_skill_id: 650
@@ -57,11 +53,12 @@
       children {
         group {
           condition {
-            use_chance: 100
             trigger_turn: 1
           }
           children {
             behavior {
+              condition {
+              }
               enemy_skill_id: 649
             }
           }
@@ -70,12 +67,13 @@
       children {
         group {
           condition {
-            use_chance: 100
-            trigger_enemies_remaining: 1
             trigger_turn: 2
           }
           children {
             behavior {
+              condition {
+                trigger_enemies_remaining: 1
+              }
               enemy_skill_id: 270
             }
           }

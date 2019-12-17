@@ -16,11 +16,13 @@
           group_type: STANDARD
           condition {
             hp_threshold: 100
-            use_chance: 25
-            global_one_time: true
           }
           children {
             behavior {
+              condition {
+                use_chance: 25
+                global_one_time: true
+              }
               enemy_skill_id: 100
             }
           }
@@ -60,7 +62,6 @@
           children {
             group {
               condition {
-                use_chance: 100
                 repeats_every: 2
                 trigger_turn: 1
               }
@@ -74,7 +75,6 @@
           children {
             group {
               condition {
-                use_chance: 100
                 repeats_every: 2
                 trigger_turn: 2
               }
@@ -179,4 +179,4 @@
       }
     }
   }
-  status: APPROVED_AS_IS
+  status: NEEDS_REAPPROVAL

@@ -9,7 +9,6 @@
       children {
         group {
           condition {
-            use_chance: 100
             repeats_every: 4
             trigger_turn: 1
           }
@@ -23,13 +22,14 @@
       children {
         group {
           condition {
-            use_chance: 100
             repeats_every: 4
-            if_attributes_available: true
             trigger_turn: 2
           }
           children {
             behavior {
+              condition {
+                if_attributes_available: true
+              }
               enemy_skill_id: 4714
             }
           }

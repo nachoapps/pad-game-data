@@ -3,11 +3,11 @@
     level: 4
     groups {
       group_type: PREEMPT
-      condition {
-        if_attributes_available: true
-      }
       children {
         behavior {
+          condition {
+            if_attributes_available: true
+          }
           enemy_skill_id: 10624
         }
       }
@@ -27,17 +27,11 @@
               }
               children {
                 behavior {
-                  condition {
-                    use_chance: 100
-                  }
                   enemy_skill_id: 10628
                 }
               }
               children {
                 behavior {
-                  condition {
-                    use_chance: 100
-                  }
                   enemy_skill_id: 10627
                 }
               }
@@ -46,7 +40,6 @@
           children {
             group {
               condition {
-                use_chance: 100
                 trigger_turn: 2
               }
               children {
@@ -58,9 +51,6 @@
           }
           children {
             group {
-              condition {
-                use_chance: 100
-              }
               children {
                 behavior {
                   enemy_skill_id: 10630
@@ -79,7 +69,6 @@
           children {
             group {
               condition {
-                use_chance: 100
                 trigger_turn: 2
               }
               children {
@@ -92,7 +81,6 @@
           children {
             group {
               condition {
-                use_chance: 100
                 trigger_turn: 3
               }
               children {
@@ -109,7 +97,6 @@
           group_type: STANDARD
           condition {
             hp_threshold: 19
-            use_chance: 100
           }
           children {
             behavior {

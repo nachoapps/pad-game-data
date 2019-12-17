@@ -3,11 +3,11 @@
     level: 4
     groups {
       group_type: PREEMPT
-      condition {
-        if_attributes_available: true
-      }
       children {
         behavior {
+          condition {
+            if_attributes_available: true
+          }
           enemy_skill_id: 9306
         }
       }
@@ -17,9 +17,6 @@
       children {
         group {
           group_type: DISPEL_PLAYER
-          condition {
-            use_chance: 100
-          }
           children {
             behavior {
               enemy_skill_id: 9305
@@ -32,11 +29,12 @@
           group_type: STANDARD
           condition {
             hp_threshold: 100
-            use_chance: 100
-            if_attributes_available: true
           }
           children {
             behavior {
+              condition {
+                if_attributes_available: true
+              }
               enemy_skill_id: 9303
             }
           }
@@ -47,11 +45,13 @@
       group_type: REMAINING
       condition {
         hp_threshold: 100
-        use_chance: 100
         trigger_enemies_remaining: 1
       }
       children {
         behavior {
+          condition {
+            trigger_enemies_remaining: 1
+          }
           enemy_skill_id: 9304
         }
       }

@@ -16,7 +16,6 @@
           group_type: STANDARD
           condition {
             hp_threshold: 100
-            use_chance: 100
           }
           children {
             behavior {
@@ -30,7 +29,6 @@
           group_type: STANDARD
           condition {
             hp_threshold: 19
-            use_chance: 100
           }
           children {
             behavior {
@@ -44,12 +42,14 @@
       group_type: REMAINING
       condition {
         hp_threshold: 100
-        use_chance: 100
         trigger_enemies_remaining: 1
         trigger_turn: 1
       }
       children {
         behavior {
+          condition {
+            trigger_enemies_remaining: 1
+          }
           enemy_skill_id: 4117
         }
       }

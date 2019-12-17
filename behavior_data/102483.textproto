@@ -20,14 +20,15 @@
           children {
             group {
               condition {
-                use_chance: 100
-                trigger_monsters: 2457
-                trigger_monsters: 2458
-                trigger_monsters: 2459
                 trigger_turn: 1
               }
               children {
                 behavior {
+                  condition {
+                    trigger_monsters: 2457
+                    trigger_monsters: 2458
+                    trigger_monsters: 2459
+                  }
                   enemy_skill_id: 3498
                 }
               }
@@ -66,7 +67,6 @@
           children {
             behavior {
               condition {
-                use_chance: 100
                 trigger_monsters: 2457
                 trigger_monsters: 2458
                 trigger_monsters: 2459
@@ -76,9 +76,6 @@
           }
           children {
             behavior {
-              condition {
-                use_chance: 100
-              }
               enemy_skill_id: 3494
             }
           }
@@ -93,7 +90,6 @@
           children {
             group {
               condition {
-                use_chance: 100
                 trigger_turn: 2
               }
               children {
@@ -105,12 +101,11 @@
           }
           children {
             group {
-              condition {
-                use_chance: 100
-                if_attributes_available: true
-              }
               children {
                 behavior {
+                  condition {
+                    if_attributes_available: true
+                  }
                   enemy_skill_id: 3496
                 }
               }

@@ -40,12 +40,13 @@
           group_type: STANDARD
           condition {
             hp_threshold: 99
-            use_chance: 100
-            if_attributes_available: true
             trigger_turn: 1
           }
           children {
             behavior {
+              condition {
+                if_attributes_available: true
+              }
               enemy_skill_id: 12226
             }
           }
@@ -56,7 +57,6 @@
           group_type: STANDARD
           condition {
             hp_threshold: 50
-            use_chance: 100
             trigger_turn: 2
           }
           children {
@@ -71,7 +71,6 @@
           group_type: STANDARD
           condition {
             hp_threshold: 19
-            use_chance: 100
           }
           children {
             behavior {

@@ -40,7 +40,8 @@ level: 1
  type: REMAINING
  condition: when 1 enemies remain
  | group:
- | condition: when 1 enemies remain, turn 1, hp <= 100
+ | condition: turn 1, hp <= 100
+   | condition: when 1 enemies remain
    | (12023:17) 精神統一でござる…
    | Increase damage to 200% for the next 1 turns
  | group:
@@ -50,6 +51,7 @@ level: 1
      | (12024:83) こうなったら　奥の手でござる！ + ぬははは！　勝利はもらった！
      | Increase damage to 150% for the next 5 turns + Absorb combo <= 5 damage for 5 turns
    | group:
-   | condition: when 1 enemies remain, turn 2
+   | condition: turn 2
+     | condition: when 1 enemies remain
      | (12023:17) 精神統一でござる…
      | Increase damage to 200% for the next 1 turns

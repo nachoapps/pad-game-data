@@ -68,7 +68,6 @@
       children {
         group {
           condition {
-            use_chance: 100
             trigger_turn: 5
           }
           children {
@@ -148,12 +147,13 @@
       children {
         group {
           condition {
-            use_chance: 100
-            trigger_enemies_remaining: 1
             trigger_turn: 5
           }
           children {
             behavior {
+              condition {
+                trigger_enemies_remaining: 1
+              }
               enemy_skill_id: 8444
             }
           }

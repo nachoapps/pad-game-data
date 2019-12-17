@@ -3,11 +3,11 @@
     level: 1
     groups {
       group_type: PREEMPT
-      condition {
-        if_attributes_available: true
-      }
       children {
         behavior {
+          condition {
+            if_attributes_available: true
+          }
           enemy_skill_id: 3357
         }
       }
@@ -23,7 +23,6 @@
           children {
             group {
               condition {
-                use_chance: 100
                 trigger_turn: 1
               }
               children {
@@ -41,9 +40,6 @@
               }
               children {
                 behavior {
-                  condition {
-                    use_chance: 100
-                  }
                   enemy_skill_id: 3359
                 }
               }
@@ -61,13 +57,15 @@
           children {
             group {
               condition {
-                use_chance: 80
                 repeats_every: 3
-                if_attributes_available: true
                 trigger_turn: 2
               }
               children {
                 behavior {
+                  condition {
+                    use_chance: 80
+                    if_attributes_available: true
+                  }
                   enemy_skill_id: 3360
                 }
               }
@@ -118,7 +116,6 @@
           children {
             behavior {
               condition {
-                use_chance: 100
                 trigger_monsters: 1423
                 trigger_monsters: 1925
                 trigger_monsters: 2179
@@ -128,9 +125,6 @@
           }
           children {
             behavior {
-              condition {
-                use_chance: 100
-              }
               enemy_skill_id: 3378
             }
           }
@@ -150,7 +144,6 @@
               children {
                 behavior {
                   condition {
-                    use_chance: 100
                     trigger_monsters: 1423
                     trigger_monsters: 1925
                     trigger_monsters: 2179
@@ -160,17 +153,11 @@
               }
               children {
                 behavior {
-                  condition {
-                    use_chance: 100
-                  }
                   enemy_skill_id: 3375
                 }
               }
               children {
                 behavior {
-                  condition {
-                    use_chance: 100
-                  }
                   enemy_skill_id: 3378
                 }
               }
@@ -184,17 +171,11 @@
               }
               children {
                 behavior {
-                  condition {
-                    use_chance: 100
-                  }
                   enemy_skill_id: 3375
                 }
               }
               children {
                 behavior {
-                  condition {
-                    use_chance: 100
-                  }
                   enemy_skill_id: 3359
                 }
               }
@@ -217,9 +198,6 @@
               }
               children {
                 behavior {
-                  condition {
-                    use_chance: 100
-                  }
                   enemy_skill_id: 3375
                 }
               }

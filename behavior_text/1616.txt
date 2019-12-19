@@ -10,7 +10,7 @@ level: 1
  type: PREEMPT
  | (14285:14) Undine, go......
  | Bind active skills for 50 turns
- | (4178:-1) Countdown Message
+ | (-1:-1) Countdown Message
  | Display '0' and skip turn
  type: DEATH
  condition: when defeated
@@ -18,16 +18,8 @@ level: 1
  | Bind awoken skills for 1 turns
  group:
  | group:
- | condition: execute repeatedly, turn 1 of 5
-   | (3178:-1) Countdown Message
-   | Display '0' and skip turn
- | group:
- | condition: execute repeatedly, turn 2 of 5
-   | (2178:-1) Countdown Message
-   | Display '0' and skip turn
- | group:
- | condition: execute repeatedly, turn 3 of 5
-   | (1178:-1) Countdown Message
+ | condition: execute repeatedly, turn 1-3 of 5
+   | (-1:-1) Countdown Message
    | Display '0' and skip turn
  | group:
  | condition: execute repeatedly, turn 4 of 5
@@ -35,5 +27,5 @@ level: 1
    | Change all orbs to Fire, Water, Wood, Light, Dark, Deal 10000% damage
  | group:
  | condition: execute repeatedly, turn 5 of 5
-   | (4178:-1) Countdown Message
+   | (-1:-1) Countdown Message
    | Display '0' and skip turn

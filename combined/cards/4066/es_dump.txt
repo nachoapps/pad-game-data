@@ -6,8 +6,14 @@ True : use_new_ai
 ESPreemptive(49:318) -> ESPreemptive
 Enable preempt if level 1
 
-ESNone(0:15862) -> ESNone
-nothing
+SkillSet:
+	Condition: One-time use (ai:100 rnd:0) (one-time: 2)
+	[0] ESInactivity(66:15856) -> メリクリー♪
+	Do nothing
+	[1] ESAbsorbCombo(67:15857) -> 私を倒せたらプレゼントあげる
+	Absorb combo <= 5 damage for 5 turns
+	[2] ESBoardChange(84:15858) -> あーケーキおいしー♪
+	Change all orbs to Fire, Water, Wood, Light, Dark, Heal
 
 ESBranchCounter(32:22) -> ESBranchCounter
 Branch on counter > 4, target rnd 7
@@ -15,23 +21,29 @@ Branch on counter > 4, target rnd 7
 ESSetCounter(26:16) -> ESSetCounter
 counter + 1
 
-ESNone(0:15861) -> ESNone
-nothing
+ESBoardChange(84:15861) -> セイントクーゲル
+Change all orbs to Fire, Water, Wood, Light, Dark, Heal
 
 ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESNone(0:15863) -> ESNone
-nothing
+SkillSet:
+	Condition: One-time use (ai:100 rnd:0) (one-time: 1)
+	[0] ESDebuffMovetime(39:15859) -> しょーがない、おまけしてあげよー
+	Movetime 400% for 99 turns
+	[1] ESBoardChangeAttackBits(85:15860) -> がんばれ♪
+	Change all orbs to Fire, Water, Wood, Light, Dark, Heal, Deal 100% damage
 
-ESNone(0:15861) -> ESNone
-nothing
+ESBoardChange(84:15861) -> セイントクーゲル
+Change all orbs to Fire, Water, Wood, Light, Dark, Heal
 
 ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESNone(0:15865) -> ESNone
-nothing
+SkillSet:
+	Condition: On death (ai:0 rnd:0)
+	[0] ESInactivity(66:15864) -> プレゼントは届けておくよー
+	Do nothing
 
 ESNone(0:0) -> ESNone
 nothing

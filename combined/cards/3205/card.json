@@ -171,7 +171,7 @@
             },
             "kr_skill": {
                 "behavior": {
-                    "_name": "※先制コマンドLV1",
+                    "_name": "선제커맨드Lv1",
                     "enemy_skill_id": 318,
                     "level": 1,
                     "params": [
@@ -202,7 +202,7 @@
             },
             "na_skill": {
                 "behavior": {
-                    "_name": "※先制コマンドLV1",
+                    "_name": "*Preemptive Command LV1",
                     "enemy_skill_id": 318,
                     "level": 1,
                     "params": [
@@ -361,7 +361,7 @@
             },
             "kr_skill": {
                 "behavior": {
-                    "_name": "※カウンターが ai のとき rnd をセット",
+                    "_name": "※카운트가 ai 일 시에 rnd를 세팅",
                     "counter": 4,
                     "counter_is": 0,
                     "enemy_skill_id": 177,
@@ -393,7 +393,7 @@
             },
             "na_skill": {
                 "behavior": {
-                    "_name": "※カウンターが ai のとき rnd をセット",
+                    "_name": "ERROR177",
                     "counter": 4,
                     "counter_is": 0,
                     "enemy_skill_id": 177,
@@ -458,7 +458,7 @@
             },
             "kr_skill": {
                 "behavior": {
-                    "_name": "※カウント表示",
+                    "_name": "※카운트 표시",
                     "enemy_skill_id": 178,
                     "params": [
                         null,
@@ -488,7 +488,7 @@
             },
             "na_skill": {
                 "behavior": {
-                    "_name": "※カウント表示",
+                    "_name": "ERROR178",
                     "enemy_skill_id": 178,
                     "params": [
                         null,
@@ -644,7 +644,7 @@
             },
             "kr_skill": {
                 "behavior": {
-                    "_name": "※パース終了",
+                    "_name": "테스트예비",
                     "enemy_skill_id": 26,
                     "params": [
                         null,
@@ -674,7 +674,7 @@
             },
             "na_skill": {
                 "behavior": {
-                    "_name": "※パース終了",
+                    "_name": "ERROR26",
                     "enemy_skill_id": 26,
                     "params": [
                         null,
@@ -1151,14 +1151,45 @@
             "enemy_def_max": 500,
             "enemy_def_min": 50,
             "enemy_def_scale": 1.0,
-            "enemy_hp_max": 176250,
-            "enemy_hp_min": 5875,
+            "enemy_hp_max": 10000000,
+            "enemy_hp_min": 10000,
             "enemy_hp_scale": 1.0,
             "enemy_max_level": 10,
             "enemy_skill_counter_increment": 0,
-            "enemy_skill_max_counter": 0,
-            "enemy_skill_refs": [],
-            "enemy_turns": 2,
+            "enemy_skill_max_counter": 1,
+            "enemy_skill_refs": [
+                {
+                    "enemy_ai": 0,
+                    "enemy_rnd": 0,
+                    "enemy_skill_id": 318
+                },
+                {
+                    "enemy_ai": 100,
+                    "enemy_rnd": 0,
+                    "enemy_skill_id": 16212
+                },
+                {
+                    "enemy_ai": 0,
+                    "enemy_rnd": 4,
+                    "enemy_skill_id": 177
+                },
+                {
+                    "enemy_ai": 0,
+                    "enemy_rnd": 0,
+                    "enemy_skill_id": 178
+                },
+                {
+                    "enemy_ai": 100,
+                    "enemy_rnd": 0,
+                    "enemy_skill_id": 16213
+                },
+                {
+                    "enemy_ai": 0,
+                    "enemy_rnd": 0,
+                    "enemy_skill_id": 26
+                }
+            ],
+            "enemy_turns": 1,
             "enemy_turns_alt": 0,
             "enemy_xp_per_level": 253,
             "evo_mat_id_1": 0,
@@ -1208,12 +1239,196 @@
             "unknown_009": 5,
             "unknown_055": 0,
             "unknown_056": 0,
-            "use_new_ai": false,
+            "use_new_ai": true,
             "voice_id": 0,
             "xp_max": 4000000,
             "xp_scale": 2.5
         },
-        "enemy_skills": [],
+        "enemy_skills": [
+            {
+                "behavior": {
+                    "_name": "선제커맨드Lv1",
+                    "enemy_skill_id": 318,
+                    "level": 1,
+                    "params": [
+                        null,
+                        1,
+                        100,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null
+                    ],
+                    "type": 49
+                },
+                "condition": null,
+                "enemy_skill_id": 318,
+                "increment": 0,
+                "max_counter": 1,
+                "use_new_ai": true
+            },
+            {
+                "behavior": {
+                    "_name": "なし",
+                    "enemy_skill_id": 16212,
+                    "params": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        50,
+                        4,
+                        null,
+                        null,
+                        null
+                    ],
+                    "type": 0
+                },
+                "condition": null,
+                "enemy_skill_id": 16212,
+                "increment": 0,
+                "max_counter": 1,
+                "use_new_ai": true
+            },
+            {
+                "behavior": {
+                    "_name": "※카운트가 ai 일 시에 rnd를 세팅",
+                    "counter": 4,
+                    "counter_is": 0,
+                    "enemy_skill_id": 177,
+                    "params": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        4,
+                        null,
+                        null,
+                        null
+                    ],
+                    "type": 38
+                },
+                "condition": null,
+                "enemy_skill_id": 177,
+                "increment": 0,
+                "max_counter": 1,
+                "use_new_ai": true
+            },
+            {
+                "behavior": {
+                    "_name": "※카운트 표시",
+                    "enemy_skill_id": 178,
+                    "params": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        4,
+                        null,
+                        null,
+                        null
+                    ],
+                    "type": 37
+                },
+                "condition": null,
+                "enemy_skill_id": 178,
+                "increment": 0,
+                "max_counter": 1,
+                "use_new_ai": true
+            },
+            {
+                "behavior": {
+                    "_name": "なし",
+                    "enemy_skill_id": 16213,
+                    "params": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        50,
+                        4,
+                        null,
+                        null,
+                        null
+                    ],
+                    "type": 0
+                },
+                "condition": null,
+                "enemy_skill_id": 16213,
+                "increment": 0,
+                "max_counter": 1,
+                "use_new_ai": true
+            },
+            {
+                "behavior": {
+                    "_name": "테스트예비",
+                    "enemy_skill_id": 26,
+                    "params": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        4,
+                        null,
+                        null,
+                        null
+                    ],
+                    "type": 36
+                },
+                "condition": null,
+                "enemy_skill_id": 26,
+                "increment": 0,
+                "max_counter": 1,
+                "use_new_ai": true
+            }
+        ],
         "leader_skill": {
             "_atk": 1,
             "_hp": 1,
@@ -1456,14 +1671,45 @@
             "enemy_def_max": 500,
             "enemy_def_min": 50,
             "enemy_def_scale": 1.0,
-            "enemy_hp_max": 176250,
-            "enemy_hp_min": 5875,
+            "enemy_hp_max": 10000000,
+            "enemy_hp_min": 10000,
             "enemy_hp_scale": 1.0,
             "enemy_max_level": 10,
             "enemy_skill_counter_increment": 0,
-            "enemy_skill_max_counter": 0,
-            "enemy_skill_refs": [],
-            "enemy_turns": 2,
+            "enemy_skill_max_counter": 1,
+            "enemy_skill_refs": [
+                {
+                    "enemy_ai": 0,
+                    "enemy_rnd": 0,
+                    "enemy_skill_id": 318
+                },
+                {
+                    "enemy_ai": 100,
+                    "enemy_rnd": 0,
+                    "enemy_skill_id": 16212
+                },
+                {
+                    "enemy_ai": 0,
+                    "enemy_rnd": 4,
+                    "enemy_skill_id": 177
+                },
+                {
+                    "enemy_ai": 0,
+                    "enemy_rnd": 0,
+                    "enemy_skill_id": 178
+                },
+                {
+                    "enemy_ai": 100,
+                    "enemy_rnd": 0,
+                    "enemy_skill_id": 16213
+                },
+                {
+                    "enemy_ai": 0,
+                    "enemy_rnd": 0,
+                    "enemy_skill_id": 26
+                }
+            ],
+            "enemy_turns": 1,
             "enemy_turns_alt": 0,
             "enemy_xp_per_level": 253,
             "evo_mat_id_1": 0,
@@ -1513,12 +1759,196 @@
             "unknown_009": 5,
             "unknown_055": 0,
             "unknown_056": 0,
-            "use_new_ai": false,
+            "use_new_ai": true,
             "voice_id": 0,
             "xp_max": 4000000,
             "xp_scale": 2.5
         },
-        "enemy_skills": [],
+        "enemy_skills": [
+            {
+                "behavior": {
+                    "_name": "*Preemptive Command LV1",
+                    "enemy_skill_id": 318,
+                    "level": 1,
+                    "params": [
+                        null,
+                        1,
+                        100,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null
+                    ],
+                    "type": 49
+                },
+                "condition": null,
+                "enemy_skill_id": 318,
+                "increment": 0,
+                "max_counter": 1,
+                "use_new_ai": true
+            },
+            {
+                "behavior": {
+                    "_name": "なし",
+                    "enemy_skill_id": 16212,
+                    "params": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        50,
+                        4,
+                        null,
+                        null,
+                        null
+                    ],
+                    "type": 0
+                },
+                "condition": null,
+                "enemy_skill_id": 16212,
+                "increment": 0,
+                "max_counter": 1,
+                "use_new_ai": true
+            },
+            {
+                "behavior": {
+                    "_name": "ERROR177",
+                    "counter": 4,
+                    "counter_is": 0,
+                    "enemy_skill_id": 177,
+                    "params": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        4,
+                        null,
+                        null,
+                        null
+                    ],
+                    "type": 38
+                },
+                "condition": null,
+                "enemy_skill_id": 177,
+                "increment": 0,
+                "max_counter": 1,
+                "use_new_ai": true
+            },
+            {
+                "behavior": {
+                    "_name": "ERROR178",
+                    "enemy_skill_id": 178,
+                    "params": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        4,
+                        null,
+                        null,
+                        null
+                    ],
+                    "type": 37
+                },
+                "condition": null,
+                "enemy_skill_id": 178,
+                "increment": 0,
+                "max_counter": 1,
+                "use_new_ai": true
+            },
+            {
+                "behavior": {
+                    "_name": "なし",
+                    "enemy_skill_id": 16213,
+                    "params": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        50,
+                        4,
+                        null,
+                        null,
+                        null
+                    ],
+                    "type": 0
+                },
+                "condition": null,
+                "enemy_skill_id": 16213,
+                "increment": 0,
+                "max_counter": 1,
+                "use_new_ai": true
+            },
+            {
+                "behavior": {
+                    "_name": "ERROR26",
+                    "enemy_skill_id": 26,
+                    "params": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        4,
+                        null,
+                        null,
+                        null
+                    ],
+                    "type": 36
+                },
+                "condition": null,
+                "enemy_skill_id": 26,
+                "increment": 0,
+                "max_counter": 1,
+                "use_new_ai": true
+            }
+        ],
         "leader_skill": {
             "_atk": 1,
             "_hp": 1,

@@ -47,7 +47,7 @@
                 {
                     "duration": 1,
                     "levels": 11,
-                    "name": "ボム",
+                    "name": "폭탄",
                     "raw_description": "",
                     "shield": 0.25,
                     "skill_id": 1141,
@@ -59,7 +59,7 @@
                     "levels": 26,
                     "mass_attack": false,
                     "multiplier": 10.0,
-                    "name": "ボム",
+                    "name": "폭탄",
                     "raw_description": "",
                     "skill_id": 1041,
                     "skill_type": 2,
@@ -68,8 +68,8 @@
                 }
             ],
             "levels": 26,
-            "name": "ボム",
-            "raw_description": "1ターンの間、敵の防御力が減少。 敵1体に攻撃力×10倍の攻撃。",
+            "name": "폭탄",
+            "raw_description": "1턴 동안 적의 방어력을 감소 하나의 적에게 공격력x10배로 공격",
             "skill_id": 26,
             "skill_type": 116,
             "turn_max": 30,
@@ -84,7 +84,7 @@
                 {
                     "duration": 1,
                     "levels": 11,
-                    "name": "ボム",
+                    "name": "Bomb",
                     "raw_description": "",
                     "shield": 0.25,
                     "skill_id": 1141,
@@ -96,7 +96,7 @@
                     "levels": 26,
                     "mass_attack": false,
                     "multiplier": 10.0,
-                    "name": "ボム",
+                    "name": "Bomb",
                     "raw_description": "",
                     "skill_id": 1041,
                     "skill_type": 2,
@@ -105,8 +105,8 @@
                 }
             ],
             "levels": 26,
-            "name": "ボム",
-            "raw_description": "1ターンの間、敵の防御力が減少。 敵1体に攻撃力×10倍の攻撃。",
+            "name": "Bomb",
+            "raw_description": "Reduces enemies' DEF for 1 turn; inflicts 10x ATK attack on 1 enemy",
             "skill_id": 26,
             "skill_type": 116,
             "turn_max": 30,
@@ -171,13 +171,13 @@
             },
             "kr_skill": {
                 "behavior": {
-                    "_name": "ダークバインド",
+                    "_name": "다크 바인드",
                     "attack": null,
                     "enemy_skill_id": 45,
                     "max_turns": 4,
                     "min_turns": 2,
                     "params": [
-                        "闇属性が数ターンの間、行動不能",
+                        "어둠속성이 몇 턴 동안 행동불능",
                         4,
                         2,
                         4,
@@ -220,13 +220,13 @@
             },
             "na_skill": {
                 "behavior": {
-                    "_name": "ダークバインド",
+                    "_name": "Dark Bind",
                     "attack": null,
                     "enemy_skill_id": 45,
                     "max_turns": 4,
                     "min_turns": 2,
                     "params": [
-                        "闇属性が数ターンの間、行動不能",
+                        "Binds Dark Att. allies for a number of turns",
                         4,
                         2,
                         4,
@@ -461,7 +461,7 @@
                 {
                     "duration": 1,
                     "levels": 11,
-                    "name": "ボム",
+                    "name": "폭탄",
                     "raw_description": "",
                     "shield": 0.25,
                     "skill_id": 1141,
@@ -473,7 +473,7 @@
                     "levels": 26,
                     "mass_attack": false,
                     "multiplier": 10.0,
-                    "name": "ボム",
+                    "name": "폭탄",
                     "raw_description": "",
                     "skill_id": 1041,
                     "skill_type": 2,
@@ -482,14 +482,14 @@
                 }
             ],
             "levels": 26,
-            "name": "ボム",
-            "raw_description": "1ターンの間、敵の防御力が減少。 敵1体に攻撃力×10倍の攻撃。",
+            "name": "폭탄",
+            "raw_description": "1턴 동안 적의 방어력을 감소 하나의 적에게 공격력x10배로 공격",
             "skill_id": 26,
             "skill_type": 116,
             "turn_max": 30,
             "turn_min": 5
         },
-        "active_skill_id": null,
+        "active_skill_id": 26,
         "card": {
             "active_skill_id": 26,
             "ancestor_id": 197,
@@ -545,7 +545,7 @@
             "min_hp": 186,
             "min_rcv": 120,
             "monster_no": 500198,
-            "name": "ハーピィデーモン",
+            "name": "하르피아 데몬",
             "orb_skin_id": 0,
             "other_fields": [
                 ""
@@ -574,12 +574,62 @@
             "xp_max": 1500000,
             "xp_scale": 2.5
         },
-        "enemy_skills": [],
+        "enemy_skills": [
+            {
+                "behavior": {
+                    "_name": "다크 바인드",
+                    "attack": null,
+                    "enemy_skill_id": 45,
+                    "max_turns": 4,
+                    "min_turns": 2,
+                    "params": [
+                        "어둠속성이 몇 턴 동안 행동불능",
+                        4,
+                        2,
+                        4,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        4,
+                        null,
+                        null,
+                        null
+                    ],
+                    "target_attribute": 4,
+                    "target_count": null,
+                    "targets": [
+                        "TargetType.attributes"
+                    ],
+                    "type": 2
+                },
+                "condition": {
+                    "_ai": 20,
+                    "_rnd": 10,
+                    "cards_on_team": [],
+                    "combos_made": null,
+                    "condition_attributes": [],
+                    "enemies_remaining": null,
+                    "forced_one_time": null,
+                    "hp_threshold": null,
+                    "on_death": null,
+                    "one_time": null
+                },
+                "enemy_skill_id": 45,
+                "increment": 0,
+                "max_counter": 0,
+                "use_new_ai": true
+            }
+        ],
         "leader_skill": null,
         "leader_skill_id": null,
         "monster_id": 500198,
         "monster_no": 500198,
-        "server": "Server.jp"
+        "server": "Server.kr"
     },
     "leader_skill": null,
     "monster_id": 500198,
@@ -593,7 +643,7 @@
                 {
                     "duration": 1,
                     "levels": 11,
-                    "name": "ボム",
+                    "name": "Bomb",
                     "raw_description": "",
                     "shield": 0.25,
                     "skill_id": 1141,
@@ -605,7 +655,7 @@
                     "levels": 26,
                     "mass_attack": false,
                     "multiplier": 10.0,
-                    "name": "ボム",
+                    "name": "Bomb",
                     "raw_description": "",
                     "skill_id": 1041,
                     "skill_type": 2,
@@ -614,14 +664,14 @@
                 }
             ],
             "levels": 26,
-            "name": "ボム",
-            "raw_description": "1ターンの間、敵の防御力が減少。 敵1体に攻撃力×10倍の攻撃。",
+            "name": "Bomb",
+            "raw_description": "Reduces enemies' DEF for 1 turn; inflicts 10x ATK attack on 1 enemy",
             "skill_id": 26,
             "skill_type": 116,
             "turn_max": 30,
             "turn_min": 5
         },
-        "active_skill_id": null,
+        "active_skill_id": 26,
         "card": {
             "active_skill_id": 26,
             "ancestor_id": 197,
@@ -677,7 +727,7 @@
             "min_hp": 186,
             "min_rcv": 120,
             "monster_no": 500198,
-            "name": "ハーピィデーモン",
+            "name": "Harpie Demon",
             "orb_skin_id": 0,
             "other_fields": [
                 ""
@@ -706,11 +756,61 @@
             "xp_max": 1500000,
             "xp_scale": 2.5
         },
-        "enemy_skills": [],
+        "enemy_skills": [
+            {
+                "behavior": {
+                    "_name": "Dark Bind",
+                    "attack": null,
+                    "enemy_skill_id": 45,
+                    "max_turns": 4,
+                    "min_turns": 2,
+                    "params": [
+                        "Binds Dark Att. allies for a number of turns",
+                        4,
+                        2,
+                        4,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        4,
+                        null,
+                        null,
+                        null
+                    ],
+                    "target_attribute": 4,
+                    "target_count": null,
+                    "targets": [
+                        "TargetType.attributes"
+                    ],
+                    "type": 2
+                },
+                "condition": {
+                    "_ai": 20,
+                    "_rnd": 10,
+                    "cards_on_team": [],
+                    "combos_made": null,
+                    "condition_attributes": [],
+                    "enemies_remaining": null,
+                    "forced_one_time": null,
+                    "hp_threshold": null,
+                    "on_death": null,
+                    "one_time": null
+                },
+                "enemy_skill_id": 45,
+                "increment": 0,
+                "max_counter": 0,
+                "use_new_ai": true
+            }
+        ],
         "leader_skill": null,
         "leader_skill_id": null,
         "monster_id": 500198,
         "monster_no": 500198,
-        "server": "Server.jp"
+        "server": "Server.na"
     }
 }

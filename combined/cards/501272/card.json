@@ -15,8 +15,8 @@
         "kr_skill": {
             "duration": 3,
             "levels": 6,
-            "name": "防御の構え",
-            "raw_description": "3ターンの間、受けるダメージを半減。",
+            "name": "방어자세",
+            "raw_description": "3턴 동안 적에게 받는 대미지가 반감",
             "shield": 0.5,
             "skill_id": 27,
             "skill_type": 3,
@@ -26,8 +26,8 @@
         "na_skill": {
             "duration": 3,
             "levels": 6,
-            "name": "防御の構え",
-            "raw_description": "3ターンの間、受けるダメージを半減。",
+            "name": "Defensive Stance",
+            "raw_description": "Halves damage for 3 turns",
             "shield": 0.5,
             "skill_id": 27,
             "skill_type": 3,
@@ -75,7 +75,7 @@
             },
             "kr_skill": {
                 "behavior": {
-                    "_name": "※先制コマンドLV1",
+                    "_name": "선제커맨드Lv1",
                     "enemy_skill_id": 318,
                     "level": 1,
                     "params": [
@@ -106,7 +106,7 @@
             },
             "na_skill": {
                 "behavior": {
-                    "_name": "※先制コマンドLV1",
+                    "_name": "*Preemptive Command LV1",
                     "enemy_skill_id": 318,
                     "level": 1,
                     "params": [
@@ -452,7 +452,7 @@
             },
             "kr_skill": {
                 "behavior": {
-                    "_name": "※パース終了",
+                    "_name": "테스트예비",
                     "enemy_skill_id": 26,
                     "params": [
                         null,
@@ -482,7 +482,7 @@
             },
             "na_skill": {
                 "behavior": {
-                    "_name": "※パース終了",
+                    "_name": "ERROR26",
                     "enemy_skill_id": 26,
                     "params": [
                         null,
@@ -814,15 +814,15 @@
         "active_skill": {
             "duration": 3,
             "levels": 6,
-            "name": "防御の構え",
-            "raw_description": "3ターンの間、受けるダメージを半減。",
+            "name": "방어자세",
+            "raw_description": "3턴 동안 적에게 받는 대미지가 반감",
             "shield": 0.5,
             "skill_id": 27,
             "skill_type": 3,
             "turn_max": 20,
             "turn_min": 15
         },
-        "active_skill_id": null,
+        "active_skill_id": 27,
         "card": {
             "active_skill_id": 27,
             "ancestor_id": 316,
@@ -898,7 +898,7 @@
             "min_hp": 2114,
             "min_rcv": 3,
             "monster_no": 501272,
-            "name": "紅の機神将・エルダーヨトゥン",
+            "name": "붉은 기계신 엘더 요툰 장군",
             "orb_skin_id": 0,
             "other_fields": [
                 ""
@@ -927,7 +927,161 @@
             "xp_max": 3000000,
             "xp_scale": 2.5
         },
-        "enemy_skills": [],
+        "enemy_skills": [
+            {
+                "behavior": {
+                    "_name": "선제커맨드Lv1",
+                    "enemy_skill_id": 318,
+                    "level": 1,
+                    "params": [
+                        null,
+                        1,
+                        100,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null
+                    ],
+                    "type": 49
+                },
+                "condition": null,
+                "enemy_skill_id": 318,
+                "increment": 0,
+                "max_counter": 1,
+                "use_new_ai": true
+            },
+            {
+                "behavior": {
+                    "_name": "葬りさってくれる！",
+                    "amount": -3.0,
+                    "attack": null,
+                    "debuff_type": "movetime",
+                    "enemy_skill_id": 15341,
+                    "params": [
+                        "3ターンの間、持ち時間が3秒減少",
+                        3,
+                        30,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        1,
+                        null,
+                        null
+                    ],
+                    "turns": 3,
+                    "type": 39,
+                    "unit": "s"
+                },
+                "condition": {
+                    "_ai": 100,
+                    "_rnd": 0,
+                    "cards_on_team": [],
+                    "combos_made": null,
+                    "condition_attributes": [],
+                    "enemies_remaining": null,
+                    "forced_one_time": null,
+                    "hp_threshold": null,
+                    "on_death": null,
+                    "one_time": 1
+                },
+                "enemy_skill_id": 15341,
+                "increment": 0,
+                "max_counter": 1,
+                "use_new_ai": true
+            },
+            {
+                "behavior": {
+                    "_name": "バーニングフィスト",
+                    "attack": {
+                        "atk_multiplier": 100,
+                        "max_hits": 2,
+                        "min_hits": 2
+                    },
+                    "enemy_skill_id": 15342,
+                    "params": [
+                        null,
+                        2,
+                        2,
+                        100,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null
+                    ],
+                    "type": 15
+                },
+                "condition": {
+                    "_ai": 100,
+                    "_rnd": 0,
+                    "cards_on_team": [],
+                    "combos_made": null,
+                    "condition_attributes": [],
+                    "enemies_remaining": null,
+                    "forced_one_time": null,
+                    "hp_threshold": null,
+                    "on_death": null,
+                    "one_time": null
+                },
+                "enemy_skill_id": 15342,
+                "increment": 0,
+                "max_counter": 1,
+                "use_new_ai": true
+            },
+            {
+                "behavior": {
+                    "_name": "테스트예비",
+                    "enemy_skill_id": 26,
+                    "params": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        4,
+                        null,
+                        null,
+                        null
+                    ],
+                    "type": 36
+                },
+                "condition": null,
+                "enemy_skill_id": 26,
+                "increment": 0,
+                "max_counter": 1,
+                "use_new_ai": true
+            }
+        ],
         "leader_skill": {
             "_atk": 3.0,
             "_hp": 1,
@@ -942,15 +1096,15 @@
             "max_attr": 2,
             "min_atk": 3.0,
             "min_attr": 2,
-            "name": "ビッグバンインパクト",
-            "raw_description": "火光の同時攻撃で攻撃力が3倍。",
+            "name": "빅뱅 임팩트",
+            "raw_description": "불, 빛으로 동시 공격 시 공격력이 3배가 됨",
             "skill_id": 1296,
             "skill_type": 61
         },
-        "leader_skill_id": null,
+        "leader_skill_id": 1296,
         "monster_id": 501272,
         "monster_no": 501272,
-        "server": "Server.jp"
+        "server": "Server.kr"
     },
     "leader_skill": {
         "en_text": null,
@@ -987,8 +1141,8 @@
             "max_attr": 2,
             "min_atk": 3.0,
             "min_attr": 2,
-            "name": "ビッグバンインパクト",
-            "raw_description": "火光の同時攻撃で攻撃力が3倍。",
+            "name": "빅뱅 임팩트",
+            "raw_description": "불, 빛으로 동시 공격 시 공격력이 3배가 됨",
             "skill_id": 1296,
             "skill_type": 61
         },
@@ -1006,8 +1160,8 @@
             "max_attr": 2,
             "min_atk": 3.0,
             "min_attr": 2,
-            "name": "ビッグバンインパクト",
-            "raw_description": "火光の同時攻撃で攻撃力が3倍。",
+            "name": "Big Bang Impact",
+            "raw_description": "3x ATK when Fire & Light attack at once",
             "skill_id": 1296,
             "skill_type": 61
         },
@@ -1019,15 +1173,15 @@
         "active_skill": {
             "duration": 3,
             "levels": 6,
-            "name": "防御の構え",
-            "raw_description": "3ターンの間、受けるダメージを半減。",
+            "name": "Defensive Stance",
+            "raw_description": "Halves damage for 3 turns",
             "shield": 0.5,
             "skill_id": 27,
             "skill_type": 3,
             "turn_max": 20,
             "turn_min": 15
         },
-        "active_skill_id": null,
+        "active_skill_id": 27,
         "card": {
             "active_skill_id": 27,
             "ancestor_id": 316,
@@ -1103,7 +1257,7 @@
             "min_hp": 2114,
             "min_rcv": 3,
             "monster_no": 501272,
-            "name": "紅の機神将・エルダーヨトゥン",
+            "name": "Red Mech General, Elder Jotunn",
             "orb_skin_id": 0,
             "other_fields": [
                 ""
@@ -1132,7 +1286,161 @@
             "xp_max": 3000000,
             "xp_scale": 2.5
         },
-        "enemy_skills": [],
+        "enemy_skills": [
+            {
+                "behavior": {
+                    "_name": "*Preemptive Command LV1",
+                    "enemy_skill_id": 318,
+                    "level": 1,
+                    "params": [
+                        null,
+                        1,
+                        100,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null
+                    ],
+                    "type": 49
+                },
+                "condition": null,
+                "enemy_skill_id": 318,
+                "increment": 0,
+                "max_counter": 1,
+                "use_new_ai": true
+            },
+            {
+                "behavior": {
+                    "_name": "*****",
+                    "amount": -3.0,
+                    "attack": null,
+                    "debuff_type": "movetime",
+                    "enemy_skill_id": 15341,
+                    "params": [
+                        "3ターンの間、持ち時間が3秒減少",
+                        3,
+                        30,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        1,
+                        null,
+                        null
+                    ],
+                    "turns": 3,
+                    "type": 39,
+                    "unit": "s"
+                },
+                "condition": {
+                    "_ai": 100,
+                    "_rnd": 0,
+                    "cards_on_team": [],
+                    "combos_made": null,
+                    "condition_attributes": [],
+                    "enemies_remaining": null,
+                    "forced_one_time": null,
+                    "hp_threshold": null,
+                    "on_death": null,
+                    "one_time": 1
+                },
+                "enemy_skill_id": 15341,
+                "increment": 0,
+                "max_counter": 1,
+                "use_new_ai": true
+            },
+            {
+                "behavior": {
+                    "_name": "*****",
+                    "attack": {
+                        "atk_multiplier": 100,
+                        "max_hits": 2,
+                        "min_hits": 2
+                    },
+                    "enemy_skill_id": 15342,
+                    "params": [
+                        null,
+                        2,
+                        2,
+                        100,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null
+                    ],
+                    "type": 15
+                },
+                "condition": {
+                    "_ai": 100,
+                    "_rnd": 0,
+                    "cards_on_team": [],
+                    "combos_made": null,
+                    "condition_attributes": [],
+                    "enemies_remaining": null,
+                    "forced_one_time": null,
+                    "hp_threshold": null,
+                    "on_death": null,
+                    "one_time": null
+                },
+                "enemy_skill_id": 15342,
+                "increment": 0,
+                "max_counter": 1,
+                "use_new_ai": true
+            },
+            {
+                "behavior": {
+                    "_name": "ERROR26",
+                    "enemy_skill_id": 26,
+                    "params": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        4,
+                        null,
+                        null,
+                        null
+                    ],
+                    "type": 36
+                },
+                "condition": null,
+                "enemy_skill_id": 26,
+                "increment": 0,
+                "max_counter": 1,
+                "use_new_ai": true
+            }
+        ],
         "leader_skill": {
             "_atk": 3.0,
             "_hp": 1,
@@ -1147,14 +1455,14 @@
             "max_attr": 2,
             "min_atk": 3.0,
             "min_attr": 2,
-            "name": "ビッグバンインパクト",
-            "raw_description": "火光の同時攻撃で攻撃力が3倍。",
+            "name": "Big Bang Impact",
+            "raw_description": "3x ATK when Fire & Light attack at once",
             "skill_id": 1296,
             "skill_type": 61
         },
-        "leader_skill_id": null,
+        "leader_skill_id": 1296,
         "monster_id": 501272,
         "monster_no": 501272,
-        "server": "Server.jp"
+        "server": "Server.na"
     }
 }

@@ -168,7 +168,7 @@
             },
             "kr_skill": {
                 "behavior": {
-                    "_name": "※先制コマンドLV1",
+                    "_name": "선제커맨드Lv1",
                     "enemy_skill_id": 318,
                     "level": 1,
                     "params": [
@@ -199,7 +199,7 @@
             },
             "na_skill": {
                 "behavior": {
-                    "_name": "※先制コマンドLV1",
+                    "_name": "*Preemptive Command LV1",
                     "enemy_skill_id": 318,
                     "level": 1,
                     "params": [
@@ -1037,7 +1037,7 @@
             },
             "kr_skill": {
                 "behavior": {
-                    "_name": "※パース終了",
+                    "_name": "테스트예비",
                     "enemy_skill_id": 26,
                     "params": [
                         null,
@@ -1067,7 +1067,7 @@
             },
             "na_skill": {
                 "behavior": {
-                    "_name": "※パース終了",
+                    "_name": "ERROR26",
                     "enemy_skill_id": 26,
                     "params": [
                         null,
@@ -1687,9 +1687,40 @@
             "enemy_hp_scale": 1.0,
             "enemy_max_level": 10,
             "enemy_skill_counter_increment": 0,
-            "enemy_skill_max_counter": 0,
-            "enemy_skill_refs": [],
-            "enemy_turns": 2,
+            "enemy_skill_max_counter": 13,
+            "enemy_skill_refs": [
+                {
+                    "enemy_ai": 0,
+                    "enemy_rnd": 0,
+                    "enemy_skill_id": 318
+                },
+                {
+                    "enemy_ai": 100,
+                    "enemy_rnd": 0,
+                    "enemy_skill_id": 16026
+                },
+                {
+                    "enemy_ai": 100,
+                    "enemy_rnd": 0,
+                    "enemy_skill_id": 16017
+                },
+                {
+                    "enemy_ai": 100,
+                    "enemy_rnd": 0,
+                    "enemy_skill_id": 16018
+                },
+                {
+                    "enemy_ai": 100,
+                    "enemy_rnd": 0,
+                    "enemy_skill_id": 16019
+                },
+                {
+                    "enemy_ai": 0,
+                    "enemy_rnd": 0,
+                    "enemy_skill_id": 26
+                }
+            ],
+            "enemy_turns": 1,
             "enemy_turns_alt": 0,
             "enemy_xp_per_level": 378,
             "evo_mat_id_1": 0,
@@ -1739,12 +1770,328 @@
             "unknown_009": 5,
             "unknown_055": 0,
             "unknown_056": 0,
-            "use_new_ai": false,
+            "use_new_ai": true,
             "voice_id": 0,
             "xp_max": 5000000,
             "xp_scale": 2.5
         },
-        "enemy_skills": [],
+        "enemy_skills": [
+            {
+                "behavior": {
+                    "_name": "선제커맨드Lv1",
+                    "enemy_skill_id": 318,
+                    "level": 1,
+                    "params": [
+                        null,
+                        1,
+                        100,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null
+                    ],
+                    "type": 49
+                },
+                "condition": null,
+                "enemy_skill_id": 318,
+                "increment": 0,
+                "max_counter": 13,
+                "use_new_ai": true
+            },
+            {
+                "behavior": {
+                    "_name": "＿先制2回",
+                    "attack": null,
+                    "enemy_skill_id": 16026,
+                    "params": [
+                        null,
+                        16016,
+                        16017,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        7,
+                        null,
+                        null
+                    ],
+                    "skill_ids": [
+                        16016,
+                        16017
+                    ],
+                    "skills": [
+                        {
+                            "_name": "お主の力を見せよ",
+                            "amount": -3.0,
+                            "attack": null,
+                            "debuff_type": "movetime",
+                            "enemy_skill_id": 16016,
+                            "params": [
+                                "7ターンの間、持ち時間が3秒減少",
+                                7,
+                                30,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null
+                            ],
+                            "turns": 7,
+                            "type": 39,
+                            "unit": "s"
+                        },
+                        {
+                            "_name": "焦らずにやるといい",
+                            "attack": null,
+                            "attributes": [
+                                4
+                            ],
+                            "desc_arr": [
+                                "1st row to Dark orbs"
+                            ],
+                            "enemy_skill_id": 16017,
+                            "params": [
+                                null,
+                                1,
+                                16,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                1,
+                                null,
+                                null
+                            ],
+                            "position_type": "row",
+                            "positions": [
+                                1
+                            ],
+                            "type": 78
+                        }
+                    ],
+                    "type": 83
+                },
+                "condition": {
+                    "_ai": 100,
+                    "_rnd": 0,
+                    "cards_on_team": [],
+                    "combos_made": null,
+                    "condition_attributes": [],
+                    "enemies_remaining": null,
+                    "forced_one_time": null,
+                    "hp_threshold": null,
+                    "on_death": null,
+                    "one_time": 7
+                },
+                "enemy_skill_id": 16026,
+                "increment": 0,
+                "max_counter": 13,
+                "use_new_ai": true
+            },
+            {
+                "behavior": {
+                    "_name": "焦らずにやるといい",
+                    "attack": null,
+                    "attributes": [
+                        4
+                    ],
+                    "desc_arr": [
+                        "1st row to Dark orbs"
+                    ],
+                    "enemy_skill_id": 16017,
+                    "params": [
+                        null,
+                        1,
+                        16,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        1,
+                        null,
+                        null
+                    ],
+                    "position_type": "row",
+                    "positions": [
+                        1
+                    ],
+                    "type": 78
+                },
+                "condition": {
+                    "_ai": 100,
+                    "_rnd": 0,
+                    "cards_on_team": [],
+                    "combos_made": null,
+                    "condition_attributes": [],
+                    "enemies_remaining": null,
+                    "forced_one_time": null,
+                    "hp_threshold": null,
+                    "on_death": null,
+                    "one_time": 1
+                },
+                "enemy_skill_id": 16017,
+                "increment": 0,
+                "max_counter": 13,
+                "use_new_ai": true
+            },
+            {
+                "behavior": {
+                    "_name": "未熟者め",
+                    "attack": {
+                        "atk_multiplier": 100,
+                        "max_hits": 10,
+                        "min_hits": 10
+                    },
+                    "enemy_skill_id": 16018,
+                    "params": [
+                        null,
+                        10,
+                        10,
+                        100,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null
+                    ],
+                    "type": 15
+                },
+                "condition": {
+                    "_ai": 100,
+                    "_rnd": 0,
+                    "cards_on_team": [],
+                    "combos_made": null,
+                    "condition_attributes": [],
+                    "enemies_remaining": null,
+                    "forced_one_time": null,
+                    "hp_threshold": null,
+                    "on_death": null,
+                    "one_time": null
+                },
+                "enemy_skill_id": 16018,
+                "increment": 0,
+                "max_counter": 13,
+                "use_new_ai": true
+            },
+            {
+                "behavior": {
+                    "_name": "次は頑張りたまへ",
+                    "attack": {
+                        "atk_multiplier": 100,
+                        "max_hits": 10,
+                        "min_hits": 10
+                    },
+                    "enemy_skill_id": 16019,
+                    "params": [
+                        null,
+                        10,
+                        10,
+                        100,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null
+                    ],
+                    "type": 15
+                },
+                "condition": {
+                    "_ai": 100,
+                    "_rnd": 0,
+                    "cards_on_team": [],
+                    "combos_made": null,
+                    "condition_attributes": [],
+                    "enemies_remaining": null,
+                    "forced_one_time": null,
+                    "hp_threshold": null,
+                    "on_death": null,
+                    "one_time": null
+                },
+                "enemy_skill_id": 16019,
+                "increment": 0,
+                "max_counter": 13,
+                "use_new_ai": true
+            },
+            {
+                "behavior": {
+                    "_name": "테스트예비",
+                    "enemy_skill_id": 26,
+                    "params": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        4,
+                        null,
+                        null,
+                        null
+                    ],
+                    "type": 36
+                },
+                "condition": null,
+                "enemy_skill_id": 26,
+                "increment": 0,
+                "max_counter": 13,
+                "use_new_ai": true
+            }
+        ],
         "leader_skill": {
             "_atk": 1,
             "_hp": 1,
@@ -2022,9 +2369,40 @@
             "enemy_hp_scale": 1.0,
             "enemy_max_level": 10,
             "enemy_skill_counter_increment": 0,
-            "enemy_skill_max_counter": 0,
-            "enemy_skill_refs": [],
-            "enemy_turns": 2,
+            "enemy_skill_max_counter": 13,
+            "enemy_skill_refs": [
+                {
+                    "enemy_ai": 0,
+                    "enemy_rnd": 0,
+                    "enemy_skill_id": 318
+                },
+                {
+                    "enemy_ai": 100,
+                    "enemy_rnd": 0,
+                    "enemy_skill_id": 16026
+                },
+                {
+                    "enemy_ai": 100,
+                    "enemy_rnd": 0,
+                    "enemy_skill_id": 16017
+                },
+                {
+                    "enemy_ai": 100,
+                    "enemy_rnd": 0,
+                    "enemy_skill_id": 16018
+                },
+                {
+                    "enemy_ai": 100,
+                    "enemy_rnd": 0,
+                    "enemy_skill_id": 16019
+                },
+                {
+                    "enemy_ai": 0,
+                    "enemy_rnd": 0,
+                    "enemy_skill_id": 26
+                }
+            ],
+            "enemy_turns": 1,
             "enemy_turns_alt": 0,
             "enemy_xp_per_level": 378,
             "evo_mat_id_1": 0,
@@ -2074,12 +2452,328 @@
             "unknown_009": 5,
             "unknown_055": 0,
             "unknown_056": 0,
-            "use_new_ai": false,
+            "use_new_ai": true,
             "voice_id": 0,
             "xp_max": 5000000,
             "xp_scale": 2.5
         },
-        "enemy_skills": [],
+        "enemy_skills": [
+            {
+                "behavior": {
+                    "_name": "*Preemptive Command LV1",
+                    "enemy_skill_id": 318,
+                    "level": 1,
+                    "params": [
+                        null,
+                        1,
+                        100,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null
+                    ],
+                    "type": 49
+                },
+                "condition": null,
+                "enemy_skill_id": 318,
+                "increment": 0,
+                "max_counter": 13,
+                "use_new_ai": true
+            },
+            {
+                "behavior": {
+                    "_name": "＿先制2回",
+                    "attack": null,
+                    "enemy_skill_id": 16026,
+                    "params": [
+                        null,
+                        16016,
+                        16017,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        7,
+                        null,
+                        null
+                    ],
+                    "skill_ids": [
+                        16016,
+                        16017
+                    ],
+                    "skills": [
+                        {
+                            "_name": "お主の力を見せよ",
+                            "amount": -3.0,
+                            "attack": null,
+                            "debuff_type": "movetime",
+                            "enemy_skill_id": 16016,
+                            "params": [
+                                "7ターンの間、持ち時間が3秒減少",
+                                7,
+                                30,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null
+                            ],
+                            "turns": 7,
+                            "type": 39,
+                            "unit": "s"
+                        },
+                        {
+                            "_name": "焦らずにやるといい",
+                            "attack": null,
+                            "attributes": [
+                                4
+                            ],
+                            "desc_arr": [
+                                "1st row to Dark orbs"
+                            ],
+                            "enemy_skill_id": 16017,
+                            "params": [
+                                null,
+                                1,
+                                16,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                1,
+                                null,
+                                null
+                            ],
+                            "position_type": "row",
+                            "positions": [
+                                1
+                            ],
+                            "type": 78
+                        }
+                    ],
+                    "type": 83
+                },
+                "condition": {
+                    "_ai": 100,
+                    "_rnd": 0,
+                    "cards_on_team": [],
+                    "combos_made": null,
+                    "condition_attributes": [],
+                    "enemies_remaining": null,
+                    "forced_one_time": null,
+                    "hp_threshold": null,
+                    "on_death": null,
+                    "one_time": 7
+                },
+                "enemy_skill_id": 16026,
+                "increment": 0,
+                "max_counter": 13,
+                "use_new_ai": true
+            },
+            {
+                "behavior": {
+                    "_name": "焦らずにやるといい",
+                    "attack": null,
+                    "attributes": [
+                        4
+                    ],
+                    "desc_arr": [
+                        "1st row to Dark orbs"
+                    ],
+                    "enemy_skill_id": 16017,
+                    "params": [
+                        null,
+                        1,
+                        16,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        1,
+                        null,
+                        null
+                    ],
+                    "position_type": "row",
+                    "positions": [
+                        1
+                    ],
+                    "type": 78
+                },
+                "condition": {
+                    "_ai": 100,
+                    "_rnd": 0,
+                    "cards_on_team": [],
+                    "combos_made": null,
+                    "condition_attributes": [],
+                    "enemies_remaining": null,
+                    "forced_one_time": null,
+                    "hp_threshold": null,
+                    "on_death": null,
+                    "one_time": 1
+                },
+                "enemy_skill_id": 16017,
+                "increment": 0,
+                "max_counter": 13,
+                "use_new_ai": true
+            },
+            {
+                "behavior": {
+                    "_name": "未熟者め",
+                    "attack": {
+                        "atk_multiplier": 100,
+                        "max_hits": 10,
+                        "min_hits": 10
+                    },
+                    "enemy_skill_id": 16018,
+                    "params": [
+                        null,
+                        10,
+                        10,
+                        100,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null
+                    ],
+                    "type": 15
+                },
+                "condition": {
+                    "_ai": 100,
+                    "_rnd": 0,
+                    "cards_on_team": [],
+                    "combos_made": null,
+                    "condition_attributes": [],
+                    "enemies_remaining": null,
+                    "forced_one_time": null,
+                    "hp_threshold": null,
+                    "on_death": null,
+                    "one_time": null
+                },
+                "enemy_skill_id": 16018,
+                "increment": 0,
+                "max_counter": 13,
+                "use_new_ai": true
+            },
+            {
+                "behavior": {
+                    "_name": "次は頑張りたまへ",
+                    "attack": {
+                        "atk_multiplier": 100,
+                        "max_hits": 10,
+                        "min_hits": 10
+                    },
+                    "enemy_skill_id": 16019,
+                    "params": [
+                        null,
+                        10,
+                        10,
+                        100,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null
+                    ],
+                    "type": 15
+                },
+                "condition": {
+                    "_ai": 100,
+                    "_rnd": 0,
+                    "cards_on_team": [],
+                    "combos_made": null,
+                    "condition_attributes": [],
+                    "enemies_remaining": null,
+                    "forced_one_time": null,
+                    "hp_threshold": null,
+                    "on_death": null,
+                    "one_time": null
+                },
+                "enemy_skill_id": 16019,
+                "increment": 0,
+                "max_counter": 13,
+                "use_new_ai": true
+            },
+            {
+                "behavior": {
+                    "_name": "ERROR26",
+                    "enemy_skill_id": 26,
+                    "params": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        4,
+                        null,
+                        null,
+                        null
+                    ],
+                    "type": 36
+                },
+                "condition": null,
+                "enemy_skill_id": 26,
+                "increment": 0,
+                "max_counter": 13,
+                "use_new_ai": true
+            }
+        ],
         "leader_skill": {
             "_atk": 1,
             "_hp": 1,

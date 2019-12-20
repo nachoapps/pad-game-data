@@ -71,7 +71,7 @@
             },
             "kr_skill": {
                 "behavior": {
-                    "_name": "※先制コマンドLV1",
+                    "_name": "선제커맨드Lv1",
                     "enemy_skill_id": 318,
                     "level": 1,
                     "params": [
@@ -102,7 +102,7 @@
             },
             "na_skill": {
                 "behavior": {
-                    "_name": "※先制コマンドLV1",
+                    "_name": "*Preemptive Command LV1",
                     "enemy_skill_id": 318,
                     "level": 1,
                     "params": [
@@ -823,7 +823,7 @@
             },
             "kr_skill": {
                 "behavior": {
-                    "_name": "※パース終了",
+                    "_name": "테스트예비",
                     "enemy_skill_id": 26,
                     "params": [
                         null,
@@ -853,7 +853,7 @@
             },
             "na_skill": {
                 "behavior": {
-                    "_name": "※パース終了",
+                    "_name": "ERROR26",
                     "enemy_skill_id": 26,
                     "params": [
                         null,
@@ -1358,9 +1358,35 @@
             "enemy_hp_scale": 1.0,
             "enemy_max_level": 10,
             "enemy_skill_counter_increment": 0,
-            "enemy_skill_max_counter": 0,
-            "enemy_skill_refs": [],
-            "enemy_turns": 2,
+            "enemy_skill_max_counter": 15,
+            "enemy_skill_refs": [
+                {
+                    "enemy_ai": 0,
+                    "enemy_rnd": 0,
+                    "enemy_skill_id": 318
+                },
+                {
+                    "enemy_ai": 100,
+                    "enemy_rnd": 0,
+                    "enemy_skill_id": 16020
+                },
+                {
+                    "enemy_ai": 100,
+                    "enemy_rnd": 0,
+                    "enemy_skill_id": 16022
+                },
+                {
+                    "enemy_ai": 100,
+                    "enemy_rnd": 0,
+                    "enemy_skill_id": 16023
+                },
+                {
+                    "enemy_ai": 0,
+                    "enemy_rnd": 0,
+                    "enemy_skill_id": 26
+                }
+            ],
+            "enemy_turns": 1,
             "enemy_turns_alt": 0,
             "enemy_xp_per_level": 378,
             "evo_mat_id_1": 0,
@@ -1410,12 +1436,290 @@
             "unknown_009": 5,
             "unknown_055": 0,
             "unknown_056": 0,
-            "use_new_ai": false,
+            "use_new_ai": true,
             "voice_id": 0,
             "xp_max": 5000000,
             "xp_scale": 2.5
         },
-        "enemy_skills": [],
+        "enemy_skills": [
+            {
+                "behavior": {
+                    "_name": "선제커맨드Lv1",
+                    "enemy_skill_id": 318,
+                    "level": 1,
+                    "params": [
+                        null,
+                        1,
+                        100,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null
+                    ],
+                    "type": 49
+                },
+                "condition": null,
+                "enemy_skill_id": 318,
+                "increment": 0,
+                "max_counter": 15,
+                "use_new_ai": true
+            },
+            {
+                "behavior": {
+                    "_name": "＿先制行動",
+                    "attack": null,
+                    "enemy_skill_id": 16020,
+                    "params": [
+                        null,
+                        16021,
+                        16022,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        8,
+                        null,
+                        null
+                    ],
+                    "skill_ids": [
+                        16021,
+                        16022
+                    ],
+                    "skills": [
+                        {
+                            "_name": "かかってこいや！オラ！！",
+                            "attack": null,
+                            "enemy_skill_id": 16021,
+                            "params": [
+                                "8ターンの間、落ちコンしなくなる",
+                                null,
+                                8,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null
+                            ],
+                            "turns": 8,
+                            "type": 127
+                        },
+                        {
+                            "_name": "全力出せやコラ！！",
+                            "attack": null,
+                            "attributes": [
+                                0,
+                                1,
+                                2,
+                                3,
+                                4
+                            ],
+                            "condition_attributes": [],
+                            "count": 4,
+                            "enemy_skill_id": 16022,
+                            "params": [
+                                null,
+                                4,
+                                31,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                1,
+                                null,
+                                null
+                            ],
+                            "type": 92
+                        }
+                    ],
+                    "type": 83
+                },
+                "condition": {
+                    "_ai": 100,
+                    "_rnd": 0,
+                    "cards_on_team": [],
+                    "combos_made": null,
+                    "condition_attributes": [],
+                    "enemies_remaining": null,
+                    "forced_one_time": null,
+                    "hp_threshold": null,
+                    "on_death": null,
+                    "one_time": 8
+                },
+                "enemy_skill_id": 16020,
+                "increment": 0,
+                "max_counter": 15,
+                "use_new_ai": true
+            },
+            {
+                "behavior": {
+                    "_name": "全力出せやコラ！！",
+                    "attack": null,
+                    "attributes": [
+                        0,
+                        1,
+                        2,
+                        3,
+                        4
+                    ],
+                    "condition_attributes": [],
+                    "count": 4,
+                    "enemy_skill_id": 16022,
+                    "params": [
+                        null,
+                        4,
+                        31,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        1,
+                        null,
+                        null
+                    ],
+                    "type": 92
+                },
+                "condition": {
+                    "_ai": 100,
+                    "_rnd": 0,
+                    "cards_on_team": [],
+                    "combos_made": null,
+                    "condition_attributes": [],
+                    "enemies_remaining": null,
+                    "forced_one_time": null,
+                    "hp_threshold": null,
+                    "on_death": null,
+                    "one_time": 1
+                },
+                "enemy_skill_id": 16022,
+                "increment": 0,
+                "max_counter": 15,
+                "use_new_ai": true
+            },
+            {
+                "behavior": {
+                    "_name": "伊都之尾羽張式雷電地砕落とし",
+                    "attack": {
+                        "atk_multiplier": 1000,
+                        "max_hits": 1,
+                        "min_hits": 1
+                    },
+                    "attributes": [
+                        6
+                    ],
+                    "desc_arr": [
+                        "1st, 2nd, 5th, 6th column to Jammer orbs"
+                    ],
+                    "enemy_skill_id": 16023,
+                    "params": [
+                        null,
+                        51,
+                        64,
+                        null,
+                        null,
+                        null,
+                        null,
+                        1000,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null
+                    ],
+                    "position_type": "column",
+                    "positions": [
+                        1,
+                        2,
+                        5,
+                        6
+                    ],
+                    "type": 77
+                },
+                "condition": {
+                    "_ai": 100,
+                    "_rnd": 0,
+                    "cards_on_team": [],
+                    "combos_made": null,
+                    "condition_attributes": [],
+                    "enemies_remaining": null,
+                    "forced_one_time": null,
+                    "hp_threshold": null,
+                    "on_death": null,
+                    "one_time": null
+                },
+                "enemy_skill_id": 16023,
+                "increment": 0,
+                "max_counter": 15,
+                "use_new_ai": true
+            },
+            {
+                "behavior": {
+                    "_name": "테스트예비",
+                    "enemy_skill_id": 26,
+                    "params": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        4,
+                        null,
+                        null,
+                        null
+                    ],
+                    "type": 36
+                },
+                "condition": null,
+                "enemy_skill_id": 26,
+                "increment": 0,
+                "max_counter": 15,
+                "use_new_ai": true
+            }
+        ],
         "leader_skill": {
             "_atk": 1,
             "_hp": 1,
@@ -1630,9 +1934,35 @@
             "enemy_hp_scale": 1.0,
             "enemy_max_level": 10,
             "enemy_skill_counter_increment": 0,
-            "enemy_skill_max_counter": 0,
-            "enemy_skill_refs": [],
-            "enemy_turns": 2,
+            "enemy_skill_max_counter": 15,
+            "enemy_skill_refs": [
+                {
+                    "enemy_ai": 0,
+                    "enemy_rnd": 0,
+                    "enemy_skill_id": 318
+                },
+                {
+                    "enemy_ai": 100,
+                    "enemy_rnd": 0,
+                    "enemy_skill_id": 16020
+                },
+                {
+                    "enemy_ai": 100,
+                    "enemy_rnd": 0,
+                    "enemy_skill_id": 16022
+                },
+                {
+                    "enemy_ai": 100,
+                    "enemy_rnd": 0,
+                    "enemy_skill_id": 16023
+                },
+                {
+                    "enemy_ai": 0,
+                    "enemy_rnd": 0,
+                    "enemy_skill_id": 26
+                }
+            ],
+            "enemy_turns": 1,
             "enemy_turns_alt": 0,
             "enemy_xp_per_level": 378,
             "evo_mat_id_1": 0,
@@ -1682,12 +2012,290 @@
             "unknown_009": 5,
             "unknown_055": 0,
             "unknown_056": 0,
-            "use_new_ai": false,
+            "use_new_ai": true,
             "voice_id": 0,
             "xp_max": 5000000,
             "xp_scale": 2.5
         },
-        "enemy_skills": [],
+        "enemy_skills": [
+            {
+                "behavior": {
+                    "_name": "*Preemptive Command LV1",
+                    "enemy_skill_id": 318,
+                    "level": 1,
+                    "params": [
+                        null,
+                        1,
+                        100,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null
+                    ],
+                    "type": 49
+                },
+                "condition": null,
+                "enemy_skill_id": 318,
+                "increment": 0,
+                "max_counter": 15,
+                "use_new_ai": true
+            },
+            {
+                "behavior": {
+                    "_name": "＿先制行動",
+                    "attack": null,
+                    "enemy_skill_id": 16020,
+                    "params": [
+                        null,
+                        16021,
+                        16022,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        8,
+                        null,
+                        null
+                    ],
+                    "skill_ids": [
+                        16021,
+                        16022
+                    ],
+                    "skills": [
+                        {
+                            "_name": "かかってこいや！オラ！！",
+                            "attack": null,
+                            "enemy_skill_id": 16021,
+                            "params": [
+                                "8ターンの間、落ちコンしなくなる",
+                                null,
+                                8,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null
+                            ],
+                            "turns": 8,
+                            "type": 127
+                        },
+                        {
+                            "_name": "全力出せやコラ！！",
+                            "attack": null,
+                            "attributes": [
+                                0,
+                                1,
+                                2,
+                                3,
+                                4
+                            ],
+                            "condition_attributes": [],
+                            "count": 4,
+                            "enemy_skill_id": 16022,
+                            "params": [
+                                null,
+                                4,
+                                31,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                1,
+                                null,
+                                null
+                            ],
+                            "type": 92
+                        }
+                    ],
+                    "type": 83
+                },
+                "condition": {
+                    "_ai": 100,
+                    "_rnd": 0,
+                    "cards_on_team": [],
+                    "combos_made": null,
+                    "condition_attributes": [],
+                    "enemies_remaining": null,
+                    "forced_one_time": null,
+                    "hp_threshold": null,
+                    "on_death": null,
+                    "one_time": 8
+                },
+                "enemy_skill_id": 16020,
+                "increment": 0,
+                "max_counter": 15,
+                "use_new_ai": true
+            },
+            {
+                "behavior": {
+                    "_name": "全力出せやコラ！！",
+                    "attack": null,
+                    "attributes": [
+                        0,
+                        1,
+                        2,
+                        3,
+                        4
+                    ],
+                    "condition_attributes": [],
+                    "count": 4,
+                    "enemy_skill_id": 16022,
+                    "params": [
+                        null,
+                        4,
+                        31,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        1,
+                        null,
+                        null
+                    ],
+                    "type": 92
+                },
+                "condition": {
+                    "_ai": 100,
+                    "_rnd": 0,
+                    "cards_on_team": [],
+                    "combos_made": null,
+                    "condition_attributes": [],
+                    "enemies_remaining": null,
+                    "forced_one_time": null,
+                    "hp_threshold": null,
+                    "on_death": null,
+                    "one_time": 1
+                },
+                "enemy_skill_id": 16022,
+                "increment": 0,
+                "max_counter": 15,
+                "use_new_ai": true
+            },
+            {
+                "behavior": {
+                    "_name": "伊都之尾羽張式雷電地砕落とし",
+                    "attack": {
+                        "atk_multiplier": 1000,
+                        "max_hits": 1,
+                        "min_hits": 1
+                    },
+                    "attributes": [
+                        6
+                    ],
+                    "desc_arr": [
+                        "1st, 2nd, 5th, 6th column to Jammer orbs"
+                    ],
+                    "enemy_skill_id": 16023,
+                    "params": [
+                        null,
+                        51,
+                        64,
+                        null,
+                        null,
+                        null,
+                        null,
+                        1000,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null
+                    ],
+                    "position_type": "column",
+                    "positions": [
+                        1,
+                        2,
+                        5,
+                        6
+                    ],
+                    "type": 77
+                },
+                "condition": {
+                    "_ai": 100,
+                    "_rnd": 0,
+                    "cards_on_team": [],
+                    "combos_made": null,
+                    "condition_attributes": [],
+                    "enemies_remaining": null,
+                    "forced_one_time": null,
+                    "hp_threshold": null,
+                    "on_death": null,
+                    "one_time": null
+                },
+                "enemy_skill_id": 16023,
+                "increment": 0,
+                "max_counter": 15,
+                "use_new_ai": true
+            },
+            {
+                "behavior": {
+                    "_name": "ERROR26",
+                    "enemy_skill_id": 26,
+                    "params": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        4,
+                        null,
+                        null,
+                        null
+                    ],
+                    "type": 36
+                },
+                "condition": null,
+                "enemy_skill_id": 26,
+                "increment": 0,
+                "max_counter": 15,
+                "use_new_ai": true
+            }
+        ],
         "leader_skill": {
             "_atk": 1,
             "_hp": 1,

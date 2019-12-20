@@ -1,0 +1,28 @@
+#4066 - Holy Night Courier, Claíomh Solais
+monster size: 5
+new AI: True
+start/max counter: 3
+counter increment: 0
+monster_id: 4066
+approved: False
+
+level: 1
+ type: PREEMPT
+ | (15862:83) Merry Christmas♪ + You'll get a present if you defeat me + This cake is yummy♪
+ | Do nothing + Absorb combo <= 5 damage for 5 turns + Change all orbs to Fire, Water, Wood, Light, Dark, Heal
+ type: DEATH
+ condition: when defeated
+ | (15865:95) As promised, here is a present
+ | Do nothing
+ group:
+ | group:
+ | condition: turns 1-4
+   | (15861:84) Saint Kugel
+   | Change all orbs to Fire, Water, Wood, Light, Dark, Heal
+ | group:
+ | condition: turn 5
+   | (15863:83) Okay then, I'll give you a little bonus + Do your best♪
+   | Movetime 400% for 99 turns + Change all orbs to Fire, Water, Wood, Light, Dark, Heal, Deal 100% damage
+ | group:
+   | (15861:84) Saint Kugel
+   | Change all orbs to Fire, Water, Wood, Light, Dark, Heal

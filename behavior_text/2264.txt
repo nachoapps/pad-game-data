@@ -8,8 +8,14 @@ approved: False
 
 level: 1
  type: PREEMPT
- | (16011:15) 十文字連槍撃
- | Deal 1000% damage (10 hits, 100% each)
+ | (16008:83) この俺を打ち取れるか？ + 覚悟を見せろ
+ | Absorb combo <= 3 damage for 6 turns + Spawn random 6 Water, Wood, Light, Dark, Heal orbs
  group:
- | (16011:15) 十文字連槍撃
- | Deal 1000% damage (10 hits, 100% each)
+ | group:
+ | condition: turns 1-5
+   | condition: when required attributes on board
+   | (16010:92) 本気でぶつけて来いよ
+   | Spawn random 3 Heal orbs
+ | group:
+   | (16011:15) 十文字連槍撃
+   | Deal 1000% damage (10 hits, 100% each)

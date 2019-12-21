@@ -1,4 +1,4 @@
-#103597 - 裏冥翼機・デモニアス
+#103597 - Alt. Dark Winged Machine, Demonius
 monster size: 5
 new AI: True
 start/max counter: 2
@@ -32,9 +32,9 @@ end_turn
 
 SkillSet:
 	Condition: When < 1% hp (ai:100 rnd:0)
-	[0] ESRecoverEnemy(86:6678) -> セルプラリファレイト
+	[0] ESRecoverEnemy(86:6678) -> Cell Proliferate
 	Enemy recover 51% hp
-	[1] ESAttackUPRemainingEnemies(17:6675) -> フォースアモク
+	[1] ESAttackUPRemainingEnemies(17:6675) -> Helter-Skelter
 	Increase damage to 200% for the next 999 turns
 
 ESBranchFlag(43:10) -> ESBranchFlag
@@ -43,21 +43,21 @@ Branch on flag & 2, target rnd 11
 ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b11
 
-ESFixedStart(101:6664) -> エナジーレイ
+ESFixedStart(101:6664) -> Energy Ray
 Fix orb movement starting point to random position on the board, Deal 200% damage
 
 ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 50, target rnd 16
 
-ESDebuffMovetime(39:6666) -> ブラックメタルグレア
+ESDebuffMovetime(39:6666) -> Black Metal Glare
 Condition: One-time use (ai:0 rnd:15) (one-time: 2)
 Movetime -2s for 2 turns, Deal 130% damage
 
-ESSkillDelay(89:6667) -> サプレスパルス
+ESSkillDelay(89:6667) -> Suppression Pulse
 Condition: One-time use (ai:0 rnd:15) (one-time: 2)
 Delay active skills by 2 turns, Deal 130% damage
 
-ESBombRandomSpawn(102:6665) -> イービルボム
+ESBombRandomSpawn(102:6665) -> Evil Bomb
 Condition: 70% chance (ai:0 rnd:70)
 Spawn random 3 Bomb orbs, Deal 130% damage
 
@@ -72,41 +72,41 @@ flag SET 0b111
 
 SkillSet:
 	Condition: When < 50% hp (ai:100 rnd:0)
-	[0] ESAbsorbCombo(67:6668) -> オーディールディメンション
+	[0] ESAbsorbCombo(67:6668) -> Trauma Dimension
 	Absorb combo <= 5 damage for 999 turns
-	[1] ESSkyfall(68:6669) -> ジャミング
+	[1] ESSkyfall(68:6669) -> Jamming
 	Jammer skyfall +20% for 10 turns
 
 ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESAttackMultihit(15:6676) -> リミットブレイク
+ESAttackMultihit(15:6676) -> Limit Break
 Condition: When < 20% hp (ai:100 rnd:0)
 Deal 6000% damage (3 hits, 2000% each)
 
 SkillSet:
 	Condition: One-time use (ai:0 rnd:20) (one-time: 2)
-	[0] ESSkillDelay(89:6672) -> サプレスパルス
+	[0] ESSkillDelay(89:6672) -> Suppression Pulse
 	Delay active skills by 2 turns
-	[1] ESAttackMultihit(15:6673) -> デッドウィング
+	[1] ESAttackMultihit(15:6673) -> Dead Wing
 	Deal 210% damage (3 hits, 70% each)
 
 SkillSet:
 	Condition: One-time use (ai:0 rnd:20) (one-time: 2)
-	[0] ESDebuffMovetime(39:6671) -> ブラックメタルグレア
+	[0] ESDebuffMovetime(39:6671) -> Black Metal Glare
 	Movetime -2s for 2 turns
-	[1] ESBindAttack(63:6674) -> パラリシスダート
+	[1] ESBindAttack(63:6674) -> Paralysis Dart
 	Bind 1 random cards for 3 turns, Deal 180% damage
 
-ESBombRandomSpawn(102:6683) -> イービルボム
+ESBombRandomSpawn(102:6683) -> Evil Bomb
 Condition: 60% chance (ai:0 rnd:60)
 Spawn random 3 Bomb orbs, Deal 160% damage
 
 ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESAttributeResist(72:6677) -> ロボ光半減
+ESAttributeResist(72:6677) -> Robo Light halved
 Reduce damage from Light by 50%
 
-ESResolve(73:6680) -> ロボ根性
+ESResolve(73:6680) -> Robo Resovle
 Survive attacks with 1 HP when HP > 50%

@@ -8,12 +8,18 @@ approved: False
 
 level: 1
  type: PREEMPT
- | (15666:83) おめでとう + それじゃあ全力でいきますよ
- | Movetime 110% for 99 turns + Absorb combo <= 7 damage for 999 turns
- | (15669:88) ズルはダメ…
- | Bind awoken skills for 10 turns
- | (15670:65) 悪夢の贈り物
- | Bind 4 random subs for 6 turns
+ | (15661:83) あなたならできるかしら？ + この状況でも… + さぁ、希望をつかみとってみて… + パンドラの箱
+ | Voids status ailments for 999 turns + Bind awoken skills for 5 turns + Absorb combo <= 9 damage for 1 turns + Spawn random 6 Dark, Heal, Jammer, Poison, Mortal Poison orbs
  group:
- | (15671:15) 終わりなき災厄
- | Deal 100% damage (4 hits, 25% each)
+ | group:
+ | condition: turn 1
+   | condition: when 10 combos last turn
+   | (15666:83) おめでとう + それじゃあ全力でいきますよ
+   | Movetime 110% for 99 turns + Absorb combo <= 7 damage for 999 turns
+   | (15669:88) ズルはダメ…
+   | Bind awoken skills for 10 turns
+   | (15670:65) 悪夢の贈り物
+   | Bind 4 random subs for 6 turns
+ | group:
+   | (15671:15) 終わりなき災厄
+   | Deal 100% damage (4 hits, 25% each)

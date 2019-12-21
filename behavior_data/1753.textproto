@@ -5,7 +5,7 @@
       group_type: PREEMPT
       children {
         behavior {
-          enemy_skill_id: 16015
+          enemy_skill_id: 16012
         }
       }
     }
@@ -15,8 +15,25 @@
         hp_threshold: 100
       }
       children {
-        behavior {
-          enemy_skill_id: 16015
+        group {
+          condition {
+            trigger_turn: 1
+            trigger_turn_end: 4
+          }
+          children {
+            behavior {
+              enemy_skill_id: 16014
+            }
+          }
+        }
+      }
+      children {
+        group {
+          children {
+            behavior {
+              enemy_skill_id: 16015
+            }
+          }
         }
       }
     }

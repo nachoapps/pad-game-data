@@ -8,7 +8,12 @@ approved: False
 
 level: 1
  group:
- condition: hp <= 49
- | condition: 20% chance
- | (8:8) Energy Charge
- | Increase damage to 200% for the next attack
+ | group:
+   | condition: 20% chance
+   | (8:8) Energy Charge
+   | Increase damage to 200% for the next attack
+ | group:
+ | condition: hp <= 49
+   | condition: 30% chance
+   | (8:8) Energy Charge
+   | Increase damage to 200% for the next attack

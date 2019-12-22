@@ -4,73 +4,73 @@ new AI: False
 start/max counter: 1
 counter increment: 1
 
-ESPreemptive(49:355) -> ESPreemptive
+#1: ESPreemptive(49:355) -> ESPreemptive
 Enable preempt if level 5
 
-ESBranchLevel(35:25) -> ESBranchLevel
+#2: ESBranchLevel(35:25) -> ESBranchLevel
 Branch on level > 5, target rnd 4
 
-ESEndPath(36:26) -> ESEndPath
+#3: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESBranchFlag(43:10) -> ESBranchFlag
+#4: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 1, target rnd 8
 
-ESFlagOperation(22:12) -> ESFlagOperation
+#5: ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b1
 
-ESAttackUPRemainingEnemies(17:1844) -> Victory will be mine!
+#6: ESAttackUPRemainingEnemies(17:1844) -> Victory will be mine!
 Condition: when <= 1 enemies remain (ai:100 rnd:0)
 Increase damage to 200% for the next 1 turns
 
-ESEndPath(36:26) -> ESEndPath
+#7: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESBranchFlag(43:10) -> ESBranchFlag
+#8: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 2, target rnd 12
 
-ESFlagOperation(22:12) -> ESFlagOperation
+#9: ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b11
 
-ESOrbChangeAttack(48:1845) -> Hoof of Victory
+#10: ESOrbChangeAttack(48:1845) -> Hoof of Victory
 Change Random to Jammer, Deal 100% damage
 
-ESEndPath(36:26) -> ESEndPath
+#11: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESBranchHP(28:18) -> ESBranchHP
+#12: ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 75, target rnd 18
 
-ESAttackUPRemainingEnemies(17:1848) -> I'll win at any cost!
+#13: ESAttackUPRemainingEnemies(17:1848) -> I'll win at any cost!
 Condition: When < 30% hp , one-time use, when <= 1 enemies remain (ai:100 rnd:0) (one-time: 1)
 Increase damage to 300% for the next 1 turns
 
-ESAttackMultihit(15:1849) -> Double Hooves of Victory
+#14: ESAttackMultihit(15:1849) -> Double Hooves of Victory
 Condition: When < 30% hp (ai:100 rnd:0)
 Deal 400% damage (2 hits, 200% each)
 
-ESOrbChangeAttack(48:1845) -> Hoof of Victory
+#15: ESOrbChangeAttack(48:1845) -> Hoof of Victory
 Condition: 50% chance (ai:50 rnd:0)
 Change Random to Jammer, Deal 100% damage
 
-ESRowSpawnMulti(79:1847) -> Tail Snap
+#16: ESRowSpawnMulti(79:1847) -> Tail Snap
 Condition: 60% chance (ai:60 rnd:0)
 Change 3rd row to Wood orbs, Deal 150% damage
 
-ESEndPath(36:26) -> ESEndPath
+#17: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESBranchFlag(43:10) -> ESBranchFlag
+#18: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 4, target rnd 13
 
-ESFlagOperation(22:12) -> ESFlagOperation
+#19: ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b111
 
-ESBindTarget(54:1846) -> Best Smile
+#20: ESBindTarget(54:1846) -> Best Smile
 Bind 1 both leaders for 2~4 turns
 
-ESEndPath(36:26) -> ESEndPath
+#21: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESAttributeResist(72:1771) -> Halve Fire
+#22: ESAttributeResist(72:1771) -> Halve Fire
 Reduce damage from Fire by 50%

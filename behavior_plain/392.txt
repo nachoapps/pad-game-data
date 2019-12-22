@@ -4,35 +4,35 @@ new AI: False
 start/max counter: 1
 counter increment: 1
 
-ESBranchHP(28:18) -> ESBranchHP
+#1: ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 50, target rnd 5
 
-ESOrbChangeAttack(48:965) -> Signs of Blooming
+#2: ESOrbChangeAttack(48:965) -> Signs of Blooming
 Condition: One-time use (ai:100 rnd:0) (one-time: 1)
 Change Random to Heal, Deal 75% damage
 
-ESOrbChangeAttack(48:966) -> Flower World
+#3: ESOrbChangeAttack(48:966) -> Flower World
 Change Heal to Wood, Deal 150% damage
 
-ESEndPath(36:26) -> ESEndPath
+#4: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESBranchFlag(43:10) -> ESBranchFlag
+#5: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 1, target rnd 9
 
-ESFlagOperation(22:12) -> ESFlagOperation
+#6: ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b1
 
-ESBindAttribute(2:967) -> Extinguishing Prayer
+#7: ESBindAttribute(2:967) -> Extinguishing Prayer
 Condition: One-time use (ai:100 rnd:0) (one-time only)
 Bind Fire cards for 3~5 turns
 
-ESEndPath(36:26) -> ESEndPath
+#8: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESInactivity(16:968) -> Charging Magical Power
+#9: ESInactivity(16:968) -> Charging Magical Power
 Condition: One-time use (ai:100 rnd:0) (one-time: 1)
 Do nothing
 
-ESAttackMultihit(15:969) -> Shining Storm
+#10: ESAttackMultihit(15:969) -> Shining Storm
 Deal 160%~200% damage (4~5 hits, 40% each)

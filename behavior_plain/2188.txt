@@ -4,61 +4,61 @@ new AI: True
 start/max counter: 1
 counter increment: 1
 
-ESPreemptive(49:318) -> ESPreemptive
+#1: ESPreemptive(49:318) -> ESPreemptive
 Enable preempt if level 1
 
-ESBranchFlag(43:10) -> ESBranchFlag
+#2: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 1, target rnd 6
 
-ESFlagOperation(22:12) -> ESFlagOperation
+#3: ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b1
 
-SkillSet:
+#4: SkillSet:
 	[0] ESStatusShield(20:7832) -> Balance the World
 	Voids status ailments for 999 turns
 	[1] ESCloud(104:7833) -> Esenshi
 	1x3 cloud appear for 30 turns at random location
 
-ESEndPath(36:26) -> ESEndPath
+#5: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESAttackMultihit(15:7841) -> Kalreshi Osaryu
+#6: ESAttackMultihit(15:7841) -> Kalreshi Osaryu
 Condition: When < 5% hp (ai:100 rnd:0)
 Deal 500% damage (5 hits, 100% each)
 
-ESBranchHP(28:18) -> ESBranchHP
+#7: ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 50, target rnd 12
 
-ESDebuffMovetime(39:7835) -> Anzel Sou
+#8: ESDebuffMovetime(39:7835) -> Anzel Sou
 Condition: One-time use (ai:0 rnd:33) (one-time: 1)
 Movetime -1s for 1 turns, Deal 200% damage
 
-ESSkillDelay(89:7837) -> Guasa
+#9: ESSkillDelay(89:7837) -> Guasa
 Condition: One-time use (ai:0 rnd:33) (one-time: 1)
 Delay active skills by 2 turns, Deal 200% damage
 
-ESAttackMultihit(15:7836) -> Redeon Radel
+#10: ESAttackMultihit(15:7836) -> Redeon Radel
 Condition: 34% chance (ai:0 rnd:34)
 Deal 240% damage (3 hits, 80% each)
 
-ESEndPath(36:26) -> ESEndPath
+#11: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESBranchFlag(43:10) -> ESBranchFlag
+#12: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 2, target rnd 8
 
-ESFlagOperation(22:12) -> ESFlagOperation
+#13: ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b11
 
-SkillSet:
+#14: SkillSet:
 	Condition: When < 50% hp (ai:100 rnd:0)
 	[0] ESAttackUPRemainingEnemies(17:7838) -> Judgment day has come
 	Increase damage to 150% for the next 999 turns
 	[1] ESGravity(50:7839) -> Accept your demise!
 	Player -99% HP
 
-ESEndPath(36:26) -> ESEndPath
+#15: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESAttributeResist(72:7842) -> Light halved
+#16: ESAttributeResist(72:7842) -> Light halved
 Reduce damage from Light by 50%

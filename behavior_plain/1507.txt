@@ -4,40 +4,40 @@ new AI: True
 start/max counter: 1
 counter increment: 0
 
-ESPreemptive(49:318) -> ESPreemptive
+#1: ESPreemptive(49:318) -> ESPreemptive
 Enable preempt if level 1
 
-ESBranchFlag(43:10) -> ESBranchFlag
+#2: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 1, target rnd 6
 
-ESFlagOperation(22:12) -> ESFlagOperation
+#3: ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b1
 
-ESBindTarget(54:2444) -> Shock Sword
+#4: ESBindTarget(54:2444) -> Shock Sword
 Bind 1 player leader for 3 turns
 
-ESEndPath(36:26) -> ESEndPath
+#5: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESBindAttack(63:2446) -> Shining Dragon's Sword
+#6: ESBindAttack(63:2446) -> Shining Dragon's Sword
 Condition: When < 20% hp (ai:100 rnd:0)
 Bind 2 random cards for 2 turns, Deal 300% damage
 
-ESDamageShield(74:2445) -> Shining Dragon's Armor
+#7: ESDamageShield(74:2445) -> Shining Dragon's Armor
 Condition: When < 70% hp , one-time use (ai:100 rnd:0) (one-time: 1)
 Reduce damage from all sources by 50% for 2 turns
 
-ESAttackMultihit(15:2447) -> Thunder Wave
+#8: ESAttackMultihit(15:2447) -> Thunder Wave
 Condition: 30% chance (ai:0 rnd:30)
 Deal 160% damage (2 hits, 80% each)
 
-ESColumnSpawnMulti(77:2448) -> Shining Pulse
+#9: ESColumnSpawnMulti(77:2448) -> Shining Pulse
 Condition: 30% chance (ai:0 rnd:30)
 Change 3rd column to Light orbs, Deal 120% damage
 
-ESAttackSinglehit(82:1) -> Disable Skill
+#10: ESAttackSinglehit(82:1) -> Disable Skill
 Condition: 30% chance (ai:0 rnd:30)
 Deal 100% damage
 
-ESEndPath(36:26) -> ESEndPath
+#11: ESEndPath(36:26) -> ESEndPath
 end_turn

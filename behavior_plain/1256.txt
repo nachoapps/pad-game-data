@@ -4,22 +4,22 @@ new AI: True
 start/max counter: 0
 counter increment: 0
 
-ESPreemptive(49:3402) -> ESPreemptive
+#1: ESPreemptive(49:3402) -> ESPreemptive
 Enable preempt if level 4
 
-ESBranchLevel(35:25) -> ESBranchLevel
+#2: ESBranchLevel(35:25) -> ESBranchLevel
 Branch on level > 4, target rnd 4
 
-ESEndPath(36:26) -> ESEndPath
+#3: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESBranchFlag(43:10) -> ESBranchFlag
+#4: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 1, target rnd 8
 
-ESFlagOperation(22:12) -> ESFlagOperation
+#5: ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b1
 
-SkillSet:
+#6: SkillSet:
 	[0] ESDamageShield(74:9067) -> I'm beat!
 	Reduce damage from all sources by 75% for 99 turns
 	[1] ESBoardChange(84:9068) -> You can heal up now
@@ -27,50 +27,50 @@ SkillSet:
 	[2] ESAttributeBlock(107:9069) -> Is that what you thought I would say?
 	Unable to match Heal orbs for 6 turns
 
-ESEndPath(36:26) -> ESEndPath
+#7: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESSetCounter(26:16) -> ESSetCounter
+#8: ESSetCounter(26:16) -> ESSetCounter
 counter + 1
 
-ESBranchCounter(32:22) -> ESBranchCounter
+#9: ESBranchCounter(32:22) -> ESBranchCounter
 Branch on counter > 6, target rnd 19
 
-ESBranchCounter(32:22) -> ESBranchCounter
+#10: ESBranchCounter(32:22) -> ESBranchCounter
 Branch on counter > 5, target rnd 18
 
-ESBranchCounter(32:22) -> ESBranchCounter
+#11: ESBranchCounter(32:22) -> ESBranchCounter
 Branch on counter > 4, target rnd 17
 
-ESBranchCounter(32:22) -> ESBranchCounter
+#12: ESBranchCounter(32:22) -> ESBranchCounter
 Branch on counter > 3, target rnd 16
 
-ESBranchCounter(32:22) -> ESBranchCounter
+#13: ESBranchCounter(32:22) -> ESBranchCounter
 Branch on counter > 2, target rnd 15
 
-ESRowSpawnMulti(78:9071) -> One
+#14: ESRowSpawnMulti(78:9071) -> One
 Change 3rd row to Fire orbs
 
-ESColumnSpawnMulti(76:9072) -> Two
+#15: ESColumnSpawnMulti(76:9072) -> Two
 Change 2nd column to Water orbs, 5th column to Wood orbs
 
-ESRowSpawnMulti(78:9073) -> Three
+#16: ESRowSpawnMulti(78:9073) -> Three
 Change 1st row to Light orbs, 3rd row to Dark orbs
 
-ESColumnSpawnMulti(76:9074) -> Four
+#17: ESColumnSpawnMulti(76:9074) -> Four
 Change 1st column to Water orbs, 3rd column to Wood orbs
 
-ESBoardChange(84:9075) -> Five
+#18: ESBoardChange(84:9075) -> Five
 Change all orbs to Heal
 
-ESSetCounter(25:15) -> ESSetCounter
+#19: ESSetCounter(25:15) -> ESSetCounter
 counter = 0
 
-ESAttackMultihit(15:9076) -> Sleep for eternity
+#20: ESAttackMultihit(15:9076) -> Sleep for eternity
 Deal 2400% damage (6 hits, 400% each)
 
-ESEndPath(36:26) -> ESEndPath
+#21: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESAttributeResist(72:9066) -> Raphael Resolve
+#22: ESAttributeResist(72:9066) -> Raphael Resolve
 Reduce damage from Dark by 50%

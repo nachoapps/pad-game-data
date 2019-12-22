@@ -4,85 +4,85 @@ new AI: True
 start/max counter: 2
 counter increment: 1
 
-ESPreemptive(49:318) -> ESPreemptive
+#1: ESPreemptive(49:318) -> ESPreemptive
 Enable preempt if level 1
 
-ESBranchFlag(43:10) -> ESBranchFlag
+#2: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 1, target rnd 6
 
-ESFlagOperation(22:12) -> ESFlagOperation
+#3: ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b1
 
-SkillSet:
+#4: SkillSet:
 	[0] ESDebuffRCV(105:8331) -> Ancient Field
 	Rcv 50% for 10 turns
 	[1] ESDamageShield(74:8332) -> Hyper Dragon Shield
 	Reduce damage from all sources by 99% for 5 turns
 
-ESEndPath(36:26) -> ESEndPath
+#5: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESDispel(6:8336) -> Wave of Nothingness
+#6: ESDispel(6:8336) -> Wave of Nothingness
 Condition: One-time use (ai:100 rnd:0) (one-time: 2)
 Voids player buff effects
 
-ESStatusShield(20:8333) -> Ready...Set...Fight!
+#7: ESStatusShield(20:8333) -> Ready...Set...Fight!
 Voids status ailments for 999 turns
 
-ESBranchFlag(43:10) -> ESBranchFlag
+#8: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 2, target rnd 13
 
-ESFlagOperation(22:12) -> ESFlagOperation
+#9: ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b11
 
-ESDamageShield(74:8337) -> Super Dragon Shield
+#10: ESDamageShield(74:8337) -> Super Dragon Shield
 Reduce damage from all sources by 75% for 5 turns
 
-ESFlagOperation(24:14) -> ESFlagOperation
+#11: ESFlagOperation(24:14) -> ESFlagOperation
 flag UNSET 0b10
 
-ESAttackMultihit(15:8339) -> Dragon Fang
+#12: ESAttackMultihit(15:8339) -> Dragon Fang
 Deal 100% damage (2 hits, 50% each)
 
-ESBranchFlag(43:10) -> ESBranchFlag
+#13: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 4, target rnd 17
 
-ESFlagOperation(22:12) -> ESFlagOperation
+#14: ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b111
 
-ESDebuffMovetime(39:8334) -> That's all you've got?!
+#15: ESDebuffMovetime(39:8334) -> That's all you've got?!
 Movetime -3s for 10 turns
 
-ESEndPath(36:26) -> ESEndPath
+#16: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESBranchFlag(43:10) -> ESBranchFlag
+#17: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 8, target rnd 22
 
-ESFlagOperation(22:12) -> ESFlagOperation
+#18: ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b1111
 
-ESDamageShield(74:8338) -> Dragon Shield
+#19: ESDamageShield(74:8338) -> Dragon Shield
 Reduce damage from all sources by 50% for 5 turns
 
-ESFlagOperation(24:14) -> ESFlagOperation
+#20: ESFlagOperation(24:14) -> ESFlagOperation
 flag UNSET 0b1000
 
-ESAttackMultihit(15:8339) -> Dragon Fang
+#21: ESAttackMultihit(15:8339) -> Dragon Fang
 Deal 100% damage (2 hits, 50% each)
 
-ESBranchFlag(43:10) -> ESBranchFlag
+#22: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 16, target rnd 26
 
-ESFlagOperation(22:12) -> ESFlagOperation
+#23: ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b11111
 
-ESAttackUPRemainingEnemies(17:8335) -> This is my true power!
+#24: ESAttackUPRemainingEnemies(17:8335) -> This is my true power!
 Condition: when <= 1 enemies remain (ai:100 rnd:0)
 Increase damage to 300% for the next 999 turns
 
-ESEndPath(36:26) -> ESEndPath
+#25: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESAttackMultihit(15:8339) -> Dragon Fang
+#26: ESAttackMultihit(15:8339) -> Dragon Fang
 Deal 100% damage (2 hits, 50% each)

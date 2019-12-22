@@ -4,66 +4,66 @@ new AI: True
 start/max counter: 1
 counter increment: 0
 
-ESPreemptive(49:355) -> ESPreemptive
+#1: ESPreemptive(49:355) -> ESPreemptive
 Enable preempt if level 5
 
-ESBranchLevel(35:25) -> ESBranchLevel
+#2: ESBranchLevel(35:25) -> ESBranchLevel
 Branch on level > 5, target rnd 4
 
-ESEndPath(36:26) -> ESEndPath
+#3: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESBranchFlag(43:10) -> ESBranchFlag
+#4: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 1, target rnd 8
 
-ESFlagOperation(22:12) -> ESFlagOperation
+#5: ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b1
 
-ESInactivity(66:2154) -> I will be reborn again here.
+#6: ESInactivity(66:2154) -> I will be reborn again here.
 Do nothing
 
-ESEndPath(36:26) -> ESEndPath
+#7: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESAttackUPRemainingEnemies(17:2131) -> Haste
+#8: ESAttackUPRemainingEnemies(17:2131) -> Haste
 Condition: When < 50% hp, when <= 1 enemies remain (ai:100 rnd:0)
 Increase damage to 200% for the next 999 turns
 
-ESRecoverEnemy(86:2157) -> Curaga
+#9: ESRecoverEnemy(86:2157) -> Curaga
 Condition: When < 70% hp , one-time use (ai:30 rnd:0) (one-time: 1)
 Enemy recover 100% hp
 
-ESBranchHP(28:18) -> ESBranchHP
+#10: ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 90, target rnd 16
 
-ESOrbChangeAttack(48:2101) -> Blaze
+#11: ESOrbChangeAttack(48:2101) -> Blaze
 Condition: 40% chance (ai:0 rnd:40)
 Change Random to Fire, Deal 90% damage
 
-ESAttackMultihit(15:2103) -> Flare
+#12: ESAttackMultihit(15:2103) -> Flare
 Condition: 30% chance (ai:0 rnd:30)
 Deal 140% damage
 
-ESGravity(50:2102) -> Cyclone
+#13: ESGravity(50:2102) -> Cyclone
 Condition: 10% chance (ai:0 rnd:10)
 Player -70% HP
 
-ESAttackSinglehit(82:1) -> Disable Skill
+#14: ESAttackSinglehit(82:1) -> Disable Skill
 Condition: 20% chance (ai:0 rnd:20)
 Deal 100% damage
 
-ESEndPath(36:26) -> ESEndPath
+#15: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESBranchFlag(43:10) -> ESBranchFlag
+#16: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 2, target rnd 11
 
-ESFlagOperation(22:12) -> ESFlagOperation
+#17: ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b11
 
-ESRowSpawnMulti(79:2155) -> Blizzaga
+#18: ESRowSpawnMulti(79:2155) -> Blizzaga
 Condition: When < 90% hp (ai:100 rnd:0)
 Change 1st, 5th row to Water orbs, Deal 100% damage
 
-ESEndPath(36:26) -> ESEndPath
+#19: ESEndPath(36:26) -> ESEndPath
 end_turn

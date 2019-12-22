@@ -4,48 +4,48 @@ new AI: False
 start/max counter: 1
 counter increment: 1
 
-ESPreemptive(49:318) -> ESPreemptive
+#1: ESPreemptive(49:318) -> ESPreemptive
 Enable preempt if level 1
 
-ESBranchFlag(43:10) -> ESBranchFlag
+#2: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 1, target rnd 6
 
-ESFlagOperation(22:12) -> ESFlagOperation
+#3: ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b1
 
-ESStatusShield(20:1691) -> Begone!
+#4: ESStatusShield(20:1691) -> Begone!
 Voids status ailments for 999 turns
 
-ESEndPath(36:26) -> ESEndPath
+#5: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESBranchHP(28:18) -> ESBranchHP
+#6: ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 30, target rnd 10
 
-ESOrbChangeAttack(48:1692) -> Blue Sphere
+#7: ESOrbChangeAttack(48:1692) -> Blue Sphere
 Condition: One-time use (ai:60 rnd:0) (one-time: 1)
 Change Random to Water, Deal 100% damage
 
-ESBindAttack(63:1693) -> Crystallizing Wave
+#8: ESBindAttack(63:1693) -> Crystallizing Wave
 Condition: When < 75% hp , one-time use (ai:50 rnd:0) (one-time: 1)
 Bind 2 random cards for 1~3 turns, Deal 85% damage
 
-ESEndPath(36:26) -> ESEndPath
+#9: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESBranchFlag(43:10) -> ESBranchFlag
+#10: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 2, target rnd 14
 
-ESFlagOperation(22:12) -> ESFlagOperation
+#11: ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b11
 
-ESInactivity(66:1694) -> Draco Summon-Crystal Dragon
+#12: ESInactivity(66:1694) -> Draco Summon-Crystal Dragon
 Condition: When < 30% hp (ai:100 rnd:0)
 Do nothing
 
-ESEndPath(36:26) -> ESEndPath
+#13: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESAttackMultihit(15:1695) -> Blue-Out Nemesis
+#14: ESAttackMultihit(15:1695) -> Blue-Out Nemesis
 Condition: When < 30% hp (ai:100 rnd:0)
 Deal 500% damage (5 hits, 100% each)

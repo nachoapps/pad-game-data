@@ -4,16 +4,16 @@ new AI: True
 start/max counter: 0
 counter increment: 0
 
-ESPreemptive(49:318) -> ESPreemptive
+#1: ESPreemptive(49:318) -> ESPreemptive
 Enable preempt if level 1
 
-ESBranchFlag(43:10) -> ESBranchFlag
+#2: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 1, target rnd 6
 
-ESFlagOperation(22:12) -> ESFlagOperation
+#3: ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b1
 
-SkillSet:
+#4: SkillSet:
 	[0] ESDebuffMovetime(39:9048) -> Show me your highest combo!
 	Movetime 150% for 4 turns
 	[1] ESFixedStart(101:9049) -> Let's have a trial first
@@ -21,70 +21,70 @@ SkillSet:
 	[2] ESAbsorbCombo(67:9050) -> You can do it, right?!
 	Absorb combo <= 5 damage for 1 turns
 
-ESEndPath(36:26) -> ESEndPath
+#5: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESBranchFlag(43:10) -> ESBranchFlag
+#6: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 2, target rnd 11
 
-ESFlagOperation(22:12) -> ESFlagOperation
+#7: ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b11
 
-ESBranchCombo(113:6528) -> ESBranchCombo
+#8: ESBranchCombo(113:6528) -> ESBranchCombo
 Branch on combo >= 6, target rnd 26
 
-ESAttackMultihit(15:9064) -> Too bad
+#9: ESAttackMultihit(15:9064) -> Too bad
 Deal 40000% damage (4 hits, 10000% each)
 
-ESEndPath(36:26) -> ESEndPath
+#10: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESBranchFlag(43:10) -> ESBranchFlag
+#11: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 4, target rnd 16
 
-ESFlagOperation(22:12) -> ESFlagOperation
+#12: ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b111
 
-ESBranchCombo(113:6528) -> ESBranchCombo
+#13: ESBranchCombo(113:6528) -> ESBranchCombo
 Branch on combo >= 7, target rnd 27
 
-ESAttackMultihit(15:9064) -> Too bad
+#14: ESAttackMultihit(15:9064) -> Too bad
 Deal 40000% damage (4 hits, 10000% each)
 
-ESEndPath(36:26) -> ESEndPath
+#15: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESBranchFlag(43:10) -> ESBranchFlag
+#16: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 8, target rnd 21
 
-ESFlagOperation(22:12) -> ESFlagOperation
+#17: ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b1111
 
-ESBranchCombo(113:6528) -> ESBranchCombo
+#18: ESBranchCombo(113:6528) -> ESBranchCombo
 Branch on combo >= 8, target rnd 28
 
-ESAttackMultihit(15:9064) -> Too bad
+#19: ESAttackMultihit(15:9064) -> Too bad
 Deal 40000% damage (4 hits, 10000% each)
 
-ESEndPath(36:26) -> ESEndPath
+#20: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESBranchFlag(43:10) -> ESBranchFlag
+#21: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 16, target rnd 29
 
-ESFlagOperation(22:12) -> ESFlagOperation
+#22: ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b11111
 
-ESBranchCombo(113:6528) -> ESBranchCombo
+#23: ESBranchCombo(113:6528) -> ESBranchCombo
 Branch on combo >= 9, target rnd 29
 
-ESAttackMultihit(15:9064) -> Too bad
+#24: ESAttackMultihit(15:9064) -> Too bad
 Deal 40000% damage (4 hits, 10000% each)
 
-ESEndPath(36:26) -> ESEndPath
+#25: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-SkillSet:
+#26: SkillSet:
 	[0] ESRowSpawnMulti(78:9052) -> It's only natural to get this far
 	Change 1st, 3rd, 5th row to Light orbs, 2nd, 4th row to Dark orbs
 	[1] ESColumnSpawnMulti(76:9053) -> In that case...
@@ -92,7 +92,7 @@ SkillSet:
 	[2] ESAbsorbCombo(67:9054) -> ...how about this?
 	Absorb combo <= 6 damage for 1 turns
 
-SkillSet:
+#27: SkillSet:
 	[0] ESRandomSpawn(92:9056) -> You can do it, right?
 	Spawn random 6 Fire, Water, Wood, Light, Dark orbs
 	[1] ESBlindStickyFixed(98:9057) -> Next...this...
@@ -100,7 +100,7 @@ SkillSet:
 	[2] ESAbsorbCombo(67:9058) -> Can you do it?
 	Absorb combo <= 7 damage for 1 turns
 
-SkillSet:
+#28: SkillSet:
 	[0] ESBoardChange(84:9060) -> I didn't think you'd do it
 	Change all orbs to Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison
 	[1] ESBlind(5:9061) -> This is the end
@@ -108,8 +108,8 @@ SkillSet:
 	[2] ESAbsorbCombo(67:9062) -> Decide and show me!
 	Absorb combo <= 8 damage for 1 turns
 
-ESEndBattle(40:9065) -> Nice combo
+#29: ESEndBattle(40:9065) -> Nice combo
 Reduce self HP to 0
 
-ESEndPath(36:26) -> ESEndPath
+#30: ESEndPath(36:26) -> ESEndPath
 end_turn

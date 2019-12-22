@@ -4,66 +4,66 @@ new AI: True
 start/max counter: 1
 counter increment: 0
 
-ESPreemptive(49:318) -> ESPreemptive
+#1: ESPreemptive(49:318) -> ESPreemptive
 Enable preempt if level 1
 
-ESBranchFlag(43:10) -> ESBranchFlag
+#2: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 1, target rnd 6
 
-ESFlagOperation(22:12) -> ESFlagOperation
+#3: ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b1
 
-SkillSet:
+#4: SkillSet:
 	[0] ESAbsorbCombo(67:7605) -> Gigantic Body
 	Absorb combo <= 6 damage for 999 turns
 	[1] ESSkyfall(68:7606) -> Black Missile
 	Poison skyfall +5% for 10 turns
 
-ESEndPath(36:26) -> ESEndPath
+#5: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESDebuffMovetime(39:7614) -> Jamming Missile
+#6: ESDebuffMovetime(39:7614) -> Jamming Missile
 Condition: When < 50% hp , one-time use (ai:100 rnd:0) (one-time: 1)
 Movetime -1s for 10 turns, Deal 100% damage
 
-ESAttackUPRemainingEnemies(17:7615) -> Red Device
+#7: ESAttackUPRemainingEnemies(17:7615) -> Red Device
 Condition: When < 20% hp, when <= 1 enemies remain (ai:100 rnd:0)
 Increase damage to 200% for the next 999 turns
 
-ESBranchFlag(43:10) -> ESBranchFlag
+#8: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 2, target rnd 13
 
-ESFlagOperation(22:12) -> ESFlagOperation
+#9: ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b11
 
-ESSkillDelay(89:7612) -> Hyper Claw
+#10: ESSkillDelay(89:7612) -> Hyper Claw
 Condition: 50% chance (ai:50 rnd:0)
 Delay active skills by 1 turns, Deal 250% damage
 
-ESAttackMultihit(15:7613) -> Claw Rush
+#11: ESAttackMultihit(15:7613) -> Claw Rush
 Deal 270% damage (3 hits, 90% each)
 
-ESEndPath(36:26) -> ESEndPath
+#12: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESFlagOperation(24:14) -> ESFlagOperation
+#13: ESFlagOperation(24:14) -> ESFlagOperation
 flag UNSET 0b10
 
-ESBombFixedSpawn(103:7608) -> Line Bomb
+#14: ESBombFixedSpawn(103:7608) -> Line Bomb
 Condition: 25% chance (ai:0 rnd:25)
 Spawn Bomb orbs in the specified positions, Deal 200% damage
 
-ESBombFixedSpawn(103:7609) -> Line Bomb
+#15: ESBombFixedSpawn(103:7609) -> Line Bomb
 Condition: 25% chance (ai:0 rnd:25)
 Spawn Bomb orbs in the specified positions, Deal 200% damage
 
-ESBombFixedSpawn(103:7610) -> Line Bomb
+#16: ESBombFixedSpawn(103:7610) -> Line Bomb
 Condition: 25% chance (ai:0 rnd:25)
 Spawn Bomb orbs in the specified positions, Deal 200% damage
 
-ESBombFixedSpawn(103:7611) -> Line Bomb
+#17: ESBombFixedSpawn(103:7611) -> Line Bomb
 Condition: 25% chance (ai:0 rnd:25)
 Spawn Bomb orbs in the specified positions, Deal 200% damage
 
-ESEndPath(36:26) -> ESEndPath
+#18: ESEndPath(36:26) -> ESEndPath
 end_turn

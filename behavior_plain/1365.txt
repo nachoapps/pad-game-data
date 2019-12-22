@@ -4,55 +4,55 @@ new AI: False
 start/max counter: 1
 counter increment: 1
 
-ESPreemptive(49:355) -> ESPreemptive
+#1: ESPreemptive(49:355) -> ESPreemptive
 Enable preempt if level 5
 
-ESBranchLevel(35:25) -> ESBranchLevel
+#2: ESBranchLevel(35:25) -> ESBranchLevel
 Branch on level > 5, target rnd 4
 
-ESEndPath(36:26) -> ESEndPath
+#3: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESBranchFlag(43:10) -> ESBranchFlag
+#4: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 1, target rnd 8
 
-ESFlagOperation(22:12) -> ESFlagOperation
+#5: ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b1
 
-ESStatusShield(20:1404) -> Here I go
+#6: ESStatusShield(20:1404) -> Here I go
 Voids status ailments for 5 turns
 
-ESEndPath(36:26) -> ESEndPath
+#7: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESBranchFlag(43:10) -> ESBranchFlag
+#8: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 2, target rnd 12
 
-ESFlagOperation(22:12) -> ESFlagOperation
+#9: ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b11
 
-ESDebuffMovetime(39:1405) -> Moonflower Gaze
+#10: ESDebuffMovetime(39:1405) -> Moonflower Gaze
 Movetime -1s for 4 turns
 
-ESEndPath(36:26) -> ESEndPath
+#11: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESBranchHP(28:18) -> ESBranchHP
+#12: ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 50, target rnd 16
 
-ESOrbChangeAttack(48:1406) -> Moon Heaven Strike
+#13: ESOrbChangeAttack(48:1406) -> Moon Heaven Strike
 Condition: 50% chance (ai:50 rnd:0)
 Change Light to Dark, Deal 85% damage
 
-ESAttackMultihit(15:1407) -> Nine Dragon Claws
+#14: ESAttackMultihit(15:1407) -> Nine Dragon Claws
 Deal 120% damage (3 hits, 40% each)
 
-ESEndPath(36:26) -> ESEndPath
+#15: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESBlind(62:1408) -> Get ready for this
+#16: ESBlind(62:1408) -> Get ready for this
 Condition: One-time use (ai:100 rnd:0) (one-time: 1)
 Blind all orbs on the board, Deal 10% damage
 
-ESAttackMultihit(15:1409) -> Moonshadow Dance
+#17: ESAttackMultihit(15:1409) -> Moonshadow Dance
 Deal 160% damage (4 hits, 40% each)

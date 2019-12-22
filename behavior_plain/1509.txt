@@ -4,10 +4,10 @@ new AI: True
 start/max counter: 1
 counter increment: 0
 
-ESPreemptive(49:318) -> ESPreemptive
+#1: ESPreemptive(49:318) -> ESPreemptive
 Enable preempt if level 1
 
-SkillSet:
+#2: SkillSet:
 	Condition: One-time use (ai:100 rnd:0) (one-time: 1)
 	[0] ESSkyfall(68:15034) -> Wake Up!
 	Water, Wood, Light, Dark skyfall +100% for 1 turns
@@ -16,16 +16,16 @@ SkillSet:
 	[2] ESRandomSpawn(92:15035) -> Fire Orbs...
 	Spawn random 3 Fire orbs
 
-ESBranchFlag(43:10) -> ESBranchFlag
+#3: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 1, target rnd 8
 
-ESFlagOperation(22:12) -> ESFlagOperation
+#4: ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b1
 
-ESOrbChangeAttackBits(108:15046) -> Too bad
+#5: ESOrbChangeAttackBits(108:15046) -> Too bad
 Change Fire to Light, Deal 1000% damage
 
-SkillSet:
+#6: SkillSet:
 	[0] ESSkyfall(68:15038) -> Wake Up!
 	Fire, Wood, Light, Dark skyfall +100% for 1 turns
 	[1] ESBlind(5:15036) -> Into Darkness
@@ -33,19 +33,19 @@ SkillSet:
 	[2] ESRandomSpawn(92:15039) -> Water Orbs...
 	Spawn random 3 Water orbs
 
-ESEndPath(36:26) -> ESEndPath
+#7: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESBranchFlag(43:10) -> ESBranchFlag
+#8: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 2, target rnd 13
 
-ESFlagOperation(22:12) -> ESFlagOperation
+#9: ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b11
 
-ESOrbChangeAttackBits(108:15047) -> Too bad
+#10: ESOrbChangeAttackBits(108:15047) -> Too bad
 Change Water to Light, Deal 1000% damage
 
-SkillSet:
+#11: SkillSet:
 	[0] ESSkyfall(68:15041) -> Wake Up!
 	Fire, Water, Light, Dark skyfall +100% for 1 turns
 	[1] ESBlind(5:15036) -> Into Darkness
@@ -53,19 +53,19 @@ SkillSet:
 	[2] ESRandomSpawn(92:15042) -> Wood Orbs...
 	Spawn random 3 Wood orbs
 
-ESEndPath(36:26) -> ESEndPath
+#12: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESBranchFlag(43:10) -> ESBranchFlag
+#13: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 4, target rnd 18
 
-ESFlagOperation(22:12) -> ESFlagOperation
+#14: ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b111
 
-ESOrbChangeAttackBits(108:15048) -> Too bad
+#15: ESOrbChangeAttackBits(108:15048) -> Too bad
 Change Wood to Light, Deal 1000% damage
 
-SkillSet:
+#16: SkillSet:
 	[0] ESSkyfall(68:15044) -> Wake Up!
 	Fire, Water, Wood, Light skyfall +100% for 1 turns
 	[1] ESBlind(5:15036) -> Into Darkness
@@ -73,11 +73,11 @@ SkillSet:
 	[2] ESRandomSpawn(92:15045) -> Dark Orbs...
 	Spawn random 3 Dark orbs
 
-ESEndPath(36:26) -> ESEndPath
+#17: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESOrbChangeAttackBits(108:15049) -> Too bad
+#18: ESOrbChangeAttackBits(108:15049) -> Too bad
 Change Dark to Light, Deal 1000% damage
 
-ESEndBattle(40:15050) -> Good Job...
+#19: ESEndBattle(40:15050) -> Good Job...
 Reduce self HP to 0

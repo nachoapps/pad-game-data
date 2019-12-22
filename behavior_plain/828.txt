@@ -4,36 +4,36 @@ new AI: False
 start/max counter: 0
 counter increment: 0
 
-ESPreemptive(49:318) -> ESPreemptive
+#1: ESPreemptive(49:318) -> ESPreemptive
 Enable preempt if level 1
 
-ESBranchFlag(43:10) -> ESBranchFlag
+#2: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 1, target rnd 6
 
-ESFlagOperation(22:12) -> ESFlagOperation
+#3: ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b1
 
-ESAttackMultihit(15:646) -> From this point...
+#4: ESAttackMultihit(15:646) -> From this point...
 Deal 50% damage
 
-ESEndPath(36:26) -> ESEndPath
+#5: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESBranchFlag(43:10) -> ESBranchFlag
+#6: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 2, target rnd 10
 
-ESFlagOperation(22:12) -> ESFlagOperation
+#7: ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b11
 
-ESGravity(50:648) -> Sucker Punch
+#8: ESGravity(50:648) -> Sucker Punch
 Player -99% HP
 
-ESEndPath(36:26) -> ESEndPath
+#9: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESAttackUPRemainingEnemies(17:270) -> Lone Force
+#10: ESAttackUPRemainingEnemies(17:270) -> Lone Force
 Condition: when <= 1 enemies remain (ai:100 rnd:0)
 Increase damage to 300% for the next 999 turns
 
-ESAttackMultihit(15:650) -> Iron Fist of Anger
+#11: ESAttackMultihit(15:650) -> Iron Fist of Anger
 Deal 200% damage

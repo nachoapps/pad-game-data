@@ -4,16 +4,16 @@ new AI: True
 start/max counter: 1
 counter increment: 0
 
-ESPreemptive(49:318) -> ESPreemptive
+#1: ESPreemptive(49:318) -> ESPreemptive
 Enable preempt if level 1
 
-ESBranchFlag(43:10) -> ESBranchFlag
+#2: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 1, target rnd 6
 
-ESFlagOperation(22:12) -> ESFlagOperation
+#3: ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b1
 
-SkillSet:
+#4: SkillSet:
 	[0] ESRecoverPlayer(55:2066) -> Hello and welcome!
 	Player recover 100% hp
 	[1] ESAbsorbThreshold(87:2067) -> What are you doing to Aamir?!
@@ -21,10 +21,10 @@ SkillSet:
 	[2] ESStatusShield(20:2068) -> Who are YOU?
 	Voids status ailments for 2 turns
 
-ESEndPath(36:26) -> ESEndPath
+#5: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-SkillSet:
+#6: SkillSet:
 	Condition: When < 50% hp , one-time use (ai:100 rnd:0) (one-time: 1)
 	[0] ESAttackUPRemainingEnemies(17:2078) -> What did you do to my face?
 	Increase damage to 200% for the next 2 turns
@@ -33,7 +33,7 @@ SkillSet:
 	[2] ESBindSkill(14:2080) -> Oh no! Aamir's precious face!
 	Bind active skills for 2 turns
 
-SkillSet:
+#7: SkillSet:
 	Condition: When < 20% hp (ai:100 rnd:0)
 	[0] ESAttackMultihit(15:2086) -> Nobody likes a pest!
 	Deal 400% damage
@@ -42,7 +42,7 @@ SkillSet:
 	[2] ESAttackMultihit(15:2088) -> Time for you to go home
 	Deal 35% damage
 
-SkillSet:
+#8: SkillSet:
 	Condition: When < 50% hp (ai:100 rnd:0)
 	[0] ESAttackMultihit(15:2082) -> I'd rather play with them...
 	Deal 140% damage (2 hits, 70% each)
@@ -51,7 +51,7 @@ SkillSet:
 	[2] ESBlind(5:2084) -> Could you quit gawking?
 	Blind all orbs on the board
 
-SkillSet:
+#9: SkillSet:
 	Condition: 50% chance (ai:50 rnd:0)
 	[0] ESColumnSpawnMulti(77:2074) -> You come over here, too
 	Change 1st column to Wood orbs, 6th column to Dark orbs, Deal 150% damage
@@ -60,7 +60,7 @@ SkillSet:
 	[2] ESAttackMultihit(15:2076) -> You're an eyesore!
 	Deal 20% damage (2 hits, 10% each)
 
-SkillSet:
+#10: SkillSet:
 	[0] ESAttackMultihit(15:2070) -> How about THIS?
 	Deal 200% damage (2 hits, 100% each)
 	[1] ESRecoverEnemy(86:2071) -> Aamir, you're so cool!

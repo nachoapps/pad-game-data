@@ -4,83 +4,83 @@ new AI: True
 start/max counter: 0
 counter increment: 0
 
-ESPreemptive(49:355) -> ESPreemptive
+#1: ESPreemptive(49:355) -> ESPreemptive
 Enable preempt if level 5
 
-ESBranchLevel(35:25) -> ESBranchLevel
+#2: ESBranchLevel(35:25) -> ESBranchLevel
 Branch on level > 5, target rnd 4
 
-ESEndPath(36:26) -> ESEndPath
+#3: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESBranchFlag(43:10) -> ESBranchFlag
+#4: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 1, target rnd 8
 
-ESFlagOperation(22:12) -> ESFlagOperation
+#5: ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b1
 
-ESBindTarget(54:3119) -> Let's stretch before swimming!
+#6: ESBindTarget(54:3119) -> Let's stretch before swimming!
 Bind 1 both leaders for 2 turns
 
-ESEndPath(36:26) -> ESEndPath
+#7: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESBranchFlag(43:10) -> ESBranchFlag
+#8: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 2, target rnd 11
 
-ESFlagOperation(22:12) -> ESFlagOperation
+#9: ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b11
 
-ESDamageShield(74:3120) -> Can't forget the sunscreen!
+#10: ESDamageShield(74:3120) -> Can't forget the sunscreen!
 Reduce damage from all sources by 50% for 1 turns
 
-ESBranchFlag(43:10) -> ESBranchFlag
+#11: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 4, target rnd 14
 
-ESFlagOperation(22:12) -> ESFlagOperation
+#12: ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b111
 
-ESRowSpawnMulti(79:3122) -> Here I go!
+#13: ESRowSpawnMulti(79:3122) -> Here I go!
 Change 1st, 2nd, 3rd, 4th, 5th row to Water orbs, Deal 100% damage
 
-ESBranchFlag(43:10) -> ESBranchFlag
+#14: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 8, target rnd 17
 
-ESFlagOperation(22:12) -> ESFlagOperation
+#15: ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b1111
 
-SkillSet:
+#16: SkillSet:
 	[0] ESRandomSpawn(92:3123) -> Beach volleyball time!
 	Spawn random 1 Heal orbs
 	[1] ESBindAttack(63:3126) -> ATTACK!!
 	Bind 1 random subs for 2 turns, Deal 120% damage
 
-ESBranchFlag(43:10) -> ESBranchFlag
+#17: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 16, target rnd 20
 
-ESFlagOperation(22:12) -> ESFlagOperation
+#18: ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b11111
 
-SkillSet:
+#19: SkillSet:
 	[0] ESBoardChange(84:3124) -> Next let's split watermelons!
 	Change all orbs to Wood
 	[1] ESColumnSpawnMulti(77:3128) -> Ha!
 	Change 3rd, 4th column to Fire orbs, Deal 150% damage
 
-ESBranchCard(90:3130) -> ESBranchCard
+#20: ESBranchCard(90:3130) -> ESBranchCard
 Branch on player_cards HAS [1118], target rnd 24
 
-ESBranchCard(90:3168) -> ESBranchCard
+#21: ESBranchCard(90:3168) -> ESBranchCard
 Branch on player_cards HAS [1119], target rnd 25
 
-ESAttackMultihit(15:3125) -> That was fun! This is for you!
+#22: ESAttackMultihit(15:3125) -> That was fun! This is for you!
 Deal 400% damage (2 hits, 200% each)
 
-ESEndPath(36:26) -> ESEndPath
+#23: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESAttackMultihit(15:3131) -> ...Aren't you hot with that on your head?
+#24: ESAttackMultihit(15:3131) -> ...Aren't you hot with that on your head?
 Deal 400% damage (2 hits, 200% each)
 
-ESAttackMultihit(15:3169) -> Why do you resist me?
+#25: ESAttackMultihit(15:3169) -> Why do you resist me?
 Deal 400% damage (2 hits, 200% each)

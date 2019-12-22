@@ -4,19 +4,19 @@ new AI: True
 start/max counter: 0
 counter increment: 0
 
-ESPreemptive(49:318) -> ESPreemptive
+#1: ESPreemptive(49:318) -> ESPreemptive
 Enable preempt if level 1
 
-ESBranchFlag(43:10) -> ESBranchFlag
+#2: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 1, target rnd 9
 
-ESFlagOperation(22:12) -> ESFlagOperation
+#3: ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b1
 
-ESSetCounter(25:15) -> ESSetCounter
+#4: ESSetCounter(25:15) -> ESSetCounter
 counter = 0
 
-SkillSet:
+#5: SkillSet:
 	Condition: 33% chance (ai:0 rnd:33)
 	[0] ESStatusShield(20:13775) -> Air Supremacy Sword
 	Voids status ailments for 999 turns
@@ -25,7 +25,7 @@ SkillSet:
 	[2] ESAttributeBlock(107:13777) -> One Hit One Shout
 	Unable to match Water orbs for 2 turns, Deal 100% damage
 
-SkillSet:
+#6: SkillSet:
 	Condition: 33% chance (ai:0 rnd:33)
 	[0] ESStatusShield(20:13775) -> Air Supremacy Sword
 	Voids status ailments for 999 turns
@@ -34,7 +34,7 @@ SkillSet:
 	[2] ESAttributeBlock(107:13779) -> One Hit One Shout
 	Unable to match Wood orbs for 2 turns, Deal 100% damage
 
-SkillSet:
+#7: SkillSet:
 	Condition: 34% chance (ai:0 rnd:34)
 	[0] ESStatusShield(20:13775) -> Air Supremacy Sword
 	Voids status ailments for 999 turns
@@ -43,70 +43,70 @@ SkillSet:
 	[2] ESAttributeBlock(107:13781) -> One Hit One Shout
 	Unable to match Fire orbs for 2 turns, Deal 100% damage
 
-ESEndPath(36:26) -> ESEndPath
+#8: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESBranchHP(29:19) -> ESBranchHP
+#9: ESBranchHP(29:19) -> ESBranchHP
 Branch on hp > 100, target rnd 20
 
-ESSetCounter(26:16) -> ESSetCounter
+#10: ESSetCounter(26:16) -> ESSetCounter
 counter + 1
 
-ESBranchHP(28:18) -> ESBranchHP
+#11: ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 10, target rnd 26
 
-ESBranchHP(28:18) -> ESBranchHP
+#12: ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 50, target rnd 22
 
-ESBranchCounter(32:22) -> ESBranchCounter
+#13: ESBranchCounter(32:22) -> ESBranchCounter
 Branch on counter > 3, target rnd 4
 
-ESBranchCounter(32:22) -> ESBranchCounter
+#14: ESBranchCounter(32:22) -> ESBranchCounter
 Branch on counter > 2, target rnd 18
 
-ESBlind(62:13789) -> Light Steel
+#15: ESBlind(62:13789) -> Light Steel
 Condition: 50% chance (ai:0 rnd:50)
 Blind all orbs on the board, Deal 95% damage
 
-ESBindAttack(63:13790) -> Heavy Down
+#16: ESBindAttack(63:13790) -> Heavy Down
 Condition: 50% chance (ai:0 rnd:50)
 Bind 1 random cards for 5 turns, Deal 100% damage
 
-ESEndPath(36:26) -> ESEndPath
+#17: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESAbsorbCombo(67:13782) -> Stance of the Heavenly Eye
+#18: ESAbsorbCombo(67:13782) -> Stance of the Heavenly Eye
 Absorb combo <= 9 damage for 1 turns
 
-ESEndPath(36:26) -> ESEndPath
+#19: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-SkillSet:
+#20: SkillSet:
 	[0] ESBindAwoken(88:13784) -> Life's Breath Sword
 	Bind awoken skills for 1 turns
 	[1] ESAttributeBlock(107:13785) -> One Hit One Shout
 	Unable to match Heal orbs for 1 turns, Deal 130% damage
 
-ESEndPath(36:26) -> ESEndPath
+#21: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESBranchFlag(43:10) -> ESBranchFlag
+#22: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 2, target rnd 13
 
-ESFlagOperation(22:12) -> ESFlagOperation
+#23: ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b11
 
-SkillSet:
+#24: SkillSet:
 	[0] ESAttackUPRemainingEnemies(17:13787) -> Two Arms of Seething Blood
 	Increase damage to 150% for the next 99 turns
 	[1] ESGravity(50:13788) -> Raging Stream of Slash Attacks
 	Player -99% HP
 
-ESEndPath(36:26) -> ESEndPath
+#25: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESGravity(50:13791) -> Blade Fang
+#26: ESGravity(50:13791) -> Blade Fang
 Player -400% HP
 
-ESEndPath(36:26) -> ESEndPath
+#27: ESEndPath(36:26) -> ESEndPath
 end_turn

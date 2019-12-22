@@ -4,16 +4,16 @@ new AI: True
 start/max counter: 31
 counter increment: 0
 
-ESPreemptive(49:318) -> ESPreemptive
+#1: ESPreemptive(49:318) -> ESPreemptive
 Enable preempt if level 1
 
-ESBranchFlag(43:10) -> ESBranchFlag
+#2: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 1, target rnd 6
 
-ESFlagOperation(22:12) -> ESFlagOperation
+#3: ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b1
 
-SkillSet:
+#4: SkillSet:
 	[0] ESStatusShield(20:6477) -> White Valkyrie Shield
 	Voids status ailments for 999 turns
 	[1] ESVoidShield(71:6478) -> Fylgja Fur
@@ -21,16 +21,16 @@ SkillSet:
 	[2] ESDebuffRCV(105:6479) -> Discerning Lifechains
 	Rcv 50% for 20 turns
 
-ESEndPath(36:26) -> ESEndPath
+#5: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESBranchHP(29:19) -> ESBranchHP
+#6: ESBranchHP(29:19) -> ESBranchHP
 Branch on hp > 95, target rnd 27
 
-ESBranchHP(28:18) -> ESBranchHP
+#7: ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 50, target rnd 20
 
-SkillSet:
+#8: SkillSet:
 	Condition: When < 60% hp , one-time use (ai:100 rnd:0) (one-time: 30)
 	[0] ESAbsorbCombo(67:6480) -> Test of Skill
 	Absorb combo <= 5 damage for 10 turns
@@ -41,7 +41,7 @@ SkillSet:
 	[3] ESAttackUPCooldown(19:6483) -> Test of Endurance
 	Increase damage to 150% for the next 10 turns
 
-SkillSet:
+#9: SkillSet:
 	Condition: When < 70% hp , one-time use (ai:100 rnd:0) (one-time: 28)
 	[0] ESAbsorbCombo(67:6480) -> Test of Skill
 	Absorb combo <= 5 damage for 10 turns
@@ -50,18 +50,18 @@ SkillSet:
 	[2] ESDebuffMovetime(39:6482) -> Test of Speed
 	Movetime 50% for 10 turns
 
-SkillSet:
+#10: SkillSet:
 	Condition: When < 80% hp , one-time use (ai:100 rnd:0) (one-time: 24)
 	[0] ESAbsorbCombo(67:6480) -> Test of Skill
 	Absorb combo <= 5 damage for 10 turns
 	[1] ESCloud(104:6481) -> Test of Perception
 	2x3 cloud appear for 10 turns at 2nd row, 3rd column
 
-ESAbsorbCombo(67:6480) -> Test of Skill
+#11: ESAbsorbCombo(67:6480) -> Test of Skill
 Condition: When < 90% hp , one-time use (ai:100 rnd:0) (one-time: 16)
 Absorb combo <= 5 damage for 10 turns
 
-SkillSet:
+#12: SkillSet:
 	Condition: When < 60% hp , one-time use (ai:100 rnd:0) (one-time: 14)
 	[0] ESCloud(104:6481) -> Test of Perception
 	2x3 cloud appear for 10 turns at 2nd row, 3rd column
@@ -70,55 +70,55 @@ SkillSet:
 	[2] ESAttackUPCooldown(19:6483) -> Test of Endurance
 	Increase damage to 150% for the next 10 turns
 
-SkillSet:
+#13: SkillSet:
 	Condition: When < 70% hp , one-time use (ai:100 rnd:0) (one-time: 12)
 	[0] ESCloud(104:6481) -> Test of Perception
 	2x3 cloud appear for 10 turns at 2nd row, 3rd column
 	[1] ESDebuffMovetime(39:6482) -> Test of Speed
 	Movetime 50% for 10 turns
 
-ESCloud(104:6481) -> Test of Perception
+#14: ESCloud(104:6481) -> Test of Perception
 Condition: When < 80% hp , one-time use (ai:100 rnd:0) (one-time: 8)
 2x3 cloud appear for 10 turns at 2nd row, 3rd column
 
-SkillSet:
+#15: SkillSet:
 	Condition: When < 60% hp , one-time use (ai:100 rnd:0) (one-time: 6)
 	[0] ESDebuffMovetime(39:6482) -> Test of Speed
 	Movetime 50% for 10 turns
 	[1] ESAttackUPCooldown(19:6483) -> Test of Endurance
 	Increase damage to 150% for the next 10 turns
 
-ESDebuffMovetime(39:6482) -> Test of Speed
+#16: ESDebuffMovetime(39:6482) -> Test of Speed
 Condition: When < 70% hp , one-time use (ai:100 rnd:0) (one-time: 4)
 Movetime 50% for 10 turns
 
-ESAttackUPCooldown(19:6483) -> Test of Endurance
+#17: ESAttackUPCooldown(19:6483) -> Test of Endurance
 Condition: When < 60% hp , one-time use (ai:100 rnd:0) (one-time: 2)
 Increase damage to 150% for the next 10 turns
 
-SkillSet:
+#18: SkillSet:
 	[0] ESGravity(50:6491) -> Bash
 	Player -50% HP
 	[1] ESAttackMultihit(15:6492) -> Double Slash
 	Deal 50% damage (2 hits, 25% each)
 
-ESEndPath(36:26) -> ESEndPath
+#19: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-SkillSet:
+#20: SkillSet:
 	Condition: One-time use (ai:100 rnd:0) (one-time: 1)
 	[0] ESRecoverEnemy(86:6488) -> Resurrection
 	Enemy recover 100% hp
 	[1] ESChangeAttribute(46:6489) -> Sweeping Spirit Garments
 	Change own attribute to random one of Fire, Water, Wood, Light, Dark
 
-ESBranchFlag(43:10) -> ESBranchFlag
+#21: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 2, target rnd 24
 
-ESFlagOperation(22:12) -> ESFlagOperation
+#22: ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b11
 
-SkillSet:
+#23: SkillSet:
 	[0] ESOrbChangeAttack(48:6497) -> Attack Stance - Light
 	Change Heal to Light, Deal 150% damage
 	[1] ESRandomSpawn(92:6498) -> Philanthropy
@@ -126,30 +126,30 @@ SkillSet:
 	[2] ESOrbLock(94:6499) -> Decision
 	Lock all Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs
 
-SkillSet:
+#24: SkillSet:
 	Condition: When < 20% hp (ai:100 rnd:0)
 	[0] ESChangeAttribute(46:6501) -> Sweeping Spirit Garments
 	Change own attribute to random one of Fire, Water, Wood, Light, Dark
 	[1] ESAttackMultihit(15:6502) -> Saintly Valkyrie Blade
 	Deal 4000%~5000% damage (4~5 hits, 1000% each)
 
-SkillSet:
+#25: SkillSet:
 	[0] ESGravity(50:6494) -> Mighty Bash
 	Player -55% HP
 	[1] ESAttackMultihit(15:6495) -> Triple Slash
 	Deal 75% damage (3 hits, 25% each)
 
-ESEndPath(36:26) -> ESEndPath
+#26: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-SkillSet:
+#27: SkillSet:
 	[0] ESChangeAttribute(46:6501) -> Sweeping Spirit Garments
 	Change own attribute to random one of Fire, Water, Wood, Light, Dark
 	[1] ESAttackMultihit(15:6502) -> Saintly Valkyrie Blade
 	Deal 4000%~5000% damage (4~5 hits, 1000% each)
 
-ESEndPath(36:26) -> ESEndPath
+#28: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESResolve(73:6503) -> Valkyrie Resolve
+#29: ESResolve(73:6503) -> Valkyrie Resolve
 Survive attacks with 1 HP when HP > 50%

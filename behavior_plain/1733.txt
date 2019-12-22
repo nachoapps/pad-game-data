@@ -4,109 +4,109 @@ new AI: True
 start/max counter: 1
 counter increment: 1
 
-ESPreemptive(49:3402) -> ESPreemptive
+#1: ESPreemptive(49:3402) -> ESPreemptive
 Enable preempt if level 4
 
-ESBranchLevel(35:25) -> ESBranchLevel
+#2: ESBranchLevel(35:25) -> ESBranchLevel
 Branch on level > 4, target rnd 4
 
-ESEndPath(36:26) -> ESEndPath
+#3: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESBranchFlag(43:10) -> ESBranchFlag
+#4: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 1, target rnd 8
 
-ESFlagOperation(22:12) -> ESFlagOperation
+#5: ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b1
 
-SkillSet:
+#6: SkillSet:
 	[0] ESStatusShield(20:9077) -> I'll reinforce my defenses
 	Voids status ailments for 999 turns
 	[1] ESDamageShield(74:9078) -> Can you hit me?
 	Reduce damage from all sources by 90% for 2 turns
 
-ESEndPath(36:26) -> ESEndPath
+#7: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESSetCounter(26:16) -> ESSetCounter
+#8: ESSetCounter(26:16) -> ESSetCounter
 counter + 1
 
-ESBranchCounter(32:22) -> ESBranchCounter
+#9: ESBranchCounter(32:22) -> ESBranchCounter
 Branch on counter > 10, target rnd 30
 
-ESBranchHP(28:18) -> ESBranchHP
+#10: ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 30, target rnd 24
 
-ESBranchHP(28:18) -> ESBranchHP
+#11: ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 90, target rnd 16
 
-ESBranchFlag(43:10) -> ESBranchFlag
+#12: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 2, target rnd 31
 
-ESFlagOperation(22:12) -> ESFlagOperation
+#13: ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b11
 
-SkillSet:
+#14: SkillSet:
 	[0] ESAbsorbThreshold(87:9080) -> Not yet, ok?
 	Absorb damage >= 4000000 damage for 10 turns
 	[1] ESAttackUPRemainingEnemies(17:9086) -> Prepare yourself
 	Increase damage to 150% for the next 2 turns
 
-ESEndPath(36:26) -> ESEndPath
+#15: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESBranchFlag(43:10) -> ESBranchFlag
+#16: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 4, target rnd 20
 
-ESFlagOperation(22:12) -> ESFlagOperation
+#17: ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b111
 
-ESDebuffMovetime(39:9084) -> I'm really going to give my all now!
+#18: ESDebuffMovetime(39:9084) -> I'm really going to give my all now!
 Movetime 50% for 10 turns
 
-ESEndPath(36:26) -> ESEndPath
+#19: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESRowSpawnMulti(78:9082) -> How about this?
+#20: ESRowSpawnMulti(78:9082) -> How about this?
 Condition: One-time use (ai:100 rnd:0) (one-time: 1)
 Change 2nd row to Water, Jammer orbs, 4th row to Water, Jammer orbs
 
-ESSpinnersRandom(109:9081) -> Blue Metal Flash
+#21: ESSpinnersRandom(109:9081) -> Blue Metal Flash
 Condition: 50% chance (ai:50 rnd:0)
 Random 3 orbs change every 1.0s for 2 turns, Deal 90% damage
 
-ESAttackMultihit(15:9083) -> Take it!
+#22: ESAttackMultihit(15:9083) -> Take it!
 Deal 110% damage (2 hits, 55% each)
 
-ESEndPath(36:26) -> ESEndPath
+#23: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESBranchFlag(43:10) -> ESBranchFlag
+#24: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 8, target rnd 28
 
-ESFlagOperation(22:12) -> ESFlagOperation
+#25: ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b1111
 
-ESOrbSealColumn(99:9088) -> Azure Star Blockade
+#26: ESOrbSealColumn(99:9088) -> Azure Star Blockade
 Seal 1st, 6th column for 1 turns
 
-ESEndPath(36:26) -> ESEndPath
+#27: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESColumnSpawnMulti(76:9090) -> Binding Azure Bladewings
+#28: ESColumnSpawnMulti(76:9090) -> Binding Azure Bladewings
 Change 2nd column to Water, Jammer orbs, 5th column to Water, Jammer orbs
 
-ESEndPath(36:26) -> ESEndPath
+#29: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESSetCounter(25:15) -> ESSetCounter
+#30: ESSetCounter(25:15) -> ESSetCounter
 counter = 0
 
-ESBoardChangeAttackBits(85:9085) -> Time's up!
+#31: ESBoardChangeAttackBits(85:9085) -> Time's up!
 Change all orbs to Water, Deal 250% damage
 
-ESEndPath(36:26) -> ESEndPath
+#32: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESTurnChangePassive(106:9092) -> Enemy's next turn changed
+#33: ESTurnChangePassive(106:9092) -> Enemy's next turn changed
 Enemy turn counter change to 1 when HP <= 90%

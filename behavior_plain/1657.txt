@@ -4,34 +4,34 @@ new AI: True
 start/max counter: 3
 counter increment: 0
 
-ESPreemptive(49:318) -> ESPreemptive
+#1: ESPreemptive(49:318) -> ESPreemptive
 Enable preempt if level 1
 
-SkillSet:
+#2: SkillSet:
 	Condition: One-time use (ai:100 rnd:0) (one-time: 2)
 	[0] ESStatusShield(20:14730) -> Knight Armor
 	Voids status ailments for 5 turns
 	[1] ESDamageShield(74:14295) -> Knight's Pride
 	Reduce damage from all sources by 99% for 3 turns
 
-ESBranchCounter(32:22) -> ESBranchCounter
+#3: ESBranchCounter(32:22) -> ESBranchCounter
 Branch on counter > 2, target rnd 6
 
-ESSetCounter(26:16) -> ESSetCounter
+#4: ESSetCounter(26:16) -> ESSetCounter
 counter + 1
 
-ESAttackMultihit(15:7696) -> Death Viper Slash
+#5: ESAttackMultihit(15:7696) -> Death Viper Slash
 Deal 500% damage (2 hits, 250% each)
 
-SkillSet:
+#6: SkillSet:
 	Condition: One-time use (ai:100 rnd:0) (one-time: 1)
 	[0] ESAttackUPCooldown(19:7697) -> Evil Crest
 	Increase damage to 250% for the next 1 turns
 	[1] ESAttackMultihit(15:7696) -> Death Viper Slash
 	Deal 500% damage (2 hits, 250% each)
 
-ESAttackMultihit(15:7696) -> Death Viper Slash
+#7: ESAttackMultihit(15:7696) -> Death Viper Slash
 Deal 500% damage (2 hits, 250% each)
 
-ESEndPath(36:26) -> ESEndPath
+#8: ESEndPath(36:26) -> ESEndPath
 end_turn

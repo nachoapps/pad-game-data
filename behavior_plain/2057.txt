@@ -4,25 +4,25 @@ new AI: True
 start/max counter: 1
 counter increment: 0
 
-ESPreemptive(49:355) -> ESPreemptive
+#1: ESPreemptive(49:355) -> ESPreemptive
 Enable preempt if level 5
 
-ESBranchLevel(35:25) -> ESBranchLevel
+#2: ESBranchLevel(35:25) -> ESBranchLevel
 Branch on level > 5, target rnd 5
 
-ESEndPath(36:26) -> ESEndPath
+#3: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESEndPath(36:26) -> ESEndPath
+#4: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESBranchFlag(43:10) -> ESBranchFlag
+#5: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 1, target rnd 9
 
-ESFlagOperation(22:12) -> ESFlagOperation
+#6: ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b1
 
-SkillSet:
+#7: SkillSet:
 	[0] ESInactivity(66:2123) -> Took you long enough!
 	Do nothing
 	[1] ESInactivity(66:2124) -> I was worried you'd gotten lost!
@@ -30,10 +30,10 @@ SkillSet:
 	[2] ESStatusShield(20:2125) -> It's go time!
 	Voids status ailments for 1 turns
 
-ESEndPath(36:26) -> ESEndPath
+#8: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-SkillSet:
+#9: SkillSet:
 	Condition: When < 50% hp , one-time use (ai:100 rnd:0) (one-time: 1)
 	[0] ESAttackUPRemainingEnemies(17:2130) -> I suppose I misjudged!
 	Increase damage to 200% for the next 999 turns
@@ -46,36 +46,36 @@ SkillSet:
 	[4] ESAttackMultihit(15:2137) -> Jump
 	Deal 120% damage
 
-ESBranchHP(29:19) -> ESBranchHP
+#10: ESBranchHP(29:19) -> ESBranchHP
 Branch on hp > 50, target rnd 14
 
-ESBindAttack(63:2139) -> Electrocute
+#11: ESBindAttack(63:2139) -> Electrocute
 Condition: 50% chance (ai:50 rnd:0)
 Bind 1 random subs for 2 turns, Deal 80% damage
 
-ESAttackMultihit(15:2137) -> Jump
+#12: ESAttackMultihit(15:2137) -> Jump
 Condition: 50% chance (ai:50 rnd:0)
 Deal 120% damage
 
-ESEndPath(36:26) -> ESEndPath
+#13: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESAttackMultihit(15:2127) -> Goblin Punch
+#14: ESAttackMultihit(15:2127) -> Goblin Punch
 Condition: 30% chance (ai:30 rnd:0)
 Deal 80% damage (8 hits, 10% each)
 
-ESOrbChangeAttack(48:2128) -> Aera
+#15: ESOrbChangeAttack(48:2128) -> Aera
 Condition: 30% chance (ai:30 rnd:0)
 Change Random to Wood, Deal 100% damage
 
-ESOrbChangeAttack(48:2129) -> Wind Slash
+#16: ESOrbChangeAttack(48:2129) -> Wind Slash
 Condition: 30% chance (ai:30 rnd:0)
 Change Random to Jammer, Deal 120% damage
 
-ESAttackSinglehit(82:1) -> Disable Skill
+#17: ESAttackSinglehit(82:1) -> Disable Skill
 Deal 100% damage
 
-SkillSet:
+#18: SkillSet:
 	Condition: On death (ai:100 rnd:0)
 	[0] ESSkillSet(83:2143) -> Urgh! + I, uh, have an important appointment! + We'll meet again!
 	Do nothing + Do nothing + Do nothing

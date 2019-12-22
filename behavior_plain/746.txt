@@ -4,34 +4,34 @@ new AI: False
 start/max counter: 1
 counter increment: 0
 
-ESPreemptive(49:697) -> ESPreemptive
+#1: ESPreemptive(49:697) -> ESPreemptive
 Enable preempt if level 3
 
-ESBranchLevel(35:25) -> ESBranchLevel
+#2: ESBranchLevel(35:25) -> ESBranchLevel
 Branch on level > 3, target rnd 4
 
-ESEndPath(36:26) -> ESEndPath
+#3: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESBranchFlag(43:10) -> ESBranchFlag
+#4: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 1, target rnd 8
 
-ESFlagOperation(22:12) -> ESFlagOperation
+#5: ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b1
 
-ESBindSkill(14:1064) -> Binding Wave
+#6: ESBindSkill(14:1064) -> Binding Wave
 Condition: One-time use (ai:100 rnd:0) (one-time: 1)
 Bind active skills for 5 turns
 
-ESEndPath(36:26) -> ESEndPath
+#7: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESBranchHP(28:18) -> ESBranchHP
+#8: ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 20, target rnd 10
 
-ESEndPath(36:26) -> ESEndPath
+#9: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESAttackMultihit(15:557) -> Southern Seven-Star Formation
+#10: ESAttackMultihit(15:557) -> Southern Seven-Star Formation
 Condition: When < 20% hp (ai:100 rnd:0)
 Deal 560% damage (7 hits, 80% each)

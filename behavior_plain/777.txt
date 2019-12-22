@@ -4,48 +4,48 @@ new AI: True
 start/max counter: 1
 counter increment: 1
 
-ESPreemptive(49:318) -> ESPreemptive
+#1: ESPreemptive(49:318) -> ESPreemptive
 Enable preempt if level 1
 
-ESBranchFlag(43:10) -> ESBranchFlag
+#2: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 1, target rnd 6
 
-ESFlagOperation(22:12) -> ESFlagOperation
+#3: ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b1
 
-SkillSet:
+#4: SkillSet:
 	[0] ESAbsorbCombo(67:12330) -> Absorb!
 	Absorb combo <= 4 damage for 5 turns
 	[1] ESOrbSealRow(100:12331) -> Seal!
 	Seal 1st, 5th row for 1 turns
 
-ESEndPath(36:26) -> ESEndPath
+#5: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESBranchHP(28:18) -> ESBranchHP
+#6: ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 40, target rnd 11
 
-ESBindRandomSub(65:12332) -> Bind!
+#7: ESBindRandomSub(65:12332) -> Bind!
 Condition: 33% chance (ai:0 rnd:33)
 Bind 1 random subs for 1 turns
 
-ESAttackMultihit(15:12333) -> Destroy!
+#8: ESAttackMultihit(15:12333) -> Destroy!
 Condition: 33% chance (ai:0 rnd:33)
 Deal 150% damage
 
-ESOrbChangeAttack(48:12334) -> Terminate!
+#9: ESOrbChangeAttack(48:12334) -> Terminate!
 Condition: 34% chance (ai:0 rnd:34)
 Change Random to Jammer, Deal 70% damage
 
-ESEndPath(36:26) -> ESEndPath
+#10: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESInactivity(66:12335) -> Focusing his mind
+#11: ESInactivity(66:12335) -> Focusing his mind
 Condition: One-time use (ai:100 rnd:0) (one-time: 1)
 Do nothing
 
-ESAttackMultihit(15:12336) -> All is impermanent...
+#12: ESAttackMultihit(15:12336) -> All is impermanent...
 Deal 800% damage (4 hits, 200% each)
 
-ESEndPath(36:26) -> ESEndPath
+#13: ESEndPath(36:26) -> ESEndPath
 end_turn

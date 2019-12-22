@@ -4,220 +4,220 @@ new AI: True
 start/max counter: 0
 counter increment: 0
 
-ESPreemptive(49:318) -> ESPreemptive
+#1: ESPreemptive(49:318) -> ESPreemptive
 Enable preempt if level 1
 
-ESDeathCry(69:9996) -> Carol & Just Tranformation
+#2: ESDeathCry(69:9996) -> Carol & Just Tranformation
 Condition: On death (ai:0 rnd:0)
 Show message: Even if I show a little of my true power|It will probably be good
 
-ESBranchLevel(35:25) -> ESBranchLevel
+#3: ESBranchLevel(35:25) -> ESBranchLevel
 Branch on level > 4, target rnd 6
 
-ESBranchLevel(33:23) -> ESBranchLevel
+#4: ESBranchLevel(33:23) -> ESBranchLevel
 Branch on level < 3, target rnd 46
 
-ESEndPath(36:26) -> ESEndPath
+#5: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESBranchFlag(43:10) -> ESBranchFlag
+#6: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 1, target rnd 10
 
-ESFlagOperation(22:12) -> ESFlagOperation
+#7: ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b1
 
-SkillSet:
+#8: SkillSet:
 	[0] ESStatusShield(20:9972) -> Now... let's get started, Inmate!
 	Voids status ailments for 999 turns
 	[1] ESDebuffMovetime(39:9973) -> You needn't hold back.
 	Movetime -2s for 10 turns
 
-ESEndPath(36:26) -> ESEndPath
+#9: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESSetCounter(26:16) -> ESSetCounter
+#10: ESSetCounter(26:16) -> ESSetCounter
 counter + 1
 
-ESBranchHP(28:18) -> ESBranchHP
+#11: ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 50, target rnd 41
 
-ESBranchHP(28:18) -> ESBranchHP
+#12: ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 75, target rnd 36
 
-ESBranchCounter(32:22) -> ESBranchCounter
+#13: ESBranchCounter(32:22) -> ESBranchCounter
 Branch on counter > 6, target rnd 15
 
-SkillSet:
+#14: SkillSet:
 	[0] ESAttackMultihit(15:9975) -> Vajra Blast
 	Deal 60% damage (2 hits, 30% each)
 	[1] ESAttackMultihit(15:9976) -> Triple Down
 	Deal 45% damage (3 hits, 15% each)
 
-ESBranchCounter(32:22) -> ESBranchCounter
+#15: ESBranchCounter(32:22) -> ESBranchCounter
 Branch on counter > 7, target rnd 18
 
-ESAttackMultihit(15:10021) -> All-Out Attack
+#16: ESAttackMultihit(15:10021) -> All-Out Attack
 Deal 300% damage (10 hits, 30% each)
 
-ESEndPath(36:26) -> ESEndPath
+#17: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESBranchCounter(32:22) -> ESBranchCounter
+#18: ESBranchCounter(32:22) -> ESBranchCounter
 Branch on counter > 11, target rnd 24
 
-ESBranchCounter(31:21) -> ESBranchCounter
+#19: ESBranchCounter(31:21) -> ESBranchCounter
 Branch on counter = 10, target rnd 22
 
-ESBranchCounter(31:21) -> ESBranchCounter
+#20: ESBranchCounter(31:21) -> ESBranchCounter
 Branch on counter = 8, target rnd 22
 
-SkillSet:
+#21: SkillSet:
 	[0] ESOrbChangeAttack(48:9981) -> Agidyne
 	Change Random to Jammer, Deal 50% damage
 	[1] ESOrbLock(94:9982) -> Bufudyne
 	Lock 10 random Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs, Deal 50% damage
 
-SkillSet:
+#22: SkillSet:
 	[0] ESBindAttack(63:9984) -> Ziodyne
 	Bind 1 random cards for 3 turns, Deal 50% damage
 	[1] ESSkillDelay(89:9985) -> Garudyne
 	Delay active skills by 1 turns, Deal 50% damage
 
-ESEndPath(36:26) -> ESEndPath
+#23: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESBranchCounter(32:22) -> ESBranchCounter
+#24: ESBranchCounter(32:22) -> ESBranchCounter
 Branch on counter > 12, target rnd 27
 
-ESAttackMultihit(15:10021) -> All-Out Attack
+#25: ESAttackMultihit(15:10021) -> All-Out Attack
 Deal 300% damage (10 hits, 30% each)
 
-ESEndPath(36:26) -> ESEndPath
+#26: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESBranchCounter(32:22) -> ESBranchCounter
+#27: ESBranchCounter(32:22) -> ESBranchCounter
 Branch on counter > 16, target rnd 33
 
-ESBranchCounter(31:21) -> ESBranchCounter
+#28: ESBranchCounter(31:21) -> ESBranchCounter
 Branch on counter = 15, target rnd 31
 
-ESBranchCounter(31:21) -> ESBranchCounter
+#29: ESBranchCounter(31:21) -> ESBranchCounter
 Branch on counter = 13, target rnd 31
 
-SkillSet:
+#30: SkillSet:
 	[0] ESBlind(62:9990) -> Psiodyne
 	Blind all orbs on the board, Deal 50% damage
 	[1] ESBindAwoken(88:9991) -> Freidyne
 	Bind awoken skills for 1 turns, Deal 50% damage
 
-SkillSet:
+#31: SkillSet:
 	[0] ESOrbChangeAttack(48:9993) -> Kougaon
 	Change Random to Light, Deal 50% damage
 	[1] ESOrbChangeAttack(48:9994) -> Eigaon
 	Change Random to Dark, Deal 50% damage
 
-ESEndPath(36:26) -> ESEndPath
+#32: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESSetCounter(25:15) -> ESSetCounter
+#33: ESSetCounter(25:15) -> ESSetCounter
 counter = 0
 
-ESAttackMultihit(15:10021) -> All-Out Attack
+#34: ESAttackMultihit(15:10021) -> All-Out Attack
 Deal 300% damage (10 hits, 30% each)
 
-ESEndPath(36:26) -> ESEndPath
+#35: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESBranchFlag(43:10) -> ESBranchFlag
+#36: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 2, target rnd 13
 
-ESFlagOperation(22:12) -> ESFlagOperation
+#37: ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b11
 
-ESSetCounter(25:15) -> ESSetCounter
+#38: ESSetCounter(25:15) -> ESSetCounter
 counter = 6
 
-SkillSet:
+#39: SkillSet:
 	[0] ESBindSkill(14:9978) -> How do you feel?
 	Bind active skills for 5 turns
 	[1] ESGravity(50:9979) -> Are you ready to surrender?
 	Player -50% HP
 
-ESEndPath(36:26) -> ESEndPath
+#40: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESBranchFlag(43:10) -> ESBranchFlag
+#41: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 4, target rnd 13
 
-ESFlagOperation(22:12) -> ESFlagOperation
+#42: ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b111
 
-ESSetCounter(25:15) -> ESSetCounter
+#43: ESSetCounter(25:15) -> ESSetCounter
 counter = 11
 
-SkillSet:
+#44: SkillSet:
 	[0] ESBindAttack(63:9987) -> You still have yet to fall...
 	Bind 6 random cards for 1 turns, Deal 100% damage
 	[1] ESBlindStickyRandom(97:9988) -> You're pretty good, Inmate!
 	Blind random 6 orbs for 3 turns
 
-ESEndPath(36:26) -> ESEndPath
+#45: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESBranchFlag(43:10) -> ESBranchFlag
+#46: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 1, target rnd 49
 
-ESFlagOperation(22:12) -> ESFlagOperation
+#47: ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b1
 
-SkillSet:
+#48: SkillSet:
 	[0] ESInactivity(66:9997) -> Now... let's get started, Inmate!
 	Do nothing
 	[1] ESInactivity(66:9998) -> You needn't hold back.
 	Do nothing
 
-ESEndPath(36:26) -> ESEndPath
+#49: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESNone(0:0) -> ESNone
+#50: ESNone(0:0) -> ESNone
 nothing
 
-ESNone(0:0) -> ESNone
+#51: ESNone(0:0) -> ESNone
 nothing
 
-ESNone(0:0) -> ESNone
+#52: ESNone(0:0) -> ESNone
 nothing
 
-ESNone(0:0) -> ESNone
+#53: ESNone(0:0) -> ESNone
 nothing
 
-ESNone(0:0) -> ESNone
+#54: ESNone(0:0) -> ESNone
 nothing
 
-ESNone(0:0) -> ESNone
+#55: ESNone(0:0) -> ESNone
 nothing
 
-ESNone(0:0) -> ESNone
+#56: ESNone(0:0) -> ESNone
 nothing
 
-ESNone(0:0) -> ESNone
+#57: ESNone(0:0) -> ESNone
 nothing
 
-ESNone(0:0) -> ESNone
+#58: ESNone(0:0) -> ESNone
 nothing
 
-ESNone(0:0) -> ESNone
+#59: ESNone(0:0) -> ESNone
 nothing
 
-ESFlagOperation(22:12) -> ESFlagOperation
+#60: ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b1010
 
-ESDeathCry(69:9996) -> Carol & Just Tranformation
+#61: ESDeathCry(69:9996) -> Carol & Just Tranformation
 Condition: On death (ai:100 rnd:0)
 Show message: Even if I show a little of my true power|It will probably be good
 
-ESEndPath(36:26) -> ESEndPath
+#62: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESAttackMultihit(15:10003) -> Vorpal Blade
+#63: ESAttackMultihit(15:10003) -> Vorpal Blade
 Deal 55% damage

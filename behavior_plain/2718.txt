@@ -4,16 +4,16 @@ new AI: True
 start/max counter: 63
 counter increment: 0
 
-ESPreemptive(49:318) -> ESPreemptive
+#1: ESPreemptive(49:318) -> ESPreemptive
 Enable preempt if level 1
 
-ESBranchFlag(43:10) -> ESBranchFlag
+#2: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 1, target rnd 6
 
-ESFlagOperation(22:12) -> ESFlagOperation
+#3: ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b1
 
-SkillSet:
+#4: SkillSet:
 	[0] ESStatusShield(20:2969) -> Antivirus
 	Voids status ailments for 999 turns
 	[1] ESDamageShield(74:2970) -> Gigantic Body
@@ -21,98 +21,98 @@ SkillSet:
 	[2] ESVoidShield(71:2995) -> Energy Calm
 	Void damage >= 6000000 for 99 turns
 
-ESEndPath(36:26) -> ESEndPath
+#5: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESRandomSpawn(92:2972) -> The huge body started to move
+#6: ESRandomSpawn(92:2972) -> The huge body started to move
 Condition: One-time use & when Fire, Water, Wood, Light, Dark, Heal, Poison, Mortal Poison orbs are on the board (ai:100 rnd:0) (one-time: 32)
 Spawn random 3 Jammer orbs
 
-ESStorePower(8:2973) -> Raising its arm
+#7: ESStorePower(8:2973) -> Raising its arm
 Condition: One-time use (ai:100 rnd:0) (one-time: 16)
 Increase damage to 690% for the next attack
 
-ESRandomSpawn(92:2974) -> Rearranging its posture
+#8: ESRandomSpawn(92:2974) -> Rearranging its posture
 Condition: One-time use & when Fire, Water, Wood, Light, Dark, Heal, Poison, Mortal Poison orbs are on the board (ai:100 rnd:0) (one-time: 8)
 Spawn random 3 Jammer orbs
 
-ESStorePower(8:2975) -> Raising its arm again
+#9: ESStorePower(8:2975) -> Raising its arm again
 Condition: One-time use (ai:100 rnd:0) (one-time: 4)
 Increase damage to 690% for the next attack
 
-ESBlind(5:2976) -> Opening its mouth
+#10: ESBlind(5:2976) -> Opening its mouth
 Condition: One-time use (ai:100 rnd:0) (one-time: 2)
 Blind all orbs on the board
 
-ESBranchHP(28:18) -> ESBranchHP
+#11: ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 50, target rnd 21
 
-ESBranchFlag(43:10) -> ESBranchFlag
+#12: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 2, target rnd 20
 
-ESFlagOperation(22:12) -> ESFlagOperation
+#13: ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b11
 
-SkillSet:
+#14: SkillSet:
 	Condition: One-time use (ai:0 rnd:20) (one-time: 1)
 	[0] ESColumnSpawnMulti(77:2977) -> Gaia Beam
 	Change 3rd, 4th column to Wood orbs, Deal 450% damage
 	[1] ESAbsorbAttribute(53:2985) -> Inhale
 	Absorb Fire, Water damage for 3 turns
 
-SkillSet:
+#15: SkillSet:
 	Condition: One-time use (ai:0 rnd:20) (one-time: 1)
 	[0] ESColumnSpawnMulti(77:2977) -> Gaia Beam
 	Change 3rd, 4th column to Wood orbs, Deal 450% damage
 	[1] ESAbsorbAttribute(53:2986) -> Inhale
 	Absorb Water, Wood damage for 3 turns
 
-SkillSet:
+#16: SkillSet:
 	Condition: One-time use (ai:0 rnd:20) (one-time: 1)
 	[0] ESColumnSpawnMulti(77:2977) -> Gaia Beam
 	Change 3rd, 4th column to Wood orbs, Deal 450% damage
 	[1] ESAbsorbAttribute(53:2987) -> Inhale
 	Absorb Wood, Light damage for 3 turns
 
-SkillSet:
+#17: SkillSet:
 	Condition: One-time use (ai:0 rnd:20) (one-time: 1)
 	[0] ESColumnSpawnMulti(77:2977) -> Gaia Beam
 	Change 3rd, 4th column to Wood orbs, Deal 450% damage
 	[1] ESAbsorbAttribute(53:2988) -> Inhale
 	Absorb Light, Dark damage for 3 turns
 
-SkillSet:
+#18: SkillSet:
 	Condition: One-time use (ai:0 rnd:20) (one-time: 1)
 	[0] ESColumnSpawnMulti(77:2977) -> Gaia Beam
 	Change 3rd, 4th column to Wood orbs, Deal 450% damage
 	[1] ESAbsorbAttribute(53:2989) -> Inhale
 	Absorb Fire, Dark damage for 3 turns
 
-ESEndPath(36:26) -> ESEndPath
+#19: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESSkillDelay(89:2979) -> Skill Break
+#20: ESSkillDelay(89:2979) -> Skill Break
 Delay active skills by 3~5 turns, Deal 260% damage
 
-ESGravity(50:2978) -> Grand Ray
+#21: ESGravity(50:2978) -> Grand Ray
 Condition: One-time use (ai:100 rnd:0) (one-time: 1)
 Player -500% HP
 
-ESGravity(50:2984) -> Grand Ray
+#22: ESGravity(50:2984) -> Grand Ray
 Condition: When < 20% hp (ai:100 rnd:0)
 Player -500% HP
 
-ESRecoverEnemy(86:2982) -> Cell Mending
+#23: ESRecoverEnemy(86:2982) -> Cell Mending
 Condition: 50% chance when < 30% hp (ai:50 rnd:0)
 Enemy recover 10% hp, Deal 420% damage
 
-ESBindAttack(63:2983) -> Great Vine
+#24: ESBindAttack(63:2983) -> Great Vine
 Condition: When < 30% hp (ai:100 rnd:0)
 Bind 1 random cards for 5 turns, Deal 410% damage
 
-ESOrbLock(94:2980) -> Hardened Sign
+#25: ESOrbLock(94:2980) -> Hardened Sign
 Condition: 50% chance (ai:50 rnd:0)
 Lock 6 random Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs, Deal 340% damage
 
-ESBlind(62:2981) -> Earth's Mantle Press
+#26: ESBlind(62:2981) -> Earth's Mantle Press
 Blind all orbs on the board, Deal 360% damage

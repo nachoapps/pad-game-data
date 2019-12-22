@@ -4,16 +4,16 @@ new AI: True
 start/max counter: 2
 counter increment: 0
 
-ESPreemptive(49:318) -> ESPreemptive
+#1: ESPreemptive(49:318) -> ESPreemptive
 Enable preempt if level 1
 
-ESBranchFlag(43:10) -> ESBranchFlag
+#2: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 1, target rnd 6
 
-ESFlagOperation(22:12) -> ESFlagOperation
+#3: ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b1
 
-SkillSet:
+#4: SkillSet:
 	[0] ESOrbLock(94:5630) -> Misfortune Unleashed
 	Lock all Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs
 	[1] ESStatusShield(20:5631) -> Full Energy Field
@@ -21,67 +21,67 @@ SkillSet:
 	[2] ESAttackUPCooldown(19:5632) -> Storing up energy...
 	Increase damage to 900% for the next 1 turns
 
-ESEndPath(36:26) -> ESEndPath
+#5: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESBranchHP(28:18) -> ESBranchHP
+#6: ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 1, target rnd 19
 
-ESBombFixedSpawn(103:5641) -> Void Burn
+#7: ESBombFixedSpawn(103:5641) -> Void Burn
 Condition: When < 20% hp (ai:100 rnd:0)
 Spawn Bomb orbs in the specified positions, Deal 5000% damage
 
-ESBranchHP(28:18) -> ESBranchHP
+#8: ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 50, target rnd 15
 
-ESBranchFlag(43:10) -> ESBranchFlag
+#9: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 2, target rnd 13
 
-ESFlagOperation(22:12) -> ESFlagOperation
+#10: ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b11
 
-SkillSet:
+#11: SkillSet:
 	[0] ESBlind(62:5634) -> Raging Fire
 	Blind all orbs on the board, Deal 50% damage
 	[1] ESOrbLock(94:5635) -> Orb Flash
 	Lock all Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs
 
-ESEndPath(36:26) -> ESEndPath
+#12: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESBombFixedSpawn(103:5638) -> Zelvarn
+#13: ESBombFixedSpawn(103:5638) -> Zelvarn
 Condition: 50% chance (ai:50 rnd:0)
 Spawn Bomb orbs in the specified positions, Deal 120% damage
 
-ESColumnSpawnMulti(77:5637) -> Cruel Flare
+#14: ESColumnSpawnMulti(77:5637) -> Cruel Flare
 Change 2nd, 5th column to Jammer orbs, Deal 150% damage
 
-ESBranchFlag(43:10) -> ESBranchFlag
+#15: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 4, target rnd 13
 
-ESFlagOperation(22:12) -> ESFlagOperation
+#16: ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b111
 
-ESAbsorbCombo(67:5639) -> Nine Seek
+#17: ESAbsorbCombo(67:5639) -> Nine Seek
 Condition: When < 50% hp (ai:100 rnd:0)
 Absorb combo <= 8 damage for 9 turns, Deal 20% damage
 
-ESEndPath(36:26) -> ESEndPath
+#18: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-SkillSet:
+#19: SkillSet:
 	Condition: One-time use (ai:100 rnd:0) (one-time: 1)
 	[0] ESRecoverEnemy(86:5640) -> Death Avoidance
 	Enemy recover 100% hp
 	[1] ESBindAttack(63:5675) -> Nampulse
 	Bind 1 random cards for 9 turns, Deal 200% damage
 
-ESBombFixedSpawn(103:5641) -> Void Burn
+#20: ESBombFixedSpawn(103:5641) -> Void Burn
 Condition: When < 20% hp (ai:100 rnd:0)
 Spawn Bomb orbs in the specified positions, Deal 5000% damage
 
-ESEndPath(36:26) -> ESEndPath
+#21: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESResolve(73:5674) -> Nine Resolve
+#22: ESResolve(73:5674) -> Nine Resolve
 Survive attacks with 1 HP when HP > 50%

@@ -4,10 +4,10 @@ new AI: True
 start/max counter: 3
 counter increment: 0
 
-ESPreemptive(49:318) -> ESPreemptive
+#1: ESPreemptive(49:318) -> ESPreemptive
 Enable preempt if level 1
 
-SkillSet:
+#2: SkillSet:
 	Condition: One-time use (ai:100 rnd:0) (one-time: 2)
 	[0] ESColumnSpawnMulti(76:12763) -> Great!
 	Change 1st column to Fire orbs, 2nd column to Water orbs
@@ -16,20 +16,20 @@ SkillSet:
 	[2] ESCloud(104:12765) -> Have some piping hot food!
 	6x5 cloud appear for 1 turns at random location
 
-ESAttackUPRemainingEnemies(17:12770) -> Cooking is the firepower of life!
+#3: ESAttackUPRemainingEnemies(17:12770) -> Cooking is the firepower of life!
 Condition: When < 20% hp , one-time use, when <= 1 enemies remain (ai:100 rnd:0) (one-time: 1)
 Increase damage to 200% for the next 99 turns
 
-ESCloud(104:12769) -> Zheng
+#4: ESCloud(104:12769) -> Zheng
 Condition: 20% chance (ai:20 rnd:0)
 1x1 cloud appear for 1 turns at random location, Deal 90% damage
 
-ESOrbLock(94:12768) -> Chao
+#5: ESOrbLock(94:12768) -> Chao
 Condition: 25% chance (ai:25 rnd:0)
 Lock 5 random Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs, Deal 90% damage
 
-ESAttackMultihit(15:12767) -> Su
+#6: ESAttackMultihit(15:12767) -> Su
 Deal 100% damage (4 hits, 25% each)
 
-ESEndPath(36:26) -> ESEndPath
+#7: ESEndPath(36:26) -> ESEndPath
 end_turn

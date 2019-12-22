@@ -4,10 +4,10 @@ new AI: True
 start/max counter: 1
 counter increment: 0
 
-ESPreemptive(49:318) -> ESPreemptive
+#1: ESPreemptive(49:318) -> ESPreemptive
 Enable preempt if level 1
 
-SkillSet:
+#2: SkillSet:
 	Condition: One-time use (ai:20 rnd:0) (one-time: 1)
 	[0] ESDebuffRCV(105:15678) -> よろしくお願いします
 	Rcv 50% for 10 turns
@@ -16,7 +16,7 @@ SkillSet:
 	[2] ESAttributeBlock(107:15685) -> 行きますね
 	Unable to match Water orbs for 5 turns
 
-SkillSet:
+#3: SkillSet:
 	Condition: One-time use (ai:25 rnd:0) (one-time: 1)
 	[0] ESDebuffRCV(105:15678) -> よろしくお願いします
 	Rcv 50% for 10 turns
@@ -25,7 +25,7 @@ SkillSet:
 	[2] ESAttributeBlock(107:15686) -> 行きますね
 	Unable to match Wood orbs for 5 turns
 
-SkillSet:
+#4: SkillSet:
 	Condition: One-time use (ai:33 rnd:0) (one-time: 1)
 	[0] ESDebuffRCV(105:15678) -> よろしくお願いします
 	Rcv 50% for 10 turns
@@ -34,7 +34,7 @@ SkillSet:
 	[2] ESAttributeBlock(107:15684) -> 行きますね
 	Unable to match Fire orbs for 5 turns
 
-SkillSet:
+#5: SkillSet:
 	Condition: One-time use (ai:50 rnd:0) (one-time: 1)
 	[0] ESDebuffRCV(105:15678) -> よろしくお願いします
 	Rcv 50% for 10 turns
@@ -43,7 +43,7 @@ SkillSet:
 	[2] ESAttributeBlock(107:15688) -> 行きますね
 	Unable to match Dark orbs for 5 turns
 
-SkillSet:
+#6: SkillSet:
 	Condition: One-time use (ai:100 rnd:0) (one-time: 1)
 	[0] ESDebuffRCV(105:15678) -> よろしくお願いします
 	Rcv 50% for 10 turns
@@ -52,39 +52,39 @@ SkillSet:
 	[2] ESAttributeBlock(107:15687) -> 行きますね
 	Unable to match Light orbs for 5 turns
 
-ESSetCounter(26:16) -> ESSetCounter
+#7: ESSetCounter(26:16) -> ESSetCounter
 counter + 1
 
-ESBranchHP(28:18) -> ESBranchHP
+#8: ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 1, target rnd 21
 
-ESBranchHP(28:18) -> ESBranchHP
+#9: ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 10, target rnd 19
 
-ESBranchCounter(32:22) -> ESBranchCounter
+#10: ESBranchCounter(32:22) -> ESBranchCounter
 Branch on counter > 5, target rnd 14
 
-ESOrbLock(94:15689) -> 蒼鎖閃
+#11: ESOrbLock(94:15689) -> 蒼鎖閃
 Condition: 50% chance (ai:0 rnd:50)
 Lock 10 random Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs, Deal 100% damage
 
-ESRandomSpawn(92:15690) -> 星海の煌き
+#12: ESRandomSpawn(92:15690) -> 星海の煌き
 Condition: 50% chance (ai:0 rnd:50)
 Spawn random 1 Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison orbs, Deal 95% damage
 
-ESEndPath(36:26) -> ESEndPath
+#13: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESSetCounter(27:17) -> ESSetCounter
+#14: ESSetCounter(27:17) -> ESSetCounter
 counter - 1
 
-ESBranchFlag(43:10) -> ESBranchFlag
+#15: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 1, target rnd 11
 
-ESFlagOperation(22:12) -> ESFlagOperation
+#16: ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b1
 
-SkillSet:
+#17: SkillSet:
 	[0] ESStatusShield(20:15692) -> ここまで耐えましたか
 	Voids status ailments for 999 turns
 	[1] ESSkillDelay(89:15693) -> なかなかやりますね
@@ -92,23 +92,23 @@ SkillSet:
 	[2] ESVoidShield(71:15694) -> 勝負はこれからですよ
 	Void damage >= 100000000 for 999 turns
 
-ESEndPath(36:26) -> ESEndPath
+#18: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESAttackMultihit(15:15695) -> 星海輪輝
+#19: ESAttackMultihit(15:15695) -> 星海輪輝
 Deal 400% damage (4 hits, 100% each)
 
-ESEndPath(36:26) -> ESEndPath
+#20: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-SkillSet:
+#21: SkillSet:
 	[0] ESAttackUPRemainingEnemies(17:15697) -> もう許しません
 	Increase damage to 150% for the next 999 turns
 	[1] ESAbsorbCombo(67:15698) -> 超えられますか？
 	Absorb combo <= 9 damage for 1 turns
 
-ESEndPath(36:26) -> ESEndPath
+#22: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESResolve(73:15672) -> 根性
+#23: ESResolve(73:15672) -> 根性
 Survive attacks with 1 HP when HP > 50%

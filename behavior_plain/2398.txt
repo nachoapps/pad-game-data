@@ -4,82 +4,82 @@ new AI: True
 start/max counter: 3
 counter increment: 1
 
-ESPreemptive(49:318) -> ESPreemptive
+#1: ESPreemptive(49:318) -> ESPreemptive
 Enable preempt if level 1
 
-ESBranchFlag(43:10) -> ESBranchFlag
+#2: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 1, target rnd 6
 
-ESFlagOperation(22:12) -> ESFlagOperation
+#3: ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b1
 
-ESStatusShield(20:3330) -> Ragnarok Victor
+#4: ESStatusShield(20:3330) -> Ragnarok Victor
 Condition: One-time use (ai:100 rnd:0) (one-time: 3)
 Voids status ailments for 999 turns
 
-ESEndPath(36:26) -> ESEndPath
+#5: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESBranchCard(90:3339) -> ESBranchCard
+#6: ESBranchCard(90:3339) -> ESBranchCard
 Branch on player_cards HAS [368, 369, 652, 1344], target rnd 14
 
-ESAttackMultihit(15:3335) -> Last Flame
+#7: ESAttackMultihit(15:3335) -> Last Flame
 Condition: When < 20% hp (ai:100 rnd:0)
 Deal 280% damage (4 hits, 70% each)
 
-ESBranchHP(28:18) -> ESBranchHP
+#8: ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 80, target rnd 17
 
-ESBranchHP(28:18) -> ESBranchHP
+#9: ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 50, target rnd 20
 
-ESRandomSpawn(92:3331) -> Corona
+#10: ESRandomSpawn(92:3331) -> Corona
 Condition: One-time use & when Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs are on the board (ai:100 rnd:0) (one-time: 3)
 Change all orbs to Fire, Deal 150% damage
 
-ESOrbChangeAttack(48:3333) -> Black Flame
+#11: ESOrbChangeAttack(48:3333) -> Black Flame
 Condition: 50% chance (ai:50 rnd:0)
 Change Fire to Jammer, Deal 120% damage
 
-ESRandomSpawn(92:3332) -> Laevateinn
+#12: ESRandomSpawn(92:3332) -> Laevateinn
 Condition: When water, wood, light, dark, heal, jammer, poison, mortal poison orbs are on the board (ai:100 rnd:0)
 Spawn random 6 Fire orbs, Deal 130% damage
 
-ESEndPath(36:26) -> ESEndPath
+#13: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESBranchFlag(43:10) -> ESBranchFlag
+#14: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 2, target rnd 7
 
-ESFlagOperation(22:12) -> ESFlagOperation
+#15: ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b11
 
-ESAttackMultihit(15:3340) -> You think you can beat me with that?
+#16: ESAttackMultihit(15:3340) -> You think you can beat me with that?
 Deal 130% damage
 
-ESBranchFlag(43:10) -> ESBranchFlag
+#17: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 4, target rnd 9
 
-ESFlagOperation(22:12) -> ESFlagOperation
+#18: ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b111
 
-ESSkillDelay(89:3334) -> Muspell's Army
+#19: ESSkillDelay(89:3334) -> Muspell's Army
 Delay active skills by 2 turns
 
-ESBranchFlag(43:10) -> ESBranchFlag
+#20: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 8, target rnd 10
 
-ESFlagOperation(22:12) -> ESFlagOperation
+#21: ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b1111
 
-SkillSet:
+#22: SkillSet:
 	[0] ESSkyfall(68:3336) -> Overheat
 	Fire skyfall +25% for 99 turns
 	[1] ESChangeAttribute(46:3337) -> Body burns up even more
 	Change own attribute to Fire
 
-ESEndPath(36:26) -> ESEndPath
+#23: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESAttributeResist(72:3341) -> Fire Halve
+#24: ESAttributeResist(72:3341) -> Fire Halve
 Reduce damage from Fire by 50%

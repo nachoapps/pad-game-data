@@ -4,63 +4,63 @@ new AI: True
 start/max counter: 15
 counter increment: 0
 
-ESPreemptive(49:318) -> ESPreemptive
+#1: ESPreemptive(49:318) -> ESPreemptive
 Enable preempt if level 1
 
-ESBranchFlag(43:10) -> ESBranchFlag
+#2: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 1, target rnd 6
 
-ESFlagOperation(22:12) -> ESFlagOperation
+#3: ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b1
 
-ESStatusShield(20:6571) -> Getting ready to headbutt
+#4: ESStatusShield(20:6571) -> Getting ready to headbutt
 Voids status ailments for 5 turns
 
-ESEndPath(36:26) -> ESEndPath
+#5: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESBranchHP(28:18) -> ESBranchHP
+#6: ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 50, target rnd 9
 
-SkillSet:
+#7: SkillSet:
 	[0] ESAttackMultihit(15:6572) -> Thunderhorn Destruction
 	Deal 2400% damage (6 hits, 400% each)
 	[1] ESStatusShield(20:6571) -> Getting ready to headbutt
 	Voids status ailments for 5 turns
 
-ESEndPath(36:26) -> ESEndPath
+#8: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-SkillSet:
+#9: SkillSet:
 	Condition: One-time use (ai:100 rnd:0) (one-time: 8)
 	[0] ESDamageShield(74:6574) -> Fortified Cells
 	Reduce damage from all sources by 50% for 6 turns
 	[1] ESBlindStickyFixed(98:6575) -> Colossal Dragon's Majesty
 	Blind orbs in specific positions for 6 turns
 
-ESAttackMultihit(15:6577) -> Crushing Claw
+#10: ESAttackMultihit(15:6577) -> Crushing Claw
 Condition: One-time use (ai:100 rnd:0) (one-time: 4)
 Deal 600% damage (2 hits, 300% each)
 
-ESAttackMultihit(15:6578) -> Crushing Claw
+#11: ESAttackMultihit(15:6578) -> Crushing Claw
 Condition: One-time use (ai:100 rnd:0) (one-time: 2)
 Deal 600% damage (2 hits, 300% each)
 
-SkillSet:
+#12: SkillSet:
 	Condition: One-time use (ai:100 rnd:0) (one-time: 1)
 	[0] ESDamageShield(74:6579) -> Traces of the Demon Army
 	Reduce damage from all sources by 75% for 10 turns
 	[1] ESOrbSealRow(100:6580) -> Colossal Dragon's Pressure
 	Seal 5th row for 10 turns
 
-ESAttackMultihit(15:6582) -> Thunderhorn Catastrophe
+#13: ESAttackMultihit(15:6582) -> Thunderhorn Catastrophe
 Deal 870% damage (3 hits, 290% each)
 
-ESEndPath(36:26) -> ESEndPath
+#14: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESTurnChangePassive(106:6583) -> Enemy's next turn changed in anger
+#15: ESTurnChangePassive(106:6583) -> Enemy's next turn changed in anger
 Enemy turn counter change to 2 when HP <= 50%
 
-ESAttributeResist(72:6824) -> Bacches Wood damage halved
+#16: ESAttributeResist(72:6824) -> Bacches Wood damage halved
 Reduce damage from Wood by 50%

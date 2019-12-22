@@ -4,95 +4,95 @@ new AI: True
 start/max counter: 1
 counter increment: 1
 
-ESPreemptive(49:318) -> ESPreemptive
+#1: ESPreemptive(49:318) -> ESPreemptive
 Enable preempt if level 1
 
-ESBranchFlag(43:10) -> ESBranchFlag
+#2: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 1, target rnd 6
 
-ESFlagOperation(22:12) -> ESFlagOperation
+#3: ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b1
 
-SkillSet:
+#4: SkillSet:
 	[0] ESSpinnersFixed(110:12848) -> Bewitching Forest
 	Specific orbs change every 1.0s for 10 turns
 	[1] ESAbsorbCombo(67:12849) -> Creation of the Universe
 	Absorb combo <= 6 damage for 20 turns
 
-ESEndPath(36:26) -> ESEndPath
+#5: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESBranchHP(28:18) -> ESBranchHP
+#6: ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 1, target rnd 24
 
-ESBranchHP(28:18) -> ESBranchHP
+#7: ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 15, target rnd 18
 
-ESBranchHP(28:18) -> ESBranchHP
+#8: ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 75, target rnd 14
 
-ESBranchHP(29:19) -> ESBranchHP
+#9: ESBranchHP(29:19) -> ESBranchHP
 Branch on hp > 76, target rnd 22
 
-ESGravity(50:12852) -> Hunting Cyclone
+#10: ESGravity(50:12852) -> Hunting Cyclone
 Condition: One-time use (ai:33 rnd:0) (one-time: 1)
 Player -99% HP
 
-ESColumnSpawnMulti(77:12850) -> Savage Crunch
+#11: ESColumnSpawnMulti(77:12850) -> Savage Crunch
 Condition: 50% chance (ai:0 rnd:50)
 Change 6th column to Wood orbs, Deal 95% damage
 
-ESAttackMultihit(15:12851) -> Wild Flurry
+#12: ESAttackMultihit(15:12851) -> Wild Flurry
 Condition: 50% chance (ai:0 rnd:50)
 Deal 105% damage (3 hits, 35% each)
 
-ESEndPath(36:26) -> ESEndPath
+#13: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESBranchFlag(43:10) -> ESBranchFlag
+#14: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 2, target rnd 10
 
-ESFlagOperation(22:12) -> ESFlagOperation
+#15: ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b11
 
-ESStatusShield(20:12853) -> Fighting Spirit Enhancement
+#16: ESStatusShield(20:12853) -> Fighting Spirit Enhancement
 Voids status ailments for 999 turns
 
-ESEndPath(36:26) -> ESEndPath
+#17: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESBranchFlag(43:10) -> ESBranchFlag
+#18: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 4, target rnd 22
 
-ESFlagOperation(22:12) -> ESFlagOperation
+#19: ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b111
 
-SkillSet:
+#20: SkillSet:
 	[0] ESBindAwoken(88:12855) -> Parrying Stance
 	Bind awoken skills for 5 turns
 	[1] ESAttackUPRemainingEnemies(17:12856) -> Double-Edge Stance
 	Increase damage to 150% for the next 999 turns
 
-ESEndPath(36:26) -> ESEndPath
+#21: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESAttackMultihit(15:12857) -> Double-Edge of Creation
+#22: ESAttackMultihit(15:12857) -> Double-Edge of Creation
 Deal 240% damage (6 hits, 40% each)
 
-ESEndPath(36:26) -> ESEndPath
+#23: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-SkillSet:
+#24: SkillSet:
 	[0] ESRecoverEnemy(86:12859) -> Mind Concentration
 	Enemy recover 50% hp
 	[1] ESSkillDelay(89:12860) -> Mighty Roar
 	Delay active skills by 5 turns
 
-ESEndPath(36:26) -> ESEndPath
+#25: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESTurnChangePassive(106:12846) -> Enemy's next turn changed
+#26: ESTurnChangePassive(106:12846) -> Enemy's next turn changed
 Enemy turn counter change to 1 when HP <= 75%
 
-ESResolve(73:12861) -> Resolve
+#27: ESResolve(73:12861) -> Resolve
 Survive attacks with 1 HP when HP > 50%

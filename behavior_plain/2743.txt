@@ -4,44 +4,44 @@ new AI: True
 start/max counter: 3
 counter increment: 1
 
-ESPreemptive(49:318) -> ESPreemptive
+#1: ESPreemptive(49:318) -> ESPreemptive
 Enable preempt if level 1
 
-ESBranchFlag(43:10) -> ESBranchFlag
+#2: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 1, target rnd 6
 
-ESFlagOperation(22:12) -> ESFlagOperation
+#3: ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b1
 
-SkillSet:
+#4: SkillSet:
 	Condition: One-time use (ai:100 rnd:0) (one-time: 3)
 	[0] ESAbsorbAttribute(53:4833) -> Infernal Dragon Knight's Soul
 	Absorb Dark damage for 4 turns
 	[1] ESColumnSpawnMulti(77:4834) -> Darkness Scythe
 	Change 5th column to Dark orbs, Deal 50% damage
 
-ESEndPath(36:26) -> ESEndPath
+#5: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESAttackMultihit(15:4838) -> Chaos Prominence
+#6: ESAttackMultihit(15:4838) -> Chaos Prominence
 Condition: When < 10% hp (ai:100 rnd:0)
 Deal 800% damage (8 hits, 100% each)
 
-ESBindAttribute(2:4839) -> Abyss Cage
+#7: ESBindAttribute(2:4839) -> Abyss Cage
 Condition: One-time use (ai:100 rnd:0) (one-time: 3)
 Bind Dark cards for 5~10 turns
 
-ESBranchHP(29:19) -> ESBranchHP
+#8: ESBranchHP(29:19) -> ESBranchHP
 Branch on hp > 100, target rnd 11
 
-ESOrbChangeAttack(48:4837) -> Erosion
+#9: ESOrbChangeAttack(48:4837) -> Erosion
 Change Random to Dark, Deal 80% damage
 
-ESEndPath(36:26) -> ESEndPath
+#10: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESAttackMultihit(15:4836) -> Soul Spirit
+#11: ESAttackMultihit(15:4836) -> Soul Spirit
 Deal 200% damage
 
-ESEndPath(36:26) -> ESEndPath
+#12: ESEndPath(36:26) -> ESEndPath
 end_turn

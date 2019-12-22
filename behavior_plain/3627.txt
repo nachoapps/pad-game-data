@@ -4,36 +4,36 @@ new AI: True
 start/max counter: 1
 counter increment: 1
 
-ESPreemptive(49:318) -> ESPreemptive
+#1: ESPreemptive(49:318) -> ESPreemptive
 Enable preempt if level 1
 
-ESBranchFlag(43:10) -> ESBranchFlag
+#2: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 1, target rnd 6
 
-ESFlagOperation(22:12) -> ESFlagOperation
+#3: ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b1
 
-ESSkyfall(68:6715) -> Dark Snow
+#4: ESSkyfall(68:6715) -> Dark Snow
 Condition: One-time use (ai:100 rnd:0) (one-time: 1)
 Poison skyfall +15% for 5 turns
 
-ESEndPath(36:26) -> ESEndPath
+#5: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESBranchHP(28:18) -> ESBranchHP
+#6: ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 20, target rnd 9
 
-ESAttackMultihit(15:6716) -> Dark Nebula
+#7: ESAttackMultihit(15:6716) -> Dark Nebula
 Condition: One-time use (ai:100 rnd:0) (one-time: 1)
 Deal 150% damage (3 hits, 50% each)
 
-ESEndPath(36:26) -> ESEndPath
+#8: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESBranchCard(90:6721) -> ESBranchCard
+#9: ESBranchCard(90:6721) -> ESBranchCard
 Branch on player_cards HAS [3608, 3609], target rnd 11
 
-SkillSet:
+#10: SkillSet:
 	[0] ESInactivity(66:6717) -> Be consumed by the darkness...
 	Do nothing
 	[1] ESInactivity(66:6718) -> That swallows even the void of night...
@@ -41,13 +41,13 @@ SkillSet:
 	[2] ESGravity(50:6719) -> Dead End
 	Player -150% HP
 
-ESBranchFlag(43:10) -> ESBranchFlag
+#11: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 2, target rnd 10
 
-ESFlagOperation(22:12) -> ESFlagOperation
+#12: ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b11
 
-SkillSet:
+#13: SkillSet:
 	[0] ESInactivity(66:6722) -> You are a remarkable man...
 	Do nothing
 	[1] ESInactivity(66:6717) -> Be consumed by the darkness...
@@ -57,5 +57,5 @@ SkillSet:
 	[3] ESGravity(50:6719) -> Dead End
 	Player -150% HP
 
-ESEndPath(36:26) -> ESEndPath
+#14: ESEndPath(36:26) -> ESEndPath
 end_turn

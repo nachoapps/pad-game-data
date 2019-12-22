@@ -4,83 +4,83 @@ new AI: True
 start/max counter: 1
 counter increment: 1
 
-ESPreemptive(49:318) -> ESPreemptive
+#1: ESPreemptive(49:318) -> ESPreemptive
 Enable preempt if level 1
 
-ESBranchFlag(43:10) -> ESBranchFlag
+#2: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 1, target rnd 6
 
-ESFlagOperation(22:12) -> ESFlagOperation
+#3: ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b1
 
-SkillSet:
+#4: SkillSet:
 	[0] ESSkillDelay(89:12893) -> Blazing Flame Forest
 	Delay active skills by 10 turns
 	[1] ESBlindStickyFixed(98:12894) -> Smoldering Ruins
 	Blind orbs in specific positions for 5 turns
 
-ESEndPath(36:26) -> ESEndPath
+#5: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESBranchHP(28:18) -> ESBranchHP
+#6: ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 1, target rnd 19
 
-ESBranchHP(28:18) -> ESBranchHP
+#7: ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 10, target rnd 17
 
-ESBranchHP(28:18) -> ESBranchHP
+#8: ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 50, target rnd 13
 
-ESOrbChangeAttack(48:12895) -> Life Flame Torch
+#9: ESOrbChangeAttack(48:12895) -> Life Flame Torch
 Condition: One-time use (ai:50 rnd:0) (one-time: 1)
 Change Heal to Fire, Deal 95% damage
 
-ESRandomSpawn(92:12896) -> Burning Horn
+#10: ESRandomSpawn(92:12896) -> Burning Horn
 Condition: 50% chance & when Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs are on the board (ai:0 rnd:50)
 Spawn random 5 Fire orbs, Deal 90% damage
 
-ESAttackMultihit(15:12897) -> Wild Flurry
+#11: ESAttackMultihit(15:12897) -> Wild Flurry
 Condition: 50% chance (ai:0 rnd:50)
 Deal 105% damage (3 hits, 35% each)
 
-ESEndPath(36:26) -> ESEndPath
+#12: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESBranchFlag(43:10) -> ESBranchFlag
+#13: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 2, target rnd 9
 
-ESFlagOperation(22:12) -> ESFlagOperation
+#14: ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b11
 
-SkillSet:
+#15: SkillSet:
 	[0] ESRecoverPlayer(55:12899) -> Praise
 	Player recover 100% hp
 	[1] ESDebuffRCV(105:12900) -> Falsehood
 	Rcv 25% for 4 turns
 
-ESEndPath(36:26) -> ESEndPath
+#16: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESAttackMultihit(15:12901) -> Crimson Double-Edge
+#17: ESAttackMultihit(15:12901) -> Crimson Double-Edge
 Deal 600% damage (6 hits, 100% each)
 
-ESEndPath(36:26) -> ESEndPath
+#18: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESBranchCounter(32:22) -> ESBranchCounter
+#19: ESBranchCounter(32:22) -> ESBranchCounter
 Branch on counter > 1, target rnd 17
 
-ESSetCounter(26:16) -> ESSetCounter
+#20: ESSetCounter(26:16) -> ESSetCounter
 counter + 1
 
-SkillSet:
+#21: SkillSet:
 	[0] ESRecoverEnemy(86:12903) -> Burn Up Life
 	Enemy recover 50% hp
 	[1] ESDebuffMovetime(39:12904) -> Limited Survival
 	Movetime 50% for 10 turns
 
-ESEndPath(36:26) -> ESEndPath
+#22: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESResolve(73:12891) -> Resolve
+#23: ESResolve(73:12891) -> Resolve
 Survive attacks with 1 HP when HP > 50%

@@ -4,86 +4,86 @@ new AI: True
 start/max counter: 0
 counter increment: 0
 
-ESPreemptive(49:318) -> ESPreemptive
+#1: ESPreemptive(49:318) -> ESPreemptive
 Enable preempt if level 1
 
-ESBranchFlag(43:10) -> ESBranchFlag
+#2: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 1, target rnd 5
 
-ESFlagOperation(22:12) -> ESFlagOperation
+#3: ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b1
 
-ESDamageShield(74:12743) -> Shell Shield
+#4: ESDamageShield(74:12743) -> Shell Shield
 Reduce damage from all sources by 75% for 6 turns
 
-ESBranchFlag(43:10) -> ESBranchFlag
+#5: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 2, target rnd 8
 
-ESFlagOperation(22:12) -> ESFlagOperation
+#6: ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b11
 
-ESOrbLock(94:12744) -> Metal Tackle
+#7: ESOrbLock(94:12744) -> Metal Tackle
 Lock all Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs, Deal 100% damage
 
-ESBranchFlag(43:10) -> ESBranchFlag
+#8: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 4, target rnd 11
 
-ESFlagOperation(22:12) -> ESFlagOperation
+#9: ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b111
 
-ESAttackUPRemainingEnemies(17:12745) -> Lava Breeze
+#10: ESAttackUPRemainingEnemies(17:12745) -> Lava Breeze
 Condition: when <= 1 enemies remain (ai:100 rnd:0)
 Increase damage to 250% for the next 3 turns
 
-ESBranchFlag(43:10) -> ESBranchFlag
+#11: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 8, target rnd 14
 
-ESFlagOperation(22:12) -> ESFlagOperation
+#12: ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b1111
 
-ESAttackMultihit(15:12746) -> Intaglio Punch
+#13: ESAttackMultihit(15:12746) -> Intaglio Punch
 Deal 100% damage
 
-ESBranchFlag(43:10) -> ESBranchFlag
+#14: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 16, target rnd 17
 
-ESFlagOperation(22:12) -> ESFlagOperation
+#15: ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b11111
 
-ESAttackMultihit(15:12746) -> Intaglio Punch
+#16: ESAttackMultihit(15:12746) -> Intaglio Punch
 Deal 100% damage
 
-ESBranchFlag(43:10) -> ESBranchFlag
+#17: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 32, target rnd 20
 
-ESFlagOperation(22:12) -> ESFlagOperation
+#18: ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b111111
 
-ESAttackMultihit(15:12746) -> Intaglio Punch
+#19: ESAttackMultihit(15:12746) -> Intaglio Punch
 Deal 100% damage
 
-ESBranchFlag(43:10) -> ESBranchFlag
+#20: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 64, target rnd 24
 
-ESFlagOperation(22:12) -> ESFlagOperation
+#21: ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b1111111
 
-SkillSet:
+#22: SkillSet:
 	[0] ESAbsorbCombo(67:12747) -> Acrylic Absorption
 	Absorb combo <= 7 damage for 99 turns
 	[1] ESAttackUPRemainingEnemies(17:12748) -> Stoneware
 	Increase damage to 150% for the next 99 turns
 
-ESEndPath(36:26) -> ESEndPath
+#23: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESOrbLock(94:12744) -> Metal Tackle
+#24: ESOrbLock(94:12744) -> Metal Tackle
 Condition: 50% chance (ai:0 rnd:50)
 Lock all Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs, Deal 100% damage
 
-ESAttackMultihit(15:12746) -> Intaglio Punch
+#25: ESAttackMultihit(15:12746) -> Intaglio Punch
 Condition: 50% chance (ai:0 rnd:50)
 Deal 100% damage
 
-ESEndPath(36:26) -> ESEndPath
+#26: ESEndPath(36:26) -> ESEndPath
 end_turn

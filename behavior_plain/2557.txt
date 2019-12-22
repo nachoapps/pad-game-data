@@ -4,10 +4,10 @@ new AI: True
 start/max counter: 3
 counter increment: 0
 
-ESPreemptive(49:318) -> ESPreemptive
+#1: ESPreemptive(49:318) -> ESPreemptive
 Enable preempt if level 1
 
-SkillSet:
+#2: SkillSet:
 	Condition: One-time use (ai:100 rnd:0) (one-time: 2)
 	[0] ESStatusShield(20:14483) -> I'll have you fight me
 	Voids status ailments for 999 turns
@@ -16,34 +16,34 @@ SkillSet:
 	[2] ESFixedStart(101:14485) -> Come On!
 	Fix orb movement starting point to random position on the board
 
-ESBranchHP(29:19) -> ESBranchHP
+#3: ESBranchHP(29:19) -> ESBranchHP
 Branch on hp > 51, target rnd 5
 
-SkillSet:
+#4: SkillSet:
 	Condition: One-time use (ai:100 rnd:0) (one-time: 1)
 	[0] ESAbsorbCombo(67:14490) -> Hmm, pretty good skills
 	Absorb combo <= 8 damage for 10 turns
 	[1] ESAttackUPRemainingEnemies(17:14487) -> Is that it!?
 	Increase damage to 150% for the next 10 turns
 
-SkillSet:
+#5: SkillSet:
 	Condition: One-time use (ai:100 rnd:0) (one-time: 1)
 	[0] ESDamageShield(74:14488) -> You haven't practised enough
 	Reduce damage from all sources by 75% for 10 turns
 	[1] ESAttackUPRemainingEnemies(17:14487) -> Is that it!?
 	Increase damage to 150% for the next 10 turns
 
-ESBranchCounter(32:22) -> ESBranchCounter
+#6: ESBranchCounter(32:22) -> ESBranchCounter
 Branch on counter > 9, target rnd 9
 
-ESSetCounter(26:16) -> ESSetCounter
+#7: ESSetCounter(26:16) -> ESSetCounter
 counter + 1
 
-ESAttackMultihit(15:14491) -> Bahi Sayf
+#8: ESAttackMultihit(15:14491) -> Bahi Sayf
 Deal 140% damage (4 hits, 35% each)
 
-ESAttackMultihit(15:14492) -> Fakhir Yuqtal
+#9: ESAttackMultihit(15:14492) -> Fakhir Yuqtal
 Deal 800% damage (10 hits, 80% each)
 
-ESEndPath(36:26) -> ESEndPath
+#10: ESEndPath(36:26) -> ESEndPath
 end_turn

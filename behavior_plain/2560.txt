@@ -4,16 +4,16 @@ new AI: True
 start/max counter: 1
 counter increment: 0
 
-ESPreemptive(49:318) -> ESPreemptive
+#1: ESPreemptive(49:318) -> ESPreemptive
 Enable preempt if level 1
 
-ESBranchFlag(43:10) -> ESBranchFlag
+#2: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 1, target rnd 9
 
-ESFlagOperation(22:12) -> ESFlagOperation
+#3: ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b1
 
-SkillSet:
+#4: SkillSet:
 	Condition: 25% chance (ai:0 rnd:25)
 	[0] ESChangeAttribute(46:6635) -> Constellation Shift
 	Change own attribute to Fire
@@ -22,7 +22,7 @@ SkillSet:
 	[2] ESOrbLock(94:6643) -> Wicked Revelation
 	Lock all Heal orbs
 
-SkillSet:
+#5: SkillSet:
 	Condition: 25% chance (ai:0 rnd:25)
 	[0] ESChangeAttribute(46:6637) -> Constellation Shift
 	Change own attribute to Water
@@ -31,7 +31,7 @@ SkillSet:
 	[2] ESOrbLock(94:6643) -> Wicked Revelation
 	Lock all Heal orbs
 
-SkillSet:
+#6: SkillSet:
 	Condition: 25% chance (ai:0 rnd:25)
 	[0] ESChangeAttribute(46:6639) -> Constellation Shift
 	Change own attribute to Wood
@@ -40,7 +40,7 @@ SkillSet:
 	[2] ESOrbLock(94:6643) -> Wicked Revelation
 	Lock all Heal orbs
 
-SkillSet:
+#7: SkillSet:
 	Condition: 25% chance (ai:0 rnd:25)
 	[0] ESChangeAttribute(46:6641) -> Constellation Shift
 	Change own attribute to Light
@@ -49,26 +49,26 @@ SkillSet:
 	[2] ESOrbLock(94:6643) -> Wicked Revelation
 	Lock all Heal orbs
 
-ESEndPath(36:26) -> ESEndPath
+#8: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESBranchFlag(43:10) -> ESBranchFlag
+#9: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 2, target rnd 13
 
-ESFlagOperation(22:12) -> ESFlagOperation
+#10: ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b11
 
-ESBoardChangeAttackBits(85:6648) -> Necrostar
+#11: ESBoardChangeAttackBits(85:6648) -> Necrostar
 Change all orbs to Poison, Deal 140% damage
 
-ESEndPath(36:26) -> ESEndPath
+#12: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESBoardChangeAttackBits(85:6659) -> Cruelty Star
+#13: ESBoardChangeAttackBits(85:6659) -> Cruelty Star
 Condition: When < 20% hp (ai:100 rnd:0)
 Change all orbs to Poison, Deal 680% damage
 
-SkillSet:
+#14: SkillSet:
 	Condition: When < 50% hp , one-time use (ai:100 rnd:0) (one-time: 1)
 	[0] ESChangeAttribute(46:6655) -> Altered Orbit
 	Change own attribute to Dark
@@ -77,45 +77,45 @@ SkillSet:
 	[2] ESSkyfall(68:6657) -> Calamity Rain
 	Poison skyfall +15% for 5 turns
 
-ESBranchFlag(43:10) -> ESBranchFlag
+#15: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 4, target rnd 20
 
-ESFlagOperation(22:12) -> ESFlagOperation
+#16: ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b111
 
-SkillSet:
+#17: SkillSet:
 	Condition: 50% chance (ai:50 rnd:0)
 	[0] ESCloud(104:6649) -> Aries' Golden Fleece
 	3x1 cloud appear for 2 turns at random location
 	[1] ESAttackMultihit(15:6651) -> Dark Nail
 	Deal 150% damage (3 hits, 50% each)
 
-SkillSet:
+#18: SkillSet:
 	[0] ESCloud(104:6650) -> Aries' Golden Fleece
 	1x3 cloud appear for 2 turns at random location
 	[1] ESAttackMultihit(15:6651) -> Dark Nail
 	Deal 150% damage (3 hits, 50% each)
 
-ESEndPath(36:26) -> ESEndPath
+#19: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESBranchFlag(43:10) -> ESBranchFlag
+#20: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 8, target rnd 24
 
-ESFlagOperation(22:12) -> ESFlagOperation
+#21: ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b1111
 
-ESBindAttack(63:6654) -> Dark Star Luster
+#22: ESBindAttack(63:6654) -> Dark Star Luster
 Bind 1 random cards for 1 turns, Deal 140% damage
 
-ESEndPath(36:26) -> ESEndPath
+#23: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESFlagOperation(24:14) -> ESFlagOperation
+#24: ESFlagOperation(24:14) -> ESFlagOperation
 flag UNSET 0b1100
 
-ESBindAttack(63:6654) -> Dark Star Luster
+#25: ESBindAttack(63:6654) -> Dark Star Luster
 Bind 1 random cards for 1 turns, Deal 140% damage
 
-ESEndPath(36:26) -> ESEndPath
+#26: ESEndPath(36:26) -> ESEndPath
 end_turn

@@ -4,69 +4,69 @@ new AI: True
 start/max counter: 1
 counter increment: 1
 
-ESPreemptive(49:3402) -> ESPreemptive
+#1: ESPreemptive(49:3402) -> ESPreemptive
 Enable preempt if level 4
 
-ESBranchLevel(35:25) -> ESBranchLevel
+#2: ESBranchLevel(35:25) -> ESBranchLevel
 Branch on level > 4, target rnd 4
 
-ESEndPath(36:26) -> ESEndPath
+#3: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESBranchFlag(43:10) -> ESBranchFlag
+#4: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 1, target rnd 8
 
-ESFlagOperation(22:12) -> ESFlagOperation
+#5: ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b1
 
-ESAttackMultihit(15:14978) -> Here I come!
+#6: ESAttackMultihit(15:14978) -> Here I come!
 Deal 80% damage
 
-ESEndPath(36:26) -> ESEndPath
+#7: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESBranchHP(28:18) -> ESBranchHP
+#8: ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 50, target rnd 18
 
-ESBranchHP(28:18) -> ESBranchHP
+#9: ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 75, target rnd 14
 
-ESGravity(50:14982) -> In that case... Take this!
+#10: ESGravity(50:14982) -> In that case... Take this!
 Condition: One-time use (ai:100 rnd:0) (one-time: 1)
 Player -75% HP
 
-ESOrbChangeAttack(48:14979) -> Don't even think about it!
+#11: ESOrbChangeAttack(48:14979) -> Don't even think about it!
 Condition: 50% chance (ai:0 rnd:50)
 Change Random to Light, Deal 95% damage
 
-ESAttackMultihit(15:14980) -> I'm not done yet!
+#12: ESAttackMultihit(15:14980) -> I'm not done yet!
 Condition: 50% chance (ai:0 rnd:50)
 Deal 100% damage
 
-ESEndPath(36:26) -> ESEndPath
+#13: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESBranchFlag(43:10) -> ESBranchFlag
+#14: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 2, target rnd 10
 
-ESFlagOperation(22:12) -> ESFlagOperation
+#15: ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b11
 
-ESDamageShield(74:15010) -> Things aren't looking too good...
+#16: ESDamageShield(74:15010) -> Things aren't looking too good...
 Reduce damage from all sources by 75% for 5 turns
 
-ESEndPath(36:26) -> ESEndPath
+#17: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESBranchCounter(32:22) -> ESBranchCounter
+#18: ESBranchCounter(32:22) -> ESBranchCounter
 Branch on counter > 1, target rnd 9
 
-ESSetCounter(26:16) -> ESSetCounter
+#19: ESSetCounter(26:16) -> ESSetCounter
 counter + 1
 
-ESAttackUPRemainingEnemies(17:14983) -> Light, come forth!
+#20: ESAttackUPRemainingEnemies(17:14983) -> Light, come forth!
 Condition: when <= 1 enemies remain (ai:100 rnd:0)
 Increase damage to 150% for the next 5 turns
 
-ESEndPath(36:26) -> ESEndPath
+#21: ESEndPath(36:26) -> ESEndPath
 end_turn

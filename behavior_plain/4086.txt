@@ -4,72 +4,72 @@ new AI: True
 start/max counter: 2
 counter increment: 1
 
-ESPreemptive(49:3402) -> ESPreemptive
+#1: ESPreemptive(49:3402) -> ESPreemptive
 Enable preempt if level 4
 
-ESBranchLevel(35:25) -> ESBranchLevel
+#2: ESBranchLevel(35:25) -> ESBranchLevel
 Branch on level > 4, target rnd 4
 
-ESEndPath(36:26) -> ESEndPath
+#3: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESBranchFlag(43:10) -> ESBranchFlag
+#4: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 1, target rnd 8
 
-ESFlagOperation(22:12) -> ESFlagOperation
+#5: ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b1
 
-ESBombRandomSpawn(102:8637) -> Fulfilling mission
+#6: ESBombRandomSpawn(102:8637) -> Fulfilling mission
 Spawn random 3 Bomb orbs
 
-ESEndPath(36:26) -> ESEndPath
+#7: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESBranchHP(28:18) -> ESBranchHP
+#8: ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 25, target rnd 13
 
-ESBlindStickyFixed(98:8640) -> X-Calibur
+#9: ESBlindStickyFixed(98:8640) -> X-Calibur
 Condition: One-time use (ai:100 rnd:0) (one-time: 2)
 Blind orbs in specific positions for 1 turns, Deal 100% damage
 
-ESRandomSpawn(92:8639) -> Baltic Launcher
+#10: ESRandomSpawn(92:8639) -> Baltic Launcher
 Condition: 50% chance & when Fire, Water, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs are on the board (ai:50 rnd:0)
 Spawn random 1 Wood orbs, Deal 90% damage
 
-ESAttackMultihit(15:8638) -> I-Slasher
+#11: ESAttackMultihit(15:8638) -> I-Slasher
 Deal 80% damage
 
-ESEndPath(36:26) -> ESEndPath
+#12: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESBranchCounter(32:22) -> ESBranchCounter
+#13: ESBranchCounter(32:22) -> ESBranchCounter
 Branch on counter > 1, target rnd 16
 
-ESSetCounter(26:16) -> ESSetCounter
+#14: ESSetCounter(26:16) -> ESSetCounter
 counter + 1
 
-ESAttackMultihit(15:8641) -> Rebel Spark
+#15: ESAttackMultihit(15:8641) -> Rebel Spark
 Deal 30% damage
 
-ESBranchCounter(32:22) -> ESBranchCounter
+#16: ESBranchCounter(32:22) -> ESBranchCounter
 Branch on counter > 2, target rnd 20
 
-ESSetCounter(26:16) -> ESSetCounter
+#17: ESSetCounter(26:16) -> ESSetCounter
 counter + 1
 
-ESBombFixedSpawn(103:8642) -> Goodbye!
+#18: ESBombFixedSpawn(103:8642) -> Goodbye!
 Spawn Bomb orbs in the specified positions
 
-ESEndPath(36:26) -> ESEndPath
+#19: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESBombFixedSpawn(103:8643) -> V-Slasher
+#20: ESBombFixedSpawn(103:8643) -> V-Slasher
 Spawn Bomb orbs in the specified positions, Deal 100% damage
 
-ESEndPath(36:26) -> ESEndPath
+#21: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-SkillSet:
+#22: SkillSet:
 	Condition: On death (ai:0 rnd:0)
 	[0] ESInactivity(66:8644) -> Aaaaaaah!
 	Do nothing

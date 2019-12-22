@@ -4,48 +4,48 @@ new AI: True
 start/max counter: 31
 counter increment: 0
 
-ESPreemptive(49:318) -> ESPreemptive
+#1: ESPreemptive(49:318) -> ESPreemptive
 Enable preempt if level 1
 
-SkillSet:
+#2: SkillSet:
 	Condition: One-time use (ai:100 rnd:0) (one-time: 16)
 	[0] ESDamageShield(74:13642) -> Protector's Giant Shield
 	Reduce damage from all sources by 90% for 3 turns
 	[1] ESStatusShield(20:13643) -> Mystic Immunity Barrier
 	Voids status ailments for 999 turns
 
-ESColumnSpawnMulti(77:5883) -> Kthyr Akrab
+#3: ESColumnSpawnMulti(77:5883) -> Kthyr Akrab
 Condition: When < 20% hp (ai:100 rnd:0)
 Change 1st, 3rd, 5th column to Poison orbs, 2nd, 4th, 6th column to Mortal Poison orbs, Deal 600% damage
 
-ESRandomSpawn(92:5873) -> Scorpion Needle
+#4: ESRandomSpawn(92:5873) -> Scorpion Needle
 Condition: One-time use & when Fire, Water, Wood, Light, Dark, Heal, Jammer, Mortal Poison orbs are on the board (ai:100 rnd:0) (one-time: 8)
 Spawn random 6 Poison orbs, Deal 100% damage
 
-SkillSet:
+#5: SkillSet:
 	Condition: One-time use (ai:100 rnd:0) (one-time: 4)
 	[0] ESAbsorbCombo(67:5874) -> Gharib Difae
 	Absorb combo <= 6 damage for 2 turns
 	[1] ESFixedStart(101:5875) -> A Glimpse of Light & Dark
 	Fix orb movement starting point to random position on the board
 
-ESBlind(62:5877) -> Protector's Blade
+#6: ESBlind(62:5877) -> Protector's Blade
 Condition: One-time use (ai:100 rnd:0) (one-time: 2)
 Blind all orbs on the board, Deal 200% damage
 
-SkillSet:
+#7: SkillSet:
 	Condition: One-time use (ai:100 rnd:0) (one-time: 1)
 	[0] ESDebuffMovetime(39:5878) -> Neurotoxins
 	Movetime -1s for 10 turns
 	[1] ESOrbChangeAttack(48:5879) -> Sm Dhanab
 	Change Random to Mortal Poison, Deal 100% damage
 
-ESColumnSpawnMulti(77:5881) -> Scorpion Slash
+#8: ESColumnSpawnMulti(77:5881) -> Scorpion Slash
 Condition: 50% chance (ai:50 rnd:0)
 Change 1st column to Poison orbs, Deal 140% damage
 
-ESAttackMultihit(15:5882) -> Scorpion's Pincer Guillotine
+#9: ESAttackMultihit(15:5882) -> Scorpion's Pincer Guillotine
 Deal 160% damage (2 hits, 80% each)
 
-ESEndPath(36:26) -> ESEndPath
+#10: ESEndPath(36:26) -> ESEndPath
 end_turn

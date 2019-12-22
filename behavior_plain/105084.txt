@@ -4,23 +4,23 @@ new AI: True
 start/max counter: 3
 counter increment: 0
 
-ESPreemptive(49:3402) -> ESPreemptive
+#1: ESPreemptive(49:3402) -> ESPreemptive
 Enable preempt if level 4
 
-ESBranchLevel(35:25) -> ESBranchLevel
+#2: ESBranchLevel(35:25) -> ESBranchLevel
 Branch on level > 4, target rnd 4
 
-ESEndPath(36:26) -> ESEndPath
+#3: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESSkillDelay(89:12472) -> Bow down before my Psycho Power!
+#4: ESSkillDelay(89:12472) -> Bow down before my Psycho Power!
 Condition: One-time use (ai:100 rnd:0) (one-time: 2)
 Delay active skills by 5 turns, Deal 100% damage
 
-ESBranchHP(28:18) -> ESBranchHP
+#5: ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 50, target rnd 11
 
-SkillSet:
+#6: SkillSet:
 	Condition: 25% chance (ai:0 rnd:25)
 	[0] ESAttackMultihit(15:12445) -> Psycho Axe
 	Deal 50% damage
@@ -29,70 +29,70 @@ SkillSet:
 	[2] ESOrbChangeAttack(48:12446) -> Shadow Axe
 	Change Random to Dark, Deal 45% damage
 
-SkillSet:
+#7: SkillSet:
 	Condition: 25% chance (ai:0 rnd:25)
 	[0] ESAttackMultihit(15:12448) -> Head Press
 	Deal 100% damage
 	[1] ESOrbChangeAttack(48:12449) -> Somersault Skull Diver
 	Change Random to Dark, Deal 110% damage
 
-SkillSet:
+#8: SkillSet:
 	Condition: 25% chance (ai:0 rnd:25)
 	[0] ESOrbChangeAttack(48:12452) -> Psycho Blast
 	Change Random to Poison, Deal 80% damage
 	[1] ESAttackMultihit(15:12453) -> Double Knee Press
 	Deal 110% damage (2 hits, 55% each)
 
-SkillSet:
+#9: SkillSet:
 	Condition: 25% chance (ai:0 rnd:25)
 	[0] ESOrbChangeAttack(48:12452) -> Psycho Blast
 	Change Random to Poison, Deal 80% damage
 	[1] ESAttackMultihit(15:12454) -> Psycho Inferno
 	Deal 120% damage (4 hits, 30% each)
 
-ESEndPath(36:26) -> ESEndPath
+#10: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESDamageShield(74:12473) -> Scurry! Psycho Nightmare
+#11: ESDamageShield(74:12473) -> Scurry! Psycho Nightmare
 Condition: One-time use (ai:100 rnd:0) (one-time: 1)
 Reduce damage from all sources by 75% for 10 turns
 
-ESBranchHP(28:18) -> ESBranchHP
+#12: ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 15, target rnd 18
 
-SkillSet:
+#13: SkillSet:
 	Condition: 25% chance (ai:0 rnd:25)
 	[0] ESBindAttack(63:12457) -> Psycho Charge
 	Bind 2 random subs for 2 turns, Deal 200% damage
 	[1] ESBombRandomSpawn(102:12458) -> Burst! Psycho Judgement
 	Spawn random 4 Bomb orbs
 
-ESRowSpawnMulti(79:12459) -> Psycho Crusher
+#14: ESRowSpawnMulti(79:12459) -> Psycho Crusher
 Condition: 25% chance (ai:0 rnd:25)
 Change 3rd row to Dark orbs, Deal 250% damage
 
-SkillSet:
+#15: SkillSet:
 	Condition: 25% chance (ai:0 rnd:25)
 	[0] ESOrbChangeAttack(48:12452) -> Psycho Blast
 	Change Random to Poison, Deal 80% damage
 	[1] ESAttackMultihit(15:12453) -> Double Knee Press
 	Deal 110% damage (2 hits, 55% each)
 
-SkillSet:
+#16: SkillSet:
 	Condition: 25% chance (ai:0 rnd:25)
 	[0] ESOrbChangeAttack(48:12452) -> Psycho Blast
 	Change Random to Poison, Deal 80% damage
 	[1] ESAttackMultihit(15:12454) -> Psycho Inferno
 	Deal 120% damage (4 hits, 30% each)
 
-ESEndPath(36:26) -> ESEndPath
+#17: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-SkillSet:
+#18: SkillSet:
 	[0] ESInactivity(66:12608) -> Away with you!
 	Do nothing
 	[1] ESRowSpawnMulti(79:12460) -> Ultimate Psycho Crusher
 	Change 3rd, 4th row to Dark orbs, Deal 500% damage
 
-ESEndPath(36:26) -> ESEndPath
+#19: ESEndPath(36:26) -> ESEndPath
 end_turn

@@ -4,97 +4,97 @@ new AI: True
 start/max counter: 1
 counter increment: 0
 
-ESPreemptive(49:318) -> ESPreemptive
+#1: ESPreemptive(49:318) -> ESPreemptive
 Enable preempt if level 1
 
-ESBranchLevel(35:25) -> ESBranchLevel
+#2: ESBranchLevel(35:25) -> ESBranchLevel
 Branch on level > 4, target rnd 7
 
-ESBranchCard(90:11440) -> ESBranchCard
+#3: ESBranchCard(90:11440) -> ESBranchCard
 Branch on player_cards HAS [4858, 4859], target rnd 5
 
-ESInactivity(66:11436) -> Come on... Draw your sword.
+#4: ESInactivity(66:11436) -> Come on... Draw your sword.
 Condition: One-time use (ai:100 rnd:0) (one-time: 1)
 Do nothing
 
-ESInactivity(66:11438) -> Hey, what's up? You next?
+#5: ESInactivity(66:11438) -> Hey, what's up? You next?
 Condition: One-time use (ai:100 rnd:0) (one-time: 1)
 Do nothing
 
-ESEndPath(36:26) -> ESEndPath
+#6: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESBranchCard(90:11440) -> ESBranchCard
+#7: ESBranchCard(90:11440) -> ESBranchCard
 Branch on player_cards HAS [4858, 4859], target rnd 9
 
-ESFixedStart(101:11437) -> Come on... Draw your sword.
+#8: ESFixedStart(101:11437) -> Come on... Draw your sword.
 Condition: One-time use (ai:100 rnd:0) (one-time: 1)
 Fix orb movement starting point to random position on the board
 
-ESFixedStart(101:11439) -> Hey, what's up? You next?
+#9: ESFixedStart(101:11439) -> Hey, what's up? You next?
 Condition: One-time use (ai:100 rnd:0) (one-time: 1)
 Fix orb movement starting point to random position on the board
 
-ESBranchFlag(43:10) -> ESBranchFlag
+#10: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 1, target rnd 14
 
-ESFlagOperation(22:12) -> ESFlagOperation
+#11: ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b1
 
-ESOrbChangeAttack(48:11441) -> Awesome!
+#12: ESOrbChangeAttack(48:11441) -> Awesome!
 Change Random to Fire, Deal 100% damage
 
-ESEndPath(36:26) -> ESEndPath
+#13: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESBranchFlag(43:10) -> ESBranchFlag
+#14: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 2, target rnd 18
 
-ESFlagOperation(22:12) -> ESFlagOperation
+#15: ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b11
 
-ESGravity(50:11442) -> Huaah!
+#16: ESGravity(50:11442) -> Huaah!
 Player -75% HP
 
-ESEndPath(36:26) -> ESEndPath
+#17: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESBranchFlag(43:10) -> ESBranchFlag
+#18: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 4, target rnd 22
 
-ESFlagOperation(22:12) -> ESFlagOperation
+#19: ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b111
 
-ESAttackMultihit(15:11443) -> That was an awesome fight!
+#20: ESAttackMultihit(15:11443) -> That was an awesome fight!
 Deal 120% damage (3 hits, 40% each)
 
-ESEndPath(36:26) -> ESEndPath
+#21: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESBranchFlag(43:10) -> ESBranchFlag
+#22: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 8, target rnd 26
 
-ESFlagOperation(22:12) -> ESFlagOperation
+#23: ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b1111
 
-ESBindAwoken(88:11444) -> These folks know exactly
+#24: ESBindAwoken(88:11444) -> These folks know exactly
 what I'm talking about.
 Bind awoken skills for 1 turns
 
-ESEndPath(36:26) -> ESEndPath
+#25: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESFlagOperation(22:12) -> ESFlagOperation
+#26: ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b0
 
-ESAttackMultihit(15:11445) -> Sometimes you got to fight
+#27: ESAttackMultihit(15:11445) -> Sometimes you got to fight
 to get your point across.
 Deal 160% damage (4 hits, 40% each)
 
-ESEndPath(36:26) -> ESEndPath
+#28: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-SkillSet:
+#29: SkillSet:
 	Condition: On death (ai:0 rnd:0)
 	[0] ESInactivity(66:11654) -> I've totally seen enough
 to know you got what it takes.

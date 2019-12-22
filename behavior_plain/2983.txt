@@ -4,22 +4,22 @@ new AI: True
 start/max counter: 1
 counter increment: 0
 
-ESPreemptive(49:318) -> ESPreemptive
+#1: ESPreemptive(49:318) -> ESPreemptive
 Enable preempt if level 1
 
-ESBranchFlag(43:10) -> ESBranchFlag
+#2: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 1, target rnd 10
 
-ESFlagOperation(22:12) -> ESFlagOperation
+#3: ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b1
 
-ESBranchCard(90:6372) -> ESBranchCard
+#4: ESBranchCard(90:6372) -> ESBranchCard
 Branch on player_cards HAS [2323], target rnd 7
 
-ESBranchCard(90:6375) -> ESBranchCard
+#5: ESBranchCard(90:6375) -> ESBranchCard
 Branch on player_cards HAS [2322], target rnd 8
 
-SkillSet:
+#6: SkillSet:
 	[0] ESAbsorbCombo(67:6370) -> Let's take it nice and slow
 	Absorb combo <= 6 damage for 999 turns
 	[1] ESStatusShield(20:6379) -> Blessed Harvest
@@ -27,7 +27,7 @@ SkillSet:
 	[2] ESDebuffMovetime(39:6371) -> Vines get in the way of the puzzle!
 	Movetime 25% for 6 turns
 
-SkillSet:
+#7: SkillSet:
 	[0] ESAbsorbCombo(67:6374) -> You ate my dango, didn't you!
 	Absorb combo <= 6 damage for 999 turns
 	[1] ESStatusShield(20:6379) -> Blessed Harvest
@@ -35,7 +35,7 @@ SkillSet:
 	[2] ESDebuffMovetime(39:6371) -> Vines get in the way of the puzzle!
 	Movetime 25% for 6 turns
 
-SkillSet:
+#8: SkillSet:
 	[0] ESAbsorbCombo(67:6377) -> Frightened and on the verge of tears
 	Absorb combo <= 6 damage for 999 turns
 	[1] ESStatusShield(20:6379) -> Blessed Harvest
@@ -43,25 +43,25 @@ SkillSet:
 	[2] ESDebuffMovetime(39:6371) -> Vines get in the way of the puzzle!
 	Movetime 25% for 6 turns
 
-ESEndPath(36:26) -> ESEndPath
+#9: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESLeaderSwap(75:6386) -> It's time for your punishment!
+#10: ESLeaderSwap(75:6386) -> It's time for your punishment!
 Condition: When < 25% hp , one-time use (ai:100 rnd:0) (one-time: 1)
 Leader changes to random sub for 1 turns
 
-ESGravity(50:6387) -> Judgment Slash
+#11: ESGravity(50:6387) -> Judgment Slash
 Condition: When < 25% hp (ai:100 rnd:0)
 Player -300% HP
 
-SkillSet:
+#12: SkillSet:
 	Condition: When < 50% hp (ai:100 rnd:0)
 	[0] ESRowSpawnMulti(79:6382) -> Lifespan Diminisher
 	Change 3rd row to Heal orbs, Deal 100% damage
 	[1] ESOrbChangeAttack(48:6385) -> Insidious Impurity
 	Change Heal to Poison, Deal 100% damage
 
-SkillSet:
+#13: SkillSet:
 	[0] ESDamageShield(74:6380) -> Benevolent Protection
 	Reduce damage from all sources by 75% for 1 turns
 	[1] ESRowSpawnMulti(79:6382) -> Lifespan Diminisher
@@ -69,5 +69,5 @@ SkillSet:
 	[2] ESOrbChangeAttack(48:6383) -> Ruined Harvest Mudslide
 	Change Heal to Jammer, Deal 100% damage
 
-ESTurnChangePassive(106:6378) -> Enemies' next move changed in anger
+#14: ESTurnChangePassive(106:6378) -> Enemies' next move changed in anger
 Enemy turn counter change to 1 when HP <= 50%

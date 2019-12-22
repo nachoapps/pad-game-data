@@ -4,58 +4,58 @@ new AI: True
 start/max counter: 1
 counter increment: 1
 
-ESPreemptive(49:3402) -> ESPreemptive
+#1: ESPreemptive(49:3402) -> ESPreemptive
 Enable preempt if level 4
 
-ESBranchLevel(35:25) -> ESBranchLevel
+#2: ESBranchLevel(35:25) -> ESBranchLevel
 Branch on level > 4, target rnd 4
 
-ESEndPath(36:26) -> ESEndPath
+#3: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESBranchFlag(43:10) -> ESBranchFlag
+#4: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 1, target rnd 8
 
-ESFlagOperation(22:12) -> ESFlagOperation
+#5: ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b1
 
-SkillSet:
+#6: SkillSet:
 	[0] ESStatusShield(20:11935) -> ギョロローン！
 	Voids status ailments for 10 turns
 	[1] ESSkyfall(96:11936) -> アツいゾッ　ヤケドするゾ～ッ！
 	Locked Fire skyfall +100% for 10 turns
 
-ESEndPath(36:26) -> ESEndPath
+#7: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESBranchHP(28:18) -> ESBranchHP
+#8: ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 20, target rnd 14
 
-ESBranchHP(29:19) -> ESBranchHP
+#9: ESBranchHP(29:19) -> ESBranchHP
 Branch on hp > 51, target rnd 11
 
-ESFixedStart(101:11939) -> ギロギロ～ッ！
+#10: ESFixedStart(101:11939) -> ギロギロ～ッ！
 Condition: 50% chance (ai:50 rnd:0)
 Fix orb movement starting point to random position on the board, Deal 100% damage
 
-ESGravity(50:11937) -> ギョロドッカーン！
+#11: ESGravity(50:11937) -> ギョロドッカーン！
 Condition: One-time use (ai:0 rnd:50) (one-time: 1)
 Player -75% HP
 
-ESOrbChangeAttack(48:11938) -> ギョロッ！　コレにするのダ！
+#12: ESOrbChangeAttack(48:11938) -> ギョロッ！　コレにするのダ！
 Condition: 50% chance (ai:0 rnd:50)
 Change Random to Fire, Deal 90% damage
 
-ESEndPath(36:26) -> ESEndPath
+#13: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESAttackMultihit(15:11940) -> モーレツ三又撃
+#14: ESAttackMultihit(15:11940) -> モーレツ三又撃
 Deal 300% damage (3 hits, 100% each)
 
-ESEndPath(36:26) -> ESEndPath
+#15: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-SkillSet:
+#16: SkillSet:
 	Condition: On death (ai:0 rnd:0)
 	[0] ESInactivity(66:11941) -> ギョロローン！　やられたゾ…
 	Do nothing

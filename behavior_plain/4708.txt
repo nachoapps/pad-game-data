@@ -4,41 +4,41 @@ new AI: True
 start/max counter: 3
 counter increment: 0
 
-ESPreemptive(49:318) -> ESPreemptive
+#1: ESPreemptive(49:318) -> ESPreemptive
 Enable preempt if level 1
 
-ESBranchFlag(43:10) -> ESBranchFlag
+#2: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 1, target rnd 6
 
-ESFlagOperation(22:12) -> ESFlagOperation
+#3: ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b1
 
-SkillSet:
+#4: SkillSet:
 	[0] ESStatusShield(20:10718) -> The Joker's Secret
 	Voids status ailments for 999 turns
 	[1] ESBlind(5:10719) -> Jeering Darkness
 	Blind all orbs on the board
 
-ESEndPath(36:26) -> ESEndPath
+#5: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESLeaderSwap(75:10722) -> Demonic Magic
+#6: ESLeaderSwap(75:10722) -> Demonic Magic
 Condition: When < 75% hp , one-time use (ai:100 rnd:0) (one-time: 2)
 Leader changes to random sub for 2 turns
 
-ESAttackUPRemainingEnemies(17:10724) -> Level Up
+#7: ESAttackUPRemainingEnemies(17:10724) -> Level Up
 Condition: When < 30% hp , one-time use, when <= 1 enemies remain (ai:100 rnd:0) (one-time: 1)
 Increase damage to 300% for the next 999 turns
 
-ESOrbChangeAttackBits(108:10721) -> Draw Attack - Demon
+#8: ESOrbChangeAttackBits(108:10721) -> Draw Attack - Demon
 Condition: 30% chance (ai:30 rnd:0)
 Change Heal to Dark, Deal 90% damage
 
-ESAttackMultihit(15:10723) -> Attack
+#9: ESAttackMultihit(15:10723) -> Attack
 Deal 100% damage
 
-ESEndPath(36:26) -> ESEndPath
+#10: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESAttributeResist(72:10725) -> Dark Halved
+#11: ESAttributeResist(72:10725) -> Dark Halved
 Reduce damage from Dark by 50%

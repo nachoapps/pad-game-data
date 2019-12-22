@@ -4,68 +4,68 @@ new AI: True
 start/max counter: 1
 counter increment: 0
 
-ESPreemptive(49:318) -> ESPreemptive
+#1: ESPreemptive(49:318) -> ESPreemptive
 Enable preempt if level 1
 
-ESDeathCry(69:5362) -> Light Robot Transformation
+#2: ESDeathCry(69:5362) -> Light Robot Transformation
 Condition: On death (ai:0 rnd:0)
 Show message: Generator started|Attribute energy increasing
 
-ESBranchFlag(43:10) -> ESBranchFlag
+#3: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 1, target rnd 7
 
-ESFlagOperation(22:12) -> ESFlagOperation
+#4: ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b1
 
-ESRecoverPlayer(55:5353) -> Heilung Licht
+#5: ESRecoverPlayer(55:5353) -> Heilung Licht
 Player recover 100% hp
 
-ESEndPath(36:26) -> ESEndPath
+#6: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESBlindStickyRandom(97:5360) -> Beleuchten
+#7: ESBlindStickyRandom(97:5360) -> Beleuchten
 Condition: When < 70% hp , one-time use (ai:100 rnd:0) (one-time: 1)
 Blind random 8 orbs for 5 turns
 
-ESColumnSpawnMulti(77:5361) -> Sieg Speer
+#8: ESColumnSpawnMulti(77:5361) -> Sieg Speer
 Condition: When < 10% hp (ai:100 rnd:0)
 Change 3rd, 4th column to Light orbs, Deal 300% damage
 
-ESBranchFlag(43:10) -> ESBranchFlag
+#9: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 2, target rnd 12
 
-ESFlagOperation(22:12) -> ESFlagOperation
+#10: ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b11
 
-ESRandomSpawn(92:5354) -> Angriff
+#11: ESRandomSpawn(92:5354) -> Angriff
 Condition: When fire, water, wood, light, dark, jammer, poison, mortal poison orbs are on the board (ai:100 rnd:0)
 Spawn random 3 Heal orbs, Deal 100% damage
 
-ESFlagOperation(24:14) -> ESFlagOperation
+#12: ESFlagOperation(24:14) -> ESFlagOperation
 flag UNSET 0b10
 
-ESAbsorbAttribute(53:5355) -> Verteidigung
+#13: ESAbsorbAttribute(53:5355) -> Verteidigung
 Condition: 20% chance (ai:0 rnd:20)
 Absorb Fire damage for 2 turns
 
-ESAbsorbAttribute(53:5356) -> Verteidigung
+#14: ESAbsorbAttribute(53:5356) -> Verteidigung
 Condition: 20% chance (ai:0 rnd:20)
 Absorb Water damage for 2 turns
 
-ESAbsorbAttribute(53:5357) -> Verteidigung
+#15: ESAbsorbAttribute(53:5357) -> Verteidigung
 Condition: 20% chance (ai:0 rnd:20)
 Absorb Wood damage for 2 turns
 
-ESAbsorbAttribute(53:5358) -> Verteidigung
+#16: ESAbsorbAttribute(53:5358) -> Verteidigung
 Condition: 20% chance (ai:0 rnd:20)
 Absorb Light damage for 2 turns
 
-ESAbsorbAttribute(53:5359) -> Verteidigung
+#17: ESAbsorbAttribute(53:5359) -> Verteidigung
 Condition: 20% chance (ai:0 rnd:20)
 Absorb Dark damage for 2 turns
 
-ESEndPath(36:26) -> ESEndPath
+#18: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESAttributeResist(72:5374) -> Robot Dark Halved
+#19: ESAttributeResist(72:5374) -> Robot Dark Halved
 Reduce damage from Dark by 50%

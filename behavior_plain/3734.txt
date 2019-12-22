@@ -4,16 +4,16 @@ new AI: True
 start/max counter: 1
 counter increment: 0
 
-ESPreemptive(49:318) -> ESPreemptive
+#1: ESPreemptive(49:318) -> ESPreemptive
 Enable preempt if level 1
 
-ESBranchFlag(43:10) -> ESBranchFlag
+#2: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 1, target rnd 6
 
-ESFlagOperation(22:12) -> ESFlagOperation
+#3: ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b1
 
-SkillSet:
+#4: SkillSet:
 	[0] ESStatusShield(20:7583) -> Yoooooo!!
 	Voids status ailments for 999 turns
 	[1] ESAbsorbAttribute(53:7584) -> !! Flood Warning !!
@@ -21,63 +21,63 @@ SkillSet:
 	[2] ESBlind(62:7585) -> Ultimate Smokescreen
 	Blind all orbs on the board, Deal 600% damage
 
-ESEndPath(36:26) -> ESEndPath
+#5: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-SkillSet:
+#6: SkillSet:
 	Condition: When < 1% hp , one-time use (ai:100 rnd:0) (one-time: 1)
 	[0] ESRecoverEnemy(86:7592) -> Simple Repairs
 	Enemy recover 51% hp
 	[1] ESLeaderSwap(75:7593) -> Pipe Impact
 	Leader changes to random sub for 99 turns
 
-SkillSet:
+#7: SkillSet:
 	Condition: When < 10% hp (ai:100 rnd:0)
 	[0] ESChangeAttribute(46:7595) -> Karakuri Change
 	Change own attribute to random one of Fire, Light
 	[1] ESBoardChangeAttackBits(85:7596) -> Type 5 Karakuri Cannon
 	Change all orbs to Fire, Deal 10000% damage
 
-ESBranchFlag(43:10) -> ESBranchFlag
+#8: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 2, target rnd 12
 
-ESFlagOperation(22:12) -> ESFlagOperation
+#9: ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b11
 
-ESBombFixedSpawn(103:7587) -> Crossfire HANABI
+#10: ESBombFixedSpawn(103:7587) -> Crossfire HANABI
 Spawn Bomb orbs in the specified positions, Deal 400% damage
 
-ESEndPath(36:26) -> ESEndPath
+#11: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESBranchFlag(43:10) -> ESBranchFlag
+#12: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 4, target rnd 17
 
-ESFlagOperation(22:12) -> ESFlagOperation
+#13: ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b111
 
-ESBindRandom(1:7588) -> WAV - Large Net
+#14: ESBindRandom(1:7588) -> WAV - Large Net
 Condition: 50% chance (ai:50 rnd:0)
 Bind 6 random cards for 1 turns
 
-ESSkillDelay(89:7589) -> Whirling Odachi
+#15: ESSkillDelay(89:7589) -> Whirling Odachi
 Delay active skills by 2 turns, Deal 450% damage
 
-ESEndPath(36:26) -> ESEndPath
+#16: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESFlagOperation(24:14) -> ESFlagOperation
+#17: ESFlagOperation(24:14) -> ESFlagOperation
 flag UNSET 0b110
 
-ESGravity(50:7590) -> Rocket Slap
+#18: ESGravity(50:7590) -> Rocket Slap
 Condition: 50% chance (ai:50 rnd:0)
 Player -99% HP
 
-ESAttackMultihit(15:7591) -> Coin Machine Gun
+#19: ESAttackMultihit(15:7591) -> Coin Machine Gun
 Deal 400%~500% damage (8~10 hits, 50% each)
 
-ESEndPath(36:26) -> ESEndPath
+#20: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESResolve(73:7598) -> Resolve
+#21: ESResolve(73:7598) -> Resolve
 Survive attacks with 1 HP when HP > 50%

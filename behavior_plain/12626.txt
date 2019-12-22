@@ -4,41 +4,41 @@ new AI: True
 start/max counter: 1
 counter increment: 0
 
-ESPreemptive(49:318) -> ESPreemptive
+#1: ESPreemptive(49:318) -> ESPreemptive
 Enable preempt if level 1
 
-ESBranchFlag(43:10) -> ESBranchFlag
+#2: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 1, target rnd 6
 
-ESFlagOperation(22:12) -> ESFlagOperation
+#3: ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b1
 
-ESDebuffMovetime(39:6949) -> No foe has stood in my way
+#4: ESDebuffMovetime(39:6949) -> No foe has stood in my way
 and none ever will.
 Movetime -1s for 3 turns
 
-ESEndPath(36:26) -> ESEndPath
+#5: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESDebuffMovetime(39:6951) -> Luck is on our side.
+#6: ESDebuffMovetime(39:6951) -> Luck is on our side.
 Condition: One-time use (ai:100 rnd:0) (one-time: 1)
 Movetime -1s for 3 turns
 
-ESAttackUPRemainingEnemies(17:6952) -> Allegiance to Zarkon
+#7: ESAttackUPRemainingEnemies(17:6952) -> Allegiance to Zarkon
 Condition: When < 20% hp, when <= 1 enemies remain (ai:100 rnd:0)
 Increase damage to 200% for the next 999 turns
 
-ESBombRandomSpawn(102:6953) -> Sabotage
+#8: ESBombRandomSpawn(102:6953) -> Sabotage
 Condition: 30% chance (ai:30 rnd:0)
 Spawn random 3 Bomb orbs, Deal 100% damage
 
-ESOrbLock(94:6950) -> Cybernetic Arm
+#9: ESOrbLock(94:6950) -> Cybernetic Arm
 Lock 4 random Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs, Deal 100% damage
 
-ESEndPath(36:26) -> ESEndPath
+#10: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-SkillSet:
+#11: SkillSet:
 	Condition: On death (ai:0 rnd:0)
 	[0] ESSkillSet(83:6956) -> You'll never beat Zarkon. + He's already defeated you.
 	Do nothing + Do nothing

@@ -4,40 +4,40 @@ new AI: True
 start/max counter: 3
 counter increment: 0
 
-ESPreemptive(49:318) -> ESPreemptive
+#1: ESPreemptive(49:318) -> ESPreemptive
 Enable preempt if level 1
 
-ESGravity(50:14080) -> 拝ませてやるぜ…
+#2: ESGravity(50:14080) -> 拝ませてやるぜ…
 Condition: One-time use (ai:100 rnd:0) (one-time: 2)
 Player -50% HP
 
-ESBranchHP(29:19) -> ESBranchHP
+#3: ESBranchHP(29:19) -> ESBranchHP
 Branch on hp > 51, target rnd 7
 
-SkillSet:
+#4: SkillSet:
 	Condition: One-time use (ai:100 rnd:0) (one-time: 1)
 	[0] ESInactivity(66:14084) -> こちとら喧嘩師
 	Do nothing
 	[1] ESAttackUPRemainingEnemies(17:14085) -> いつだってたぎってる
 	Increase damage to 150% for the next 99 turns
 
-ESBranchHP(29:19) -> ESBranchHP
+#5: ESBranchHP(29:19) -> ESBranchHP
 Branch on hp > 1, target rnd 7
 
-ESAttackMultihit(15:14086) -> 胴廻し回転蹴り
+#6: ESAttackMultihit(15:14086) -> 胴廻し回転蹴り
 Deal 105% damage
 
-ESGravity(50:14088) -> 握撃
+#7: ESGravity(50:14088) -> 握撃
 Condition: 33% chance (ai:0 rnd:33)
 Player -25% HP
 
-ESOrbLock(94:14089) -> まだやるかい
+#8: ESOrbLock(94:14089) -> まだやるかい
 Condition: 33% chance (ai:0 rnd:33)
 Lock 5 random Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs, Deal 100% damage
 
-ESAttackMultihit(15:14086) -> 胴廻し回転蹴り
+#9: ESAttackMultihit(15:14086) -> 胴廻し回転蹴り
 Condition: 34% chance (ai:0 rnd:34)
 Deal 105% damage
 
-ESEndPath(36:26) -> ESEndPath
+#10: ESEndPath(36:26) -> ESEndPath
 end_turn

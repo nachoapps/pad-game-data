@@ -4,10 +4,10 @@ new AI: True
 start/max counter: 1
 counter increment: 0
 
-ESPreemptive(49:318) -> ESPreemptive
+#1: ESPreemptive(49:318) -> ESPreemptive
 Enable preempt if level 1
 
-SkillSet:
+#2: SkillSet:
 	Condition: One-time use (ai:100 rnd:0) (one-time: 1)
 	[0] ESSkyfall(68:15102) -> Entertain me!
 	Jammer skyfall +100% for 4 turns
@@ -18,68 +18,68 @@ SkillSet:
 	[3] ESDebuffMovetime(39:15105) -> Well, let's try your best
 	Movetime 200% for 4 turns
 
-ESBranchFlag(43:10) -> ESBranchFlag
+#3: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 1, target rnd 10
 
-ESFlagOperation(22:12) -> ESFlagOperation
+#4: ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b1
 
-ESOrbChangeAttackBits(108:15120) -> My drink got stale
+#5: ESOrbChangeAttackBits(108:15120) -> My drink got stale
 Change Fire, Water, Wood, Light, Dark, Heal to Jammer, Deal 1000% damage
 
-ESBranchHP(28:18) -> ESBranchHP
+#6: ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 75, target rnd 8
 
-ESAttackMultihit(15:15123) -> Show me what you're made of!
+#7: ESAttackMultihit(15:15123) -> Show me what you're made of!
 Deal 1000% damage (5 hits, 200% each)
 
-SkillSet:
+#8: SkillSet:
 	[0] ESRandomSpawn(92:15109) -> How about the next turn?
 	Spawn random 5 Fire, Water, Wood, Light, Dark orbs
 	[1] ESFixedStart(101:15116) -> Here you go!
 	Fix orb movement starting point to random position on the board
 
-ESEndPath(36:26) -> ESEndPath
+#9: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESBranchFlag(43:10) -> ESBranchFlag
+#10: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 2, target rnd 17
 
-ESFlagOperation(22:12) -> ESFlagOperation
+#11: ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b11
 
-ESOrbChangeAttackBits(108:15121) -> My drink got stale
+#12: ESOrbChangeAttackBits(108:15121) -> My drink got stale
 Change Fire, Water, Wood, Light, Dark, Heal to Jammer, Deal 1000% damage
 
-ESBranchHP(28:18) -> ESBranchHP
+#13: ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 50, target rnd 15
 
-ESAttackMultihit(15:15123) -> Show me what you're made of!
+#14: ESAttackMultihit(15:15123) -> Show me what you're made of!
 Deal 1000% damage (5 hits, 200% each)
 
-SkillSet:
+#15: SkillSet:
 	[0] ESRandomSpawn(92:15113) -> Isn't this a struggle?
 	Spawn random 5 Fire, Water, Wood, Light, Dark orbs
 	[1] ESBlind(5:15114) -> I forgot the bonus
 	Blind all orbs on the board
 
-ESEndPath(36:26) -> ESEndPath
+#16: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESOrbChangeAttackBits(108:15122) -> My drink got stale
+#17: ESOrbChangeAttackBits(108:15122) -> My drink got stale
 Change Fire, Water, Wood, Light, Dark, Heal to Jammer, Deal 1000% damage
 
-ESBranchHP(28:18) -> ESBranchHP
+#18: ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 25, target rnd 20
 
-ESAttackMultihit(15:15123) -> Show me what you're made of!
+#19: ESAttackMultihit(15:15123) -> Show me what you're made of!
 Deal 1000% damage (5 hits, 200% each)
 
-SkillSet:
+#20: SkillSet:
 	[0] ESRandomSpawn(92:15117) -> I'm surprised you made it this far
 	Spawn random 3 Fire, Water, Wood, Light, Dark, Heal, Poison, Mortal Poison orbs
 	[1] ESAbsorbCombo(67:15119) -> This is the last chance
 	Absorb combo <= 7 damage for 999 turns
 
-ESEndPath(36:26) -> ESEndPath
+#21: ESEndPath(36:26) -> ESEndPath
 end_turn

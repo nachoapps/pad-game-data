@@ -4,63 +4,63 @@ new AI: True
 start/max counter: 7
 counter increment: 0
 
-ESPreemptive(49:318) -> ESPreemptive
+#1: ESPreemptive(49:318) -> ESPreemptive
 Enable preempt if level 1
 
-SkillSet:
+#2: SkillSet:
 	Condition: One-time use (ai:100 rnd:0) (one-time: 4)
 	[0] ESInactivity(66:14056) -> キサマ等の居る場所は既に――
 	Do nothing
 	[1] ESSkyfall(96:14057) -> 我々が2000年前に通過した場所だッッッ
 	Locked random skyfall +20% for 10 turns
 
-ESBranchHP(29:19) -> ESBranchHP
+#3: ESBranchHP(29:19) -> ESBranchHP
 Branch on hp > 51, target rnd 7
 
-ESBindAwoken(88:14058) -> キサマは中国武術を嘗めたッッッ
+#4: ESBindAwoken(88:14058) -> キサマは中国武術を嘗めたッッッ
 Condition: One-time use (ai:100 rnd:0) (one-time: 2)
 Bind awoken skills for 5 turns
 
-ESBranchHP(29:19) -> ESBranchHP
+#5: ESBranchHP(29:19) -> ESBranchHP
 Branch on hp > 21, target rnd 7
 
-ESAttackUPRemainingEnemies(17:14064) -> この拳が断つ
+#6: ESAttackUPRemainingEnemies(17:14064) -> この拳が断つ
 Condition: One-time use, when <= 1 enemies remain (ai:100 rnd:0) (one-time: 1)
 Increase damage to 150% for the next 99 turns
 
-ESBranchCounter(32:22) -> ESBranchCounter
+#7: ESBranchCounter(32:22) -> ESBranchCounter
 Branch on counter > 3, target rnd 14
 
-ESSetCounter(26:16) -> ESSetCounter
+#8: ESSetCounter(26:16) -> ESSetCounter
 counter + 1
 
-ESGravity(50:14060) -> ノド蹴り
+#9: ESGravity(50:14060) -> ノド蹴り
 Condition: 25% chance (ai:0 rnd:25)
 Player -25% HP
 
-ESAttackMultihit(15:14061) -> 連蹴り
+#10: ESAttackMultihit(15:14061) -> 連蹴り
 Condition: 25% chance (ai:0 rnd:25)
 Deal 108% damage (6 hits, 18% each)
 
-ESColumnSpawnMulti(77:14062) -> 哈ッッ
+#11: ESColumnSpawnMulti(77:14062) -> 哈ッッ
 Condition: 25% chance (ai:0 rnd:25)
 Change 3rd, 4th column to Water orbs, Deal 95% damage
 
-ESSkillDelay(89:14063) -> 覇ッッ
+#12: ESSkillDelay(89:14063) -> 覇ッッ
 Condition: 25% chance (ai:0 rnd:25)
 Delay active skills by 1 turns, Deal 100% damage
 
-ESEndPath(36:26) -> ESEndPath
+#13: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESBranchCounter(32:22) -> ESBranchCounter
+#14: ESBranchCounter(32:22) -> ESBranchCounter
 Branch on counter > 4, target rnd 9
 
-ESSetCounter(26:16) -> ESSetCounter
+#15: ESSetCounter(26:16) -> ESSetCounter
 counter + 1
 
-ESLeaderSwap(75:14059) -> 寸勁
+#16: ESLeaderSwap(75:14059) -> 寸勁
 Leader changes to random sub for 1 turns, Deal 80% damage
 
-ESEndPath(36:26) -> ESEndPath
+#17: ESEndPath(36:26) -> ESEndPath
 end_turn

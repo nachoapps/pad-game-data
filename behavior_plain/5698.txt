@@ -4,48 +4,48 @@ new AI: True
 start/max counter: 2
 counter increment: 0
 
-ESPreemptive(49:318) -> ESPreemptive
+#1: ESPreemptive(49:318) -> ESPreemptive
 Enable preempt if level 1
 
-SkillSet:
+#2: SkillSet:
 	Condition: One-time use (ai:100 rnd:0) (one-time: 2)
 	[0] ESDamageShield(74:15216) -> リンク、シンカリオン！
 	Reduce damage from all sources by 50% for 3 turns
 	[1] ESAbsorbCombo(67:15217) -> 行くぞ
 	Absorb combo <= 4 damage for 5 turns
 
-ESBranchHP(28:18) -> ESBranchHP
+#3: ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 50, target rnd 8
 
-ESBlind(5:15220) -> 話は読めてる
+#4: ESBlind(5:15220) -> 話は読めてる
 Condition: 34% chance (ai:0 rnd:34)
 Blind all orbs on the board
 
-ESOrbChangeAttackBits(108:15221) -> くらえ！
+#5: ESOrbChangeAttackBits(108:15221) -> くらえ！
 Condition: 33% chance (ai:0 rnd:33)
 Change Fire, Water, Wood to Fire, Deal 80% damage
 
-ESAttackMultihit(15:15218) -> Ｅ６の機動性を見せてやる！
+#6: ESAttackMultihit(15:15218) -> Ｅ６の機動性を見せてやる！
 Condition: 33% chance (ai:0 rnd:33)
 Deal 120% damage (2 hits, 60% each)
 
-ESEndPath(36:26) -> ESEndPath
+#7: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESBranchCounter(32:22) -> ESBranchCounter
+#8: ESBranchCounter(32:22) -> ESBranchCounter
 Branch on counter > 1, target rnd 12
 
-ESSetCounter(26:16) -> ESSetCounter
+#9: ESSetCounter(26:16) -> ESSetCounter
 counter + 1
 
-ESAttributeBlock(107:15219) -> 舐めるな！
+#10: ESAttributeBlock(107:15219) -> 舐めるな！
 Unable to match Water orbs for 3 turns
 
-ESEndPath(36:26) -> ESEndPath
+#11: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESRowSpawnMulti(79:15222) -> グランクロス！
+#12: ESRowSpawnMulti(79:15222) -> グランクロス！
 Change 2nd row to Fire orbs, 3rd row to Wood orbs, 4th row to Fire orbs, Deal 125% damage
 
-ESEndPath(36:26) -> ESEndPath
+#13: ESEndPath(36:26) -> ESEndPath
 end_turn

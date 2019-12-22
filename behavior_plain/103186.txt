@@ -4,45 +4,45 @@ new AI: True
 start/max counter: 15
 counter increment: 0
 
-ESPreemptive(49:318) -> ESPreemptive
+#1: ESPreemptive(49:318) -> ESPreemptive
 Enable preempt if level 1
 
-SkillSet:
+#2: SkillSet:
 	Condition: One-time use (ai:100 rnd:0) (one-time: 8)
 	[0] ESStatusShield(20:12948) -> Swordsman's Resolution
 	Voids status ailments for 999 turns
 	[1] ESDamageShield(74:12949) -> Dual Blade Type
 	Reduce damage from all sources by 75% for 10 turns
 
-SkillSet:
+#3: SkillSet:
 	Condition: One-time use (ai:100 rnd:0) (one-time: 4)
 	[0] ESDebuffMovetime(39:12951) -> Syncronised Battle
 	Movetime 25% for 2 turns
 	[1] ESFixedStart(101:12952) -> Sword's Back Strike
 	Fix orb movement starting point to random position on the board, Deal 100% damage
 
-SkillSet:
+#4: SkillSet:
 	Condition: One-time use (ai:100 rnd:0) (one-time: 2)
 	[0] ESBindAwoken(88:12954) -> Imminent Battle
 	Bind awoken skills for 1 turns
 	[1] ESBlind(62:12955) -> Surprise Attack
 	Blind all orbs on the board, Deal 100% damage
 
-ESAttackUPRemainingEnemies(17:12956) -> Sheath Torn to Pieces
+#5: ESAttackUPRemainingEnemies(17:12956) -> Sheath Torn to Pieces
 Condition: One-time use, when <= 1 enemies remain (ai:100 rnd:0) (one-time: 1)
 Increase damage to 200% for the next 999 turns
 
-ESColumnSpawnMulti(77:12957) -> One Swing of Fire
+#6: ESColumnSpawnMulti(77:12957) -> One Swing of Fire
 Condition: 33% chance (ai:0 rnd:33)
 Change 4th column to Fire orbs, Deal 100% damage
 
-ESRowSpawnMulti(79:12958) -> One Stroke of Wind
+#7: ESRowSpawnMulti(79:12958) -> One Stroke of Wind
 Condition: 33% chance (ai:0 rnd:33)
 Change 3rd row to Wood orbs, Deal 100% damage
 
-ESAttackMultihit(15:12959) -> Swiftness Sword Technique
+#8: ESAttackMultihit(15:12959) -> Swiftness Sword Technique
 Condition: 34% chance (ai:0 rnd:34)
 Deal 105% damage (3 hits, 35% each)
 
-ESEndPath(36:26) -> ESEndPath
+#9: ESEndPath(36:26) -> ESEndPath
 end_turn

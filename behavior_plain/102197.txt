@@ -4,43 +4,43 @@ new AI: True
 start/max counter: 1
 counter increment: 0
 
-ESPreemptive(49:318) -> ESPreemptive
+#1: ESPreemptive(49:318) -> ESPreemptive
 Enable preempt if level 1
 
-ESBranchLevel(35:25) -> ESBranchLevel
+#2: ESBranchLevel(35:25) -> ESBranchLevel
 Branch on level > 1, target rnd 4
 
-ESEndPath(36:26) -> ESEndPath
+#3: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESBranchFlag(43:10) -> ESBranchFlag
+#4: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 1, target rnd 8
 
-ESFlagOperation(22:12) -> ESFlagOperation
+#5: ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b1
 
-ESMaxHPChange(111:10133) -> HPダイヤル
+#6: ESMaxHPChange(111:10133) -> HPダイヤル
 Change player HP to 10000 for 8 turns
 
-ESEndPath(36:26) -> ESEndPath
+#7: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESBranchHP(29:19) -> ESBranchHP
+#8: ESBranchHP(29:19) -> ESBranchHP
 Branch on hp > 100, target rnd 12
 
-ESAttackUPCooldown(19:3002) -> Activated
+#9: ESAttackUPCooldown(19:3002) -> Activated
 Condition: One-time use (ai:100 rnd:0) (one-time: 1)
 Increase damage to 200% for the next 999 turns
 
-ESRandomSpawn(92:3005) -> Wind Pulse
+#10: ESRandomSpawn(92:3005) -> Wind Pulse
 Condition: When fire, water, light, dark, heal, jammer, poison, mortal poison orbs are on the board (ai:100 rnd:0)
 Spawn random 3 Wood orbs, Deal 280% damage
 
-ESEndPath(36:26) -> ESEndPath
+#11: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESSkillDelay(89:3001) -> Sleep Mode
+#12: ESSkillDelay(89:3001) -> Sleep Mode
 Delay active skills by 1 turns
 
-ESEndPath(36:26) -> ESEndPath
+#13: ESEndPath(36:26) -> ESEndPath
 end_turn

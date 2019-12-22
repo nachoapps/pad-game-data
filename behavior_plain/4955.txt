@@ -4,80 +4,80 @@ new AI: True
 start/max counter: 0
 counter increment: 0
 
-ESPreemptive(49:318) -> ESPreemptive
+#1: ESPreemptive(49:318) -> ESPreemptive
 Enable preempt if level 1
 
-ESBranchFlag(43:10) -> ESBranchFlag
+#2: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 1, target rnd 6
 
-ESFlagOperation(22:12) -> ESFlagOperation
+#3: ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b1
 
-SkillSet:
+#4: SkillSet:
 	[0] ESAttackUPRemainingEnemies(17:11944) -> 雪あそび　したくない？
 	Increase damage to 150% for the next 3 turns
 	[1] ESDebuffMovetime(39:11945) -> 急がないと　とろけちゃう！
 	Movetime -2s for 3 turns
 
-ESEndPath(36:26) -> ESEndPath
+#5: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESSetCounter(26:16) -> ESSetCounter
+#6: ESSetCounter(26:16) -> ESSetCounter
 counter + 1
 
-ESBranchCounter(32:22) -> ESBranchCounter
+#7: ESBranchCounter(32:22) -> ESBranchCounter
 Branch on counter > 4, target rnd 16
 
-ESBranchHP(28:18) -> ESBranchHP
+#8: ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 20, target rnd 19
 
-ESBranchCounter(32:22) -> ESBranchCounter
+#9: ESBranchCounter(32:22) -> ESBranchCounter
 Branch on counter > 3, target rnd 14
 
-SkillSet:
+#10: SkillSet:
 	Condition: 34% chance (ai:0 rnd:34)
 	[0] ESGravity(50:11949) -> 冷やしちゃう！
 	Player -25% HP
 	[1] ESAttackMultihit(15:11952) -> こおりなさいっ！
 	Deal 50% damage
 
-SkillSet:
+#11: SkillSet:
 	Condition: 33% chance (ai:0 rnd:33)
 	[0] ESOrbChangeAttack(48:11950) -> ひえひえプレゼントっ♪
 	Change Random to Water, Deal 95% damage
 	[1] ESSkillDelay(89:11953) -> ず～っと　溶けないでいてね？
 	Delay active skills by 1 turns
 
-SkillSet:
+#12: SkillSet:
 	Condition: 33% chance (ai:0 rnd:33)
 	[0] ESOrbLock(94:11954) -> こごえさせてあげるっ！
 	Lock 8 random Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs
 	[1] ESBindAttack(63:11951) -> ぴゅう～～っ♪
 	Bind 1 random subs for 2 turns, Deal 90% damage
 
-ESEndPath(36:26) -> ESEndPath
+#13: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESInactivity(66:11955) -> 夏バテだわ…
+#14: ESInactivity(66:11955) -> 夏バテだわ…
 Do nothing
 
-ESEndPath(36:26) -> ESEndPath
+#15: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESSetCounter(25:15) -> ESSetCounter
+#16: ESSetCounter(25:15) -> ESSetCounter
 counter = 0
 
-SkillSet:
+#17: SkillSet:
 	[0] ESAttackUPRemainingEnemies(17:11944) -> 雪あそび　したくない？
 	Increase damage to 150% for the next 3 turns
 	[1] ESDebuffMovetime(39:11945) -> 急がないと　とろけちゃう！
 	Movetime -2s for 3 turns
 
-ESEndPath(36:26) -> ESEndPath
+#18: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESAttackMultihit(15:11956) -> キラキラ雪化粧
+#19: ESAttackMultihit(15:11956) -> キラキラ雪化粧
 Deal 200% damage (4 hits, 50% each)
 
-ESEndPath(36:26) -> ESEndPath
+#20: ESEndPath(36:26) -> ESEndPath
 end_turn

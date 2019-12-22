@@ -4,16 +4,16 @@ new AI: True
 start/max counter: 3
 counter increment: 1
 
-ESPreemptive(49:318) -> ESPreemptive
+#1: ESPreemptive(49:318) -> ESPreemptive
 Enable preempt if level 1
 
-ESBranchFlag(43:10) -> ESBranchFlag
+#2: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 1, target rnd 6
 
-ESFlagOperation(22:12) -> ESFlagOperation
+#3: ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b1
 
-SkillSet:
+#4: SkillSet:
 	Condition: One-time use (ai:100 rnd:0) (one-time: 1)
 	[0] ESSkillDelay(89:5145) -> Why do you fight?
 	Delay active skills by 4~6 turns
@@ -22,59 +22,59 @@ SkillSet:
 	[2] ESAbsorbThreshold(87:5147) -> Iron DEF of Aegis
 	Absorb damage >= 4000000 damage for 99 turns
 
-ESEndPath(36:26) -> ESEndPath
+#5: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESBranchHP(28:18) -> ESBranchHP
+#6: ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 20, target rnd 18
 
-ESBranchHP(28:18) -> ESBranchHP
+#7: ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 50, target rnd 12
 
-ESGravity(50:5151) -> LB-Siculus Strike
+#8: ESGravity(50:5151) -> LB-Siculus Strike
 Condition: One-time use (ai:40 rnd:0) (one-time: 3)
 Player -150% HP
 
-SkillSet:
+#9: SkillSet:
 	Condition: One-time use (ai:100 rnd:0) (one-time: 3)
 	[0] ESBlindStickyFixed(98:5153) -> Color Delete
 	Blind orbs in specific positions for 3 turns
 	[1] ESBindAttack(63:5165) -> CFM-Pulse
 	Bind 1 random cards for 3 turns, Deal 420% damage
 
-ESColumnSpawnMulti(77:5150) -> C-Shining Spear
+#10: ESColumnSpawnMulti(77:5150) -> C-Shining Spear
 Condition: 50% chance (ai:50 rnd:0)
 Change 2nd column to Wood orbs, 5th column to Light orbs, Deal 380% damage
 
-ESChangeAttribute(46:5152) -> EB & Self Convert
+#11: ESChangeAttribute(46:5152) -> EB & Self Convert
 Change own attribute to random one of Wood, Light, Deal 380% damage
 
-ESBranchFlag(43:10) -> ESBranchFlag
+#12: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 2, target rnd 15
 
-ESFlagOperation(22:12) -> ESFlagOperation
+#13: ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b11
 
-ESDamageShield(74:5149) -> AS-Complete Protection
+#14: ESDamageShield(74:5149) -> AS-Complete Protection
 Reduce damage from all sources by 99% for 2 turns
 
-ESBranchFlag(43:10) -> ESBranchFlag
+#15: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 4, target rnd 8
 
-ESFlagOperation(22:12) -> ESFlagOperation
+#16: ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b111
 
-ESAttackMultihit(15:5154) -> Storm Punisher FPE
+#17: ESAttackMultihit(15:5154) -> Storm Punisher FPE
 Deal 1200% damage (6 hits, 200% each)
 
-ESBranchFlag(43:10) -> ESBranchFlag
+#18: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 8, target rnd 21
 
-ESFlagOperation(22:12) -> ESFlagOperation
+#19: ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b1111
 
-ESRecoverEnemy(86:5156) -> AS-Overhaul
+#20: ESRecoverEnemy(86:5156) -> AS-Overhaul
 Enemy recover 50% hp
 
-ESAttackMultihit(15:5155) -> Starburst SSE
+#21: ESAttackMultihit(15:5155) -> Starburst SSE
 Deal 10000% damage (10 hits, 1000% each)

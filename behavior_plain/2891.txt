@@ -4,76 +4,76 @@ new AI: True
 start/max counter: 0
 counter increment: 0
 
-ESPreemptive(49:318) -> ESPreemptive
+#1: ESPreemptive(49:318) -> ESPreemptive
 Enable preempt if level 1
 
-ESBranchFlag(43:10) -> ESBranchFlag
+#2: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 1, target rnd 6
 
-ESFlagOperation(22:12) -> ESFlagOperation
+#3: ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b1
 
-SkillSet:
+#4: SkillSet:
 	[0] ESStatusShield(20:5853) -> My name is Orpharion!
 	Voids status ailments for 999 turns
 	[1] ESAbsorbCombo(67:5854) -> Paradiso Puma
 	Absorb combo <= 6 damage for 999 turns
 
-ESEndPath(36:26) -> ESEndPath
+#5: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESBranchHP(29:19) -> ESBranchHP
+#6: ESBranchHP(29:19) -> ESBranchHP
 Branch on hp > 100, target rnd 16
 
-ESBranchHP(28:18) -> ESBranchHP
+#7: ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 50, target rnd 14
 
-ESOrbSealRow(100:5856) -> Sopra Perdere
+#8: ESOrbSealRow(100:5856) -> Sopra Perdere
 Condition: 20% chance (ai:0 rnd:20)
 Seal 1st row for 1 turns, Deal 100% damage
 
-ESBlindStickyRandom(97:5857) -> Oscurità Alcuni
+#9: ESBlindStickyRandom(97:5857) -> Oscurità Alcuni
 Condition: 20% chance (ai:0 rnd:20)
 Blind random 4~10 orbs for 1 turns, Deal 100% damage
 
-ESOrbLock(94:5858) -> Chiave Spina
+#10: ESOrbLock(94:5858) -> Chiave Spina
 Condition: 20% chance (ai:0 rnd:20)
 Lock 11 random Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs, Deal 100% damage
 
-ESBindAttack(63:5859) -> Anestesia Spada
+#11: ESBindAttack(63:5859) -> Anestesia Spada
 Condition: 20% chance (ai:0 rnd:20)
 Bind 1 random cards for 2 turns, Deal 100% damage
 
-ESBindAwoken(88:5860) -> Niente Spazio
+#12: ESBindAwoken(88:5860) -> Niente Spazio
 Condition: 20% chance (ai:0 rnd:20)
 Bind awoken skills for 1 turns, Deal 100% damage
 
-ESEndPath(36:26) -> ESEndPath
+#13: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-SkillSet:
+#14: SkillSet:
 	[0] ESDispel(6:5862) -> Angelo Lacrima
 	Voids player buff effects
 	[1] ESAttackMultihit(15:5863) -> Innumerevole Ferita
 	Deal 5000% damage (10 hits, 500% each)
 
-ESEndPath(36:26) -> ESEndPath
+#15: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESBranchFlag(43:10) -> ESBranchFlag
+#16: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 2, target rnd 7
 
-ESFlagOperation(22:12) -> ESFlagOperation
+#17: ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b11
 
-ESSkillDelay(89:5861) -> Disperazione
+#18: ESSkillDelay(89:5861) -> Disperazione
 Delay active skills by 99 turns
 
-ESEndPath(36:26) -> ESEndPath
+#19: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESResolve(73:5865) -> Resolve
+#20: ESResolve(73:5865) -> Resolve
 Survive attacks with 1 HP when HP > 50%
 
-ESAttributeResist(72:5866) -> Dark Halved
+#21: ESAttributeResist(72:5866) -> Dark Halved
 Reduce damage from Dark by 50%

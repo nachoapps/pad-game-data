@@ -4,50 +4,50 @@ new AI: True
 start/max counter: 3
 counter increment: 0
 
-ESPreemptive(49:3402) -> ESPreemptive
+#1: ESPreemptive(49:3402) -> ESPreemptive
 Enable preempt if level 4
 
-ESBranchLevel(35:25) -> ESBranchLevel
+#2: ESBranchLevel(35:25) -> ESBranchLevel
 Branch on level > 4, target rnd 4
 
-ESEndPath(36:26) -> ESEndPath
+#3: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESBranchCard(90:8308) -> ESBranchCard
+#4: ESBranchCard(90:8308) -> ESBranchCard
 Branch on player_cards HAS [3930, 3931, 3942, 3943], target rnd 6
 
-ESDamageShield(74:8307) -> Oh! A visitor?!
+#5: ESDamageShield(74:8307) -> Oh! A visitor?!
 Condition: One-time use (ai:100 rnd:0) (one-time: 2)
 Reduce damage from all sources by 75% for 1 turns
 
-ESDamageShield(74:8309) -> W...Welcome home?...
+#6: ESDamageShield(74:8309) -> W...Welcome home?...
 Condition: One-time use (ai:100 rnd:0) (one-time: 2)
 Reduce damage from all sources by 75% for 1 turns
 
-ESSkillDelay(89:8313) -> Flying Bucket
+#7: ESSkillDelay(89:8313) -> Flying Bucket
 Condition: When < 50% hp , one-time use (ai:100 rnd:0) (one-time: 1)
 Delay active skills by 2 turns
 
-ESAttackMultihit(15:8314) -> Toppling Bookshelf
+#8: ESAttackMultihit(15:8314) -> Toppling Bookshelf
 Condition: When < 20% hp (ai:100 rnd:0)
 Deal 220% damage
 
-ESCloud(104:8310) -> Sweeping Duster
+#9: ESCloud(104:8310) -> Sweeping Duster
 Condition: 34% chance (ai:0 rnd:34)
 2x2 cloud appear for 1 turns at random location, Deal 120% damage
 
-ESRowSpawnMulti(79:8311) -> Neat and Tidy
+#10: ESRowSpawnMulti(79:8311) -> Neat and Tidy
 Condition: 33% chance (ai:0 rnd:33)
 Change 1st, 3rd, 5th row to Heal orbs, 2nd row to Fire orbs, 4th row to Fire, Jammer orbs, Deal 50% damage
 
-ESRandomSpawn(92:8312) -> Terrible Tumble
+#11: ESRandomSpawn(92:8312) -> Terrible Tumble
 Condition: 33% chance & when Fire, Water, Wood, Light, Dark, Heal, Poison, Mortal Poison orbs are on the board (ai:0 rnd:33)
 Spawn random 5 Jammer orbs, Deal 130% damage
 
-ESEndPath(36:26) -> ESEndPath
+#12: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-SkillSet:
+#13: SkillSet:
 	Condition: On death (ai:0 rnd:0)
 	[0] ESRandomSpawn(92:8315) -> It's dangerous inside so be careful...!
 	Spawn random 1 Heal orbs

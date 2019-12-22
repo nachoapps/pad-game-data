@@ -4,76 +4,76 @@ new AI: True
 start/max counter: 1
 counter increment: 0
 
-ESPreemptive(49:318) -> ESPreemptive
+#1: ESPreemptive(49:318) -> ESPreemptive
 Enable preempt if level 1
 
-ESBranchFlag(43:10) -> ESBranchFlag
+#2: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 1, target rnd 6
 
-ESFlagOperation(22:12) -> ESFlagOperation
+#3: ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b1
 
-SkillSet:
+#4: SkillSet:
 	[0] ESAttackMultihit(15:9491) -> Move, move, move---!!
 	Deal 180% damage
 	[1] ESAbsorbThreshold(87:9492) -> Demon Wheelie
 	Absorb damage >= 6000000 damage for 5 turns
 
-ESEndPath(36:26) -> ESEndPath
+#5: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESBranchHP(28:18) -> ESBranchHP
+#6: ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 40, target rnd 10
 
-ESAttackMultihit(15:9496) -> Deadly Drive!
+#7: ESAttackMultihit(15:9496) -> Deadly Drive!
 Condition: 50% chance when < 75% hp (ai:50 rnd:0)
 Deal 150% damage (3 hits, 50% each)
 
-ESPoisonChangeRandom(60:9498) -> Take this!
+#8: ESPoisonChangeRandom(60:9498) -> Take this!
 Condition: 50% chance (ai:50 rnd:0)
 Change Random 7 to Poison
 
-ESEndPath(36:26) -> ESEndPath
+#9: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESOrbChangeAttack(48:9495) -> Not going easy anymore!
+#10: ESOrbChangeAttack(48:9495) -> Not going easy anymore!
 Condition: When < 40% hp , one-time use (ai:100 rnd:0) (one-time: 1)
 Change Poison to Mortal Poison, Deal 100% damage
 
-ESAttackUPRemainingEnemies(17:9494) -> Not going easy anymore!
+#11: ESAttackUPRemainingEnemies(17:9494) -> Not going easy anymore!
 Condition: When < 40% hp , one-time use, when <= 1 enemies remain (ai:100 rnd:0) (one-time: 1)
 Increase damage to 150% for the next 99 turns
 
-ESBranchCounter(32:22) -> ESBranchCounter
+#12: ESBranchCounter(32:22) -> ESBranchCounter
 Branch on counter > 1, target rnd 16
 
-ESSetCounter(26:16) -> ESSetCounter
+#13: ESSetCounter(26:16) -> ESSetCounter
 counter + 1
 
-ESBoardChange(84:9497) -> Sink into a sea of poison!!
+#14: ESBoardChange(84:9497) -> Sink into a sea of poison!!
 Change all orbs to Mortal Poison
 
-ESEndPath(36:26) -> ESEndPath
+#15: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESBranchCounter(32:22) -> ESBranchCounter
+#16: ESBranchCounter(32:22) -> ESBranchCounter
 Branch on counter > 3, target rnd 20
 
-ESSetCounter(26:16) -> ESSetCounter
+#17: ESSetCounter(26:16) -> ESSetCounter
 counter + 1
 
-ESAttackMultihit(15:9496) -> Deadly Drive!
+#18: ESAttackMultihit(15:9496) -> Deadly Drive!
 Condition: When < 75% hp (ai:100 rnd:0)
 Deal 150% damage (3 hits, 50% each)
 
-ESEndPath(36:26) -> ESEndPath
+#19: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESSetCounter(25:15) -> ESSetCounter
+#20: ESSetCounter(25:15) -> ESSetCounter
 counter = 0
 
-ESBoardChange(84:9497) -> Sink into a sea of poison!!
+#21: ESBoardChange(84:9497) -> Sink into a sea of poison!!
 Change all orbs to Mortal Poison
 
-ESEndPath(36:26) -> ESEndPath
+#22: ESEndPath(36:26) -> ESEndPath
 end_turn

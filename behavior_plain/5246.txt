@@ -4,48 +4,48 @@ new AI: True
 start/max counter: 1
 counter increment: 0
 
-ESPreemptive(49:318) -> ESPreemptive
+#1: ESPreemptive(49:318) -> ESPreemptive
 Enable preempt if level 1
 
-SkillSet:
+#2: SkillSet:
 	Condition: One-time use (ai:100 rnd:0) (one-time: 1)
 	[0] ESBoardChange(84:13288) -> RRMMB
 	Change all orbs to Fire
 	[1] ESBindAwoken(88:13289) -> Let there be peace on earth.
 	Bind awoken skills for 3 turns
 
-ESBranchHP(28:18) -> ESBranchHP
+#3: ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 50, target rnd 7
 
-ESBindSkill(14:13290) -> Instruments of Torture:
+#4: ESBindSkill(14:13290) -> Instruments of Torture:
 Gibbet
 Condition: 50% chance (ai:0 rnd:50)
 Bind active skills for 1 turns, Deal 100% damage
 
-ESBindAttack(63:13291) -> To banish evil from this world!
+#5: ESBindAttack(63:13291) -> To banish evil from this world!
 Condition: 50% chance (ai:0 rnd:50)
 Bind 2 random subs for 1~2 turns, Deal 90% damage
 
-ESEndPath(36:26) -> ESEndPath
+#6: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESBranchFlag(43:10) -> ESBranchFlag
+#7: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 1, target rnd 11
 
-ESFlagOperation(22:12) -> ESFlagOperation
+#8: ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b1
 
-ESGravity(50:13292) -> It is proof of my resolve.
+#9: ESGravity(50:13292) -> It is proof of my resolve.
 Player -75% HP
 
-ESEndPath(36:26) -> ESEndPath
+#10: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESBranchHP(29:19) -> ESBranchHP
+#11: ESBranchHP(29:19) -> ESBranchHP
 Branch on hp > 16, target rnd 4
 
-ESAttackMultihit(15:13293) -> Verdict: Death
+#12: ESAttackMultihit(15:13293) -> Verdict: Death
 Deal 200% damage
 
-ESEndPath(36:26) -> ESEndPath
+#13: ESEndPath(36:26) -> ESEndPath
 end_turn

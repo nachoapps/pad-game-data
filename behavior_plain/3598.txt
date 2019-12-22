@@ -4,16 +4,16 @@ new AI: True
 start/max counter: 1
 counter increment: 1
 
-ESPreemptive(49:318) -> ESPreemptive
+#1: ESPreemptive(49:318) -> ESPreemptive
 Enable preempt if level 1
 
-ESBranchFlag(43:10) -> ESBranchFlag
+#2: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 1, target rnd 6
 
-ESFlagOperation(22:12) -> ESFlagOperation
+#3: ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b1
 
-SkillSet:
+#4: SkillSet:
 	[0] ESStatusShield(20:15291) -> 刻め、デスファリオンという名を
 	Voids status ailments for 999 turns
 	[1] ESDamageShield(74:15292) -> エテルニタムーロ
@@ -21,50 +21,50 @@ SkillSet:
 	[2] ESAbsorbThreshold(87:15293) -> インフェルノアーラ
 	Absorb damage >= 60000000 damage for 999 turns
 
-ESEndPath(36:26) -> ESEndPath
+#5: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESBranchHP(29:19) -> ESBranchHP
+#6: ESBranchHP(29:19) -> ESBranchHP
 Branch on hp > 100, target rnd 14
 
-ESBranchHP(28:18) -> ESBranchHP
+#7: ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 50, target rnd 12
 
-ESBindAwoken(88:15297) -> ニエンテスパーツィオ
+#8: ESBindAwoken(88:15297) -> ニエンテスパーツィオ
 Condition: One-time use (ai:100 rnd:0) (one-time: 1)
 Bind awoken skills for 1 turns, Deal 105% damage
 
-ESBlindStickyRandom(97:15298) -> オスクリタヴィヴァーチェ
+#9: ESBlindStickyRandom(97:15298) -> オスクリタヴィヴァーチェ
 Condition: 50% chance (ai:0 rnd:50)
 Blind random 10 orbs for 2 turns, Deal 100% damage
 
-ESBombRandomSpawn(102:15300) -> エスプロジオーネテンペスタ
+#10: ESBombRandomSpawn(102:15300) -> エスプロジオーネテンペスタ
 Condition: 50% chance (ai:0 rnd:50)
 Spawn random 10 Bomb orbs, Deal 96% damage
 
-ESEndPath(36:26) -> ESEndPath
+#11: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-SkillSet:
+#12: SkillSet:
 	[0] ESDispel(6:15302) -> ディアーヴォロサングエ
 	Voids player buff effects
 	[1] ESAttackMultihit(15:15303) -> インヌメレーヴォレモルテ
 	Deal 1000% damage (10 hits, 100% each)
 
-ESEndPath(36:26) -> ESEndPath
+#13: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-SkillSet:
+#14: SkillSet:
 	[0] ESSkillDelay(89:15295) -> ディスペラツィオーネ
 	Delay active skills by 99 turns
 	[1] ESAttackMultihit(15:15296) -> アヴィドヴィゴーレ
 	Deal 300% damage (3 hits, 100% each)
 
-ESEndPath(36:26) -> ESEndPath
+#15: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESResolve(73:15288) -> 根性
+#16: ESResolve(73:15288) -> 根性
 Survive attacks with 1 HP when HP > 50%
 
-ESAttributeResist(72:15289) -> 光半減
+#17: ESAttributeResist(72:15289) -> 光半減
 Reduce damage from Light by 50%

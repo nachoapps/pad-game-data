@@ -4,50 +4,50 @@ new AI: True
 start/max counter: 1
 counter increment: 0
 
-ESPreemptive(49:3402) -> ESPreemptive
+#1: ESPreemptive(49:3402) -> ESPreemptive
 Enable preempt if level 4
 
-ESBranchLevel(35:25) -> ESBranchLevel
+#2: ESBranchLevel(35:25) -> ESBranchLevel
 Branch on level > 4, target rnd 4
 
-ESEndPath(36:26) -> ESEndPath
+#3: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESBranchFlag(43:10) -> ESBranchFlag
+#4: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 1, target rnd 8
 
-ESFlagOperation(22:12) -> ESFlagOperation
+#5: ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b1
 
-SkillSet:
+#6: SkillSet:
 	[0] ESDamageShield(74:14870) -> It's time to conquer Earth!
 	Reduce damage from all sources by 50% for 99 turns
 	[1] ESBindRandomSub(65:14864) -> Bad is so beautiful.
 	Bind 2 random subs for 2 turns
 
-ESEndPath(36:26) -> ESEndPath
+#7: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESBranchHP(28:18) -> ESBranchHP
+#8: ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 50, target rnd 12
 
-ESAttackMultihit(15:14865) -> HA HA HA!
+#9: ESAttackMultihit(15:14865) -> HA HA HA!
 Condition: 40% chance (ai:40 rnd:0)
 Deal 110% damage
 
-ESOrbChangeAttack(48:14866) -> By the power and force of lightning!
+#10: ESOrbChangeAttack(48:14866) -> By the power and force of lightning!
 Condition: 40% chance (ai:40 rnd:0)
 Change Random to Fire, Deal 90% damage
 
-ESEndPath(36:26) -> ESEndPath
+#11: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESOrbSealRow(100:14867) -> Out of my way!
+#12: ESOrbSealRow(100:14867) -> Out of my way!
 Condition: One-time use (ai:100 rnd:0) (one-time: 1)
 Seal 1st row for 2 turns
 
-ESAttackMultihit(15:14868) -> GET THOSE POWER GEEKS!
+#13: ESAttackMultihit(15:14868) -> GET THOSE POWER GEEKS!
 Deal 150% damage
 
-ESEndPath(36:26) -> ESEndPath
+#14: ESEndPath(36:26) -> ESEndPath
 end_turn

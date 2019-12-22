@@ -4,67 +4,67 @@ new AI: True
 start/max counter: 3
 counter increment: 0
 
-ESPreemptive(49:318) -> ESPreemptive
+#1: ESPreemptive(49:318) -> ESPreemptive
 Enable preempt if level 1
 
-ESBranchCard(90:13849) -> ESBranchCard
+#2: ESBranchCard(90:13849) -> ESBranchCard
 Branch on player_cards HAS [5429, 5430], target rnd 4
 
-ESVoidShield(71:13859) -> Did you come to see her?
+#3: ESVoidShield(71:13859) -> Did you come to see her?
 Condition: One-time use (ai:100 rnd:0) (one-time: 2)
 Void damage >= 10000000 for 3 turns
 
-ESVoidShield(71:13860) -> It's been a while...let's fight it out
+#4: ESVoidShield(71:13860) -> It's been a while...let's fight it out
 Condition: One-time use (ai:100 rnd:0) (one-time: 2)
 Void damage >= 10000000 for 3 turns
 
-ESBranchHP(28:18) -> ESBranchHP
+#5: ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 1, target rnd 18
 
-ESBranchHP(28:18) -> ESBranchHP
+#6: ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 20, target rnd 12
 
-ESBranchHP(29:19) -> ESBranchHP
+#7: ESBranchHP(29:19) -> ESBranchHP
 Branch on hp > 51, target rnd 9
 
-ESAttackUPRemainingEnemies(17:13863) -> Ultimate Dedication
+#8: ESAttackUPRemainingEnemies(17:13863) -> Ultimate Dedication
 Condition: One-time use, when <= 1 enemies remain (ai:100 rnd:0) (one-time: 1)
 Increase damage to 150% for the next 999 turns
 
-ESAttackMultihit(15:13861) -> Hell Bullet
+#9: ESAttackMultihit(15:13861) -> Hell Bullet
 Condition: 50% chance (ai:0 rnd:50)
 Deal 120% damage (3 hits, 40% each)
 
-ESRandomSpawn(92:13862) -> Dark Whirlwind
+#10: ESRandomSpawn(92:13862) -> Dark Whirlwind
 Condition: 50% chance & when Fire, Water, Wood, Light, Heal, Jammer, Poison, Mortal Poison orbs are on the board (ai:0 rnd:50)
 Spawn random 5 Dark orbs, Deal 100% damage
 
-ESEndPath(36:26) -> ESEndPath
+#11: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESBranchFlag(43:10) -> ESBranchFlag
+#12: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 1, target rnd 16
 
-ESFlagOperation(22:12) -> ESFlagOperation
+#13: ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b1
 
-ESDamageShield(74:13864) -> As commander, I protect my comrades
+#14: ESDamageShield(74:13864) -> As commander, I protect my comrades
 Reduce damage from all sources by 75% for 3 turns
 
-ESEndPath(36:26) -> ESEndPath
+#15: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESAttackMultihit(15:13865) -> Neverending Bullets
+#16: ESAttackMultihit(15:13865) -> Neverending Bullets
 Deal 300% damage (10 hits, 30% each)
 
-ESEndPath(36:26) -> ESEndPath
+#17: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESRecoverEnemy(86:13866) -> Vent Noir
+#18: ESRecoverEnemy(86:13866) -> Vent Noir
 Enemy recover 50% hp
 
-ESEndPath(36:26) -> ESEndPath
+#19: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESResolve(73:13858) -> Resolve
+#20: ESResolve(73:13858) -> Resolve
 Survive attacks with 1 HP when HP > 50%

@@ -4,10 +4,10 @@ new AI: True
 start/max counter: 63
 counter increment: 0
 
-ESPreemptive(49:318) -> ESPreemptive
+#1: ESPreemptive(49:318) -> ESPreemptive
 Enable preempt if level 1
 
-SkillSet:
+#2: SkillSet:
 	Condition: One-time use (ai:100 rnd:0) (one-time: 32)
 	[0] ESStatusShield(20:8101) -> Here at last... Shall we begin?
 	Voids status ailments for 999 turns
@@ -16,14 +16,14 @@ SkillSet:
 	[2] ESAttackMultihit(15:8103) -> See how you handle my fist!!
 	Deal 700% damage
 
-SkillSet:
+#3: SkillSet:
 	Condition: When < 1% hp (ai:100 rnd:0)
 	[0] ESRecoverEnemy(7:8122) -> Demon Star's Radiance
 	Enemy recover 100% hp
 	[1] ESAttackUPRemainingEnemies(17:8123) -> I won't let it happen!
 	Increase damage to 150% for the next 999 turns
 
-SkillSet:
+#4: SkillSet:
 	Condition: One-time use (ai:100 rnd:0) (one-time: 16)
 	[0] ESInactivity(66:8105) -> Splendid♪ Not over yet though...
 	Do nothing
@@ -32,84 +32,84 @@ SkillSet:
 	[2] ESBlind(62:8107) -> High Kick
 	Blind all orbs on the board, Deal 100% damage
 
-SkillSet:
+#5: SkillSet:
 	Condition: When < 50% hp , one-time use (ai:100 rnd:0) (one-time: 8)
 	[0] ESAbsorbCombo(67:8113) -> I'll have to get serious soon
 	Absorb combo <= 7 damage for 999 turns
 	[1] ESDebuffMovetime(39:8114) -> Hurry up!!
 	Movetime -1s for 10 turns
 
-ESBranchHP(28:18) -> ESBranchHP
+#6: ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 10, target rnd 23
 
-ESBranchFlag(43:10) -> ESBranchFlag
+#7: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 8, target rnd 23
 
-ESBlindStickyRandom(97:8116) -> Black Screw Blow
+#8: ESBlindStickyRandom(97:8116) -> Black Screw Blow
 Condition: When < 50% hp , one-time use (ai:100 rnd:0) (one-time: 4)
 Blind random 6 orbs for 2 turns, Deal 350% damage
 
-ESAttackMultihit(15:8117) -> Full Spin Kick
+#9: ESAttackMultihit(15:8117) -> Full Spin Kick
 Condition: When < 50% hp , one-time use (ai:100 rnd:0) (one-time: 2)
 Deal 480% damage (6 hits, 80% each)
 
-ESAttackMultihit(15:8118) -> Hell Shot Punch
+#10: ESAttackMultihit(15:8118) -> Hell Shot Punch
 Condition: When < 50% hp , one-time use (ai:100 rnd:0) (one-time: 1)
 Deal 700% damage
 
-ESBranchFlag(43:10) -> ESBranchFlag
+#11: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 1, target rnd 14
 
-ESFlagOperation(22:12) -> ESFlagOperation
+#12: ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b1
 
-ESAttackMultihit(15:8109) -> Spin Kick
+#13: ESAttackMultihit(15:8109) -> Spin Kick
 Deal 330% damage (3 hits, 110% each)
 
-ESBranchFlag(43:10) -> ESBranchFlag
+#14: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 2, target rnd 17
 
-ESFlagOperation(22:12) -> ESFlagOperation
+#15: ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b11
 
-ESSkillDelay(89:8110) -> Body Blow
+#16: ESSkillDelay(89:8110) -> Body Blow
 Delay active skills by 3 turns, Deal 280% damage
 
-ESBranchFlag(43:10) -> ESBranchFlag
+#17: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 4, target rnd 20
 
-ESFlagOperation(22:12) -> ESFlagOperation
+#18: ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b111
 
-ESAttackMultihit(15:8111) -> Combo Rush
+#19: ESAttackMultihit(15:8111) -> Combo Rush
 Deal 400% damage (5 hits, 80% each)
 
-ESFlagOperation(24:14) -> ESFlagOperation
+#20: ESFlagOperation(24:14) -> ESFlagOperation
 flag UNSET 0b111
 
-ESSpinnersFixed(110:8112) -> Axe Kick
+#21: ESSpinnersFixed(110:8112) -> Axe Kick
 Specific orbs change every 1.0s for 1 turns, Deal 300% damage
 
-ESEndPath(36:26) -> ESEndPath
+#22: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESBranchFlag(43:10) -> ESBranchFlag
+#23: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 8, target rnd 26
 
-ESFlagOperation(22:12) -> ESFlagOperation
+#24: ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b1111
 
-SkillSet:
+#25: SkillSet:
 	[0] ESChangeAttribute(46:8119) -> It was fun, but let's end this
 	Change own attribute to random one of Fire, Water, Wood
 	[1] ESAttackMultihit(15:8120) -> This is my full power!!!
 	Deal 60000% damage (10 hits, 6000% each)
 
-ESAttackMultihit(15:8126) -> Whirling Magical Power
+#26: ESAttackMultihit(15:8126) -> Whirling Magical Power
 Deal 50000% damage (10 hits, 5000% each)
 
-ESEndPath(36:26) -> ESEndPath
+#27: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESResolve(73:8125) -> Hera Resolve
+#28: ESResolve(73:8125) -> Hera Resolve
 Survive attacks with 1 HP when HP > 50%

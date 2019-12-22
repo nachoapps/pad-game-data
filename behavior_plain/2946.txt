@@ -4,72 +4,72 @@ new AI: True
 start/max counter: 3
 counter increment: 0
 
-ESPreemptive(49:318) -> ESPreemptive
+#1: ESPreemptive(49:318) -> ESPreemptive
 Enable preempt if level 1
 
-ESBranchFlag(43:10) -> ESBranchFlag
+#2: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 1, target rnd 6
 
-ESFlagOperation(22:12) -> ESFlagOperation
+#3: ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b1
 
-SkillSet:
+#4: SkillSet:
 	[0] ESBindAwoken(88:8088) -> Gleaming Queen's Whisper
 	Bind awoken skills for 7 turns
 	[1] ESStatusShield(20:8089) -> Protection of the Gods
 	Voids status ailments for 999 turns
 
-ESEndPath(36:26) -> ESEndPath
+#5: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESBindAttack(63:8091) -> Bolt Arrow
+#6: ESBindAttack(63:8091) -> Bolt Arrow
 Condition: One-time use (ai:100 rnd:0) (one-time: 2)
 Bind 1 random subs for 10 turns, Deal 400% damage
 
-ESBindAttack(63:8092) -> Bolt Arrow
+#7: ESBindAttack(63:8092) -> Bolt Arrow
 Condition: One-time use (ai:100 rnd:0) (one-time: 2)
 Bind 2 both leaders for 10 turns, Deal 400% damage
 
-ESBranchHP(28:18) -> ESBranchHP
+#8: ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 50, target rnd 14
 
-ESBranchFlag(43:10) -> ESBranchFlag
+#9: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 2, target rnd 14
 
-ESOrbChangeAttack(48:8093) -> Shine Blast
+#10: ESOrbChangeAttack(48:8093) -> Shine Blast
 Condition: 60% chance (ai:60 rnd:0)
 Change Dark to Light, Deal 280% damage
 
-ESDebuffMovetime(39:8094) -> Resting Pulse
+#11: ESDebuffMovetime(39:8094) -> Resting Pulse
 Movetime -1s for 1 turns, Deal 280% damage
 
-ESAttackMultihit(15:8095) -> Shine Wave
+#12: ESAttackMultihit(15:8095) -> Shine Wave
 Deal 300% damage (2 hits, 150% each)
 
-ESEndPath(36:26) -> ESEndPath
+#13: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESFlagOperation(22:12) -> ESFlagOperation
+#14: ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b11
 
-ESAbsorbCombo(67:8096) -> Gleaming Queen's Trial
+#15: ESAbsorbCombo(67:8096) -> Gleaming Queen's Trial
 Condition: One-time use (ai:100 rnd:0) (one-time: 1)
 Absorb combo <= 8 damage for 8 turns
 
-ESSetCounter(26:16) -> ESSetCounter
+#16: ESSetCounter(26:16) -> ESSetCounter
 counter + 1
 
-ESBranchCounter(32:22) -> ESBranchCounter
+#17: ESBranchCounter(32:22) -> ESBranchCounter
 Branch on counter > 8, target rnd 19
 
-ESFixedStart(101:8097) -> Gleaming Chains
+#18: ESFixedStart(101:8097) -> Gleaming Chains
 Fix orb movement starting point to random position on the board, Deal 300% damage
 
-SkillSet:
+#19: SkillSet:
 	[0] ESGravity(50:8098) -> Sorry
 	Player -99% HP
 	[1] ESAttackMultihit(15:8099) -> Gleaming Queen's Judgment
 	Deal 15000% damage (5 hits, 3000% each)
 
-ESEndPath(36:26) -> ESEndPath
+#20: ESEndPath(36:26) -> ESEndPath
 end_turn

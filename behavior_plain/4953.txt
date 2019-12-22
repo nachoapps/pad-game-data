@@ -4,74 +4,74 @@ new AI: True
 start/max counter: 1
 counter increment: 1
 
-ESPreemptive(49:318) -> ESPreemptive
+#1: ESPreemptive(49:318) -> ESPreemptive
 Enable preempt if level 1
 
-ESBranchFlag(43:10) -> ESBranchFlag
+#2: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 1, target rnd 6
 
-ESFlagOperation(22:12) -> ESFlagOperation
+#3: ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b1
 
-SkillSet:
+#4: SkillSet:
 	[0] ESAbsorbCombo(67:11973) -> なんかオラ　燃えてきたズラ！
 	Absorb combo <= 5 damage for 5 turns
 	[1] ESSkyfall(96:11974) -> もんげーーっ！
 	Locked Fire skyfall +100% for 99 turns
 
-ESEndPath(36:26) -> ESEndPath
+#5: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESBranchHP(28:18) -> ESBranchHP
+#6: ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 20, target rnd 16
 
-ESBranchHP(28:18) -> ESBranchHP
+#7: ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 50, target rnd 12
 
-ESAttackMultihit(15:11975) -> ズラズラズラ～っ！
+#8: ESAttackMultihit(15:11975) -> ズラズラズラ～っ！
 Condition: 34% chance (ai:0 rnd:34)
 Deal 105% damage (3 hits, 35% each)
 
-ESGravity(50:11976) -> ズラッ！
+#9: ESGravity(50:11976) -> ズラッ！
 Condition: One-time use (ai:0 rnd:33) (one-time: 1)
 Player -75% HP
 
-ESOrbChangeAttack(48:11977) -> あっちいズラよ～！
+#10: ESOrbChangeAttack(48:11977) -> あっちいズラよ～！
 Condition: 33% chance (ai:0 rnd:33)
 Change Random to Fire, Deal 95% damage
 
-ESEndPath(36:26) -> ESEndPath
+#11: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESBranchFlag(43:10) -> ESBranchFlag
+#12: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 2, target rnd 8
 
-ESFlagOperation(22:12) -> ESFlagOperation
+#13: ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b11
 
-SkillSet:
+#14: SkillSet:
 	[0] ESAttackUPRemainingEnemies(17:11979) -> Ｓのチカラ　わいてくるズラ…
 	Increase damage to 150% for the next 5 turns
 	[1] ESBindRandomSub(65:11980) -> オラ　止まんないズラ～！！
 	Bind 4 random subs for 2 turns
 
-ESEndPath(36:26) -> ESEndPath
+#15: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESBranchCounter(32:22) -> ESBranchCounter
+#16: ESBranchCounter(32:22) -> ESBranchCounter
 Branch on counter > 1, target rnd 19
 
-ESSetCounter(26:16) -> ESSetCounter
+#17: ESSetCounter(26:16) -> ESSetCounter
 counter + 1
 
-ESBindAwoken(88:11981) -> いいかげんにするズラ～！
+#18: ESBindAwoken(88:11981) -> いいかげんにするズラ～！
 Bind awoken skills for 1 turns
 
-ESSetCounter(25:15) -> ESSetCounter
+#19: ESSetCounter(25:15) -> ESSetCounter
 counter = 0
 
-ESAttackMultihit(15:11982) -> ひとだま乱舞
+#20: ESAttackMultihit(15:11982) -> ひとだま乱舞
 Deal 200% damage (5 hits, 40% each)
 
-ESEndPath(36:26) -> ESEndPath
+#21: ESEndPath(36:26) -> ESEndPath
 end_turn

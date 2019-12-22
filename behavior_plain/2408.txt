@@ -4,57 +4,57 @@ new AI: True
 start/max counter: 7
 counter increment: 0
 
-ESPreemptive(49:3402) -> ESPreemptive
+#1: ESPreemptive(49:3402) -> ESPreemptive
 Enable preempt if level 4
 
-ESBranchLevel(35:25) -> ESBranchLevel
+#2: ESBranchLevel(35:25) -> ESBranchLevel
 Branch on level > 4, target rnd 4
 
-ESEndPath(36:26) -> ESEndPath
+#3: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESBindRandomSub(65:11414) -> Do you want to join us?
+#4: ESBindRandomSub(65:11414) -> Do you want to join us?
 Condition: One-time use (ai:100 rnd:0) (one-time: 4)
 Bind 1 random subs for 2 turns
 
-ESBranchHP(28:18) -> ESBranchHP
+#5: ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 50, target rnd 9
 
-ESRandomSpawn(92:11415) -> Temptation of the 3 colored Dango
+#6: ESRandomSpawn(92:11415) -> Temptation of the 3 colored Dango
 Condition: 50% chance & when Water, Light, Dark, Jammer, Poison, Mortal Poison orbs are on the board (ai:0 rnd:50)
 Spawn random 1 Fire, Wood, Heal orbs, Deal 105% damage
 
-ESOrbChangeAttack(48:11416) -> Super Sweet Dorayaki
+#7: ESOrbChangeAttack(48:11416) -> Super Sweet Dorayaki
 Condition: 50% chance (ai:0 rnd:50)
 Change Random to Jammer, Deal 100% damage
 
-ESEndPath(36:26) -> ESEndPath
+#8: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESRowSpawnMulti(78:11417) -> Sweet Grudge
+#9: ESRowSpawnMulti(78:11417) -> Sweet Grudge
 Condition: One-time use (ai:100 rnd:0) (one-time: 2)
 Change 1st row to Poison orbs, 5th row to Jammer orbs
 
-ESBranchHP(28:18) -> ESBranchHP
+#10: ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 20, target rnd 14
 
-ESRandomSpawn(92:11415) -> Temptation of the 3 colored Dango
+#11: ESRandomSpawn(92:11415) -> Temptation of the 3 colored Dango
 Condition: 50% chance & when Water, Light, Dark, Jammer, Poison, Mortal Poison orbs are on the board (ai:0 rnd:50)
 Spawn random 1 Fire, Wood, Heal orbs, Deal 105% damage
 
-ESOrbChangeAttack(48:11416) -> Super Sweet Dorayaki
+#12: ESOrbChangeAttack(48:11416) -> Super Sweet Dorayaki
 Condition: 50% chance (ai:0 rnd:50)
 Change Random to Jammer, Deal 100% damage
 
-ESEndPath(36:26) -> ESEndPath
+#13: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESAttackUPRemainingEnemies(17:11418) -> Palate Cleanser
+#14: ESAttackUPRemainingEnemies(17:11418) -> Palate Cleanser
 Condition: One-time use, when <= 1 enemies remain (ai:100 rnd:0) (one-time: 1)
 Increase damage to 150% for the next 99 turns
 
-ESAttackMultihit(15:11419) -> Nectar Inferno
+#15: ESAttackMultihit(15:11419) -> Nectar Inferno
 Deal 100% damage (5 hits, 20% each)
 
-ESEndPath(36:26) -> ESEndPath
+#16: ESEndPath(36:26) -> ESEndPath
 end_turn

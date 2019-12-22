@@ -4,16 +4,16 @@ new AI: True
 start/max counter: 4
 counter increment: 1
 
-ESPreemptive(49:318) -> ESPreemptive
+#1: ESPreemptive(49:318) -> ESPreemptive
 Enable preempt if level 1
 
-ESBranchFlag(43:10) -> ESBranchFlag
+#2: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 1, target rnd 6
 
-ESFlagOperation(22:12) -> ESFlagOperation
+#3: ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b1
 
-SkillSet:
+#4: SkillSet:
 	Condition: One-time use (ai:100 rnd:0) (one-time: 4)
 	[0] ESStatusShield(20:11675) -> Protection of the Gods
 	Voids status ailments for 999 turns
@@ -24,70 +24,70 @@ SkillSet:
 	[3] ESDispel(6:11678) -> Almighty Gods' Majesty
 	Voids player buff effects
 
-ESEndPath(36:26) -> ESEndPath
+#5: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESBranchHP(28:18) -> ESBranchHP
+#6: ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 7, target rnd 21
 
-ESBranchCounter(31:21) -> ESBranchCounter
+#7: ESBranchCounter(31:21) -> ESBranchCounter
 Branch on counter = 9, target rnd 17
 
-ESSetCounter(26:16) -> ESSetCounter
+#8: ESSetCounter(26:16) -> ESSetCounter
 counter + 1
 
-ESBranchHP(28:18) -> ESBranchHP
+#9: ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 50, target rnd 13
 
-SkillSet:
+#10: SkillSet:
 	Condition: One-time use (ai:100 rnd:0) (one-time: 4)
 	[0] ESChangeAttribute(46:11680) -> Divine King's Changing Cloak
 	Change own attribute to random one of Fire, Water, Wood, Light, Dark
 	[1] ESAttackMultihit(15:11681) -> Divine King's Imperial Lightning
 	Deal 200% damage
 
-ESAttackMultihit(15:11681) -> Divine King's Imperial Lightning
+#11: ESAttackMultihit(15:11681) -> Divine King's Imperial Lightning
 Deal 200% damage
 
-ESEndPath(36:26) -> ESEndPath
+#12: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESBranchFlag(43:10) -> ESBranchFlag
+#13: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 2, target rnd 10
 
-ESFlagOperation(22:12) -> ESFlagOperation
+#14: ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b11
 
-SkillSet:
+#15: SkillSet:
 	[0] ESDispel(6:11678) -> Almighty Gods' Majesty
 	Voids player buff effects
 	[1] ESAttackMultihit(15:11681) -> Divine King's Imperial Lightning
 	Deal 200% damage
 
-ESEndPath(36:26) -> ESEndPath
+#16: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESBranchCounter(32:22) -> ESBranchCounter
+#17: ESBranchCounter(32:22) -> ESBranchCounter
 Branch on counter > 10, target rnd 9
 
-ESSetCounter(26:16) -> ESSetCounter
+#18: ESSetCounter(26:16) -> ESSetCounter
 counter + 1
 
-ESDamageShield(74:11684) -> Divine King's Lightning Cloak
+#19: ESDamageShield(74:11684) -> Divine King's Lightning Cloak
 Reduce damage from all sources by 75% for 999 turns
 
-ESEndPath(36:26) -> ESEndPath
+#20: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESAttackUPRemainingEnemies(17:11683) -> Almighty Gods' Fighting Spirit
+#21: ESAttackUPRemainingEnemies(17:11683) -> Almighty Gods' Fighting Spirit
 Condition: when <= 1 enemies remain (ai:100 rnd:0)
 Increase damage to 500% for the next 99 turns
 
-SkillSet:
+#22: SkillSet:
 	[0] ESBindAwoken(88:11686) -> Divine King's Wave
 	Bind awoken skills for 1 turns
 	[1] ESAttackMultihit(15:11681) -> Divine King's Imperial Lightning
 	Deal 200% damage
 
-ESEndPath(36:26) -> ESEndPath
+#23: ESEndPath(36:26) -> ESEndPath
 end_turn

@@ -4,22 +4,22 @@ new AI: True
 start/max counter: 3
 counter increment: 1
 
-ESPreemptive(49:3402) -> ESPreemptive
+#1: ESPreemptive(49:3402) -> ESPreemptive
 Enable preempt if level 4
 
-ESBranchLevel(35:25) -> ESBranchLevel
+#2: ESBranchLevel(35:25) -> ESBranchLevel
 Branch on level > 4, target rnd 4
 
-ESEndPath(36:26) -> ESEndPath
+#3: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESBranchFlag(43:10) -> ESBranchFlag
+#4: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 1, target rnd 8
 
-ESFlagOperation(22:12) -> ESFlagOperation
+#5: ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b1
 
-SkillSet:
+#6: SkillSet:
 	[0] ESDamageShield(74:7488) -> Abyssal Scales
 	Reduce damage from all sources by 50% for 5 turns
 	[1] ESCloud(104:7485) -> Vehement Sea Fog
@@ -27,88 +27,88 @@ SkillSet:
 	[2] ESRandomSpawn(92:7486) -> Oceanic Obstruction
 	Spawn random 11 Jammer orbs
 
-ESEndPath(36:26) -> ESEndPath
+#7: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESBranchHP(28:18) -> ESBranchHP
+#8: ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 20, target rnd 26
 
-ESBranchFlag(43:10) -> ESBranchFlag
+#9: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 2, target rnd 15
 
-ESFlagOperation(22:12) -> ESFlagOperation
+#10: ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b11
 
-SkillSet:
+#11: SkillSet:
 	Condition: One-time use (ai:100 rnd:0) (one-time: 3)
 	[0] ESAbsorbCombo(67:7489) -> Mariner's Divine Protection
 	Absorb combo <= 6 damage for 10 turns
 	[1] ESOrbChangeAttack(48:7491) -> Outbreak
 	Change Jammer to Poison, Deal 250% damage
 
-SkillSet:
+#12: SkillSet:
 	Condition: One-time use (ai:100 rnd:0) (one-time: 3)
 	[0] ESAbsorbCombo(67:7489) -> Mariner's Divine Protection
 	Absorb combo <= 6 damage for 10 turns
 	[1] ESOrbChangeAttack(48:7491) -> Outbreak
 	Change Jammer to Poison, Deal 250% damage
 
-SkillSet:
+#13: SkillSet:
 	Condition: One-time use (ai:100 rnd:0) (one-time: 3)
 	[0] ESAbsorbCombo(67:7489) -> Mariner's Divine Protection
 	Absorb combo <= 6 damage for 10 turns
 	[1] ESOrbChangeAttack(48:7491) -> Outbreak
 	Change Jammer to Poison, Deal 250% damage
 
-ESEndPath(36:26) -> ESEndPath
+#14: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESAttackUPRemainingEnemies(17:7493) -> Resentful Stare
+#15: ESAttackUPRemainingEnemies(17:7493) -> Resentful Stare
 Condition: One-time use, when <= 1 enemies remain (ai:100 rnd:0) (one-time: 3)
 Increase damage to 150% for the next 999 turns
 
-ESDamageShield(74:7494) -> Abyssal Scales
+#16: ESDamageShield(74:7494) -> Abyssal Scales
 Condition: One-time use (ai:100 rnd:0) (one-time: 3)
 Reduce damage from all sources by 75% for 4 turns
 
-ESBranchFlag(43:10) -> ESBranchFlag
+#17: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 4, target rnd 20
 
-ESFlagOperation(22:12) -> ESFlagOperation
+#18: ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b111
 
-ESSkillDelay(89:7495) -> Roaring Deluge
+#19: ESSkillDelay(89:7495) -> Roaring Deluge
 Delay active skills by 2 turns, Deal 120% damage
 
-ESBranchFlag(43:10) -> ESBranchFlag
+#20: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 8, target rnd 23
 
-ESFlagOperation(22:12) -> ESFlagOperation
+#21: ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b1111
 
-ESOrbChangeAttack(48:7496) -> Bubble Bloom
+#22: ESOrbChangeAttack(48:7496) -> Bubble Bloom
 Change Heal to Water, Deal 130% damage
 
-ESFlagOperation(24:14) -> ESFlagOperation
+#23: ESFlagOperation(24:14) -> ESFlagOperation
 flag UNSET 0b1100
 
-ESGravity(50:7497) -> Depth Charge
+#24: ESGravity(50:7497) -> Depth Charge
 Player -90% HP
 
-ESEndPath(36:26) -> ESEndPath
+#25: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESBranchFlag(43:10) -> ESBranchFlag
+#26: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 16, target rnd 29
 
-ESFlagOperation(22:12) -> ESFlagOperation
+#27: ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b11111
 
-ESBindAwoken(88:7498) -> Senja Sight
+#28: ESBindAwoken(88:7498) -> Senja Sight
 Bind awoken skills for 5 turns
 
-ESBoardChangeAttackBits(85:7499) -> Raging River Peal
+#29: ESBoardChangeAttackBits(85:7499) -> Raging River Peal
 Change all orbs to Water, Jammer, Deal 3000% damage
 
-ESAttributeResist(72:8208) -> Fire Halved for Water Jewel
+#30: ESAttributeResist(72:8208) -> Fire Halved for Water Jewel
 Reduce damage from Fire by 50%

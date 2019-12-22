@@ -4,80 +4,80 @@ new AI: True
 start/max counter: 1
 counter increment: 0
 
-ESPreemptive(49:318) -> ESPreemptive
+#1: ESPreemptive(49:318) -> ESPreemptive
 Enable preempt if level 1
 
-ESBranchFlag(43:10) -> ESBranchFlag
+#2: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 1, target rnd 6
 
-ESFlagOperation(22:12) -> ESFlagOperation
+#3: ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b1
 
-SkillSet:
+#4: SkillSet:
 	[0] ESStatusShield(20:2404) -> Dance of the Goddess
 	Voids status ailments for 999 turns
 	[1] ESDamageShield(74:8257) -> Chakra Released
 	Reduce damage from all sources by 75% for 2 turns
 
-ESEndPath(36:26) -> ESEndPath
+#5: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESAttackMultihit(15:2406) -> Sahasrara
+#6: ESAttackMultihit(15:2406) -> Sahasrara
 Condition: When < 5% hp (ai:100 rnd:0)
 Deal 1500% damage
 
-ESBranchHP(29:19) -> ESBranchHP
+#7: ESBranchHP(29:19) -> ESBranchHP
 Branch on hp > 65, target rnd 16
 
-ESBranchCounter(31:21) -> ESBranchCounter
+#8: ESBranchCounter(31:21) -> ESBranchCounter
 Branch on counter = 2, target rnd 17
 
-ESSetCounter(26:16) -> ESSetCounter
+#9: ESSetCounter(26:16) -> ESSetCounter
 counter + 1
 
-SkillSet:
+#10: SkillSet:
 	Condition: 25% chance (ai:0 rnd:25)
 	[0] ESAttackMultihit(15:2412) -> Svadhishthana
 	Deal 180% damage (2 hits, 90% each)
 	[1] ESBindRandom(1:2413) -> Manipura
 	Bind 1 random cards for 2 turns
 
-SkillSet:
+#11: SkillSet:
 	Condition: 25% chance (ai:0 rnd:25)
 	[0] ESAttackMultihit(15:2412) -> Svadhishthana
 	Deal 180% damage (2 hits, 90% each)
 	[1] ESBlind(5:2414) -> Anahata
 	Blind all orbs on the board
 
-SkillSet:
+#12: SkillSet:
 	Condition: 25% chance (ai:0 rnd:25)
 	[0] ESAttackMultihit(15:2412) -> Svadhishthana
 	Deal 180% damage (2 hits, 90% each)
 	[1] ESPoisonChangeRandom(60:2415) -> Vishuddha
 	Change Random 3 to Poison
 
-SkillSet:
+#13: SkillSet:
 	Condition: 25% chance (ai:0 rnd:25)
 	[0] ESAttackMultihit(15:2412) -> Svadhishthana
 	Deal 180% damage (2 hits, 90% each)
 	[1] ESGravity(50:2416) -> Ajna
 	Player -99% HP
 
-ESBindSkill(14:2395) -> Kalam
+#14: ESBindSkill(14:2395) -> Kalam
 Condition: 25% chance (ai:0 rnd:25)
 Bind active skills for 10 turns, Deal 150% damage
 
-ESEndPath(36:26) -> ESEndPath
+#15: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESAttackMultihit(15:2407) -> Muladhara
+#16: ESAttackMultihit(15:2407) -> Muladhara
 Deal 1200% damage (6 hits, 200% each)
 
-ESBranchFlag(43:10) -> ESBranchFlag
+#17: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 2, target rnd 9
 
-ESFlagOperation(22:12) -> ESFlagOperation
+#18: ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b11
 
-ESVoidShield(71:8259) -> Dark Times
+#19: ESVoidShield(71:8259) -> Dark Times
 Void damage >= 10000000 for 999 turns

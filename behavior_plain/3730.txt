@@ -4,70 +4,70 @@ new AI: True
 start/max counter: 1
 counter increment: 0
 
-ESPreemptive(49:3402) -> ESPreemptive
+#1: ESPreemptive(49:3402) -> ESPreemptive
 Enable preempt if level 4
 
-ESBranchLevel(35:25) -> ESBranchLevel
+#2: ESBranchLevel(35:25) -> ESBranchLevel
 Branch on level > 4, target rnd 4
 
-ESEndPath(36:26) -> ESEndPath
+#3: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESBranchFlag(43:10) -> ESBranchFlag
+#4: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 1, target rnd 10
 
-ESFlagOperation(22:12) -> ESFlagOperation
+#5: ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b1
 
-ESBranchLevel(34:24) -> ESBranchLevel
+#6: ESBranchLevel(34:24) -> ESBranchLevel
 Branch on level = 4, target rnd 8
 
-ESAbsorbAttribute(53:7358) -> Heianhushenfu
+#7: ESAbsorbAttribute(53:7358) -> Heianhushenfu
 Absorb Dark damage for 2 turns
 
-ESStatusShield(20:7376) -> Hushenfu
+#8: ESStatusShield(20:7376) -> Hushenfu
 Voids status ailments for 1 turns
 
-ESEndPath(36:26) -> ESEndPath
+#9: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESOrbLock(94:7381) -> Heianshufu
+#10: ESOrbLock(94:7381) -> Heianshufu
 Condition: When < 50% hp , one-time use (ai:100 rnd:0) (one-time: 1)
 Lock all Dark orbs, Deal 50% damage
 
-ESAttackUPRemainingEnemies(17:7353) -> Fennu
+#11: ESAttackUPRemainingEnemies(17:7353) -> Fennu
 Condition: when <= 1 enemies remain (ai:100 rnd:0)
 Increase damage to 150% for the next 999 turns
 
-ESBranchFlag(43:10) -> ESBranchFlag
+#12: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 2, target rnd 16
 
-ESFlagOperation(22:12) -> ESFlagOperation
+#13: ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b11
 
-ESJammerChangeRandom(13:7351) -> Yaoshu
+#14: ESJammerChangeRandom(13:7351) -> Yaoshu
 Change Random 2 to Jammer, Deal 80% damage
 
-ESEndPath(36:26) -> ESEndPath
+#15: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESBranchFlag(43:10) -> ESBranchFlag
+#16: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 4, target rnd 20
 
-ESFlagOperation(22:12) -> ESFlagOperation
+#17: ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b111
 
-ESAttackMultihit(15:7352) -> Gongji
+#18: ESAttackMultihit(15:7352) -> Gongji
 Deal 100% damage (2 hits, 50% each)
 
-ESEndPath(36:26) -> ESEndPath
+#19: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESFlagOperation(24:14) -> ESFlagOperation
+#20: ESFlagOperation(24:14) -> ESFlagOperation
 flag UNSET 0b110
 
-ESInactivity(66:7360) -> Jumping, jumping
+#21: ESInactivity(66:7360) -> Jumping, jumping
 Do nothing
 
-ESEndPath(36:26) -> ESEndPath
+#22: ESEndPath(36:26) -> ESEndPath
 end_turn

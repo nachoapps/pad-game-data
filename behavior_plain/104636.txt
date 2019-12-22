@@ -4,46 +4,46 @@ new AI: True
 start/max counter: 3
 counter increment: 0
 
-ESPreemptive(49:318) -> ESPreemptive
+#1: ESPreemptive(49:318) -> ESPreemptive
 Enable preempt if level 1
 
-ESDebuffRCV(105:15324) -> ブレイクバースト
+#2: ESDebuffRCV(105:15324) -> ブレイクバースト
 Condition: One-time use (ai:100 rnd:0) (one-time: 2)
 Rcv 50% for 10 turns
 
-ESSetCounter(26:16) -> ESSetCounter
+#3: ESSetCounter(26:16) -> ESSetCounter
 counter + 1
 
-ESBranchHP(29:19) -> ESBranchHP
+#4: ESBranchHP(29:19) -> ESBranchHP
 Branch on hp > 51, target rnd 6
 
-ESAttackUPRemainingEnemies(17:15326) -> イグナイトブースト
+#5: ESAttackUPRemainingEnemies(17:15326) -> イグナイトブースト
 Condition: One-time use, when <= 1 enemies remain (ai:100 rnd:0) (one-time: 1)
 Increase damage to 120% for the next 999 turns
 
-ESBranchCounter(32:22) -> ESBranchCounter
+#6: ESBranchCounter(32:22) -> ESBranchCounter
 Branch on counter > 3, target rnd 9
 
-ESBombFixedSpawn(103:15325) -> カタストロフィブースター
+#7: ESBombFixedSpawn(103:15325) -> カタストロフィブースター
 Spawn Bomb orbs in the specified positions, Deal 100% damage
 
-ESEndPath(36:26) -> ESEndPath
+#8: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESSetCounter(25:15) -> ESSetCounter
+#9: ESSetCounter(25:15) -> ESSetCounter
 counter = 0
 
-ESSkillDelay(89:15710) -> イグニッションバースト
+#10: ESSkillDelay(89:15710) -> イグニッションバースト
 Delay active skills by 6 turns
 
-ESEndPath(36:26) -> ESEndPath
+#11: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESTypeResist(118:15707) -> バランス半減
+#12: ESTypeResist(118:15707) -> バランス半減
 Reduce damage from Balanced by 50%
 
-ESTypeResist(118:15708) -> 攻撃半減
+#13: ESTypeResist(118:15708) -> 攻撃半減
 Reduce damage from Attacker by 50%
 
-ESTypeResist(118:15709) -> 悪魔半減
+#14: ESTypeResist(118:15709) -> 悪魔半減
 Reduce damage from Devil by 50%

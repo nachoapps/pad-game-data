@@ -4,83 +4,83 @@ new AI: True
 start/max counter: 0
 counter increment: 0
 
-ESPreemptive(49:3402) -> ESPreemptive
+#1: ESPreemptive(49:3402) -> ESPreemptive
 Enable preempt if level 4
 
-ESBranchLevel(35:25) -> ESBranchLevel
+#2: ESBranchLevel(35:25) -> ESBranchLevel
 Branch on level > 4, target rnd 4
 
-ESEndPath(36:26) -> ESEndPath
+#3: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESBranchFlag(43:10) -> ESBranchFlag
+#4: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 1, target rnd 8
 
-ESFlagOperation(22:12) -> ESFlagOperation
+#5: ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b1
 
-SkillSet:
+#6: SkillSet:
 	[0] ESInactivity(66:3922) -> Without power what future
 can you claim?
 	Do nothing
 	[1] ESDamageShield(74:3923) -> Protect
 	Reduce damage from all sources by 50% for 3 turns
 
-ESEndPath(36:26) -> ESEndPath
+#7: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESBranchHP(28:18) -> ESBranchHP
+#8: ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 70, target rnd 17
 
-ESBranchFlag(43:10) -> ESBranchFlag
+#9: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 2, target rnd 12
 
-ESFlagOperation(22:12) -> ESFlagOperation
+#10: ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b11
 
-ESRandomSpawn(92:3926) -> Kick
+#11: ESRandomSpawn(92:3926) -> Kick
 Condition: When fire, water, wood, light, dark, heal, poison, mortal poison orbs are on the board (ai:100 rnd:0)
 Spawn random 1 Jammer orbs, Deal 100% damage
 
-ESBranchFlag(43:10) -> ESBranchFlag
+#12: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 4, target rnd 15
 
-ESFlagOperation(22:12) -> ESFlagOperation
+#13: ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b111
 
-ESRandomSpawn(92:3929) -> Lunge
+#14: ESRandomSpawn(92:3929) -> Lunge
 Condition: When fire, water, wood, light, dark, heal, poison, mortal poison orbs are on the board (ai:100 rnd:0)
 Spawn random 5 Jammer orbs, Deal 150% damage
 
-ESFlagOperation(24:14) -> ESFlagOperation
+#15: ESFlagOperation(24:14) -> ESFlagOperation
 flag UNSET 0b110
 
-ESOrbLock(94:3928) -> Sentence
+#16: ESOrbLock(94:3928) -> Sentence
 Lock 6 random Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs, Deal 150% damage
 
-ESBranchFlag(43:10) -> ESBranchFlag
+#17: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 8, target rnd 20
 
-ESFlagOperation(22:12) -> ESFlagOperation
+#18: ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b1111
 
-SkillSet:
+#19: SkillSet:
 	[0] ESInactivity(66:3930) -> Preen and strut as you like!
 	Do nothing
 	[1] ESStatusShield(20:3932) -> Anti-Magick
 	Voids status ailments for 999 turns
 
-ESOrbLock(94:3927) -> Judgment
+#20: ESOrbLock(94:3927) -> Judgment
 Condition: 20% chance (ai:20 rnd:0)
 Lock all Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs, Deal 130% damage
 
-ESRowSpawnMulti(79:3925) -> Execution
+#21: ESRowSpawnMulti(79:3925) -> Execution
 Change 1st, 5th row to Dark orbs, Deal 180% damage
 
-ESEndPath(36:26) -> ESEndPath
+#22: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-SkillSet:
+#23: SkillSet:
 	Condition: On death (ai:100 rnd:0)
 	[0] ESInactivity(66:3931) -> You, too, would leave
 your debts unpaid?

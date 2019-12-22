@@ -4,69 +4,69 @@ new AI: True
 start/max counter: 1
 counter increment: 1
 
-ESPreemptive(49:318) -> ESPreemptive
+#1: ESPreemptive(49:318) -> ESPreemptive
 Enable preempt if level 1
 
-ESBranchFlag(43:10) -> ESBranchFlag
+#2: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 1, target rnd 6
 
-ESFlagOperation(22:12) -> ESFlagOperation
+#3: ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b1
 
-SkillSet:
+#4: SkillSet:
 	[0] ESAbsorbCombo(67:11502) -> Ok, who's next?
 	Absorb combo <= 6 damage for 5 turns
 	[1] ESDebuffMovetime(39:11503) -> Ok then. Let's finish it.
 	Movetime -3s for 5 turns
 
-ESEndPath(36:26) -> ESEndPath
+#5: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESBranchHP(28:18) -> ESBranchHP
+#6: ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 20, target rnd 16
 
-ESBranchHP(28:18) -> ESBranchHP
+#7: ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 50, target rnd 12
 
-ESAttackMultihit(15:11504) -> Move!
+#8: ESAttackMultihit(15:11504) -> Move!
 Condition: 34% chance (ai:0 rnd:34)
 Deal 120% damage (2 hits, 60% each)
 
-ESColumnSpawnMulti(77:11505) -> Haaaaaaaa!
+#9: ESColumnSpawnMulti(77:11505) -> Haaaaaaaa!
 Condition: 33% chance (ai:0 rnd:33)
 Change 1st column to Water orbs, 6th column to Dark orbs, Deal 100% damage
 
-ESRowSpawnMulti(79:11506) -> Haaargh!
+#10: ESRowSpawnMulti(79:11506) -> Haaargh!
 Condition: 33% chance (ai:0 rnd:33)
 Change 1st row to Water orbs, 5th row to Dark orbs, Deal 100% damage
 
-ESEndPath(36:26) -> ESEndPath
+#11: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESBranchFlag(43:10) -> ESBranchFlag
+#12: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 2, target rnd 8
 
-ESFlagOperation(22:12) -> ESFlagOperation
+#13: ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b11
 
-ESBindAwoken(88:11507) -> This isn't some in-game duel.
+#14: ESBindAwoken(88:11507) -> This isn't some in-game duel.
 Bind awoken skills for 2 turns
 
-ESEndPath(36:26) -> ESEndPath
+#15: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-SkillSet:
+#16: SkillSet:
 	Condition: One-time use (ai:100 rnd:0) (one-time: 1)
 	[0] ESBlind(5:11509) -> Oh, crap!
 	Blind all orbs on the board
 	[1] ESOrbLock(94:11510) -> This will take forever...
 	Lock all Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs
 
-SkillSet:
+#17: SkillSet:
 	[0] ESAttackUPRemainingEnemies(17:11512) -> Not yet...
 	Increase damage to 150% for the next 1 turns
 	[1] ESAttackMultihit(15:11513) -> Starburst...Stream!
 	Deal 200% damage (8 hits, 25% each)
 
-ESEndPath(36:26) -> ESEndPath
+#18: ESEndPath(36:26) -> ESEndPath
 end_turn

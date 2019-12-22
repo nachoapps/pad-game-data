@@ -4,16 +4,16 @@ new AI: True
 start/max counter: 1
 counter increment: 1
 
-ESPreemptive(49:318) -> ESPreemptive
+#1: ESPreemptive(49:318) -> ESPreemptive
 Enable preempt if level 1
 
-ESBranchFlag(43:10) -> ESBranchFlag
+#2: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 1, target rnd 6
 
-ESFlagOperation(22:12) -> ESFlagOperation
+#3: ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b1
 
-SkillSet:
+#4: SkillSet:
 	[0] ESStatusShield(20:10549) -> Here I go, Máni!
 	Voids status ailments for 999 turns
 	[1] ESSkyfall(96:10550) -> OK, Sól!
@@ -21,105 +21,105 @@ SkillSet:
 	[2] ESOrbLock(94:10551) -> Inseparable Sides
 	Lock all Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs
 
-ESEndPath(36:26) -> ESEndPath
+#5: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESBranchHP(28:18) -> ESBranchHP
+#6: ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 50, target rnd 12
 
-SkillSet:
+#7: SkillSet:
 	Condition: 25% chance (ai:0 rnd:25)
 	[0] ESOrbChangeAttack(48:10555) -> Noctilucence
 	Change Random to Heal, Deal 90% damage
 	[1] ESBlind(62:10553) -> Gloom
 	Blind all orbs on the board, Deal 60% damage
 
-SkillSet:
+#8: SkillSet:
 	Condition: 25% chance (ai:0 rnd:25)
 	[0] ESPoisonChangeRandomAttack(64:10556) -> Rotting Heat
 	Change Random 3 to Poison, Deal 65% damage
 	[1] ESBlind(62:10553) -> Gloom
 	Blind all orbs on the board, Deal 60% damage
 
-SkillSet:
+#9: SkillSet:
 	Condition: 25% chance (ai:0 rnd:25)
 	[0] ESOrbChangeAttack(48:10555) -> Noctilucence
 	Change Random to Heal, Deal 90% damage
 	[1] ESBindAttack(63:10554) -> Drought
 	Bind 1 random subs for 1 turns, Deal 60% damage
 
-SkillSet:
+#10: SkillSet:
 	Condition: 25% chance (ai:0 rnd:25)
 	[0] ESPoisonChangeRandomAttack(64:10556) -> Rotting Heat
 	Change Random 3 to Poison, Deal 65% damage
 	[1] ESBindAttack(63:10554) -> Drought
 	Bind 1 random subs for 1 turns, Deal 60% damage
 
-ESEndPath(36:26) -> ESEndPath
+#11: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESBranchFlag(43:10) -> ESBranchFlag
+#12: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 2, target rnd 16
 
-ESFlagOperation(22:12) -> ESFlagOperation
+#13: ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b11
 
-SkillSet:
+#14: SkillSet:
 	[0] ESSkillDelay(89:10561) -> Rúro Pari
 	Delay active skills by 3 turns
 	[1] ESAttackMultihit(15:10562) -> Synchronized Burst
 	Deal 80% damage (4 hits, 20% each)
 
-ESEndPath(36:26) -> ESEndPath
+#15: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESBranchHP(28:18) -> ESBranchHP
+#16: ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 10, target rnd 22
 
-SkillSet:
+#17: SkillSet:
 	Condition: One-time use (ai:0 rnd:25) (one-time: 1)
 	[0] ESAttackMultihit(15:10562) -> Synchronized Burst
 	Deal 80% damage (4 hits, 20% each)
 	[1] ESBlind(62:10553) -> Gloom
 	Blind all orbs on the board, Deal 60% damage
 
-SkillSet:
+#18: SkillSet:
 	Condition: One-time use (ai:0 rnd:25) (one-time: 1)
 	[0] ESAttackMultihit(15:10562) -> Synchronized Burst
 	Deal 80% damage (4 hits, 20% each)
 	[1] ESBindAttack(63:10554) -> Drought
 	Bind 1 random subs for 1 turns, Deal 60% damage
 
-SkillSet:
+#19: SkillSet:
 	Condition: 25% chance (ai:0 rnd:25)
 	[0] ESGravity(50:10564) -> Deteri
 	Player -75% HP
 	[1] ESBlind(62:10553) -> Gloom
 	Blind all orbs on the board, Deal 60% damage
 
-SkillSet:
+#20: SkillSet:
 	Condition: 25% chance (ai:0 rnd:25)
 	[0] ESGravity(50:10564) -> Deteri
 	Player -75% HP
 	[1] ESBindAttack(63:10554) -> Drought
 	Bind 1 random subs for 1 turns, Deal 60% damage
 
-ESEndPath(36:26) -> ESEndPath
+#21: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-SkillSet:
+#22: SkillSet:
 	[0] ESChangeAttribute(46:10569) -> Dusk
 	Change own attribute to random one of Fire, Water, Wood, Light, Dark
 	[1] ESAttackMultihit(15:10570) -> Demina Miracle
 	Deal 2500% damage (5 hits, 500% each)
 
-ESEndPath(36:26) -> ESEndPath
+#23: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESAttributeResist(72:10548) -> Light & Wood Resistance
+#24: ESAttributeResist(72:10548) -> Light & Wood Resistance
 Reduce damage from Wood, Light by 50%
 
-SkillSet:
+#25: SkillSet:
 	Condition: On death (ai:0 rnd:0)
 	[0] ESSkillDelay(89:14499) -> Heavenly Sin
 	Delay active skills by 10 turns

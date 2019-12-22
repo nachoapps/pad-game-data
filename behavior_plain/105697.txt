@@ -4,67 +4,67 @@ new AI: True
 start/max counter: 3
 counter increment: 0
 
-ESPreemptive(49:3402) -> ESPreemptive
+#1: ESPreemptive(49:3402) -> ESPreemptive
 Enable preempt if level 4
 
-ESBranchLevel(35:25) -> ESBranchLevel
+#2: ESBranchLevel(35:25) -> ESBranchLevel
 Branch on level > 4, target rnd 4
 
-ESEndPath(36:26) -> ESEndPath
+#3: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESBranchFlag(43:10) -> ESBranchFlag
+#4: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 1, target rnd 8
 
-ESFlagOperation(22:12) -> ESFlagOperation
+#5: ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b1
 
-SkillSet:
+#6: SkillSet:
 	Condition: One-time use (ai:100 rnd:0) (one-time: 2)
 	[0] ESStatusShield(20:15160) -> チェンジ、シンカリオン！
 	Voids status ailments for 999 turns
 	[1] ESBlindStickyRandom(97:15271) -> 話は読めた！
 	Blind random 3 orbs for 10 turns
 
-ESEndPath(36:26) -> ESEndPath
+#7: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESBranchHP(28:18) -> ESBranchHP
+#8: ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 50, target rnd 12
 
-ESColumnSpawnMulti(77:15163) -> フミキリガン バーナーモード
+#9: ESColumnSpawnMulti(77:15163) -> フミキリガン バーナーモード
 Condition: 50% chance (ai:50 rnd:0)
 Change 1st column to Fire orbs, Deal 70% damage
 
-ESAttackMultihit(15:15161) -> フミキリガン
+#10: ESAttackMultihit(15:15161) -> フミキリガン
 Deal 50% damage (2 hits, 25% each)
 
-ESEndPath(36:26) -> ESEndPath
+#11: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESBranchCounter(32:22) -> ESBranchCounter
+#12: ESBranchCounter(32:22) -> ESBranchCounter
 Branch on counter > 1, target rnd 16
 
-ESSetCounter(26:16) -> ESSetCounter
+#13: ESSetCounter(26:16) -> ESSetCounter
 counter + 1
 
-ESFixedStart(101:15164) -> さっさと終わらせるぞ
+#14: ESFixedStart(101:15164) -> さっさと終わらせるぞ
 Fix orb movement starting point to random position on the board
 
-ESEndPath(36:26) -> ESEndPath
+#15: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESBoardChangeAttackBits(85:15165) -> フミキリキャノン
+#16: ESBoardChangeAttackBits(85:15165) -> フミキリキャノン
 Condition: 34% chance (ai:0 rnd:34)
 Change all orbs to Fire, Deal 80% damage
 
-ESColumnSpawnMulti(77:15163) -> フミキリガン バーナーモード
+#17: ESColumnSpawnMulti(77:15163) -> フミキリガン バーナーモード
 Condition: 33% chance (ai:0 rnd:33)
 Change 1st column to Fire orbs, Deal 70% damage
 
-ESAttackMultihit(15:15161) -> フミキリガン
+#18: ESAttackMultihit(15:15161) -> フミキリガン
 Condition: 33% chance (ai:0 rnd:33)
 Deal 50% damage (2 hits, 25% each)
 
-ESEndPath(36:26) -> ESEndPath
+#19: ESEndPath(36:26) -> ESEndPath
 end_turn

@@ -4,120 +4,120 @@ new AI: True
 start/max counter: 1
 counter increment: 0
 
-ESPreemptive(49:318) -> ESPreemptive
+#1: ESPreemptive(49:318) -> ESPreemptive
 Enable preempt if level 1
 
-ESBranchFlag(43:10) -> ESBranchFlag
+#2: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 1, target rnd 8
 
-ESFlagOperation(22:12) -> ESFlagOperation
+#3: ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b1
 
-ESBranchCard(90:11181) -> ESBranchCard
+#4: ESBranchCard(90:11181) -> ESBranchCard
 Branch on player_cards HAS [4806, 4807, 4808, 4809], target rnd 6
 
-SkillSet:
+#5: SkillSet:
 	[0] ESStatusShield(20:11178) -> Oh, you came to the right place!
 	Voids status ailments for 999 turns
 	[1] ESVoidShield(71:11179) -> Receive my training!
 	Void damage >= 8000000 for 99 turns
 
-SkillSet:
+#6: SkillSet:
 	[0] ESStatusShield(20:11178) -> Oh, you came to the right place!
 	Voids status ailments for 999 turns
 	[1] ESVoidShield(71:11180) -> I will train diligently today
 	Void damage >= 8000000 for 99 turns
 
-ESEndPath(36:26) -> ESEndPath
+#7: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESBranchFlag(43:10) -> ESBranchFlag
+#8: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 2, target rnd 12
 
-ESFlagOperation(22:12) -> ESFlagOperation
+#9: ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b11
 
-SkillSet:
+#10: SkillSet:
 	[0] ESAbsorbCombo(67:11183) -> Come at me with all your strength!
 	Absorb combo <= 7 damage for 1 turns
 	[1] ESDamageShield(74:11184) -> Your attacks won't get through
 	Reduce damage from all sources by 75% for 1 turns
 
-ESEndPath(36:26) -> ESEndPath
+#11: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESBranchFlag(43:10) -> ESBranchFlag
+#12: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 4, target rnd 18
 
-ESFlagOperation(22:12) -> ESFlagOperation
+#13: ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b111
 
-ESBranchCombo(113:6528) -> ESBranchCombo
+#14: ESBranchCombo(113:6528) -> ESBranchCombo
 Branch on combo >= 8, target rnd 16
 
-SkillSet:
+#15: SkillSet:
 	[0] ESDebuffMovetime(39:11186) -> I've not had my full of training yet!
 	Movetime 200% for 3 turns
 	[1] ESAbsorbCombo(67:11187) -> Train properly!
 	Absorb combo <= 7 damage for 10 turns
 
-SkillSet:
+#16: SkillSet:
 	[0] ESDebuffRCV(105:11189) -> Well, this has a lot of promise
 	Rcv 200% for 3 turns
 	[1] ESDamageShield(74:11190) -> Come and fight me!
 	Reduce damage from all sources by 75% for 99 turns
 
-ESEndPath(36:26) -> ESEndPath
+#17: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESBranchHP(29:19) -> ESBranchHP
+#18: ESBranchHP(29:19) -> ESBranchHP
 Branch on hp > 100, target rnd 28
 
-ESBranchHP(28:18) -> ESBranchHP
+#19: ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 20, target rnd 25
 
-ESBranchHP(28:18) -> ESBranchHP
+#20: ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 50, target rnd 28
 
-ESSkillDelay(89:11192) -> Put your back into it!
+#21: ESSkillDelay(89:11192) -> Put your back into it!
 Condition: 33% chance (ai:0 rnd:33)
 Delay active skills by 2 turns, Deal 100% damage
 
-ESBindRandomSub(65:11193) -> What's wrong? Shameful display!
+#22: ESBindRandomSub(65:11193) -> What's wrong? Shameful display!
 Condition: 33% chance (ai:0 rnd:33)
 Bind 3 random subs for 2 turns, Deal 95% damage
 
-ESAttackMultihit(15:11194) -> No time to rest!
+#23: ESAttackMultihit(15:11194) -> No time to rest!
 Condition: 34% chance (ai:0 rnd:34)
 Deal 108% damage (4 hits, 27% each)
 
-ESEndPath(36:26) -> ESEndPath
+#24: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESRecoverPlayer(55:11195) -> Catch your breath!
+#25: ESRecoverPlayer(55:11195) -> Catch your breath!
 Condition: One-time use (ai:100 rnd:0) (one-time: 1)
 Player recover 100% hp
 
-ESAttackMultihit(15:11196) -> Will you survive my attack?
+#26: ESAttackMultihit(15:11196) -> Will you survive my attack?
 Deal 280% damage (8 hits, 35% each)
 
-ESEndPath(36:26) -> ESEndPath
+#27: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESBranchFlag(43:10) -> ESBranchFlag
+#28: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 8, target rnd 21
 
-ESFlagOperation(22:12) -> ESFlagOperation
+#29: ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b1111
 
-ESAttackUPRemainingEnemies(17:11191) -> Not enough fighting spirit!
+#30: ESAttackUPRemainingEnemies(17:11191) -> Not enough fighting spirit!
 Condition: when <= 1 enemies remain (ai:100 rnd:0)
 Increase damage to 150% for the next 99 turns
 
-ESEndPath(36:26) -> ESEndPath
+#31: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-SkillSet:
+#32: SkillSet:
 	Condition: On death (ai:0 rnd:0)
 	[0] ESInactivity(66:11197) -> What? You're on an errand?
 	Do nothing

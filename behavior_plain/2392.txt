@@ -4,16 +4,16 @@ new AI: True
 start/max counter: 1
 counter increment: 0
 
-ESPreemptive(49:318) -> ESPreemptive
+#1: ESPreemptive(49:318) -> ESPreemptive
 Enable preempt if level 1
 
-ESBranchFlag(43:10) -> ESBranchFlag
+#2: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 1, target rnd 6
 
-ESFlagOperation(22:12) -> ESFlagOperation
+#3: ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b1
 
-SkillSet:
+#4: SkillSet:
 	[0] ESStatusShield(20:10527) -> Do you mean to challenge me?
 	Voids status ailments for 999 turns
 	[1] ESOrbSealRow(100:10528) -> Just the right time to warm up
@@ -21,62 +21,62 @@ SkillSet:
 	[2] ESAbsorbCombo(67:10529) -> You can really do it?
 	Absorb combo <= 6 damage for 10 turns
 
-ESEndPath(36:26) -> ESEndPath
+#5: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESBranchCounter(32:22) -> ESBranchCounter
+#6: ESBranchCounter(32:22) -> ESBranchCounter
 Branch on counter > 1, target rnd 18
 
-ESBranchHP(28:18) -> ESBranchHP
+#7: ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 50, target rnd 12
 
-ESOrbChangeAttackBits(108:10531) -> Sæhrimnir
+#8: ESOrbChangeAttackBits(108:10531) -> Sæhrimnir
 Change Jammer to Heal, Deal 140% damage
 
-ESRandomSpawn(92:10532) -> Drómi Call
+#9: ESRandomSpawn(92:10532) -> Drómi Call
 Condition: 50% chance & when Water, Wood, Light, Dark, Heal, Poison, Mortal Poison orbs are on the board (ai:0 rnd:50)
 Spawn random 4 Fire, Jammer orbs, Deal 100% damage
 
-ESColumnSpawnMulti(77:10533) -> Glær Svalinn
+#10: ESColumnSpawnMulti(77:10533) -> Glær Svalinn
 Condition: 50% chance (ai:0 rnd:50)
 Change 2nd, 5th column to Fire, Water orbs, Deal 90% damage
 
-ESEndPath(36:26) -> ESEndPath
+#11: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESBranchHP(28:18) -> ESBranchHP
+#12: ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 20, target rnd 17
 
-ESBranchFlag(43:10) -> ESBranchFlag
+#13: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 2, target rnd 8
 
-ESFlagOperation(22:12) -> ESFlagOperation
+#14: ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b11
 
-SkillSet:
+#15: SkillSet:
 	[0] ESOrbLock(94:10534) -> This just became interesting!
 	Lock all Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs
 	[1] ESDebuffMovetime(39:10535) -> Can you still fight?
 	Movetime -4s for 5 turns
 
-ESEndPath(36:26) -> ESEndPath
+#16: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESSetCounter(26:16) -> ESSetCounter
+#17: ESSetCounter(26:16) -> ESSetCounter
 counter + 1
 
-SkillSet:
+#18: SkillSet:
 	Condition: One-time use (ai:100 rnd:0) (one-time: 1)
 	[0] ESBindRandom(1:10537) -> Next, victory will be achieved!
 	Bind 6 random cards for 2 turns
 	[1] ESRandomSpawn(92:10538) -> This is your last rest
 	Change all orbs to Heal
 
-ESAttackMultihit(15:10540) -> Reginna Hel
+#19: ESAttackMultihit(15:10540) -> Reginna Hel
 Deal 1200% damage (4 hits, 300% each)
 
-ESEndPath(36:26) -> ESEndPath
+#20: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESResolve(73:10526) -> Resolve
+#21: ESResolve(73:10526) -> Resolve
 Survive attacks with 1 HP when HP > 50%

@@ -4,16 +4,16 @@ new AI: True
 start/max counter: 15
 counter increment: 0
 
-ESPreemptive(49:318) -> ESPreemptive
+#1: ESPreemptive(49:318) -> ESPreemptive
 Enable preempt if level 1
 
-ESBranchFlag(43:10) -> ESBranchFlag
+#2: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 1, target rnd 11
 
-ESFlagOperation(22:12) -> ESFlagOperation
+#3: ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b1
 
-SkillSet:
+#4: SkillSet:
 	Condition: 17% chance (ai:0 rnd:17)
 	[0] ESStatusShield(20:4152) -> Ark Scales
 	Voids status ailments for 999 turns
@@ -22,7 +22,7 @@ SkillSet:
 	[2] ESAbsorbAttribute(53:4153) -> Blue Sky Rainbow
 	Absorb Fire, Light damage for 1 turns
 
-SkillSet:
+#5: SkillSet:
 	Condition: 17% chance (ai:0 rnd:17)
 	[0] ESStatusShield(20:4152) -> Ark Scales
 	Voids status ailments for 999 turns
@@ -31,7 +31,7 @@ SkillSet:
 	[2] ESAbsorbAttribute(53:4154) -> Blue Sky Rainbow
 	Absorb Fire, Dark damage for 1 turns
 
-SkillSet:
+#6: SkillSet:
 	Condition: 17% chance (ai:0 rnd:17)
 	[0] ESStatusShield(20:4152) -> Ark Scales
 	Voids status ailments for 999 turns
@@ -40,7 +40,7 @@ SkillSet:
 	[2] ESAbsorbAttribute(53:4155) -> Blue Sky Rainbow
 	Absorb Water, Light damage for 1 turns
 
-SkillSet:
+#7: SkillSet:
 	Condition: 17% chance (ai:0 rnd:17)
 	[0] ESStatusShield(20:4152) -> Ark Scales
 	Voids status ailments for 999 turns
@@ -49,7 +49,7 @@ SkillSet:
 	[2] ESAbsorbAttribute(53:4156) -> Blue Sky Rainbow
 	Absorb Water, Dark damage for 1 turns
 
-SkillSet:
+#8: SkillSet:
 	Condition: 16% chance (ai:0 rnd:16)
 	[0] ESStatusShield(20:4152) -> Ark Scales
 	Voids status ailments for 999 turns
@@ -58,7 +58,7 @@ SkillSet:
 	[2] ESAbsorbAttribute(53:4157) -> Blue Sky Rainbow
 	Absorb Wood, Light damage for 1 turns
 
-SkillSet:
+#9: SkillSet:
 	Condition: 16% chance (ai:0 rnd:16)
 	[0] ESStatusShield(20:4152) -> Ark Scales
 	Voids status ailments for 999 turns
@@ -67,10 +67,10 @@ SkillSet:
 	[2] ESAbsorbAttribute(53:4158) -> Blue Sky Rainbow
 	Absorb Wood, Dark damage for 1 turns
 
-ESEndPath(36:26) -> ESEndPath
+#10: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-SkillSet:
+#11: SkillSet:
 	Condition: When < 10% hp (ai:100 rnd:0)
 	[0] ESDamageShield(74:4185) -> Retreat Ark
 	Reduce damage from all sources by 75% for 1 turns
@@ -79,7 +79,7 @@ SkillSet:
 	[2] ESAttackMultihit(15:4195) -> Final Judgement
 	Deal 3000% damage (3 hits, 1000% each)
 
-SkillSet:
+#12: SkillSet:
 	Condition: When < 90% hp , one-time use (ai:100 rnd:0) (one-time: 8)
 	[0] ESDamageShield(74:4185) -> Retreat Ark
 	Reduce damage from all sources by 75% for 1 turns
@@ -88,7 +88,7 @@ SkillSet:
 	[2] ESBoardChangeAttackBits(85:4191) -> First Judgement
 	Change all orbs to Fire, Water, Wood, Light, Dark, Deal 450% damage
 
-SkillSet:
+#13: SkillSet:
 	Condition: When < 70% hp , one-time use (ai:100 rnd:0) (one-time: 4)
 	[0] ESDamageShield(74:4185) -> Retreat Ark
 	Reduce damage from all sources by 75% for 1 turns
@@ -97,7 +97,7 @@ SkillSet:
 	[2] ESBoardChangeAttackBits(85:4192) -> Second Judgement
 	Change all orbs to Fire, Water, Wood, Light, Dark, Deal 600% damage
 
-SkillSet:
+#14: SkillSet:
 	Condition: When < 50% hp , one-time use (ai:100 rnd:0) (one-time: 2)
 	[0] ESDamageShield(74:4185) -> Retreat Ark
 	Reduce damage from all sources by 75% for 1 turns
@@ -106,7 +106,7 @@ SkillSet:
 	[2] ESAttackMultihit(15:4193) -> Third Judgement
 	Deal 1200% damage (3 hits, 400% each)
 
-SkillSet:
+#15: SkillSet:
 	Condition: When < 30% hp , one-time use (ai:100 rnd:0) (one-time: 1)
 	[0] ESDamageShield(74:4185) -> Retreat Ark
 	Reduce damage from all sources by 75% for 1 turns
@@ -115,10 +115,10 @@ SkillSet:
 	[2] ESBoardChangeAttackBits(85:4194) -> Fourth Judgement
 	Change all orbs to Fire, Water, Wood, Light, Dark, Deal 2000% damage
 
-ESBranchHP(28:18) -> ESBranchHP
+#16: ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 50, target rnd 30
 
-SkillSet:
+#17: SkillSet:
 	Condition: 8% chance (ai:0 rnd:8)
 	[0] ESAbsorbAttribute(53:4153) -> Blue Sky Rainbow
 	Absorb Fire, Light damage for 1 turns
@@ -127,7 +127,7 @@ SkillSet:
 	[2] ESBindAttack(63:4170) -> Strand Sacrifice
 	Bind 1 random subs for 1 turns, Deal 50% damage
 
-SkillSet:
+#18: SkillSet:
 	Condition: 8% chance (ai:0 rnd:8)
 	[0] ESAbsorbAttribute(53:4153) -> Blue Sky Rainbow
 	Absorb Fire, Light damage for 1 turns
@@ -136,7 +136,7 @@ SkillSet:
 	[2] ESBindAttack(63:4170) -> Strand Sacrifice
 	Bind 1 random subs for 1 turns, Deal 50% damage
 
-SkillSet:
+#19: SkillSet:
 	Condition: 8% chance (ai:0 rnd:8)
 	[0] ESAbsorbAttribute(53:4154) -> Blue Sky Rainbow
 	Absorb Fire, Dark damage for 1 turns
@@ -145,7 +145,7 @@ SkillSet:
 	[2] ESBindAttack(63:4170) -> Strand Sacrifice
 	Bind 1 random subs for 1 turns, Deal 50% damage
 
-SkillSet:
+#20: SkillSet:
 	Condition: 8% chance (ai:0 rnd:8)
 	[0] ESAbsorbAttribute(53:4154) -> Blue Sky Rainbow
 	Absorb Fire, Dark damage for 1 turns
@@ -154,7 +154,7 @@ SkillSet:
 	[2] ESBindAttack(63:4170) -> Strand Sacrifice
 	Bind 1 random subs for 1 turns, Deal 50% damage
 
-SkillSet:
+#21: SkillSet:
 	Condition: 9% chance (ai:0 rnd:9)
 	[0] ESAbsorbAttribute(53:4155) -> Blue Sky Rainbow
 	Absorb Water, Light damage for 1 turns
@@ -163,7 +163,7 @@ SkillSet:
 	[2] ESBindAttack(63:4170) -> Strand Sacrifice
 	Bind 1 random subs for 1 turns, Deal 50% damage
 
-SkillSet:
+#22: SkillSet:
 	Condition: 9% chance (ai:0 rnd:9)
 	[0] ESAbsorbAttribute(53:4155) -> Blue Sky Rainbow
 	Absorb Water, Light damage for 1 turns
@@ -172,7 +172,7 @@ SkillSet:
 	[2] ESBindAttack(63:4170) -> Strand Sacrifice
 	Bind 1 random subs for 1 turns, Deal 50% damage
 
-SkillSet:
+#23: SkillSet:
 	Condition: 9% chance (ai:0 rnd:9)
 	[0] ESAbsorbAttribute(53:4156) -> Blue Sky Rainbow
 	Absorb Water, Dark damage for 1 turns
@@ -181,7 +181,7 @@ SkillSet:
 	[2] ESBindAttack(63:4170) -> Strand Sacrifice
 	Bind 1 random subs for 1 turns, Deal 50% damage
 
-SkillSet:
+#24: SkillSet:
 	Condition: 9% chance (ai:0 rnd:9)
 	[0] ESAbsorbAttribute(53:4156) -> Blue Sky Rainbow
 	Absorb Water, Dark damage for 1 turns
@@ -190,7 +190,7 @@ SkillSet:
 	[2] ESBindAttack(63:4170) -> Strand Sacrifice
 	Bind 1 random subs for 1 turns, Deal 50% damage
 
-SkillSet:
+#25: SkillSet:
 	Condition: 8% chance (ai:0 rnd:8)
 	[0] ESAbsorbAttribute(53:4157) -> Blue Sky Rainbow
 	Absorb Wood, Light damage for 1 turns
@@ -199,7 +199,7 @@ SkillSet:
 	[2] ESBindAttack(63:4170) -> Strand Sacrifice
 	Bind 1 random subs for 1 turns, Deal 50% damage
 
-SkillSet:
+#26: SkillSet:
 	Condition: 8% chance (ai:0 rnd:8)
 	[0] ESAbsorbAttribute(53:4157) -> Blue Sky Rainbow
 	Absorb Wood, Light damage for 1 turns
@@ -208,7 +208,7 @@ SkillSet:
 	[2] ESBindAttack(63:4170) -> Strand Sacrifice
 	Bind 1 random subs for 1 turns, Deal 50% damage
 
-SkillSet:
+#27: SkillSet:
 	Condition: 8% chance (ai:0 rnd:8)
 	[0] ESAbsorbAttribute(53:4158) -> Blue Sky Rainbow
 	Absorb Wood, Dark damage for 1 turns
@@ -217,7 +217,7 @@ SkillSet:
 	[2] ESBindAttack(63:4170) -> Strand Sacrifice
 	Bind 1 random subs for 1 turns, Deal 50% damage
 
-SkillSet:
+#28: SkillSet:
 	Condition: 8% chance (ai:0 rnd:8)
 	[0] ESAbsorbAttribute(53:4158) -> Blue Sky Rainbow
 	Absorb Wood, Dark damage for 1 turns
@@ -226,10 +226,10 @@ SkillSet:
 	[2] ESBindAttack(63:4170) -> Strand Sacrifice
 	Bind 1 random subs for 1 turns, Deal 50% damage
 
-ESEndPath(36:26) -> ESEndPath
+#29: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-SkillSet:
+#30: SkillSet:
 	[0] ESOrbChangeAttack(48:4183) -> Rainbow Blank
 	Change Random to Jammer, Deal 150% damage
 	[1] ESBindAttack(63:4170) -> Strand Sacrifice

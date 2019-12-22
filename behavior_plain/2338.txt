@@ -4,50 +4,50 @@ new AI: True
 start/max counter: 1
 counter increment: 0
 
-ESPreemptive(49:355) -> ESPreemptive
+#1: ESPreemptive(49:355) -> ESPreemptive
 Enable preempt if level 5
 
-ESBranchLevel(35:25) -> ESBranchLevel
+#2: ESBranchLevel(35:25) -> ESBranchLevel
 Branch on level > 5, target rnd 4
 
-ESEndPath(36:26) -> ESEndPath
+#3: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESBranchFlag(43:10) -> ESBranchFlag
+#4: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 1, target rnd 8
 
-ESFlagOperation(22:12) -> ESFlagOperation
+#5: ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b1
 
-ESDamageShield(74:3290) -> Heavy Shield
+#6: ESDamageShield(74:3290) -> Heavy Shield
 Reduce damage from all sources by 30% for 3 turns
 
-ESEndPath(36:26) -> ESEndPath
+#7: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESRecoverEnemyAlly(52:3235) -> Follow Repair
+#8: ESRecoverEnemyAlly(52:3235) -> Follow Repair
 Condition: when <= 1 enemies remain (ai:100 rnd:0)
 Enemy ally recover 45% hp
 
-ESAttackMultihit(15:3241) -> Limit Burst
+#9: ESAttackMultihit(15:3241) -> Limit Burst
 Condition: When < 10% hp (ai:100 rnd:0)
 Deal 1000% damage (2 hits, 500% each)
 
-ESSkillDelay(89:3240) -> Absorption
+#10: ESSkillDelay(89:3240) -> Absorption
 Condition: When < 80% hp , one-time use (ai:100 rnd:0) (one-time: 1)
 Delay active skills by 1 turns
 
-ESBlind(62:3291) -> Fog Bomb
+#11: ESBlind(62:3291) -> Fog Bomb
 Condition: 40% chance (ai:0 rnd:40)
 Blind all orbs on the board, Deal 100% damage
 
-ESRandomSpawn(92:3292) -> Poison Alternator
+#12: ESRandomSpawn(92:3292) -> Poison Alternator
 Condition: 40% chance & when Fire, Water, Wood, Light, Dark, Heal, Jammer, Mortal Poison orbs are on the board (ai:0 rnd:40)
 Spawn random 4 Poison orbs
 
-ESGravity(50:3293) -> Gravity Blast
+#13: ESGravity(50:3293) -> Gravity Blast
 Condition: 20% chance (ai:0 rnd:20)
 Player -75% HP
 
-ESEndPath(36:26) -> ESEndPath
+#14: ESEndPath(36:26) -> ESEndPath
 end_turn

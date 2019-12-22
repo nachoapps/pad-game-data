@@ -4,66 +4,66 @@ new AI: True
 start/max counter: 0
 counter increment: 0
 
-ESPreemptive(49:3402) -> ESPreemptive
+#1: ESPreemptive(49:3402) -> ESPreemptive
 Enable preempt if level 4
 
-ESBranchLevel(35:25) -> ESBranchLevel
+#2: ESBranchLevel(35:25) -> ESBranchLevel
 Branch on level > 4, target rnd 4
 
-ESEndPath(36:26) -> ESEndPath
+#3: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESDeathCry(69:10383) -> Spe Dun Dragon Light Transformation
+#4: ESDeathCry(69:10383) -> Spe Dun Dragon Light Transformation
 Condition: On death (ai:0 rnd:0)
 Show message: Goteene's appearance is changing|Help have been summoned
 
-ESBranchFlag(43:10) -> ESBranchFlag
+#5: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 1, target rnd 9
 
-ESFlagOperation(22:12) -> ESFlagOperation
+#6: ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b1
 
-ESBindSkill(14:10376) -> Holy Sealing Technique
+#7: ESBindSkill(14:10376) -> Holy Sealing Technique
 Bind active skills for 1 turns
 
-ESEndPath(36:26) -> ESEndPath
+#8: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESBranchHP(28:18) -> ESBranchHP
+#9: ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 20, target rnd 14
 
-ESOrbChangeAttack(48:10377) -> Light Pillar
+#10: ESOrbChangeAttack(48:10377) -> Light Pillar
 Condition: 33% chance (ai:0 rnd:33)
 Change Random to Light, Deal 110% damage
 
-ESSkillDelay(89:10378) -> Diminishing Rush
+#11: ESSkillDelay(89:10378) -> Diminishing Rush
 Condition: 33% chance (ai:0 rnd:33)
 Delay active skills by 1~2 turns, Deal 100% damage
 
-ESAttackMultihit(15:10379) -> Tradition
+#12: ESAttackMultihit(15:10379) -> Tradition
 Condition: 34% chance (ai:0 rnd:34)
 Deal 120% damage (3 hits, 40% each)
 
-ESEndPath(36:26) -> ESEndPath
+#13: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESBranchFlag(43:10) -> ESBranchFlag
+#14: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 2, target rnd 18
 
-ESFlagOperation(22:12) -> ESFlagOperation
+#15: ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b11
 
-SkillSet:
+#16: SkillSet:
 	[0] ESBindSkill(14:10376) -> Holy Sealing Technique
 	Bind active skills for 1 turns
 	[1] ESOrbSealRow(100:10380) -> Behavior Shield
 	Seal 5th row for 1 turns
 
-ESEndPath(36:26) -> ESEndPath
+#17: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESAttackMultihit(15:10382) -> Last Decision
+#18: ESAttackMultihit(15:10382) -> Last Decision
 Deal 165% damage (3 hits, 55% each)
 
-ESEndPath(36:26) -> ESEndPath
+#19: ESEndPath(36:26) -> ESEndPath
 end_turn

@@ -4,47 +4,47 @@ new AI: True
 start/max counter: 3
 counter increment: 0
 
-ESPreemptive(49:318) -> ESPreemptive
+#1: ESPreemptive(49:318) -> ESPreemptive
 Enable preempt if level 1
 
-ESOrbSealRow(100:14636) -> Let's do this, Poppy!
+#2: ESOrbSealRow(100:14636) -> Let's do this, Poppy!
 Condition: One-time use (ai:100 rnd:0) (one-time: 2)
 Seal 5th row for 3 turns
 
-ESBranchHP(28:18) -> ESBranchHP
+#3: ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 15, target rnd 9
 
-SkillSet:
+#4: SkillSet:
 	Condition: 25% chance (ai:0 rnd:25)
 	[0] ESBindAttack(63:14638) -> Machine Gun Dog
 	Bind 1 random subs for 1~2 turns, Deal 45% damage
 	[1] ESBindAttack(63:14639) -> Strike Heads
 	Bind 1 random subs for 1~2 turns, Deal 50% damage
 
-SkillSet:
+#5: SkillSet:
 	Condition: 25% chance (ai:0 rnd:25)
 	[0] ESAttackMultihit(15:14641) -> Replica Dog
 	Deal 50% damage
 	[1] ESAttackMultihit(15:14642) -> Replica Attack
 	Deal 55% damage
 
-ESRowSpawnMulti(79:14643) -> Rush Dog
+#6: ESRowSpawnMulti(79:14643) -> Rush Dog
 Condition: 25% chance (ai:0 rnd:25)
 Change 5th row to Water orbs, Deal 100% damage
 
-ESRowSpawnMulti(79:14644) -> Plasma Blade
+#7: ESRowSpawnMulti(79:14644) -> Plasma Blade
 Condition: 25% chance (ai:0 rnd:25)
 Change 3rd row to Light orbs, Deal 100% damage
 
-ESEndPath(36:26) -> ESEndPath
+#8: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESAttackMultihit(15:14646) -> Justice Impulse X
+#9: ESAttackMultihit(15:14646) -> Justice Impulse X
 Condition: One-time use (ai:50 rnd:0) (one-time: 1)
 Deal 250% damage (10 hits, 25% each)
 
-ESRandomSpawn(92:14645) -> Mega Plasma Factor
+#10: ESRandomSpawn(92:14645) -> Mega Plasma Factor
 Spawn random 7 Light orbs, Deal 220% damage
 
-ESEndPath(36:26) -> ESEndPath
+#11: ESEndPath(36:26) -> ESEndPath
 end_turn

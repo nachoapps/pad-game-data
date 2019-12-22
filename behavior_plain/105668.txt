@@ -4,54 +4,54 @@ new AI: True
 start/max counter: 1
 counter increment: 1
 
-ESPreemptive(49:3402) -> ESPreemptive
+#1: ESPreemptive(49:3402) -> ESPreemptive
 Enable preempt if level 4
 
-ESBranchLevel(35:25) -> ESBranchLevel
+#2: ESBranchLevel(35:25) -> ESBranchLevel
 Branch on level > 4, target rnd 4
 
-ESEndPath(36:26) -> ESEndPath
+#3: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESBranchFlag(43:10) -> ESBranchFlag
+#4: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 1, target rnd 8
 
-ESFlagOperation(22:12) -> ESFlagOperation
+#5: ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b1
 
-ESAbsorbCombo(67:15012) -> Hohohoho!
+#6: ESAbsorbCombo(67:15012) -> Hohohoho!
 Absorb combo <= 6 damage for 999 turns
 
-ESEndPath(36:26) -> ESEndPath
+#7: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESBranchHP(28:18) -> ESBranchHP
+#8: ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 50, target rnd 13
 
-ESRandomSpawn(92:15003) -> My turn! Freeze Arrow!
+#9: ESRandomSpawn(92:15003) -> My turn! Freeze Arrow!
 Condition: 33% chance (ai:0 rnd:33)
 Spawn random 6 Water orbs, Deal 95% damage
 
-ESBindAttack(63:15004) -> Freeze Brid
+#10: ESBindAttack(63:15004) -> Freeze Brid
 Condition: 33% chance (ai:0 rnd:33)
 Bind 1 random subs for 2~3 turns, Deal 100% damage
 
-ESGravity(50:15005) -> Buday Wind
+#11: ESGravity(50:15005) -> Buday Wind
 Condition: One-time use (ai:0 rnd:34) (one-time: 1)
 Player -75% HP
 
-ESEndPath(36:26) -> ESEndPath
+#12: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESAttackUPRemainingEnemies(17:15006) -> Hmph! Nice try!
+#13: ESAttackUPRemainingEnemies(17:15006) -> Hmph! Nice try!
 Condition: when <= 1 enemies remain (ai:100 rnd:0)
 Increase damage to 150% for the next 999 turns
 
-ESBranchHP(29:19) -> ESBranchHP
+#14: ESBranchHP(29:19) -> ESBranchHP
 Branch on hp > 21, target rnd 9
 
-ESRandomSpawn(92:15007) -> Vice Freeze!
+#15: ESRandomSpawn(92:15007) -> Vice Freeze!
 Spawn random 10 Water orbs, Deal 150% damage
 
-ESEndPath(36:26) -> ESEndPath
+#16: ESEndPath(36:26) -> ESEndPath
 end_turn

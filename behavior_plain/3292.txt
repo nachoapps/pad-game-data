@@ -4,57 +4,57 @@ new AI: True
 start/max counter: 2
 counter increment: 1
 
-ESPreemptive(49:3402) -> ESPreemptive
+#1: ESPreemptive(49:3402) -> ESPreemptive
 Enable preempt if level 4
 
-ESBranchLevel(35:25) -> ESBranchLevel
+#2: ESBranchLevel(35:25) -> ESBranchLevel
 Branch on level > 4, target rnd 4
 
-ESEndPath(36:26) -> ESEndPath
+#3: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESBranchFlag(43:10) -> ESBranchFlag
+#4: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 1, target rnd 8
 
-ESFlagOperation(22:12) -> ESFlagOperation
+#5: ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b1
 
-ESStatusShield(20:5928) -> Stop
+#6: ESStatusShield(20:5928) -> Stop
 Voids status ailments for 5 turns
 
-ESEndPath(36:26) -> ESEndPath
+#7: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESBranchHP(28:18) -> ESBranchHP
+#8: ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 50, target rnd 13
 
-ESBranchHP(28:18) -> ESBranchHP
+#9: ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 20, target rnd 17
 
-ESBlind(62:5929) -> Headbutt
+#10: ESBlind(62:5929) -> Headbutt
 Condition: One-time use (ai:100 rnd:0) (one-time: 2)
 Blind all orbs on the board, Deal 90% damage
 
-ESColumnSpawnMulti(77:5930) -> Blazing Axe
+#11: ESColumnSpawnMulti(77:5930) -> Blazing Axe
 Change 6th column to Fire orbs, Deal 100% damage
 
-ESEndPath(36:26) -> ESEndPath
+#12: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESBranchFlag(43:10) -> ESBranchFlag
+#13: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 2, target rnd 9
 
-ESFlagOperation(22:12) -> ESFlagOperation
+#14: ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b11
 
-ESAttackUPCooldown(19:5931) -> Now I'm really mad!
+#15: ESAttackUPCooldown(19:5931) -> Now I'm really mad!
 Increase damage to 150% for the next 999 turns
 
-ESEndPath(36:26) -> ESEndPath
+#16: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESAttackMultihit(15:5932) -> Inherited Technique, Full Swing
+#17: ESAttackMultihit(15:5932) -> Inherited Technique, Full Swing
 Deal 300% damage
 
-ESEndPath(36:26) -> ESEndPath
+#18: ESEndPath(36:26) -> ESEndPath
 end_turn

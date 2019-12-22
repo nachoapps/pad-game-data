@@ -4,131 +4,131 @@ new AI: True
 start/max counter: 3
 counter increment: 0
 
-ESPreemptive(49:318) -> ESPreemptive
+#1: ESPreemptive(49:318) -> ESPreemptive
 Enable preempt if level 1
 
-SkillSet:
+#2: SkillSet:
 	Condition: One-time use (ai:100 rnd:0) (one-time: 2)
 	[0] ESAbsorbAttribute(53:12980) -> Ripening of the Land
 	Absorb Fire, Water, Wood damage for 5 turns
 	[1] ESDebuffMovetime(39:12981) -> Second Hand's Limited Time
 	Movetime 50% for 10 turns
 
-ESBranchHP(28:18) -> ESBranchHP
+#3: ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 15, target rnd 30
 
-ESBranchHP(28:18) -> ESBranchHP
+#4: ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 50, target rnd 26
 
-ESBranchCounter(32:22) -> ESBranchCounter
+#5: ESBranchCounter(32:22) -> ESBranchCounter
 Branch on counter > 3, target rnd 21
 
-ESBranchCounter(32:22) -> ESBranchCounter
+#6: ESBranchCounter(32:22) -> ESBranchCounter
 Branch on counter > 2, target rnd 15
 
-ESBranchCounter(32:22) -> ESBranchCounter
+#7: ESBranchCounter(32:22) -> ESBranchCounter
 Branch on counter > 1, target rnd 10
 
-ESSetCounter(26:16) -> ESSetCounter
+#8: ESSetCounter(26:16) -> ESSetCounter
 counter + 1
 
-SkillSet:
+#9: SkillSet:
 	Condition: 33% chance (ai:33 rnd:0)
 	[0] ESSkyfall(68:12985) -> Landing Ground
 	Fire skyfall +20% for 1 turns
 	[1] ESOrbLock(94:12988) -> Freedom Exploitation
 	Lock all Fire orbs, Deal 130% damage
 
-ESSetCounter(26:16) -> ESSetCounter
+#10: ESSetCounter(26:16) -> ESSetCounter
 counter + 1
 
-SkillSet:
+#11: SkillSet:
 	Condition: 50% chance (ai:50 rnd:0)
 	[0] ESSkyfall(68:12986) -> Landing Ground
 	Water skyfall +20% for 1 turns
 	[1] ESOrbLock(94:12989) -> Freedom Exploitation
 	Lock all Water orbs, Deal 130% damage
 
-ESSetCounter(26:16) -> ESSetCounter
+#12: ESSetCounter(26:16) -> ESSetCounter
 counter + 1
 
-SkillSet:
+#13: SkillSet:
 	[0] ESSkyfall(68:12987) -> Landing Ground
 	Wood skyfall +20% for 1 turns
 	[1] ESOrbLock(94:12990) -> Freedom Exploitation
 	Lock all Wood orbs, Deal 130% damage
 
-ESEndPath(36:26) -> ESEndPath
+#14: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESSetCounter(25:15) -> ESSetCounter
+#15: ESSetCounter(25:15) -> ESSetCounter
 counter = 1
 
-SkillSet:
+#16: SkillSet:
 	Condition: 50% chance (ai:50 rnd:0)
 	[0] ESSkyfall(68:12985) -> Landing Ground
 	Fire skyfall +20% for 1 turns
 	[1] ESOrbLock(94:12988) -> Freedom Exploitation
 	Lock all Fire orbs, Deal 130% damage
 
-ESSetCounter(26:16) -> ESSetCounter
+#17: ESSetCounter(26:16) -> ESSetCounter
 counter + 1
 
-ESSetCounter(26:16) -> ESSetCounter
+#18: ESSetCounter(26:16) -> ESSetCounter
 counter + 1
 
-SkillSet:
+#19: SkillSet:
 	[0] ESSkyfall(68:12987) -> Landing Ground
 	Wood skyfall +20% for 1 turns
 	[1] ESOrbLock(94:12990) -> Freedom Exploitation
 	Lock all Wood orbs, Deal 130% damage
 
-ESEndPath(36:26) -> ESEndPath
+#20: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESSetCounter(25:15) -> ESSetCounter
+#21: ESSetCounter(25:15) -> ESSetCounter
 counter = 1
 
-SkillSet:
+#22: SkillSet:
 	Condition: 50% chance (ai:50 rnd:0)
 	[0] ESSkyfall(68:12985) -> Landing Ground
 	Fire skyfall +20% for 1 turns
 	[1] ESOrbLock(94:12988) -> Freedom Exploitation
 	Lock all Fire orbs, Deal 130% damage
 
-ESSetCounter(26:16) -> ESSetCounter
+#23: ESSetCounter(26:16) -> ESSetCounter
 counter + 1
 
-SkillSet:
+#24: SkillSet:
 	[0] ESSkyfall(68:12986) -> Landing Ground
 	Water skyfall +20% for 1 turns
 	[1] ESOrbLock(94:12989) -> Freedom Exploitation
 	Lock all Water orbs, Deal 130% damage
 
-ESEndPath(36:26) -> ESEndPath
+#25: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESBranchFlag(43:10) -> ESBranchFlag
+#26: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 1, target rnd 5
 
-ESFlagOperation(22:12) -> ESFlagOperation
+#27: ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b1
 
-SkillSet:
+#28: SkillSet:
 	[0] ESDamageShield(74:12992) -> Settling Down
 	Reduce damage from all sources by 75% for 20 turns
 	[1] ESSkyfall(96:12993) -> World-Wrecking Rumble
 	Locked Light, Dark skyfall +100% for 20 turns
 
-ESEndPath(36:26) -> ESEndPath
+#29: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESBindAwoken(88:12994) -> Tiger Snake Roar
+#30: ESBindAwoken(88:12994) -> Tiger Snake Roar
 Condition: One-time use (ai:100 rnd:0) (one-time: 1)
 Bind awoken skills for 1 turns
 
-ESAttackMultihit(15:12995) -> Claw & Fang Double Strike
+#31: ESAttackMultihit(15:12995) -> Claw & Fang Double Strike
 Deal 600% damage (6 hits, 100% each)
 
-ESEndPath(36:26) -> ESEndPath
+#32: ESEndPath(36:26) -> ESEndPath
 end_turn

@@ -4,87 +4,87 @@ new AI: True
 start/max counter: 1
 counter increment: 1
 
-ESPreemptive(49:318) -> ESPreemptive
+#1: ESPreemptive(49:318) -> ESPreemptive
 Enable preempt if level 1
 
-ESBranchFlag(43:10) -> ESBranchFlag
+#2: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 1, target rnd 6
 
-ESFlagOperation(22:12) -> ESFlagOperation
+#3: ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b1
 
-SkillSet:
+#4: SkillSet:
 	[0] ESDamageShield(74:6122) -> Garment of Protection
 	Reduce damage from all sources by 80% for 1 turns
 	[1] ESBindAttack(63:6123) -> Gungnir
 	Bind 1 random cards for 5 turns, Deal 120% damage
 
-ESEndPath(36:26) -> ESEndPath
+#5: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESBranchHP(29:19) -> ESBranchHP
+#6: ESBranchHP(29:19) -> ESBranchHP
 Branch on hp > 100, target rnd 20
 
-ESBranchHP(28:18) -> ESBranchHP
+#7: ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 50, target rnd 14
 
-ESAttackMultihit(15:6136) -> Vak Sigfodr
+#8: ESAttackMultihit(15:6136) -> Vak Sigfodr
 Condition: When < 15% hp (ai:100 rnd:0)
 Deal 500% damage (5 hits, 100% each)
 
-SkillSet:
+#9: SkillSet:
 	Condition: When < 50% hp , one-time use (ai:100 rnd:0) (one-time: 1)
 	[0] ESAttackMultihit(15:6131) -> Triple Slash
 	Deal 180% damage (3 hits, 60% each)
 	[1] ESRecoverEnemy(86:6132) -> Auto-recover
 	Enemy recover 10% hp
 
-ESRowSpawnMulti(79:6135) -> Divide Poison
+#10: ESRowSpawnMulti(79:6135) -> Divide Poison
 Condition: When < 50% hp (ai:100 rnd:0)
 Change 3rd row to Wood, Poison orbs, Deal 150% damage
 
-SkillSet:
+#11: SkillSet:
 	Condition: One-time use (ai:100 rnd:0) (one-time: 1)
 	[0] ESAttackMultihit(15:6125) -> Double Slash
 	Deal 160% damage (2 hits, 80% each)
 	[1] ESRecoverEnemy(86:6126) -> Auto-recover
 	Enemy recover 10% hp
 
-ESRowSpawnMulti(79:6134) -> Divide Blast
+#12: ESRowSpawnMulti(79:6134) -> Divide Blast
 Change 3rd row to Wood orbs, Deal 120% damage
 
-ESEndPath(36:26) -> ESEndPath
+#13: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESBranchFlag(43:10) -> ESBranchFlag
+#14: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 2, target rnd 8
 
-ESFlagOperation(22:12) -> ESFlagOperation
+#15: ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b11
 
-ESBranchCard(90:6137) -> ESBranchCard
+#16: ESBranchCard(90:6137) -> ESBranchCard
 Branch on player_cards HAS [2640, 2641, 2899, 2900], target rnd 18
 
-SkillSet:
+#17: SkillSet:
 	[0] ESDebuffMovetime(39:6128) -> Skilfing
 	Movetime -1s for 7 turns
 	[1] ESGravity(50:6129) -> Hnikar
 	Player -99% HP
 
-SkillSet:
+#18: SkillSet:
 	[0] ESDebuffMovetime(39:6138) -> I am not...going to lose!
 	Movetime -1s for 7 turns
 	[1] ESGravity(50:6129) -> Hnikar
 	Player -99% HP
 
-ESEndPath(36:26) -> ESEndPath
+#19: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-SkillSet:
+#20: SkillSet:
 	[0] ESDamageShield(74:6122) -> Garment of Protection
 	Reduce damage from all sources by 80% for 1 turns
 	[1] ESBindAttack(63:6123) -> Gungnir
 	Bind 1 random cards for 5 turns, Deal 120% damage
 
-ESEndPath(36:26) -> ESEndPath
+#21: ESEndPath(36:26) -> ESEndPath
 end_turn

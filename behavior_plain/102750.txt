@@ -4,91 +4,91 @@ new AI: True
 start/max counter: 7
 counter increment: 0
 
-ESPreemptive(49:318) -> ESPreemptive
+#1: ESPreemptive(49:318) -> ESPreemptive
 Enable preempt if level 1
 
-ESBranchFlag(43:10) -> ESBranchFlag
+#2: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 1, target rnd 6
 
-ESFlagOperation(22:12) -> ESFlagOperation
+#3: ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b1
 
-SkillSet:
+#4: SkillSet:
 	Condition: One-time use (ai:100 rnd:0) (one-time: 4)
 	[0] ESAbsorbCombo(67:12169) -> Celestial Prelude
 	Absorb combo <= 8 damage for 3 turns
 	[1] ESStatusShield(20:12170) -> I'd be glad if you could listen quietly
 	Voids status ailments for 3 turns
 
-ESEndPath(36:26) -> ESEndPath
+#5: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESGravity(50:4106) -> Glorious Postlude
+#6: ESGravity(50:4106) -> Glorious Postlude
 Condition: When < 10% hp (ai:100 rnd:0)
 Player -500% HP
 
-ESBranchFlag(43:10) -> ESBranchFlag
+#7: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 2, target rnd 12
 
-ESRowSpawnMulti(79:4092) -> Holy Tree's Staff
+#8: ESRowSpawnMulti(79:4092) -> Holy Tree's Staff
 Condition: One-time use (ai:100 rnd:0) (one-time: 2)
 Change 1st, 3rd, 5th row to Light orbs, 2nd, 4th row to Wood orbs, Deal 100% damage
 
-ESBoardChangeAttackBits(85:4093) -> Six Strings' Timbre
+#9: ESBoardChangeAttackBits(85:4093) -> Six Strings' Timbre
 Condition: One-time use (ai:100 rnd:0) (one-time: 1)
 Change all orbs to Fire, Water, Wood, Light, Dark, Heal, Deal 200% damage
 
-ESFlagOperation(22:12) -> ESFlagOperation
+#10: ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b11
 
-SkillSet:
+#11: SkillSet:
 	[0] ESOrbChangeAttack(48:4094) -> Last Movement - Flash
 	Change Random to Light, Deal 300% damage
 	[1] ESDamageShield(74:4095) -> The show is over...
 	Reduce damage from all sources by 50% for 3 turns
 
-ESBranchFlag(43:10) -> ESBranchFlag
+#12: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 4, target rnd 17
 
-ESFlagOperation(22:12) -> ESFlagOperation
+#13: ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b111
 
-ESBindTyping(3:4098) -> Blinding Chain of God's Ruin
+#14: ESBindTyping(3:4098) -> Blinding Chain of God's Ruin
 Bind God cards for 5 turns
 
-ESBindAttribute(2:4099) -> Blinding Chain of Devil's Ruin
+#15: ESBindAttribute(2:4099) -> Blinding Chain of Devil's Ruin
 Condition: One-time use (ai:100 rnd:0) (one-time only)
 Bind Dark cards for 5 turns
 
-ESBindTarget(54:4100) -> Blinding Chain of Good & Evil's Ruin
+#16: ESBindTarget(54:4100) -> Blinding Chain of Good & Evil's Ruin
 Bind 1 both leaders for 5 turns
 
-ESBranchFlag(43:10) -> ESBranchFlag
+#17: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 8, target rnd 20
 
-ESFlagOperation(22:12) -> ESFlagOperation
+#18: ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b1111
 
-ESBoardChangeAttackBits(85:4101) -> Hyacinth's Lamentation
+#19: ESBoardChangeAttackBits(85:4101) -> Hyacinth's Lamentation
 Change all orbs to Fire, Wood, Light, Jammer, Deal 150% damage
 
-ESFlagOperation(24:14) -> ESFlagOperation
+#20: ESFlagOperation(24:14) -> ESFlagOperation
 flag UNSET 0b1000
 
-ESOrbChangeAttack(48:4102) -> Sunlight Gift
+#21: ESOrbChangeAttack(48:4102) -> Sunlight Gift
 Change Jammer to Heal, Deal 300% damage
 
-ESOrbChangeAttack(48:4103) -> Sunlight Glow
+#22: ESOrbChangeAttack(48:4103) -> Sunlight Glow
 Change Wood to Fire, Deal 200% damage
 
-ESOrbChangeAttack(48:4104) -> Sunlight Tears
+#23: ESOrbChangeAttack(48:4104) -> Sunlight Tears
 Change Fire to Water, Deal 200% damage
 
-ESOrbLock(94:4105) -> Sunlight Flash
+#24: ESOrbLock(94:4105) -> Sunlight Flash
 Lock all Light orbs, Deal 200% damage
 
-ESBoardChangeAttackBits(85:4101) -> Hyacinth's Lamentation
+#25: ESBoardChangeAttackBits(85:4101) -> Hyacinth's Lamentation
 Change all orbs to Fire, Wood, Light, Jammer, Deal 150% damage
 
-ESResolve(73:4137) -> Apollo Resolve
+#26: ESResolve(73:4137) -> Apollo Resolve
 Survive attacks with 1 HP when HP > 50%

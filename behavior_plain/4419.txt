@@ -4,16 +4,16 @@ new AI: True
 start/max counter: 63
 counter increment: 0
 
-ESPreemptive(49:318) -> ESPreemptive
+#1: ESPreemptive(49:318) -> ESPreemptive
 Enable preempt if level 1
 
-ESBranchFlag(43:10) -> ESBranchFlag
+#2: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 1, target rnd 6
 
-ESFlagOperation(22:12) -> ESFlagOperation
+#3: ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b1
 
-SkillSet:
+#4: SkillSet:
 	[0] ESCloud(104:9911) -> Cloud Cluster
 	6x2 cloud appear for 1 turns at 4th row, 1st column
 	[1] ESStatusShield(20:9912) -> Protective Cloud Formation
@@ -21,10 +21,10 @@ SkillSet:
 	[2] ESAbsorbCombo(67:9913) -> Rainbow Fog
 	Absorb combo <= 7 damage for 1 turns
 
-ESEndPath(36:26) -> ESEndPath
+#5: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-SkillSet:
+#6: SkillSet:
 	Condition: When < 1% hp (ai:100 rnd:0)
 	[0] ESRecoverEnemy(86:9944) -> Updraft
 	Enemy recover 75% hp
@@ -33,13 +33,13 @@ SkillSet:
 	[2] ESCloud(104:9946) -> Disastrous Cloud
 	2x5 cloud appear for 1 turns at 1st row, 3rd column
 
-ESBranchHP(28:18) -> ESBranchHP
+#7: ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 10, target rnd 30
 
-ESBranchHP(28:18) -> ESBranchHP
+#8: ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 50, target rnd 19
 
-SkillSet:
+#9: SkillSet:
 	Condition: One-time use (ai:100 rnd:0) (one-time: 32)
 	[0] ESCloud(104:9915) -> Cloud Cluster
 	6x2 cloud appear for 1 turns at 1st row, 1st column
@@ -48,7 +48,7 @@ SkillSet:
 	[2] ESAttackMultihit(15:9917) -> Lightning Ball Strike
 	Deal 270% damage (9 hits, 30% each)
 
-SkillSet:
+#10: SkillSet:
 	Condition: One-time use (ai:100 rnd:0) (one-time: 16)
 	[0] ESCloud(104:9919) -> Cloud Cluster
 	6x2 cloud appear for 1 turns at 3rd row, 1st column
@@ -57,14 +57,14 @@ SkillSet:
 	[2] ESLeaderSwap(75:9921) -> Rising Flip
 	Leader changes to random sub for 1 turns
 
-SkillSet:
+#11: SkillSet:
 	Condition: One-time use (ai:100 rnd:0) (one-time: 8)
 	[0] ESCloud(104:9923) -> Cloud Cluster
 	3x3 cloud appear for 1 turns at 2nd row, 3rd column
 	[1] ESAttackMultihit(15:9924) -> Storm Blow
 	Deal 240% damage (2 hits, 120% each)
 
-SkillSet:
+#12: SkillSet:
 	Condition: One-time use (ai:100 rnd:0) (one-time: 4)
 	[0] ESCloud(104:9926) -> Cloud Cluster
 	3x3 cloud appear for 1 turns at 3rd row, 2nd column
@@ -73,67 +73,67 @@ SkillSet:
 	[2] ESBoardChange(84:9928) -> Flash Storm
 	Change all orbs to Light
 
-SkillSet:
+#13: SkillSet:
 	Condition: One-time use (ai:100 rnd:0) (one-time: 2)
 	[0] ESCloud(104:9930) -> Cloud Cluster
 	3x3 cloud appear for 1 turns at 2nd row, 4th column
 	[1] ESOrbChangeAttack(48:9931) -> Plasma Breath
 	Change Random to Light, Deal 250% damage
 
-ESBindAwoken(88:9932) -> Micro Burst
+#14: ESBindAwoken(88:9932) -> Micro Burst
 Condition: One-time use (ai:100 rnd:0) (one-time: 1)
 Bind awoken skills for 5 turns
 
-ESOrbChangeAttackBits(108:9933) -> Heaven's Breaching
+#15: ESOrbChangeAttackBits(108:9933) -> Heaven's Breaching
 Change Jammer to Light, Deal 260% damage
 
-ESOrbChangeAttackBits(108:9934) -> Dirty Cloud
+#16: ESOrbChangeAttackBits(108:9934) -> Dirty Cloud
 Change Light, Heal to Jammer, Deal 210% damage
 
-ESOrbChangeAttack(48:9935) -> Dirty Cloud
+#17: ESOrbChangeAttack(48:9935) -> Dirty Cloud
 Change Random to Jammer, Deal 210% damage
 
-ESEndPath(36:26) -> ESEndPath
+#18: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESBranchFlag(43:10) -> ESBranchFlag
+#19: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 2, target rnd 23
 
-ESFlagOperation(22:12) -> ESFlagOperation
+#20: ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b11
 
-SkillSet:
+#21: SkillSet:
 	[0] ESDamageShield(74:9937) -> Colossal Cumulonimbus Cloud
 	Reduce damage from all sources by 75% for 10 turns
 	[1] ESBindTarget(54:9938) -> Plasma Chain
 	Bind 1 both leaders for 3 turns
 
-ESEndPath(36:26) -> ESEndPath
+#22: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESBranchFlag(43:10) -> ESBranchFlag
+#23: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 4, target rnd 27
 
-ESFlagOperation(22:12) -> ESFlagOperation
+#24: ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b111
 
-ESBoardChange(84:9939) -> Grimy Cloud
+#25: ESBoardChange(84:9939) -> Grimy Cloud
 Change all orbs to Fire, Light, Heal, Jammer, Poison, Deal 246% damage
 
-ESEndPath(36:26) -> ESEndPath
+#26: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESFlagOperation(24:14) -> ESFlagOperation
+#27: ESFlagOperation(24:14) -> ESFlagOperation
 flag UNSET 0b100
 
-ESBindRandomSub(65:9940) -> Lightning Chain
+#28: ESBindRandomSub(65:9940) -> Lightning Chain
 Bind 2 random subs for 1~2 turns, Deal 220% damage
 
-ESEndPath(36:26) -> ESEndPath
+#29: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESAttackMultihit(15:9941) -> Meso-Cyclone
+#30: ESAttackMultihit(15:9941) -> Meso-Cyclone
 Deal 1300% damage (10 hits, 130% each)
 
-ESResolve(73:9942) -> 50% Resolve
+#31: ESResolve(73:9942) -> 50% Resolve
 Survive attacks with 1 HP when HP > 50%

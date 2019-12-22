@@ -4,65 +4,65 @@ new AI: True
 start/max counter: 3
 counter increment: 0
 
-ESPreemptive(49:318) -> ESPreemptive
+#1: ESPreemptive(49:318) -> ESPreemptive
 Enable preempt if level 1
 
-SkillSet:
+#2: SkillSet:
 	Condition: One-time use (ai:100 rnd:0) (one-time: 2)
 	[0] ESDebuffMovetime(39:15209) -> 俺はお前に追いつくぞ
 	Movetime -3s for 4 turns
 	[1] ESDamageShield(74:15210) -> ケンソクレーザーシールド
 	Reduce damage from all sources by 75% for 4 turns
 
-ESBranchFlag(43:10) -> ESBranchFlag
+#3: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 1, target rnd 14
 
-ESBranchHP(28:18) -> ESBranchHP
+#4: ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 50, target rnd 10
 
-ESBranchCounter(32:22) -> ESBranchCounter
+#5: ESBranchCounter(32:22) -> ESBranchCounter
 Branch on counter > 2, target rnd 17
 
-ESSetCounter(26:16) -> ESSetCounter
+#6: ESSetCounter(26:16) -> ESSetCounter
 counter + 1
 
-ESOrbLock(94:15212) -> レーザーブラスター
+#7: ESOrbLock(94:15212) -> レーザーブラスター
 Condition: 50% chance (ai:50 rnd:0)
 Lock 6 random Fire, Water, Wood, Light, Dark orbs, Deal 100% damage
 
-ESColumnSpawnMulti(77:15215) -> レーザーソード！
+#8: ESColumnSpawnMulti(77:15215) -> レーザーソード！
 Change 3rd column to Light orbs, 4th column to Water orbs, Deal 125% damage
 
-ESEndPath(36:26) -> ESEndPath
+#9: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESBranchFlag(43:10) -> ESBranchFlag
+#10: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 1, target rnd 14
 
-ESFlagOperation(22:12) -> ESFlagOperation
+#11: ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b1
 
-ESGravity(50:15211) -> その程度では倒せん
+#12: ESGravity(50:15211) -> その程度では倒せん
 Player -99% HP
 
-ESEndPath(36:26) -> ESEndPath
+#13: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESAttackUPRemainingEnemies(17:15214) -> 決めるぞ！
+#14: ESAttackUPRemainingEnemies(17:15214) -> 決めるぞ！
 Condition: One-time use, when <= 1 enemies remain (ai:100 rnd:0) (one-time: 1)
 Increase damage to 300% for the next 3 turns
 
-ESColumnSpawnMulti(77:15215) -> レーザーソード！
+#15: ESColumnSpawnMulti(77:15215) -> レーザーソード！
 Change 3rd column to Light orbs, 4th column to Water orbs, Deal 125% damage
 
-ESEndPath(36:26) -> ESEndPath
+#16: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESSetCounter(25:15) -> ESSetCounter
+#17: ESSetCounter(25:15) -> ESSetCounter
 counter = 0
 
-ESFixedStart(101:15213) -> レーザースキャナー
+#18: ESFixedStart(101:15213) -> レーザースキャナー
 Fix orb movement starting point to random position on the board
 
-ESEndPath(36:26) -> ESEndPath
+#19: ESEndPath(36:26) -> ESEndPath
 end_turn

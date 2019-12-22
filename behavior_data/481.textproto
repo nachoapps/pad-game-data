@@ -52,3 +52,58 @@
       }
     }
   }
+  level_overrides {
+    level: 3
+    groups {
+      group_type: STANDARD
+      condition {
+      }
+      children {
+        group {
+          group_type: STANDARD
+          condition {
+            hp_threshold: 100
+          }
+        }
+      }
+      children {
+        group {
+          group_type: STANDARD
+          condition {
+            hp_threshold: 74
+          }
+          children {
+            behavior {
+              condition {
+                use_chance: 70
+              }
+              enemy_skill_id: 693
+            }
+          }
+          children {
+            behavior {
+              condition {
+              }
+              enemy_skill_id: 249
+            }
+          }
+        }
+      }
+      children {
+        group {
+          group_type: STANDARD
+          condition {
+            hp_threshold: 24
+          }
+          children {
+            behavior {
+              condition {
+              }
+              enemy_skill_id: 229
+            }
+          }
+        }
+      }
+    }
+  }
+  status: APPROVED_WITH_CHANGES

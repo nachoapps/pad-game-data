@@ -20,7 +20,6 @@
           children {
             group {
               condition {
-                repeats_every: 5
                 trigger_turn: 1
               }
               children {
@@ -33,11 +32,13 @@
           children {
             group {
               condition {
-                repeats_every: 5
                 trigger_turn: 2
               }
               children {
                 behavior {
+                  condition {
+                    global_one_time: true
+                  }
                   enemy_skill_id: 542
                 }
               }
@@ -46,8 +47,8 @@
           children {
             group {
               condition {
-                repeats_every: 5
-                trigger_turn: 3
+                repeats_every: 4
+                trigger_turn: 1
               }
               children {
                 behavior {
@@ -59,12 +60,25 @@
           children {
             group {
               condition {
-                repeats_every: 5
-                trigger_turn: 4
+                repeats_every: 4
+                trigger_turn: 2
               }
               children {
                 behavior {
                   enemy_skill_id: 541
+                }
+              }
+            }
+          }
+          children {
+            group {
+              condition {
+                repeats_every: 4
+                trigger_turn: 4
+              }
+              children {
+                behavior {
+                  enemy_skill_id: 540
                 }
               }
             }

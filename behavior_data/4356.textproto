@@ -39,6 +39,7 @@
           children {
             group {
               condition {
+                repeats_every: 3
                 trigger_turn: 1
               }
               children {
@@ -51,13 +52,11 @@
           children {
             group {
               condition {
+                repeats_every: 3
                 trigger_turn: 2
               }
               children {
                 behavior {
-                  condition {
-                    global_one_time: true
-                  }
                   enemy_skill_id: 10086
                 }
               }
@@ -66,25 +65,12 @@
           children {
             group {
               condition {
-                repeats_every: 2
-                trigger_turn: 1
+                repeats_every: 3
+                trigger_turn: 3
               }
               children {
                 behavior {
                   enemy_skill_id: 10087
-                }
-              }
-            }
-          }
-          children {
-            group {
-              condition {
-                repeats_every: 2
-                trigger_turn: 2
-              }
-              children {
-                behavior {
-                  enemy_skill_id: 10085
                 }
               }
             }
@@ -96,44 +82,11 @@
           group_type: STANDARD
           condition {
             hp_threshold: 49
+            trigger_turn: 1
           }
           children {
-            group {
-              condition {
-                trigger_turn: 1
-              }
-              children {
-                behavior {
-                  enemy_skill_id: 10090
-                }
-              }
-            }
-          }
-          children {
-            group {
-              condition {
-                trigger_turn: 2
-              }
-              children {
-                behavior {
-                  enemy_skill_id: 10085
-                }
-              }
-            }
-          }
-          children {
-            group {
-              condition {
-                trigger_turn: 3
-              }
-              children {
-                behavior {
-                  condition {
-                    global_one_time: true
-                  }
-                  enemy_skill_id: 10086
-                }
-              }
+            behavior {
+              enemy_skill_id: 10090
             }
           }
         }

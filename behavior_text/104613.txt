@@ -28,29 +28,15 @@ level: 4
  | Show message: My power...|I smell Planeswalker. Who are you?
  group:
  | group:
-   | group:
-   | condition: turn 1
-     | condition: one time only
-     | (10283:1) Terror
-     | Bind 1 random cards for 2 turns, Deal 58% damage
-   | group:
-     | condition: 50% chance
-     | (10282:89) Divest
-     | Delay active skills by 1~2 turns, Deal 60% damage
+   | condition: 50% chance
+   | (10282:89) Divest
+   | Delay active skills by 1~2 turns, Deal 60% damage
+   | (10283:1) Terror
+   | Bind 1 random cards for 2 turns, Deal 58% damage
  | group:
- | condition: hp <= 49
-   | group:
-   | condition: turn 1
-     | (10284:14) Nightsnare
-     | Bind active skills for 3 turns, Deal 55% damage
-   | group:
-   | condition: turn 2
-     | condition: 50% chance
-     | (10282:89) Divest
-     | Delay active skills by 1~2 turns, Deal 60% damage
-     | condition: one time only
-     | (10283:1) Terror
-     | Bind 1 random cards for 2 turns, Deal 58% damage
+ | condition: turn 1, hp <= 49
+   | (10284:14) Nightsnare
+   | Bind active skills for 3 turns, Deal 55% damage
  | group:
  | condition: hp <= 19
    | group:

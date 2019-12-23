@@ -25,7 +25,6 @@
               children {
                 behavior {
                   condition {
-                    global_one_time: true
                     trigger_monsters: 1947
                   }
                   enemy_skill_id: 3092
@@ -68,70 +67,27 @@
           group_type: STANDARD
           condition {
             hp_threshold: 79
+            trigger_turn: 1
           }
           children {
-            group {
+            behavior {
               condition {
-                trigger_turn: 1
+                trigger_monsters: 1947
               }
-              children {
-                behavior {
-                  condition {
-                    global_one_time: true
-                    trigger_monsters: 1947
-                  }
-                  enemy_skill_id: 3092
-                }
-              }
-              children {
-                behavior {
-                  condition {
-                    trigger_monsters: 1257
-                  }
-                  enemy_skill_id: 3090
-                }
-              }
-              children {
-                behavior {
-                  enemy_skill_id: 3095
-                }
-              }
+              enemy_skill_id: 3092
             }
           }
           children {
-            group {
+            behavior {
               condition {
-                trigger_turn: 2
-                trigger_turn_end: 3
+                trigger_monsters: 1257
               }
-              children {
-                behavior {
-                  condition {
-                    use_chance: 60
-                  }
-                  enemy_skill_id: 3093
-                }
-              }
-              children {
-                behavior {
-                  condition {
-                    use_chance: 60
-                  }
-                  enemy_skill_id: 3094
-                }
-              }
+              enemy_skill_id: 3090
             }
           }
           children {
-            group {
-              condition {
-                trigger_turn: 4
-              }
-              children {
-                behavior {
-                  enemy_skill_id: 3095
-                }
-              }
+            behavior {
+              enemy_skill_id: 3095
             }
           }
         }
@@ -143,25 +99,8 @@
             hp_threshold: 29
           }
           children {
-            group {
-              condition {
-                trigger_turn: 2
-                trigger_turn_end: 3
-              }
-              children {
-                behavior {
-                  enemy_skill_id: 3096
-                }
-              }
-            }
-          }
-          children {
-            group {
-              children {
-                behavior {
-                  enemy_skill_id: 3096
-                }
-              }
+            behavior {
+              enemy_skill_id: 3096
             }
           }
         }

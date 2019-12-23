@@ -31,14 +31,31 @@
           group_type: STANDARD
           condition {
             hp_threshold: 24
-            trigger_turn: 1
           }
           children {
-            behavior {
+            group {
               condition {
-                global_one_time: true
+                repeats_every: 2
+                trigger_turn: 1
               }
-              enemy_skill_id: 598
+              children {
+                behavior {
+                  enemy_skill_id: 598
+                }
+              }
+            }
+          }
+          children {
+            group {
+              condition {
+                repeats_every: 2
+                trigger_turn: 2
+              }
+              children {
+                behavior {
+                  enemy_skill_id: 599
+                }
+              }
             }
           }
         }
@@ -91,4 +108,4 @@
       }
     }
   }
-  status: APPROVED_AS_IS
+  status: NEEDS_REAPPROVAL

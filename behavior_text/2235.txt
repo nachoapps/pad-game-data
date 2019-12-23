@@ -40,8 +40,7 @@ level: 1
  | group:
  | condition: hp <= 69
    | group:
-   | condition: turn 1
-     | condition: one time only
+   | condition: execute repeatedly, turn 1 of 3
      | (4001:2) Revenge Full of Hatred
      | Bind Water cards for 5 turns
      | condition: 20% chance
@@ -53,7 +52,7 @@ level: 1
      | (3990:13) Wall Burst
      | Change Random 3 to Jammer, Deal 800% damage
    | group:
-   | condition: execute repeatedly, turn 1 of 3
+   | condition: execute repeatedly, turn 2 of 3
      | (3995:48) Rubble Incineration
      | Change Jammer to Fire, Deal 3000% damage
      | (3996:94) Constant Grimness
@@ -61,38 +60,13 @@ level: 1
      | (3997:15) Thrust Combination
      | Deal 750%~1250% damage (3~5 hits, 250% each)
    | group:
-   | condition: execute repeatedly, turn 2 of 3
+   | condition: execute repeatedly, turn 3 of 3
      | (4000:83) Mars Core + Wall Eruption
      | Absorb Fire damage for 1 turns + Change 1st, 3rd, 4th, 6th column to Fire orbs, Deal 1500% damage
-   | group:
-   | condition: execute repeatedly, turn 3 of 3
-     | condition: 20% chance
-     | (3994:63) Trembling Lance
-     | Bind 4 random subs for 1 turns, Deal 900% damage
-     | condition: 50% chance
-     | (3993:83) Cinder Storm + Hidden Ember
-     | Blind all orbs on the board, Deal 100% damage + Change Random to Fire, Deal 600% damage
-     | (3990:13) Wall Burst
-     | Change Random 3 to Jammer, Deal 800% damage
  | group:
- | condition: hp <= 49
-   | group:
-   | condition: turn 1
-     | (4003:71) Divine Body's Shining Flames
-     | Void damage >= 1000000 for 10 turns
-   | group:
-   | condition: turn 2
-     | condition: one time only
-     | (4001:2) Revenge Full of Hatred
-     | Bind Water cards for 5 turns
-     | condition: 20% chance
-     | (3994:63) Trembling Lance
-     | Bind 4 random subs for 1 turns, Deal 900% damage
-     | condition: 50% chance
-     | (3993:83) Cinder Storm + Hidden Ember
-     | Blind all orbs on the board, Deal 100% damage + Change Random to Fire, Deal 600% damage
-     | (3990:13) Wall Burst
-     | Change Random 3 to Jammer, Deal 800% damage
+ | condition: turn 1, hp <= 49
+   | (4003:71) Divine Body's Shining Flames
+   | Void damage >= 1000000 for 10 turns
  | group:
  | condition: hp <= 9
    | group:

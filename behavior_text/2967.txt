@@ -42,20 +42,6 @@ level: 1
      | (4570:83) Strain + Time Warp
      | Absorb combo <= 5 damage for 1 turns + Fix orb movement starting point to random position on the board
    | group:
-   | condition: turn 2
-     | (4571:50) Life Bender
-     | Player -99% HP
-   | group:
-   | condition: turn 3
-     | condition: when required attributes on board
-     | (4572:92) Color Stealing Forgotten Sword
-     | Spawn random 10 Jammer orbs, Deal 160% damage
-   | group:
-   | condition: turn 4
-     | condition: one time only
-     | (4573:1) Time Bind
-     | Bind 3 random cards for 1 turns
-   | group:
    | condition: execute repeatedly, turn 1 of 3
      | (4571:50) Life Bender
      | Player -99% HP
@@ -64,6 +50,10 @@ level: 1
      | condition: when required attributes on board
      | (4572:92) Color Stealing Forgotten Sword
      | Spawn random 10 Jammer orbs, Deal 160% damage
+   | group:
+   | condition: execute repeatedly, turn 3 of 3
+     | (4573:1) Time Bind
+     | Bind 3 random cards for 1 turns
  | group:
  | condition: hp <= 9
    | (4574:50) War Claws

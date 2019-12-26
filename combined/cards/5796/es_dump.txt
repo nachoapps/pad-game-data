@@ -1,0 +1,111 @@
+#5796  - 闇バクラ＆ダーク・ネクロフィア
+True : use_new_ai
+5 : starting/max counter
+1 : counter increment
+
+ESPreemptive(49:3402) -> ESPreemptive
+Enable preempt if level 4
+
+ESBranchLevel(35:25) -> ESBranchLevel
+Branch on level > 4, target rnd 4
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 1, target rnd 8
+
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b1
+
+ESAttributeBlock(107:15730) -> デュエル！
+Unable to match Light orbs for 2 turns
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESBranchHP(28:18) -> ESBranchHP
+Branch on hp < 75, target rnd 32
+
+ESBranchHP(28:18) -> ESBranchHP
+Branch on hp < 50, target rnd 12
+
+ESAttackMultihit(15:15732) -> 念眼殺
+Deal 100% damage
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESDamageShield(74:15733) -> 永続罠「ウィジャ盤」
+Condition: One-time use (ai:100 rnd:0) (one-time: 5)
+Reduce damage from all sources by 30% for 4 turns
+
+ESBranchCounter(32:22) -> ESBranchCounter
+Branch on counter > 1, target rnd 17
+
+ESSetCounter(26:16) -> ESSetCounter
+counter + 1
+
+ESInactivity(66:15734) -> 死のメッセージ「D」
+Do nothing
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESBranchCounter(32:22) -> ESBranchCounter
+Branch on counter > 2, target rnd 21
+
+ESSetCounter(26:16) -> ESSetCounter
+counter + 1
+
+ESInactivity(66:15735) -> 死のメッセージ「E」
+Do nothing
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESBranchCounter(32:22) -> ESBranchCounter
+Branch on counter > 3, target rnd 25
+
+ESSetCounter(26:16) -> ESSetCounter
+counter + 1
+
+ESInactivity(66:15736) -> 死のメッセージ「A」
+Do nothing
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESBranchCounter(32:22) -> ESBranchCounter
+Branch on counter > 4, target rnd 29
+
+ESSetCounter(26:16) -> ESSetCounter
+counter + 1
+
+ESInactivity(66:15737) -> 死のメッセージ「T」
+Do nothing
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESSetCounter(25:15) -> ESSetCounter
+counter = 0
+
+ESAttackMultihit(15:15738) -> 死のメッセージ「H」
+Deal 260% damage
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 2, target rnd 9
+
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b11
+
+ESBlind(5:15731) -> ダーク・ネクロフィア召喚
+Blind all orbs on the board
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+

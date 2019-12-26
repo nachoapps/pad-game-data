@@ -1,5 +1,19 @@
 #2565  - Protecting Vials Steel Star Goddess, Scheat
-False : use_new_ai
-0 : starting/max counter
+True : use_new_ai
+3 : starting/max counter
 0 : counter increment
+
+ESPreemptive(49:318) -> ESPreemptive
+Enable preempt if level 1
+
+ESOrbLock(94:15990) -> 閉じ込めてあげる
+Condition: One-time use (ai:100 rnd:0) (one-time: 2)
+Lock all Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs
+
+ESEndBattle(40:15991) -> もう眠いわ…さようなら
+Condition: One-time use (ai:100 rnd:0) (one-time: 1)
+Reduce self HP to 0
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
 

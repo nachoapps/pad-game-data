@@ -1,0 +1,61 @@
+#5784  - 海馬瀬人＆青眼の白龍
+True : use_new_ai
+3 : starting/max counter
+1 : counter increment
+
+ESPreemptive(49:3402) -> ESPreemptive
+Enable preempt if level 4
+
+ESBranchLevel(35:25) -> ESBranchLevel
+Branch on level > 4, target rnd 4
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 1, target rnd 8
+
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b1
+
+SkillSet:
+	[0] ESDamageShield(74:15755) -> デュエル！
+	Reduce damage from all sources by 50% for 5 turns
+	[1] ESOrbSealRow(100:15759) -> オレの未来はオレが決める！
+	Seal 1st row for 5 turns
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESBranchHP(28:18) -> ESBranchHP
+Branch on hp < 30, target rnd 12
+
+EnemySkillUnknown(57:15757) -> 罠カード「死のデッキ破壊ウイルス」
+Condition: One-time use (ai:100 rnd:0) (one-time: 3)
+No description set
+
+ESAttackMultihit(15:15756) -> 行け、ブルーアイズ！
+Deal 100% damage (2 hits, 50% each)
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESBranchCounter(32:22) -> ESBranchCounter
+Branch on counter > 1, target rnd 16
+
+ESSetCounter(26:16) -> ESSetCounter
+counter + 1
+
+ESAttackUPRemainingEnemies(17:15758) -> 青眼の白龍で攻撃！
+Condition: when <= 1 enemies remain (ai:100 rnd:0)
+Increase damage to 150% for the next 1 turns
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESColumnSpawnMulti(77:15760) -> 滅びのバースト・ストリーム
+Change 3rd column to Water orbs, 4th column to Water orbs, Deal 150% damage
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+

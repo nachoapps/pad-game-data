@@ -12,8 +12,15 @@ Branch on flag & 1, target rnd 6
 ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b1
 
-ESNone(0:16032) -> ESNone
-nothing
+SkillSet:
+	[0] ESStatusShield(20:16033) -> 沈黙の世界
+	Voids status ailments for 999 turns
+	[1] ESDamageShield(74:16034) -> 強き靴
+	Reduce damage from all sources by 90% for 99 turns
+	[2] ESAbsorbCombo(67:16035) -> 神武の構え
+	Absorb combo <= 7 damage for 99 turns
+	[3] EnemySkillUnknown(126:16036) -> 広大無辺
+	No description set
 
 ESEndPath(36:26) -> ESEndPath
 end_turn
@@ -21,66 +28,145 @@ end_turn
 ESSetCounter(26:16) -> ESSetCounter
 counter + 1
 
-ESBranchHP(28:18) -> ESBranchHP
-Branch on hp < 10, target rnd 21
+ESBranchCounter(32:22) -> ESBranchCounter
+Branch on counter > 6, target rnd 16
 
 ESBranchCounter(32:22) -> ESBranchCounter
-Branch on counter > 5, target rnd 15
+Branch on counter > 5, target rnd 14
 
-ESNone(0:16042) -> ESNone
-nothing
+ESBranchHP(28:18) -> ESBranchHP
+Branch on hp < 50, target rnd 19
 
-ESNone(0:16045) -> ESNone
-nothing
+SkillSet:
+	Condition: One-time use (ai:0 rnd:33) (one-time: 1)
+	[0] ESDispel(6:16054) -> 世界の鼓動
+	Voids player buff effects
+	[1] ESGravity(50:16043) -> ダイブキック
+	Player -99% HP
 
-ESNone(0:16048) -> ESNone
-nothing
+SkillSet:
+	Condition: 33% chance (ai:0 rnd:33)
+	[0] ESChangeAttribute(46:16045) -> 精霊のルーン
+	Change own attribute to random one of Fire, Water, Wood, Light, Dark
+	[1] ESAttackMultihit(15:16055) -> 復讐の業火
+	Deal 70% damage (5 hits, 14% each)
 
-ESNone(0:16049) -> ESNone
-nothing
-
-ESNone(0:16050) -> ESNone
-nothing
+SkillSet:
+	Condition: 34% chance (ai:0 rnd:34)
+	[0] ESDebuffRCV(105:16212) -> 命の渇き
+	Rcv 50% for 1 turns
+	[1] ESNoSkyfall(127:16213) -> 朽ち果てた自然
+	No skyfall for 1 turns
 
 ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESBranchCounter(31:21) -> ESBranchCounter
-Branch on counter = 5, target rnd 17
+SkillSet:
+	[0] ESBindAwoken(88:16038) -> 実りなき大地
+	Bind awoken skills for 1 turns
+	[1] ESBombFixedSpawn(103:16039) -> 激情の崩壊
+	Spawn Bomb orbs in the specified positions
+	[2] ESDebuffMovetime(39:16040) -> 限られた生命
+	Movetime 25% for 1 turns
 
-ESBranchCounter(30:20) -> ESBranchCounter
-Branch on counter < 9, target rnd 9
-
-ESNone(0:16037) -> ESNone
-nothing
+ESEndPath(36:26) -> ESEndPath
+end_turn
 
 ESSetCounter(25:15) -> ESSetCounter
 counter = 0
 
-ESNone(0:16040) -> ESNone
-nothing
+SkillSet:
+	[0] ESRandomSpawn(92:16215) -> 恵み溢れる大地
+	Spawn random 15 Fire, Wood, Mortal Poison orbs
+	[1] EnemySkillUnknown(126:16036) -> 広大無辺
+	No description set
 
 ESEndPath(36:26) -> ESEndPath
 end_turn
 
 ESBranchFlag(43:10) -> ESBranchFlag
-Branch on flag & 2, target rnd 25
+Branch on flag & 2, target rnd 22
 
 ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b11
 
-ESNone(0:16051) -> ESNone
-nothing
+SkillSet:
+	[0] ESChangeAttribute(46:16045) -> 精霊のルーン
+	Change own attribute to random one of Fire, Water, Wood, Light, Dark
+	[1] ESAttackMultihit(15:16046) -> 蹴舞・一角
+	Deal 80% damage
+
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 4, target rnd 25
+
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b111
+
+SkillSet:
+	[0] ESChangeAttribute(46:16045) -> 精霊のルーン
+	Change own attribute to random one of Fire, Water, Wood, Light, Dark
+	[1] ESAttackMultihit(15:16047) -> 蹴舞・二爪
+	Deal 96% damage (2 hits, 48% each)
+
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 8, target rnd 28
+
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b1111
+
+SkillSet:
+	[0] ESChangeAttribute(46:16045) -> 精霊のルーン
+	Change own attribute to random one of Fire, Water, Wood, Light, Dark
+	[1] ESAttackMultihit(15:16048) -> 蹴舞・三槌
+	Deal 111% damage (3 hits, 37% each)
+
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 16, target rnd 31
+
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b11111
+
+SkillSet:
+	[0] ESChangeAttribute(46:16045) -> 精霊のルーン
+	Change own attribute to random one of Fire, Water, Wood, Light, Dark
+	[1] ESAttackMultihit(15:16049) -> 蹴舞・四牙
+	Deal 128% damage (4 hits, 32% each)
+
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 32, target rnd 34
+
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b111111
+
+SkillSet:
+	[0] ESChangeAttribute(46:16045) -> 精霊のルーン
+	Change own attribute to random one of Fire, Water, Wood, Light, Dark
+	[1] ESAttackMultihit(15:16050) -> 蹴舞・五咆
+	Deal 145% damage (5 hits, 29% each)
+
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 64, target rnd 37
+
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b1111111
+
+SkillSet:
+	[0] ESChangeAttribute(46:16045) -> 精霊のルーン
+	Change own attribute to random one of Fire, Water, Wood, Light, Dark
+	[1] ESAttackMultihit(15:16051) -> 蹴舞・六衝
+	Deal 162% damage (6 hits, 27% each)
+
+SkillSet:
+	[0] ESDispel(6:16054) -> 世界の鼓動
+	Voids player buff effects
+	[1] ESChangeAttribute(46:16045) -> 精霊のルーン
+	Change own attribute to random one of Fire, Water, Wood, Light, Dark
+	[2] ESAttackMultihit(15:16052) -> 蹴舞・百刺鋲
+	Deal 700% damage (7 hits, 100% each)
 
 ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESNone(0:16053) -> ESNone
-nothing
-
-ESEndPath(36:26) -> ESEndPath
-end_turn
-
-ESNone(0:16056) -> ESNone
-nothing
+ESTypeResist(118:16089) -> 悪魔耐性
+Reduce damage from Devil by 50%
 

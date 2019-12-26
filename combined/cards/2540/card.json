@@ -343,10 +343,13 @@
             "enemy_skill_id": 16104,
             "jp_skill": {
                 "behavior": {
-                    "_name": "なし",
+                    "_name": "＿先制",
+                    "attack": null,
                     "enemy_skill_id": 16104,
                     "params": [
                         null,
+                        16105,
+                        16106,
                         null,
                         null,
                         null,
@@ -357,15 +360,89 @@
                         null,
                         null,
                         null,
-                        50,
-                        4,
                         null,
                         null,
                         null
                     ],
-                    "type": 0
+                    "skill_ids": [
+                        16105,
+                        16106
+                    ],
+                    "skills": [
+                        {
+                            "_name": "一緒に遊ぼう！",
+                            "attack": null,
+                            "combo_threshold": 5,
+                            "enemy_skill_id": 16105,
+                            "max_turns": 5,
+                            "min_turns": 5,
+                            "params": [
+                                "5ターンの間、5コンボ以下の攻撃を吸収",
+                                5,
+                                5,
+                                5,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null
+                            ],
+                            "type": 67
+                        },
+                        {
+                            "_name": "羽根つきで勝負だ",
+                            "amount": -3.0,
+                            "attack": {
+                                "atk_multiplier": 100,
+                                "max_hits": 1,
+                                "min_hits": 1
+                            },
+                            "debuff_type": "movetime",
+                            "enemy_skill_id": 16106,
+                            "params": [
+                                "1ターンの間、持ち時間が3秒減少",
+                                1,
+                                30,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                100,
+                                null
+                            ],
+                            "turns": 1,
+                            "type": 39,
+                            "unit": "s"
+                        }
+                    ],
+                    "type": 83
                 },
-                "condition": null,
+                "condition": {
+                    "_ai": 100,
+                    "_rnd": 0,
+                    "cards_on_team": [],
+                    "combos_made": null,
+                    "condition_attributes": [],
+                    "enemies_remaining": null,
+                    "forced_one_time": null,
+                    "hp_threshold": null,
+                    "on_death": null,
+                    "one_time": null
+                },
                 "enemy_skill_id": 16104,
                 "increment": 1,
                 "max_counter": 1,
@@ -634,29 +711,55 @@
             "enemy_skill_id": 16108,
             "jp_skill": {
                 "behavior": {
-                    "_name": "なし",
+                    "_name": "ぺたぺたー",
+                    "attack": {
+                        "atk_multiplier": 120,
+                        "max_hits": 1,
+                        "min_hits": 1
+                    },
                     "enemy_skill_id": 16108,
                     "params": [
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        50,
+                        "1ターンの間、対象ドロップを超暗闇状態にする",
+                        1,
+                        17,
+                        10,
                         4,
+                        10,
+                        17,
                         null,
                         null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        1,
+                        120,
                         null
                     ],
-                    "type": 0
+                    "position_cols": null,
+                    "position_rows": null,
+                    "position_str": [
+                        "OXXXOX",
+                        "XOXOXX",
+                        "XXOXXX",
+                        "XOXOXX",
+                        "OXXXOX"
+                    ],
+                    "turns": 1,
+                    "type": 98
                 },
-                "condition": null,
+                "condition": {
+                    "_ai": 100,
+                    "_rnd": 0,
+                    "cards_on_team": [],
+                    "combos_made": null,
+                    "condition_attributes": [],
+                    "enemies_remaining": null,
+                    "forced_one_time": null,
+                    "hp_threshold": null,
+                    "on_death": null,
+                    "one_time": 1
+                },
                 "enemy_skill_id": 16108,
                 "increment": 1,
                 "max_counter": 1,
@@ -727,9 +830,19 @@
             "enemy_skill_id": 16106,
             "jp_skill": {
                 "behavior": {
-                    "_name": "なし",
+                    "_name": "羽根つきで勝負だ",
+                    "amount": -3.0,
+                    "attack": {
+                        "atk_multiplier": 100,
+                        "max_hits": 1,
+                        "min_hits": 1
+                    },
+                    "debuff_type": "movetime",
                     "enemy_skill_id": 16106,
                     "params": [
+                        "1ターンの間、持ち時間が3秒減少",
+                        1,
+                        30,
                         null,
                         null,
                         null,
@@ -741,15 +854,25 @@
                         null,
                         null,
                         null,
-                        50,
-                        4,
-                        null,
-                        null,
+                        100,
                         null
                     ],
-                    "type": 0
+                    "turns": 1,
+                    "type": 39,
+                    "unit": "s"
                 },
-                "condition": null,
+                "condition": {
+                    "_ai": 0,
+                    "_rnd": 50,
+                    "cards_on_team": [],
+                    "combos_made": null,
+                    "condition_attributes": [],
+                    "enemies_remaining": null,
+                    "forced_one_time": null,
+                    "hp_threshold": null,
+                    "on_death": null,
+                    "one_time": null
+                },
                 "enemy_skill_id": 16106,
                 "increment": 1,
                 "max_counter": 1,
@@ -820,9 +943,19 @@
             "enemy_skill_id": 16107,
             "jp_skill": {
                 "behavior": {
-                    "_name": "なし",
+                    "_name": "コマ回しだ",
+                    "attack": {
+                        "atk_multiplier": 100,
+                        "max_hits": 1,
+                        "min_hits": 1
+                    },
+                    "count": 1,
                     "enemy_skill_id": 16107,
                     "params": [
+                        "1ターンの間、対象箇所のドロップが変化する",
+                        1,
+                        100,
+                        1,
                         null,
                         null,
                         null,
@@ -833,16 +966,25 @@
                         null,
                         null,
                         null,
-                        null,
-                        50,
-                        4,
-                        null,
-                        null,
+                        100,
                         null
                     ],
-                    "type": 0
+                    "speed": 100,
+                    "turns": 1,
+                    "type": 109
                 },
-                "condition": null,
+                "condition": {
+                    "_ai": 0,
+                    "_rnd": 50,
+                    "cards_on_team": [],
+                    "combos_made": null,
+                    "condition_attributes": [],
+                    "enemies_remaining": null,
+                    "forced_one_time": null,
+                    "hp_threshold": null,
+                    "on_death": null,
+                    "one_time": null
+                },
                 "enemy_skill_id": 16107,
                 "increment": 1,
                 "max_counter": 1,
@@ -1213,9 +1355,16 @@
             "enemy_skill_id": 16109,
             "jp_skill": {
                 "behavior": {
-                    "_name": "なし",
+                    "_name": "や、やるね",
+                    "attack": null,
+                    "enemy_count": 999,
                     "enemy_skill_id": 16109,
+                    "multiplier": 150,
                     "params": [
+                        "攻撃力が1.5倍に上昇した",
+                        999,
+                        999,
+                        150,
                         null,
                         null,
                         null,
@@ -1225,17 +1374,25 @@
                         null,
                         null,
                         null,
-                        null,
-                        null,
-                        50,
-                        4,
                         null,
                         null,
                         null
                     ],
-                    "type": 0
+                    "turns": 999,
+                    "type": 17
                 },
-                "condition": null,
+                "condition": {
+                    "_ai": 100,
+                    "_rnd": 0,
+                    "cards_on_team": [],
+                    "combos_made": null,
+                    "condition_attributes": [],
+                    "enemies_remaining": 999,
+                    "forced_one_time": null,
+                    "hp_threshold": null,
+                    "on_death": null,
+                    "one_time": null
+                },
                 "enemy_skill_id": 16109,
                 "increment": 1,
                 "max_counter": 1,
@@ -1420,7 +1577,9 @@
                 21,
                 21,
                 12,
-                28
+                28,
+                37,
+                34
             ],
             "base_id": 2540,
             "collab_id": 0,
@@ -1432,8 +1591,8 @@
             "enemy_def_max": 480,
             "enemy_def_min": 48,
             "enemy_def_scale": 1.0,
-            "enemy_hp_max": 20000000,
-            "enemy_hp_min": 20000,
+            "enemy_hp_max": 27000000,
+            "enemy_hp_min": 27000,
             "enemy_hp_scale": 1.0,
             "enemy_max_level": 10,
             "enemy_skill_counter_increment": 1,
@@ -1527,7 +1686,7 @@
             "is_ult": false,
             "latent_on_feed": 0,
             "leader_skill_id": 4283,
-            "limit_mult": 0,
+            "limit_mult": 30,
             "max_atk": 1317,
             "max_hp": 4126,
             "max_level": 99,
@@ -1548,7 +1707,11 @@
             "sell_gold_per_level": 390,
             "sell_mp": 3000,
             "sub_attr_id": 3,
-            "super_awakenings": [],
+            "super_awakenings": [
+                52,
+                57,
+                54
+            ],
             "type_1_id": 2,
             "type_2_id": 7,
             "type_3_id": -1,
@@ -1666,10 +1829,13 @@
             },
             {
                 "behavior": {
-                    "_name": "なし",
+                    "_name": "＿先制",
+                    "attack": null,
                     "enemy_skill_id": 16104,
                     "params": [
                         null,
+                        16105,
+                        16106,
                         null,
                         null,
                         null,
@@ -1680,15 +1846,89 @@
                         null,
                         null,
                         null,
-                        50,
-                        4,
                         null,
                         null,
                         null
                     ],
-                    "type": 0
+                    "skill_ids": [
+                        16105,
+                        16106
+                    ],
+                    "skills": [
+                        {
+                            "_name": "一緒に遊ぼう！",
+                            "attack": null,
+                            "combo_threshold": 5,
+                            "enemy_skill_id": 16105,
+                            "max_turns": 5,
+                            "min_turns": 5,
+                            "params": [
+                                "5ターンの間、5コンボ以下の攻撃を吸収",
+                                5,
+                                5,
+                                5,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null
+                            ],
+                            "type": 67
+                        },
+                        {
+                            "_name": "羽根つきで勝負だ",
+                            "amount": -3.0,
+                            "attack": {
+                                "atk_multiplier": 100,
+                                "max_hits": 1,
+                                "min_hits": 1
+                            },
+                            "debuff_type": "movetime",
+                            "enemy_skill_id": 16106,
+                            "params": [
+                                "1ターンの間、持ち時間が3秒減少",
+                                1,
+                                30,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                100,
+                                null
+                            ],
+                            "turns": 1,
+                            "type": 39,
+                            "unit": "s"
+                        }
+                    ],
+                    "type": 83
                 },
-                "condition": null,
+                "condition": {
+                    "_ai": 100,
+                    "_rnd": 0,
+                    "cards_on_team": [],
+                    "combos_made": null,
+                    "condition_attributes": [],
+                    "enemies_remaining": null,
+                    "forced_one_time": null,
+                    "hp_threshold": null,
+                    "on_death": null,
+                    "one_time": null
+                },
                 "enemy_skill_id": 16104,
                 "increment": 1,
                 "max_counter": 1,
@@ -1760,29 +2000,55 @@
             },
             {
                 "behavior": {
-                    "_name": "なし",
+                    "_name": "ぺたぺたー",
+                    "attack": {
+                        "atk_multiplier": 120,
+                        "max_hits": 1,
+                        "min_hits": 1
+                    },
                     "enemy_skill_id": 16108,
                     "params": [
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        50,
+                        "1ターンの間、対象ドロップを超暗闇状態にする",
+                        1,
+                        17,
+                        10,
                         4,
+                        10,
+                        17,
                         null,
                         null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        1,
+                        120,
                         null
                     ],
-                    "type": 0
+                    "position_cols": null,
+                    "position_rows": null,
+                    "position_str": [
+                        "OXXXOX",
+                        "XOXOXX",
+                        "XXOXXX",
+                        "XOXOXX",
+                        "OXXXOX"
+                    ],
+                    "turns": 1,
+                    "type": 98
                 },
-                "condition": null,
+                "condition": {
+                    "_ai": 100,
+                    "_rnd": 0,
+                    "cards_on_team": [],
+                    "combos_made": null,
+                    "condition_attributes": [],
+                    "enemies_remaining": null,
+                    "forced_one_time": null,
+                    "hp_threshold": null,
+                    "on_death": null,
+                    "one_time": 1
+                },
                 "enemy_skill_id": 16108,
                 "increment": 1,
                 "max_counter": 1,
@@ -1790,9 +2056,19 @@
             },
             {
                 "behavior": {
-                    "_name": "なし",
+                    "_name": "羽根つきで勝負だ",
+                    "amount": -3.0,
+                    "attack": {
+                        "atk_multiplier": 100,
+                        "max_hits": 1,
+                        "min_hits": 1
+                    },
+                    "debuff_type": "movetime",
                     "enemy_skill_id": 16106,
                     "params": [
+                        "1ターンの間、持ち時間が3秒減少",
+                        1,
+                        30,
                         null,
                         null,
                         null,
@@ -1804,15 +2080,25 @@
                         null,
                         null,
                         null,
-                        50,
-                        4,
-                        null,
-                        null,
+                        100,
                         null
                     ],
-                    "type": 0
+                    "turns": 1,
+                    "type": 39,
+                    "unit": "s"
                 },
-                "condition": null,
+                "condition": {
+                    "_ai": 0,
+                    "_rnd": 50,
+                    "cards_on_team": [],
+                    "combos_made": null,
+                    "condition_attributes": [],
+                    "enemies_remaining": null,
+                    "forced_one_time": null,
+                    "hp_threshold": null,
+                    "on_death": null,
+                    "one_time": null
+                },
                 "enemy_skill_id": 16106,
                 "increment": 1,
                 "max_counter": 1,
@@ -1820,9 +2106,19 @@
             },
             {
                 "behavior": {
-                    "_name": "なし",
+                    "_name": "コマ回しだ",
+                    "attack": {
+                        "atk_multiplier": 100,
+                        "max_hits": 1,
+                        "min_hits": 1
+                    },
+                    "count": 1,
                     "enemy_skill_id": 16107,
                     "params": [
+                        "1ターンの間、対象箇所のドロップが変化する",
+                        1,
+                        100,
+                        1,
                         null,
                         null,
                         null,
@@ -1833,16 +2129,25 @@
                         null,
                         null,
                         null,
-                        null,
-                        50,
-                        4,
-                        null,
-                        null,
+                        100,
                         null
                     ],
-                    "type": 0
+                    "speed": 100,
+                    "turns": 1,
+                    "type": 109
                 },
-                "condition": null,
+                "condition": {
+                    "_ai": 0,
+                    "_rnd": 50,
+                    "cards_on_team": [],
+                    "combos_made": null,
+                    "condition_attributes": [],
+                    "enemies_remaining": null,
+                    "forced_one_time": null,
+                    "hp_threshold": null,
+                    "on_death": null,
+                    "one_time": null
+                },
                 "enemy_skill_id": 16107,
                 "increment": 1,
                 "max_counter": 1,
@@ -1947,9 +2252,16 @@
             },
             {
                 "behavior": {
-                    "_name": "なし",
+                    "_name": "や、やるね",
+                    "attack": null,
+                    "enemy_count": 999,
                     "enemy_skill_id": 16109,
+                    "multiplier": 150,
                     "params": [
+                        "攻撃力が1.5倍に上昇した",
+                        999,
+                        999,
+                        150,
                         null,
                         null,
                         null,
@@ -1959,17 +2271,25 @@
                         null,
                         null,
                         null,
-                        null,
-                        null,
-                        50,
-                        4,
                         null,
                         null,
                         null
                     ],
-                    "type": 0
+                    "turns": 999,
+                    "type": 17
                 },
-                "condition": null,
+                "condition": {
+                    "_ai": 100,
+                    "_rnd": 0,
+                    "cards_on_team": [],
+                    "combos_made": null,
+                    "condition_attributes": [],
+                    "enemies_remaining": 999,
+                    "forced_one_time": null,
+                    "hp_threshold": null,
+                    "on_death": null,
+                    "one_time": null
+                },
                 "enemy_skill_id": 16109,
                 "increment": 1,
                 "max_counter": 1,

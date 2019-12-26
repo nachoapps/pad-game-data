@@ -1,0 +1,43 @@
+#5812  - クリボー
+True : use_new_ai
+3 : starting/max counter
+0 : counter increment
+
+ESPreemptive(49:318) -> ESPreemptive
+Enable preempt if level 1
+
+ESDebuffMovetime(39:15841) -> クリボー召喚
+Condition: One-time use (ai:100 rnd:0) (one-time: 2)
+Movetime 150% for 2 turns
+
+ESBranchHP(28:18) -> ESBranchHP
+Branch on hp < 15, target rnd 8
+
+ESRandomSpawn(92:15768) -> クーリッ！
+Condition: 33% chance (ai:0 rnd:33)
+Spawn random 3 Wood orbs, Deal 100% damage
+
+ESPoisonChangeRandom(60:15771) -> 機雷化
+Condition: 33% chance (ai:0 rnd:33)
+Change Random 3 to Poison
+
+ESAttackMultihit(15:15770) -> クー！
+Condition: 34% chance (ai:0 rnd:34)
+Deal 100% damage
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESAttackMultihit(15:15769) -> 「増殖」の魔法カード
+Condition: One-time use (ai:100 rnd:0) (one-time: 1)
+Deal 105% damage (3 hits, 35% each)
+
+ESAttackMultihit(15:15772) -> クリー！
+Deal 140% damage
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESAttributeResist(72:15830) -> 火半減
+Reduce damage from Fire by 50%
+

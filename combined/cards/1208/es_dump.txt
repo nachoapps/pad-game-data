@@ -1,56 +1,95 @@
 #1208  - Dragon Emperor, Buster Siegfried
 True : use_new_ai
-1 : starting/max counter
+15 : starting/max counter
 0 : counter increment
 
 ESPreemptive(49:318) -> ESPreemptive
 Enable preempt if level 1
 
-ESNone(0:16057) -> ESNone
-nothing
+SkillSet:
+	Condition: One-time use (ai:100 rnd:0) (one-time: 8)
+	[0] ESStatusShield(20:16058) -> いざ、参る！
+	Voids status ailments for 999 turns
+	[1] ESAbsorbCombo(67:16059) -> 見切り
+	Absorb combo <= 9 damage for 2 turns
+	[2] ESBindTyping(3:16218) -> 威圧する眼光
+	Bind Devil cards for 10 turns
 
 ESBranchHP(28:18) -> ESBranchHP
-Branch on hp < 1, target rnd 15
+Branch on hp < 1, target rnd 18
 
 ESBranchCounter(32:22) -> ESBranchCounter
-Branch on counter > 6, target rnd 9
+Branch on counter > 6, target rnd 15
 
 ESSetCounter(26:16) -> ESSetCounter
 counter + 1
 
-ESBranchCounter(31:21) -> ESBranchCounter
-Branch on counter = 6, target rnd 13
+ESBranchCounter(32:22) -> ESBranchCounter
+Branch on counter > 6, target rnd 15
 
-ESBranchCounter(31:21) -> ESBranchCounter
-Branch on counter = 4, target rnd 12
+ESBranchCounter(32:22) -> ESBranchCounter
+Branch on counter > 4, target rnd 13
 
-ESBranchCounter(31:21) -> ESBranchCounter
-Branch on counter = 2, target rnd 11
+ESBranchCounter(32:22) -> ESBranchCounter
+Branch on counter > 2, target rnd 11
 
-ESNone(0:16069) -> ESNone
-nothing
-
-ESEndPath(36:26) -> ESEndPath
-end_turn
-
-ESNone(0:16060) -> ESNone
-nothing
-
-ESNone(0:16063) -> ESNone
-nothing
-
-ESNone(0:16066) -> ESNone
-nothing
+ESAttackMultihit(15:16069) -> バスターブレード
+Deal 85% damage
 
 ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESNone(0:16070) -> ESNone
-nothing
+SkillSet:
+	Condition: One-time use (ai:100 rnd:0) (one-time: 4)
+	[0] ESAttackUPRemainingEnemies(17:16061) -> 一意専心
+	Increase damage to 200% for the next 1 turns
+	[1] ESAbsorbCombo(67:16062) -> 見切り
+	Absorb combo <= 8 damage for 2 turns
+
+ESAttackMultihit(15:16069) -> バスターブレード
+Deal 85% damage
+
+SkillSet:
+	Condition: One-time use (ai:100 rnd:0) (one-time: 2)
+	[0] ESAttackUPRemainingEnemies(17:16064) -> 一意専心
+	Increase damage to 300% for the next 1 turns
+	[1] ESAbsorbCombo(67:16065) -> 見切り
+	Absorb combo <= 7 damage for 2 turns
+
+ESAttackMultihit(15:16069) -> バスターブレード
+Deal 85% damage
+
+SkillSet:
+	Condition: One-time use (ai:100 rnd:0) (one-time: 1)
+	[0] ESAttackUPRemainingEnemies(17:16067) -> 一意専心
+	Increase damage to 400% for the next 999 turns
+	[1] ESAbsorbCombo(67:16068) -> 見切り
+	Absorb combo <= 6 damage for 999 turns
+
+ESAttackMultihit(15:16069) -> バスターブレード
+Deal 85% damage
 
 ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESNone(0:16073) -> ESNone
-nothing
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 1, target rnd 4
+
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b1
+
+ESSetCounter(26:16) -> ESSetCounter
+counter + 1
+
+SkillSet:
+	[0] ESRecoverEnemy(86:16071) -> 情け無用
+	Enemy recover 100% hp
+	[1] ESDebuffMovetime(39:16072) -> 覚悟はできているか？
+	Movetime 25% for 5 turns
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESResolve(73:16073) -> 根性
+Survive attacks with 1 HP when HP > 50%
 

@@ -73,12 +73,12 @@
                 "condition": null,
                 "enemy_skill_id": 318,
                 "increment": 0,
-                "max_counter": 1,
+                "max_counter": 15,
                 "use_new_ai": true
             },
             "kr_skill": {
                 "behavior": {
-                    "_name": "선제커맨드Lv1",
+                    "_name": "※先制コマンドLV1",
                     "enemy_skill_id": 318,
                     "level": 1,
                     "params": [
@@ -104,12 +104,12 @@
                 "condition": null,
                 "enemy_skill_id": 318,
                 "increment": 0,
-                "max_counter": 1,
+                "max_counter": 15,
                 "use_new_ai": true
             },
             "na_skill": {
                 "behavior": {
-                    "_name": "*Preemptive Command LV1",
+                    "_name": "※先制コマンドLV1",
                     "enemy_skill_id": 318,
                     "level": 1,
                     "params": [
@@ -135,7 +135,7 @@
                 "condition": null,
                 "enemy_skill_id": 318,
                 "increment": 0,
-                "max_counter": 1,
+                "max_counter": 15,
                 "use_new_ai": true
             }
         },
@@ -143,10 +143,14 @@
             "enemy_skill_id": 16057,
             "jp_skill": {
                 "behavior": {
-                    "_name": "なし",
+                    "_name": "＿先制",
+                    "attack": null,
                     "enemy_skill_id": 16057,
                     "params": [
                         null,
+                        16058,
+                        16059,
+                        16218,
                         null,
                         null,
                         null,
@@ -156,27 +160,129 @@
                         null,
                         null,
                         null,
-                        null,
-                        50,
-                        4,
-                        null,
+                        8,
                         null,
                         null
                     ],
-                    "type": 0
+                    "skill_ids": [
+                        16058,
+                        16059,
+                        16218
+                    ],
+                    "skills": [
+                        {
+                            "_name": "いざ、参る！",
+                            "attack": null,
+                            "enemy_skill_id": 16058,
+                            "params": [
+                                "しばらくの間、状態異常を無効化する",
+                                999,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null
+                            ],
+                            "turns": 999,
+                            "type": 20
+                        },
+                        {
+                            "_name": "見切り",
+                            "attack": null,
+                            "combo_threshold": 9,
+                            "enemy_skill_id": 16059,
+                            "max_turns": 2,
+                            "min_turns": 2,
+                            "params": [
+                                "2ターンの間、9コンボ以下の攻撃を吸収",
+                                2,
+                                2,
+                                9,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null
+                            ],
+                            "type": 67
+                        },
+                        {
+                            "_name": "威圧する眼光",
+                            "attack": null,
+                            "enemy_skill_id": 16218,
+                            "max_turns": 10,
+                            "min_turns": 10,
+                            "params": [
+                                "悪魔タイプが10ターンの間、行動不能",
+                                7,
+                                10,
+                                10,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null
+                            ],
+                            "target_count": null,
+                            "target_typing": 7,
+                            "targets": [
+                                "TargetType.types"
+                            ],
+                            "type": 3
+                        }
+                    ],
+                    "type": 83
                 },
-                "condition": null,
+                "condition": {
+                    "_ai": 100,
+                    "_rnd": 0,
+                    "cards_on_team": [],
+                    "combos_made": null,
+                    "condition_attributes": [],
+                    "enemies_remaining": null,
+                    "forced_one_time": null,
+                    "hp_threshold": null,
+                    "on_death": null,
+                    "one_time": 8
+                },
                 "enemy_skill_id": 16057,
                 "increment": 0,
-                "max_counter": 1,
+                "max_counter": 15,
                 "use_new_ai": true
             },
             "kr_skill": {
                 "behavior": {
-                    "_name": "なし",
+                    "_name": "＿先制",
+                    "attack": null,
                     "enemy_skill_id": 16057,
                     "params": [
                         null,
+                        16058,
+                        16059,
+                        16218,
                         null,
                         null,
                         null,
@@ -186,27 +292,129 @@
                         null,
                         null,
                         null,
-                        null,
-                        50,
-                        4,
-                        null,
+                        8,
                         null,
                         null
                     ],
-                    "type": 0
+                    "skill_ids": [
+                        16058,
+                        16059,
+                        16218
+                    ],
+                    "skills": [
+                        {
+                            "_name": "いざ、参る！",
+                            "attack": null,
+                            "enemy_skill_id": 16058,
+                            "params": [
+                                "しばらくの間、状態異常を無効化する",
+                                999,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null
+                            ],
+                            "turns": 999,
+                            "type": 20
+                        },
+                        {
+                            "_name": "見切り",
+                            "attack": null,
+                            "combo_threshold": 9,
+                            "enemy_skill_id": 16059,
+                            "max_turns": 2,
+                            "min_turns": 2,
+                            "params": [
+                                "2ターンの間、9コンボ以下の攻撃を吸収",
+                                2,
+                                2,
+                                9,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null
+                            ],
+                            "type": 67
+                        },
+                        {
+                            "_name": "威圧する眼光",
+                            "attack": null,
+                            "enemy_skill_id": 16218,
+                            "max_turns": 10,
+                            "min_turns": 10,
+                            "params": [
+                                "悪魔タイプが10ターンの間、行動不能",
+                                7,
+                                10,
+                                10,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null
+                            ],
+                            "target_count": null,
+                            "target_typing": 7,
+                            "targets": [
+                                "TargetType.types"
+                            ],
+                            "type": 3
+                        }
+                    ],
+                    "type": 83
                 },
-                "condition": null,
+                "condition": {
+                    "_ai": 100,
+                    "_rnd": 0,
+                    "cards_on_team": [],
+                    "combos_made": null,
+                    "condition_attributes": [],
+                    "enemies_remaining": null,
+                    "forced_one_time": null,
+                    "hp_threshold": null,
+                    "on_death": null,
+                    "one_time": 8
+                },
                 "enemy_skill_id": 16057,
                 "increment": 0,
-                "max_counter": 1,
+                "max_counter": 15,
                 "use_new_ai": true
             },
             "na_skill": {
                 "behavior": {
-                    "_name": "なし",
+                    "_name": "＿先制",
+                    "attack": null,
                     "enemy_skill_id": 16057,
                     "params": [
                         null,
+                        16058,
+                        16059,
+                        16218,
                         null,
                         null,
                         null,
@@ -216,19 +424,117 @@
                         null,
                         null,
                         null,
-                        null,
-                        50,
-                        4,
-                        null,
+                        8,
                         null,
                         null
                     ],
-                    "type": 0
+                    "skill_ids": [
+                        16058,
+                        16059,
+                        16218
+                    ],
+                    "skills": [
+                        {
+                            "_name": "いざ、参る！",
+                            "attack": null,
+                            "enemy_skill_id": 16058,
+                            "params": [
+                                "しばらくの間、状態異常を無効化する",
+                                999,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null
+                            ],
+                            "turns": 999,
+                            "type": 20
+                        },
+                        {
+                            "_name": "見切り",
+                            "attack": null,
+                            "combo_threshold": 9,
+                            "enemy_skill_id": 16059,
+                            "max_turns": 2,
+                            "min_turns": 2,
+                            "params": [
+                                "2ターンの間、9コンボ以下の攻撃を吸収",
+                                2,
+                                2,
+                                9,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null
+                            ],
+                            "type": 67
+                        },
+                        {
+                            "_name": "威圧する眼光",
+                            "attack": null,
+                            "enemy_skill_id": 16218,
+                            "max_turns": 10,
+                            "min_turns": 10,
+                            "params": [
+                                "悪魔タイプが10ターンの間、行動不能",
+                                7,
+                                10,
+                                10,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null
+                            ],
+                            "target_count": null,
+                            "target_typing": 7,
+                            "targets": [
+                                "TargetType.types"
+                            ],
+                            "type": 3
+                        }
+                    ],
+                    "type": 83
                 },
-                "condition": null,
+                "condition": {
+                    "_ai": 100,
+                    "_rnd": 0,
+                    "cards_on_team": [],
+                    "combos_made": null,
+                    "condition_attributes": [],
+                    "enemies_remaining": null,
+                    "forced_one_time": null,
+                    "hp_threshold": null,
+                    "on_death": null,
+                    "one_time": 8
+                },
                 "enemy_skill_id": 16057,
                 "increment": 0,
-                "max_counter": 1,
+                "max_counter": 15,
                 "use_new_ai": true
             }
         },
@@ -259,18 +565,18 @@
                         null,
                         null
                     ],
-                    "target_round": 15,
+                    "target_round": 18,
                     "type": 28
                 },
                 "condition": null,
                 "enemy_skill_id": 18,
                 "increment": 0,
-                "max_counter": 1,
+                "max_counter": 15,
                 "use_new_ai": true
             },
             "kr_skill": {
                 "behavior": {
-                    "_name": "테스트예비",
+                    "_name": "※HPが ai %以下の時 rnd に分岐",
                     "branch_condition": "hp",
                     "branch_value": 1,
                     "compare": "<",
@@ -293,18 +599,18 @@
                         null,
                         null
                     ],
-                    "target_round": 15,
+                    "target_round": 18,
                     "type": 28
                 },
                 "condition": null,
                 "enemy_skill_id": 18,
                 "increment": 0,
-                "max_counter": 1,
+                "max_counter": 15,
                 "use_new_ai": true
             },
             "na_skill": {
                 "behavior": {
-                    "_name": "ERROR18",
+                    "_name": "※HPが ai %以下の時 rnd に分岐",
                     "branch_condition": "hp",
                     "branch_value": 1,
                     "compare": "<",
@@ -327,13 +633,13 @@
                         null,
                         null
                     ],
-                    "target_round": 15,
+                    "target_round": 18,
                     "type": 28
                 },
                 "condition": null,
                 "enemy_skill_id": 18,
                 "increment": 0,
-                "max_counter": 1,
+                "max_counter": 15,
                 "use_new_ai": true
             }
         },
@@ -364,18 +670,18 @@
                         null,
                         null
                     ],
-                    "target_round": 9,
+                    "target_round": 15,
                     "type": 32
                 },
                 "condition": null,
                 "enemy_skill_id": 22,
                 "increment": 0,
-                "max_counter": 1,
+                "max_counter": 15,
                 "use_new_ai": true
             },
             "kr_skill": {
                 "behavior": {
-                    "_name": "테스트예비",
+                    "_name": "※カウンターが ai 以上の時 rnd に分岐",
                     "branch_condition": "counter",
                     "branch_value": 6,
                     "compare": ">",
@@ -398,18 +704,18 @@
                         null,
                         null
                     ],
-                    "target_round": 9,
+                    "target_round": 15,
                     "type": 32
                 },
                 "condition": null,
                 "enemy_skill_id": 22,
                 "increment": 0,
-                "max_counter": 1,
+                "max_counter": 15,
                 "use_new_ai": true
             },
             "na_skill": {
                 "behavior": {
-                    "_name": "ERROR22",
+                    "_name": "※カウンターが ai 以上の時 rnd に分岐",
                     "branch_condition": "counter",
                     "branch_value": 6,
                     "compare": ">",
@@ -432,13 +738,13 @@
                         null,
                         null
                     ],
-                    "target_round": 9,
+                    "target_round": 15,
                     "type": 32
                 },
                 "condition": null,
                 "enemy_skill_id": 22,
                 "increment": 0,
-                "max_counter": 1,
+                "max_counter": 15,
                 "use_new_ai": true
             }
         },
@@ -473,12 +779,12 @@
                 "condition": null,
                 "enemy_skill_id": 16,
                 "increment": 0,
-                "max_counter": 1,
+                "max_counter": 15,
                 "use_new_ai": true
             },
             "kr_skill": {
                 "behavior": {
-                    "_name": "테스트예비",
+                    "_name": "※カウンターを１＋",
                     "counter": 1,
                     "enemy_skill_id": 16,
                     "params": [
@@ -505,12 +811,12 @@
                 "condition": null,
                 "enemy_skill_id": 16,
                 "increment": 0,
-                "max_counter": 1,
+                "max_counter": 15,
                 "use_new_ai": true
             },
             "na_skill": {
                 "behavior": {
-                    "_name": "ERROR16",
+                    "_name": "※カウンターを１＋",
                     "counter": 1,
                     "enemy_skill_id": 16,
                     "params": [
@@ -537,19 +843,124 @@
                 "condition": null,
                 "enemy_skill_id": 16,
                 "increment": 0,
-                "max_counter": 1,
+                "max_counter": 15,
                 "use_new_ai": true
             }
         },
         {
-            "enemy_skill_id": 21,
+            "enemy_skill_id": 22,
             "jp_skill": {
                 "behavior": {
-                    "_name": "※カウンターが ai の時 rnd に分岐",
+                    "_name": "※カウンターが ai 以上の時 rnd に分岐",
                     "branch_condition": "counter",
                     "branch_value": 6,
-                    "compare": "=",
-                    "enemy_skill_id": 21,
+                    "compare": ">",
+                    "enemy_skill_id": 22,
+                    "params": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        4,
+                        null,
+                        null,
+                        null
+                    ],
+                    "target_round": 15,
+                    "type": 32
+                },
+                "condition": null,
+                "enemy_skill_id": 22,
+                "increment": 0,
+                "max_counter": 15,
+                "use_new_ai": true
+            },
+            "kr_skill": {
+                "behavior": {
+                    "_name": "※カウンターが ai 以上の時 rnd に分岐",
+                    "branch_condition": "counter",
+                    "branch_value": 6,
+                    "compare": ">",
+                    "enemy_skill_id": 22,
+                    "params": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        4,
+                        null,
+                        null,
+                        null
+                    ],
+                    "target_round": 15,
+                    "type": 32
+                },
+                "condition": null,
+                "enemy_skill_id": 22,
+                "increment": 0,
+                "max_counter": 15,
+                "use_new_ai": true
+            },
+            "na_skill": {
+                "behavior": {
+                    "_name": "※カウンターが ai 以上の時 rnd に分岐",
+                    "branch_condition": "counter",
+                    "branch_value": 6,
+                    "compare": ">",
+                    "enemy_skill_id": 22,
+                    "params": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        4,
+                        null,
+                        null,
+                        null
+                    ],
+                    "target_round": 15,
+                    "type": 32
+                },
+                "condition": null,
+                "enemy_skill_id": 22,
+                "increment": 0,
+                "max_counter": 15,
+                "use_new_ai": true
+            }
+        },
+        {
+            "enemy_skill_id": 22,
+            "jp_skill": {
+                "behavior": {
+                    "_name": "※カウンターが ai 以上の時 rnd に分岐",
+                    "branch_condition": "counter",
+                    "branch_value": 4,
+                    "compare": ">",
+                    "enemy_skill_id": 22,
                     "params": [
                         null,
                         null,
@@ -569,21 +980,21 @@
                         null
                     ],
                     "target_round": 13,
-                    "type": 31
+                    "type": 32
                 },
                 "condition": null,
-                "enemy_skill_id": 21,
+                "enemy_skill_id": 22,
                 "increment": 0,
-                "max_counter": 1,
+                "max_counter": 15,
                 "use_new_ai": true
             },
             "kr_skill": {
                 "behavior": {
-                    "_name": "테스트예비",
+                    "_name": "※カウンターが ai 以上の時 rnd に分岐",
                     "branch_condition": "counter",
-                    "branch_value": 6,
-                    "compare": "=",
-                    "enemy_skill_id": 21,
+                    "branch_value": 4,
+                    "compare": ">",
+                    "enemy_skill_id": 22,
                     "params": [
                         null,
                         null,
@@ -603,21 +1014,21 @@
                         null
                     ],
                     "target_round": 13,
-                    "type": 31
+                    "type": 32
                 },
                 "condition": null,
-                "enemy_skill_id": 21,
+                "enemy_skill_id": 22,
                 "increment": 0,
-                "max_counter": 1,
+                "max_counter": 15,
                 "use_new_ai": true
             },
             "na_skill": {
                 "behavior": {
-                    "_name": "ERROR21",
+                    "_name": "※カウンターが ai 以上の時 rnd に分岐",
                     "branch_condition": "counter",
-                    "branch_value": 6,
-                    "compare": "=",
-                    "enemy_skill_id": 21,
+                    "branch_value": 4,
+                    "compare": ">",
+                    "enemy_skill_id": 22,
                     "params": [
                         null,
                         null,
@@ -637,24 +1048,24 @@
                         null
                     ],
                     "target_round": 13,
-                    "type": 31
+                    "type": 32
                 },
                 "condition": null,
-                "enemy_skill_id": 21,
+                "enemy_skill_id": 22,
                 "increment": 0,
-                "max_counter": 1,
+                "max_counter": 15,
                 "use_new_ai": true
             }
         },
         {
-            "enemy_skill_id": 21,
+            "enemy_skill_id": 22,
             "jp_skill": {
                 "behavior": {
-                    "_name": "※カウンターが ai の時 rnd に分岐",
+                    "_name": "※カウンターが ai 以上の時 rnd に分岐",
                     "branch_condition": "counter",
-                    "branch_value": 4,
-                    "compare": "=",
-                    "enemy_skill_id": 21,
+                    "branch_value": 2,
+                    "compare": ">",
+                    "enemy_skill_id": 22,
                     "params": [
                         null,
                         null,
@@ -673,22 +1084,22 @@
                         null,
                         null
                     ],
-                    "target_round": 12,
-                    "type": 31
+                    "target_round": 11,
+                    "type": 32
                 },
                 "condition": null,
-                "enemy_skill_id": 21,
+                "enemy_skill_id": 22,
                 "increment": 0,
-                "max_counter": 1,
+                "max_counter": 15,
                 "use_new_ai": true
             },
             "kr_skill": {
                 "behavior": {
-                    "_name": "테스트예비",
+                    "_name": "※カウンターが ai 以上の時 rnd に分岐",
                     "branch_condition": "counter",
-                    "branch_value": 4,
-                    "compare": "=",
-                    "enemy_skill_id": 21,
+                    "branch_value": 2,
+                    "compare": ">",
+                    "enemy_skill_id": 22,
                     "params": [
                         null,
                         null,
@@ -707,59 +1118,22 @@
                         null,
                         null
                     ],
-                    "target_round": 12,
-                    "type": 31
+                    "target_round": 11,
+                    "type": 32
                 },
                 "condition": null,
-                "enemy_skill_id": 21,
+                "enemy_skill_id": 22,
                 "increment": 0,
-                "max_counter": 1,
+                "max_counter": 15,
                 "use_new_ai": true
             },
             "na_skill": {
                 "behavior": {
-                    "_name": "ERROR21",
-                    "branch_condition": "counter",
-                    "branch_value": 4,
-                    "compare": "=",
-                    "enemy_skill_id": 21,
-                    "params": [
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        4,
-                        null,
-                        null,
-                        null
-                    ],
-                    "target_round": 12,
-                    "type": 31
-                },
-                "condition": null,
-                "enemy_skill_id": 21,
-                "increment": 0,
-                "max_counter": 1,
-                "use_new_ai": true
-            }
-        },
-        {
-            "enemy_skill_id": 21,
-            "jp_skill": {
-                "behavior": {
-                    "_name": "※カウンターが ai の時 rnd に分岐",
+                    "_name": "※カウンターが ai 以上の時 rnd に分岐",
                     "branch_condition": "counter",
                     "branch_value": 2,
-                    "compare": "=",
-                    "enemy_skill_id": 21,
+                    "compare": ">",
+                    "enemy_skill_id": 22,
                     "params": [
                         null,
                         null,
@@ -779,80 +1153,12 @@
                         null
                     ],
                     "target_round": 11,
-                    "type": 31
+                    "type": 32
                 },
                 "condition": null,
-                "enemy_skill_id": 21,
+                "enemy_skill_id": 22,
                 "increment": 0,
-                "max_counter": 1,
-                "use_new_ai": true
-            },
-            "kr_skill": {
-                "behavior": {
-                    "_name": "테스트예비",
-                    "branch_condition": "counter",
-                    "branch_value": 2,
-                    "compare": "=",
-                    "enemy_skill_id": 21,
-                    "params": [
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        4,
-                        null,
-                        null,
-                        null
-                    ],
-                    "target_round": 11,
-                    "type": 31
-                },
-                "condition": null,
-                "enemy_skill_id": 21,
-                "increment": 0,
-                "max_counter": 1,
-                "use_new_ai": true
-            },
-            "na_skill": {
-                "behavior": {
-                    "_name": "ERROR21",
-                    "branch_condition": "counter",
-                    "branch_value": 2,
-                    "compare": "=",
-                    "enemy_skill_id": 21,
-                    "params": [
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        4,
-                        null,
-                        null,
-                        null
-                    ],
-                    "target_round": 11,
-                    "type": 31
-                },
-                "condition": null,
-                "enemy_skill_id": 21,
-                "increment": 0,
-                "max_counter": 1,
+                "max_counter": 15,
                 "use_new_ai": true
             }
         },
@@ -860,10 +1166,18 @@
             "enemy_skill_id": 16069,
             "jp_skill": {
                 "behavior": {
-                    "_name": "なし",
+                    "_name": "バスターブレード",
+                    "attack": {
+                        "atk_multiplier": 85,
+                        "max_hits": 1,
+                        "min_hits": 1
+                    },
                     "enemy_skill_id": 16069,
                     "params": [
                         null,
+                        1,
+                        1,
+                        85,
                         null,
                         null,
                         null,
@@ -873,27 +1187,43 @@
                         null,
                         null,
                         null,
-                        null,
-                        50,
-                        4,
                         null,
                         null,
                         null
                     ],
-                    "type": 0
+                    "type": 15
                 },
-                "condition": null,
+                "condition": {
+                    "_ai": 100,
+                    "_rnd": 0,
+                    "cards_on_team": [],
+                    "combos_made": null,
+                    "condition_attributes": [],
+                    "enemies_remaining": null,
+                    "forced_one_time": null,
+                    "hp_threshold": null,
+                    "on_death": null,
+                    "one_time": null
+                },
                 "enemy_skill_id": 16069,
                 "increment": 0,
-                "max_counter": 1,
+                "max_counter": 15,
                 "use_new_ai": true
             },
             "kr_skill": {
                 "behavior": {
-                    "_name": "なし",
+                    "_name": "バスターブレード",
+                    "attack": {
+                        "atk_multiplier": 85,
+                        "max_hits": 1,
+                        "min_hits": 1
+                    },
                     "enemy_skill_id": 16069,
                     "params": [
                         null,
+                        1,
+                        1,
+                        85,
                         null,
                         null,
                         null,
@@ -903,27 +1233,43 @@
                         null,
                         null,
                         null,
-                        null,
-                        50,
-                        4,
                         null,
                         null,
                         null
                     ],
-                    "type": 0
+                    "type": 15
                 },
-                "condition": null,
+                "condition": {
+                    "_ai": 100,
+                    "_rnd": 0,
+                    "cards_on_team": [],
+                    "combos_made": null,
+                    "condition_attributes": [],
+                    "enemies_remaining": null,
+                    "forced_one_time": null,
+                    "hp_threshold": null,
+                    "on_death": null,
+                    "one_time": null
+                },
                 "enemy_skill_id": 16069,
                 "increment": 0,
-                "max_counter": 1,
+                "max_counter": 15,
                 "use_new_ai": true
             },
             "na_skill": {
                 "behavior": {
-                    "_name": "なし",
+                    "_name": "バスターブレード",
+                    "attack": {
+                        "atk_multiplier": 85,
+                        "max_hits": 1,
+                        "min_hits": 1
+                    },
                     "enemy_skill_id": 16069,
                     "params": [
                         null,
+                        1,
+                        1,
+                        85,
                         null,
                         null,
                         null,
@@ -933,19 +1279,27 @@
                         null,
                         null,
                         null,
-                        null,
-                        50,
-                        4,
                         null,
                         null,
                         null
                     ],
-                    "type": 0
+                    "type": 15
                 },
-                "condition": null,
+                "condition": {
+                    "_ai": 100,
+                    "_rnd": 0,
+                    "cards_on_team": [],
+                    "combos_made": null,
+                    "condition_attributes": [],
+                    "enemies_remaining": null,
+                    "forced_one_time": null,
+                    "hp_threshold": null,
+                    "on_death": null,
+                    "one_time": null
+                },
                 "enemy_skill_id": 16069,
                 "increment": 0,
-                "max_counter": 1,
+                "max_counter": 15,
                 "use_new_ai": true
             }
         },
@@ -978,12 +1332,12 @@
                 "condition": null,
                 "enemy_skill_id": 26,
                 "increment": 0,
-                "max_counter": 1,
+                "max_counter": 15,
                 "use_new_ai": true
             },
             "kr_skill": {
                 "behavior": {
-                    "_name": "테스트예비",
+                    "_name": "※パース終了",
                     "enemy_skill_id": 26,
                     "params": [
                         null,
@@ -1008,12 +1362,12 @@
                 "condition": null,
                 "enemy_skill_id": 26,
                 "increment": 0,
-                "max_counter": 1,
+                "max_counter": 15,
                 "use_new_ai": true
             },
             "na_skill": {
                 "behavior": {
-                    "_name": "ERROR26",
+                    "_name": "※パース終了",
                     "enemy_skill_id": 26,
                     "params": [
                         null,
@@ -1038,7 +1392,7 @@
                 "condition": null,
                 "enemy_skill_id": 26,
                 "increment": 0,
-                "max_counter": 1,
+                "max_counter": 15,
                 "use_new_ai": true
             }
         },
@@ -1046,10 +1400,13 @@
             "enemy_skill_id": 16060,
             "jp_skill": {
                 "behavior": {
-                    "_name": "なし",
+                    "_name": "＿1回目",
+                    "attack": null,
                     "enemy_skill_id": 16060,
                     "params": [
                         null,
+                        16061,
+                        16062,
                         null,
                         null,
                         null,
@@ -1060,26 +1417,98 @@
                         null,
                         null,
                         null,
-                        50,
                         4,
-                        null,
                         null,
                         null
                     ],
-                    "type": 0
+                    "skill_ids": [
+                        16061,
+                        16062
+                    ],
+                    "skills": [
+                        {
+                            "_name": "一意専心",
+                            "attack": null,
+                            "enemy_count": 1,
+                            "enemy_skill_id": 16061,
+                            "multiplier": 200,
+                            "params": [
+                                "1ターンの間、攻撃力が2倍に上昇した",
+                                1,
+                                1,
+                                200,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null
+                            ],
+                            "turns": 1,
+                            "type": 17
+                        },
+                        {
+                            "_name": "見切り",
+                            "attack": null,
+                            "combo_threshold": 8,
+                            "enemy_skill_id": 16062,
+                            "max_turns": 2,
+                            "min_turns": 2,
+                            "params": [
+                                "2ターンの間、8コンボ以下の攻撃を吸収",
+                                2,
+                                2,
+                                8,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null
+                            ],
+                            "type": 67
+                        }
+                    ],
+                    "type": 83
                 },
-                "condition": null,
+                "condition": {
+                    "_ai": 100,
+                    "_rnd": 0,
+                    "cards_on_team": [],
+                    "combos_made": null,
+                    "condition_attributes": [],
+                    "enemies_remaining": null,
+                    "forced_one_time": null,
+                    "hp_threshold": null,
+                    "on_death": null,
+                    "one_time": 4
+                },
                 "enemy_skill_id": 16060,
                 "increment": 0,
-                "max_counter": 1,
+                "max_counter": 15,
                 "use_new_ai": true
             },
             "kr_skill": {
                 "behavior": {
-                    "_name": "なし",
+                    "_name": "＿1回目",
+                    "attack": null,
                     "enemy_skill_id": 16060,
                     "params": [
                         null,
+                        16061,
+                        16062,
                         null,
                         null,
                         null,
@@ -1090,26 +1519,98 @@
                         null,
                         null,
                         null,
-                        50,
                         4,
-                        null,
                         null,
                         null
                     ],
-                    "type": 0
+                    "skill_ids": [
+                        16061,
+                        16062
+                    ],
+                    "skills": [
+                        {
+                            "_name": "一意専心",
+                            "attack": null,
+                            "enemy_count": 1,
+                            "enemy_skill_id": 16061,
+                            "multiplier": 200,
+                            "params": [
+                                "1ターンの間、攻撃力が2倍に上昇した",
+                                1,
+                                1,
+                                200,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null
+                            ],
+                            "turns": 1,
+                            "type": 17
+                        },
+                        {
+                            "_name": "見切り",
+                            "attack": null,
+                            "combo_threshold": 8,
+                            "enemy_skill_id": 16062,
+                            "max_turns": 2,
+                            "min_turns": 2,
+                            "params": [
+                                "2ターンの間、8コンボ以下の攻撃を吸収",
+                                2,
+                                2,
+                                8,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null
+                            ],
+                            "type": 67
+                        }
+                    ],
+                    "type": 83
                 },
-                "condition": null,
+                "condition": {
+                    "_ai": 100,
+                    "_rnd": 0,
+                    "cards_on_team": [],
+                    "combos_made": null,
+                    "condition_attributes": [],
+                    "enemies_remaining": null,
+                    "forced_one_time": null,
+                    "hp_threshold": null,
+                    "on_death": null,
+                    "one_time": 4
+                },
                 "enemy_skill_id": 16060,
                 "increment": 0,
-                "max_counter": 1,
+                "max_counter": 15,
                 "use_new_ai": true
             },
             "na_skill": {
                 "behavior": {
-                    "_name": "なし",
+                    "_name": "＿1回目",
+                    "attack": null,
                     "enemy_skill_id": 16060,
                     "params": [
                         null,
+                        16061,
+                        16062,
                         null,
                         null,
                         null,
@@ -1120,18 +1621,228 @@
                         null,
                         null,
                         null,
-                        50,
                         4,
+                        null,
+                        null
+                    ],
+                    "skill_ids": [
+                        16061,
+                        16062
+                    ],
+                    "skills": [
+                        {
+                            "_name": "一意専心",
+                            "attack": null,
+                            "enemy_count": 1,
+                            "enemy_skill_id": 16061,
+                            "multiplier": 200,
+                            "params": [
+                                "1ターンの間、攻撃力が2倍に上昇した",
+                                1,
+                                1,
+                                200,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null
+                            ],
+                            "turns": 1,
+                            "type": 17
+                        },
+                        {
+                            "_name": "見切り",
+                            "attack": null,
+                            "combo_threshold": 8,
+                            "enemy_skill_id": 16062,
+                            "max_turns": 2,
+                            "min_turns": 2,
+                            "params": [
+                                "2ターンの間、8コンボ以下の攻撃を吸収",
+                                2,
+                                2,
+                                8,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null
+                            ],
+                            "type": 67
+                        }
+                    ],
+                    "type": 83
+                },
+                "condition": {
+                    "_ai": 100,
+                    "_rnd": 0,
+                    "cards_on_team": [],
+                    "combos_made": null,
+                    "condition_attributes": [],
+                    "enemies_remaining": null,
+                    "forced_one_time": null,
+                    "hp_threshold": null,
+                    "on_death": null,
+                    "one_time": 4
+                },
+                "enemy_skill_id": 16060,
+                "increment": 0,
+                "max_counter": 15,
+                "use_new_ai": true
+            }
+        },
+        {
+            "enemy_skill_id": 16069,
+            "jp_skill": {
+                "behavior": {
+                    "_name": "バスターブレード",
+                    "attack": {
+                        "atk_multiplier": 85,
+                        "max_hits": 1,
+                        "min_hits": 1
+                    },
+                    "enemy_skill_id": 16069,
+                    "params": [
+                        null,
+                        1,
+                        1,
+                        85,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
                         null,
                         null,
                         null
                     ],
-                    "type": 0
+                    "type": 15
                 },
-                "condition": null,
-                "enemy_skill_id": 16060,
+                "condition": {
+                    "_ai": 100,
+                    "_rnd": 0,
+                    "cards_on_team": [],
+                    "combos_made": null,
+                    "condition_attributes": [],
+                    "enemies_remaining": null,
+                    "forced_one_time": null,
+                    "hp_threshold": null,
+                    "on_death": null,
+                    "one_time": null
+                },
+                "enemy_skill_id": 16069,
                 "increment": 0,
-                "max_counter": 1,
+                "max_counter": 15,
+                "use_new_ai": true
+            },
+            "kr_skill": {
+                "behavior": {
+                    "_name": "バスターブレード",
+                    "attack": {
+                        "atk_multiplier": 85,
+                        "max_hits": 1,
+                        "min_hits": 1
+                    },
+                    "enemy_skill_id": 16069,
+                    "params": [
+                        null,
+                        1,
+                        1,
+                        85,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null
+                    ],
+                    "type": 15
+                },
+                "condition": {
+                    "_ai": 100,
+                    "_rnd": 0,
+                    "cards_on_team": [],
+                    "combos_made": null,
+                    "condition_attributes": [],
+                    "enemies_remaining": null,
+                    "forced_one_time": null,
+                    "hp_threshold": null,
+                    "on_death": null,
+                    "one_time": null
+                },
+                "enemy_skill_id": 16069,
+                "increment": 0,
+                "max_counter": 15,
+                "use_new_ai": true
+            },
+            "na_skill": {
+                "behavior": {
+                    "_name": "バスターブレード",
+                    "attack": {
+                        "atk_multiplier": 85,
+                        "max_hits": 1,
+                        "min_hits": 1
+                    },
+                    "enemy_skill_id": 16069,
+                    "params": [
+                        null,
+                        1,
+                        1,
+                        85,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null
+                    ],
+                    "type": 15
+                },
+                "condition": {
+                    "_ai": 100,
+                    "_rnd": 0,
+                    "cards_on_team": [],
+                    "combos_made": null,
+                    "condition_attributes": [],
+                    "enemies_remaining": null,
+                    "forced_one_time": null,
+                    "hp_threshold": null,
+                    "on_death": null,
+                    "one_time": null
+                },
+                "enemy_skill_id": 16069,
+                "increment": 0,
+                "max_counter": 15,
                 "use_new_ai": true
             }
         },
@@ -1139,10 +1850,13 @@
             "enemy_skill_id": 16063,
             "jp_skill": {
                 "behavior": {
-                    "_name": "なし",
+                    "_name": "＿2回目",
+                    "attack": null,
                     "enemy_skill_id": 16063,
                     "params": [
                         null,
+                        16064,
+                        16065,
                         null,
                         null,
                         null,
@@ -1153,26 +1867,98 @@
                         null,
                         null,
                         null,
-                        50,
-                        4,
-                        null,
+                        2,
                         null,
                         null
                     ],
-                    "type": 0
+                    "skill_ids": [
+                        16064,
+                        16065
+                    ],
+                    "skills": [
+                        {
+                            "_name": "一意専心",
+                            "attack": null,
+                            "enemy_count": 1,
+                            "enemy_skill_id": 16064,
+                            "multiplier": 300,
+                            "params": [
+                                "1ターンの間、攻撃力が3倍に上昇した",
+                                1,
+                                1,
+                                300,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null
+                            ],
+                            "turns": 1,
+                            "type": 17
+                        },
+                        {
+                            "_name": "見切り",
+                            "attack": null,
+                            "combo_threshold": 7,
+                            "enemy_skill_id": 16065,
+                            "max_turns": 2,
+                            "min_turns": 2,
+                            "params": [
+                                "2ターンの間、7コンボ以下の攻撃を吸収",
+                                2,
+                                2,
+                                7,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null
+                            ],
+                            "type": 67
+                        }
+                    ],
+                    "type": 83
                 },
-                "condition": null,
+                "condition": {
+                    "_ai": 100,
+                    "_rnd": 0,
+                    "cards_on_team": [],
+                    "combos_made": null,
+                    "condition_attributes": [],
+                    "enemies_remaining": null,
+                    "forced_one_time": null,
+                    "hp_threshold": null,
+                    "on_death": null,
+                    "one_time": 2
+                },
                 "enemy_skill_id": 16063,
                 "increment": 0,
-                "max_counter": 1,
+                "max_counter": 15,
                 "use_new_ai": true
             },
             "kr_skill": {
                 "behavior": {
-                    "_name": "なし",
+                    "_name": "＿2回目",
+                    "attack": null,
                     "enemy_skill_id": 16063,
                     "params": [
                         null,
+                        16064,
+                        16065,
                         null,
                         null,
                         null,
@@ -1183,26 +1969,98 @@
                         null,
                         null,
                         null,
-                        50,
-                        4,
-                        null,
+                        2,
                         null,
                         null
                     ],
-                    "type": 0
+                    "skill_ids": [
+                        16064,
+                        16065
+                    ],
+                    "skills": [
+                        {
+                            "_name": "一意専心",
+                            "attack": null,
+                            "enemy_count": 1,
+                            "enemy_skill_id": 16064,
+                            "multiplier": 300,
+                            "params": [
+                                "1ターンの間、攻撃力が3倍に上昇した",
+                                1,
+                                1,
+                                300,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null
+                            ],
+                            "turns": 1,
+                            "type": 17
+                        },
+                        {
+                            "_name": "見切り",
+                            "attack": null,
+                            "combo_threshold": 7,
+                            "enemy_skill_id": 16065,
+                            "max_turns": 2,
+                            "min_turns": 2,
+                            "params": [
+                                "2ターンの間、7コンボ以下の攻撃を吸収",
+                                2,
+                                2,
+                                7,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null
+                            ],
+                            "type": 67
+                        }
+                    ],
+                    "type": 83
                 },
-                "condition": null,
+                "condition": {
+                    "_ai": 100,
+                    "_rnd": 0,
+                    "cards_on_team": [],
+                    "combos_made": null,
+                    "condition_attributes": [],
+                    "enemies_remaining": null,
+                    "forced_one_time": null,
+                    "hp_threshold": null,
+                    "on_death": null,
+                    "one_time": 2
+                },
                 "enemy_skill_id": 16063,
                 "increment": 0,
-                "max_counter": 1,
+                "max_counter": 15,
                 "use_new_ai": true
             },
             "na_skill": {
                 "behavior": {
-                    "_name": "なし",
+                    "_name": "＿2回目",
+                    "attack": null,
                     "enemy_skill_id": 16063,
                     "params": [
                         null,
+                        16064,
+                        16065,
                         null,
                         null,
                         null,
@@ -1213,18 +2071,228 @@
                         null,
                         null,
                         null,
-                        50,
-                        4,
+                        2,
+                        null,
+                        null
+                    ],
+                    "skill_ids": [
+                        16064,
+                        16065
+                    ],
+                    "skills": [
+                        {
+                            "_name": "一意専心",
+                            "attack": null,
+                            "enemy_count": 1,
+                            "enemy_skill_id": 16064,
+                            "multiplier": 300,
+                            "params": [
+                                "1ターンの間、攻撃力が3倍に上昇した",
+                                1,
+                                1,
+                                300,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null
+                            ],
+                            "turns": 1,
+                            "type": 17
+                        },
+                        {
+                            "_name": "見切り",
+                            "attack": null,
+                            "combo_threshold": 7,
+                            "enemy_skill_id": 16065,
+                            "max_turns": 2,
+                            "min_turns": 2,
+                            "params": [
+                                "2ターンの間、7コンボ以下の攻撃を吸収",
+                                2,
+                                2,
+                                7,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null
+                            ],
+                            "type": 67
+                        }
+                    ],
+                    "type": 83
+                },
+                "condition": {
+                    "_ai": 100,
+                    "_rnd": 0,
+                    "cards_on_team": [],
+                    "combos_made": null,
+                    "condition_attributes": [],
+                    "enemies_remaining": null,
+                    "forced_one_time": null,
+                    "hp_threshold": null,
+                    "on_death": null,
+                    "one_time": 2
+                },
+                "enemy_skill_id": 16063,
+                "increment": 0,
+                "max_counter": 15,
+                "use_new_ai": true
+            }
+        },
+        {
+            "enemy_skill_id": 16069,
+            "jp_skill": {
+                "behavior": {
+                    "_name": "バスターブレード",
+                    "attack": {
+                        "atk_multiplier": 85,
+                        "max_hits": 1,
+                        "min_hits": 1
+                    },
+                    "enemy_skill_id": 16069,
+                    "params": [
+                        null,
+                        1,
+                        1,
+                        85,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
                         null,
                         null,
                         null
                     ],
-                    "type": 0
+                    "type": 15
                 },
-                "condition": null,
-                "enemy_skill_id": 16063,
+                "condition": {
+                    "_ai": 100,
+                    "_rnd": 0,
+                    "cards_on_team": [],
+                    "combos_made": null,
+                    "condition_attributes": [],
+                    "enemies_remaining": null,
+                    "forced_one_time": null,
+                    "hp_threshold": null,
+                    "on_death": null,
+                    "one_time": null
+                },
+                "enemy_skill_id": 16069,
                 "increment": 0,
-                "max_counter": 1,
+                "max_counter": 15,
+                "use_new_ai": true
+            },
+            "kr_skill": {
+                "behavior": {
+                    "_name": "バスターブレード",
+                    "attack": {
+                        "atk_multiplier": 85,
+                        "max_hits": 1,
+                        "min_hits": 1
+                    },
+                    "enemy_skill_id": 16069,
+                    "params": [
+                        null,
+                        1,
+                        1,
+                        85,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null
+                    ],
+                    "type": 15
+                },
+                "condition": {
+                    "_ai": 100,
+                    "_rnd": 0,
+                    "cards_on_team": [],
+                    "combos_made": null,
+                    "condition_attributes": [],
+                    "enemies_remaining": null,
+                    "forced_one_time": null,
+                    "hp_threshold": null,
+                    "on_death": null,
+                    "one_time": null
+                },
+                "enemy_skill_id": 16069,
+                "increment": 0,
+                "max_counter": 15,
+                "use_new_ai": true
+            },
+            "na_skill": {
+                "behavior": {
+                    "_name": "バスターブレード",
+                    "attack": {
+                        "atk_multiplier": 85,
+                        "max_hits": 1,
+                        "min_hits": 1
+                    },
+                    "enemy_skill_id": 16069,
+                    "params": [
+                        null,
+                        1,
+                        1,
+                        85,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null
+                    ],
+                    "type": 15
+                },
+                "condition": {
+                    "_ai": 100,
+                    "_rnd": 0,
+                    "cards_on_team": [],
+                    "combos_made": null,
+                    "condition_attributes": [],
+                    "enemies_remaining": null,
+                    "forced_one_time": null,
+                    "hp_threshold": null,
+                    "on_death": null,
+                    "one_time": null
+                },
+                "enemy_skill_id": 16069,
+                "increment": 0,
+                "max_counter": 15,
                 "use_new_ai": true
             }
         },
@@ -1232,10 +2300,13 @@
             "enemy_skill_id": 16066,
             "jp_skill": {
                 "behavior": {
-                    "_name": "なし",
+                    "_name": "＿3回目",
+                    "attack": null,
                     "enemy_skill_id": 16066,
                     "params": [
                         null,
+                        16067,
+                        16068,
                         null,
                         null,
                         null,
@@ -1246,26 +2317,98 @@
                         null,
                         null,
                         null,
-                        50,
-                        4,
-                        null,
+                        1,
                         null,
                         null
                     ],
-                    "type": 0
+                    "skill_ids": [
+                        16067,
+                        16068
+                    ],
+                    "skills": [
+                        {
+                            "_name": "一意専心",
+                            "attack": null,
+                            "enemy_count": 999,
+                            "enemy_skill_id": 16067,
+                            "multiplier": 400,
+                            "params": [
+                                "攻撃力が4倍に上昇した",
+                                999,
+                                999,
+                                400,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null
+                            ],
+                            "turns": 999,
+                            "type": 17
+                        },
+                        {
+                            "_name": "見切り",
+                            "attack": null,
+                            "combo_threshold": 6,
+                            "enemy_skill_id": 16068,
+                            "max_turns": 999,
+                            "min_turns": 999,
+                            "params": [
+                                "6コンボ以下の攻撃を吸収",
+                                999,
+                                999,
+                                6,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null
+                            ],
+                            "type": 67
+                        }
+                    ],
+                    "type": 83
                 },
-                "condition": null,
+                "condition": {
+                    "_ai": 100,
+                    "_rnd": 0,
+                    "cards_on_team": [],
+                    "combos_made": null,
+                    "condition_attributes": [],
+                    "enemies_remaining": null,
+                    "forced_one_time": null,
+                    "hp_threshold": null,
+                    "on_death": null,
+                    "one_time": 1
+                },
                 "enemy_skill_id": 16066,
                 "increment": 0,
-                "max_counter": 1,
+                "max_counter": 15,
                 "use_new_ai": true
             },
             "kr_skill": {
                 "behavior": {
-                    "_name": "なし",
+                    "_name": "＿3回目",
+                    "attack": null,
                     "enemy_skill_id": 16066,
                     "params": [
                         null,
+                        16067,
+                        16068,
                         null,
                         null,
                         null,
@@ -1276,26 +2419,98 @@
                         null,
                         null,
                         null,
-                        50,
-                        4,
-                        null,
+                        1,
                         null,
                         null
                     ],
-                    "type": 0
+                    "skill_ids": [
+                        16067,
+                        16068
+                    ],
+                    "skills": [
+                        {
+                            "_name": "一意専心",
+                            "attack": null,
+                            "enemy_count": 999,
+                            "enemy_skill_id": 16067,
+                            "multiplier": 400,
+                            "params": [
+                                "攻撃力が4倍に上昇した",
+                                999,
+                                999,
+                                400,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null
+                            ],
+                            "turns": 999,
+                            "type": 17
+                        },
+                        {
+                            "_name": "見切り",
+                            "attack": null,
+                            "combo_threshold": 6,
+                            "enemy_skill_id": 16068,
+                            "max_turns": 999,
+                            "min_turns": 999,
+                            "params": [
+                                "6コンボ以下の攻撃を吸収",
+                                999,
+                                999,
+                                6,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null
+                            ],
+                            "type": 67
+                        }
+                    ],
+                    "type": 83
                 },
-                "condition": null,
+                "condition": {
+                    "_ai": 100,
+                    "_rnd": 0,
+                    "cards_on_team": [],
+                    "combos_made": null,
+                    "condition_attributes": [],
+                    "enemies_remaining": null,
+                    "forced_one_time": null,
+                    "hp_threshold": null,
+                    "on_death": null,
+                    "one_time": 1
+                },
                 "enemy_skill_id": 16066,
                 "increment": 0,
-                "max_counter": 1,
+                "max_counter": 15,
                 "use_new_ai": true
             },
             "na_skill": {
                 "behavior": {
-                    "_name": "なし",
+                    "_name": "＿3回目",
+                    "attack": null,
                     "enemy_skill_id": 16066,
                     "params": [
                         null,
+                        16067,
+                        16068,
                         null,
                         null,
                         null,
@@ -1306,18 +2521,228 @@
                         null,
                         null,
                         null,
-                        50,
-                        4,
+                        1,
+                        null,
+                        null
+                    ],
+                    "skill_ids": [
+                        16067,
+                        16068
+                    ],
+                    "skills": [
+                        {
+                            "_name": "一意専心",
+                            "attack": null,
+                            "enemy_count": 999,
+                            "enemy_skill_id": 16067,
+                            "multiplier": 400,
+                            "params": [
+                                "攻撃力が4倍に上昇した",
+                                999,
+                                999,
+                                400,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null
+                            ],
+                            "turns": 999,
+                            "type": 17
+                        },
+                        {
+                            "_name": "見切り",
+                            "attack": null,
+                            "combo_threshold": 6,
+                            "enemy_skill_id": 16068,
+                            "max_turns": 999,
+                            "min_turns": 999,
+                            "params": [
+                                "6コンボ以下の攻撃を吸収",
+                                999,
+                                999,
+                                6,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null
+                            ],
+                            "type": 67
+                        }
+                    ],
+                    "type": 83
+                },
+                "condition": {
+                    "_ai": 100,
+                    "_rnd": 0,
+                    "cards_on_team": [],
+                    "combos_made": null,
+                    "condition_attributes": [],
+                    "enemies_remaining": null,
+                    "forced_one_time": null,
+                    "hp_threshold": null,
+                    "on_death": null,
+                    "one_time": 1
+                },
+                "enemy_skill_id": 16066,
+                "increment": 0,
+                "max_counter": 15,
+                "use_new_ai": true
+            }
+        },
+        {
+            "enemy_skill_id": 16069,
+            "jp_skill": {
+                "behavior": {
+                    "_name": "バスターブレード",
+                    "attack": {
+                        "atk_multiplier": 85,
+                        "max_hits": 1,
+                        "min_hits": 1
+                    },
+                    "enemy_skill_id": 16069,
+                    "params": [
+                        null,
+                        1,
+                        1,
+                        85,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
                         null,
                         null,
                         null
                     ],
-                    "type": 0
+                    "type": 15
                 },
-                "condition": null,
-                "enemy_skill_id": 16066,
+                "condition": {
+                    "_ai": 100,
+                    "_rnd": 0,
+                    "cards_on_team": [],
+                    "combos_made": null,
+                    "condition_attributes": [],
+                    "enemies_remaining": null,
+                    "forced_one_time": null,
+                    "hp_threshold": null,
+                    "on_death": null,
+                    "one_time": null
+                },
+                "enemy_skill_id": 16069,
                 "increment": 0,
-                "max_counter": 1,
+                "max_counter": 15,
+                "use_new_ai": true
+            },
+            "kr_skill": {
+                "behavior": {
+                    "_name": "バスターブレード",
+                    "attack": {
+                        "atk_multiplier": 85,
+                        "max_hits": 1,
+                        "min_hits": 1
+                    },
+                    "enemy_skill_id": 16069,
+                    "params": [
+                        null,
+                        1,
+                        1,
+                        85,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null
+                    ],
+                    "type": 15
+                },
+                "condition": {
+                    "_ai": 100,
+                    "_rnd": 0,
+                    "cards_on_team": [],
+                    "combos_made": null,
+                    "condition_attributes": [],
+                    "enemies_remaining": null,
+                    "forced_one_time": null,
+                    "hp_threshold": null,
+                    "on_death": null,
+                    "one_time": null
+                },
+                "enemy_skill_id": 16069,
+                "increment": 0,
+                "max_counter": 15,
+                "use_new_ai": true
+            },
+            "na_skill": {
+                "behavior": {
+                    "_name": "バスターブレード",
+                    "attack": {
+                        "atk_multiplier": 85,
+                        "max_hits": 1,
+                        "min_hits": 1
+                    },
+                    "enemy_skill_id": 16069,
+                    "params": [
+                        null,
+                        1,
+                        1,
+                        85,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null
+                    ],
+                    "type": 15
+                },
+                "condition": {
+                    "_ai": 100,
+                    "_rnd": 0,
+                    "cards_on_team": [],
+                    "combos_made": null,
+                    "condition_attributes": [],
+                    "enemies_remaining": null,
+                    "forced_one_time": null,
+                    "hp_threshold": null,
+                    "on_death": null,
+                    "one_time": null
+                },
+                "enemy_skill_id": 16069,
+                "increment": 0,
+                "max_counter": 15,
                 "use_new_ai": true
             }
         },
@@ -1350,12 +2775,12 @@
                 "condition": null,
                 "enemy_skill_id": 26,
                 "increment": 0,
-                "max_counter": 1,
+                "max_counter": 15,
                 "use_new_ai": true
             },
             "kr_skill": {
                 "behavior": {
-                    "_name": "테스트예비",
+                    "_name": "※パース終了",
                     "enemy_skill_id": 26,
                     "params": [
                         null,
@@ -1380,12 +2805,12 @@
                 "condition": null,
                 "enemy_skill_id": 26,
                 "increment": 0,
-                "max_counter": 1,
+                "max_counter": 15,
                 "use_new_ai": true
             },
             "na_skill": {
                 "behavior": {
-                    "_name": "ERROR26",
+                    "_name": "※パース終了",
                     "enemy_skill_id": 26,
                     "params": [
                         null,
@@ -1410,7 +2835,313 @@
                 "condition": null,
                 "enemy_skill_id": 26,
                 "increment": 0,
-                "max_counter": 1,
+                "max_counter": 15,
+                "use_new_ai": true
+            }
+        },
+        {
+            "enemy_skill_id": 10,
+            "jp_skill": {
+                "behavior": {
+                    "_name": "※ai フラグが立っていたら rnd の数値に分岐",
+                    "branch_condition": "flag",
+                    "branch_value": 1,
+                    "compare": "&",
+                    "enemy_skill_id": 10,
+                    "params": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        50,
+                        4,
+                        null,
+                        null,
+                        null
+                    ],
+                    "target_round": 4,
+                    "type": 43
+                },
+                "condition": null,
+                "enemy_skill_id": 10,
+                "increment": 0,
+                "max_counter": 15,
+                "use_new_ai": true
+            },
+            "kr_skill": {
+                "behavior": {
+                    "_name": "※ai フラグが立っていたら rnd の数値に分岐",
+                    "branch_condition": "flag",
+                    "branch_value": 1,
+                    "compare": "&",
+                    "enemy_skill_id": 10,
+                    "params": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        50,
+                        4,
+                        null,
+                        null,
+                        null
+                    ],
+                    "target_round": 4,
+                    "type": 43
+                },
+                "condition": null,
+                "enemy_skill_id": 10,
+                "increment": 0,
+                "max_counter": 15,
+                "use_new_ai": true
+            },
+            "na_skill": {
+                "behavior": {
+                    "_name": "※ai フラグが立っていたら rnd の数値に分岐",
+                    "branch_condition": "flag",
+                    "branch_value": 1,
+                    "compare": "&",
+                    "enemy_skill_id": 10,
+                    "params": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        50,
+                        4,
+                        null,
+                        null,
+                        null
+                    ],
+                    "target_round": 4,
+                    "type": 43
+                },
+                "condition": null,
+                "enemy_skill_id": 10,
+                "increment": 0,
+                "max_counter": 15,
+                "use_new_ai": true
+            }
+        },
+        {
+            "enemy_skill_id": 12,
+            "jp_skill": {
+                "behavior": {
+                    "_name": "※フラグを ai にセット",
+                    "enemy_skill_id": 12,
+                    "flag": 1,
+                    "flag_bin": "0b1",
+                    "operation": "SET",
+                    "params": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        4,
+                        null,
+                        null,
+                        null
+                    ],
+                    "type": 22
+                },
+                "condition": null,
+                "enemy_skill_id": 12,
+                "increment": 0,
+                "max_counter": 15,
+                "use_new_ai": true
+            },
+            "kr_skill": {
+                "behavior": {
+                    "_name": "※フラグを ai にセット",
+                    "enemy_skill_id": 12,
+                    "flag": 1,
+                    "flag_bin": "0b1",
+                    "operation": "SET",
+                    "params": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        4,
+                        null,
+                        null,
+                        null
+                    ],
+                    "type": 22
+                },
+                "condition": null,
+                "enemy_skill_id": 12,
+                "increment": 0,
+                "max_counter": 15,
+                "use_new_ai": true
+            },
+            "na_skill": {
+                "behavior": {
+                    "_name": "※フラグを ai にセット",
+                    "enemy_skill_id": 12,
+                    "flag": 1,
+                    "flag_bin": "0b1",
+                    "operation": "SET",
+                    "params": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        4,
+                        null,
+                        null,
+                        null
+                    ],
+                    "type": 22
+                },
+                "condition": null,
+                "enemy_skill_id": 12,
+                "increment": 0,
+                "max_counter": 15,
+                "use_new_ai": true
+            }
+        },
+        {
+            "enemy_skill_id": 16,
+            "jp_skill": {
+                "behavior": {
+                    "_name": "※カウンターを１＋",
+                    "counter": 1,
+                    "enemy_skill_id": 16,
+                    "params": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        4,
+                        null,
+                        null,
+                        null
+                    ],
+                    "set": "+",
+                    "type": 26
+                },
+                "condition": null,
+                "enemy_skill_id": 16,
+                "increment": 0,
+                "max_counter": 15,
+                "use_new_ai": true
+            },
+            "kr_skill": {
+                "behavior": {
+                    "_name": "※カウンターを１＋",
+                    "counter": 1,
+                    "enemy_skill_id": 16,
+                    "params": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        4,
+                        null,
+                        null,
+                        null
+                    ],
+                    "set": "+",
+                    "type": 26
+                },
+                "condition": null,
+                "enemy_skill_id": 16,
+                "increment": 0,
+                "max_counter": 15,
+                "use_new_ai": true
+            },
+            "na_skill": {
+                "behavior": {
+                    "_name": "※カウンターを１＋",
+                    "counter": 1,
+                    "enemy_skill_id": 16,
+                    "params": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        4,
+                        null,
+                        null,
+                        null
+                    ],
+                    "set": "+",
+                    "type": 26
+                },
+                "condition": null,
+                "enemy_skill_id": 16,
+                "increment": 0,
+                "max_counter": 15,
                 "use_new_ai": true
             }
         },
@@ -1418,10 +3149,13 @@
             "enemy_skill_id": 16070,
             "jp_skill": {
                 "behavior": {
-                    "_name": "なし",
+                    "_name": "＿HP1%",
+                    "attack": null,
                     "enemy_skill_id": 16070,
                     "params": [
                         null,
+                        16071,
+                        16072,
                         null,
                         null,
                         null,
@@ -1432,26 +3166,99 @@
                         null,
                         null,
                         null,
-                        50,
-                        4,
                         null,
                         null,
                         null
                     ],
-                    "type": 0
+                    "skill_ids": [
+                        16071,
+                        16072
+                    ],
+                    "skills": [
+                        {
+                            "_name": "情け無用",
+                            "attack": null,
+                            "enemy_skill_id": 16071,
+                            "max_amount": 100,
+                            "min_amount": 100,
+                            "params": [
+                                "敵のHPが回復した",
+                                100,
+                                100,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null
+                            ],
+                            "target": "enemy",
+                            "type": 86
+                        },
+                        {
+                            "_name": "覚悟はできているか？",
+                            "amount": 25,
+                            "attack": null,
+                            "debuff_type": "movetime",
+                            "enemy_skill_id": 16072,
+                            "params": [
+                                "5ターンの間、持ち時間が激減",
+                                5,
+                                null,
+                                25,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null
+                            ],
+                            "turns": 5,
+                            "type": 39,
+                            "unit": "%"
+                        }
+                    ],
+                    "type": 83
                 },
-                "condition": null,
+                "condition": {
+                    "_ai": 100,
+                    "_rnd": 0,
+                    "cards_on_team": [],
+                    "combos_made": null,
+                    "condition_attributes": [],
+                    "enemies_remaining": null,
+                    "forced_one_time": null,
+                    "hp_threshold": null,
+                    "on_death": null,
+                    "one_time": null
+                },
                 "enemy_skill_id": 16070,
                 "increment": 0,
-                "max_counter": 1,
+                "max_counter": 15,
                 "use_new_ai": true
             },
             "kr_skill": {
                 "behavior": {
-                    "_name": "なし",
+                    "_name": "＿HP1%",
+                    "attack": null,
                     "enemy_skill_id": 16070,
                     "params": [
                         null,
+                        16071,
+                        16072,
                         null,
                         null,
                         null,
@@ -1462,26 +3269,99 @@
                         null,
                         null,
                         null,
-                        50,
-                        4,
                         null,
                         null,
                         null
                     ],
-                    "type": 0
+                    "skill_ids": [
+                        16071,
+                        16072
+                    ],
+                    "skills": [
+                        {
+                            "_name": "情け無用",
+                            "attack": null,
+                            "enemy_skill_id": 16071,
+                            "max_amount": 100,
+                            "min_amount": 100,
+                            "params": [
+                                "敵のHPが回復した",
+                                100,
+                                100,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null
+                            ],
+                            "target": "enemy",
+                            "type": 86
+                        },
+                        {
+                            "_name": "覚悟はできているか？",
+                            "amount": 25,
+                            "attack": null,
+                            "debuff_type": "movetime",
+                            "enemy_skill_id": 16072,
+                            "params": [
+                                "5ターンの間、持ち時間が激減",
+                                5,
+                                null,
+                                25,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null
+                            ],
+                            "turns": 5,
+                            "type": 39,
+                            "unit": "%"
+                        }
+                    ],
+                    "type": 83
                 },
-                "condition": null,
+                "condition": {
+                    "_ai": 100,
+                    "_rnd": 0,
+                    "cards_on_team": [],
+                    "combos_made": null,
+                    "condition_attributes": [],
+                    "enemies_remaining": null,
+                    "forced_one_time": null,
+                    "hp_threshold": null,
+                    "on_death": null,
+                    "one_time": null
+                },
                 "enemy_skill_id": 16070,
                 "increment": 0,
-                "max_counter": 1,
+                "max_counter": 15,
                 "use_new_ai": true
             },
             "na_skill": {
                 "behavior": {
-                    "_name": "なし",
+                    "_name": "＿HP1%",
+                    "attack": null,
                     "enemy_skill_id": 16070,
                     "params": [
                         null,
+                        16071,
+                        16072,
                         null,
                         null,
                         null,
@@ -1492,18 +3372,88 @@
                         null,
                         null,
                         null,
-                        50,
-                        4,
                         null,
                         null,
                         null
                     ],
-                    "type": 0
+                    "skill_ids": [
+                        16071,
+                        16072
+                    ],
+                    "skills": [
+                        {
+                            "_name": "情け無用",
+                            "attack": null,
+                            "enemy_skill_id": 16071,
+                            "max_amount": 100,
+                            "min_amount": 100,
+                            "params": [
+                                "敵のHPが回復した",
+                                100,
+                                100,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null
+                            ],
+                            "target": "enemy",
+                            "type": 86
+                        },
+                        {
+                            "_name": "覚悟はできているか？",
+                            "amount": 25,
+                            "attack": null,
+                            "debuff_type": "movetime",
+                            "enemy_skill_id": 16072,
+                            "params": [
+                                "5ターンの間、持ち時間が激減",
+                                5,
+                                null,
+                                25,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null
+                            ],
+                            "turns": 5,
+                            "type": 39,
+                            "unit": "%"
+                        }
+                    ],
+                    "type": 83
                 },
-                "condition": null,
+                "condition": {
+                    "_ai": 100,
+                    "_rnd": 0,
+                    "cards_on_team": [],
+                    "combos_made": null,
+                    "condition_attributes": [],
+                    "enemies_remaining": null,
+                    "forced_one_time": null,
+                    "hp_threshold": null,
+                    "on_death": null,
+                    "one_time": null
+                },
                 "enemy_skill_id": 16070,
                 "increment": 0,
-                "max_counter": 1,
+                "max_counter": 15,
                 "use_new_ai": true
             }
         },
@@ -1536,12 +3486,12 @@
                 "condition": null,
                 "enemy_skill_id": 26,
                 "increment": 0,
-                "max_counter": 1,
+                "max_counter": 15,
                 "use_new_ai": true
             },
             "kr_skill": {
                 "behavior": {
-                    "_name": "테스트예비",
+                    "_name": "※パース終了",
                     "enemy_skill_id": 26,
                     "params": [
                         null,
@@ -1566,12 +3516,12 @@
                 "condition": null,
                 "enemy_skill_id": 26,
                 "increment": 0,
-                "max_counter": 1,
+                "max_counter": 15,
                 "use_new_ai": true
             },
             "na_skill": {
                 "behavior": {
-                    "_name": "ERROR26",
+                    "_name": "※パース終了",
                     "enemy_skill_id": 26,
                     "params": [
                         null,
@@ -1596,7 +3546,7 @@
                 "condition": null,
                 "enemy_skill_id": 26,
                 "increment": 0,
-                "max_counter": 1,
+                "max_counter": 15,
                 "use_new_ai": true
             }
         },
@@ -1604,92 +3554,95 @@
             "enemy_skill_id": 16073,
             "jp_skill": {
                 "behavior": {
-                    "_name": "なし",
+                    "_name": "根性",
                     "enemy_skill_id": 16073,
+                    "hp_threshold": 50,
                     "params": [
                         null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
                         50,
-                        4,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
                         null,
                         null,
                         null
                     ],
-                    "type": 0
+                    "type": 73
                 },
                 "condition": null,
                 "enemy_skill_id": 16073,
                 "increment": 0,
-                "max_counter": 1,
+                "max_counter": 15,
                 "use_new_ai": true
             },
             "kr_skill": {
                 "behavior": {
-                    "_name": "なし",
+                    "_name": "根性",
                     "enemy_skill_id": 16073,
+                    "hp_threshold": 50,
                     "params": [
                         null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
                         50,
-                        4,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
                         null,
                         null,
                         null
                     ],
-                    "type": 0
+                    "type": 73
                 },
                 "condition": null,
                 "enemy_skill_id": 16073,
                 "increment": 0,
-                "max_counter": 1,
+                "max_counter": 15,
                 "use_new_ai": true
             },
             "na_skill": {
                 "behavior": {
-                    "_name": "なし",
+                    "_name": "根性",
                     "enemy_skill_id": 16073,
+                    "hp_threshold": 50,
                     "params": [
                         null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
                         50,
-                        4,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
                         null,
                         null,
                         null
                     ],
-                    "type": 0
+                    "type": 73
                 },
                 "condition": null,
                 "enemy_skill_id": 16073,
                 "increment": 0,
-                "max_counter": 1,
+                "max_counter": 15,
                 "use_new_ai": true
             }
         }
@@ -1735,7 +3688,7 @@
             "enemy_hp_scale": 1.0,
             "enemy_max_level": 10,
             "enemy_skill_counter_increment": 0,
-            "enemy_skill_max_counter": 1,
+            "enemy_skill_max_counter": 15,
             "enemy_skill_refs": [
                 {
                     "enemy_ai": 0,
@@ -1749,12 +3702,12 @@
                 },
                 {
                     "enemy_ai": 1,
-                    "enemy_rnd": 15,
+                    "enemy_rnd": 18,
                     "enemy_skill_id": 18
                 },
                 {
                     "enemy_ai": 6,
-                    "enemy_rnd": 9,
+                    "enemy_rnd": 15,
                     "enemy_skill_id": 22
                 },
                 {
@@ -1764,18 +3717,18 @@
                 },
                 {
                     "enemy_ai": 6,
-                    "enemy_rnd": 13,
-                    "enemy_skill_id": 21
+                    "enemy_rnd": 15,
+                    "enemy_skill_id": 22
                 },
                 {
                     "enemy_ai": 4,
-                    "enemy_rnd": 12,
-                    "enemy_skill_id": 21
+                    "enemy_rnd": 13,
+                    "enemy_skill_id": 22
                 },
                 {
                     "enemy_ai": 2,
                     "enemy_rnd": 11,
-                    "enemy_skill_id": 21
+                    "enemy_skill_id": 22
                 },
                 {
                     "enemy_ai": 100,
@@ -1795,7 +3748,17 @@
                 {
                     "enemy_ai": 100,
                     "enemy_rnd": 0,
+                    "enemy_skill_id": 16069
+                },
+                {
+                    "enemy_ai": 100,
+                    "enemy_rnd": 0,
                     "enemy_skill_id": 16063
+                },
+                {
+                    "enemy_ai": 100,
+                    "enemy_rnd": 0,
+                    "enemy_skill_id": 16069
                 },
                 {
                     "enemy_ai": 100,
@@ -1803,9 +3766,29 @@
                     "enemy_skill_id": 16066
                 },
                 {
+                    "enemy_ai": 100,
+                    "enemy_rnd": 0,
+                    "enemy_skill_id": 16069
+                },
+                {
                     "enemy_ai": 0,
                     "enemy_rnd": 0,
                     "enemy_skill_id": 26
+                },
+                {
+                    "enemy_ai": 1,
+                    "enemy_rnd": 4,
+                    "enemy_skill_id": 10
+                },
+                {
+                    "enemy_ai": 1,
+                    "enemy_rnd": 0,
+                    "enemy_skill_id": 12
+                },
+                {
+                    "enemy_ai": 0,
+                    "enemy_rnd": 0,
+                    "enemy_skill_id": 16
                 },
                 {
                     "enemy_ai": 100,
@@ -1907,15 +3890,19 @@
                 "condition": null,
                 "enemy_skill_id": 318,
                 "increment": 0,
-                "max_counter": 1,
+                "max_counter": 15,
                 "use_new_ai": true
             },
             {
                 "behavior": {
-                    "_name": "なし",
+                    "_name": "＿先制",
+                    "attack": null,
                     "enemy_skill_id": 16057,
                     "params": [
                         null,
+                        16058,
+                        16059,
+                        16218,
                         null,
                         null,
                         null,
@@ -1925,19 +3912,117 @@
                         null,
                         null,
                         null,
-                        null,
-                        50,
-                        4,
-                        null,
+                        8,
                         null,
                         null
                     ],
-                    "type": 0
+                    "skill_ids": [
+                        16058,
+                        16059,
+                        16218
+                    ],
+                    "skills": [
+                        {
+                            "_name": "いざ、参る！",
+                            "attack": null,
+                            "enemy_skill_id": 16058,
+                            "params": [
+                                "しばらくの間、状態異常を無効化する",
+                                999,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null
+                            ],
+                            "turns": 999,
+                            "type": 20
+                        },
+                        {
+                            "_name": "見切り",
+                            "attack": null,
+                            "combo_threshold": 9,
+                            "enemy_skill_id": 16059,
+                            "max_turns": 2,
+                            "min_turns": 2,
+                            "params": [
+                                "2ターンの間、9コンボ以下の攻撃を吸収",
+                                2,
+                                2,
+                                9,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null
+                            ],
+                            "type": 67
+                        },
+                        {
+                            "_name": "威圧する眼光",
+                            "attack": null,
+                            "enemy_skill_id": 16218,
+                            "max_turns": 10,
+                            "min_turns": 10,
+                            "params": [
+                                "悪魔タイプが10ターンの間、行動不能",
+                                7,
+                                10,
+                                10,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null
+                            ],
+                            "target_count": null,
+                            "target_typing": 7,
+                            "targets": [
+                                "TargetType.types"
+                            ],
+                            "type": 3
+                        }
+                    ],
+                    "type": 83
                 },
-                "condition": null,
+                "condition": {
+                    "_ai": 100,
+                    "_rnd": 0,
+                    "cards_on_team": [],
+                    "combos_made": null,
+                    "condition_attributes": [],
+                    "enemies_remaining": null,
+                    "forced_one_time": null,
+                    "hp_threshold": null,
+                    "on_death": null,
+                    "one_time": 8
+                },
                 "enemy_skill_id": 16057,
                 "increment": 0,
-                "max_counter": 1,
+                "max_counter": 15,
                 "use_new_ai": true
             },
             {
@@ -1965,13 +4050,13 @@
                         null,
                         null
                     ],
-                    "target_round": 15,
+                    "target_round": 18,
                     "type": 28
                 },
                 "condition": null,
                 "enemy_skill_id": 18,
                 "increment": 0,
-                "max_counter": 1,
+                "max_counter": 15,
                 "use_new_ai": true
             },
             {
@@ -1999,13 +4084,13 @@
                         null,
                         null
                     ],
-                    "target_round": 9,
+                    "target_round": 15,
                     "type": 32
                 },
                 "condition": null,
                 "enemy_skill_id": 22,
                 "increment": 0,
-                "max_counter": 1,
+                "max_counter": 15,
                 "use_new_ai": true
             },
             {
@@ -2037,16 +4122,50 @@
                 "condition": null,
                 "enemy_skill_id": 16,
                 "increment": 0,
-                "max_counter": 1,
+                "max_counter": 15,
                 "use_new_ai": true
             },
             {
                 "behavior": {
-                    "_name": "※カウンターが ai の時 rnd に分岐",
+                    "_name": "※カウンターが ai 以上の時 rnd に分岐",
                     "branch_condition": "counter",
                     "branch_value": 6,
-                    "compare": "=",
-                    "enemy_skill_id": 21,
+                    "compare": ">",
+                    "enemy_skill_id": 22,
+                    "params": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        4,
+                        null,
+                        null,
+                        null
+                    ],
+                    "target_round": 15,
+                    "type": 32
+                },
+                "condition": null,
+                "enemy_skill_id": 22,
+                "increment": 0,
+                "max_counter": 15,
+                "use_new_ai": true
+            },
+            {
+                "behavior": {
+                    "_name": "※カウンターが ai 以上の時 rnd に分岐",
+                    "branch_condition": "counter",
+                    "branch_value": 4,
+                    "compare": ">",
+                    "enemy_skill_id": 22,
                     "params": [
                         null,
                         null,
@@ -2066,55 +4185,21 @@
                         null
                     ],
                     "target_round": 13,
-                    "type": 31
+                    "type": 32
                 },
                 "condition": null,
-                "enemy_skill_id": 21,
+                "enemy_skill_id": 22,
                 "increment": 0,
-                "max_counter": 1,
+                "max_counter": 15,
                 "use_new_ai": true
             },
             {
                 "behavior": {
-                    "_name": "※カウンターが ai の時 rnd に分岐",
-                    "branch_condition": "counter",
-                    "branch_value": 4,
-                    "compare": "=",
-                    "enemy_skill_id": 21,
-                    "params": [
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        4,
-                        null,
-                        null,
-                        null
-                    ],
-                    "target_round": 12,
-                    "type": 31
-                },
-                "condition": null,
-                "enemy_skill_id": 21,
-                "increment": 0,
-                "max_counter": 1,
-                "use_new_ai": true
-            },
-            {
-                "behavior": {
-                    "_name": "※カウンターが ai の時 rnd に分岐",
+                    "_name": "※カウンターが ai 以上の時 rnd に分岐",
                     "branch_condition": "counter",
                     "branch_value": 2,
-                    "compare": "=",
-                    "enemy_skill_id": 21,
+                    "compare": ">",
+                    "enemy_skill_id": 22,
                     "params": [
                         null,
                         null,
@@ -2134,20 +4219,28 @@
                         null
                     ],
                     "target_round": 11,
-                    "type": 31
+                    "type": 32
                 },
                 "condition": null,
-                "enemy_skill_id": 21,
+                "enemy_skill_id": 22,
                 "increment": 0,
-                "max_counter": 1,
+                "max_counter": 15,
                 "use_new_ai": true
             },
             {
                 "behavior": {
-                    "_name": "なし",
+                    "_name": "バスターブレード",
+                    "attack": {
+                        "atk_multiplier": 85,
+                        "max_hits": 1,
+                        "min_hits": 1
+                    },
                     "enemy_skill_id": 16069,
                     "params": [
                         null,
+                        1,
+                        1,
+                        85,
                         null,
                         null,
                         null,
@@ -2157,19 +4250,27 @@
                         null,
                         null,
                         null,
-                        null,
-                        50,
-                        4,
                         null,
                         null,
                         null
                     ],
-                    "type": 0
+                    "type": 15
                 },
-                "condition": null,
+                "condition": {
+                    "_ai": 100,
+                    "_rnd": 0,
+                    "cards_on_team": [],
+                    "combos_made": null,
+                    "condition_attributes": [],
+                    "enemies_remaining": null,
+                    "forced_one_time": null,
+                    "hp_threshold": null,
+                    "on_death": null,
+                    "one_time": null
+                },
                 "enemy_skill_id": 16069,
                 "increment": 0,
-                "max_counter": 1,
+                "max_counter": 15,
                 "use_new_ai": true
             },
             {
@@ -2199,15 +4300,18 @@
                 "condition": null,
                 "enemy_skill_id": 26,
                 "increment": 0,
-                "max_counter": 1,
+                "max_counter": 15,
                 "use_new_ai": true
             },
             {
                 "behavior": {
-                    "_name": "なし",
+                    "_name": "＿1回目",
+                    "attack": null,
                     "enemy_skill_id": 16060,
                     "params": [
                         null,
+                        16061,
+                        16062,
                         null,
                         null,
                         null,
@@ -2218,26 +4322,144 @@
                         null,
                         null,
                         null,
-                        50,
                         4,
-                        null,
                         null,
                         null
                     ],
-                    "type": 0
+                    "skill_ids": [
+                        16061,
+                        16062
+                    ],
+                    "skills": [
+                        {
+                            "_name": "一意専心",
+                            "attack": null,
+                            "enemy_count": 1,
+                            "enemy_skill_id": 16061,
+                            "multiplier": 200,
+                            "params": [
+                                "1ターンの間、攻撃力が2倍に上昇した",
+                                1,
+                                1,
+                                200,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null
+                            ],
+                            "turns": 1,
+                            "type": 17
+                        },
+                        {
+                            "_name": "見切り",
+                            "attack": null,
+                            "combo_threshold": 8,
+                            "enemy_skill_id": 16062,
+                            "max_turns": 2,
+                            "min_turns": 2,
+                            "params": [
+                                "2ターンの間、8コンボ以下の攻撃を吸収",
+                                2,
+                                2,
+                                8,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null
+                            ],
+                            "type": 67
+                        }
+                    ],
+                    "type": 83
                 },
-                "condition": null,
+                "condition": {
+                    "_ai": 100,
+                    "_rnd": 0,
+                    "cards_on_team": [],
+                    "combos_made": null,
+                    "condition_attributes": [],
+                    "enemies_remaining": null,
+                    "forced_one_time": null,
+                    "hp_threshold": null,
+                    "on_death": null,
+                    "one_time": 4
+                },
                 "enemy_skill_id": 16060,
                 "increment": 0,
-                "max_counter": 1,
+                "max_counter": 15,
                 "use_new_ai": true
             },
             {
                 "behavior": {
-                    "_name": "なし",
+                    "_name": "バスターブレード",
+                    "attack": {
+                        "atk_multiplier": 85,
+                        "max_hits": 1,
+                        "min_hits": 1
+                    },
+                    "enemy_skill_id": 16069,
+                    "params": [
+                        null,
+                        1,
+                        1,
+                        85,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null
+                    ],
+                    "type": 15
+                },
+                "condition": {
+                    "_ai": 100,
+                    "_rnd": 0,
+                    "cards_on_team": [],
+                    "combos_made": null,
+                    "condition_attributes": [],
+                    "enemies_remaining": null,
+                    "forced_one_time": null,
+                    "hp_threshold": null,
+                    "on_death": null,
+                    "one_time": null
+                },
+                "enemy_skill_id": 16069,
+                "increment": 0,
+                "max_counter": 15,
+                "use_new_ai": true
+            },
+            {
+                "behavior": {
+                    "_name": "＿2回目",
+                    "attack": null,
                     "enemy_skill_id": 16063,
                     "params": [
                         null,
+                        16064,
+                        16065,
                         null,
                         null,
                         null,
@@ -2248,26 +4470,144 @@
                         null,
                         null,
                         null,
-                        50,
-                        4,
-                        null,
+                        2,
                         null,
                         null
                     ],
-                    "type": 0
+                    "skill_ids": [
+                        16064,
+                        16065
+                    ],
+                    "skills": [
+                        {
+                            "_name": "一意専心",
+                            "attack": null,
+                            "enemy_count": 1,
+                            "enemy_skill_id": 16064,
+                            "multiplier": 300,
+                            "params": [
+                                "1ターンの間、攻撃力が3倍に上昇した",
+                                1,
+                                1,
+                                300,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null
+                            ],
+                            "turns": 1,
+                            "type": 17
+                        },
+                        {
+                            "_name": "見切り",
+                            "attack": null,
+                            "combo_threshold": 7,
+                            "enemy_skill_id": 16065,
+                            "max_turns": 2,
+                            "min_turns": 2,
+                            "params": [
+                                "2ターンの間、7コンボ以下の攻撃を吸収",
+                                2,
+                                2,
+                                7,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null
+                            ],
+                            "type": 67
+                        }
+                    ],
+                    "type": 83
                 },
-                "condition": null,
+                "condition": {
+                    "_ai": 100,
+                    "_rnd": 0,
+                    "cards_on_team": [],
+                    "combos_made": null,
+                    "condition_attributes": [],
+                    "enemies_remaining": null,
+                    "forced_one_time": null,
+                    "hp_threshold": null,
+                    "on_death": null,
+                    "one_time": 2
+                },
                 "enemy_skill_id": 16063,
                 "increment": 0,
-                "max_counter": 1,
+                "max_counter": 15,
                 "use_new_ai": true
             },
             {
                 "behavior": {
-                    "_name": "なし",
+                    "_name": "バスターブレード",
+                    "attack": {
+                        "atk_multiplier": 85,
+                        "max_hits": 1,
+                        "min_hits": 1
+                    },
+                    "enemy_skill_id": 16069,
+                    "params": [
+                        null,
+                        1,
+                        1,
+                        85,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null
+                    ],
+                    "type": 15
+                },
+                "condition": {
+                    "_ai": 100,
+                    "_rnd": 0,
+                    "cards_on_team": [],
+                    "combos_made": null,
+                    "condition_attributes": [],
+                    "enemies_remaining": null,
+                    "forced_one_time": null,
+                    "hp_threshold": null,
+                    "on_death": null,
+                    "one_time": null
+                },
+                "enemy_skill_id": 16069,
+                "increment": 0,
+                "max_counter": 15,
+                "use_new_ai": true
+            },
+            {
+                "behavior": {
+                    "_name": "＿3回目",
+                    "attack": null,
                     "enemy_skill_id": 16066,
                     "params": [
                         null,
+                        16067,
+                        16068,
                         null,
                         null,
                         null,
@@ -2278,18 +4618,133 @@
                         null,
                         null,
                         null,
-                        50,
-                        4,
+                        1,
+                        null,
+                        null
+                    ],
+                    "skill_ids": [
+                        16067,
+                        16068
+                    ],
+                    "skills": [
+                        {
+                            "_name": "一意専心",
+                            "attack": null,
+                            "enemy_count": 999,
+                            "enemy_skill_id": 16067,
+                            "multiplier": 400,
+                            "params": [
+                                "攻撃力が4倍に上昇した",
+                                999,
+                                999,
+                                400,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null
+                            ],
+                            "turns": 999,
+                            "type": 17
+                        },
+                        {
+                            "_name": "見切り",
+                            "attack": null,
+                            "combo_threshold": 6,
+                            "enemy_skill_id": 16068,
+                            "max_turns": 999,
+                            "min_turns": 999,
+                            "params": [
+                                "6コンボ以下の攻撃を吸収",
+                                999,
+                                999,
+                                6,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null
+                            ],
+                            "type": 67
+                        }
+                    ],
+                    "type": 83
+                },
+                "condition": {
+                    "_ai": 100,
+                    "_rnd": 0,
+                    "cards_on_team": [],
+                    "combos_made": null,
+                    "condition_attributes": [],
+                    "enemies_remaining": null,
+                    "forced_one_time": null,
+                    "hp_threshold": null,
+                    "on_death": null,
+                    "one_time": 1
+                },
+                "enemy_skill_id": 16066,
+                "increment": 0,
+                "max_counter": 15,
+                "use_new_ai": true
+            },
+            {
+                "behavior": {
+                    "_name": "バスターブレード",
+                    "attack": {
+                        "atk_multiplier": 85,
+                        "max_hits": 1,
+                        "min_hits": 1
+                    },
+                    "enemy_skill_id": 16069,
+                    "params": [
+                        null,
+                        1,
+                        1,
+                        85,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
                         null,
                         null,
                         null
                     ],
-                    "type": 0
+                    "type": 15
                 },
-                "condition": null,
-                "enemy_skill_id": 16066,
+                "condition": {
+                    "_ai": 100,
+                    "_rnd": 0,
+                    "cards_on_team": [],
+                    "combos_made": null,
+                    "condition_attributes": [],
+                    "enemies_remaining": null,
+                    "forced_one_time": null,
+                    "hp_threshold": null,
+                    "on_death": null,
+                    "one_time": null
+                },
+                "enemy_skill_id": 16069,
                 "increment": 0,
-                "max_counter": 1,
+                "max_counter": 15,
                 "use_new_ai": true
             },
             {
@@ -2319,15 +4774,117 @@
                 "condition": null,
                 "enemy_skill_id": 26,
                 "increment": 0,
-                "max_counter": 1,
+                "max_counter": 15,
                 "use_new_ai": true
             },
             {
                 "behavior": {
-                    "_name": "なし",
+                    "_name": "※ai フラグが立っていたら rnd の数値に分岐",
+                    "branch_condition": "flag",
+                    "branch_value": 1,
+                    "compare": "&",
+                    "enemy_skill_id": 10,
+                    "params": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        50,
+                        4,
+                        null,
+                        null,
+                        null
+                    ],
+                    "target_round": 4,
+                    "type": 43
+                },
+                "condition": null,
+                "enemy_skill_id": 10,
+                "increment": 0,
+                "max_counter": 15,
+                "use_new_ai": true
+            },
+            {
+                "behavior": {
+                    "_name": "※フラグを ai にセット",
+                    "enemy_skill_id": 12,
+                    "flag": 1,
+                    "flag_bin": "0b1",
+                    "operation": "SET",
+                    "params": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        4,
+                        null,
+                        null,
+                        null
+                    ],
+                    "type": 22
+                },
+                "condition": null,
+                "enemy_skill_id": 12,
+                "increment": 0,
+                "max_counter": 15,
+                "use_new_ai": true
+            },
+            {
+                "behavior": {
+                    "_name": "※カウンターを１＋",
+                    "counter": 1,
+                    "enemy_skill_id": 16,
+                    "params": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        4,
+                        null,
+                        null,
+                        null
+                    ],
+                    "set": "+",
+                    "type": 26
+                },
+                "condition": null,
+                "enemy_skill_id": 16,
+                "increment": 0,
+                "max_counter": 15,
+                "use_new_ai": true
+            },
+            {
+                "behavior": {
+                    "_name": "＿HP1%",
+                    "attack": null,
                     "enemy_skill_id": 16070,
                     "params": [
                         null,
+                        16071,
+                        16072,
                         null,
                         null,
                         null,
@@ -2338,18 +4895,88 @@
                         null,
                         null,
                         null,
-                        50,
-                        4,
                         null,
                         null,
                         null
                     ],
-                    "type": 0
+                    "skill_ids": [
+                        16071,
+                        16072
+                    ],
+                    "skills": [
+                        {
+                            "_name": "情け無用",
+                            "attack": null,
+                            "enemy_skill_id": 16071,
+                            "max_amount": 100,
+                            "min_amount": 100,
+                            "params": [
+                                "敵のHPが回復した",
+                                100,
+                                100,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null
+                            ],
+                            "target": "enemy",
+                            "type": 86
+                        },
+                        {
+                            "_name": "覚悟はできているか？",
+                            "amount": 25,
+                            "attack": null,
+                            "debuff_type": "movetime",
+                            "enemy_skill_id": 16072,
+                            "params": [
+                                "5ターンの間、持ち時間が激減",
+                                5,
+                                null,
+                                25,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null
+                            ],
+                            "turns": 5,
+                            "type": 39,
+                            "unit": "%"
+                        }
+                    ],
+                    "type": 83
                 },
-                "condition": null,
+                "condition": {
+                    "_ai": 100,
+                    "_rnd": 0,
+                    "cards_on_team": [],
+                    "combos_made": null,
+                    "condition_attributes": [],
+                    "enemies_remaining": null,
+                    "forced_one_time": null,
+                    "hp_threshold": null,
+                    "on_death": null,
+                    "one_time": null
+                },
                 "enemy_skill_id": 16070,
                 "increment": 0,
-                "max_counter": 1,
+                "max_counter": 15,
                 "use_new_ai": true
             },
             {
@@ -2379,37 +5006,38 @@
                 "condition": null,
                 "enemy_skill_id": 26,
                 "increment": 0,
-                "max_counter": 1,
+                "max_counter": 15,
                 "use_new_ai": true
             },
             {
                 "behavior": {
-                    "_name": "なし",
+                    "_name": "根性",
                     "enemy_skill_id": 16073,
+                    "hp_threshold": 50,
                     "params": [
                         null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
                         50,
-                        4,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
                         null,
                         null,
                         null
                     ],
-                    "type": 0
+                    "type": 73
                 },
                 "condition": null,
                 "enemy_skill_id": 16073,
                 "increment": 0,
-                "max_counter": 1,
+                "max_counter": 15,
                 "use_new_ai": true
             }
         ],

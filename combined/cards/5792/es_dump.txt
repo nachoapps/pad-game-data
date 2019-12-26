@@ -1,0 +1,75 @@
+#5792  - 城之内克也＆真紅眼の黒竜
+True : use_new_ai
+1 : starting/max counter
+1 : counter increment
+
+ESPreemptive(49:3402) -> ESPreemptive
+Enable preempt if level 4
+
+ESBranchLevel(35:25) -> ESBranchLevel
+Branch on level > 4, target rnd 4
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 1, target rnd 8
+
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b1
+
+SkillSet:
+	[0] ESGravity(50:15747) -> デュエル！
+	Player -75% HP
+	[1] ESSkyfall(68:15748) -> 受けてみろ、オレの真紅眼の黒竜
+	Fire, Dark skyfall +25% for 5 turns
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESBranchHP(28:18) -> ESBranchHP
+Branch on hp < 15, target rnd 13
+
+ESBranchHP(28:18) -> ESBranchHP
+Branch on hp < 50, target rnd 19
+
+ESAttackUPRemainingEnemies(17:15749) -> 行くぜ！
+Condition: One-time use, when <= 1 enemies remain (ai:100 rnd:0) (one-time: 1)
+Increase damage to 150% for the next 1 turns
+
+ESRandomSpawn(92:15750) -> 黒炎弾
+Spawn random 3 Dark orbs, Deal 100% damage
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESBranchCounter(32:22) -> ESBranchCounter
+Branch on counter > 1, target rnd 17
+
+ESSetCounter(26:16) -> ESSetCounter
+counter + 1
+
+ESDamageShield(74:15752) -> 罠カード「メタル化・魔法反射装甲」
+Reduce damage from all sources by 75% for 3 turns
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESRandomSpawn(92:15753) -> ダーク・メガ・フレア
+Spawn random 5 Fire, Dark orbs, Deal 200% damage
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+
+ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 2, target rnd 10
+
+ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b11
+
+ESRecoverEnemy(86:15751) -> オレは諦めねぇ！最後の最後まで！
+Enemy recover 50% hp
+
+ESEndPath(36:26) -> ESEndPath
+end_turn
+

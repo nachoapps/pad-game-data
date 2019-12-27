@@ -1,4 +1,4 @@
-#3205 - Vajrabhairava
+#811 - Empress God, Izanami
 monster size: 5
 new AI: True
 start/max counter: 1
@@ -95,17 +95,29 @@ Change Dark to Jammer, Deal 10000% damage
 	[1] ESAbsorbCombo(67:16250) -> 最後は10コンボを見せてください
 	Absorb combo <= 9 damage for 1 turns
 
-#23: ESBranchCombo(113:6528) -> ESBranchCombo
-Branch on combo >= 10, target rnd 25
+#23: ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 32, target rnd 29
 
-#24: SkillSet:
+#24: ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b111111
+
+#25: ESBranchCombo(113:6528) -> ESBranchCombo
+Branch on combo >= 10, target rnd 27
+
+#26: SkillSet:
 	[0] ESBindAwoken(88:16253) -> 読み違えたようですね
 	Bind awoken skills for 1 turns
 	[1] ESAttackMultihit(15:16254) -> 次は頑張ってください
 	Deal 10000% damage (10 hits, 1000% each)
 
-#25: ESEndBattle(40:16251) -> あなたなら出来ると思ってました
+#27: ESEndBattle(40:16251) -> あなたなら出来ると思ってました
 Reduce self HP to 0
 
-#26: ESEndPath(36:26) -> ESEndPath
+#28: ESEndPath(36:26) -> ESEndPath
+end_turn
+
+#29: ESEndBattle(40:16255) -> 次の機会を楽しみにしていますね
+Reduce self HP to 0
+
+#30: ESEndPath(36:26) -> ESEndPath
 end_turn

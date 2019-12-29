@@ -73,7 +73,6 @@ Condition: 50% chance (ai:50 rnd:0)
 Lock 8 random Fire, Water, Wood, Light, Dark, Heal, Jammer orbs, Deal 130% damage
 
 #16: ESRandomSpawn(92:3567) -> Black Weapon
-Condition: When fire, water, wood, light, dark, heal, jammer, poison orbs are on the board (ai:100 rnd:0)
 Spawn random 3 Mortal Poison orbs, Deal 130% damage
 
 #17: ESFlagOperation(24:14) -> ESFlagOperation
@@ -121,14 +120,14 @@ end_turn
 Branch on hp < 30, target rnd 28
 
 #25: SkillSet:
-	Condition: One-time use (ai:50 rnd:0) (one-time: 2)
+	Condition: One-time use (ai:50 rnd:0) (cost: 2)
 	[0] ESBindAwoken(88:3575) -> Limit Signal
 	Bind awoken skills for 2 turns
 	[1] ESRandomSpawn(92:3573) -> Rust Generate
 	Spawn random 12 Jammer orbs
 
 #26: SkillSet:
-	Condition: One-time use (ai:100 rnd:0) (one-time: 2)
+	Condition: One-time use (ai:100 rnd:0) (cost: 2)
 	[0] ESBindRandom(1:3574) -> Numb Signal
 	Bind 4 random cards for 3 turns
 	[1] ESAttackUPRemainingEnemies(17:3577) -> Power Steel

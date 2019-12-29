@@ -8,14 +8,14 @@ counter increment: 0
 Enable preempt if level 1
 
 #2: SkillSet:
-	Condition: One-time use (ai:100 rnd:0) (one-time: 5)
+	Condition: One-time use (ai:100 rnd:0) (cost: 5)
 	[0] ESBindRandomSub(65:14290) -> Sylph, please♪
 	Bind 4 random subs for 50 turns
 	[1] ESVoidShield(71:14291) -> Magic Circle's Protective Wall
 	Void damage >= 30 for 999 turns
 
 #3: ESRandomSpawn(92:14293) -> I'll give you this♪
-Condition: One-time use & when Fire, Water, Wood, Light, Dark, Jammer, Poison, Mortal Poison orbs are on the board (ai:100 rnd:0) (one-time: 1)
+Condition: One-time use (ai:100 rnd:0) (cost: 1)
 Spawn random 3 Heal orbs
 
 #4: ESBranchFlag(43:10) -> ESBranchFlag
@@ -25,7 +25,6 @@ Branch on flag & 1, target rnd 8
 flag SET 0b1
 
 #6: ESRandomSpawn(92:14294) -> This is my last
-Condition: When fire, water, wood, light, dark, jammer, poison, mortal poison orbs are on the board (ai:100 rnd:0)
 Spawn random 3 Heal orbs
 
 #7: ESEndPath(36:26) -> ESEndPath

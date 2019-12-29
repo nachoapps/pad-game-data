@@ -29,7 +29,7 @@ flag SET 0b1
 end_turn
 
 #8: SkillSet:
-	Condition: When < 1% hp , one-time use (ai:100 rnd:0) (one-time: 1)
+	Condition: When < 1% hp , one-time use (ai:100 rnd:0) (cost: 1)
 	[0] ESRecoverEnemy(86:4552) -> Overcoming Will
 	Enemy recover 50% hp
 	[1] ESAttackUPRemainingEnemies(17:4551) -> Raising Flap
@@ -55,15 +55,15 @@ flag SET 0b11
 Branch on player_cards HAS [2508, 2509], target rnd 15
 
 #14: ESAttackUPRemainingEnemies(17:4551) -> Raising Flap
-Condition: One-time use, when <= 1 enemies remain (ai:100 rnd:0) (one-time: 1)
+Condition: One-time use, when <= 1 enemies remain (ai:100 rnd:0) (cost: 1)
 Increase damage to 200% for the next 1 turns
 
 #15: ESAttackUPRemainingEnemies(17:4550) -> You're a troublesome one, aren't you?
-Condition: One-time use, when <= 1 enemies remain (ai:100 rnd:0) (one-time: 1)
+Condition: One-time use, when <= 1 enemies remain (ai:100 rnd:0) (cost: 1)
 Increase damage to 200% for the next 1 turns
 
 #16: ESAttackUPRemainingEnemies(17:4551) -> Raising Flap
-Condition: One-time use, when <= 1 enemies remain (ai:100 rnd:0) (one-time: 1)
+Condition: One-time use, when <= 1 enemies remain (ai:100 rnd:0) (cost: 1)
 Increase damage to 200% for the next 1 turns
 
 #17: ESAttackMultihit(15:4553) -> Storm Raid
@@ -75,7 +75,6 @@ Condition: 50% chance (ai:50 rnd:0)
 Change 3rd column to Light orbs, 4th column to Wood orbs, Deal 95% damage
 
 #19: ESRandomSpawn(92:4560) -> Mountain Haze's Guidance
-Condition: When fire, water, light, dark, heal, jammer, poison, mortal poison orbs are on the board (ai:100 rnd:0)
 Spawn random 8 Wood orbs, Deal 90% damage
 
 #20: ESBranchFlag(43:10) -> ESBranchFlag

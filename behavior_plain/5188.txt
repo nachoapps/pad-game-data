@@ -14,7 +14,7 @@ Branch on flag & 1, target rnd 6
 flag SET 0b1
 
 #4: ESGravity(50:13039) -> Charge
-Condition: One-time use (ai:100 rnd:0) (one-time: 2)
+Condition: One-time use (ai:100 rnd:0) (cost: 2)
 Player -50% HP
 
 #5: ESEndPath(36:26) -> ESEndPath
@@ -27,11 +27,11 @@ counter + 1
 Branch on counter > 3, target rnd 12
 
 #8: ESGravity(50:13039) -> Charge
-Condition: One-time use (ai:0 rnd:33) (one-time: 2)
+Condition: One-time use (ai:0 rnd:33) (cost: 2)
 Player -50% HP
 
 #9: ESRandomSpawn(92:13040) -> Radial Strike
-Condition: 33% chance & when Fire, Water, Wood, Light, Heal, Jammer, Poison, Mortal Poison orbs are on the board (ai:0 rnd:33)
+Condition: 33% chance (ai:0 rnd:33)
 Spawn random 4 Dark orbs, Deal 95% damage
 
 #10: ESAttackMultihit(15:13038) -> Multibites
@@ -58,7 +58,7 @@ end_turn
 Branch on counter > 7, target rnd 21
 
 #17: ESBindAttack(63:13044) -> Binding Attack
-Condition: One-time use (ai:0 rnd:33) (one-time: 2)
+Condition: One-time use (ai:0 rnd:33) (cost: 2)
 Bind 1 random subs for 2 turns, Deal 100% damage
 
 #18: ESOrbSealRow(100:13042) -> Wing Combo Strike

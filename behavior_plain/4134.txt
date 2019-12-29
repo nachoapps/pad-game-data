@@ -66,7 +66,7 @@ Branch on flag & 2, target rnd 22
 flag SET 0b11
 
 #20: SkillSet:
-	Condition: One-time use (ai:100 rnd:0) (one-time: 5)
+	Condition: One-time use (ai:100 rnd:0) (cost: 5)
 	[0] ESBindRandomSub(65:8919) -> Roar
 	Bind 1 random subs for 1 turns
 	[1] ESAttackUPRemainingEnemies(17:8920) -> Anger
@@ -76,11 +76,11 @@ flag SET 0b11
 end_turn
 
 #22: ESBoardChangeAttackBits(85:8926) -> Slime Mold Explosion
-Condition: One-time use (ai:100 rnd:0) (one-time: 5)
+Condition: One-time use (ai:100 rnd:0) (cost: 5)
 Change all orbs to Fire, Jammer, Deal 180% damage
 
 #23: ESRandomSpawn(92:8922) -> Foreleg Slam
-Condition: 30% chance & when Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs are on the board (ai:0 rnd:30)
+Condition: 30% chance (ai:0 rnd:30)
 Spawn random 4 Fire orbs, Deal 105% damage
 
 #24: ESBlindStickyFixed(98:8923) -> Charge

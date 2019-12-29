@@ -14,7 +14,7 @@ Branch on flag & 1, target rnd 6
 flag SET 0b1
 
 #4: SkillSet:
-	Condition: One-time use (ai:100 rnd:0) (one-time: 2)
+	Condition: One-time use (ai:100 rnd:0) (cost: 2)
 	[0] ESStatusShield(20:2942) -> Knowledge Barrier
 	Voids status ailments for 999 turns
 	[1] ESDamageShield(74:2943) -> Demon's Wall
@@ -34,19 +34,18 @@ Branch on hp < 50, target rnd 13
 Branch on hp < 75, target rnd 22
 
 #9: ESRandomSpawn(92:2951) -> Hinder Alchemy
-Condition: When < 75% hp , one-time use & when Fire, Water, Wood, Light, Dark, Heal, Poison, Mortal Poison orbs are on the board (ai:100 rnd:0) (one-time: 2)
+Condition: When < 75% hp , one-time use (ai:100 rnd:0) (cost: 2)
 Spawn random 5 Jammer orbs, Deal 180% damage
 
 #10: ESRandomSpawn(92:2950) -> Heat and Cold
-Condition: When < 75% hp & when Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs are on the board (ai:100 rnd:0)
+Condition: When < 75% hp (ai:100 rnd:0)
 Spawn random 2 Fire, Water orbs, Deal 160% damage
 
 #11: ESBindAttack(63:2945) -> Shadow Touch
-Condition: One-time use (ai:100 rnd:0) (one-time: 2)
+Condition: One-time use (ai:100 rnd:0) (cost: 2)
 Bind 1 random subs for 2 turns, Deal 130% damage
 
 #12: ESRandomSpawn(92:2946) -> Poison Alchemy
-Condition: When fire, water, wood, light, dark, heal, jammer, mortal poison orbs are on the board (ai:100 rnd:0)
 Spawn random 3 Poison orbs, Deal 180% damage
 
 #13: ESBranchFlag(43:10) -> ESBranchFlag
@@ -83,11 +82,11 @@ end_turn
 Change Jammer to Mortal Poison, Deal 200% damage
 
 #20: ESRandomSpawn(92:2951) -> Hinder Alchemy
-Condition: When < 75% hp , one-time use & when Fire, Water, Wood, Light, Dark, Heal, Poison, Mortal Poison orbs are on the board (ai:100 rnd:0) (one-time: 2)
+Condition: When < 75% hp , one-time use (ai:100 rnd:0) (cost: 2)
 Spawn random 5 Jammer orbs, Deal 180% damage
 
 #21: ESRandomSpawn(92:2950) -> Heat and Cold
-Condition: When < 75% hp & when Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs are on the board (ai:100 rnd:0)
+Condition: When < 75% hp (ai:100 rnd:0)
 Spawn random 2 Fire, Water orbs, Deal 160% damage
 
 #22: ESBranchFlag(43:10) -> ESBranchFlag

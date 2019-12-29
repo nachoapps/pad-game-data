@@ -8,7 +8,7 @@ counter increment: 0
 Enable preempt if level 1
 
 #2: SkillSet:
-	Condition: One-time use (ai:100 rnd:0) (one-time: 16)
+	Condition: One-time use (ai:100 rnd:0) (cost: 16)
 	[0] ESInvulnerableOn(119:10450) -> Let's start the medical examination
 	Immune to damage from all sources for 999 turns
 	[1] ESStatusShield(20:10451) -> First, do 3 puzzles for me, will you?
@@ -31,7 +31,7 @@ Branch on combo >= 8, target rnd 8
 counter = 8
 
 #7: SkillSet:
-	Condition: One-time use (ai:100 rnd:0) (one-time: 8)
+	Condition: One-time use (ai:100 rnd:0) (cost: 8)
 	[0] ESRandomSpawn(92:10455) -> The second one...
 	Spawn random 6 Fire, Water, Wood, Light, Dark orbs
 	[1] ESCloud(104:10456) -> Some Clouds...
@@ -41,7 +41,7 @@ counter = 8
 counter = 2
 
 #9: SkillSet:
-	Condition: One-time use (ai:100 rnd:0) (one-time: 8)
+	Condition: One-time use (ai:100 rnd:0) (cost: 8)
 	[0] ESRandomSpawn(92:10455) -> The second one...
 	Spawn random 6 Fire, Water, Wood, Light, Dark orbs
 	[1] ESCloud(104:10456) -> Some Clouds...
@@ -63,7 +63,7 @@ Branch on combo >= 8, target rnd 16
 counter - 1
 
 #15: SkillSet:
-	Condition: One-time use (ai:100 rnd:0) (one-time: 4)
+	Condition: One-time use (ai:100 rnd:0) (cost: 4)
 	[0] ESRandomSpawn(92:10458) -> Aaaand the third one...
 	Spawn random 6 Fire, Water, Wood, Light, Dark orbs
 	[1] ESSpinnersRandom(109:10459) -> Orb change!
@@ -73,7 +73,7 @@ counter - 1
 counter + 1
 
 #17: SkillSet:
-	Condition: One-time use (ai:100 rnd:0) (one-time: 4)
+	Condition: One-time use (ai:100 rnd:0) (cost: 4)
 	[0] ESRandomSpawn(92:10458) -> Aaaand the third one...
 	Spawn random 6 Fire, Water, Wood, Light, Dark orbs
 	[1] ESSpinnersRandom(109:10459) -> Orb change!
@@ -116,7 +116,7 @@ Branch on counter > 1, target rnd 31
 Branch on counter < 0, target rnd 32
 
 #30: SkillSet:
-	Condition: One-time use (ai:100 rnd:0) (one-time: 2)
+	Condition: One-time use (ai:100 rnd:0) (cost: 2)
 	[0] ESInvulnerableOff(121:10461) -> The examination is over!
 	Remove damage immunity effect
 	[1] ESSpinnersRandom(109:10463) -> You seem to hate changing Orbs
@@ -125,7 +125,7 @@ Branch on counter < 0, target rnd 32
 	Void damage >= 20000000 for 30 turns
 
 #31: SkillSet:
-	Condition: One-time use (ai:100 rnd:0) (one-time: 2)
+	Condition: One-time use (ai:100 rnd:0) (cost: 2)
 	[0] ESInvulnerableOff(121:10461) -> The examination is over!
 	Remove damage immunity effect
 	[1] ESCloud(104:10464) -> You seem to hate Clouds
@@ -134,7 +134,7 @@ Branch on counter < 0, target rnd 32
 	Void damage >= 20000000 for 30 turns
 
 #32: SkillSet:
-	Condition: One-time use (ai:100 rnd:0) (one-time: 2)
+	Condition: One-time use (ai:100 rnd:0) (cost: 2)
 	[0] ESInvulnerableOff(121:10461) -> The examination is over!
 	Remove damage immunity effect
 	[1] ESCloud(104:10465) -> You seem to hate changing Orbs & Clouds
@@ -145,7 +145,7 @@ Branch on counter < 0, target rnd 32
 	Void damage >= 20000000 for 30 turns
 
 #33: SkillSet:
-	Condition: One-time use (ai:100 rnd:0) (one-time: 2)
+	Condition: One-time use (ai:100 rnd:0) (cost: 2)
 	[0] ESInvulnerableOff(121:10461) -> The examination is over!
 	Remove damage immunity effect
 	[1] ESBlindStickyRandom(97:10466) -> You seem to hate Darkness
@@ -154,7 +154,7 @@ Branch on counter < 0, target rnd 32
 	Void damage >= 20000000 for 30 turns
 
 #34: SkillSet:
-	Condition: One-time use (ai:100 rnd:0) (one-time: 2)
+	Condition: One-time use (ai:100 rnd:0) (cost: 2)
 	[0] ESInvulnerableOff(121:10461) -> The examination is over!
 	Remove damage immunity effect
 	[1] ESBlindStickyFixed(98:10467) -> You seem to hate Dark & changing Orbs
@@ -165,7 +165,7 @@ Branch on counter < 0, target rnd 32
 	Void damage >= 20000000 for 30 turns
 
 #35: SkillSet:
-	Condition: One-time use (ai:100 rnd:0) (one-time: 2)
+	Condition: One-time use (ai:100 rnd:0) (cost: 2)
 	[0] ESInvulnerableOff(121:10461) -> The examination is over!
 	Remove damage immunity effect
 	[1] ESBlindStickyFixed(98:10468) -> You seem to hate Darkness & Clouds
@@ -183,7 +183,7 @@ Branch on counter < 0, target rnd 32
 	Deal 12000% damage (2 hits, 6000% each)
 
 #37: SkillSet:
-	Condition: When < 50% hp , one-time use (ai:100 rnd:0) (one-time: 1)
+	Condition: When < 50% hp , one-time use (ai:100 rnd:0) (cost: 1)
 	[0] ESInactivity(66:10493) -> You're in great condition!
 	Do nothing
 	[1] ESDebuffMovetime(39:10494) -> I'm going to mess with you a little
@@ -204,7 +204,7 @@ Deal 340% damage (2 hits, 170% each)
 end_turn
 
 #42: SkillSet:
-	Condition: One-time use (ai:100 rnd:0) (one-time: 2)
+	Condition: One-time use (ai:100 rnd:0) (cost: 2)
 	[0] ESInvulnerableOff(121:10461) -> The examination is over!
 	Remove damage immunity effect
 	[1] ESAbsorbCombo(67:10462) -> That is excellent!
@@ -220,7 +220,7 @@ end_turn
 	Deal 12000% damage (2 hits, 6000% each)
 
 #44: SkillSet:
-	Condition: When < 50% hp , one-time use (ai:100 rnd:0) (one-time: 1)
+	Condition: When < 50% hp , one-time use (ai:100 rnd:0) (cost: 1)
 	[0] ESInactivity(66:10493) -> You're in great condition!
 	Do nothing
 	[1] ESDebuffMovetime(39:10494) -> I'm going to mess with you a little
@@ -237,7 +237,7 @@ Spawn random 6 Fire, Water, Wood, Dark, Heal, Jammer, Mortal Poison orbs, Deal 3
 end_turn
 
 #48: SkillSet:
-	Condition: One-time use (ai:100 rnd:0) (one-time: 2)
+	Condition: One-time use (ai:100 rnd:0) (cost: 2)
 	[0] ESInvulnerableOff(121:10461) -> The examination is over!
 	Remove damage immunity effect
 	[1] ESDamageShield(74:10500) -> My goodness!
@@ -255,7 +255,7 @@ end_turn
 	Deal 12000% damage (2 hits, 6000% each)
 
 #50: ESOrbSealRow(100:10499) -> Time to sleep!
-Condition: When < 50% hp , one-time use (ai:100 rnd:0) (one-time: 1)
+Condition: When < 50% hp , one-time use (ai:100 rnd:0) (cost: 1)
 Seal 1st, 5th row for 5 turns
 
 #51: ESBlindStickyRandom(97:10501) -> Get used to the dark!

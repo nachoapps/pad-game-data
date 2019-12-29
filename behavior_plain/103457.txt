@@ -23,7 +23,7 @@ flag SET 0b1
 end_turn
 
 #6: SkillSet:
-	Condition: When < 40% hp , one-time use (ai:100 rnd:0) (one-time: 1)
+	Condition: When < 40% hp , one-time use (ai:100 rnd:0) (cost: 1)
 	[0] ESRecoverEnemy(86:6313) -> Fresh Blood of a Male Goat
 	Enemy recover 50% hp
 	[1] ESDamageShield(74:6314) -> Devil's Influence
@@ -40,7 +40,7 @@ Branch on flag & 2, target rnd 13
 flag SET 0b11
 
 #10: SkillSet:
-	Condition: One-time use (ai:100 rnd:0) (one-time: 1)
+	Condition: One-time use (ai:100 rnd:0) (cost: 1)
 	[0] ESSkillDelay(89:6316) -> Devil Snake's Glare
 	Delay active skills by 4 turns
 	[1] ESAttackMultihit(15:6317) -> Negative Chain
@@ -71,7 +71,7 @@ end_turn
 flag UNSET 0b100
 
 #18: ESRandomSpawn(92:6324) -> Venomous
-Condition: 50% chance & when Fire, Water, Wood, Light, Dark, Jammer, Poison, Mortal Poison orbs are on the board (ai:50 rnd:0)
+Condition: 50% chance (ai:50 rnd:0)
 Spawn random 12 Poison orbs, Deal 50% damage
 
 #19: ESColumnSpawnMulti(77:6322) -> Agahara

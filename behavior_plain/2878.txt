@@ -50,7 +50,7 @@ Bind active skills for 3 turns
 flag SET 0b11
 
 #15: SkillSet:
-	Condition: When < 20% hp , one-time use (ai:100 rnd:0) (one-time: 1)
+	Condition: When < 20% hp , one-time use (ai:100 rnd:0) (cost: 1)
 	[0] ESRecoverEnemy(86:4502) -> Overcoming Will
 	Enemy recover 19% hp
 	[1] ESDamageShield(74:4508) -> Big Jump
@@ -70,11 +70,11 @@ Branch on flag & 4, target rnd 19
 Branch on hp < 50, target rnd 24
 
 #19: ESDamageShield(74:4503) -> Big Jump
-Condition: When < 50% hp , one-time use (ai:100 rnd:0) (one-time: 1)
+Condition: When < 50% hp , one-time use (ai:100 rnd:0) (cost: 1)
 Reduce damage from all sources by 75% for 1 turns
 
 #20: ESDamageShield(74:4495) -> Leap
-Condition: One-time use (ai:100 rnd:0) (one-time: 1)
+Condition: One-time use (ai:100 rnd:0) (cost: 1)
 Reduce damage from all sources by 50% for 1 turns
 
 #21: ESAttackMultihit(15:4498) -> Shining Claw
@@ -86,7 +86,6 @@ Condition: 50% chance (ai:50 rnd:0)
 Change 5th column to Light orbs, 6th column to Fire orbs, Deal 170% damage
 
 #23: ESRandomSpawn(92:4497) -> Brightness Guidance
-Condition: When fire, water, wood, dark, heal, jammer, poison, mortal poison orbs are on the board (ai:100 rnd:0)
 Spawn random 8 Light orbs, Deal 170% damage
 
 #24: ESFlagOperation(22:12) -> ESFlagOperation

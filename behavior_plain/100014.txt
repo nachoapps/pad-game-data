@@ -17,7 +17,6 @@ Branch on flag & 1, target rnd 7
 flag SET 0b1
 
 #5: ESRandomSpawn(92:10421) -> Flash Breath
-Condition: When fire, water, wood, dark, heal, jammer, poison, mortal poison orbs are on the board (ai:100 rnd:0)
 Spawn random 3 Light orbs, Deal 100% damage
 
 #6: ESEndPath(36:26) -> ESEndPath
@@ -30,7 +29,7 @@ Branch on remaining enemies <= 1, target rnd 16
 Branch on remaining enemies <= 2, target rnd 12
 
 #9: ESRandomSpawn(92:10421) -> Flash Breath
-Condition: 50% chance & when Fire, Water, Wood, Dark, Heal, Jammer, Poison, Mortal Poison orbs are on the board (ai:50 rnd:0)
+Condition: 50% chance (ai:50 rnd:0)
 Spawn random 3 Light orbs, Deal 100% damage
 
 #10: ESSkillDelay(89:10422) -> Dimming Sunlight
@@ -52,7 +51,7 @@ Reduce damage from all sources by 50% for 5 turns
 end_turn
 
 #16: ESAttackUPRemainingEnemies(17:10424) -> Blessings from Above
-Condition: One-time use, when <= 1 enemies remain (ai:100 rnd:0) (one-time: 1)
+Condition: One-time use, when <= 1 enemies remain (ai:100 rnd:0) (cost: 1)
 Increase damage to 300% for the next 99 turns
 
 #17: ESAttackMultihit(15:10425) -> Holy Breath

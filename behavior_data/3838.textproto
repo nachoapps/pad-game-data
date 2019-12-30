@@ -131,14 +131,20 @@
     level: 4
     groups {
       group_type: PREEMPT
+      condition {
+      }
       children {
         behavior {
+          condition {
+          }
           enemy_skill_id: 8052
         }
       }
     }
     groups {
       group_type: STANDARD
+      condition {
+      }
       children {
         group {
           group_type: STANDARD
@@ -147,6 +153,8 @@
           }
           children {
             behavior {
+              condition {
+              }
               enemy_skill_id: 8066
             }
           }
@@ -159,37 +167,64 @@
             hp_threshold: 49
           }
           children {
-            group {
+            behavior {
               condition {
+                global_one_time: true
                 trigger_turn: 1
               }
-              children {
-                behavior {
-                  enemy_skill_id: 8060
-                }
-              }
+              enemy_skill_id: 8060
             }
           }
           children {
-            group {
+            behavior {
               condition {
+                global_one_time: true
                 trigger_turn: 2
-                trigger_turn_end: 8
               }
-              children {
-                behavior {
-                  enemy_skill_id: 8067
-                }
-              }
+              enemy_skill_id: 8061
             }
           }
           children {
-            group {
-              children {
-                behavior {
-                  enemy_skill_id: 8070
-                }
+            behavior {
+              condition {
+                global_one_time: true
+                trigger_turn: 3
               }
+              enemy_skill_id: 8062
+            }
+          }
+          children {
+            behavior {
+              condition {
+                global_one_time: true
+                trigger_turn: 4
+              }
+              enemy_skill_id: 8063
+            }
+          }
+          children {
+            behavior {
+              condition {
+                global_one_time: true
+                trigger_turn: 5
+              }
+              enemy_skill_id: 8064
+            }
+          }
+          children {
+            behavior {
+              condition {
+                global_one_time: true
+                trigger_turn: 6
+              }
+              enemy_skill_id: 8065
+            }
+          }
+          children {
+            behavior {
+              condition {
+              }
+              enemy_skill_id: 8067
             }
           }
         }
@@ -203,56 +238,31 @@
           }
           children {
             behavior {
+              condition {
+                global_one_time: true
+                trigger_turn: 1
+              }
               enemy_skill_id: 8068
+            }
+          }
+          children {
+            behavior {
+              condition {
+                global_one_time: true
+                trigger_turn: 2
+              }
+              enemy_skill_id: 8069
+            }
+          }
+          children {
+            behavior {
+              condition {
+              }
+              enemy_skill_id: 8070
             }
           }
         }
       }
     }
-    groups {
-      group_type: UNKNOWN_USE
-      children {
-        behavior {
-          condition {
-          }
-          enemy_skill_id: 8061
-        }
-      }
-      children {
-        behavior {
-          condition {
-          }
-          enemy_skill_id: 8062
-        }
-      }
-      children {
-        behavior {
-          condition {
-          }
-          enemy_skill_id: 8063
-        }
-      }
-      children {
-        behavior {
-          condition {
-          }
-          enemy_skill_id: 8064
-        }
-      }
-      children {
-        behavior {
-          condition {
-          }
-          enemy_skill_id: 8065
-        }
-      }
-      children {
-        behavior {
-          condition {
-          }
-          enemy_skill_id: 8069
-        }
-      }
-    }
   }
-  status: APPROVED_AS_IS
+  status: APPROVED_WITH_CHANGES

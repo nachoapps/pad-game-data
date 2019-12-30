@@ -16,7 +16,7 @@ ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b1
 
 ESFixedTarget(112:9605) -> Charming Demon Eye
-Forces attacks to hit this enemy
+Forces attacks to hit this enemy for 99 turns
 
 ESBranchHP(29:19) -> ESBranchHP
 Branch on hp > 30, target rnd 8
@@ -35,6 +35,7 @@ Change Random 2 to Jammer
 ESEndPath(36:26) -> ESEndPath
 end_turn
 
-ESTurnChangeActive(122:9606) -> In a pinch, enemies' turn changed
+ESTurnChangeRemainingEnemies(122:9606) -> In a pinch, enemies' turn changed
+Condition: when <= 1 enemies remain (ai:0 rnd:0)
 Enemy turn counter change to 1
 

@@ -28,7 +28,7 @@ ESEndPath(36:26) -> ESEndPath
 end_turn
 
 SkillSet:
-	Condition: When < 20% hp , one-time use (ai:100 rnd:0) (one-time: 1)
+	Condition: When < 20% hp , one-time use (ai:100 rnd:0) (cost: 1)
 	[0] ESRecoverEnemy(86:4381) -> Overcoming Will
 	Enemy recover 29% hp
 	[1] ESAttackUPRemainingEnemies(17:4222) -> Dragonbound's Wrath
@@ -78,7 +78,7 @@ ESFlagOperation(24:14) -> ESFlagOperation
 flag UNSET 0b100
 
 ESRandomSpawn(92:4362) -> Dawn Guidance
-Condition: 30% chance & when Water, Wood, Light, Dark, Jammer, Poison, Mortal Poison orbs are on the board (ai:0 rnd:30)
+Condition: 30% chance (ai:0 rnd:30)
 Spawn random 6 Heal orbs, Deal 175% damage
 
 SkillSet:
@@ -139,7 +139,7 @@ SkillSet:
 	Lock 10 random Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs
 
 ESRandomSpawn(92:4362) -> Dawn Guidance
-Condition: When < 75% hp & when Water, Wood, Light, Dark, Jammer, Poison, Mortal Poison orbs are on the board (ai:100 rnd:0)
+Condition: When < 75% hp (ai:100 rnd:0)
 Spawn random 6 Heal orbs, Deal 175% damage
 
 ESAttributeResist(72:4383) -> Water Halven

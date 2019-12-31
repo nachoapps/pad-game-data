@@ -7,13 +7,15 @@ monster_id: 318
 approved: False
 
 level: 1
- type: PREEMPT
- | (157:16) Wait and See
- | Do nothing
  group:
- condition: turn 1, hp <= 39
- | (158:17) Overdrive
- | Increase damage to 150% for the next 15 turns
+ | group:
+ | condition: turn 1, hp <= 100
+   | (157:16) Wait and See
+   | Do nothing
+ | group:
+ | condition: turn 2, hp <= 39
+   | (158:17) Overdrive
+   | Increase damage to 150% for the next 15 turns
 
 level: 7
  type: PREEMPT

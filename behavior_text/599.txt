@@ -7,15 +7,19 @@ monster_id: 599
 approved: False
 
 level: 1
- type: PREEMPT
- | (90:20) Protection of the Gods
- | Voids status ailments for 999 turns
  group:
  | group:
    | group:
    | condition: turn 1
+     | (90:20) Protection of the Gods
+     | Voids status ailments for 999 turns
+   | group:
+   | condition: turn 2
      | (373:2) Eternal Thirst
      | Bind Water cards for 10 turns
+     | condition: 70% chance
+     | (374:15) Flame Pillar
+     | Deal 135% damage (3 hits, 45% each)
    | group:
      | condition: 70% chance
      | (374:15) Flame Pillar
@@ -28,7 +32,7 @@ level: 1
  | group:
  | condition: hp <= 24
    | group:
-   | condition: turn 1
+   | condition: turn 2
      | (376:16) Released Magical Power
      | Do nothing
    | group:

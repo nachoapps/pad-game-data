@@ -7,15 +7,17 @@ monster_id: 100100
 approved: False
 
 level: 1
- type: PREEMPT
- | (4782:4) Water Orb change
- | Change Wood to Water
- | (4787:2) Ice Grudge
- | Bind Wood cards for 2~4 turns
  group:
- condition: turn 1, hp <= 100
- | (4787:2) Ice Grudge
- | Bind Wood cards for 2~4 turns
+ | group:
+ | condition: turn 1
+   | (4782:4) Water Orb change
+   | Change Wood to Water
+   | (4787:2) Ice Grudge
+   | Bind Wood cards for 2~4 turns
+ | group:
+ | condition: turn 2
+   | (4787:2) Ice Grudge
+   | Bind Wood cards for 2~4 turns
 
 level: 5
  type: PREEMPT

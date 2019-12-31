@@ -29,15 +29,21 @@
   levels {
     level: 4
     groups {
-      group_type: PREEMPT
+      group_type: STANDARD
       children {
-        behavior {
-          enemy_skill_id: 513
+        group {
+          group_type: STANDARD
+          condition {
+            hp_threshold: 100
+            trigger_turn: 1
+          }
+          children {
+            behavior {
+              enemy_skill_id: 513
+            }
+          }
         }
       }
-    }
-    groups {
-      group_type: STANDARD
       children {
         group {
           group_type: STANDARD
@@ -59,7 +65,7 @@
           group_type: STANDARD
           condition {
             hp_threshold: 29
-            trigger_turn: 1
+            trigger_turn: 2
           }
           children {
             behavior {

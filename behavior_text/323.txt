@@ -7,17 +7,19 @@ monster_id: 323
 approved: False
 
 level: 1
- type: PREEMPT
- | (205:20) Fertile Guard
- | Voids status ailments for 999 turns
  group:
  | group:
-   | (248:15) Magma Breath
-   | Deal 100% damage (2 hits, 50% each)
+   | group:
+   | condition: turn 1
+     | (205:20) Fertile Guard
+     | Voids status ailments for 999 turns
+   | group:
+     | (248:15) Magma Breath
+     | Deal 100% damage (2 hits, 50% each)
  | group:
  | condition: hp <= 49
    | group:
-   | condition: turn 1
+   | condition: turn 2
      | (366:2) Water Bind
      | Bind Water cards for 2~4 turns
    | group:

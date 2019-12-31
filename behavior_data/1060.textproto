@@ -2,14 +2,6 @@
   levels {
     level: 1
     groups {
-      group_type: PREEMPT
-      children {
-        behavior {
-          enemy_skill_id: 661
-        }
-      }
-    }
-    groups {
       group_type: STANDARD
       children {
         group {
@@ -18,11 +10,27 @@
             hp_threshold: 100
           }
           children {
-            behavior {
+            group {
               condition {
-                use_chance: 70
+                trigger_turn: 1
               }
-              enemy_skill_id: 658
+              children {
+                behavior {
+                  enemy_skill_id: 661
+                }
+              }
+            }
+          }
+          children {
+            group {
+              children {
+                behavior {
+                  condition {
+                    use_chance: 70
+                  }
+                  enemy_skill_id: 658
+                }
+              }
             }
           }
         }
@@ -32,7 +40,7 @@
           group_type: STANDARD
           condition {
             hp_threshold: 49
-            trigger_turn: 1
+            trigger_turn: 2
           }
           children {
             behavior {
@@ -50,7 +58,7 @@
           children {
             group {
               condition {
-                trigger_turn: 2
+                trigger_turn: 3
               }
               children {
                 behavior {

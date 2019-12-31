@@ -7,16 +7,18 @@ monster_id: 790
 approved: False
 
 level: 4
- type: PREEMPT
- | (503:13) Chaos Eye
- | Change Random 2 to Jammer
  group:
  | group:
-   | condition: 70% chance
-   | (512:15) Snake Bite
-   | Deal 130% damage (2 hits, 65% each)
+   | group:
+   | condition: turn 1
+     | (503:13) Chaos Eye
+     | Change Random 2 to Jammer
+   | group:
+     | condition: 70% chance
+     | (512:15) Snake Bite
+     | Deal 130% damage (2 hits, 65% each)
  | group:
- | condition: turn 1, hp <= 29
+ | condition: turn 2, hp <= 29
    | (504:1) Pupil of the Evil Eye
    | Bind 2 random cards for 4 turns
 

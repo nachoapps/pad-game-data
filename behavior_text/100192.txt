@@ -7,13 +7,15 @@ monster_id: 100192
 approved: False
 
 level: 1
- type: PREEMPT
- | (4779:68) Evil Rain
- | Jammer skyfall +20% for 10 turns
  group:
- | condition: 20% chance
- | (42:2) Water Bind
- | Bind Water cards for 2~4 turns
+ | group:
+ | condition: turn 1
+   | (4779:68) Evil Rain
+   | Jammer skyfall +20% for 10 turns
+ | group:
+   | condition: 20% chance
+   | (42:2) Water Bind
+   | Bind Water cards for 2~4 turns
 
 level: 5
  type: PREEMPT

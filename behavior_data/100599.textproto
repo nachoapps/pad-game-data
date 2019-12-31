@@ -2,14 +2,6 @@
   levels {
     level: 1
     groups {
-      group_type: PREEMPT
-      children {
-        behavior {
-          enemy_skill_id: 90
-        }
-      }
-    }
-    groups {
       group_type: STANDARD
       children {
         group {
@@ -24,7 +16,27 @@
               }
               children {
                 behavior {
+                  enemy_skill_id: 90
+                }
+              }
+            }
+          }
+          children {
+            group {
+              condition {
+                trigger_turn: 2
+              }
+              children {
+                behavior {
                   enemy_skill_id: 373
+                }
+              }
+              children {
+                behavior {
+                  condition {
+                    use_chance: 70
+                  }
+                  enemy_skill_id: 374
                 }
               }
             }
@@ -68,7 +80,7 @@
           children {
             group {
               condition {
-                trigger_turn: 1
+                trigger_turn: 2
               }
               children {
                 behavior {

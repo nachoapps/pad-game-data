@@ -50,11 +50,11 @@ level: 1
  | group:
  | condition: hp <= 49
    | group:
-   | condition: turn 1
+   | condition: always turn 1
      | (12455:74) Scurry! Psycho Nightmare
      | Reduce damage from all sources by 50% for 10 turns
    | group:
-   | condition: turns 2-9
+   | condition: turns 2-9 while above 10 HP
      | condition: 25% chance
      | (12454:15) Psycho Inferno
      | Deal 120% damage (4 hits, 30% each)
@@ -68,7 +68,7 @@ level: 1
      | (12453:15) Double Knee Press
      | Deal 110% damage (2 hits, 55% each)
    | group:
-   | condition: turn 10
+   | condition: turn 10 while above 10 HP
      | (12459:79) Psycho Crusher
      | Change 3rd row to Dark orbs, Deal 250% damage
    | group:

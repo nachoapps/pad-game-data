@@ -25,17 +25,17 @@ level: 1
    | (14928:92) Gozu Vrow
    | Spawn random 5 Dark orbs, Deal 70% damage
  | group:
- | condition: turn 1, hp <= 75
+ | condition: turn 1 while above 49 HP, hp <= 75
    | (14930:100) Is that all you got?
    | Seal 5th row for 4 turns
  | group:
  | condition: hp <= 49
    | group:
-   | condition: turn 1
+   | condition: always turn 1
      | (14929:17) Astral Vine
      | Increase damage to 150% for the next 999 turns
    | group:
-   | condition: turn 2
+   | condition: turn 2 while above 20 HP
      | (14930:100) Is that all you got?
      | Seal 5th row for 4 turns
  | group:

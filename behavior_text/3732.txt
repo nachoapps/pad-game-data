@@ -77,14 +77,14 @@ level: 1
  | group:
  | condition: hp <= 65
    | group:
-   | condition: turn 1
+   | condition: always turn 1
      | condition: 50% chance
      | (7534:83) Wall + Rejection
      | Reduce damage from all sources by 50% for 3 turns + Leader changes to random sub for 3 turns, Deal 400% damage
      | (7535:83) Wall + Rejection
      | Reduce damage from all sources by 75% for 3 turns + Leader changes to random sub for 3 turns, Deal 400% damage
    | group:
-   | condition: turns 2-9
+   | condition: turns 2-9 while above 30 HP
      | condition: 20% chance
      | (7525:103) Ignited
      | Spawn Bomb orbs in the specified positions, Deal 250% damage
@@ -101,7 +101,7 @@ level: 1
      | (7529:15) Meteor
      | Deal 270% damage (3 hits, 90% each)
    | group:
-   | condition: turn 10
+   | condition: always turn 10
      | (7524:83) Confusion + Suppression + X Burst + Dragon Tears
      | Random 3 orbs change every 1.0s for 10 turns + Bind awoken skills for 1 turn + Deal 1500% damage (10 hits, 150% each) + Player recover 100% hp
  | group:

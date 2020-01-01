@@ -91,15 +91,22 @@
   level_overrides {
     level: 4
     groups {
-      group_type: PREEMPT
+      group_type: STANDARD
       children {
-        behavior {
-          enemy_skill_id: 471
+        group {
+          group_type: STANDARD
+          condition {
+            hp_threshold: 100
+            trigger_turn: 1
+            always_trigger_above: 1
+          }
+          children {
+            behavior {
+              enemy_skill_id: 471
+            }
+          }
         }
       }
-    }
-    groups {
-      group_type: STANDARD
       children {
         group {
           group_type: STANDARD
@@ -118,7 +125,7 @@
           group_type: STANDARD
           condition {
             hp_threshold: 9
-            trigger_turn: 1
+            trigger_turn: 2
           }
           children {
             behavior {
@@ -170,4 +177,4 @@
       }
     }
   }
-  status: NEEDS_REAPPROVAL
+  status: APPROVED_AS_IS

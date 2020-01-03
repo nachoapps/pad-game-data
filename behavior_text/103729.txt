@@ -56,6 +56,54 @@ level: 4
    | Lock all Light orbs, Deal 50% damage
    | (7353:17) Fennu
    | Increase damage to 150% for the next 999 turns
- type: UNKNOWN_USE
+
+level: 5
+ type: PREEMPT
  | (8203:53) Guanghushenfu
  | Absorb Light damage for 2~6 turns
+ group:
+ | group:
+   | group:
+   | condition: execute repeatedly, turn 1 of 3
+     | (7350:74) Shandian
+     | Reduce damage from all sources by 35% for 2 turns, Deal 80% damage
+   | group:
+   | condition: execute repeatedly, turn 2 of 3
+     | (7352:15) Gongji
+     | Deal 100% damage (2 hits, 50% each)
+   | group:
+   | condition: execute repeatedly, turn 3 of 3
+     | (7360:66) Jumping, jumping
+     | Do nothing
+ | group:
+ | condition: hp <= 49
+   | group:
+   | condition: turn 1
+     | (7380:94) Guangshufu
+     | Lock all Light orbs, Deal 50% damage
+     | (7350:74) Shandian
+     | Reduce damage from all sources by 35% for 2 turns, Deal 80% damage
+   | group:
+   | condition: execute repeatedly, turn 1 of 3
+     | (7352:15) Gongji
+     | Deal 100% damage (2 hits, 50% each)
+   | group:
+   | condition: execute repeatedly, turn 2 of 3
+     | (7360:66) Jumping, jumping
+     | Do nothing
+   | group:
+   | condition: execute repeatedly, turn 3 of 3
+     | (7350:74) Shandian
+     | Reduce damage from all sources by 35% for 2 turns, Deal 80% damage
+ type: REMAINING
+ condition: when 1 enemies remain
+ | group:
+ | condition: turn 1 while HP > 49, hp <= 100
+   | (7353:17) Fennu
+   | Increase damage to 150% for the next 999 turns
+ | group:
+ | condition: turn 1, hp <= 49
+   | (7380:94) Guangshufu
+   | Lock all Light orbs, Deal 50% damage
+   | (7353:17) Fennu
+   | Increase damage to 150% for the next 999 turns

@@ -13,23 +13,18 @@ level: 4
  group:
  | group:
    | group:
-   | condition: turn 1 while HP > 50
+   | condition: execute repeatedly, turn 1 of 2
      | (12239:65) I'm not letting you get away.
      | Bind 2 random subs for 3 turns, Deal 90% damage
    | group:
+   | condition: execute repeatedly, turn 2 of 2
      | (12207:83) I'll have your heart! + Gae Bolg:
 Barbed Spear that Pierces with Death
      | Do nothing + Deal 120% damage
  | group:
- | condition: hp <= 50
-   | group:
-   | condition: always turn 1
-     | (12240:67) Protection from Arrows
-     | Absorb combo <= 5 damage for 99 turns
-   | group:
-   | condition: turn 2 while HP > 14
-     | (12239:65) I'm not letting you get away.
-     | Bind 2 random subs for 3 turns, Deal 90% damage
+ | condition: always turn 1, hp <= 50
+   | (12240:67) Protection from Arrows
+   | Absorb combo <= 5 damage for 99 turns
  | group:
  | condition: hp <= 14
    | (12211:83) It's a bit far, but I'll settle it now! + Gae Bolg:

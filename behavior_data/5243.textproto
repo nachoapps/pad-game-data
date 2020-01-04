@@ -20,8 +20,8 @@
           children {
             group {
               condition {
+                repeats_every: 2
                 trigger_turn: 1
-                always_trigger_above: 50
               }
               children {
                 behavior {
@@ -32,6 +32,10 @@
           }
           children {
             group {
+              condition {
+                repeats_every: 2
+                trigger_turn: 2
+              }
               children {
                 behavior {
                   enemy_skill_id: 13229
@@ -60,6 +64,14 @@
               }
               children {
                 behavior {
+                  condition {
+                    use_chance: 50
+                  }
+                  enemy_skill_id: 13231
+                }
+              }
+              children {
+                behavior {
                   enemy_skill_id: 13228
                 }
               }
@@ -67,6 +79,10 @@
           }
           children {
             group {
+              condition {
+                repeats_every: 2
+                trigger_turn: 1
+              }
               children {
                 behavior {
                   condition {
@@ -78,6 +94,27 @@
               children {
                 behavior {
                   enemy_skill_id: 13229
+                }
+              }
+            }
+          }
+          children {
+            group {
+              condition {
+                repeats_every: 2
+                trigger_turn: 2
+              }
+              children {
+                behavior {
+                  condition {
+                    use_chance: 50
+                  }
+                  enemy_skill_id: 13231
+                }
+              }
+              children {
+                behavior {
+                  enemy_skill_id: 13228
                 }
               }
             }

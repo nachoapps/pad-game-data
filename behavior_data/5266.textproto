@@ -76,6 +76,9 @@
       }
       children {
         group {
+          condition {
+            trigger_turn: 6
+          }
           children {
             behavior {
               enemy_skill_id: 13256
@@ -83,14 +86,18 @@
           }
         }
       }
-    }
-    groups {
-      group_type: UNKNOWN_USE
       children {
-        behavior {
-          condition {
+        group {
+          children {
+            behavior {
+              enemy_skill_id: 13254
+            }
           }
-          enemy_skill_id: 13254
+          children {
+            behavior {
+              enemy_skill_id: 13256
+            }
+          }
         }
       }
     }

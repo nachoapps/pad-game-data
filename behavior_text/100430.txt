@@ -11,8 +11,14 @@ level: 1
  | (15023:84) Gold Change
  | Change all orbs to Fire, Water, Wood, Light, Dark, Heal
  group:
- | (15025:92) Color Drop
- | Spawn random 5 Fire, Water, Wood, Light, Dark, Heal orbs, Deal 100% damage
+ | group:
+ | condition: execute repeatedly, turn 1 of 2
+   | (15025:92) Color Drop
+   | Spawn random 5 Fire, Water, Wood, Light, Dark, Heal orbs, Deal 100% damage
+ | group:
+ | condition: execute repeatedly, turn 2 of 2
+   | (15023:84) Gold Change
+   | Change all orbs to Fire, Water, Wood, Light, Dark, Heal
  type: REMAINING
  condition: when 1 enemies remain, hp <= 100
  | (15027:52) Queen's Will

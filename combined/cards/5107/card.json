@@ -449,10 +449,10 @@
             "enemy_skill_id": 12489,
             "jp_skill": {
                 "behavior": {
+                    "_attack": null,
                     "_name": "争いは好まぬのだが…",
                     "amount": -1.0,
-                    "attack": null,
-                    "debuff_type": "movetime",
+                    "debuff_type": "Status.movetime",
                     "enemy_skill_id": 12489,
                     "params": [
                         "5ターンの間、持ち時間が1秒減少",
@@ -474,7 +474,7 @@
                     ],
                     "turns": 5,
                     "type": 39,
-                    "unit": "s"
+                    "unit": "Unit.seconds"
                 },
                 "condition": {
                     "_ai": 100,
@@ -495,10 +495,10 @@
             },
             "kr_skill": {
                 "behavior": {
+                    "_attack": null,
                     "_name": "I'm not very fond of conflict.",
                     "amount": -1.0,
-                    "attack": null,
-                    "debuff_type": "movetime",
+                    "debuff_type": "Status.movetime",
                     "enemy_skill_id": 12489,
                     "params": [
                         "5턴 동안 드롭 조작시간이 1초 감소",
@@ -520,7 +520,7 @@
                     ],
                     "turns": 5,
                     "type": 39,
-                    "unit": "s"
+                    "unit": "Unit.seconds"
                 },
                 "condition": {
                     "_ai": 100,
@@ -541,10 +541,10 @@
             },
             "na_skill": {
                 "behavior": {
+                    "_attack": null,
                     "_name": "I'm not very fond of conflict.",
                     "amount": -1.0,
-                    "attack": null,
-                    "debuff_type": "movetime",
+                    "debuff_type": "Status.movetime",
                     "enemy_skill_id": 12489,
                     "params": [
                         "Orb move time -1 second for 5 turns",
@@ -566,7 +566,7 @@
                     ],
                     "turns": 5,
                     "type": 39,
-                    "unit": "s"
+                    "unit": "Unit.seconds"
                 },
                 "condition": {
                     "_ai": 100,
@@ -791,9 +791,10 @@
             "enemy_skill_id": 12490,
             "jp_skill": {
                 "behavior": {
+                    "_attack": null,
                     "_name": "ヨガテレポート",
-                    "attack": null,
-                    "combo_threshold": 3,
+                    "absorb_threshold": 3,
+                    "absorb_type": "Absorb.combo",
                     "enemy_skill_id": 12490,
                     "max_turns": 3,
                     "min_turns": 3,
@@ -836,9 +837,10 @@
             },
             "kr_skill": {
                 "behavior": {
+                    "_attack": null,
                     "_name": "Yoga Teleport",
-                    "attack": null,
-                    "combo_threshold": 3,
+                    "absorb_threshold": 3,
+                    "absorb_type": "Absorb.combo",
                     "enemy_skill_id": 12490,
                     "max_turns": 3,
                     "min_turns": 3,
@@ -881,9 +883,10 @@
             },
             "na_skill": {
                 "behavior": {
+                    "_attack": null,
                     "_name": "Yoga Teleport",
-                    "attack": null,
-                    "combo_threshold": 3,
+                    "absorb_threshold": 3,
+                    "absorb_type": "Absorb.combo",
                     "enemy_skill_id": 12490,
                     "max_turns": 3,
                     "min_turns": 3,
@@ -929,8 +932,8 @@
             "enemy_skill_id": 12491,
             "jp_skill": {
                 "behavior": {
+                    "_attack": null,
                     "_name": "ヨガフロート",
-                    "attack": null,
                     "cloud_height": 1,
                     "cloud_width": 2,
                     "enemy_skill_id": 12491,
@@ -976,8 +979,8 @@
             },
             "kr_skill": {
                 "behavior": {
+                    "_attack": null,
                     "_name": "Yoga Float",
-                    "attack": null,
                     "cloud_height": 1,
                     "cloud_width": 2,
                     "enemy_skill_id": 12491,
@@ -1023,8 +1026,8 @@
             },
             "na_skill": {
                 "behavior": {
+                    "_attack": null,
                     "_name": "Yoga Float",
-                    "attack": null,
                     "cloud_height": 1,
                     "cloud_width": 2,
                     "enemy_skill_id": 12491,
@@ -1073,12 +1076,12 @@
             "enemy_skill_id": 12492,
             "jp_skill": {
                 "behavior": {
-                    "_name": "ヨガフレイム",
-                    "attack": {
+                    "_attack": {
                         "atk_multiplier": 100,
                         "max_hits": 1,
                         "min_hits": 1
                     },
+                    "_name": "ヨガフレイム",
                     "attributes": [
                         0
                     ],
@@ -1124,12 +1127,12 @@
             },
             "kr_skill": {
                 "behavior": {
-                    "_name": "Yoga Flame",
-                    "attack": {
+                    "_attack": {
                         "atk_multiplier": 100,
                         "max_hits": 1,
                         "min_hits": 1
                     },
+                    "_name": "Yoga Flame",
                     "attributes": [
                         0
                     ],
@@ -1175,12 +1178,12 @@
             },
             "na_skill": {
                 "behavior": {
-                    "_name": "Yoga Flame",
-                    "attack": {
+                    "_attack": {
                         "atk_multiplier": 100,
                         "max_hits": 1,
                         "min_hits": 1
                     },
+                    "_name": "Yoga Flame",
                     "attributes": [
                         0
                     ],
@@ -1229,8 +1232,8 @@
             "enemy_skill_id": 12493,
             "jp_skill": {
                 "behavior": {
+                    "_attack": null,
                     "_name": "通常A",
-                    "attack": null,
                     "enemy_skill_id": 12493,
                     "params": [
                         null,
@@ -1256,12 +1259,12 @@
                     ],
                     "skills": [
                         {
-                            "_name": "合掌キック",
-                            "attack": {
+                            "_attack": {
                                 "atk_multiplier": 45,
                                 "max_hits": 1,
                                 "min_hits": 1
                             },
+                            "_name": "合掌キック",
                             "enemy_skill_id": 12494,
                             "params": [
                                 null,
@@ -1284,12 +1287,12 @@
                             "type": 15
                         },
                         {
-                            "_name": "ヨガアンビル",
-                            "attack": {
+                            "_attack": {
                                 "atk_multiplier": 45,
                                 "max_hits": 1,
                                 "min_hits": 1
                             },
+                            "_name": "ヨガアンビル",
                             "enemy_skill_id": 12495,
                             "params": [
                                 "1ターンの間、対象箇所のドロップ操作不可",
@@ -1309,7 +1312,7 @@
                                 45,
                                 null
                             ],
-                            "position_type": "column",
+                            "position_type": "OrbShape.column",
                             "positions": [
                                 1
                             ],
@@ -1338,8 +1341,8 @@
             },
             "kr_skill": {
                 "behavior": {
+                    "_attack": null,
                     "_name": "통상A",
-                    "attack": null,
                     "enemy_skill_id": 12493,
                     "params": [
                         null,
@@ -1365,12 +1368,12 @@
                     ],
                     "skills": [
                         {
-                            "_name": "Divine Kick",
-                            "attack": {
+                            "_attack": {
                                 "atk_multiplier": 45,
                                 "max_hits": 1,
                                 "min_hits": 1
                             },
+                            "_name": "Divine Kick",
                             "enemy_skill_id": 12494,
                             "params": [
                                 null,
@@ -1393,12 +1396,12 @@
                             "type": 15
                         },
                         {
-                            "_name": "Yoga Anvil",
-                            "attack": {
+                            "_attack": {
                                 "atk_multiplier": 45,
                                 "max_hits": 1,
                                 "min_hits": 1
                             },
+                            "_name": "Yoga Anvil",
                             "enemy_skill_id": 12495,
                             "params": [
                                 "1턴 동안 대상 부분의 드롭 조작 불가",
@@ -1418,7 +1421,7 @@
                                 45,
                                 null
                             ],
-                            "position_type": "column",
+                            "position_type": "OrbShape.column",
                             "positions": [
                                 1
                             ],
@@ -1447,8 +1450,8 @@
             },
             "na_skill": {
                 "behavior": {
+                    "_attack": null,
                     "_name": "Normal A",
-                    "attack": null,
                     "enemy_skill_id": 12493,
                     "params": [
                         null,
@@ -1474,12 +1477,12 @@
                     ],
                     "skills": [
                         {
-                            "_name": "Divine Kick",
-                            "attack": {
+                            "_attack": {
                                 "atk_multiplier": 45,
                                 "max_hits": 1,
                                 "min_hits": 1
                             },
+                            "_name": "Divine Kick",
                             "enemy_skill_id": 12494,
                             "params": [
                                 null,
@@ -1502,12 +1505,12 @@
                             "type": 15
                         },
                         {
-                            "_name": "Yoga Anvil",
-                            "attack": {
+                            "_attack": {
                                 "atk_multiplier": 45,
                                 "max_hits": 1,
                                 "min_hits": 1
                             },
+                            "_name": "Yoga Anvil",
                             "enemy_skill_id": 12495,
                             "params": [
                                 "Unable to move targeted Orbs for 1 turn",
@@ -1527,7 +1530,7 @@
                                 45,
                                 null
                             ],
-                            "position_type": "column",
+                            "position_type": "OrbShape.column",
                             "positions": [
                                 1
                             ],
@@ -1559,8 +1562,8 @@
             "enemy_skill_id": 12496,
             "jp_skill": {
                 "behavior": {
+                    "_attack": null,
                     "_name": "通常B",
-                    "attack": null,
                     "enemy_skill_id": 12496,
                     "params": [
                         null,
@@ -1586,12 +1589,12 @@
                     ],
                     "skills": [
                         {
-                            "_name": "ヨガファイア",
-                            "attack": {
+                            "_attack": {
                                 "atk_multiplier": 45,
                                 "max_hits": 1,
                                 "min_hits": 1
                             },
+                            "_name": "ヨガファイア",
                             "attributes": [
                                 0
                             ],
@@ -1617,19 +1620,19 @@
                                 null,
                                 null
                             ],
-                            "position_type": "row",
+                            "position_type": "OrbShape.row",
                             "positions": [
                                 3
                             ],
                             "type": 79
                         },
                         {
-                            "_name": "ヨガゲイル",
-                            "attack": {
+                            "_attack": {
                                 "atk_multiplier": 50,
                                 "max_hits": 1,
                                 "min_hits": 1
                             },
+                            "_name": "ヨガゲイル",
                             "enemy_skill_id": 12498,
                             "exclude_hearts": null,
                             "orb_from": -1,
@@ -1677,8 +1680,8 @@
             },
             "kr_skill": {
                 "behavior": {
+                    "_attack": null,
                     "_name": "통상B",
-                    "attack": null,
                     "enemy_skill_id": 12496,
                     "params": [
                         null,
@@ -1704,12 +1707,12 @@
                     ],
                     "skills": [
                         {
-                            "_name": "Yoga Fire",
-                            "attack": {
+                            "_attack": {
                                 "atk_multiplier": 45,
                                 "max_hits": 1,
                                 "min_hits": 1
                             },
+                            "_name": "Yoga Fire",
                             "attributes": [
                                 0
                             ],
@@ -1735,19 +1738,19 @@
                                 null,
                                 null
                             ],
-                            "position_type": "row",
+                            "position_type": "OrbShape.row",
                             "positions": [
                                 3
                             ],
                             "type": 79
                         },
                         {
-                            "_name": "Yoga Gale",
-                            "attack": {
+                            "_attack": {
                                 "atk_multiplier": 50,
                                 "max_hits": 1,
                                 "min_hits": 1
                             },
+                            "_name": "Yoga Gale",
                             "enemy_skill_id": 12498,
                             "exclude_hearts": null,
                             "orb_from": -1,
@@ -1795,8 +1798,8 @@
             },
             "na_skill": {
                 "behavior": {
+                    "_attack": null,
                     "_name": "Normal B",
-                    "attack": null,
                     "enemy_skill_id": 12496,
                     "params": [
                         null,
@@ -1822,12 +1825,12 @@
                     ],
                     "skills": [
                         {
-                            "_name": "Yoga Fire",
-                            "attack": {
+                            "_attack": {
                                 "atk_multiplier": 45,
                                 "max_hits": 1,
                                 "min_hits": 1
                             },
+                            "_name": "Yoga Fire",
                             "attributes": [
                                 0
                             ],
@@ -1853,19 +1856,19 @@
                                 null,
                                 null
                             ],
-                            "position_type": "row",
+                            "position_type": "OrbShape.row",
                             "positions": [
                                 3
                             ],
                             "type": 79
                         },
                         {
-                            "_name": "Yoga Gale",
-                            "attack": {
+                            "_attack": {
                                 "atk_multiplier": 50,
                                 "max_hits": 1,
                                 "min_hits": 1
                             },
+                            "_name": "Yoga Gale",
                             "enemy_skill_id": 12498,
                             "exclude_hearts": null,
                             "orb_from": -1,
@@ -2327,12 +2330,12 @@
             "enemy_skill_id": 12499,
             "jp_skill": {
                 "behavior": {
-                    "_name": "ヨガバーナー",
-                    "attack": {
+                    "_attack": {
                         "atk_multiplier": 150,
                         "max_hits": 1,
                         "min_hits": 1
                     },
+                    "_name": "ヨガバーナー",
                     "attributes": [
                         0
                     ],
@@ -2358,7 +2361,7 @@
                         null,
                         null
                     ],
-                    "position_type": "row",
+                    "position_type": "OrbShape.row",
                     "positions": [
                         5
                     ],
@@ -2383,12 +2386,12 @@
             },
             "kr_skill": {
                 "behavior": {
-                    "_name": "Yoga Burner",
-                    "attack": {
+                    "_attack": {
                         "atk_multiplier": 150,
                         "max_hits": 1,
                         "min_hits": 1
                     },
+                    "_name": "Yoga Burner",
                     "attributes": [
                         0
                     ],
@@ -2414,7 +2417,7 @@
                         null,
                         null
                     ],
-                    "position_type": "row",
+                    "position_type": "OrbShape.row",
                     "positions": [
                         5
                     ],
@@ -2439,12 +2442,12 @@
             },
             "na_skill": {
                 "behavior": {
-                    "_name": "Yoga Burner",
-                    "attack": {
+                    "_attack": {
                         "atk_multiplier": 150,
                         "max_hits": 1,
                         "min_hits": 1
                     },
+                    "_name": "Yoga Burner",
                     "attributes": [
                         0
                     ],
@@ -2470,7 +2473,7 @@
                         null,
                         null
                     ],
-                    "position_type": "row",
+                    "position_type": "OrbShape.row",
                     "positions": [
                         5
                     ],
@@ -2591,12 +2594,12 @@
             "enemy_skill_id": 12500,
             "jp_skill": {
                 "behavior": {
-                    "_name": "ヨガサンバースト",
-                    "attack": {
+                    "_attack": {
                         "atk_multiplier": 200,
                         "max_hits": 1,
                         "min_hits": 1
                     },
+                    "_name": "ヨガサンバースト",
                     "attributes": [
                         0
                     ],
@@ -2642,12 +2645,12 @@
             },
             "kr_skill": {
                 "behavior": {
-                    "_name": "Yoga Sunburst",
-                    "attack": {
+                    "_attack": {
                         "atk_multiplier": 200,
                         "max_hits": 1,
                         "min_hits": 1
                     },
+                    "_name": "Yoga Sunburst",
                     "attributes": [
                         0
                     ],
@@ -2693,12 +2696,12 @@
             },
             "na_skill": {
                 "behavior": {
-                    "_name": "Yoga Sunburst",
-                    "attack": {
+                    "_attack": {
                         "atk_multiplier": 200,
                         "max_hits": 1,
                         "min_hits": 1
                     },
+                    "_name": "Yoga Sunburst",
                     "attributes": [
                         0
                     ],
@@ -3171,10 +3174,10 @@
             },
             {
                 "behavior": {
+                    "_attack": null,
                     "_name": "争いは好まぬのだが…",
                     "amount": -1.0,
-                    "attack": null,
-                    "debuff_type": "movetime",
+                    "debuff_type": "Status.movetime",
                     "enemy_skill_id": 12489,
                     "params": [
                         "5ターンの間、持ち時間が1秒減少",
@@ -3196,7 +3199,7 @@
                     ],
                     "turns": 5,
                     "type": 39,
-                    "unit": "s"
+                    "unit": "Unit.seconds"
                 },
                 "condition": {
                     "_ai": 100,
@@ -3282,9 +3285,10 @@
             },
             {
                 "behavior": {
+                    "_attack": null,
                     "_name": "ヨガテレポート",
-                    "attack": null,
-                    "combo_threshold": 3,
+                    "absorb_threshold": 3,
+                    "absorb_type": "Absorb.combo",
                     "enemy_skill_id": 12490,
                     "max_turns": 3,
                     "min_turns": 3,
@@ -3327,8 +3331,8 @@
             },
             {
                 "behavior": {
+                    "_attack": null,
                     "_name": "ヨガフロート",
-                    "attack": null,
                     "cloud_height": 1,
                     "cloud_width": 2,
                     "enemy_skill_id": 12491,
@@ -3374,12 +3378,12 @@
             },
             {
                 "behavior": {
-                    "_name": "ヨガフレイム",
-                    "attack": {
+                    "_attack": {
                         "atk_multiplier": 100,
                         "max_hits": 1,
                         "min_hits": 1
                     },
+                    "_name": "ヨガフレイム",
                     "attributes": [
                         0
                     ],
@@ -3425,8 +3429,8 @@
             },
             {
                 "behavior": {
+                    "_attack": null,
                     "_name": "通常A",
-                    "attack": null,
                     "enemy_skill_id": 12493,
                     "params": [
                         null,
@@ -3452,12 +3456,12 @@
                     ],
                     "skills": [
                         {
-                            "_name": "合掌キック",
-                            "attack": {
+                            "_attack": {
                                 "atk_multiplier": 45,
                                 "max_hits": 1,
                                 "min_hits": 1
                             },
+                            "_name": "合掌キック",
                             "enemy_skill_id": 12494,
                             "params": [
                                 null,
@@ -3480,12 +3484,12 @@
                             "type": 15
                         },
                         {
-                            "_name": "ヨガアンビル",
-                            "attack": {
+                            "_attack": {
                                 "atk_multiplier": 45,
                                 "max_hits": 1,
                                 "min_hits": 1
                             },
+                            "_name": "ヨガアンビル",
                             "enemy_skill_id": 12495,
                             "params": [
                                 "1ターンの間、対象箇所のドロップ操作不可",
@@ -3505,7 +3509,7 @@
                                 45,
                                 null
                             ],
-                            "position_type": "column",
+                            "position_type": "OrbShape.column",
                             "positions": [
                                 1
                             ],
@@ -3534,8 +3538,8 @@
             },
             {
                 "behavior": {
+                    "_attack": null,
                     "_name": "通常B",
-                    "attack": null,
                     "enemy_skill_id": 12496,
                     "params": [
                         null,
@@ -3561,12 +3565,12 @@
                     ],
                     "skills": [
                         {
-                            "_name": "ヨガファイア",
-                            "attack": {
+                            "_attack": {
                                 "atk_multiplier": 45,
                                 "max_hits": 1,
                                 "min_hits": 1
                             },
+                            "_name": "ヨガファイア",
                             "attributes": [
                                 0
                             ],
@@ -3592,19 +3596,19 @@
                                 null,
                                 null
                             ],
-                            "position_type": "row",
+                            "position_type": "OrbShape.row",
                             "positions": [
                                 3
                             ],
                             "type": 79
                         },
                         {
-                            "_name": "ヨガゲイル",
-                            "attack": {
+                            "_attack": {
                                 "atk_multiplier": 50,
                                 "max_hits": 1,
                                 "min_hits": 1
                             },
+                            "_name": "ヨガゲイル",
                             "enemy_skill_id": 12498,
                             "exclude_hearts": null,
                             "orb_from": -1,
@@ -3785,12 +3789,12 @@
             },
             {
                 "behavior": {
-                    "_name": "ヨガバーナー",
-                    "attack": {
+                    "_attack": {
                         "atk_multiplier": 150,
                         "max_hits": 1,
                         "min_hits": 1
                     },
+                    "_name": "ヨガバーナー",
                     "attributes": [
                         0
                     ],
@@ -3816,7 +3820,7 @@
                         null,
                         null
                     ],
-                    "position_type": "row",
+                    "position_type": "OrbShape.row",
                     "positions": [
                         5
                     ],
@@ -3871,12 +3875,12 @@
             },
             {
                 "behavior": {
-                    "_name": "ヨガサンバースト",
-                    "attack": {
+                    "_attack": {
                         "atk_multiplier": 200,
                         "max_hits": 1,
                         "min_hits": 1
                     },
+                    "_name": "ヨガサンバースト",
                     "attributes": [
                         0
                     ],
@@ -4340,10 +4344,10 @@
             },
             {
                 "behavior": {
+                    "_attack": null,
                     "_name": "I'm not very fond of conflict.",
                     "amount": -1.0,
-                    "attack": null,
-                    "debuff_type": "movetime",
+                    "debuff_type": "Status.movetime",
                     "enemy_skill_id": 12489,
                     "params": [
                         "5턴 동안 드롭 조작시간이 1초 감소",
@@ -4365,7 +4369,7 @@
                     ],
                     "turns": 5,
                     "type": 39,
-                    "unit": "s"
+                    "unit": "Unit.seconds"
                 },
                 "condition": {
                     "_ai": 100,
@@ -4451,9 +4455,10 @@
             },
             {
                 "behavior": {
+                    "_attack": null,
                     "_name": "Yoga Teleport",
-                    "attack": null,
-                    "combo_threshold": 3,
+                    "absorb_threshold": 3,
+                    "absorb_type": "Absorb.combo",
                     "enemy_skill_id": 12490,
                     "max_turns": 3,
                     "min_turns": 3,
@@ -4496,8 +4501,8 @@
             },
             {
                 "behavior": {
+                    "_attack": null,
                     "_name": "Yoga Float",
-                    "attack": null,
                     "cloud_height": 1,
                     "cloud_width": 2,
                     "enemy_skill_id": 12491,
@@ -4543,12 +4548,12 @@
             },
             {
                 "behavior": {
-                    "_name": "Yoga Flame",
-                    "attack": {
+                    "_attack": {
                         "atk_multiplier": 100,
                         "max_hits": 1,
                         "min_hits": 1
                     },
+                    "_name": "Yoga Flame",
                     "attributes": [
                         0
                     ],
@@ -4594,8 +4599,8 @@
             },
             {
                 "behavior": {
+                    "_attack": null,
                     "_name": "통상A",
-                    "attack": null,
                     "enemy_skill_id": 12493,
                     "params": [
                         null,
@@ -4621,12 +4626,12 @@
                     ],
                     "skills": [
                         {
-                            "_name": "Divine Kick",
-                            "attack": {
+                            "_attack": {
                                 "atk_multiplier": 45,
                                 "max_hits": 1,
                                 "min_hits": 1
                             },
+                            "_name": "Divine Kick",
                             "enemy_skill_id": 12494,
                             "params": [
                                 null,
@@ -4649,12 +4654,12 @@
                             "type": 15
                         },
                         {
-                            "_name": "Yoga Anvil",
-                            "attack": {
+                            "_attack": {
                                 "atk_multiplier": 45,
                                 "max_hits": 1,
                                 "min_hits": 1
                             },
+                            "_name": "Yoga Anvil",
                             "enemy_skill_id": 12495,
                             "params": [
                                 "1턴 동안 대상 부분의 드롭 조작 불가",
@@ -4674,7 +4679,7 @@
                                 45,
                                 null
                             ],
-                            "position_type": "column",
+                            "position_type": "OrbShape.column",
                             "positions": [
                                 1
                             ],
@@ -4703,8 +4708,8 @@
             },
             {
                 "behavior": {
+                    "_attack": null,
                     "_name": "통상B",
-                    "attack": null,
                     "enemy_skill_id": 12496,
                     "params": [
                         null,
@@ -4730,12 +4735,12 @@
                     ],
                     "skills": [
                         {
-                            "_name": "Yoga Fire",
-                            "attack": {
+                            "_attack": {
                                 "atk_multiplier": 45,
                                 "max_hits": 1,
                                 "min_hits": 1
                             },
+                            "_name": "Yoga Fire",
                             "attributes": [
                                 0
                             ],
@@ -4761,19 +4766,19 @@
                                 null,
                                 null
                             ],
-                            "position_type": "row",
+                            "position_type": "OrbShape.row",
                             "positions": [
                                 3
                             ],
                             "type": 79
                         },
                         {
-                            "_name": "Yoga Gale",
-                            "attack": {
+                            "_attack": {
                                 "atk_multiplier": 50,
                                 "max_hits": 1,
                                 "min_hits": 1
                             },
+                            "_name": "Yoga Gale",
                             "enemy_skill_id": 12498,
                             "exclude_hearts": null,
                             "orb_from": -1,
@@ -4954,12 +4959,12 @@
             },
             {
                 "behavior": {
-                    "_name": "Yoga Burner",
-                    "attack": {
+                    "_attack": {
                         "atk_multiplier": 150,
                         "max_hits": 1,
                         "min_hits": 1
                     },
+                    "_name": "Yoga Burner",
                     "attributes": [
                         0
                     ],
@@ -4985,7 +4990,7 @@
                         null,
                         null
                     ],
-                    "position_type": "row",
+                    "position_type": "OrbShape.row",
                     "positions": [
                         5
                     ],
@@ -5040,12 +5045,12 @@
             },
             {
                 "behavior": {
-                    "_name": "Yoga Sunburst",
-                    "attack": {
+                    "_attack": {
                         "atk_multiplier": 200,
                         "max_hits": 1,
                         "min_hits": 1
                     },
+                    "_name": "Yoga Sunburst",
                     "attributes": [
                         0
                     ],
@@ -5673,10 +5678,10 @@
             },
             {
                 "behavior": {
+                    "_attack": null,
                     "_name": "I'm not very fond of conflict.",
                     "amount": -1.0,
-                    "attack": null,
-                    "debuff_type": "movetime",
+                    "debuff_type": "Status.movetime",
                     "enemy_skill_id": 12489,
                     "params": [
                         "Orb move time -1 second for 5 turns",
@@ -5698,7 +5703,7 @@
                     ],
                     "turns": 5,
                     "type": 39,
-                    "unit": "s"
+                    "unit": "Unit.seconds"
                 },
                 "condition": {
                     "_ai": 100,
@@ -5784,9 +5789,10 @@
             },
             {
                 "behavior": {
+                    "_attack": null,
                     "_name": "Yoga Teleport",
-                    "attack": null,
-                    "combo_threshold": 3,
+                    "absorb_threshold": 3,
+                    "absorb_type": "Absorb.combo",
                     "enemy_skill_id": 12490,
                     "max_turns": 3,
                     "min_turns": 3,
@@ -5829,8 +5835,8 @@
             },
             {
                 "behavior": {
+                    "_attack": null,
                     "_name": "Yoga Float",
-                    "attack": null,
                     "cloud_height": 1,
                     "cloud_width": 2,
                     "enemy_skill_id": 12491,
@@ -5876,12 +5882,12 @@
             },
             {
                 "behavior": {
-                    "_name": "Yoga Flame",
-                    "attack": {
+                    "_attack": {
                         "atk_multiplier": 100,
                         "max_hits": 1,
                         "min_hits": 1
                     },
+                    "_name": "Yoga Flame",
                     "attributes": [
                         0
                     ],
@@ -5927,8 +5933,8 @@
             },
             {
                 "behavior": {
+                    "_attack": null,
                     "_name": "Normal A",
-                    "attack": null,
                     "enemy_skill_id": 12493,
                     "params": [
                         null,
@@ -5954,12 +5960,12 @@
                     ],
                     "skills": [
                         {
-                            "_name": "Divine Kick",
-                            "attack": {
+                            "_attack": {
                                 "atk_multiplier": 45,
                                 "max_hits": 1,
                                 "min_hits": 1
                             },
+                            "_name": "Divine Kick",
                             "enemy_skill_id": 12494,
                             "params": [
                                 null,
@@ -5982,12 +5988,12 @@
                             "type": 15
                         },
                         {
-                            "_name": "Yoga Anvil",
-                            "attack": {
+                            "_attack": {
                                 "atk_multiplier": 45,
                                 "max_hits": 1,
                                 "min_hits": 1
                             },
+                            "_name": "Yoga Anvil",
                             "enemy_skill_id": 12495,
                             "params": [
                                 "Unable to move targeted Orbs for 1 turn",
@@ -6007,7 +6013,7 @@
                                 45,
                                 null
                             ],
-                            "position_type": "column",
+                            "position_type": "OrbShape.column",
                             "positions": [
                                 1
                             ],
@@ -6036,8 +6042,8 @@
             },
             {
                 "behavior": {
+                    "_attack": null,
                     "_name": "Normal B",
-                    "attack": null,
                     "enemy_skill_id": 12496,
                     "params": [
                         null,
@@ -6063,12 +6069,12 @@
                     ],
                     "skills": [
                         {
-                            "_name": "Yoga Fire",
-                            "attack": {
+                            "_attack": {
                                 "atk_multiplier": 45,
                                 "max_hits": 1,
                                 "min_hits": 1
                             },
+                            "_name": "Yoga Fire",
                             "attributes": [
                                 0
                             ],
@@ -6094,19 +6100,19 @@
                                 null,
                                 null
                             ],
-                            "position_type": "row",
+                            "position_type": "OrbShape.row",
                             "positions": [
                                 3
                             ],
                             "type": 79
                         },
                         {
-                            "_name": "Yoga Gale",
-                            "attack": {
+                            "_attack": {
                                 "atk_multiplier": 50,
                                 "max_hits": 1,
                                 "min_hits": 1
                             },
+                            "_name": "Yoga Gale",
                             "enemy_skill_id": 12498,
                             "exclude_hearts": null,
                             "orb_from": -1,
@@ -6287,12 +6293,12 @@
             },
             {
                 "behavior": {
-                    "_name": "Yoga Burner",
-                    "attack": {
+                    "_attack": {
                         "atk_multiplier": 150,
                         "max_hits": 1,
                         "min_hits": 1
                     },
+                    "_name": "Yoga Burner",
                     "attributes": [
                         0
                     ],
@@ -6318,7 +6324,7 @@
                         null,
                         null
                     ],
-                    "position_type": "row",
+                    "position_type": "OrbShape.row",
                     "positions": [
                         5
                     ],
@@ -6373,12 +6379,12 @@
             },
             {
                 "behavior": {
-                    "_name": "Yoga Sunburst",
-                    "attack": {
+                    "_attack": {
                         "atk_multiplier": 200,
                         "max_hits": 1,
                         "min_hits": 1
                     },
+                    "_name": "Yoga Sunburst",
                     "attributes": [
                         0
                     ],

@@ -452,8 +452,8 @@
             "enemy_skill_id": 12205,
             "jp_skill": {
                 "behavior": {
+                    "_attack": null,
                     "_name": "なあ…あれはテメェの仕業か？",
-                    "attack": null,
                     "enemy_skill_id": 12205,
                     "params": [
                         "3ターンの間、対象箇所のドロップ操作不可",
@@ -473,7 +473,7 @@
                         null,
                         null
                     ],
-                    "position_type": "row",
+                    "position_type": "OrbShape.row",
                     "positions": [
                         5
                     ],
@@ -499,8 +499,8 @@
             },
             "kr_skill": {
                 "behavior": {
+                    "_attack": null,
                     "_name": "…저건 네 놈 짓인가?",
-                    "attack": null,
                     "enemy_skill_id": 12205,
                     "params": [
                         "3턴 동안 대상 부분의 드롭 조작 불가",
@@ -520,7 +520,7 @@
                         null,
                         null
                     ],
-                    "position_type": "row",
+                    "position_type": "OrbShape.row",
                     "positions": [
                         5
                     ],
@@ -546,8 +546,8 @@
             },
             "na_skill": {
                 "behavior": {
+                    "_attack": null,
                     "_name": "Hey... Was that your handiwork?",
-                    "attack": null,
                     "enemy_skill_id": 12205,
                     "params": [
                         "Unable to move targeted Orbs for 3 turns",
@@ -567,7 +567,7 @@
                         null,
                         null
                     ],
-                    "position_type": "row",
+                    "position_type": "OrbShape.row",
                     "positions": [
                         5
                     ],
@@ -704,9 +704,10 @@
             "enemy_skill_id": 12210,
             "jp_skill": {
                 "behavior": {
+                    "_attack": null,
                     "_name": "流れ矢の加護",
-                    "attack": null,
-                    "combo_threshold": 4,
+                    "absorb_threshold": 4,
+                    "absorb_type": "Absorb.combo",
                     "enemy_skill_id": 12210,
                     "max_turns": 5,
                     "min_turns": 5,
@@ -749,9 +750,10 @@
             },
             "kr_skill": {
                 "behavior": {
+                    "_attack": null,
                     "_name": "화살막이의 가호",
-                    "attack": null,
-                    "combo_threshold": 4,
+                    "absorb_threshold": 4,
+                    "absorb_type": "Absorb.combo",
                     "enemy_skill_id": 12210,
                     "max_turns": 5,
                     "min_turns": 5,
@@ -794,9 +796,10 @@
             },
             "na_skill": {
                 "behavior": {
+                    "_attack": null,
                     "_name": "Protection from Arrows",
-                    "attack": null,
-                    "combo_threshold": 4,
+                    "absorb_threshold": 4,
+                    "absorb_type": "Absorb.combo",
                     "enemy_skill_id": 12210,
                     "max_turns": 5,
                     "min_turns": 5,
@@ -1160,12 +1163,12 @@
             "enemy_skill_id": 12206,
             "jp_skill": {
                 "behavior": {
-                    "_name": "逃がさねぇよ",
-                    "attack": {
+                    "_attack": {
                         "atk_multiplier": 90,
                         "max_hits": 1,
                         "min_hits": 1
                     },
+                    "_name": "逃がさねぇよ",
                     "enemy_skill_id": 12206,
                     "max_turns": 2,
                     "min_turns": 2,
@@ -1188,9 +1191,7 @@
                         null
                     ],
                     "target_count": 1,
-                    "targets": [
-                        "TargetType.subs"
-                    ],
+                    "targets": "TargetType.subs",
                     "type": 65
                 },
                 "condition": {
@@ -1212,12 +1213,12 @@
             },
             "kr_skill": {
                 "behavior": {
-                    "_name": "놓치지 않아",
-                    "attack": {
+                    "_attack": {
                         "atk_multiplier": 90,
                         "max_hits": 1,
                         "min_hits": 1
                     },
+                    "_name": "놓치지 않아",
                     "enemy_skill_id": 12206,
                     "max_turns": 2,
                     "min_turns": 2,
@@ -1240,9 +1241,7 @@
                         null
                     ],
                     "target_count": 1,
-                    "targets": [
-                        "TargetType.subs"
-                    ],
+                    "targets": "TargetType.subs",
                     "type": 65
                 },
                 "condition": {
@@ -1264,12 +1263,12 @@
             },
             "na_skill": {
                 "behavior": {
-                    "_name": "I'm not letting you get away.",
-                    "attack": {
+                    "_attack": {
                         "atk_multiplier": 90,
                         "max_hits": 1,
                         "min_hits": 1
                     },
+                    "_name": "I'm not letting you get away.",
                     "enemy_skill_id": 12206,
                     "max_turns": 2,
                     "min_turns": 2,
@@ -1292,9 +1291,7 @@
                         null
                     ],
                     "target_count": 1,
-                    "targets": [
-                        "TargetType.subs"
-                    ],
+                    "targets": "TargetType.subs",
                     "type": 65
                 },
                 "condition": {
@@ -1514,8 +1511,8 @@
             "enemy_skill_id": 12207,
             "jp_skill": {
                 "behavior": {
+                    "_attack": null,
                     "_name": "2回行動",
-                    "attack": null,
                     "enemy_skill_id": 12207,
                     "params": [
                         null,
@@ -1541,8 +1538,8 @@
                     ],
                     "skills": [
                         {
+                            "_attack": null,
                             "_name": "その心臓もらい受ける！",
-                            "attack": null,
                             "enemy_skill_id": 12208,
                             "params": [
                                 null,
@@ -1565,12 +1562,12 @@
                             "type": 66
                         },
                         {
-                            "_name": "刺し穿つ死棘の槍",
-                            "attack": {
+                            "_attack": {
                                 "atk_multiplier": 120,
                                 "max_hits": 1,
                                 "min_hits": 1
                             },
+                            "_name": "刺し穿つ死棘の槍",
                             "enemy_skill_id": 12209,
                             "params": [
                                 null,
@@ -1614,8 +1611,8 @@
             },
             "kr_skill": {
                 "behavior": {
+                    "_attack": null,
                     "_name": "2회행동",
-                    "attack": null,
                     "enemy_skill_id": 12207,
                     "params": [
                         null,
@@ -1641,8 +1638,8 @@
                     ],
                     "skills": [
                         {
+                            "_attack": null,
                             "_name": "그 심장 받아가겠다!",
-                            "attack": null,
                             "enemy_skill_id": 12208,
                             "params": [
                                 null,
@@ -1665,12 +1662,12 @@
                             "type": 66
                         },
                         {
-                            "_name": "게이 볼그",
-                            "attack": {
+                            "_attack": {
                                 "atk_multiplier": 120,
                                 "max_hits": 1,
                                 "min_hits": 1
                             },
+                            "_name": "게이 볼그",
                             "enemy_skill_id": 12209,
                             "params": [
                                 null,
@@ -1714,8 +1711,8 @@
             },
             "na_skill": {
                 "behavior": {
+                    "_attack": null,
                     "_name": "2 times Action",
-                    "attack": null,
                     "enemy_skill_id": 12207,
                     "params": [
                         null,
@@ -1741,8 +1738,8 @@
                     ],
                     "skills": [
                         {
+                            "_attack": null,
                             "_name": "I'll have your heart!",
-                            "attack": null,
                             "enemy_skill_id": 12208,
                             "params": [
                                 null,
@@ -1765,12 +1762,12 @@
                             "type": 66
                         },
                         {
-                            "_name": "Gae Bolg:\nBarbed Spear that Pierces with Death",
-                            "attack": {
+                            "_attack": {
                                 "atk_multiplier": 120,
                                 "max_hits": 1,
                                 "min_hits": 1
                             },
+                            "_name": "Gae Bolg: Barbed Spear that Pierces with Death",
                             "enemy_skill_id": 12209,
                             "params": [
                                 null,
@@ -1910,8 +1907,8 @@
             "enemy_skill_id": 12211,
             "jp_skill": {
                 "behavior": {
+                    "_attack": null,
                     "_name": "発狂2回",
-                    "attack": null,
                     "enemy_skill_id": 12211,
                     "params": [
                         null,
@@ -1937,8 +1934,8 @@
                     ],
                     "skills": [
                         {
+                            "_attack": null,
                             "_name": "ちょい遠いがここで決める！",
-                            "attack": null,
                             "enemy_skill_id": 12212,
                             "params": [
                                 null,
@@ -1961,12 +1958,12 @@
                             "type": 66
                         },
                         {
-                            "_name": "突き穿つ死翔の槍",
-                            "attack": {
+                            "_attack": {
                                 "atk_multiplier": 200,
                                 "max_hits": 1,
                                 "min_hits": 1
                             },
+                            "_name": "突き穿つ死翔の槍",
                             "attributes": [
                                 1
                             ],
@@ -1992,7 +1989,7 @@
                                 null,
                                 null
                             ],
-                            "position_type": "row",
+                            "position_type": "OrbShape.row",
                             "positions": [
                                 3
                             ],
@@ -2020,8 +2017,8 @@
             },
             "kr_skill": {
                 "behavior": {
+                    "_attack": null,
                     "_name": "발광2회",
-                    "attack": null,
                     "enemy_skill_id": 12211,
                     "params": [
                         null,
@@ -2047,8 +2044,8 @@
                     ],
                     "skills": [
                         {
+                            "_attack": null,
                             "_name": "조금 멀지만 이걸로 끝이다!",
-                            "attack": null,
                             "enemy_skill_id": 12212,
                             "params": [
                                 null,
@@ -2071,12 +2068,12 @@
                             "type": 66
                         },
                         {
-                            "_name": "게이 볼그",
-                            "attack": {
+                            "_attack": {
                                 "atk_multiplier": 200,
                                 "max_hits": 1,
                                 "min_hits": 1
                             },
+                            "_name": "게이 볼그",
                             "attributes": [
                                 1
                             ],
@@ -2102,7 +2099,7 @@
                                 null,
                                 null
                             ],
-                            "position_type": "row",
+                            "position_type": "OrbShape.row",
                             "positions": [
                                 3
                             ],
@@ -2130,8 +2127,8 @@
             },
             "na_skill": {
                 "behavior": {
+                    "_attack": null,
                     "_name": "Frenzy 2 times",
-                    "attack": null,
                     "enemy_skill_id": 12211,
                     "params": [
                         null,
@@ -2157,8 +2154,8 @@
                     ],
                     "skills": [
                         {
+                            "_attack": null,
                             "_name": "It's a bit far, but I'll settle it now!",
-                            "attack": null,
                             "enemy_skill_id": 12212,
                             "params": [
                                 null,
@@ -2181,12 +2178,12 @@
                             "type": 66
                         },
                         {
-                            "_name": "Gae Bolg:\nSoaring Spear of Piercing Death",
-                            "attack": {
+                            "_attack": {
                                 "atk_multiplier": 200,
                                 "max_hits": 1,
                                 "min_hits": 1
                             },
+                            "_name": "Gae Bolg: Soaring Spear of Piercing Death",
                             "attributes": [
                                 1
                             ],
@@ -2212,7 +2209,7 @@
                                 null,
                                 null
                             ],
-                            "position_type": "row",
+                            "position_type": "OrbShape.row",
                             "positions": [
                                 3
                             ],
@@ -2656,8 +2653,8 @@
             },
             {
                 "behavior": {
+                    "_attack": null,
                     "_name": "なあ…あれはテメェの仕業か？",
-                    "attack": null,
                     "enemy_skill_id": 12205,
                     "params": [
                         "3ターンの間、対象箇所のドロップ操作不可",
@@ -2677,7 +2674,7 @@
                         null,
                         null
                     ],
-                    "position_type": "row",
+                    "position_type": "OrbShape.row",
                     "positions": [
                         5
                     ],
@@ -2738,9 +2735,10 @@
             },
             {
                 "behavior": {
+                    "_attack": null,
                     "_name": "流れ矢の加護",
-                    "attack": null,
-                    "combo_threshold": 4,
+                    "absorb_threshold": 4,
+                    "absorb_type": "Absorb.combo",
                     "enemy_skill_id": 12210,
                     "max_turns": 5,
                     "min_turns": 5,
@@ -2886,12 +2884,12 @@
             },
             {
                 "behavior": {
-                    "_name": "逃がさねぇよ",
-                    "attack": {
+                    "_attack": {
                         "atk_multiplier": 90,
                         "max_hits": 1,
                         "min_hits": 1
                     },
+                    "_name": "逃がさねぇよ",
                     "enemy_skill_id": 12206,
                     "max_turns": 2,
                     "min_turns": 2,
@@ -2914,9 +2912,7 @@
                         null
                     ],
                     "target_count": 1,
-                    "targets": [
-                        "TargetType.subs"
-                    ],
+                    "targets": "TargetType.subs",
                     "type": 65
                 },
                 "condition": {
@@ -3001,8 +2997,8 @@
             },
             {
                 "behavior": {
+                    "_attack": null,
                     "_name": "2回行動",
-                    "attack": null,
                     "enemy_skill_id": 12207,
                     "params": [
                         null,
@@ -3028,8 +3024,8 @@
                     ],
                     "skills": [
                         {
+                            "_attack": null,
                             "_name": "その心臓もらい受ける！",
-                            "attack": null,
                             "enemy_skill_id": 12208,
                             "params": [
                                 null,
@@ -3052,12 +3048,12 @@
                             "type": 66
                         },
                         {
-                            "_name": "刺し穿つ死棘の槍",
-                            "attack": {
+                            "_attack": {
                                 "atk_multiplier": 120,
                                 "max_hits": 1,
                                 "min_hits": 1
                             },
+                            "_name": "刺し穿つ死棘の槍",
                             "enemy_skill_id": 12209,
                             "params": [
                                 null,
@@ -3131,8 +3127,8 @@
             },
             {
                 "behavior": {
+                    "_attack": null,
                     "_name": "発狂2回",
-                    "attack": null,
                     "enemy_skill_id": 12211,
                     "params": [
                         null,
@@ -3158,8 +3154,8 @@
                     ],
                     "skills": [
                         {
+                            "_attack": null,
                             "_name": "ちょい遠いがここで決める！",
-                            "attack": null,
                             "enemy_skill_id": 12212,
                             "params": [
                                 null,
@@ -3182,12 +3178,12 @@
                             "type": 66
                         },
                         {
-                            "_name": "突き穿つ死翔の槍",
-                            "attack": {
+                            "_attack": {
                                 "atk_multiplier": 200,
                                 "max_hits": 1,
                                 "min_hits": 1
                             },
+                            "_name": "突き穿つ死翔の槍",
                             "attributes": [
                                 1
                             ],
@@ -3213,7 +3209,7 @@
                                 null,
                                 null
                             ],
-                            "position_type": "row",
+                            "position_type": "OrbShape.row",
                             "positions": [
                                 3
                             ],
@@ -3641,8 +3637,8 @@
             },
             {
                 "behavior": {
+                    "_attack": null,
                     "_name": "…저건 네 놈 짓인가?",
-                    "attack": null,
                     "enemy_skill_id": 12205,
                     "params": [
                         "3턴 동안 대상 부분의 드롭 조작 불가",
@@ -3662,7 +3658,7 @@
                         null,
                         null
                     ],
-                    "position_type": "row",
+                    "position_type": "OrbShape.row",
                     "positions": [
                         5
                     ],
@@ -3723,9 +3719,10 @@
             },
             {
                 "behavior": {
+                    "_attack": null,
                     "_name": "화살막이의 가호",
-                    "attack": null,
-                    "combo_threshold": 4,
+                    "absorb_threshold": 4,
+                    "absorb_type": "Absorb.combo",
                     "enemy_skill_id": 12210,
                     "max_turns": 5,
                     "min_turns": 5,
@@ -3871,12 +3868,12 @@
             },
             {
                 "behavior": {
-                    "_name": "놓치지 않아",
-                    "attack": {
+                    "_attack": {
                         "atk_multiplier": 90,
                         "max_hits": 1,
                         "min_hits": 1
                     },
+                    "_name": "놓치지 않아",
                     "enemy_skill_id": 12206,
                     "max_turns": 2,
                     "min_turns": 2,
@@ -3899,9 +3896,7 @@
                         null
                     ],
                     "target_count": 1,
-                    "targets": [
-                        "TargetType.subs"
-                    ],
+                    "targets": "TargetType.subs",
                     "type": 65
                 },
                 "condition": {
@@ -3986,8 +3981,8 @@
             },
             {
                 "behavior": {
+                    "_attack": null,
                     "_name": "2회행동",
-                    "attack": null,
                     "enemy_skill_id": 12207,
                     "params": [
                         null,
@@ -4013,8 +4008,8 @@
                     ],
                     "skills": [
                         {
+                            "_attack": null,
                             "_name": "그 심장 받아가겠다!",
-                            "attack": null,
                             "enemy_skill_id": 12208,
                             "params": [
                                 null,
@@ -4037,12 +4032,12 @@
                             "type": 66
                         },
                         {
-                            "_name": "게이 볼그",
-                            "attack": {
+                            "_attack": {
                                 "atk_multiplier": 120,
                                 "max_hits": 1,
                                 "min_hits": 1
                             },
+                            "_name": "게이 볼그",
                             "enemy_skill_id": 12209,
                             "params": [
                                 null,
@@ -4116,8 +4111,8 @@
             },
             {
                 "behavior": {
+                    "_attack": null,
                     "_name": "발광2회",
-                    "attack": null,
                     "enemy_skill_id": 12211,
                     "params": [
                         null,
@@ -4143,8 +4138,8 @@
                     ],
                     "skills": [
                         {
+                            "_attack": null,
                             "_name": "조금 멀지만 이걸로 끝이다!",
-                            "attack": null,
                             "enemy_skill_id": 12212,
                             "params": [
                                 null,
@@ -4167,12 +4162,12 @@
                             "type": 66
                         },
                         {
-                            "_name": "게이 볼그",
-                            "attack": {
+                            "_attack": {
                                 "atk_multiplier": 200,
                                 "max_hits": 1,
                                 "min_hits": 1
                             },
+                            "_name": "게이 볼그",
                             "attributes": [
                                 1
                             ],
@@ -4198,7 +4193,7 @@
                                 null,
                                 null
                             ],
-                            "position_type": "row",
+                            "position_type": "OrbShape.row",
                             "positions": [
                                 3
                             ],
@@ -4771,8 +4766,8 @@
             },
             {
                 "behavior": {
+                    "_attack": null,
                     "_name": "Hey... Was that your handiwork?",
-                    "attack": null,
                     "enemy_skill_id": 12205,
                     "params": [
                         "Unable to move targeted Orbs for 3 turns",
@@ -4792,7 +4787,7 @@
                         null,
                         null
                     ],
-                    "position_type": "row",
+                    "position_type": "OrbShape.row",
                     "positions": [
                         5
                     ],
@@ -4853,9 +4848,10 @@
             },
             {
                 "behavior": {
+                    "_attack": null,
                     "_name": "Protection from Arrows",
-                    "attack": null,
-                    "combo_threshold": 4,
+                    "absorb_threshold": 4,
+                    "absorb_type": "Absorb.combo",
                     "enemy_skill_id": 12210,
                     "max_turns": 5,
                     "min_turns": 5,
@@ -5001,12 +4997,12 @@
             },
             {
                 "behavior": {
-                    "_name": "I'm not letting you get away.",
-                    "attack": {
+                    "_attack": {
                         "atk_multiplier": 90,
                         "max_hits": 1,
                         "min_hits": 1
                     },
+                    "_name": "I'm not letting you get away.",
                     "enemy_skill_id": 12206,
                     "max_turns": 2,
                     "min_turns": 2,
@@ -5029,9 +5025,7 @@
                         null
                     ],
                     "target_count": 1,
-                    "targets": [
-                        "TargetType.subs"
-                    ],
+                    "targets": "TargetType.subs",
                     "type": 65
                 },
                 "condition": {
@@ -5116,8 +5110,8 @@
             },
             {
                 "behavior": {
+                    "_attack": null,
                     "_name": "2 times Action",
-                    "attack": null,
                     "enemy_skill_id": 12207,
                     "params": [
                         null,
@@ -5143,8 +5137,8 @@
                     ],
                     "skills": [
                         {
+                            "_attack": null,
                             "_name": "I'll have your heart!",
-                            "attack": null,
                             "enemy_skill_id": 12208,
                             "params": [
                                 null,
@@ -5167,12 +5161,12 @@
                             "type": 66
                         },
                         {
-                            "_name": "Gae Bolg:\nBarbed Spear that Pierces with Death",
-                            "attack": {
+                            "_attack": {
                                 "atk_multiplier": 120,
                                 "max_hits": 1,
                                 "min_hits": 1
                             },
+                            "_name": "Gae Bolg: Barbed Spear that Pierces with Death",
                             "enemy_skill_id": 12209,
                             "params": [
                                 null,
@@ -5246,8 +5240,8 @@
             },
             {
                 "behavior": {
+                    "_attack": null,
                     "_name": "Frenzy 2 times",
-                    "attack": null,
                     "enemy_skill_id": 12211,
                     "params": [
                         null,
@@ -5273,8 +5267,8 @@
                     ],
                     "skills": [
                         {
+                            "_attack": null,
                             "_name": "It's a bit far, but I'll settle it now!",
-                            "attack": null,
                             "enemy_skill_id": 12212,
                             "params": [
                                 null,
@@ -5297,12 +5291,12 @@
                             "type": 66
                         },
                         {
-                            "_name": "Gae Bolg:\nSoaring Spear of Piercing Death",
-                            "attack": {
+                            "_attack": {
                                 "atk_multiplier": 200,
                                 "max_hits": 1,
                                 "min_hits": 1
                             },
+                            "_name": "Gae Bolg: Soaring Spear of Piercing Death",
                             "attributes": [
                                 1
                             ],
@@ -5328,7 +5322,7 @@
                                 null,
                                 null
                             ],
-                            "position_type": "row",
+                            "position_type": "OrbShape.row",
                             "positions": [
                                 3
                             ],

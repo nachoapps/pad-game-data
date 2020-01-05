@@ -26,14 +26,17 @@ level: 4
  | group:
    | group:
    | condition: turn 1 while HP > 49
-     | (4494:14) Brightness Blink
-     | Bind active skills for 3 turns
+     | condition: when 2440, 2441 on team
      | (4493:14) Your friends are so important?
      | Bind active skills for 3 turns
+     | (4494:14) Brightness Blink
+     | Bind active skills for 3 turns
+   | group:
+   | condition: execute repeatedly, turn 1 of 2
      | (4495:74) Leap
      | Reduce damage from all sources by 50% for 1 turn
    | group:
-   | condition: execute repeatedly, turn 1 of 2
+   | condition: execute repeatedly, turn 2 of 2
      | condition: 30% chance
      | (4498:15) Shining Claw
      | Deal 185% damage (5 hits, 37% each)
@@ -42,10 +45,6 @@ level: 4
      | Change 5th column to Light orbs, 6th column to Fire orbs, Deal 170% damage
      | (4497:92) Brightness Guidance
      | Spawn random 8 Light orbs, Deal 170% damage
-   | group:
-   | condition: execute repeatedly, turn 2 of 2
-     | (4495:74) Leap
-     | Reduce damage from all sources by 50% for 1 turn
  | group:
  | condition: hp <= 49
    | group:

@@ -9,7 +9,7 @@ Enable preempt if level 1
 SkillSet:
 	Condition: One-time use (ai:100 rnd:0) (cost: 2)
 	[0] ESAbsorbCombo(67:13793) -> Flight Through Clear Skies
-	Absorb combos <= 7 damage for 10 turns
+	Absorb damage when combos <= 7 for 10 turns
 	[1] ESSpinnersRandom(109:13794) -> Wind Mischief
 	Random 2 orbs change every 0.5s for 10 turns
 
@@ -28,7 +28,7 @@ Branch on hp > 51, target rnd 8
 SkillSet:
 	Condition: One-time use (ai:100 rnd:0) (cost: 1)
 	[0] ESRowSpawnMulti(79:13799) -> Mistral Arrow
-	Change 1st, 5th row to Poison orbs, 3rd row to Mortal Poison orbs, Deal 110% damage
+	Change the 1st, 5th row to Poison orbs, the 3rd row to Mortal Poison orbs, Deal 110% damage
 	[1] ESNoSkyfall(127:13800) -> Calm Breeze
 	No skyfall for 5 turns
 
@@ -42,7 +42,7 @@ Deal 120% damage (3 hits, 40% each)
 
 ESOrbLock(94:13803) -> Glowing Ethesia
 Condition: 34% chance (ai:0 rnd:34)
-Lock all Wood, Dark orbs, Deal 110% damage
+Lock all Wood and Dark orbs, Deal 110% damage
 
 ESEndPath(36:26) -> ESEndPath
 end_turn
@@ -55,7 +55,7 @@ flag SET 0b1
 
 SkillSet:
 	[0] ESDamageShield(74:13796) -> Air Resistance
-	Reduce damage from all sources by 75% for 10 turns
+	Reduce damage from all sources all_sources by 75% for 10 turns
 	[1] ESSkillDelay(89:13797) -> Down Force
 	Delay active skills by 10 turns
 
@@ -63,7 +63,7 @@ ESEndPath(36:26) -> ESEndPath
 end_turn
 
 ESBoardChangeAttackBits(85:13804) -> Rush Storm
-Change all orbs to Wood, Dark, Deal 300% damage
+Change all orbs to Wood and Dark, Deal 300% damage
 
 ESEndPath(36:26) -> ESEndPath
 end_turn

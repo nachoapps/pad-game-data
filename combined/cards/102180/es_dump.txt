@@ -16,7 +16,7 @@ SkillSet:
 	[0] ESStatusShield(20:6457) -> Dark Protection of Yomi
 	Voids status ailments for 10 turns
 	[1] ESDamageShield(74:6458) -> The Feathered Garment of Yomi
-	Reduce damage from all sources by 50% for 3 turns
+	Reduce damage from all sources all_sources by 50% for 3 turns
 	[2] ESDebuffMovetime(39:6459) -> Malicious Laughter
 	Movetime 50% for 10 turns
 
@@ -25,7 +25,7 @@ SkillSet:
 	[0] ESRecoverEnemy(86:6510) -> Unwavering Light
 	Enemy recover 4% hp
 	[1] ESAbsorbCombo(67:6468) -> Protection of the Eight Thunders
-	Absorb combos <= 7 damage for 999 turns
+	Absorb damage when combos <= 7 for 999 turns
 	[2] ESBlindStickyFixed(98:6469) -> Boundary of Disdain
 	Blind orbs in specific positions for 4 turns
 	[3] ESAttackUPRemainingEnemies(17:6470) -> The Nature of Death
@@ -34,7 +34,7 @@ SkillSet:
 SkillSet:
 	Condition: When < 50% hp , one-time use (ai:100 rnd:0) (cost: 1)
 	[0] ESAbsorbCombo(67:6468) -> Protection of the Eight Thunders
-	Absorb combos <= 7 damage for 999 turns
+	Absorb damage when combos <= 7 for 999 turns
 	[1] ESBlindStickyFixed(98:6469) -> Boundary of Disdain
 	Blind orbs in specific positions for 4 turns
 	[2] ESAttackUPRemainingEnemies(17:6470) -> The Nature of Death
@@ -56,7 +56,7 @@ SkillSet:
 	[0] ESPoisonChangeRandomCount(60:6461) -> An Invitation to Death & Decay
 	Change Random 11 to Poison (excluding hearts)
 	[1] ESOrbLock(94:6462) -> Curse of the Eternal Land
-	Lock all Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs
+	Lock all Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, and Mortal Poison orbs
 
 ESEndPath(36:26) -> ESEndPath
 end_turn
@@ -87,7 +87,7 @@ Movetime 50% for 10 turns
 
 SkillSet:
 	[0] ESDamageShield(74:6458) -> The Feathered Garment of Yomi
-	Reduce damage from all sources by 50% for 3 turns
+	Reduce damage from all sources all_sources by 50% for 3 turns
 	[1] ESGravity(50:6466) -> Last Embrace
 	Player -100% HP
 
@@ -98,7 +98,7 @@ ESAttackMultihit(15:6464) -> Fires of Deicide
 Deal 150% damage (5 hits, 30% each)
 
 ESAttributeResist(72:8260) -> Dark Izanami Dark Fire Halved
-Reduce damage from Fire, Dark by 50%
+Reduce damage from Fire and Dark attrs by 50%
 
 ESResolve(73:6508) -> Dark Izanami Resolve
 Survive attacks with 1 HP when HP > 88%

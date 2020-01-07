@@ -22,7 +22,7 @@ SkillSet:
 	[1] ESVoidShield(71:11580) -> Started making a whirlwind
 	Void damage >= 15000000 for 3 turns
 	[2] ESAbsorbCombo(67:11581) -> Wind obstructs the strikes
-	Absorb combos <= 7 damage for 3 turns
+	Absorb damage when combos <= 7 for 3 turns
 
 ESEndPath(36:26) -> ESEndPath
 end_turn
@@ -55,14 +55,14 @@ SkillSet:
 	[0] ESVoidShield(71:11580) -> Started making a whirlwind
 	Void damage >= 15000000 for 3 turns
 	[1] ESAbsorbCombo(67:11581) -> Wind obstructs the strikes
-	Absorb combos <= 7 damage for 3 turns
+	Absorb damage when combos <= 7 for 3 turns
 
 SkillSet:
 	Condition: 33% chance (ai:0 rnd:33)
 	[0] ESRandomSpawn(92:11584) -> Blazing Cyclone
-	Spawn random 5 Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs
+	Spawn 5 random Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, or Mortal Poison orbs
 	[1] ESOrbLock(94:11585) -> Aero Feather
-	Lock 15 random Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs, Deal 100% damage
+	Lock 15 random Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, and Mortal Poison orbs, Deal 100% damage
 
 SkillSet:
 	Condition: One-time use (ai:0 rnd:33) (cost: 1)
@@ -85,7 +85,7 @@ SkillSet:
 	[0] ESLeaderSwap(75:11593) -> Wind Mischief
 	Leader changes to random sub for 3 turns
 	[1] ESDamageShield(74:11576) -> Wind Follower
-	Reduce damage from all sources by 50% for 3 turns
+	Reduce damage from all sources all_sources by 50% for 3 turns
 	[2] ESInactivity(66:11594) -> The wind died down
 	Do nothing
 
@@ -98,7 +98,7 @@ Change Random to Wood, Deal 100% damage
 
 ESRandomSpawn(92:11596) -> Fire Storm
 Condition: 33% chance (ai:0 rnd:33)
-Spawn random 4 Fire, Wood orbs, Deal 105% damage
+Spawn 4 random Fire or Wood orbs, Deal 105% damage
 
 ESAttackMultihit(15:11597) -> Climatic Gale
 Condition: 34% chance (ai:0 rnd:34)
@@ -155,7 +155,7 @@ end_turn
 
 SkillSet:
 	[0] ESChangeAttribute(46:11605) -> Molting
-	Change own attribute to random one of Fire, Water, Wood, Light, Dark
+	Change own attribute to random one of Fire, Water, Wood, Light, or Dark
 	[1] ESAttackMultihit(15:11606) -> Aero Burst End
 	Deal 500% damage (5 hits, 100% each)
 
@@ -163,5 +163,5 @@ ESEndPath(36:26) -> ESEndPath
 end_turn
 
 ESAttributeResist(72:11577) -> Fire Water Halves
-Reduce damage from Fire, Water by 50%
+Reduce damage from Fire and Water attrs by 50%
 

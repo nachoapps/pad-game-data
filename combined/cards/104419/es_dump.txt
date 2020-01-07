@@ -18,9 +18,9 @@ SkillSet:
 	[1] ESStatusShield(20:15701) -> 雲海の防護壁
 	Voids status ailments for 99 turns
 	[2] ESAbsorbCombo(67:15702) -> レインボーフォッグ
-	Absorb combos <= 7 damage for 1 turn
+	Absorb damage when combos <= 7 for 1 turn
 	[3] ESDamageShield(74:15703) -> 硬軟な朧雲
-	Reduce damage from all sources by 75% for 5 turns
+	Reduce damage from all sources all_sources by 75% for 5 turns
 
 ESEndPath(36:26) -> ESEndPath
 end_turn
@@ -45,7 +45,7 @@ SkillSet:
 	[0] ESCloud(104:9915) -> Cloud Cluster
 	6x2 cloud appear for 1 turn at 1st row, 1st column
 	[1] ESAbsorbCombo(67:9916) -> Prism Fog
-	Absorb combos <= 4 damage for 5 turns
+	Absorb damage when combos <= 4 for 5 turns
 	[2] ESAttackMultihit(15:9917) -> Lightning Ball Strike
 	Deal 270% damage (9 hits, 30% each)
 
@@ -89,7 +89,7 @@ ESOrbChangeAttackBits(108:9933) -> Heaven's Breaching
 Change Jammer to Light, Deal 260% damage
 
 ESOrbChangeAttackBits(108:9934) -> Dirty Cloud
-Change Light, Heal to Jammer, Deal 210% damage
+Change Light and Heal to Jammer, Deal 210% damage
 
 ESOrbChangeAttack(48:9935) -> Dirty Cloud
 Change Random to Jammer, Deal 210% damage
@@ -105,7 +105,7 @@ flag SET 0b11
 
 SkillSet:
 	[0] ESDamageShield(74:9937) -> Colossal Cumulonimbus Cloud
-	Reduce damage from all sources by 75% for 10 turns
+	Reduce damage from all sources all_sources by 75% for 10 turns
 	[1] ESBindTarget(54:9938) -> Plasma Chain
 	Bind both leaders for 3 turns
 
@@ -119,7 +119,7 @@ ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b111
 
 ESBoardChange(84:9939) -> Grimy Cloud
-Change all orbs to Fire, Light, Heal, Jammer, Poison, Deal 246% damage
+Change all orbs to Fire, Light, Heal, Jammer, and Poison, Deal 246% damage
 
 ESEndPath(36:26) -> ESEndPath
 end_turn

@@ -17,7 +17,7 @@ SkillSet:
 	[0] ESStatusShield(20:11675) -> Protection of the Gods
 	Voids status ailments for 999 turns
 	[1] ESAbsorbCombo(67:11676) -> Raging Thunder's Might
-	Absorb combos <= 10 damage for 10 turns
+	Absorb damage when combos <= 10 for 10 turns
 	[2] ESVoidShield(71:11677) -> Divine King's Armor
 	Void damage >= 100000000 for 999 turns
 	[3] ESDispel(6:11678) -> Almighty Gods' Majesty
@@ -41,7 +41,7 @@ Branch on hp < 50, target rnd 13
 SkillSet:
 	Condition: One-time use (ai:100 rnd:0) (cost: 4)
 	[0] ESChangeAttribute(46:11680) -> Divine King's Changing Cloak
-	Change own attribute to random one of Fire, Water, Wood, Light, Dark
+	Change own attribute to random one of Fire, Water, Wood, Light, or Dark
 	[1] ESAttackMultihit(15:11681) -> Divine King's Imperial Lightning
 	Deal 200% damage
 
@@ -73,7 +73,7 @@ ESSetCounter(26:16) -> ESSetCounter
 counter + 1
 
 ESDamageShield(74:11684) -> Divine King's Lightning Cloak
-Reduce damage from all sources by 75% for 999 turns
+Reduce damage from all sources all_sources by 75% for 999 turns
 
 ESEndPath(36:26) -> ESEndPath
 end_turn

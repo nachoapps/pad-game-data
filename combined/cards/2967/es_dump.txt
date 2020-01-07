@@ -54,10 +54,10 @@ ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 50, target rnd 18
 
 ESRandomSpawn(92:4565) -> Color Stealing Forgotten Sword
-Spawn random 5 Jammer orbs, Deal 140% damage
+Spawn 5 random Jammer orbs, Deal 140% damage
 
 ESRandomSpawn(92:4572) -> Color Stealing Forgotten Sword
-Spawn random 10 Jammer orbs, Deal 160% damage
+Spawn 10 random Jammer orbs, Deal 160% damage
 
 ESFlagOperation(24:14) -> ESFlagOperation
 flag UNSET 0b110
@@ -77,7 +77,7 @@ Bind 3 random cards for 1 turn
 SkillSet:
 	Condition: One-time use (ai:100 rnd:0) (cost: 1)
 	[0] ESAbsorbCombo(67:4568) -> Strain
-	Absorb combos <= 5 damage for 1 turn
+	Absorb damage when combos <= 5 for 1 turn
 	[1] ESFixedStart(101:4569) -> Time Warp
 	Fix orb movement starting point to random position on the board
 
@@ -85,5 +85,5 @@ ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 1, target rnd 9
 
 ESAttributeResist(72:4704) -> Time Dark Halven
-Reduce damage from Dark by 50%
+Reduce damage from Dark attrs by 50%
 

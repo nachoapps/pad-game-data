@@ -42,7 +42,7 @@ Branch on hp < 50, target rnd 28
 
 ESOrbLock(94:10045) -> Shadow of Fate
 Condition: When < 75% hp , one-time use (ai:100 rnd:0) (cost: 1)
-Lock all Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs, Deal 160% damage
+Lock all Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, and Mortal Poison orbs, Deal 160% damage
 
 ESBranchCombo(113:6528) -> ESBranchCombo
 Branch on combo >= 9, target rnd 20
@@ -106,7 +106,7 @@ flag SET 0b11
 
 SkillSet:
 	[0] ESAbsorbCombo(67:10051) -> Prism Mirror
-	Absorb combos <= 9 damage for 1 turn
+	Absorb damage when combos <= 9 for 1 turn
 	[1] ESSpinnersFixed(110:10052) -> Traversing Radiance
 	Specific orbs change every 1.0s for 20 turns
 
@@ -127,17 +127,17 @@ SkillSet:
 	[0] ESAttackUPRemainingEnemies(17:10046) -> Philysians
 	Increase damage to 200% for the next 1 turn
 	[1] ESAbsorbCombo(67:10048) -> Prism Mirror
-	Absorb combos <= 6 damage for 15 turns
+	Absorb damage when combos <= 6 for 15 turns
 
 SkillSet:
 	Condition: When < 50% hp (ai:100 rnd:0)
 	[0] ESAttackUPRemainingEnemies(17:10046) -> Philysians
 	Increase damage to 200% for the next 1 turn
 	[1] ESAbsorbCombo(67:10047) -> Prism Mirror
-	Absorb combos <= 6 damage for 5 turns
+	Absorb damage when combos <= 6 for 5 turns
 
 ESAttributeResist(72:10055) -> Light Halved
-Reduce damage from Light by 50%
+Reduce damage from Light attrs by 50%
 
 ESResolve(73:12175) -> Dragonbound Soul Spirit
 Survive attacks with 1 HP when HP > 99%

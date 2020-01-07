@@ -25,13 +25,13 @@ SkillSet:
 	[0] ESStatusShield(20:8448) -> New God of Apokolips
 	Voids status ailments for 10 turns
 	[1] ESAbsorbCombo(67:8449) -> Villainous Strategy
-	Absorb combos <= 6 damage for 5 turns
+	Absorb damage when combos <= 6 for 5 turns
 
 SkillSet:
 	[0] ESStatusShield(20:8448) -> New God of Apokolips
 	Voids status ailments for 10 turns
 	[1] ESAbsorbCombo(67:8451) -> Villainous Strategy
-	Absorb combos <= 4 damage for 5 turns
+	Absorb damage when combos <= 4 for 5 turns
 
 ESEndPath(36:26) -> ESEndPath
 end_turn
@@ -41,7 +41,7 @@ Branch on hp < 50, target rnd 16
 
 ESColumnSpawnMulti(77:8457) -> Splitting Swing
 Condition: When < 30% hp , one-time use (ai:100 rnd:0) (cost: 2)
-Change 3rd, 4th column to Jammer orbs, 1st, 2nd, 5th, 6th column to Fire, Water, Wood, Light, Dark, Heal orbs, Deal 180% damage
+Change the 3rd, 4th column to Jammer orbs, the 1st, 2nd, 5th, 6th column to Fire, Water, Wood, Light, Dark, and Heal orbs, Deal 180% damage
 
 ESGravity(50:8455) -> Radion Bolt
 Condition: 20% chance (ai:20 rnd:0)
@@ -49,7 +49,7 @@ Player -99% HP
 
 ESColumnSpawnMulti(77:8453) -> Blazing Slash
 Condition: 30% chance (ai:30 rnd:0)
-Change 3rd column to Fire orbs, Deal 150% damage
+Change the 3rd column to Fire orbs, Deal 150% damage
 
 ESAttackMultihit(15:8454) -> Axe Sweep
 Deal 190% damage
@@ -71,5 +71,5 @@ ESEndPath(36:26) -> ESEndPath
 end_turn
 
 ESAttributeResist(72:8458) -> Halve Light & Dark
-Reduce damage from Light, Dark by 50%
+Reduce damage from Light and Dark attrs by 50%
 

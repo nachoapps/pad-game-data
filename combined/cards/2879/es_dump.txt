@@ -22,7 +22,7 @@ SkillSet:
 	[0] ESStatusShield(20:4685) -> What is your wish?
 	Voids status ailments for 5 turns
 	[1] ESDamageShield(74:4353) -> Dividing Damage
-	Reduce damage from all sources by 50% for 5 turns
+	Reduce damage from all sources all_sources by 50% for 5 turns
 
 ESEndPath(36:26) -> ESEndPath
 end_turn
@@ -39,7 +39,7 @@ SkillSet:
 	[0] ESAttackMultihit(15:4695) -> Dual Shade
 	Deal 120% damage (2 hits, 60% each)
 	[1] ESBoardChangeAttackBits(85:4686) -> Sunset Zone
-	Change all orbs to Fire, Water, Dark, Heal, Deal 150% damage
+	Change all orbs to Fire, Water, Dark, and Heal, Deal 150% damage
 
 ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 50, target rnd 23
@@ -57,13 +57,13 @@ SkillSet:
 	[0] ESBlind(5:4690) -> Vesperal Gloom
 	Blind all orbs on the board
 	[1] ESBoardChangeAttackBits(85:4686) -> Sunset Zone
-	Change all orbs to Fire, Water, Dark, Heal, Deal 150% damage
+	Change all orbs to Fire, Water, Dark, and Heal, Deal 150% damage
 
 SkillSet:
 	[0] ESBlind(5:4689) -> I recognize the strength of your wish
 	Blind all orbs on the board
 	[1] ESBoardChangeAttackBits(85:4686) -> Sunset Zone
-	Change all orbs to Fire, Water, Dark, Heal, Deal 150% damage
+	Change all orbs to Fire, Water, Dark, and Heal, Deal 150% damage
 
 ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 4, target rnd 20
@@ -79,11 +79,11 @@ flag UNSET 0b100
 
 ESRowSpawnMulti(79:4691) -> Dusk Guidance
 Condition: 30% chance (ai:30 rnd:0)
-Change 3rd row to Heal orbs, Deal 175% damage
+Change the 3rd row to Heal orbs, Deal 175% damage
 
 ESColumnSpawnMulti(77:4694) -> Purple Lightning
 Condition: 50% chance (ai:50 rnd:0)
-Change 3rd column to Dark orbs, 5th column to Water orbs, Deal 80% damage
+Change the 3rd column to Dark orbs, the 5th column to Water orbs, Deal 80% damage
 
 ESAttackMultihit(15:4695) -> Dual Shade
 Deal 120% damage (2 hits, 60% each)
@@ -98,21 +98,21 @@ SkillSet:
 	[0] ESAbsorbAttribute(53:4698) -> Destroying Thunder Dragon's Trial
 	Absorb Dark damage for 1 turn
 	[1] ESColumnSpawnMulti(77:4699) -> Dark Slash
-	Change 2nd, 5th column to Dark orbs, Deal 100% damage
+	Change the 2nd, 5th column to Dark orbs, Deal 100% damage
 
 SkillSet:
 	Condition: 50% chance (ai:50 rnd:0)
 	[0] ESBlind(5:4690) -> Vesperal Gloom
 	Blind all orbs on the board
 	[1] ESColumnSpawnMulti(77:4694) -> Purple Lightning
-	Change 3rd column to Dark orbs, 5th column to Water orbs, Deal 80% damage
+	Change the 3rd column to Dark orbs, the 5th column to Water orbs, Deal 80% damage
 
 SkillSet:
 	[0] ESBlind(5:4690) -> Vesperal Gloom
 	Blind all orbs on the board
 	[1] ESRowSpawnMulti(79:4691) -> Dusk Guidance
-	Change 3rd row to Heal orbs, Deal 175% damage
+	Change the 3rd row to Heal orbs, Deal 175% damage
 
 ESAttributeResist(72:4702) -> Light Halve
-Reduce damage from Light by 50%
+Reduce damage from Light attrs by 50%
 

@@ -13,12 +13,12 @@ SkillSet:
 	[1] ESStatusShield(20:6887) -> Guardian Dragon Formation
 	Voids status ailments for 999 turns
 	[2] ESDamageShield(74:6888) -> Mucus Skin
-	Reduce damage from all sources by 75% for 7 turns
+	Reduce damage from all sources all_sources by 75% for 7 turns
 
 SkillSet:
 	Condition: When < 15% hp (ai:100 rnd:0)
 	[0] ESChangeAttribute(46:6911) -> Rainbow Cloak
-	Change own attribute to random one of Fire, Water, Wood, Light, Dark
+	Change own attribute to random one of Fire, Water, Wood, Light, or Dark
 	[1] ESAttackMultihit(15:6920) -> Everstorm Rainbow Blade
 	Deal 12000% damage (10 hits, 1200% each)
 
@@ -63,49 +63,49 @@ Change Poison to Jammer, Deal 6000% damage
 
 ESOrbLock(94:6906) -> Thousand-Blade Strike
 Condition: One-time use (ai:100 rnd:0) (cost: 8)
-Lock all Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs, Deal 300% damage
+Lock all Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, and Mortal Poison orbs, Deal 300% damage
 
 SkillSet:
 	Condition: One-time use (ai:100 rnd:0) (cost: 4)
 	[0] ESSkyfall(68:6907) -> The Allure of Swift Death
 	Mortal Poison skyfall +20% for 7 turns
 	[1] ESAttributeBlock(107:6908) -> The Art of Contamination
-	Unable to match Poison, Mortal Poison orbs for 2 turns
+	Unable to match Poison and Mortal Poison orbs for 2 turns
 	[2] ESAttackMultihit(15:6909) -> Storm Rave
 	Deal 420% damage (7 hits, 60% each)
 
 SkillSet:
 	Condition: One-time use (ai:100 rnd:0) (cost: 2)
 	[0] ESChangeAttribute(46:6911) -> Rainbow Cloak
-	Change own attribute to random one of Fire, Water, Wood, Light, Dark
+	Change own attribute to random one of Fire, Water, Wood, Light, or Dark
 	[1] ESBindAttack(63:6912) -> Paralysis Vine
 	Bind 1 random sub for 7 turns, Deal 330% damage
 
 SkillSet:
 	Condition: One-time use (ai:100 rnd:0) (cost: 1)
 	[0] ESSkyfall(96:6914) -> Thorned Husk Fang
-	Locked Poison, Mortal Poison skyfall +100% for 5 turns
+	Locked Poison and Mortal Poison skyfall +100% for 5 turns
 	[1] ESAttackMultihit(15:6915) -> Cyclone Rave
 	Deal 490% damage (7 hits, 70% each)
 
 SkillSet:
 	Condition: 45% chance (ai:0 rnd:45)
 	[0] ESChangeAttribute(46:6911) -> Rainbow Cloak
-	Change own attribute to random one of Fire, Water, Wood, Light, Dark
+	Change own attribute to random one of Fire, Water, Wood, Light, or Dark
 	[1] ESBoardChangeAttackBits(85:6925) -> Seven Gardens
-	Change all orbs to Fire, Water, Wood, Light, Dark, Heal, Poison, Deal 400% damage
+	Change all orbs to Fire, Water, Wood, Light, Dark, Heal, and Poison, Deal 400% damage
 
 SkillSet:
 	Condition: 40% chance (ai:0 rnd:40)
 	[0] ESChangeAttribute(46:6911) -> Rainbow Cloak
-	Change own attribute to random one of Fire, Water, Wood, Light, Dark
+	Change own attribute to random one of Fire, Water, Wood, Light, or Dark
 	[1] ESAttackMultihit(15:6915) -> Cyclone Rave
 	Deal 490% damage (7 hits, 70% each)
 
 SkillSet:
 	Condition: 15% chance (ai:0 rnd:15)
 	[0] ESChangeAttribute(46:6911) -> Rainbow Cloak
-	Change own attribute to random one of Fire, Water, Wood, Light, Dark
+	Change own attribute to random one of Fire, Water, Wood, Light, or Dark
 	[1] ESPoisonChangeRandomAttack(64:6926) -> Dead Poison Rave
 	Change Random 14 to Poison, Deal 400% damage
 
@@ -113,5 +113,5 @@ ESEndPath(36:26) -> ESEndPath
 end_turn
 
 ESAttributeResist(72:6922) -> Wood damage halved
-Reduce damage from Wood by 50%
+Reduce damage from Wood attrs by 50%
 

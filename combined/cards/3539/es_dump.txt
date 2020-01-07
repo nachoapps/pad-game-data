@@ -8,7 +8,7 @@ Enable preempt if level 1
 
 ESDamageShield(74:6856) -> Fireform
 Condition: One-time use (ai:100 rnd:0) (cost: 1024)
-Reduce damage from all sources by 75% for 3 turns
+Reduce damage from all sources all_sources by 75% for 3 turns
 
 ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 15, target rnd 18
@@ -38,7 +38,7 @@ SkillSet:
 SkillSet:
 	Condition: One-time use (ai:100 rnd:0) (cost: 64)
 	[0] ESDamageShield(74:6856) -> Fireform
-	Reduce damage from all sources by 75% for 3 turns
+	Reduce damage from all sources all_sources by 75% for 3 turns
 	[1] ESBindAttack(63:6864) -> Giant Iceflame Talons
 	Bind 1 random card for 4 turns, Deal 300% damage
 
@@ -48,7 +48,7 @@ Deal 360% damage (3 hits, 120% each)
 
 ESOrbLock(94:6867) -> Freeze Ignis
 Condition: One-time use (ai:100 rnd:0) (cost: 16)
-Lock 15 random Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs, Deal 300% damage
+Lock 15 random Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, and Mortal Poison orbs, Deal 300% damage
 
 ESBoardChangeAttackBits(85:6869) -> Lava Flare
 Condition: When < 50% hp , one-time use (ai:100 rnd:0) (cost: 8)
@@ -61,7 +61,7 @@ Deal 3500% damage (5 hits, 700% each)
 SkillSet:
 	Condition: One-time use (ai:100 rnd:0) (cost: 4)
 	[0] ESDamageShield(74:6856) -> Fireform
-	Reduce damage from all sources by 75% for 3 turns
+	Reduce damage from all sources all_sources by 75% for 3 turns
 	[1] ESBindAttack(63:6864) -> Giant Iceflame Talons
 	Bind 1 random card for 4 turns, Deal 300% damage
 
@@ -86,5 +86,5 @@ ESEndPath(36:26) -> ESEndPath
 end_turn
 
 ESAttributeResist(72:6923) -> Fire damage halved
-Reduce damage from Fire by 50%
+Reduce damage from Fire attrs by 50%
 

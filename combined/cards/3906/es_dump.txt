@@ -11,7 +11,7 @@ SkillSet:
 	[0] ESStatusShield(20:8459) -> Thousand-Word Sutra
 	Voids status ailments for 999 turns
 	[1] ESAbsorbAttribute(53:8460) -> Yin-Yang Dragon - Attack Fangs
-	Absorb Light, Dark damage for 3 turns, Deal 200% damage
+	Absorb Light and Dark damage for 3 turns, Deal 200% damage
 
 ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 1, target rnd 12
@@ -27,7 +27,7 @@ counter + 1
 
 SkillSet:
 	[0] ESChangeAttribute(46:8463) -> Elemental Reincarnation
-	Change own attribute to random one of Fire, Water, Wood, Light, Dark
+	Change own attribute to random one of Fire, Water, Wood, Light, or Dark
 	[1] ESAttackMultihit(15:8464) -> Vicious Khakkhara Thrust
 	Deal 220% damage
 
@@ -36,11 +36,11 @@ counter + 1
 
 ESAbsorbThreshold(87:8462) -> 3,000 Rising Dragon Talismens
 Condition: One-time use (ai:100 rnd:0) (cost: 2)
-Absorb damage >= 10,000,000 damage for 10 turns
+Absorb damage when damage >= 10,000,000 for 10 turns
 
 SkillSet:
 	[0] ESChangeAttribute(46:8463) -> Elemental Reincarnation
-	Change own attribute to random one of Fire, Water, Wood, Light, Dark
+	Change own attribute to random one of Fire, Water, Wood, Light, or Dark
 	[1] ESAttackMultihit(15:8464) -> Vicious Khakkhara Thrust
 	Deal 220% damage
 
@@ -50,7 +50,7 @@ flag SET 0b1
 SkillSet:
 	Condition: One-time use (ai:100 rnd:0) (cost: 1)
 	[0] ESDamageShield(74:8466) -> Instant Purification
-	Reduce damage from all sources by 99% for 1 turn
+	Reduce damage from all sources all_sources by 99% for 1 turn
 	[1] ESDebuffMovetime(39:8467) -> Aim for high combos!
 	Movetime -1s for 10 turns
 
@@ -67,7 +67,7 @@ ESAttackMultihit(15:8471) -> The Truth of Suffering
 Deal 280% damage (4 hits, 70% each)
 
 ESRandomSpawn(92:8469) -> Heavenly Palm
-Spawn random 3 Heal orbs, Deal 200% damage
+Spawn 3 random Heal orbs, Deal 200% damage
 
 ESJammerChangeRandom(13:8470) -> Cruelty
 Change Random 1 to Jammer, Deal 230% damage

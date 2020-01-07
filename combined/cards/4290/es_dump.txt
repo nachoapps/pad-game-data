@@ -133,7 +133,7 @@ SkillSet:
 	[1] ESRecoverEnemy(86:7326) -> Enter Fury State
 	Enemy recover 60% hp
 	[2] ESDamageShield(74:7259) -> Burrow
-	Reduce damage from all sources by 75% for 1 turn
+	Reduce damage from all sources all_sources by 75% for 1 turn
 
 ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 90, target rnd 45
@@ -148,7 +148,7 @@ Deal 1000% damage (2 hits, 500% each)
 
 ESRandomSpawn(92:7256) -> Dash Attack
 Condition: 34% chance (ai:0 rnd:34)
-Spawn random 3 Jammer orbs, Deal 1000% damage
+Spawn 3 random Jammer orbs, Deal 1000% damage
 
 ESEndPath(36:26) -> ESEndPath
 end_turn
@@ -160,7 +160,7 @@ SkillSet:
 	[1] ESInactivity(66:7258) -> Enter Fury State
 	Do nothing
 	[2] ESDamageShield(74:7259) -> Burrow
-	Reduce damage from all sources by 75% for 1 turn
+	Reduce damage from all sources all_sources by 75% for 1 turn
 
 ESAttackMultihit(15:7261) -> Burrowed Assault
 Condition: One-time use (ai:100 rnd:0) (cost: 4)
@@ -260,7 +260,7 @@ SkillSet:
 	[1] ESInactivity(66:7282) -> Enter Rampaging State
 	Do nothing
 	[2] ESDamageShield(74:7283) -> Burrow
-	Reduce damage from all sources by 75% for 1 turn
+	Reduce damage from all sources all_sources by 75% for 1 turn
 
 SkillSet:
 	Condition: One-time use (ai:100 rnd:0) (cost: 1)
@@ -281,5 +281,5 @@ ESResolve(73:7292) -> Resolve 90
 Survive attacks with 1 HP when HP > 90%
 
 ESAttributeResist(72:8446) -> Halve Wood
-Reduce damage from Wood by 50%
+Reduce damage from Wood attrs by 50%
 

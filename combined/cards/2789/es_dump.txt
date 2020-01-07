@@ -22,7 +22,7 @@ SkillSet:
 	[0] ESInactivity(66:3922) -> Without power what future can you claim?
 	Do nothing
 	[1] ESDamageShield(74:3923) -> Protect
-	Reduce damage from all sources by 50% for 3 turns
+	Reduce damage from all sources all_sources by 50% for 3 turns
 
 ESEndPath(36:26) -> ESEndPath
 end_turn
@@ -37,7 +37,7 @@ ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b11
 
 ESRandomSpawn(92:3926) -> Kick
-Spawn random 1 Jammer orb, Deal 100% damage
+Spawn 1 random Jammer orb, Deal 100% damage
 
 ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 4, target rnd 15
@@ -46,13 +46,13 @@ ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b111
 
 ESRandomSpawn(92:3929) -> Lunge
-Spawn random 5 Jammer orbs, Deal 150% damage
+Spawn 5 random Jammer orbs, Deal 150% damage
 
 ESFlagOperation(24:14) -> ESFlagOperation
 flag UNSET 0b110
 
 ESOrbLock(94:3928) -> Sentence
-Lock 6 random Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs, Deal 150% damage
+Lock 6 random Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, and Mortal Poison orbs, Deal 150% damage
 
 ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 8, target rnd 20
@@ -68,10 +68,10 @@ SkillSet:
 
 ESOrbLock(94:3927) -> Judgment
 Condition: 20% chance (ai:20 rnd:0)
-Lock all Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs, Deal 130% damage
+Lock all Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, and Mortal Poison orbs, Deal 130% damage
 
 ESRowSpawnMulti(79:3925) -> Execution
-Change 1st, 5th row to Dark orbs, Deal 180% damage
+Change the 1st, 5th row to Dark orbs, Deal 180% damage
 
 ESEndPath(36:26) -> ESEndPath
 end_turn

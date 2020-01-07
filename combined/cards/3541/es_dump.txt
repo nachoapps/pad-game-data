@@ -31,7 +31,7 @@ SkillSet:
 SkillSet:
 	Condition: One-time use (ai:100 rnd:0) (cost: 1)
 	[0] ESDamageShield(74:6625) -> Frozen Fur
-	Reduce damage from all sources by 50% for 3 turns
+	Reduce damage from all sources all_sources by 50% for 3 turns
 	[1] ESAttackMultihit(15:6626) -> Cold Impact
 	Deal 450% damage (3 hits, 150% each)
 
@@ -41,7 +41,7 @@ Increase damage to 200% for the next 999 turns
 SkillSet:
 	Condition: When < 15% hp (ai:100 rnd:0)
 	[0] ESChangeAttribute(46:6632) -> Its body is glowing
-	Change own attribute to random one of Water, Dark
+	Change own attribute to random one of Water or Dark
 	[1] ESAttackMultihit(15:6633) -> Absolute Blue
 	Deal 1800% damage (6 hits, 300% each)
 
@@ -61,5 +61,5 @@ ESEndPath(36:26) -> ESEndPath
 end_turn
 
 ESAttributeResist(72:6741) -> Water halved
-Reduce damage from Water by 50%
+Reduce damage from Water attrs by 50%
 

@@ -34,10 +34,10 @@ ESSetCounter(26:16) -> ESSetCounter
 counter + 1
 
 ESOrbLock(94:8150) -> Poison Stinger
-Lock all Poison, Mortal Poison orbs, Deal 250% damage
+Lock all Poison and Mortal Poison orbs, Deal 250% damage
 
 ESRandomSpawn(92:8151) -> Lethal Poison Fangs
-Spawn random 3 Mortal Poison orbs, Deal 250% damage
+Spawn 3 random Mortal Poison orbs, Deal 250% damage
 
 ESEndPath(36:26) -> ESEndPath
 end_turn
@@ -50,9 +50,9 @@ counter + 1
 
 SkillSet:
 	[0] ESDamageShield(74:8152) -> Steel Serpent Scales
-	Reduce damage from all sources by 99% for 1 turn
+	Reduce damage from all sources all_sources by 99% for 1 turn
 	[1] ESRandomSpawn(92:8153) -> Thick Miasmatic Fog
-	Spawn random 4 Poison, Mortal Poison orbs
+	Spawn 4 random Poison or Mortal Poison orbs
 
 ESEndPath(36:26) -> ESEndPath
 end_turn
@@ -61,7 +61,7 @@ ESSetCounter(25:15) -> ESSetCounter
 counter = 0
 
 ESOrbChangeAttackBits(108:8155) -> Great Demon Serpent of the Dusk
-Change Poison, Mortal Poison to Dark, Deal 6000% damage
+Change Poison and Mortal Poison to Dark, Deal 6000% damage
 
 SkillSet:
 	[0] ESAbsorbAttribute(53:8147) -> Dark Miasma

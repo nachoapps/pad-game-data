@@ -9,7 +9,7 @@ Enable preempt if level 1
 SkillSet:
 	Condition: One-time use (ai:100 rnd:0) (cost: 32)
 	[0] ESAbsorbThreshold(87:14231) -> Memories of a Forelife
-	Absorb damage >= 8,000,000 damage for 99 turns
+	Absorb damage when damage >= 8,000,000 for 99 turns
 	[1] ESSkillDelay(89:14232) -> Ready against incoming attack
 	Delay active skills by 3~6 turns
 	[2] ESDebuffMovetime(39:14253) -> Adowan Pakusha
@@ -21,7 +21,7 @@ Branch on hp < 50, target rnd 8
 SkillSet:
 	Condition: 33% chance (ai:0 rnd:33)
 	[0] ESRandomSpawn(92:14236) -> Ateevisha Aayus
-	Spawn random 8 Poison orbs
+	Spawn 8 random Poison orbs
 	[1] ESOrbLock(94:14237) -> Mudalar Pasha
 	Lock all Poison orbs, Deal 90% damage
 
@@ -30,7 +30,7 @@ SkillSet:
 	[0] ESBombFixedSpawn(103:14238) -> Dar Raiti
 	Spawn Bomb orbs in the specified positions
 	[1] ESRowSpawnMulti(79:14239) -> Niladaguda Niruruvud
-	Change 3rd row to Jammer orbs, Deal 95% damage
+	Change the 3rd row to Jammer orbs, Deal 95% damage
 
 SkillSet:
 	Condition: 34% chance (ai:0 rnd:34)
@@ -45,19 +45,19 @@ end_turn
 SkillSet:
 	Condition: One-time use (ai:100 rnd:0) (cost: 16)
 	[0] ESAbsorbCombo(67:14243) -> Awakening Will
-	Absorb combos <= 5 damage for 999 turns
+	Absorb damage when combos <= 5 for 999 turns
 	[1] ESSpinnersFixed(110:14244) -> Cherished Aspiration
 	Specific orbs change every 1.0s for 3 turns
 	[2] ESAttributeBlock(107:14245) -> Prepared to Plunder
-	Unable to match Fire, Water orbs for 1 turn, Deal 100% damage
+	Unable to match Fire and Water orbs for 1 turn, Deal 100% damage
 
 ESAttributeBlock(107:14246) -> Prepared to Plunder
 Condition: One-time use (ai:100 rnd:0) (cost: 8)
-Unable to match Wood, Light orbs for 1 turn, Deal 100% damage
+Unable to match Wood and Light orbs for 1 turn, Deal 100% damage
 
 ESAttributeBlock(107:14247) -> Prepared to Plunder
 Condition: One-time use (ai:100 rnd:0) (cost: 4)
-Unable to match Dark, Heal orbs for 1 turn, Deal 100% damage
+Unable to match Dark and Heal orbs for 1 turn, Deal 100% damage
 
 SkillSet:
 	Condition: One-time use (ai:100 rnd:0) (cost: 2)

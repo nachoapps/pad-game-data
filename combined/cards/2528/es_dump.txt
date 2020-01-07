@@ -14,7 +14,7 @@ flag SET 0b1
 
 SkillSet:
 	[0] ESAbsorbCombo(67:3722) -> High Technique Field
-	Absorb combos <= 7 damage for 999 turns
+	Absorb damage when combos <= 7 for 999 turns
 	[1] ESStatusShield(20:3565) -> Machinery Body
 	Voids status ailments for 999 turns
 
@@ -38,7 +38,7 @@ Condition: One-time use (ai:100 rnd:0) (cost: 2)
 Bind 1 random sub for 3 turns, Deal 90% damage
 
 ESRandomSpawn(92:3723) -> ZEUS Sword
-Spawn random 5 Mortal Poison orbs, Deal 190% damage
+Spawn 5 random Mortal Poison orbs, Deal 190% damage
 
 ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 2, target rnd 10
@@ -60,7 +60,7 @@ flag SET 0b111
 
 SkillSet:
 	[0] ESAbsorbThreshold(87:3727) -> Aegis Invisible Field
-	Absorb damage >= 2,000,000 damage for 5 turns
+	Absorb damage when damage >= 2,000,000 for 5 turns
 	[1] ESInactivity(66:3726) -> Sword Bit Deployment
 	Do nothing
 
@@ -73,7 +73,7 @@ SkillSet:
 
 SkillSet:
 	[0] ESRowSpawnMulti(79:3728) -> Delta Dead Lightning
-	Change 1st, 5th row to Light, Jammer, Mortal Poison orbs, Deal 180% damage
+	Change the 1st, 5th row to Light, Jammer, and Mortal Poison orbs, Deal 180% damage
 	[1] ESAttackMultihit(15:3732) -> Sword Bit Rush
 	Deal 180% damage (6 hits, 30% each)
 
@@ -81,5 +81,5 @@ ESAttackMultihit(15:3730) -> Hyper Nova
 Deal 6400% damage (8 hits, 800% each)
 
 ESAttributeResist(72:3756) -> Halve Dark
-Reduce damage from Dark by 50%
+Reduce damage from Dark attrs by 50%
 

@@ -8,14 +8,14 @@ Enable preempt if level 1
 
 ESDamageShield(74:6332) -> Shell Scales
 Condition: One-time use (ai:100 rnd:0) (cost: 4)
-Reduce damage from all sources by 75% for 3 turns
+Reduce damage from all sources all_sources by 75% for 3 turns
 
 SkillSet:
 	Condition: When < 1% hp (ai:100 rnd:0)
 	[0] ESRecoverEnemy(86:6525) -> Resuscitation
 	Enemy recover 100% hp
 	[1] ESAbsorbCombo(67:6526) -> Seastar Rock Scales
-	Absorb combos <= 7 damage for 999 turns
+	Absorb damage when combos <= 7 for 999 turns
 
 ESBoardChangeAttackBits(85:6339) -> Myriad Calamity
 Condition: When < 15% hp (ai:100 rnd:0)
@@ -31,7 +31,7 @@ SkillSet:
 SkillSet:
 	Condition: When < 50% hp , one-time use (ai:100 rnd:0) (cost: 1)
 	[0] ESAbsorbCombo(67:6338) -> Bubble Wall
-	Absorb combos <= 5 damage for 3 turns
+	Absorb damage when combos <= 5 for 3 turns
 	[1] ESBindAttack(63:6343) -> Sun Jail
 	Bind 1 random sub for 5 turns, Deal 160% damage
 
@@ -42,7 +42,7 @@ ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b1
 
 ESDamageShield(74:6336) -> Shell Scales
-Reduce damage from all sources by 75% for 3 turns
+Reduce damage from all sources all_sources by 75% for 3 turns
 
 ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 2, target rnd 13
@@ -66,7 +66,7 @@ SkillSet:
 	[0] ESFixedStart(101:6341) -> Flash Induction
 	Fix orb movement starting point to random position on the board
 	[1] ESOrbLock(94:6335) -> Sharptooth
-	Lock 8 random Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs, Deal 140% damage
+	Lock 8 random Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, and Mortal Poison orbs, Deal 140% damage
 
 ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 8, target rnd 19
@@ -75,7 +75,7 @@ ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b1111
 
 ESAbsorbAttribute(53:6333) -> Deep Sea
-Absorb Wood, Dark damage for 3 turns
+Absorb Wood and Dark damage for 3 turns
 
 ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 16, target rnd 22
@@ -96,7 +96,7 @@ SkillSet:
 	[0] ESFixedStart(101:6341) -> Flash Induction
 	Fix orb movement starting point to random position on the board
 	[1] ESOrbLock(94:6335) -> Sharptooth
-	Lock 8 random Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs, Deal 140% damage
+	Lock 8 random Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, and Mortal Poison orbs, Deal 140% damage
 
 ESResolve(73:6348) -> Resolve
 Survive attacks with 1 HP when HP > 75%

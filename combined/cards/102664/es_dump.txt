@@ -16,7 +16,7 @@ SkillSet:
 	[0] ESStatusShield(20:6440) -> Universal Protection
 	Voids status ailments for 10 turns
 	[1] ESDamageShield(74:6441) -> Merciful Protection
-	Reduce damage from all sources by 75% for 1 turn
+	Reduce damage from all sources all_sources by 75% for 1 turn
 	[2] ESBindRandom(1:6442) -> Young Dragon's Chainfire
 	Bind 6 random cards for 1~3 turns
 
@@ -41,7 +41,7 @@ end_turn
 SkillSet:
 	Condition: When < 50% hp , one-time use (ai:100 rnd:0) (cost: 2)
 	[0] ESDamageShield(74:6441) -> Merciful Protection
-	Reduce damage from all sources by 75% for 1 turn
+	Reduce damage from all sources all_sources by 75% for 1 turn
 	[1] ESBindAwoken(88:6447) -> Sweet Slumber
 	Bind awoken skills for 1 turn
 
@@ -54,7 +54,7 @@ SkillSet:
 	[0] ESJammerChangeRandom(13:6444) -> Fragile Fantasy
 	Change Random 3 to Jammer
 	[1] ESOrbLock(94:6450) -> World Cleansing
-	Lock all Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs
+	Lock all Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, and Mortal Poison orbs
 
 ESAttackMultihit(15:6451) -> Creation
 Condition: When < 30% hp (ai:100 rnd:0)
@@ -89,7 +89,7 @@ Change Jammer to Heal, Deal 360% damage
 
 SkillSet:
 	[0] ESDamageShield(74:6441) -> Merciful Protection
-	Reduce damage from all sources by 75% for 1 turn
+	Reduce damage from all sources all_sources by 75% for 1 turn
 	[1] ESJammerChangeRandom(13:6444) -> Fragile Fantasy
 	Change Random 3 to Jammer
 
@@ -112,5 +112,5 @@ ESEndPath(36:26) -> ESEndPath
 end_turn
 
 ESAttributeResist(72:8261) -> Light Izanami Light Water Halved
-Reduce damage from Water, Light by 50%
+Reduce damage from Water and Light attrs by 50%
 

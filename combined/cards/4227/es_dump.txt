@@ -13,7 +13,7 @@ ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b1
 
 ESInvulnerableOn(123:9138) -> Protected from damage by the Augites
-Immune to damage from all sources for 999 turns
+Immune to damage from all sources all_sources for 999 turns
 
 ESEndPath(36:26) -> ESEndPath
 end_turn
@@ -31,7 +31,7 @@ ESBranchRemainingEnemies(120:8595) -> ESBranchRemainingEnemies
 Branch on remaining enemies <= 4, target rnd 10
 
 ESOrbLock(94:9139) -> Stellar Dragon's Glare
-Lock all Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs, Deal 100% damage
+Lock all Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, and Mortal Poison orbs, Deal 100% damage
 
 ESInactivity(66:9182) -> Wait and See
 Do nothing
@@ -73,7 +73,7 @@ SkillSet:
 SkillSet:
 	Condition: When < 90% hp , one-time use (ai:100 rnd:0) (cost: 4)
 	[0] ESAbsorbCombo(67:9153) -> Secular Sword
-	Absorb combos <= 6 damage for 66 turns
+	Absorb damage when combos <= 6 for 66 turns
 	[1] ESSpinnersFixed(110:9154) -> Empty Teachings
 	Specific orbs change every 1.0s for 6 turns
 
@@ -125,7 +125,7 @@ flag SET 0b11
 
 SkillSet:
 	[0] ESOrbLock(94:9164) -> Stellar Dragon's Glare
-	Lock all Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs
+	Lock all Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, and Mortal Poison orbs
 	[1] ESBindAwoken(88:9217) -> Barbed Chain Cage
 	Bind awoken skills for 3 turns
 
@@ -134,7 +134,7 @@ end_turn
 
 SkillSet:
 	[0] ESChangeAttribute(46:9165) -> Metamorphosis
-	Change own attribute to random one of Water, Light
+	Change own attribute to random one of Water or Light
 	[1] ESAttackMultihit(15:9166) -> Six Limitless Flashes
 	Deal 3600% damage (6 hits, 600% each)
 

@@ -14,7 +14,7 @@ flag SET 0b1
 
 SkillSet:
 	[0] ESAbsorbAttribute(53:3811) -> Sangen Mechanism
-	Absorb Light, Dark damage for 5 turns
+	Absorb Light and Dark damage for 5 turns
 	[1] ESOrbChangeAttack(48:3820) -> Heal-to-Green Twist Puppetry
 	Change Heal to Wood, Deal 90% damage
 
@@ -27,23 +27,23 @@ Branch on hp < 50, target rnd 11
 SkillSet:
 	Condition: 40% chance (ai:0 rnd:40)
 	[0] ESChangeAttribute(46:3814) -> Elemental Flip
-	Change own attribute to random one of Water, Wood
+	Change own attribute to random one of Water or Wood
 	[1] ESOrbChangeAttack(48:3818) -> Red-to-Blue Twist Puppetry
 	Change Fire to Water, Deal 110% damage
 
 SkillSet:
 	Condition: 25% chance (ai:0 rnd:25)
 	[0] ESChangeAttribute(46:3814) -> Elemental Flip
-	Change own attribute to random one of Water, Wood
+	Change own attribute to random one of Water or Wood
 	[1] ESOrbChangeAttack(48:3820) -> Heal-to-Green Twist Puppetry
 	Change Heal to Wood, Deal 90% damage
 
 SkillSet:
 	Condition: 35% chance (ai:0 rnd:35)
 	[0] ESChangeAttribute(46:3814) -> Elemental Flip
-	Change own attribute to random one of Water, Wood
+	Change own attribute to random one of Water or Wood
 	[1] ESRowSpawnMulti(79:3823) -> Blue Line Stitch Puppetry
-	Change 3rd row to Water orbs, Deal 100% damage
+	Change the 3rd row to Water orbs, Deal 100% damage
 
 ESEndPath(36:26) -> ESEndPath
 end_turn
@@ -56,7 +56,7 @@ SkillSet:
 	Movetime -3s for 1 turn
 
 ESRowSpawnMulti(79:3845) -> Green-to-Blue Stitch Puppetry
-Change 1st, 3rd, 5th row to Wood orbs, 2nd, 4th row to Water orbs, Deal 220% damage
+Change the 1st, 3rd, 5th row to Wood orbs, the 2nd, 4th row to Water orbs, Deal 220% damage
 
 ESNone(0:0) -> ESNone
 nothing
@@ -77,5 +77,5 @@ ESNone(0:0) -> ESNone
 nothing
 
 ESRowSpawnMulti(79:3845) -> Green-to-Blue Stitch Puppetry
-Change 1st, 3rd, 5th row to Wood orbs, 2nd, 4th row to Water orbs, Deal 220% damage
+Change the 1st, 3rd, 5th row to Wood orbs, the 2nd, 4th row to Water orbs, Deal 220% damage
 

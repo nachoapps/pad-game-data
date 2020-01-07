@@ -22,7 +22,7 @@ SkillSet:
 	[0] ESStatusShield(20:4354) -> This wishful soul looks tasty
 	Voids status ailments for 5 turns
 	[1] ESDamageShield(74:4353) -> Dividing Damage
-	Reduce damage from all sources by 50% for 5 turns
+	Reduce damage from all sources all_sources by 50% for 5 turns
 
 ESEndPath(36:26) -> ESEndPath
 end_turn
@@ -39,7 +39,7 @@ SkillSet:
 	[0] ESAttackMultihit(15:4374) -> Twin Prominence
 	Deal 120% damage (4 hits, 30% each)
 	[1] ESBoardChangeAttackBits(85:4359) -> Sunrise Zone
-	Change all orbs to Fire, Light, Dark, Heal, Deal 150% damage
+	Change all orbs to Fire, Light, Dark, and Heal, Deal 150% damage
 
 ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 50, target rnd 26
@@ -55,15 +55,15 @@ Branch on player_cards HAS [1946, 1947, 2744], target rnd 15
 
 SkillSet:
 	[0] ESAbsorbCombo(67:4358) -> Auroral Chains
-	Absorb combos <= 5 damage for 1 turn
+	Absorb damage when combos <= 5 for 1 turn
 	[1] ESBoardChangeAttackBits(85:4359) -> Sunrise Zone
-	Change all orbs to Fire, Light, Dark, Heal, Deal 150% damage
+	Change all orbs to Fire, Light, Dark, and Heal, Deal 150% damage
 
 SkillSet:
 	[0] ESAbsorbCombo(67:4357) -> Hurry! Let me eat your soul!
-	Absorb combos <= 5 damage for 1 turn
+	Absorb damage when combos <= 5 for 1 turn
 	[1] ESBoardChangeAttackBits(85:4359) -> Sunrise Zone
-	Change all orbs to Fire, Light, Dark, Heal, Deal 150% damage
+	Change all orbs to Fire, Light, Dark, and Heal, Deal 150% damage
 
 ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 4, target rnd 20
@@ -79,19 +79,19 @@ flag UNSET 0b100
 
 ESRandomSpawn(92:4362) -> Dawn Guidance
 Condition: 30% chance (ai:0 rnd:30)
-Spawn random 6 Heal orbs, Deal 175% damage
+Spawn 6 random Heal orbs, Deal 175% damage
 
 SkillSet:
 	Condition: 20% chance (ai:0 rnd:20)
 	[0] ESColumnSpawnMulti(77:4363) -> Thunder Roar
-	Change 2nd column to Light orbs, Deal 40% damage
+	Change the 2nd column to Light orbs, Deal 40% damage
 	[1] ESColumnSpawnMulti(77:4364) -> Heat Roar
-	Change 4th column to Fire orbs, Deal 40% damage
+	Change the 4th column to Fire orbs, Deal 40% damage
 
 SkillSet:
 	Condition: 15% chance (ai:0 rnd:15)
 	[0] ESColumnSpawnMulti(77:4363) -> Thunder Roar
-	Change 2nd column to Light orbs, Deal 40% damage
+	Change the 2nd column to Light orbs, Deal 40% damage
 	[1] ESAttackMultihit(15:4366) -> Prominence Bullet
 	Deal 60% damage (3 hits, 20% each)
 
@@ -100,7 +100,7 @@ SkillSet:
 	[0] ESAttackMultihit(15:4365) -> Prominence Breath
 	Deal 60% damage
 	[1] ESColumnSpawnMulti(77:4364) -> Heat Roar
-	Change 4th column to Fire orbs, Deal 40% damage
+	Change the 4th column to Fire orbs, Deal 40% damage
 
 SkillSet:
 	Condition: 20% chance (ai:0 rnd:20)
@@ -129,19 +129,19 @@ SkillSet:
 	[0] ESAttackMultihit(15:4374) -> Twin Prominence
 	Deal 120% damage (4 hits, 30% each)
 	[1] ESOrbLock(94:4376) -> Double-headed Gaze
-	Lock 10 random Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs
+	Lock 10 random Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, and Mortal Poison orbs
 
 SkillSet:
 	Condition: 50% chance (ai:50 rnd:0)
 	[0] ESColumnSpawnMulti(77:4375) -> Red Heat's Purifying Thunder
-	Change 2nd column to Light orbs, 4th column to Fire orbs, Deal 80% damage
+	Change the 2nd column to Light orbs, the 4th column to Fire orbs, Deal 80% damage
 	[1] ESOrbLock(94:4376) -> Double-headed Gaze
-	Lock 10 random Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs
+	Lock 10 random Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, and Mortal Poison orbs
 
 ESRandomSpawn(92:4362) -> Dawn Guidance
 Condition: When < 75% hp (ai:100 rnd:0)
-Spawn random 6 Heal orbs, Deal 175% damage
+Spawn 6 random Heal orbs, Deal 175% damage
 
 ESAttributeResist(72:4383) -> Water Halven
-Reduce damage from Water by 50%
+Reduce damage from Water attrs by 50%
 

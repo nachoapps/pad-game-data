@@ -14,9 +14,9 @@ flag SET 0b1
 
 SkillSet:
 	[0] ESBoardChangeAttackBits(85:13135) -> Don't drop the ball!
-	Change all orbs to Fire, Water, Wood, Light, Dark, Jammer, Poison, Deal 60% damage
+	Change all orbs to Fire, Water, Wood, Light, Dark, Jammer, and Poison, Deal 60% damage
 	[1] ESOrbLock(94:13136) -> Don't stop moving!
-	Lock all Jammer, Poison orbs
+	Lock all Jammer and Poison orbs
 
 ESEndPath(36:26) -> ESEndPath
 end_turn
@@ -30,7 +30,7 @@ Change Water to Fire, Deal 60% damage
 
 ESDamageShield(74:13142) -> It really starts now
 Condition: When < 80% hp , one-time use (ai:100 rnd:0) (cost: 1)
-Reduce damage from all sources by 50% for 10 turns
+Reduce damage from all sources all_sources by 50% for 10 turns
 
 ESAttackMultihit(15:13143) -> Pick up everything!
 Condition: When < 30% hp (ai:100 rnd:0)
@@ -42,7 +42,7 @@ Change Water to Fire, Deal 60% damage
 
 ESRowSpawnMulti(79:13141) -> Don't give up!
 Condition: 60% chance (ai:60 rnd:0)
-Change 1st, 2nd row to Fire, Jammer, Poison orbs, Deal 60% damage
+Change the 1st, 2nd row to Fire, Jammer, and Poison orbs, Deal 60% damage
 
 ESEndPath(36:26) -> ESEndPath
 end_turn
@@ -55,7 +55,7 @@ flag SET 0b11
 
 ESDamageShield(74:13142) -> It really starts now
 Condition: When < 80% hp , one-time use (ai:100 rnd:0) (cost: 1)
-Reduce damage from all sources by 50% for 10 turns
+Reduce damage from all sources all_sources by 50% for 10 turns
 
 ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 4, target rnd 8
@@ -65,5 +65,5 @@ flag SET 0b111
 
 ESDamageShield(74:13142) -> It really starts now
 Condition: When < 80% hp , one-time use (ai:100 rnd:0) (cost: 1)
-Reduce damage from all sources by 50% for 10 turns
+Reduce damage from all sources all_sources by 50% for 10 turns
 

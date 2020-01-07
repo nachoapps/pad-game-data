@@ -41,7 +41,7 @@ Branch on hp < 30, target rnd 26
 
 ESChangeAttribute(46:7018) -> Change mon Attaque
 Condition: 50% chance (ai:0 rnd:50)
-Change own attribute to random one of Light, Water, Deal 320% damage
+Change own attribute to random one of Light or Water, Deal 320% damage
 
 ESBindAwoken(88:7019) -> Divine Charm
 Condition: 30% chance (ai:0 rnd:30)
@@ -49,7 +49,7 @@ Bind awoken skills for 1 turn, Deal 290% damage
 
 ESAbsorbCombo(67:7017) -> Prism Burst
 Condition: 20% chance (ai:0 rnd:20)
-Absorb combos <= 8 damage for 1 turn, Deal 290% damage
+Absorb damage when combos <= 8 for 1 turn, Deal 290% damage
 
 ESEndPath(36:26) -> ESEndPath
 end_turn
@@ -77,7 +77,7 @@ SkillSet:
 SkillSet:
 	Condition: One-time use (ai:0 rnd:33) (cost: 6)
 	[0] ESDamageShield(74:7006) -> Shell Scales
-	Reduce damage from all sources by 75% for 3 turns
+	Reduce damage from all sources all_sources by 75% for 3 turns
 	[1] ESAttackMultihit(15:7007) -> Shining Stream
 	Deal 480% damage (4 hits, 120% each)
 
@@ -100,7 +100,7 @@ SkillSet:
 SkillSet:
 	Condition: One-time use (ai:100 rnd:0) (cost: 7)
 	[0] ESDamageShield(74:7006) -> Shell Scales
-	Reduce damage from all sources by 75% for 3 turns
+	Reduce damage from all sources all_sources by 75% for 3 turns
 	[1] ESAttackMultihit(15:7007) -> Shining Stream
 	Deal 480% damage (4 hits, 120% each)
 
@@ -130,7 +130,7 @@ SkillSet:
 SkillSet:
 	Condition: One-time use (ai:100 rnd:0) (cost: 1)
 	[0] ESDamageShield(74:7006) -> Shell Scales
-	Reduce damage from all sources by 75% for 3 turns
+	Reduce damage from all sources all_sources by 75% for 3 turns
 	[1] ESAttackMultihit(15:7007) -> Shining Stream
 	Deal 480% damage (4 hits, 120% each)
 
@@ -144,5 +144,5 @@ ESEndPath(36:26) -> ESEndPath
 end_turn
 
 ESAttributeResist(72:7023) -> Light damage halved
-Reduce damage from Light by 50%
+Reduce damage from Light attrs by 50%
 

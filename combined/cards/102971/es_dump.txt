@@ -11,7 +11,7 @@ SkillSet:
 	[0] ESStatusShield(20:6584) -> Water Dragon's Armor
 	Voids status ailments for 999 turns
 	[1] ESSkyfall(68:6585) -> Vanishing Lifespring-Blue Life
-	Fire, Wood, Light, Dark skyfall +100% for 3 turns
+	Fire, Wood, Light, and Dark skyfall +100% for 3 turns
 
 ESAttackMultihit(15:6599) -> Indigo Beam Zero-Wave
 Condition: When < 20% hp (ai:100 rnd:0)
@@ -44,9 +44,9 @@ Deal 320% damage (2 hits, 160% each)
 SkillSet:
 	Condition: One-time use (ai:100 rnd:0) (cost: 1)
 	[0] ESAbsorbCombo(67:6593) -> Obelisk of Ice
-	Absorb combos <= 6 damage for 5 turns
+	Absorb damage when combos <= 6 for 5 turns
 	[1] ESAbsorbThreshold(87:6594) -> Forget-me-not Magatama
-	Absorb damage >= 5,000,000 damage for 5 turns
+	Absorb damage when damage >= 5,000,000 for 5 turns
 
 ESBranchHP(29:19) -> ESBranchHP
 Branch on hp > 90, target rnd 18
@@ -58,7 +58,7 @@ ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b1
 
 ESOrbLock(94:6598) -> Skyward Aqua Blade
-Lock 8 random Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs, Deal 280% damage
+Lock 8 random Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, and Mortal Poison orbs, Deal 280% damage
 
 ESFlagOperation(24:14) -> ESFlagOperation
 flag UNSET 0b1
@@ -76,5 +76,5 @@ ESEndPath(36:26) -> ESEndPath
 end_turn
 
 ESTypeResist(118:12149) -> Tsuba Kae Sumi Dragon Halved
-Reduce damage from Dragon by 50%
+Reduce damage from Dragon types by 50%
 

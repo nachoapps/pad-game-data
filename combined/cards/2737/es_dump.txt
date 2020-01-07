@@ -17,21 +17,21 @@ SkillSet:
 	[0] ESStatusShield(20:2838) -> Let's have some fun
 	Voids status ailments for 999 turns
 	[1] ESAbsorbAttribute(53:2839) -> Dragon's Origin
-	Absorb Fire, Light, Dark damage for 3 turns
+	Absorb Fire, Light, and Dark damage for 3 turns
 
 SkillSet:
 	Condition: 34% chance (ai:0 rnd:34)
 	[0] ESStatusShield(20:2838) -> Let's have some fun
 	Voids status ailments for 999 turns
 	[1] ESAbsorbAttribute(53:2840) -> Dragon's Origin
-	Absorb Water, Light, Dark damage for 3 turns
+	Absorb Water, Light, and Dark damage for 3 turns
 
 SkillSet:
 	Condition: 33% chance (ai:0 rnd:33)
 	[0] ESStatusShield(20:2838) -> Let's have some fun
 	Voids status ailments for 999 turns
 	[1] ESAbsorbAttribute(53:2841) -> Dragon's Origin
-	Absorb Wood, Light, Dark damage for 3 turns
+	Absorb Wood, Light, and Dark damage for 3 turns
 
 ESEndPath(36:26) -> ESEndPath
 end_turn
@@ -51,11 +51,11 @@ Do nothing
 
 ESDamageShield(74:2846) -> Fair Skies Guardian Dragon - Shield
 Condition: One-time use (ai:100 rnd:0) (cost: 16)
-Reduce damage from all sources by 50% for 2 turns
+Reduce damage from all sources all_sources by 50% for 2 turns
 
 ESAbsorbCombo(67:2847) -> Fair Skies Guardian Dragon - Skill
 Condition: One-time use (ai:100 rnd:0) (cost: 8)
-Absorb combos <= 6 damage for 2 turns
+Absorb damage when combos <= 6 for 2 turns
 
 ESVoidShield(71:2848) -> Fair Skies Guardian Dragon - Balance
 Condition: One-time use (ai:100 rnd:0) (cost: 4)
@@ -63,7 +63,7 @@ Void damage >= 800000 for 2 turns
 
 ESAbsorbThreshold(87:2849) -> Fair Skies Guardian Dragon - Judge
 Condition: One-time use (ai:100 rnd:0) (cost: 2)
-Absorb damage >= 1,500,000 damage for 2 turns
+Absorb damage when damage >= 1,500,000 for 2 turns
 
 ESFlagOperation(24:14) -> ESFlagOperation
 flag UNSET 0b10
@@ -73,7 +73,7 @@ SkillSet:
 	[0] ESAttackUPRemainingEnemies(17:2850) -> Draggie Knight, Zeal's Enhancement
 	Increase damage to 250% for the next 1 turn
 	[1] ESDamageShield(74:2851) -> Draggie Shield
-	Reduce damage from all sources by 75% for 1 turn
+	Reduce damage from all sources all_sources by 75% for 1 turn
 
 ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 1, target rnd 26
@@ -99,7 +99,7 @@ Change Random to Dark, Deal 150% damage
 
 ESBoardChangeAttackBits(85:2858) -> Brilliant Dragon Skull
 Condition: 20% chance (ai:0 rnd:20)
-Change all orbs to Fire, Water, Wood, Light, Dark, Deal 140% damage
+Change all orbs to Fire, Water, Wood, Light, and Dark, Deal 140% damage
 
 ESEndPath(36:26) -> ESEndPath
 end_turn

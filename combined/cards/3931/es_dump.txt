@@ -14,14 +14,14 @@ SkillSet:
 	[0] ESStatusShield(20:13917) -> Intruders Detected
 	Voids status ailments for 999 turns
 	[1] ESDamageShield(74:13918) -> Eliminating Targets
-	Reduce damage from all sources by 50% for 3 turns
+	Reduce damage from all sources all_sources by 50% for 3 turns
 
 SkillSet:
 	Condition: One-time use (ai:100 rnd:0) (cost: 1)
 	[0] ESStatusShield(20:13919) -> ... What is this feeling?
 	Voids status ailments for 999 turns
 	[1] ESDamageShield(74:13918) -> Eliminating Targets
-	Reduce damage from all sources by 50% for 3 turns
+	Reduce damage from all sources all_sources by 50% for 3 turns
 
 ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 10, target rnd 17
@@ -40,7 +40,7 @@ Branch on counter > 3, target rnd 19
 
 ESOrbLock(94:13922) -> Shield Chain
 Condition: 50% chance (ai:0 rnd:50)
-Lock 15 random Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs, Deal 100% damage
+Lock 15 random Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, and Mortal Poison orbs, Deal 100% damage
 
 ESAttackMultihit(15:13923) -> Absolute Destruction
 Condition: 50% chance (ai:0 rnd:50)
@@ -57,7 +57,7 @@ flag SET 0b11
 
 SkillSet:
 	[0] ESAbsorbCombo(67:13921) -> Destroy
-	Absorb combos <= 7 damage for 5 turns
+	Absorb damage when combos <= 7 for 5 turns
 	[1] ESAttackUPRemainingEnemies(17:13910) -> Summoning Dragon's Guidance
 	Increase damage to 150% for the next 999 turns
 

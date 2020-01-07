@@ -21,7 +21,7 @@ flag SET 0b1
 
 #6: SkillSet:
 	[0] ESOrbLock(94:7647) -> Radiant Blond Hair
-	Lock all Light, Heal orbs
+	Lock all Light and Heal orbs
 	[1] ESBoardChangeAttackBits(85:7648) -> Light Pulse
 	Change all orbs to Jammer, Deal 100% damage
 
@@ -44,14 +44,14 @@ Change Jammer to Heal, Deal 280% damage
 #12: SkillSet:
 	Condition: One-time use (ai:100 rnd:0) (cost: 3)
 	[0] ESDamageShield(74:7650) -> Pure White Silk Scales
-	Reduce damage from all sources by 35% for 10 turns
+	Reduce damage from all sources all_sources by 35% for 10 turns
 	[1] ESStatusShield(20:7651) -> Songstress's Divine Protection
 	Voids status ailments for 10 turns
 
 #13: SkillSet:
 	Condition: One-time use (ai:100 rnd:0) (cost: 3)
 	[0] ESDamageShield(74:7650) -> Pure White Silk Scales
-	Reduce damage from all sources by 35% for 10 turns
+	Reduce damage from all sources all_sources by 35% for 10 turns
 	[1] ESStatusShield(20:7651) -> Songstress's Divine Protection
 	Voids status ailments for 10 turns
 
@@ -64,7 +64,7 @@ Increase damage to 150% for the next 999 turns
 
 #16: ESAbsorbThreshold(87:7656) -> Pure White Damask Scales
 Condition: One-time use (ai:100 rnd:0) (cost: 3)
-Absorb damage >= 1,000,000 damage for 4 turns
+Absorb damage when damage >= 1,000,000 for 4 turns
 
 #17: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 4, target rnd 20
@@ -82,7 +82,7 @@ Branch on flag & 8, target rnd 23
 flag SET 0b1111
 
 #22: ESRandomSpawn(92:7657) -> Golden Flower Thorns
-Spawn random 3 Mortal Poison orbs, Deal 110% damage
+Spawn 3 random Mortal Poison orbs, Deal 110% damage
 
 #23: ESFlagOperation(24:14) -> ESFlagOperation
 flag UNSET 0b1100
@@ -103,7 +103,7 @@ flag SET 0b11111
 Delay active skills by 5 turns
 
 #29: ESBoardChangeAttackBits(85:7661) -> Scattered Gleam of Bewitching Beauty
-Change all orbs to Light, Jammer, Deal 3000% damage
+Change all orbs to Light and Jammer, Deal 3000% damage
 
 #30: ESAttributeResist(72:8210) -> Light Jewel Halved
-Reduce damage from Light by 50%
+Reduce damage from Light attrs by 50%

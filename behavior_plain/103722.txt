@@ -21,11 +21,11 @@ flag SET 0b1
 
 #6: SkillSet:
 	[0] ESDamageShield(74:7488) -> Abyssal Scales
-	Reduce damage from all sources by 50% for 5 turns
+	Reduce damage from all sources all_sources by 50% for 5 turns
 	[1] ESCloud(104:7485) -> Vehement Sea Fog
 	6x2 cloud appear for 1 turn at 3rd row, 1st column
 	[2] ESRandomSpawn(92:7486) -> Oceanic Obstruction
-	Spawn random 11 Jammer orbs
+	Spawn 11 random Jammer orbs
 
 #7: ESEndPath(36:26) -> ESEndPath
 end_turn
@@ -42,21 +42,21 @@ flag SET 0b11
 #11: SkillSet:
 	Condition: One-time use (ai:100 rnd:0) (cost: 3)
 	[0] ESAbsorbCombo(67:7489) -> Mariner's Divine Protection
-	Absorb combos <= 6 damage for 10 turns
+	Absorb damage when combos <= 6 for 10 turns
 	[1] ESOrbChangeAttack(48:7491) -> Outbreak
 	Change Jammer to Poison, Deal 250% damage
 
 #12: SkillSet:
 	Condition: One-time use (ai:100 rnd:0) (cost: 3)
 	[0] ESAbsorbCombo(67:7489) -> Mariner's Divine Protection
-	Absorb combos <= 6 damage for 10 turns
+	Absorb damage when combos <= 6 for 10 turns
 	[1] ESOrbChangeAttack(48:7491) -> Outbreak
 	Change Jammer to Poison, Deal 250% damage
 
 #13: SkillSet:
 	Condition: One-time use (ai:100 rnd:0) (cost: 3)
 	[0] ESAbsorbCombo(67:7489) -> Mariner's Divine Protection
-	Absorb combos <= 6 damage for 10 turns
+	Absorb damage when combos <= 6 for 10 turns
 	[1] ESOrbChangeAttack(48:7491) -> Outbreak
 	Change Jammer to Poison, Deal 250% damage
 
@@ -69,7 +69,7 @@ Increase damage to 150% for the next 999 turns
 
 #16: ESDamageShield(74:7494) -> Abyssal Scales
 Condition: One-time use (ai:100 rnd:0) (cost: 3)
-Reduce damage from all sources by 75% for 4 turns
+Reduce damage from all sources all_sources by 75% for 4 turns
 
 #17: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 4, target rnd 20
@@ -108,7 +108,7 @@ flag SET 0b11111
 Bind awoken skills for 5 turns
 
 #29: ESBoardChangeAttackBits(85:7499) -> Raging River Peal
-Change all orbs to Water, Jammer, Deal 3000% damage
+Change all orbs to Water and Jammer, Deal 3000% damage
 
 #30: ESAttributeResist(72:8208) -> Fire Halved for Water Jewel
-Reduce damage from Fire by 50%
+Reduce damage from Fire attrs by 50%

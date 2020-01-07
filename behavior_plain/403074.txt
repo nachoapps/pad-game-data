@@ -22,7 +22,7 @@ flag SET 0b1
 	[2] ESDispel(6:13714) -> Prepare yourself.
 	Voids player buff effects
 	[3] ESAbsorbThreshold(87:13715) -> Iron DEF of Aegis
-	Absorb damage >= 4,000,000 damage for 99 turns
+	Absorb damage when damage >= 4,000,000 for 99 turns
 
 #5: ESEndPath(36:26) -> ESEndPath
 end_turn
@@ -46,10 +46,10 @@ Player -150% HP
 
 #10: ESColumnSpawnMulti(77:5150) -> C-Shining Spear
 Condition: 50% chance (ai:50 rnd:0)
-Change 2nd column to Wood orbs, 5th column to Light orbs, Deal 380% damage
+Change the 2nd column to Wood orbs, the 5th column to Light orbs, Deal 380% damage
 
 #11: ESChangeAttribute(46:5152) -> EB & Self Convert
-Change own attribute to random one of Wood, Light, Deal 380% damage
+Change own attribute to random one of Wood or Light, Deal 380% damage
 
 #12: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 2, target rnd 15
@@ -58,7 +58,7 @@ Branch on flag & 2, target rnd 15
 flag SET 0b11
 
 #14: ESDamageShield(74:5149) -> AS-Complete Protection
-Reduce damage from all sources by 99% for 2 turns
+Reduce damage from all sources all_sources by 99% for 2 turns
 
 #15: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 4, target rnd 8

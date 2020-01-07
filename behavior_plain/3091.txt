@@ -15,7 +15,7 @@ flag SET 0b1
 
 #4: SkillSet:
 	[0] ESDamageShield(74:5211) -> Burning Heat Mantle
-	Reduce damage from all sources by 75% for 4 turns
+	Reduce damage from all sources all_sources by 75% for 4 turns
 	[1] ESGravity(50:5212) -> Blazing Tail
 	Player -99% HP
 
@@ -35,7 +35,7 @@ Branch on hp < 20, target rnd 23
 Branch on hp < 80, target rnd 24
 
 #10: ESRandomSpawn(92:5213) -> Powerful Blaze
-Spawn random 6 Fire orbs, Deal 170% damage
+Spawn 6 random Fire orbs, Deal 170% damage
 
 #11: ESEndPath(36:26) -> ESEndPath
 end_turn
@@ -74,7 +74,7 @@ Player -99% HP
 end_turn
 
 #23: ESRowSpawnMulti(79:5216) -> Inferno Blast
-Change 1st row to Fire orbs, Deal 200% damage
+Change the 1st row to Fire orbs, Deal 200% damage
 
 #24: ESOrbChangeAttack(48:5215) -> Flame Breath
 Change Random to Fire, Deal 100% damage

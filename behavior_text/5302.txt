@@ -9,19 +9,19 @@ approved: False
 level: 1
  type: PREEMPT
  | (13323:83) Welcome to the new Era + My name is Reiwa + I would be happy if you remember it... + Do your best and make some combos
- | Voids status ailments for 999 turns + Immune to damage from all sources for 999 turns + No skyfall for 10 turns + Spawn random 6 Fire, Water, Wood, Light, Dark orbs
+ | Voids status ailments for 999 turns + Immune to damage from all sources all_sources for 999 turns + No skyfall for 10 turns + Spawn 6 random Fire, Water, Wood, Light, or Dark orbs
  group:
  | group:
    | group:
    | condition: always turn 1
      | condition: when 10 combos last turn
      | (13386:83) You're...amazing + Okay, let's start
-     | Reduce damage from all sources by 50% for 5 turns + Remove damage immunity effect
+     | Reduce damage from all sources all_sources by 50% for 5 turns + Remove damage immunity effect
      | condition: when 7 combos last turn
      | (13389:83) That was close + Stability + Okay, let's start
-     | Reduce damage from all sources by 50% for 5 turns + Void damage >= 50000000 for 999 turns + Remove damage immunity effect
+     | Reduce damage from all sources all_sources by 50% for 5 turns + Void damage >= 50000000 for 999 turns + Remove damage immunity effect
      | (13393:83) How disappointing + Stability + Time-Distortion + Okay, let's start
-     | Reduce damage from all sources by 50% for 5 turns + Void damage >= 50000000 for 999 turns + Random 1 orbs change every 1.0s for 5 turns + Remove damage immunity effect
+     | Reduce damage from all sources all_sources by 50% for 5 turns + Void damage >= 50000000 for 999 turns + Random 1 orbs change every 1.0s for 5 turns + Remove damage immunity effect
    | group:
      | (13342:83) Hey + Anti-Cure
      | Player -99% HP + Rcv 50% for 2 turns
@@ -31,18 +31,18 @@ level: 1
    | condition: turn 2 while HP > 49
      | condition: 20% chance
      | (13327:83) The new Era... + What color is it?
-     | Absorb Water damage for 2 turns + Change own attribute to random one of Fire, Water, Deal 100% damage
+     | Absorb Water damage for 2 turns + Change own attribute to random one of Fire or Water, Deal 100% damage
      | condition: 25% chance
      | (13328:83) The new Era... + What color is it?
-     | Absorb Wood damage for 2 turns + Change own attribute to random one of Water, Wood, Deal 100% damage
+     | Absorb Wood damage for 2 turns + Change own attribute to random one of Water or Wood, Deal 100% damage
      | condition: 33% chance
      | (13329:83) The new Era... + What color is it?
-     | Absorb Fire damage for 2 turns + Change own attribute to random one of Wood, Fire, Deal 100% damage
+     | Absorb Fire damage for 2 turns + Change own attribute to random one of Wood or Fire, Deal 100% damage
      | condition: 50% chance
      | (13330:83) The new Era... + What color is it?
-     | Absorb Dark damage for 2 turns + Change own attribute to random one of Light, Dark, Deal 100% damage
+     | Absorb Dark damage for 2 turns + Change own attribute to random one of Light or Dark, Deal 100% damage
      | (13331:83) The new Era... + What color is it?
-     | Absorb Light damage for 2 turns + Change own attribute to random one of Dark, Light, Deal 100% damage
+     | Absorb Light damage for 2 turns + Change own attribute to random one of Dark or Light, Deal 100% damage
    | group:
    | condition: turns 3-4 while HP > 49
      | condition: 50% chance
@@ -50,23 +50,23 @@ level: 1
      | Blind all orbs on the board + Movetime -3s for 2 turns, Deal 95% damage
      | condition: 50% chance
      | (13346:83) Ripple Lock + Blade Dance
-     | Lock 10 random Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs + Deal 105% damage (3 hits, 35% each), Deal 105% damage (3 hits, 35% each)
+     | Lock 10 random Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, and Mortal Poison orbs + Deal 105% damage (3 hits, 35% each), Deal 105% damage (3 hits, 35% each)
    | group:
    | condition: turn 5 while HP > 49
      | condition: 20% chance
      | (13327:83) The new Era... + What color is it?
-     | Absorb Water damage for 2 turns + Change own attribute to random one of Fire, Water, Deal 100% damage
+     | Absorb Water damage for 2 turns + Change own attribute to random one of Fire or Water, Deal 100% damage
      | condition: 25% chance
      | (13328:83) The new Era... + What color is it?
-     | Absorb Wood damage for 2 turns + Change own attribute to random one of Water, Wood, Deal 100% damage
+     | Absorb Wood damage for 2 turns + Change own attribute to random one of Water or Wood, Deal 100% damage
      | condition: 33% chance
      | (13329:83) The new Era... + What color is it?
-     | Absorb Fire damage for 2 turns + Change own attribute to random one of Wood, Fire, Deal 100% damage
+     | Absorb Fire damage for 2 turns + Change own attribute to random one of Wood or Fire, Deal 100% damage
      | condition: 50% chance
      | (13330:83) The new Era... + What color is it?
-     | Absorb Dark damage for 2 turns + Change own attribute to random one of Light, Dark, Deal 100% damage
+     | Absorb Dark damage for 2 turns + Change own attribute to random one of Light or Dark, Deal 100% damage
      | (13331:83) The new Era... + What color is it?
-     | Absorb Light damage for 2 turns + Change own attribute to random one of Dark, Light, Deal 100% damage
+     | Absorb Light damage for 2 turns + Change own attribute to random one of Dark or Light, Deal 100% damage
    | group:
    | condition: turns 6-7 while HP > 49
      | condition: 50% chance
@@ -74,23 +74,23 @@ level: 1
      | Blind all orbs on the board + Movetime -3s for 2 turns, Deal 95% damage
      | condition: 50% chance
      | (13346:83) Ripple Lock + Blade Dance
-     | Lock 10 random Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs + Deal 105% damage (3 hits, 35% each), Deal 105% damage (3 hits, 35% each)
+     | Lock 10 random Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, and Mortal Poison orbs + Deal 105% damage (3 hits, 35% each), Deal 105% damage (3 hits, 35% each)
    | group:
    | condition: turn 8 while HP > 49
      | condition: 20% chance
      | (13327:83) The new Era... + What color is it?
-     | Absorb Water damage for 2 turns + Change own attribute to random one of Fire, Water, Deal 100% damage
+     | Absorb Water damage for 2 turns + Change own attribute to random one of Fire or Water, Deal 100% damage
      | condition: 25% chance
      | (13328:83) The new Era... + What color is it?
-     | Absorb Wood damage for 2 turns + Change own attribute to random one of Water, Wood, Deal 100% damage
+     | Absorb Wood damage for 2 turns + Change own attribute to random one of Water or Wood, Deal 100% damage
      | condition: 33% chance
      | (13329:83) The new Era... + What color is it?
-     | Absorb Fire damage for 2 turns + Change own attribute to random one of Wood, Fire, Deal 100% damage
+     | Absorb Fire damage for 2 turns + Change own attribute to random one of Wood or Fire, Deal 100% damage
      | condition: 50% chance
      | (13330:83) The new Era... + What color is it?
-     | Absorb Dark damage for 2 turns + Change own attribute to random one of Light, Dark, Deal 100% damage
+     | Absorb Dark damage for 2 turns + Change own attribute to random one of Light or Dark, Deal 100% damage
      | (13331:83) The new Era... + What color is it?
-     | Absorb Light damage for 2 turns + Change own attribute to random one of Dark, Light, Deal 100% damage
+     | Absorb Light damage for 2 turns + Change own attribute to random one of Dark or Light, Deal 100% damage
    | group:
    | condition: turns 9-10 while HP > 49
      | condition: 50% chance
@@ -98,23 +98,23 @@ level: 1
      | Blind all orbs on the board + Movetime -3s for 2 turns, Deal 95% damage
      | condition: 50% chance
      | (13346:83) Ripple Lock + Blade Dance
-     | Lock 10 random Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs + Deal 105% damage (3 hits, 35% each), Deal 105% damage (3 hits, 35% each)
+     | Lock 10 random Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, and Mortal Poison orbs + Deal 105% damage (3 hits, 35% each), Deal 105% damage (3 hits, 35% each)
    | group:
    | condition: execute repeatedly, turn 1 of 3
      | condition: 20% chance
      | (13327:83) The new Era... + What color is it?
-     | Absorb Water damage for 2 turns + Change own attribute to random one of Fire, Water, Deal 100% damage
+     | Absorb Water damage for 2 turns + Change own attribute to random one of Fire or Water, Deal 100% damage
      | condition: 25% chance
      | (13328:83) The new Era... + What color is it?
-     | Absorb Wood damage for 2 turns + Change own attribute to random one of Water, Wood, Deal 100% damage
+     | Absorb Wood damage for 2 turns + Change own attribute to random one of Water or Wood, Deal 100% damage
      | condition: 33% chance
      | (13329:83) The new Era... + What color is it?
-     | Absorb Fire damage for 2 turns + Change own attribute to random one of Wood, Fire, Deal 100% damage
+     | Absorb Fire damage for 2 turns + Change own attribute to random one of Wood or Fire, Deal 100% damage
      | condition: 50% chance
      | (13330:83) The new Era... + What color is it?
-     | Absorb Dark damage for 2 turns + Change own attribute to random one of Light, Dark, Deal 100% damage
+     | Absorb Dark damage for 2 turns + Change own attribute to random one of Light or Dark, Deal 100% damage
      | (13331:83) The new Era... + What color is it?
-     | Absorb Light damage for 2 turns + Change own attribute to random one of Dark, Light, Deal 100% damage
+     | Absorb Light damage for 2 turns + Change own attribute to random one of Dark or Light, Deal 100% damage
    | group:
    | condition: execute repeatedly, turn 2-3 of 3
      | (13351:127) There
@@ -124,23 +124,23 @@ level: 1
    | group:
    | condition: turn 2 while HP > 14
      | (13353:83) Heaven's Mirror Curtain + Hey
-     | Absorb combos <= 6 damage for 99 turns + Player -99% HP
+     | Absorb damage when combos <= 6 for 99 turns + Player -99% HP
    | group:
    | condition: turn 3 while HP > 14
      | condition: 20% chance
      | (13327:83) The new Era... + What color is it?
-     | Absorb Water damage for 2 turns + Change own attribute to random one of Fire, Water, Deal 100% damage
+     | Absorb Water damage for 2 turns + Change own attribute to random one of Fire or Water, Deal 100% damage
      | condition: 25% chance
      | (13328:83) The new Era... + What color is it?
-     | Absorb Wood damage for 2 turns + Change own attribute to random one of Water, Wood, Deal 100% damage
+     | Absorb Wood damage for 2 turns + Change own attribute to random one of Water or Wood, Deal 100% damage
      | condition: 33% chance
      | (13329:83) The new Era... + What color is it?
-     | Absorb Fire damage for 2 turns + Change own attribute to random one of Wood, Fire, Deal 100% damage
+     | Absorb Fire damage for 2 turns + Change own attribute to random one of Wood or Fire, Deal 100% damage
      | condition: 50% chance
      | (13330:83) The new Era... + What color is it?
-     | Absorb Dark damage for 2 turns + Change own attribute to random one of Light, Dark, Deal 100% damage
+     | Absorb Dark damage for 2 turns + Change own attribute to random one of Light or Dark, Deal 100% damage
      | (13331:83) The new Era... + What color is it?
-     | Absorb Light damage for 2 turns + Change own attribute to random one of Dark, Light, Deal 100% damage
+     | Absorb Light damage for 2 turns + Change own attribute to random one of Dark or Light, Deal 100% damage
    | group:
    | condition: turn 5 while HP > 14
      | condition: 50% chance
@@ -148,23 +148,23 @@ level: 1
      | Blind all orbs on the board + Movetime -3s for 2 turns, Deal 95% damage
      | condition: 50% chance
      | (13346:83) Ripple Lock + Blade Dance
-     | Lock 10 random Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs + Deal 105% damage (3 hits, 35% each), Deal 105% damage (3 hits, 35% each)
+     | Lock 10 random Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, and Mortal Poison orbs + Deal 105% damage (3 hits, 35% each), Deal 105% damage (3 hits, 35% each)
    | group:
    | condition: turn 6 while HP > 14
      | condition: 20% chance
      | (13327:83) The new Era... + What color is it?
-     | Absorb Water damage for 2 turns + Change own attribute to random one of Fire, Water, Deal 100% damage
+     | Absorb Water damage for 2 turns + Change own attribute to random one of Fire or Water, Deal 100% damage
      | condition: 25% chance
      | (13328:83) The new Era... + What color is it?
-     | Absorb Wood damage for 2 turns + Change own attribute to random one of Water, Wood, Deal 100% damage
+     | Absorb Wood damage for 2 turns + Change own attribute to random one of Water or Wood, Deal 100% damage
      | condition: 33% chance
      | (13329:83) The new Era... + What color is it?
-     | Absorb Fire damage for 2 turns + Change own attribute to random one of Wood, Fire, Deal 100% damage
+     | Absorb Fire damage for 2 turns + Change own attribute to random one of Wood or Fire, Deal 100% damage
      | condition: 50% chance
      | (13330:83) The new Era... + What color is it?
-     | Absorb Dark damage for 2 turns + Change own attribute to random one of Light, Dark, Deal 100% damage
+     | Absorb Dark damage for 2 turns + Change own attribute to random one of Light or Dark, Deal 100% damage
      | (13331:83) The new Era... + What color is it?
-     | Absorb Light damage for 2 turns + Change own attribute to random one of Dark, Light, Deal 100% damage
+     | Absorb Light damage for 2 turns + Change own attribute to random one of Dark or Light, Deal 100% damage
    | group:
    | condition: turn 8 while HP > 14
      | condition: 50% chance
@@ -172,23 +172,23 @@ level: 1
      | Blind all orbs on the board + Movetime -3s for 2 turns, Deal 95% damage
      | condition: 50% chance
      | (13346:83) Ripple Lock + Blade Dance
-     | Lock 10 random Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs + Deal 105% damage (3 hits, 35% each), Deal 105% damage (3 hits, 35% each)
+     | Lock 10 random Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, and Mortal Poison orbs + Deal 105% damage (3 hits, 35% each), Deal 105% damage (3 hits, 35% each)
    | group:
    | condition: turn 9 while HP > 14
      | condition: 20% chance
      | (13327:83) The new Era... + What color is it?
-     | Absorb Water damage for 2 turns + Change own attribute to random one of Fire, Water, Deal 100% damage
+     | Absorb Water damage for 2 turns + Change own attribute to random one of Fire or Water, Deal 100% damage
      | condition: 25% chance
      | (13328:83) The new Era... + What color is it?
-     | Absorb Wood damage for 2 turns + Change own attribute to random one of Water, Wood, Deal 100% damage
+     | Absorb Wood damage for 2 turns + Change own attribute to random one of Water or Wood, Deal 100% damage
      | condition: 33% chance
      | (13329:83) The new Era... + What color is it?
-     | Absorb Fire damage for 2 turns + Change own attribute to random one of Wood, Fire, Deal 100% damage
+     | Absorb Fire damage for 2 turns + Change own attribute to random one of Wood or Fire, Deal 100% damage
      | condition: 50% chance
      | (13330:83) The new Era... + What color is it?
-     | Absorb Dark damage for 2 turns + Change own attribute to random one of Light, Dark, Deal 100% damage
+     | Absorb Dark damage for 2 turns + Change own attribute to random one of Light or Dark, Deal 100% damage
      | (13331:83) The new Era... + What color is it?
-     | Absorb Light damage for 2 turns + Change own attribute to random one of Dark, Light, Deal 100% damage
+     | Absorb Light damage for 2 turns + Change own attribute to random one of Dark or Light, Deal 100% damage
    | group:
    | condition: execute repeatedly, turn 1 of 3
      | (13351:127) There
@@ -197,18 +197,18 @@ level: 1
    | condition: execute repeatedly, turn 2 of 3
      | condition: 20% chance
      | (13327:83) The new Era... + What color is it?
-     | Absorb Water damage for 2 turns + Change own attribute to random one of Fire, Water, Deal 100% damage
+     | Absorb Water damage for 2 turns + Change own attribute to random one of Fire or Water, Deal 100% damage
      | condition: 25% chance
      | (13328:83) The new Era... + What color is it?
-     | Absorb Wood damage for 2 turns + Change own attribute to random one of Water, Wood, Deal 100% damage
+     | Absorb Wood damage for 2 turns + Change own attribute to random one of Water or Wood, Deal 100% damage
      | condition: 33% chance
      | (13329:83) The new Era... + What color is it?
-     | Absorb Fire damage for 2 turns + Change own attribute to random one of Wood, Fire, Deal 100% damage
+     | Absorb Fire damage for 2 turns + Change own attribute to random one of Wood or Fire, Deal 100% damage
      | condition: 50% chance
      | (13330:83) The new Era... + What color is it?
-     | Absorb Dark damage for 2 turns + Change own attribute to random one of Light, Dark, Deal 100% damage
+     | Absorb Dark damage for 2 turns + Change own attribute to random one of Light or Dark, Deal 100% damage
      | (13331:83) The new Era... + What color is it?
-     | Absorb Light damage for 2 turns + Change own attribute to random one of Dark, Light, Deal 100% damage
+     | Absorb Light damage for 2 turns + Change own attribute to random one of Dark or Light, Deal 100% damage
    | group:
    | condition: execute repeatedly, turn 3 of 3
      | (13351:127) There
@@ -226,19 +226,19 @@ level: 1
 level: 6
  type: PREEMPT
  | (13323:83) Welcome to the new Era + My name is Reiwa + I would be happy if you remember it... + Do your best and make some combos
- | Voids status ailments for 999 turns + Immune to damage from all sources for 999 turns + No skyfall for 10 turns + Spawn random 6 Fire, Water, Wood, Light, Dark orbs
+ | Voids status ailments for 999 turns + Immune to damage from all sources all_sources for 999 turns + No skyfall for 10 turns + Spawn 6 random Fire, Water, Wood, Light, or Dark orbs
  group:
  | group:
    | group:
    | condition: always turn 1
      | condition: when 10 combos last turn
      | (13386:83) You're...amazing + Okay, let's start
-     | Reduce damage from all sources by 50% for 5 turns + Remove damage immunity effect
+     | Reduce damage from all sources all_sources by 50% for 5 turns + Remove damage immunity effect
      | condition: when 8 combos last turn
      | (13389:83) That was close + Stability + Okay, let's start
-     | Reduce damage from all sources by 50% for 5 turns + Void damage >= 50000000 for 999 turns + Remove damage immunity effect
+     | Reduce damage from all sources all_sources by 50% for 5 turns + Void damage >= 50000000 for 999 turns + Remove damage immunity effect
      | (13391:83) How disappointing + Stability + Time-Distortion + Okay, let's start
-     | Reduce damage from all sources by 50% for 5 turns + Void damage >= 50000000 for 999 turns + Random 4 orbs change every 1.0s for 5 turns + Remove damage immunity effect
+     | Reduce damage from all sources all_sources by 50% for 5 turns + Void damage >= 50000000 for 999 turns + Random 4 orbs change every 1.0s for 5 turns + Remove damage immunity effect
    | group:
      | (13342:83) Hey + Anti-Cure
      | Player -99% HP + Rcv 50% for 2 turns
@@ -248,18 +248,18 @@ level: 6
    | condition: turn 2 while HP > 49
      | condition: 20% chance
      | (13327:83) The new Era... + What color is it?
-     | Absorb Water damage for 2 turns + Change own attribute to random one of Fire, Water, Deal 100% damage
+     | Absorb Water damage for 2 turns + Change own attribute to random one of Fire or Water, Deal 100% damage
      | condition: 25% chance
      | (13328:83) The new Era... + What color is it?
-     | Absorb Wood damage for 2 turns + Change own attribute to random one of Water, Wood, Deal 100% damage
+     | Absorb Wood damage for 2 turns + Change own attribute to random one of Water or Wood, Deal 100% damage
      | condition: 33% chance
      | (13329:83) The new Era... + What color is it?
-     | Absorb Fire damage for 2 turns + Change own attribute to random one of Wood, Fire, Deal 100% damage
+     | Absorb Fire damage for 2 turns + Change own attribute to random one of Wood or Fire, Deal 100% damage
      | condition: 50% chance
      | (13330:83) The new Era... + What color is it?
-     | Absorb Dark damage for 2 turns + Change own attribute to random one of Light, Dark, Deal 100% damage
+     | Absorb Dark damage for 2 turns + Change own attribute to random one of Light or Dark, Deal 100% damage
      | (13331:83) The new Era... + What color is it?
-     | Absorb Light damage for 2 turns + Change own attribute to random one of Dark, Light, Deal 100% damage
+     | Absorb Light damage for 2 turns + Change own attribute to random one of Dark or Light, Deal 100% damage
    | group:
    | condition: turns 3-4 while HP > 49
      | condition: 50% chance
@@ -267,23 +267,23 @@ level: 6
      | Blind all orbs on the board + Movetime -3s for 2 turns, Deal 95% damage
      | condition: 50% chance
      | (13346:83) Ripple Lock + Blade Dance
-     | Lock 10 random Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs + Deal 105% damage (3 hits, 35% each), Deal 105% damage (3 hits, 35% each)
+     | Lock 10 random Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, and Mortal Poison orbs + Deal 105% damage (3 hits, 35% each), Deal 105% damage (3 hits, 35% each)
    | group:
    | condition: turn 5 while HP > 49
      | condition: 20% chance
      | (13327:83) The new Era... + What color is it?
-     | Absorb Water damage for 2 turns + Change own attribute to random one of Fire, Water, Deal 100% damage
+     | Absorb Water damage for 2 turns + Change own attribute to random one of Fire or Water, Deal 100% damage
      | condition: 25% chance
      | (13328:83) The new Era... + What color is it?
-     | Absorb Wood damage for 2 turns + Change own attribute to random one of Water, Wood, Deal 100% damage
+     | Absorb Wood damage for 2 turns + Change own attribute to random one of Water or Wood, Deal 100% damage
      | condition: 33% chance
      | (13329:83) The new Era... + What color is it?
-     | Absorb Fire damage for 2 turns + Change own attribute to random one of Wood, Fire, Deal 100% damage
+     | Absorb Fire damage for 2 turns + Change own attribute to random one of Wood or Fire, Deal 100% damage
      | condition: 50% chance
      | (13330:83) The new Era... + What color is it?
-     | Absorb Dark damage for 2 turns + Change own attribute to random one of Light, Dark, Deal 100% damage
+     | Absorb Dark damage for 2 turns + Change own attribute to random one of Light or Dark, Deal 100% damage
      | (13331:83) The new Era... + What color is it?
-     | Absorb Light damage for 2 turns + Change own attribute to random one of Dark, Light, Deal 100% damage
+     | Absorb Light damage for 2 turns + Change own attribute to random one of Dark or Light, Deal 100% damage
    | group:
    | condition: turns 6-7 while HP > 49
      | condition: 50% chance
@@ -291,23 +291,23 @@ level: 6
      | Blind all orbs on the board + Movetime -3s for 2 turns, Deal 95% damage
      | condition: 50% chance
      | (13346:83) Ripple Lock + Blade Dance
-     | Lock 10 random Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs + Deal 105% damage (3 hits, 35% each), Deal 105% damage (3 hits, 35% each)
+     | Lock 10 random Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, and Mortal Poison orbs + Deal 105% damage (3 hits, 35% each), Deal 105% damage (3 hits, 35% each)
    | group:
    | condition: turn 8 while HP > 49
      | condition: 20% chance
      | (13327:83) The new Era... + What color is it?
-     | Absorb Water damage for 2 turns + Change own attribute to random one of Fire, Water, Deal 100% damage
+     | Absorb Water damage for 2 turns + Change own attribute to random one of Fire or Water, Deal 100% damage
      | condition: 25% chance
      | (13328:83) The new Era... + What color is it?
-     | Absorb Wood damage for 2 turns + Change own attribute to random one of Water, Wood, Deal 100% damage
+     | Absorb Wood damage for 2 turns + Change own attribute to random one of Water or Wood, Deal 100% damage
      | condition: 33% chance
      | (13329:83) The new Era... + What color is it?
-     | Absorb Fire damage for 2 turns + Change own attribute to random one of Wood, Fire, Deal 100% damage
+     | Absorb Fire damage for 2 turns + Change own attribute to random one of Wood or Fire, Deal 100% damage
      | condition: 50% chance
      | (13330:83) The new Era... + What color is it?
-     | Absorb Dark damage for 2 turns + Change own attribute to random one of Light, Dark, Deal 100% damage
+     | Absorb Dark damage for 2 turns + Change own attribute to random one of Light or Dark, Deal 100% damage
      | (13331:83) The new Era... + What color is it?
-     | Absorb Light damage for 2 turns + Change own attribute to random one of Dark, Light, Deal 100% damage
+     | Absorb Light damage for 2 turns + Change own attribute to random one of Dark or Light, Deal 100% damage
    | group:
    | condition: turns 9-10 while HP > 49
      | condition: 50% chance
@@ -315,23 +315,23 @@ level: 6
      | Blind all orbs on the board + Movetime -3s for 2 turns, Deal 95% damage
      | condition: 50% chance
      | (13346:83) Ripple Lock + Blade Dance
-     | Lock 10 random Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs + Deal 105% damage (3 hits, 35% each), Deal 105% damage (3 hits, 35% each)
+     | Lock 10 random Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, and Mortal Poison orbs + Deal 105% damage (3 hits, 35% each), Deal 105% damage (3 hits, 35% each)
    | group:
    | condition: execute repeatedly, turn 1 of 3
      | condition: 20% chance
      | (13327:83) The new Era... + What color is it?
-     | Absorb Water damage for 2 turns + Change own attribute to random one of Fire, Water, Deal 100% damage
+     | Absorb Water damage for 2 turns + Change own attribute to random one of Fire or Water, Deal 100% damage
      | condition: 25% chance
      | (13328:83) The new Era... + What color is it?
-     | Absorb Wood damage for 2 turns + Change own attribute to random one of Water, Wood, Deal 100% damage
+     | Absorb Wood damage for 2 turns + Change own attribute to random one of Water or Wood, Deal 100% damage
      | condition: 33% chance
      | (13329:83) The new Era... + What color is it?
-     | Absorb Fire damage for 2 turns + Change own attribute to random one of Wood, Fire, Deal 100% damage
+     | Absorb Fire damage for 2 turns + Change own attribute to random one of Wood or Fire, Deal 100% damage
      | condition: 50% chance
      | (13330:83) The new Era... + What color is it?
-     | Absorb Dark damage for 2 turns + Change own attribute to random one of Light, Dark, Deal 100% damage
+     | Absorb Dark damage for 2 turns + Change own attribute to random one of Light or Dark, Deal 100% damage
      | (13331:83) The new Era... + What color is it?
-     | Absorb Light damage for 2 turns + Change own attribute to random one of Dark, Light, Deal 100% damage
+     | Absorb Light damage for 2 turns + Change own attribute to random one of Dark or Light, Deal 100% damage
    | group:
    | condition: execute repeatedly, turn 2-3 of 3
      | (13351:127) There
@@ -341,23 +341,23 @@ level: 6
    | group:
    | condition: turn 2 while HP > 14
      | (13353:83) Heaven's Mirror Curtain + Hey
-     | Absorb combos <= 6 damage for 99 turns + Player -99% HP
+     | Absorb damage when combos <= 6 for 99 turns + Player -99% HP
    | group:
    | condition: turn 3 while HP > 14
      | condition: 20% chance
      | (13327:83) The new Era... + What color is it?
-     | Absorb Water damage for 2 turns + Change own attribute to random one of Fire, Water, Deal 100% damage
+     | Absorb Water damage for 2 turns + Change own attribute to random one of Fire or Water, Deal 100% damage
      | condition: 25% chance
      | (13328:83) The new Era... + What color is it?
-     | Absorb Wood damage for 2 turns + Change own attribute to random one of Water, Wood, Deal 100% damage
+     | Absorb Wood damage for 2 turns + Change own attribute to random one of Water or Wood, Deal 100% damage
      | condition: 33% chance
      | (13329:83) The new Era... + What color is it?
-     | Absorb Fire damage for 2 turns + Change own attribute to random one of Wood, Fire, Deal 100% damage
+     | Absorb Fire damage for 2 turns + Change own attribute to random one of Wood or Fire, Deal 100% damage
      | condition: 50% chance
      | (13330:83) The new Era... + What color is it?
-     | Absorb Dark damage for 2 turns + Change own attribute to random one of Light, Dark, Deal 100% damage
+     | Absorb Dark damage for 2 turns + Change own attribute to random one of Light or Dark, Deal 100% damage
      | (13331:83) The new Era... + What color is it?
-     | Absorb Light damage for 2 turns + Change own attribute to random one of Dark, Light, Deal 100% damage
+     | Absorb Light damage for 2 turns + Change own attribute to random one of Dark or Light, Deal 100% damage
    | group:
    | condition: turn 5 while HP > 14
      | condition: 50% chance
@@ -365,23 +365,23 @@ level: 6
      | Blind all orbs on the board + Movetime -3s for 2 turns, Deal 95% damage
      | condition: 50% chance
      | (13346:83) Ripple Lock + Blade Dance
-     | Lock 10 random Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs + Deal 105% damage (3 hits, 35% each), Deal 105% damage (3 hits, 35% each)
+     | Lock 10 random Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, and Mortal Poison orbs + Deal 105% damage (3 hits, 35% each), Deal 105% damage (3 hits, 35% each)
    | group:
    | condition: turn 6 while HP > 14
      | condition: 20% chance
      | (13327:83) The new Era... + What color is it?
-     | Absorb Water damage for 2 turns + Change own attribute to random one of Fire, Water, Deal 100% damage
+     | Absorb Water damage for 2 turns + Change own attribute to random one of Fire or Water, Deal 100% damage
      | condition: 25% chance
      | (13328:83) The new Era... + What color is it?
-     | Absorb Wood damage for 2 turns + Change own attribute to random one of Water, Wood, Deal 100% damage
+     | Absorb Wood damage for 2 turns + Change own attribute to random one of Water or Wood, Deal 100% damage
      | condition: 33% chance
      | (13329:83) The new Era... + What color is it?
-     | Absorb Fire damage for 2 turns + Change own attribute to random one of Wood, Fire, Deal 100% damage
+     | Absorb Fire damage for 2 turns + Change own attribute to random one of Wood or Fire, Deal 100% damage
      | condition: 50% chance
      | (13330:83) The new Era... + What color is it?
-     | Absorb Dark damage for 2 turns + Change own attribute to random one of Light, Dark, Deal 100% damage
+     | Absorb Dark damage for 2 turns + Change own attribute to random one of Light or Dark, Deal 100% damage
      | (13331:83) The new Era... + What color is it?
-     | Absorb Light damage for 2 turns + Change own attribute to random one of Dark, Light, Deal 100% damage
+     | Absorb Light damage for 2 turns + Change own attribute to random one of Dark or Light, Deal 100% damage
    | group:
    | condition: turn 8 while HP > 14
      | condition: 50% chance
@@ -389,23 +389,23 @@ level: 6
      | Blind all orbs on the board + Movetime -3s for 2 turns, Deal 95% damage
      | condition: 50% chance
      | (13346:83) Ripple Lock + Blade Dance
-     | Lock 10 random Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs + Deal 105% damage (3 hits, 35% each), Deal 105% damage (3 hits, 35% each)
+     | Lock 10 random Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, and Mortal Poison orbs + Deal 105% damage (3 hits, 35% each), Deal 105% damage (3 hits, 35% each)
    | group:
    | condition: turn 9 while HP > 14
      | condition: 20% chance
      | (13327:83) The new Era... + What color is it?
-     | Absorb Water damage for 2 turns + Change own attribute to random one of Fire, Water, Deal 100% damage
+     | Absorb Water damage for 2 turns + Change own attribute to random one of Fire or Water, Deal 100% damage
      | condition: 25% chance
      | (13328:83) The new Era... + What color is it?
-     | Absorb Wood damage for 2 turns + Change own attribute to random one of Water, Wood, Deal 100% damage
+     | Absorb Wood damage for 2 turns + Change own attribute to random one of Water or Wood, Deal 100% damage
      | condition: 33% chance
      | (13329:83) The new Era... + What color is it?
-     | Absorb Fire damage for 2 turns + Change own attribute to random one of Wood, Fire, Deal 100% damage
+     | Absorb Fire damage for 2 turns + Change own attribute to random one of Wood or Fire, Deal 100% damage
      | condition: 50% chance
      | (13330:83) The new Era... + What color is it?
-     | Absorb Dark damage for 2 turns + Change own attribute to random one of Light, Dark, Deal 100% damage
+     | Absorb Dark damage for 2 turns + Change own attribute to random one of Light or Dark, Deal 100% damage
      | (13331:83) The new Era... + What color is it?
-     | Absorb Light damage for 2 turns + Change own attribute to random one of Dark, Light, Deal 100% damage
+     | Absorb Light damage for 2 turns + Change own attribute to random one of Dark or Light, Deal 100% damage
    | group:
    | condition: execute repeatedly, turn 1 of 3
      | (13351:127) There
@@ -414,18 +414,18 @@ level: 6
    | condition: execute repeatedly, turn 2 of 3
      | condition: 20% chance
      | (13327:83) The new Era... + What color is it?
-     | Absorb Water damage for 2 turns + Change own attribute to random one of Fire, Water, Deal 100% damage
+     | Absorb Water damage for 2 turns + Change own attribute to random one of Fire or Water, Deal 100% damage
      | condition: 25% chance
      | (13328:83) The new Era... + What color is it?
-     | Absorb Wood damage for 2 turns + Change own attribute to random one of Water, Wood, Deal 100% damage
+     | Absorb Wood damage for 2 turns + Change own attribute to random one of Water or Wood, Deal 100% damage
      | condition: 33% chance
      | (13329:83) The new Era... + What color is it?
-     | Absorb Fire damage for 2 turns + Change own attribute to random one of Wood, Fire, Deal 100% damage
+     | Absorb Fire damage for 2 turns + Change own attribute to random one of Wood or Fire, Deal 100% damage
      | condition: 50% chance
      | (13330:83) The new Era... + What color is it?
-     | Absorb Dark damage for 2 turns + Change own attribute to random one of Light, Dark, Deal 100% damage
+     | Absorb Dark damage for 2 turns + Change own attribute to random one of Light or Dark, Deal 100% damage
      | (13331:83) The new Era... + What color is it?
-     | Absorb Light damage for 2 turns + Change own attribute to random one of Dark, Light, Deal 100% damage
+     | Absorb Light damage for 2 turns + Change own attribute to random one of Dark or Light, Deal 100% damage
    | group:
    | condition: execute repeatedly, turn 3 of 3
      | (13351:127) There

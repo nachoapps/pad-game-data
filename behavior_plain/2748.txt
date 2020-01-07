@@ -18,14 +18,14 @@ flag SET 0b1
 	[0] ESStatusShield(20:2942) -> Knowledge Barrier
 	Voids status ailments for 999 turns
 	[1] ESDamageShield(74:2943) -> Demon's Wall
-	Reduce damage from all sources by 50% for 1 turn
+	Reduce damage from all sources all_sources by 50% for 1 turn
 
 #5: ESEndPath(36:26) -> ESEndPath
 end_turn
 
 #6: ESBoardChangeAttackBits(85:2962) -> Contraindication
 Condition: When < 25% hp (ai:100 rnd:0)
-Change all orbs to Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison, Deal 400% damage
+Change all orbs to Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, and Mortal Poison, Deal 400% damage
 
 #7: ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 50, target rnd 13
@@ -35,18 +35,18 @@ Branch on hp < 75, target rnd 22
 
 #9: ESRandomSpawn(92:2951) -> Hinder Alchemy
 Condition: When < 75% hp , one-time use (ai:100 rnd:0) (cost: 2)
-Spawn random 5 Jammer orbs, Deal 180% damage
+Spawn 5 random Jammer orbs, Deal 180% damage
 
 #10: ESRandomSpawn(92:2950) -> Heat and Cold
 Condition: When < 75% hp (ai:100 rnd:0)
-Spawn random 2 Fire, Water orbs, Deal 160% damage
+Spawn 2 random Fire or Water orbs, Deal 160% damage
 
 #11: ESBindAttack(63:2945) -> Shadow Touch
 Condition: One-time use (ai:100 rnd:0) (cost: 2)
 Bind 1 random sub for 2 turns, Deal 130% damage
 
 #12: ESRandomSpawn(92:2946) -> Poison Alchemy
-Spawn random 3 Poison orbs, Deal 180% damage
+Spawn 3 random Poison orbs, Deal 180% damage
 
 #13: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 2, target rnd 19
@@ -83,11 +83,11 @@ Change Jammer to Mortal Poison, Deal 200% damage
 
 #20: ESRandomSpawn(92:2951) -> Hinder Alchemy
 Condition: When < 75% hp , one-time use (ai:100 rnd:0) (cost: 2)
-Spawn random 5 Jammer orbs, Deal 180% damage
+Spawn 5 random Jammer orbs, Deal 180% damage
 
 #21: ESRandomSpawn(92:2950) -> Heat and Cold
 Condition: When < 75% hp (ai:100 rnd:0)
-Spawn random 2 Fire, Water orbs, Deal 160% damage
+Spawn 2 random Fire or Water orbs, Deal 160% damage
 
 #22: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 4, target rnd 9
@@ -97,9 +97,9 @@ flag SET 0b111
 
 #24: SkillSet:
 	[0] ESBoardChangeAttackBits(85:2947) -> Healing Element
-	Change all orbs to Fire, Light, Dark, Deal 100% damage
+	Change all orbs to Fire, Light, and Dark, Deal 100% damage
 	[1] ESRowSpawnMulti(78:2948) -> Hinder Line
-	Change 3rd row to Jammer orbs
+	Change the 3rd row to Jammer orbs
 
 #25: ESEndPath(36:26) -> ESEndPath
 end_turn

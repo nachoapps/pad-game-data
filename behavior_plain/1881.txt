@@ -10,7 +10,7 @@ Enable preempt if level 1
 #2: SkillSet:
 	Condition: One-time use (ai:100 rnd:0) (cost: 2)
 	[0] ESDamageShield(74:9519) -> Dance of the Stronghold
-	Reduce damage from all sources by 90% for 1 turn
+	Reduce damage from all sources all_sources by 90% for 1 turn
 	[1] ESStatusShield(20:9520) -> Hero's Pride
 	Voids status ailments for 6 turns
 
@@ -29,14 +29,14 @@ counter + 1
 
 #6: ESColumnSpawnMulti(77:9530) -> Twin Blade Dance
 Condition: 70% chance when < 40% hp (ai:70 rnd:0)
-Change 1st, 2nd, 3rd column to Fire orbs, 4th, 5th, 6th column to Wood orbs, Deal 180% damage
+Change the 1st, 2nd, 3rd column to Fire orbs, the 4th, 5th, 6th column to Wood orbs, Deal 180% damage
 
 #7: ESColumnSpawnMulti(77:9525) -> Flame Sword
 Condition: 50% chance (ai:50 rnd:0)
-Change 1st column to Fire orbs, Deal 130% damage
+Change the 1st column to Fire orbs, Deal 130% damage
 
 #8: ESRandomSpawn(92:9526) -> Wind Sword
-Spawn random 5 Wood orbs, Deal 130% damage
+Spawn 5 random Wood orbs, Deal 130% damage
 
 #9: ESEndPath(36:26) -> ESEndPath
 end_turn
@@ -49,7 +49,7 @@ flag SET 0b1
 
 #12: SkillSet:
 	[0] ESAbsorbThreshold(87:9527) -> Dance of Aggression
-	Absorb damage >= 4,000,000 damage for 5 turns
+	Absorb damage when damage >= 4,000,000 for 5 turns
 	[1] ESGravity(50:9528) -> Axe Kick
 	Player -99% HP
 
@@ -57,4 +57,4 @@ flag SET 0b1
 end_turn
 
 #14: ESTypeResist(118:9531) -> Heal Half Reduced
-Reduce damage from Healer by 50%
+Reduce damage from Healer types by 50%

@@ -19,7 +19,7 @@ flag SET 0b1
 	[1] ESStatusShield(20:6764) -> Guardian Dragon Formation
 	Voids status ailments for 999 turns
 	[2] ESAbsorbCombo(67:6765) -> High Bubble Wall
-	Absorb combos <= 7 damage for 999 turns
+	Absorb damage when combos <= 7 for 999 turns
 
 #5: ESEndPath(36:26) -> ESEndPath
 end_turn
@@ -42,7 +42,7 @@ Branch on hp < 30, target rnd 26
 
 #10: ESOrbLock(94:6780) -> Sharptooth
 Condition: 40% chance (ai:0 rnd:40)
-Lock 8 random Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs, Deal 300% damage
+Lock 8 random Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, and Mortal Poison orbs, Deal 300% damage
 
 #11: ESBindSkill(14:6781) -> Sanctifying Waters
 Condition: 20% chance (ai:0 rnd:20)
@@ -78,7 +78,7 @@ flag SET 0b11
 #18: SkillSet:
 	Condition: One-time use (ai:0 rnd:33) (cost: 6)
 	[0] ESDamageShield(74:6769) -> Shell Scales
-	Reduce damage from all sources by 75% for 3 turns
+	Reduce damage from all sources all_sources by 75% for 3 turns
 	[1] ESAttackMultihit(15:6770) -> Ether Screw
 	Deal 400% damage (4 hits, 100% each)
 
@@ -101,7 +101,7 @@ flag SET 0b111
 #23: SkillSet:
 	Condition: One-time use (ai:100 rnd:0) (cost: 7)
 	[0] ESDamageShield(74:6769) -> Shell Scales
-	Reduce damage from all sources by 75% for 3 turns
+	Reduce damage from all sources all_sources by 75% for 3 turns
 	[1] ESAttackMultihit(15:6770) -> Ether Screw
 	Deal 400% damage (4 hits, 100% each)
 
@@ -131,7 +131,7 @@ flag SET 0b1111
 #29: SkillSet:
 	Condition: One-time use (ai:100 rnd:0) (cost: 1)
 	[0] ESDamageShield(74:6769) -> Shell Scales
-	Reduce damage from all sources by 75% for 3 turns
+	Reduce damage from all sources all_sources by 75% for 3 turns
 	[1] ESAttackMultihit(15:6770) -> Ether Screw
 	Deal 400% damage (4 hits, 100% each)
 
@@ -145,4 +145,4 @@ flag SET 0b1111
 end_turn
 
 #32: ESAttributeResist(72:6786) -> Water damage halved
-Reduce damage from Water by 50%
+Reduce damage from Water attrs by 50%

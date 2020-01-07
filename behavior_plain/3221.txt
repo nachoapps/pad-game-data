@@ -17,7 +17,7 @@ flag SET 0b1
 	[0] ESStatusShield(20:5642) -> Transparent Melody
 	Voids status ailments for 999 turns
 	[1] ESDamageShield(74:5643) -> Overture for the Impenetrable
-	Reduce damage from all sources by 99% for 1 turn
+	Reduce damage from all sources all_sources by 99% for 1 turn
 
 #5: ESEndPath(36:26) -> ESEndPath
 end_turn
@@ -33,13 +33,13 @@ Branch on level > 6, target rnd 10
 
 #9: SkillSet:
 	[0] ESAbsorbCombo(67:5645) -> Play me your puzzle's song ♪
-	Absorb combos <= 4 damage for 1 turn
+	Absorb damage when combos <= 4 for 1 turn
 	[1] ESDebuffMovetime(39:5646) -> Hesitant Opening Notes
 	Movetime 25% for 1 turn
 
 #10: SkillSet:
 	[0] ESAbsorbCombo(67:5670) -> Play me your puzzle's song ♪
-	Absorb combos <= 5 damage for 1 turn
+	Absorb damage when combos <= 5 for 1 turn
 	[1] ESDebuffMovetime(39:5646) -> Hesitant Opening Notes
 	Movetime 25% for 1 turn
 
@@ -54,7 +54,7 @@ flag SET 0b111
 	[0] ESBindAttack(63:5649) -> I simply can't lose ♪
 	Bind 1 random card for 4 turns, Deal 140% damage
 	[1] ESDamageShield(74:5659) -> Steel Arabesque
-	Reduce damage from all sources by 50% for 5 turns
+	Reduce damage from all sources all_sources by 50% for 5 turns
 
 #14: SkillSet:
 	[0] ESGravity(50:5648) -> You should sound better than this!
@@ -86,13 +86,13 @@ flag SET 0b1111
 	[0] ESBlindStickyFixed(98:5650) -> Surely you can hear the Orbs' song ♪
 	Blind orbs in specific positions for 1 turn
 	[1] ESBoardChangeAttackBits(85:5652) -> Rainbow Septet
-	Change all orbs to Fire, Water, Wood, Light, Dark, Heal, Jammer, Deal 120% damage
+	Change all orbs to Fire, Water, Wood, Light, Dark, Heal, and Jammer, Deal 120% damage
 
 #22: SkillSet:
 	[0] ESBlindStickyFixed(98:5651) -> Feel the music in your heart ♪
 	Blind orbs in specific positions for 1 turn
 	[1] ESBoardChangeAttackBits(85:5652) -> Rainbow Septet
-	Change all orbs to Fire, Water, Wood, Light, Dark, Heal, Jammer, Deal 120% damage
+	Change all orbs to Fire, Water, Wood, Light, Dark, Heal, and Jammer, Deal 120% damage
 
 #23: ESEndPath(36:26) -> ESEndPath
 end_turn
@@ -102,7 +102,7 @@ flag UNSET 0b1000
 
 #25: ESOrbLock(94:5655) -> Obbligato of Ice Blades
 Condition: 50% chance (ai:50 rnd:0)
-Lock 10 random Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs, Deal 130% damage
+Lock 10 random Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, and Mortal Poison orbs, Deal 130% damage
 
 #26: ESAttackMultihit(15:5662) -> Ice Blossom Quartet
 Deal 160% damage (4 hits, 40% each)
@@ -115,7 +115,7 @@ flag SET 0b11111
 
 #29: ESAbsorbCombo(67:5656) -> Barcarole for the River of Woe
 Condition: One-time use (ai:100 rnd:0) (cost: 2)
-Absorb combos <= 6 damage for 2 turns
+Absorb damage when combos <= 6 for 2 turns
 
 #30: ESCloud(104:5673) -> This is your last performance!
 Condition: One-time use (ai:100 rnd:0) (cost: 1)
@@ -125,4 +125,4 @@ Row of cloud appear for 1 turn at random location
 Deal 5000% damage (10 hits, 500% each)
 
 #32: ESAttributeResist(72:5669) -> Half Water Wood
-Reduce damage from Water, Wood by 50%
+Reduce damage from Water and Wood attrs by 50%

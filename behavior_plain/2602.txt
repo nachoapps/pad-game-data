@@ -134,7 +134,7 @@ end_turn
 	[1] ESRecoverEnemy(86:7326) -> 暴走状態へ移行
 	Enemy recover 60% hp
 	[2] ESDamageShield(74:7259) -> 地中潜り
-	Reduce damage from all sources by 75% for 1 turn
+	Reduce damage from all sources all_sources by 75% for 1 turn
 
 #40: ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 90, target rnd 45
@@ -149,7 +149,7 @@ Deal 1000% damage (2 hits, 500% each)
 
 #43: ESRandomSpawn(92:7256) -> 突進
 Condition: 34% chance (ai:0 rnd:34)
-Spawn random 3 Jammer orbs, Deal 1000% damage
+Spawn 3 random Jammer orbs, Deal 1000% damage
 
 #44: ESEndPath(36:26) -> ESEndPath
 end_turn
@@ -161,7 +161,7 @@ end_turn
 	[1] ESInactivity(66:7258) -> 暴走状態へ移行
 	Do nothing
 	[2] ESDamageShield(74:7259) -> 地中潜り
-	Reduce damage from all sources by 75% for 1 turn
+	Reduce damage from all sources all_sources by 75% for 1 turn
 
 #46: ESAttackMultihit(15:7261) -> 地中からの強急襲
 Condition: One-time use (ai:100 rnd:0) (cost: 4)
@@ -261,7 +261,7 @@ Branch on hp < 20, target rnd 60
 	[1] ESInactivity(66:7282) -> 狂暴走状態へ移行
 	Do nothing
 	[2] ESDamageShield(74:7283) -> 地中潜り
-	Reduce damage from all sources by 75% for 1 turn
+	Reduce damage from all sources all_sources by 75% for 1 turn
 
 #61: SkillSet:
 	Condition: One-time use (ai:100 rnd:0) (cost: 1)
@@ -282,4 +282,4 @@ Branch on hp < 20, target rnd 60
 Survive attacks with 1 HP when HP > 90%
 
 #64: ESAttributeResist(72:8446) -> 木半減
-Reduce damage from Wood by 50%
+Reduce damage from Wood attrs by 50%

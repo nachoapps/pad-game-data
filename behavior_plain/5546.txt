@@ -36,16 +36,16 @@ Branch on counter > 5, target rnd 24
 #9: SkillSet:
 	Condition: 25% chance (ai:0 rnd:25)
 	[0] ESColumnSpawnMulti(77:14362) -> A-Gyo, you take the first bite...
-	Change 2nd column to Fire orbs, Deal 50% damage
+	Change the 2nd column to Fire orbs, Deal 50% damage
 	[1] ESRowSpawnMulti(79:14363) -> Un-Gyo, good luck too
-	Change 2nd row to Fire, Jammer orbs, Deal 50% damage
+	Change the 2nd row to Fire and Jammer orbs, Deal 50% damage
 
 #10: SkillSet:
 	Condition: 25% chance (ai:0 rnd:25)
 	[0] ESColumnSpawnMulti(77:14365) -> A-Gyo, you take the first bite...
-	Change 5th column to Fire orbs, Deal 50% damage
+	Change the 5th column to Fire orbs, Deal 50% damage
 	[1] ESRowSpawnMulti(79:14366) -> Un-Gyo, good luck too
-	Change 4th row to Fire, Jammer orbs, Deal 50% damage
+	Change the 4th row to Fire and Jammer orbs, Deal 50% damage
 
 #11: SkillSet:
 	Condition: 25% chance (ai:0 rnd:25)
@@ -59,7 +59,7 @@ Branch on counter > 5, target rnd 24
 	[0] ESRecoverEnemy(86:14371) -> A-Gyo, help!
 	Enemy recover 5% hp
 	[1] ESDamageShield(74:14372) -> Un-Gyo, protect me!
-	Reduce damage from all sources by 50% for 1 turn, Deal 95% damage
+	Reduce damage from all sources all_sources by 50% for 1 turn, Deal 95% damage
 
 #13: ESEndPath(36:26) -> ESEndPath
 end_turn
@@ -122,7 +122,7 @@ flag SET 0b1111
 	[0] ESAttackUPRemainingEnemies(17:14377) -> Guardian's Wrath
 	Increase damage to 200% for the next 999 turns
 	[1] ESAbsorbCombo(67:14378) -> Joyous Sanctuary
-	Absorb combos <= 6 damage for 999 turns
+	Absorb damage when combos <= 6 for 999 turns
 	[2] ESDebuffMovetime(39:14379) -> The Swansong
 	Movetime 25% for 5 turns
 
@@ -131,7 +131,7 @@ end_turn
 
 #31: SkillSet:
 	[0] ESChangeAttribute(46:14381) -> Komainu Transformation
-	Change own attribute to random one of Fire, Water, Wood, Dark
+	Change own attribute to random one of Fire, Water, Wood, or Dark
 	[1] ESAttackMultihit(15:14382) -> Forever Frolicking
 	Deal 2000% damage (10 hits, 200% each)
 

@@ -17,9 +17,9 @@ flag SET 0b1
 	[0] ESStatusShield(20:16033) -> 沈黙の世界
 	Voids status ailments for 999 turns
 	[1] ESDamageShield(74:16034) -> 強き靴
-	Reduce damage from all sources by 90% for 99 turns
+	Reduce damage from all sources all_sources by 90% for 99 turns
 	[2] ESAbsorbCombo(67:16035) -> 神武の構え
-	Absorb combos <= 7 damage for 99 turns
+	Absorb damage when combos <= 7 for 99 turns
 	[3] ES7x6Change(126:16036) -> 広大無辺
 	Change board size to 7x6 for 5 turns
 
@@ -48,7 +48,7 @@ Branch on hp < 50, target rnd 19
 #11: SkillSet:
 	Condition: 33% chance (ai:0 rnd:33)
 	[0] ESChangeAttribute(46:16045) -> 精霊のルーン
-	Change own attribute to random one of Fire, Water, Wood, Light, Dark
+	Change own attribute to random one of Fire, Water, Wood, Light, or Dark
 	[1] ESAttackMultihit(15:16055) -> 復讐の業火
 	Deal 70% damage (5 hits, 14% each)
 
@@ -78,7 +78,7 @@ counter = 0
 
 #17: SkillSet:
 	[0] ESRandomSpawn(92:16215) -> 恵み溢れる大地
-	Spawn random 15 Fire, Wood, Mortal Poison orbs
+	Spawn 15 random Fire, Wood, or Mortal Poison orbs
 	[1] ES7x6Change(126:16036) -> 広大無辺
 	Change board size to 7x6 for 5 turns
 
@@ -93,7 +93,7 @@ flag SET 0b11
 
 #21: SkillSet:
 	[0] ESChangeAttribute(46:16045) -> 精霊のルーン
-	Change own attribute to random one of Fire, Water, Wood, Light, Dark
+	Change own attribute to random one of Fire, Water, Wood, Light, or Dark
 	[1] ESAttackMultihit(15:16046) -> 蹴舞・一角
 	Deal 80% damage
 
@@ -105,7 +105,7 @@ flag SET 0b111
 
 #24: SkillSet:
 	[0] ESChangeAttribute(46:16045) -> 精霊のルーン
-	Change own attribute to random one of Fire, Water, Wood, Light, Dark
+	Change own attribute to random one of Fire, Water, Wood, Light, or Dark
 	[1] ESAttackMultihit(15:16047) -> 蹴舞・二爪
 	Deal 96% damage (2 hits, 48% each)
 
@@ -117,7 +117,7 @@ flag SET 0b1111
 
 #27: SkillSet:
 	[0] ESChangeAttribute(46:16045) -> 精霊のルーン
-	Change own attribute to random one of Fire, Water, Wood, Light, Dark
+	Change own attribute to random one of Fire, Water, Wood, Light, or Dark
 	[1] ESAttackMultihit(15:16048) -> 蹴舞・三槌
 	Deal 111% damage (3 hits, 37% each)
 
@@ -129,7 +129,7 @@ flag SET 0b11111
 
 #30: SkillSet:
 	[0] ESChangeAttribute(46:16045) -> 精霊のルーン
-	Change own attribute to random one of Fire, Water, Wood, Light, Dark
+	Change own attribute to random one of Fire, Water, Wood, Light, or Dark
 	[1] ESAttackMultihit(15:16049) -> 蹴舞・四牙
 	Deal 128% damage (4 hits, 32% each)
 
@@ -141,7 +141,7 @@ flag SET 0b111111
 
 #33: SkillSet:
 	[0] ESChangeAttribute(46:16045) -> 精霊のルーン
-	Change own attribute to random one of Fire, Water, Wood, Light, Dark
+	Change own attribute to random one of Fire, Water, Wood, Light, or Dark
 	[1] ESAttackMultihit(15:16050) -> 蹴舞・五咆
 	Deal 145% damage (5 hits, 29% each)
 
@@ -153,7 +153,7 @@ flag SET 0b1111111
 
 #36: SkillSet:
 	[0] ESChangeAttribute(46:16045) -> 精霊のルーン
-	Change own attribute to random one of Fire, Water, Wood, Light, Dark
+	Change own attribute to random one of Fire, Water, Wood, Light, or Dark
 	[1] ESAttackMultihit(15:16051) -> 蹴舞・六衝
 	Deal 162% damage (6 hits, 27% each)
 
@@ -161,7 +161,7 @@ flag SET 0b1111111
 	[0] ESDispel(6:16054) -> 世界の鼓動
 	Voids player buff effects
 	[1] ESChangeAttribute(46:16045) -> 精霊のルーン
-	Change own attribute to random one of Fire, Water, Wood, Light, Dark
+	Change own attribute to random one of Fire, Water, Wood, Light, or Dark
 	[2] ESAttackMultihit(15:16052) -> 蹴舞・百刺鋲
 	Deal 700% damage (7 hits, 100% each)
 
@@ -169,4 +169,4 @@ flag SET 0b1111111
 end_turn
 
 #39: ESTypeResist(118:16089) -> 悪魔耐性
-Reduce damage from Devil by 50%
+Reduce damage from Devil types by 50%

@@ -14,7 +14,7 @@ Branch on flag & 1, target rnd 6
 flag SET 0b1
 
 #4: ESAbsorbCombo(67:5820) -> Okay! Here I go♪
-Absorb combos <= 6 damage for 5 turns
+Absorb damage when combos <= 6 for 5 turns
 
 #5: ESEndPath(36:26) -> ESEndPath
 end_turn
@@ -26,7 +26,7 @@ Branch on flag & 2, target rnd 10
 flag SET 0b11
 
 #8: ESBoardChangeAttackBits(85:5823) -> Southern Seven-Star Formation
-Change all orbs to Fire, Wood, Light, Deal 100% damage
+Change all orbs to Fire, Wood, and Light, Deal 100% damage
 
 #9: ESEndPath(36:26) -> ESEndPath
 end_turn
@@ -36,7 +36,7 @@ Branch on hp < 20, target rnd 14
 
 #11: ESBombRandomSpawn(102:5821) -> Blazing Bullet
 Condition: 50% chance (ai:50 rnd:0)
-Spawn random 1 Bomb orb, Deal 80% damage
+Spawn 1 random Bomb orb, Deal 80% damage
 
 #12: ESOrbChangeAttack(48:5822) -> Massive Crimson Iron Spear
 Change Random to Fire, Deal 120% damage
@@ -51,10 +51,10 @@ flag UNSET 0b10
 	[0] ESSkillDelay(89:5824) -> Try and take it♪
 	Delay active skills by 1 turn
 	[1] ESBoardChangeAttackBits(85:5825) -> Suzaku Seven-Star Formation
-	Change all orbs to Fire, Wood, Light, Deal 300% damage
+	Change all orbs to Fire, Wood, and Light, Deal 300% damage
 
 #16: ESEndPath(36:26) -> ESEndPath
 end_turn
 
 #17: ESAttributeResist(72:5827) -> Fire Wood Light Reduced Damage
-Reduce damage from Fire, Wood, Light by 30%
+Reduce damage from Fire, Wood, and Light attrs by 30%

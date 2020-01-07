@@ -23,7 +23,7 @@ flag SET 0b1
 	[0] ESGravity(50:15747) -> デュエル！
 	Player -75% HP
 	[1] ESSkyfall(68:15748) -> 受けてみろ、オレの真紅眼の黒竜
-	Fire, Dark skyfall +25% for 5 turns
+	Fire and Dark skyfall +25% for 5 turns
 
 #7: ESEndPath(36:26) -> ESEndPath
 end_turn
@@ -39,7 +39,7 @@ Condition: One-time use, when <= 1 enemies remain (ai:100 rnd:0) (cost: 1)
 Increase damage to 150% for the next 1 turn
 
 #11: ESRandomSpawn(92:15750) -> 黒炎弾
-Spawn random 3 Dark orbs, Deal 100% damage
+Spawn 3 random Dark orbs, Deal 100% damage
 
 #12: ESEndPath(36:26) -> ESEndPath
 end_turn
@@ -51,13 +51,13 @@ Branch on counter > 1, target rnd 17
 counter + 1
 
 #15: ESDamageShield(74:15752) -> 罠カード「メタル化・魔法反射装甲」
-Reduce damage from all sources by 75% for 3 turns
+Reduce damage from all sources all_sources by 75% for 3 turns
 
 #16: ESEndPath(36:26) -> ESEndPath
 end_turn
 
 #17: ESRandomSpawn(92:15753) -> ダーク・メガ・フレア
-Spawn random 5 Fire, Dark orbs, Deal 200% damage
+Spawn 5 random Fire or Dark orbs, Deal 200% damage
 
 #18: ESEndPath(36:26) -> ESEndPath
 end_turn

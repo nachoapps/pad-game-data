@@ -10,7 +10,7 @@ Enable preempt if level 1
 #2: SkillSet:
 	Condition: One-time use (ai:100 rnd:0) (cost: 2)
 	[0] ESAbsorbCombo(67:15796) -> さぁ、闇のゲームの始まりだ
-	Absorb combos <= 6 damage for 4 turns
+	Absorb damage when combos <= 6 for 4 turns
 	[1] ESBlind(5:15797) -> 知らしめてやる　ラーの力をな！
 	Blind all orbs on the board
 
@@ -22,10 +22,10 @@ Branch on hp < 50, target rnd 12
 
 #5: ESDamageShield(74:15799) -> どんな攻撃も通用しない！
 Condition: 50% chance (ai:50 rnd:0)
-Reduce damage from all sources by 75% for 1 turn, Deal 80% damage
+Reduce damage from all sources all_sources by 75% for 1 turn, Deal 80% damage
 
 #6: ESRowSpawnMulti(79:15800) -> 灼熱の炎で焼き尽くしてやるぜぇ
-Change 5th row to Fire orbs, Deal 85% damage
+Change the 5th row to Fire orbs, Deal 85% damage
 
 #7: ESEndPath(36:26) -> ESEndPath
 end_turn
@@ -54,10 +54,10 @@ Enemy recover 100% hp
 
 #14: ESDamageShield(74:15799) -> どんな攻撃も通用しない！
 Condition: 50% chance (ai:50 rnd:0)
-Reduce damage from all sources by 75% for 1 turn, Deal 80% damage
+Reduce damage from all sources all_sources by 75% for 1 turn, Deal 80% damage
 
 #15: ESRowSpawnMulti(79:15800) -> 灼熱の炎で焼き尽くしてやるぜぇ
-Change 5th row to Fire orbs, Deal 85% damage
+Change the 5th row to Fire orbs, Deal 85% damage
 
 #16: ESEndPath(36:26) -> ESEndPath
 end_turn
@@ -66,4 +66,4 @@ end_turn
 Survive attacks with 1 HP when HP > 50%
 
 #18: ESAttributeResist(72:15829) -> 水光半減
-Reduce damage from Water, Light by 50%
+Reduce damage from Water and Light attrs by 50%

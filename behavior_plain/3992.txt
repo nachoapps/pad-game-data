@@ -12,7 +12,7 @@ Branch on level > 2, target rnd 5
 
 #3: ESDamageShield(74:8382) -> Happy Halloween!
 Condition: One-time use (ai:100 rnd:0) (cost: 1)
-Reduce damage from all sources by 50% for 99 turns
+Reduce damage from all sources all_sources by 50% for 99 turns
 
 #4: ESAttackMultihit(15:8383) -> Halloween REMDra Punch!
 Deal 130% damage
@@ -29,7 +29,7 @@ flag SET 0b1
 	[1] ESStatusShield(20:8361) -> Suspicious Aura
 	Voids status ailments for 5 turns
 	[2] ESDamageShield(74:8362) -> Pull!
-	Reduce damage from all sources by 75% for 1 turn
+	Reduce damage from all sources all_sources by 75% for 1 turn
 
 #8: ESEndPath(36:26) -> ESEndPath
 end_turn
@@ -44,10 +44,10 @@ Branch on flag & 2, target rnd 13
 flag SET 0b11
 
 #12: ESDamageShield(74:8364) -> Pull it!
-Reduce damage from all sources by 50% for 1 turn, Deal 100% damage
+Reduce damage from all sources all_sources by 50% for 1 turn, Deal 100% damage
 
 #13: ESDamageShield(74:8365) -> Come on! Pull!
-Reduce damage from all sources by 50% for 1 turn, Deal 120% damage
+Reduce damage from all sources all_sources by 50% for 1 turn, Deal 120% damage
 
 #14: ESEndPath(36:26) -> ESEndPath
 end_turn
@@ -67,14 +67,14 @@ Branch on hp < 15, target rnd 24
 	[0] ESInactivity(66:8366) -> It's putting some back into it
 	Do nothing
 	[1] ESBoardChangeAttackBits(85:8368) -> Holiday Tuning Circle - Water & Dark
-	Change all orbs to Water, Dark, Deal 150% damage
+	Change all orbs to Water and Dark, Deal 150% damage
 
 #18: SkillSet:
 	Condition: 16% chance (ai:0 rnd:16)
 	[0] ESInactivity(66:8366) -> It's putting some back into it
 	Do nothing
 	[1] ESRowSpawnMulti(79:8369) -> Midnight Spell
-	Change 5th row to Dark orbs, Deal 150% damage
+	Change the 5th row to Dark orbs, Deal 150% damage
 
 #19: SkillSet:
 	Condition: 16% chance (ai:0 rnd:16)
@@ -95,14 +95,14 @@ Branch on hp < 15, target rnd 24
 	[0] ESInactivity(66:8366) -> It's putting some back into it
 	Do nothing
 	[1] ESBoardChangeAttackBits(85:8372) -> Holiday Tuning Circle - Wood, Dark & Life
-	Change all orbs to Wood, Dark, Heal, Deal 150% damage
+	Change all orbs to Wood, Dark, and Heal, Deal 150% damage
 
 #22: SkillSet:
 	Condition: 15% chance (ai:0 rnd:15)
 	[0] ESInactivity(66:8366) -> It's putting some back into it
 	Do nothing
 	[1] ESBoardChangeAttackBits(85:8373) -> Nene's Seal of Approval
-	Change all orbs to Water, Dark, Heal, Deal 150% damage
+	Change all orbs to Water, Dark, and Heal, Deal 150% damage
 
 #23: ESEndPath(36:26) -> ESEndPath
 end_turn

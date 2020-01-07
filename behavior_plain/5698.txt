@@ -10,9 +10,9 @@ Enable preempt if level 1
 #2: SkillSet:
 	Condition: One-time use (ai:100 rnd:0) (cost: 2)
 	[0] ESDamageShield(74:15216) -> リンク、シンカリオン！
-	Reduce damage from all sources by 50% for 3 turns
+	Reduce damage from all sources all_sources by 50% for 3 turns
 	[1] ESAbsorbCombo(67:15217) -> 行くぞ
-	Absorb combos <= 4 damage for 5 turns
+	Absorb damage when combos <= 4 for 5 turns
 
 #3: ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 50, target rnd 8
@@ -23,7 +23,7 @@ Blind all orbs on the board
 
 #5: ESOrbChangeAttackBits(108:15221) -> くらえ！
 Condition: 33% chance (ai:0 rnd:33)
-Change Fire, Water, Wood to Fire, Deal 80% damage
+Change Fire, Water, and Wood to Fire, Deal 80% damage
 
 #6: ESAttackMultihit(15:15218) -> Ｅ６の機動性を見せてやる！
 Condition: 33% chance (ai:0 rnd:33)
@@ -45,7 +45,7 @@ Unable to match Water orbs for 3 turns
 end_turn
 
 #12: ESRowSpawnMulti(79:15222) -> グランクロス！
-Change 2nd row to Fire orbs, 3rd row to Wood orbs, 4th row to Fire orbs, Deal 125% damage
+Change the 2nd row to Fire orbs, the 3rd row to Wood orbs, the 4th row to Fire orbs, Deal 125% damage
 
 #13: ESEndPath(36:26) -> ESEndPath
 end_turn

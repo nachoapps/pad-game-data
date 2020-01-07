@@ -21,9 +21,9 @@ flag SET 0b1
 
 #6: SkillSet:
 	[0] ESDamageShield(74:13649) -> Nectar of the Dragon
-	Reduce damage from all sources by 95% for 2 turns
+	Reduce damage from all sources all_sources by 95% for 2 turns
 	[1] ESBoardChangeAttackBits(85:13650) -> Soaring Lotus Strike
-	Change all orbs to Fire, Water, Wood, Jammer, Deal 150% damage
+	Change all orbs to Fire, Water, Wood, and Jammer, Deal 150% damage
 
 #7: ESEndPath(36:26) -> ESEndPath
 end_turn
@@ -55,7 +55,7 @@ Branch on hp < 20, target rnd 28
 
 #16: ESAbsorbCombo(67:6082) -> Vitality Spiral
 Condition: When < 50% hp , one-time use (ai:100 rnd:0) (cost: 1)
-Absorb combos <= 6 damage for 6 turns
+Absorb damage when combos <= 6 for 6 turns
 
 #17: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 4, target rnd 20
@@ -73,7 +73,7 @@ Branch on flag & 8, target rnd 23
 flag SET 0b1111
 
 #22: ESRowSpawnMulti(79:6085) -> Crystal Stream
-Change 1st, 5th row to Water orbs, Deal 100% damage
+Change the 1st, 5th row to Water orbs, Deal 100% damage
 
 #23: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 16, target rnd 26
@@ -95,9 +95,9 @@ flag SET 0b111111
 
 #29: SkillSet:
 	[0] ESDamageShield(74:6077) -> Nectar of the Dragon
-	Reduce damage from all sources by 75% for 2 turns
+	Reduce damage from all sources all_sources by 75% for 2 turns
 	[1] ESBoardChangeAttackBits(85:6078) -> Soaring Lotus Strike
-	Change all orbs to Fire, Water, Wood, Heal, Deal 150% damage
+	Change all orbs to Fire, Water, Wood, and Heal, Deal 150% damage
 
 #30: ESAttackMultihit(15:6083) -> Enlightened Dragon Stream
 Deal 800% damage (8 hits, 100% each)

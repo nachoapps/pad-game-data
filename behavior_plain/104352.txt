@@ -39,7 +39,7 @@ Branch on hp < 75, target rnd 14
 #10: SkillSet:
 	Condition: 33% chance (ai:33 rnd:0)
 	[0] ESBoardChangeAttackBits(85:9655) -> All Encompassing Conflagration
-	Change all orbs to Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Deal 30% damage
+	Change all orbs to Fire, Water, Wood, Light, Dark, Heal, Jammer, and Poison, Deal 30% damage
 	[1] ESAttackMultihit(15:9658) -> Rigid Flametail Attack
 	Deal 60% damage (3 hits, 20% each)
 
@@ -85,11 +85,11 @@ flag SET 0b111
 
 #21: SkillSet:
 	[0] ESBoardChangeAttackBits(85:9665) -> Purgatory Flames of Damnation
-	Change all orbs to Fire, Jammer, Deal 100% damage
+	Change all orbs to Fire and Jammer, Deal 100% damage
 	[1] ESCloud(104:9666) -> Heat Haze
 	Row of cloud appear for 3 turns at 1st column
 	[2] ESAbsorbCombo(67:9667) -> Flame Dance Incarnation
-	Absorb combos <= 7 damage for 99 turns
+	Absorb damage when combos <= 7 for 99 turns
 
 #22: ESEndPath(36:26) -> ESEndPath
 end_turn
@@ -97,34 +97,34 @@ end_turn
 #23: SkillSet:
 	Condition: One-time use (ai:50 rnd:0) (cost: 1)
 	[0] ESRandomSpawn(92:9672) -> Alabaster Flame
-	Spawn random 3 Light, Heal, Jammer, Poison, Mortal Poison orbs
+	Spawn 3 random Light, Heal, Jammer, Poison, or Mortal Poison orbs
 	[1] ESGravity(50:9677) -> Judgment Carving
 	Player -75% HP
 
 #24: SkillSet:
 	Condition: One-time use (ai:100 rnd:0) (cost: 1)
 	[0] ESRandomSpawn(92:9673) -> Obsidian Flame
-	Spawn random 6 Dark, Poison orbs
+	Spawn 6 random Dark or Poison orbs
 	[1] ESAttackMultihit(15:9678) -> Judgment Carving
 	Deal 105% damage (3 hits, 35% each)
 
 #25: SkillSet:
 	Condition: 33% chance (ai:33 rnd:0)
 	[0] ESBoardChangeAttackBits(85:9669) -> Scarlet Flame
-	Change all orbs to Fire, Water, Wood, Light, Dark, Heal, Jammer, Deal 115% damage
+	Change all orbs to Fire, Water, Wood, Light, Dark, Heal, and Jammer, Deal 115% damage
 	[1] ESBindAwoken(88:9674) -> Judgment Carving
 	Bind awoken skills for 1 turn
 
 #26: SkillSet:
 	Condition: 50% chance (ai:50 rnd:0)
 	[0] ESColumnSpawnMulti(77:9670) -> Cerulean Flame
-	Change 2nd, 5th column to Water, Jammer orbs, Deal 115% damage
+	Change the 2nd, 5th column to Water and Jammer orbs, Deal 115% damage
 	[1] ESSkillDelay(89:9675) -> Judgment Carving
 	Delay active skills by 1~2 turns
 
 #27: SkillSet:
 	[0] ESRowSpawnMulti(79:9671) -> Virescent Flame
-	Change 2nd, 4th row to Wood, Heal, Poison orbs, Deal 115% damage
+	Change the 2nd, 4th row to Wood, Heal, and Poison orbs, Deal 115% damage
 	[1] ESLeaderSwap(75:9676) -> Judgment Carving
 	Leader changes to random sub for 1 turn
 
@@ -138,7 +138,7 @@ Deal 2500% damage (5 hits, 500% each)
 end_turn
 
 #31: ESAttributeResist(72:9650) -> Fire Att. Half Reduced
-Reduce damage from Fire by 50%
+Reduce damage from Fire attrs by 50%
 
 #32: ESResolve(73:12175) -> Dragonbound Soul Spirit
 Survive attacks with 1 HP when HP > 99%

@@ -12,13 +12,13 @@ level: 1
  | Survive attacks with 1 HP when HP > 75%
  type: PREEMPT
  | (2944:83) Knowledge Barrier + Demon's Wall
- | Voids status ailments for 999 turns + Reduce damage from all sources by 50% for 1 turn
+ | Voids status ailments for 999 turns + Reduce damage from all sources all_sources by 50% for 1 turn
  group:
  | group:
    | group:
    | condition: execute repeatedly, turn 1-2 of 3
      | (2946:92) Poison Alchemy
-     | Spawn random 3 Poison orbs, Deal 180% damage
+     | Spawn 3 random Poison orbs, Deal 180% damage
    | group:
    | condition: execute repeatedly, turn 3 of 3
      | (2945:63) Shadow Touch
@@ -28,19 +28,19 @@ level: 1
    | group:
    | condition: turn 1 while HP > 49
      | (2949:83) Healing Element + Hinder Line
-     | Change all orbs to Fire, Light, Dark + Change 3rd row to Jammer orbs, Deal 100% damage
+     | Change all orbs to Fire, Light, and Dark + Change the 3rd row to Jammer orbs, Deal 100% damage
    | group:
    | condition: execute repeatedly, turn 1 of 3
      | (2950:92) Heat and Cold
-     | Spawn random 2 Fire, Water orbs, Deal 160% damage
+     | Spawn 2 random Fire or Water orbs, Deal 160% damage
    | group:
    | condition: execute repeatedly, turn 2 of 3
      | (2951:92) Hinder Alchemy
-     | Spawn random 5 Jammer orbs, Deal 180% damage
+     | Spawn 5 random Jammer orbs, Deal 180% damage
    | group:
    | condition: execute repeatedly, turn 3 of 3
      | (2950:92) Heat and Cold
-     | Spawn random 2 Fire, Water orbs, Deal 160% damage
+     | Spawn 2 random Fire or Water orbs, Deal 160% damage
  | group:
  | condition: hp <= 49
    | group:
@@ -59,20 +59,20 @@ level: 1
      | (2965:48) High Poison Alchemy
      | Change Jammer to Mortal Poison, Deal 200% damage
      | (2950:92) Heat and Cold
-     | Spawn random 2 Fire, Water orbs, Deal 160% damage
+     | Spawn 2 random Fire or Water orbs, Deal 160% damage
    | group:
    | condition: execute repeatedly, turn 2 of 3
      | (2965:48) High Poison Alchemy
      | Change Jammer to Mortal Poison, Deal 200% damage
      | (2951:92) Hinder Alchemy
-     | Spawn random 5 Jammer orbs, Deal 180% damage
+     | Spawn 5 random Jammer orbs, Deal 180% damage
    | group:
    | condition: execute repeatedly, turn 3 of 3
      | (2965:48) High Poison Alchemy
      | Change Jammer to Mortal Poison, Deal 200% damage
      | (2950:92) Heat and Cold
-     | Spawn random 2 Fire, Water orbs, Deal 160% damage
+     | Spawn 2 random Fire or Water orbs, Deal 160% damage
  | group:
  | condition: hp <= 24
    | (2962:85) Contraindication
-   | Change all orbs to Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison, Deal 400% damage
+   | Change all orbs to Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, and Mortal Poison, Deal 400% damage

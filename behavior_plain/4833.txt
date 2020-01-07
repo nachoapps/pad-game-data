@@ -12,7 +12,7 @@ Enable preempt if level 1
 	[0] ESDebuffMovetime(39:11313) -> Oh! Who are you?!
 	Movetime 50% for 15 turns
 	[1] ESDamageShield(74:11314) -> She's vigilant
-	Reduce damage from all sources by 75% for 15 turns
+	Reduce damage from all sources all_sources by 75% for 15 turns
 	[2] ESStatusShield(20:11315) -> Magic Dragon Costume
 	Voids status ailments for 999 turns
 
@@ -58,7 +58,7 @@ Branch on hp > 96, target rnd 18
 	[0] ESGravity(50:11322) -> Aaah! The sweets!
 	Player -50% HP
 	[1] ESBoardChangeAttackBits(85:11327) -> Rainbow Gummy
-	Change all orbs to Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison, Deal 53% damage
+	Change all orbs to Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, and Mortal Poison, Deal 53% damage
 
 #15: SkillSet:
 	Condition: 25% chance (ai:25 rnd:0)
@@ -100,7 +100,7 @@ flag SET 0b1
 	[0] ESGravity(50:11330) -> Fell down with force
 	Player -99% HP
 	[1] ESBombRandomSpawn(102:11331) -> Sweets are scattered all over the place
-	Spawn random 10 locked Bomb orbs
+	Spawn 10 random locked Bomb orbs
 
 #23: ESEndPath(36:26) -> ESEndPath
 end_turn
@@ -122,7 +122,7 @@ end_turn
 counter + 1
 
 #28: ESAbsorbThreshold(87:11403) -> Sweet Pocket
-Absorb damage >= 15,000,000 damage for 99 turns
+Absorb damage when damage >= 15,000,000 for 99 turns
 
 #29: ESEndPath(36:26) -> ESEndPath
 end_turn

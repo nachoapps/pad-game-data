@@ -25,7 +25,7 @@ Branch on hp < 20, target rnd 17
 	[0] ESInactivity(66:14069) -> 三戦
 	Do nothing
 	[1] ESDamageShield(74:14070) -> 呼ッ
-	Reduce damage from all sources by 50% for 3 turns
+	Reduce damage from all sources all_sources by 50% for 3 turns
 
 #6: ESBranchCounter(32:22) -> ESBranchCounter
 Branch on counter > 2, target rnd 21
@@ -47,7 +47,7 @@ Deal 105% damage
 
 #11: ESRandomSpawn(92:14075) -> 六波返し
 Condition: 25% chance (ai:0 rnd:25)
-Spawn random 3 Poison orbs, Deal 95% damage
+Spawn 3 random Poison orbs, Deal 95% damage
 
 #12: ESEndPath(36:26) -> ESEndPath
 end_turn
@@ -59,7 +59,7 @@ Branch on flag & 1, target rnd 4
 flag SET 0b1
 
 #15: ESAbsorbCombo(67:14076) -> 天上天下の構え
-Absorb combos <= 5 damage for 5 turns
+Absorb damage when combos <= 5 for 5 turns
 
 #16: ESEndPath(36:26) -> ESEndPath
 end_turn
@@ -86,7 +86,7 @@ Branch on counter > 3, target rnd 8
 counter + 1
 
 #23: ESDamageShield(74:14071) -> 前羽の構え
-Reduce damage from all sources by 75% for 2 turns
+Reduce damage from all sources all_sources by 75% for 2 turns
 
 #24: ESEndPath(36:26) -> ESEndPath
 end_turn

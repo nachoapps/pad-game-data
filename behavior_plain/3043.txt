@@ -20,7 +20,7 @@ Branch on flag & 1, target rnd 8
 flag SET 0b1
 
 #6: ESOrbLock(94:4990) -> Welcome.
-Lock all Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs
+Lock all Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, and Mortal Poison orbs
 
 #7: ESEndPath(36:26) -> ESEndPath
 end_turn
@@ -45,7 +45,7 @@ Condition: When < 80% hp , one-time use (ai:50 rnd:0) (cost: 1)
 Deal 90~150% damage (3~5 hits, 30% each)
 
 #14: ESRandomSpawn(92:4992) -> This is nothing!
-Spawn random 3 Water orbs, Deal 120% damage
+Spawn 3 random Water orbs, Deal 120% damage
 
 #15: ESEndPath(36:26) -> ESEndPath
 end_turn
@@ -57,7 +57,7 @@ flag SET 0b111
 	[0] ESAttackUPRemainingEnemies(17:4995) -> Here I come!!
 	Increase damage to 200% for the next 999 turns
 	[1] ESAbsorbCombo(67:4996) -> Tinbe
-	Absorb combos <= 3 damage for 5 turns
+	Absorb damage when combos <= 3 for 5 turns
 
 #18: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 8, target rnd 22
@@ -67,7 +67,7 @@ flag SET 0b1111
 
 #20: ESRandomSpawn(92:4997) -> Rochin
 Condition: When heal orbs are on the board (ai:100 rnd:0)
-Spawn random 1 Jammer orb, Deal 80% damage
+Spawn 1 random Jammer orb, Deal 80% damage
 
 #21: ESAttackMultihit(15:4998) -> Rochin
 Deal 80% damage
@@ -83,7 +83,7 @@ Blind all orbs on the board, Deal 60% damage
 
 #25: ESRandomSpawn(92:4997) -> Rochin
 Condition: When heal orbs are on the board (ai:100 rnd:0)
-Spawn random 1 Jammer orb, Deal 80% damage
+Spawn 1 random Jammer orb, Deal 80% damage
 
 #26: ESAttackMultihit(15:4998) -> Rochin
 Deal 80% damage

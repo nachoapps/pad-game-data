@@ -9,7 +9,7 @@ approved: False
 level: 1
  type: PASSIVE
  | (6557:72) Light Dark Halved
- | Reduce damage from Light, Dark by 50%
+ | Reduce damage from Light and Dark attrs by 50%
  | (6555:73) Resolve
  | Survive attacks with 1 HP when HP > 76%
  type: PREEMPT
@@ -32,7 +32,7 @@ level: 1
    | group:
    | condition: turn 4 while HP > 49
      | (6569:83) Another Fate + Arentillia
-     | Change own attribute to random one of Dark, Light + Deal 140% damage (2 hits, 70% each), Deal 140% damage (2 hits, 70% each)
+     | Change own attribute to random one of Dark or Light + Deal 140% damage (2 hits, 70% each), Deal 140% damage (2 hits, 70% each)
    | group:
    | condition: execute repeatedly, turn 1 of 2
      | condition: 20% chance
@@ -57,7 +57,7 @@ level: 1
  | group:
  | condition: turn 1 while HP > 34, hp <= 79
    | (6544:74) Sanctuary
-   | Reduce damage from all sources by 50% for 10 turns
+   | Reduce damage from all sources all_sources by 50% for 10 turns
  | group:
  | condition: turn 4 while HP > 34, hp <= 49
    | (6570:83) Apotheosis Omen + Arentillia
@@ -67,11 +67,11 @@ level: 1
    | group:
    | condition: turn 1
      | (6553:67) Sage Wisdom
-     | Absorb combos <= 6 damage for 999 turns
+     | Absorb damage when combos <= 6 for 999 turns
    | group:
    | condition: turn 2 while HP > 19
      | (6544:74) Sanctuary
-     | Reduce damage from all sources by 50% for 10 turns
+     | Reduce damage from all sources all_sources by 50% for 10 turns
    | group:
    | condition: turn 3 while HP > 19
      | (6540:15) Arentillia
@@ -91,8 +91,8 @@ level: 1
  | group:
  | condition: hp <= 1
    | (6532:83) Divine Cure + Sage Wisdom
-   | Enemy recover 15% hp + Absorb combos <= 6 damage for 999 turns
+   | Enemy recover 15% hp + Absorb damage when combos <= 6 for 999 turns
  type: UNKNOWN_USE
  | condition: at most 7 times
  | (6545:74) Sanctuary
- | Reduce damage from all sources by 50% for 10 turns
+ | Reduce damage from all sources all_sources by 50% for 10 turns

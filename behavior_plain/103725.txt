@@ -23,7 +23,7 @@ flag SET 0b1
 	[0] ESBlindStickyFixed(98:7699) -> Black Smokescreen
 	Blind orbs in specific positions for 1 turn
 	[1] ESBombRandomSpawn(102:7700) -> Timed Explosion
-	Spawn random 6 locked Bomb orbs
+	Spawn 6 random locked Bomb orbs
 
 #7: ESEndPath(36:26) -> ESEndPath
 end_turn
@@ -43,16 +43,16 @@ Branch on hp < 70, target rnd 13
 #12: SkillSet:
 	Condition: One-time use (ai:100 rnd:0) (cost: 3)
 	[0] ESDamageShield(74:7702) -> Darkened Scale Armor
-	Reduce damage from all sources by 75% for 4 turns
+	Reduce damage from all sources all_sources by 75% for 4 turns
 	[1] ESSkyfall(96:7703) -> Usurper's Divine Protection
 	Locked random skyfall +25% for 7 turns
 
 #13: SkillSet:
 	Condition: One-time use (ai:100 rnd:0) (cost: 3)
 	[0] ESDamageShield(74:7702) -> Darkened Scale Armor
-	Reduce damage from all sources by 75% for 4 turns
+	Reduce damage from all sources all_sources by 75% for 4 turns
 	[1] ESSkyfall(68:7705) -> Fortuitous Yin and Yang
-	Heal, Jammer skyfall +20% for 7 turns
+	Heal and Jammer skyfall +20% for 7 turns
 
 #14: ESEndPath(36:26) -> ESEndPath
 end_turn
@@ -63,7 +63,7 @@ Increase damage to 150% for the next 999 turns
 
 #16: ESDamageShield(74:7708) -> Darkened Scale Armor
 Condition: One-time use (ai:100 rnd:0) (cost: 3)
-Reduce damage from all sources by 75% for 4 turns
+Reduce damage from all sources all_sources by 75% for 4 turns
 
 #17: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 4, target rnd 21
@@ -108,7 +108,7 @@ flag SET 0b11111
 Change all orbs to Jammer
 
 #31: ESBoardChangeAttackBits(85:7716) -> Darklight Calamity
-Change all orbs to Dark, Jammer, Deal 3000% damage
+Change all orbs to Dark and Jammer, Deal 3000% damage
 
 #32: ESAttributeResist(72:8211) -> Dark Jewel Halved
-Reduce damage from Dark by 50%
+Reduce damage from Dark attrs by 50%

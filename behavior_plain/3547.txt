@@ -17,9 +17,9 @@ flag SET 0b1
 	[0] ESStatusShield(20:6965) -> Abnormal Dimension
 	Voids status ailments for 10 turns
 	[1] ESBombRandomSpawn(102:6966) -> Terror
-	Spawn random 3 locked Bomb orbs
+	Spawn 3 random locked Bomb orbs
 	[2] ESRandomSpawn(92:6967) -> Impurity
-	Spawn random 3 Jammer, Mortal Poison orbs
+	Spawn 3 random Jammer or Mortal Poison orbs
 
 #5: ESEndPath(36:26) -> ESEndPath
 end_turn
@@ -35,7 +35,7 @@ Branch on flag & 2, target rnd 12
 flag SET 0b11
 
 #9: ESRandomSpawn(92:6969) -> Arced Horn of Truth
-Condition: One-time use & when Jammer, Mortal Poison orbs are on the board (ai:100 rnd:0) (cost: 4)
+Condition: One-time use & when Jammer or Mortal Poison orbs are on the board (ai:100 rnd:0) (cost: 4)
 Change all orbs to Dark, Deal 1200% damage
 
 #10: SkillSet:
@@ -43,7 +43,7 @@ Change all orbs to Dark, Deal 1200% damage
 	[0] ESOrbSealColumn(99:6970) -> Orb Rust
 	Seal the 6th column for 5 turns
 	[1] ESAbsorbCombo(67:6971) -> Distortion Field
-	Absorb combos <= 5 damage for 5 turns
+	Absorb damage when combos <= 5 for 5 turns
 
 #11: ESEndPath(36:26) -> ESEndPath
 end_turn
@@ -54,7 +54,7 @@ Branch on hp > 100, target rnd 23
 #13: SkillSet:
 	Condition: One-time use (ai:100 rnd:0) (cost: 4)
 	[0] ESDamageShield(74:6981) -> Shadow Wall
-	Reduce damage from all sources by 75% for 5 turns
+	Reduce damage from all sources all_sources by 75% for 5 turns
 	[1] ESAttackUPRemainingEnemies(17:6982) -> Wicked
 	Increase damage to 150% for the next 4 turns
 
@@ -100,4 +100,4 @@ Mortal Poison skyfall +25% for 1 turn, Deal 2400% damage
 end_turn
 
 #25: ESAttributeResist(72:6985) -> Dark damage halved
-Reduce damage from Dark by 50%
+Reduce damage from Dark attrs by 50%

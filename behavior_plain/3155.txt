@@ -21,7 +21,7 @@ flag SET 0b1
 
 #5: ESDamageShield(74:5372) -> Prima Schild
 Condition: When < 50% hp , one-time use (ai:100 rnd:0) (cost: 3)
-Reduce damage from all sources by 50% for 3 turns
+Reduce damage from all sources all_sources by 50% for 3 turns
 
 #6: ESDebuffMovetime(39:5369) -> Zeit Rauben
 Condition: When < 50% hp , one-time use (ai:100 rnd:0) (cost: 2)
@@ -42,7 +42,7 @@ Branch on flag & 2, target rnd 12
 flag SET 0b11
 
 #11: ESRandomSpawn(92:5366) -> Blitzen Schwert
-Spawn random 4 Heal orbs, Deal 100% damage
+Spawn 4 random Heal orbs, Deal 100% damage
 
 #12: ESFlagOperation(24:14) -> ESFlagOperation
 flag UNSET 0b10
@@ -56,10 +56,10 @@ Condition: When heal orbs are on the board (ai:100 rnd:0)
 Change all orbs to Mortal Poison
 
 #15: ESColumnSpawnMulti(77:5371) -> Blitz Lanze
-Change 3rd, 4th column to Light, Heal orbs, Deal 170% damage
+Change the 3rd, 4th column to Light and Heal orbs, Deal 170% damage
 
 #16: ESEndPath(36:26) -> ESEndPath
 end_turn
 
 #17: ESAttributeResist(72:5374) -> Robot Dark Halved
-Reduce damage from Dark by 50%
+Reduce damage from Dark attrs by 50%

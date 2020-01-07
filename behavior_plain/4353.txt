@@ -25,7 +25,7 @@ flag SET 0b1
 	[1] ESGravity(50:9712) -> Explosive Wave
 	Player -99% HP
 	[2] ESColumnSpawnMulti(76:9713) -> Blowing Dirty Water
-	Change 1st column to Water, Jammer, Poison orbs, 3rd, 4th column to Water, Jammer, Poison orbs
+	Change the 1st column to Water, Jammer, and Poison orbs, the 3rd, 4th column to Water, Jammer, and Poison orbs
 	[3] ESVoidShield(71:9714) -> Surging Waves
 	Void damage >= 15000000 for 999 turns
 
@@ -43,11 +43,11 @@ Branch on counter > 5, target rnd 16
 
 #11: ESRandomSpawn(92:9716) -> Water Hazard
 Condition: 25% chance (ai:0 rnd:25)
-Spawn random 8 Water orbs, Deal 100% damage
+Spawn 8 random Water orbs, Deal 100% damage
 
 #12: ESOrbLock(94:9717) -> Blizzard Wave
 Condition: 25% chance (ai:0 rnd:25)
-Lock 14 random Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs, Deal 110% damage
+Lock 14 random Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, and Mortal Poison orbs, Deal 110% damage
 
 #13: ESBindRandom(1:9718) -> Frozen Tentacle
 Condition: 25% chance (ai:0 rnd:25)
@@ -92,7 +92,7 @@ counter = 0
 
 #25: SkillSet:
 	[0] ESBoardChange(84:9723) -> Untamable Raging Waves
-	Change all orbs to Heal, Poison
+	Change all orbs to Heal and Poison
 	[1] ESDebuffRCV(105:9724) -> Ocean Current Mayhem
 	Rcv 50% for 99 turns
 	[2] ESBindRandom(1:9725) -> Freeze Wave
@@ -161,4 +161,4 @@ Increase damage to 230% for the next attack
 end_turn
 
 #42: ESAttributeResist(72:9710) -> Water Att. Half Reduced
-Reduce damage from Water by 50%
+Reduce damage from Water attrs by 50%

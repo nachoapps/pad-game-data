@@ -12,7 +12,7 @@ Branch on level > 2, target rnd 5
 
 #3: ESDamageShield(74:8358) -> I love dragons!
 Condition: One-time use (ai:100 rnd:0) (cost: 1)
-Reduce damage from all sources by 50% for 99 turns
+Reduce damage from all sources all_sources by 50% for 99 turns
 
 #4: ESAttackMultihit(15:8359) -> Dragon REM Punch!
 Deal 130% damage
@@ -29,7 +29,7 @@ flag SET 0b1
 	[1] ESStatusShield(20:8341) -> Dragon Caller's Aura
 	Voids status ailments for 5 turns
 	[2] ESDamageShield(74:8342) -> Pull!
-	Reduce damage from all sources by 75% for 1 turn
+	Reduce damage from all sources all_sources by 75% for 1 turn
 
 #8: ESEndPath(36:26) -> ESEndPath
 end_turn
@@ -44,10 +44,10 @@ Branch on flag & 2, target rnd 13
 flag SET 0b11
 
 #12: ESDamageShield(74:8344) -> Pull it!
-Reduce damage from all sources by 50% for 1 turn, Deal 100% damage
+Reduce damage from all sources all_sources by 50% for 1 turn, Deal 100% damage
 
 #13: ESDamageShield(74:8345) -> Come on! Pull!
-Reduce damage from all sources by 50% for 1 turn, Deal 120% damage
+Reduce damage from all sources all_sources by 50% for 1 turn, Deal 120% damage
 
 #14: ESEndPath(36:26) -> ESEndPath
 end_turn
@@ -60,35 +60,35 @@ Branch on hp < 15, target rnd 22
 	[0] ESInactivity(66:8346) -> It's putting some back into it
 	Do nothing
 	[1] ESBoardChangeAttackBits(85:8347) -> Draco Nesting Circle - Dk, Fr & Life
-	Change all orbs to Fire, Dark, Heal, Deal 150% damage
+	Change all orbs to Fire, Dark, and Heal, Deal 150% damage
 
 #17: SkillSet:
 	Condition: 20% chance (ai:0 rnd:20)
 	[0] ESInactivity(66:8346) -> It's putting some back into it
 	Do nothing
 	[1] ESBoardChangeAttackBits(85:8348) -> Draco Nesting Circle - Dk, Wt & Life
-	Change all orbs to Water, Dark, Heal, Deal 150% damage
+	Change all orbs to Water, Dark, and Heal, Deal 150% damage
 
 #18: SkillSet:
 	Condition: 20% chance (ai:0 rnd:20)
 	[0] ESInactivity(66:8346) -> It's putting some back into it
 	Do nothing
 	[1] ESBoardChangeAttackBits(85:8349) -> Draco Nesting Circle - Dk, Wd & Life
-	Change all orbs to Wood, Dark, Heal, Deal 150% damage
+	Change all orbs to Wood, Dark, and Heal, Deal 150% damage
 
 #19: SkillSet:
 	Condition: 20% chance (ai:0 rnd:20)
 	[0] ESInactivity(66:8346) -> It's putting some back into it
 	Do nothing
 	[1] ESBoardChangeAttackBits(85:8350) -> Draco Nesting Circle - Dk, Lt & Life
-	Change all orbs to Light, Dark, Heal, Deal 150% damage
+	Change all orbs to Light, Dark, and Heal, Deal 150% damage
 
 #20: SkillSet:
 	Condition: 20% chance (ai:0 rnd:20)
 	[0] ESInactivity(66:8346) -> It's putting some back into it
 	Do nothing
 	[1] ESBoardChangeAttackBits(85:8351) -> Draco Nesting Circle - Dk, Demon & Life
-	Change all orbs to Dark, Heal, Jammer, Deal 150% damage
+	Change all orbs to Dark, Heal, and Jammer, Deal 150% damage
 
 #21: ESEndPath(36:26) -> ESEndPath
 end_turn

@@ -33,7 +33,7 @@ Change Poison to Mortal Poison, Deal 150% damage
 
 #8: ESRandomSpawn(92:11664) -> Abysstrom
 Condition: 50% chance (ai:0 rnd:50)
-Spawn random 8 Poison orbs, Deal 100% damage
+Spawn 8 random Poison orbs, Deal 100% damage
 
 #9: ESAttackMultihit(15:11665) -> Double Scissors
 Condition: 50% chance (ai:0 rnd:50)
@@ -47,12 +47,12 @@ end_turn
 	[0] ESRecoverEnemy(86:11670) -> How regrettable
 	Enemy recover 50% hp
 	[1] ESDamageShield(74:11671) -> Finally, you will struggle
-	Reduce damage from all sources by 75% for 99 turns
+	Reduce damage from all sources all_sources by 75% for 99 turns
 
 #12: SkillSet:
 	Condition: One-time use (ai:100 rnd:0) (cost: 1)
 	[0] ESDamageShield(74:11667) -> Finally, you will struggle...
-	Reduce damage from all sources by 50% for 99 turns
+	Reduce damage from all sources all_sources by 50% for 99 turns
 	[1] ESDebuffMovetime(39:11668) -> Prepare yourself!
 	Movetime 50% for 10 turns
 
@@ -69,7 +69,7 @@ Branch on counter > 3, target rnd 7
 counter + 1
 
 #17: ESAbsorbCombo(67:11673) -> Novice
-Absorb combos <= 7 damage for 99 turns
+Absorb damage when combos <= 7 for 99 turns
 
 #18: ESEndPath(36:26) -> ESEndPath
 end_turn

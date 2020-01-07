@@ -16,7 +16,7 @@ flag SET 0b1
 #4: SkillSet:
 	Condition: One-time use (ai:100 rnd:0) (cost: 5)
 	[0] ESColumnSpawnMulti(77:5749) -> Burning Grudge
-	Change 1st, 2nd, 5th, 6th column to Fire, Poison orbs, Deal 100% damage
+	Change the 1st, 2nd, 5th, 6th column to Fire and Poison orbs, Deal 100% damage
 	[1] ESSkyfall(96:5750) -> Immortal Ambition
 	Locked random skyfall +20% for 10 turns
 
@@ -25,7 +25,7 @@ end_turn
 
 #6: ESOrbLock(94:5755) -> Soaring Destruction
 Condition: One-time use (ai:100 rnd:0) (cost: 5)
-Lock all Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs, Deal 800% damage
+Lock all Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, and Mortal Poison orbs, Deal 800% damage
 
 #7: ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 50, target rnd 12
@@ -40,7 +40,7 @@ Deal 190% damage (2 hits, 95% each)
 
 #10: ESAbsorbCombo(67:5754) -> No Mercy
 Condition: 33% chance (ai:0 rnd:33)
-Absorb combos <= 6 damage for 1 turn, Deal 180% damage
+Absorb damage when combos <= 6 for 1 turn, Deal 180% damage
 
 #11: ESEndPath(36:26) -> ESEndPath
 end_turn
@@ -52,4 +52,4 @@ Branch on flag & 2, target rnd 8
 flag SET 0b11
 
 #14: ESAbsorbAttribute(53:5756) -> Injustice
-Absorb Fire, Water, Wood damage for 2 turns
+Absorb Fire, Water, and Wood damage for 2 turns

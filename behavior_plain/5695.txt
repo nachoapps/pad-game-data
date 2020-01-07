@@ -12,7 +12,7 @@ Enable preempt if level 1
 	[0] ESDebuffMovetime(39:15195) -> チェンジ、シンカリオン！
 	Movetime -2s for 5 turns
 	[1] ESAbsorbThreshold(87:15196) -> 行くぞ！
-	Absorb damage >= 7,000,000 damage for 9 turns
+	Absorb damage when damage >= 7,000,000 for 9 turns
 
 #3: ESBranchCounter(32:22) -> ESBranchCounter
 Branch on counter > 5, target rnd 15
@@ -28,7 +28,7 @@ Condition: One-time use (ai:100 rnd:0) (cost: 1)
 Player -50% HP
 
 #7: ESColumnSpawnMulti(77:15198) -> カイサツブレード
-Change 3rd column to Wood orbs, 4th column to Wood orbs, Deal 175% damage
+Change the 3rd column to Wood orbs, the 4th column to Wood orbs, Deal 175% damage
 
 #8: ESEndPath(36:26) -> ESEndPath
 end_turn
@@ -40,13 +40,13 @@ Branch on flag & 1, target rnd 13
 flag SET 0b1
 
 #11: ESDamageShield(74:15199) -> 俺達に破滅なんてない
-Reduce damage from all sources by 75% for 3 turns
+Reduce damage from all sources all_sources by 75% for 3 turns
 
 #12: ESEndPath(36:26) -> ESEndPath
 end_turn
 
 #13: ESRowSpawnMulti(79:15201) -> デュアルグランクロス！
-Change 2nd row to Wood orbs, 3rd row to Light orbs, 4th row to Wood orbs, Deal 1000% damage
+Change the 2nd row to Wood orbs, the 3rd row to Light orbs, the 4th row to Wood orbs, Deal 1000% damage
 
 #14: ESEndPath(36:26) -> ESEndPath
 end_turn
@@ -55,7 +55,7 @@ end_turn
 counter = 0
 
 #16: ESAbsorbCombo(67:15200) -> 行くよシャショット！
-Absorb combos <= 7 damage for 3 turns
+Absorb damage when combos <= 7 for 3 turns
 
 #17: ESEndPath(36:26) -> ESEndPath
 end_turn

@@ -17,7 +17,7 @@ flag SET 0b1
 	[0] ESStatusShield(20:11234) -> Oh, welcome to my shop
 	Voids status ailments for 999 turns
 	[1] ESDamageShield(74:11235) -> You're the one doing errands huh?
-	Reduce damage from all sources by 75% for 1 turn
+	Reduce damage from all sources all_sources by 75% for 1 turn
 	[2] ESVoidShield(71:11236) -> Show me the result of your errand
 	Void damage >= 50000000 for 999 turns
 
@@ -35,7 +35,7 @@ Branch on hp < 90, target rnd 10
 
 #9: SkillSet:
 	[0] ESSkyfall(68:11238) -> You're just a small-fry
-	Jammer, Poison skyfall +10% for 99 turns
+	Jammer and Poison skyfall +10% for 99 turns
 	[1] ESSpinnersFixed(110:11239) -> Well, try your best!
 	Specific orbs change every 1.0s for 99 turns
 
@@ -44,7 +44,7 @@ counter + 1
 
 #11: SkillSet:
 	[0] ESDamageShield(74:11241) -> You're doing quite well
-	Reduce damage from all sources by 50% for 99 turns
+	Reduce damage from all sources all_sources by 50% for 99 turns
 	[1] ESSkillDelay(89:11242) -> This is fine, right?
 	Delay active skills by 10 turns
 
@@ -65,7 +65,7 @@ Branch on hp < 75, target rnd 24
 
 #17: ESOrbLock(94:11243) -> Viscid Dragon
 Condition: 16% chance (ai:0 rnd:16)
-Lock 15 random Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs, Deal 100% damage
+Lock 15 random Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, and Mortal Poison orbs, Deal 100% damage
 
 #18: ESAttackMultihit(15:11244) -> Snappy
 Condition: 16% chance (ai:0 rnd:16)
@@ -81,7 +81,7 @@ Movetime -4s for 1 turn, Deal 95% damage
 
 #21: ESBombRandomSpawn(102:11247) -> Dangerous Tools
 Condition: 17% chance (ai:0 rnd:17)
-Spawn random 5 Bomb orbs, Deal 100% damage
+Spawn 5 random Bomb orbs, Deal 100% damage
 
 #22: ESBindRandom(1:11248) -> Welding
 Condition: 17% chance (ai:0 rnd:17)
@@ -103,13 +103,13 @@ Branch on counter > 1, target rnd 28
 	[0] ESGravity(50:11250) -> It huuurts!
 	Player -50% HP
 	[1] ESRandomSpawn(92:11251) -> Eat this!
-	Spawn random 10 Mortal Poison orbs
+	Spawn 10 random Mortal Poison orbs
 
 #28: SkillSet:
 	[0] ESGravity(50:11250) -> It huuurts!
 	Player -50% HP
 	[1] ESAbsorbCombo(67:11253) -> How about this?
-	Absorb combos <= 7 damage for 99 turns
+	Absorb damage when combos <= 7 for 99 turns
 
 #29: ESEndPath(36:26) -> ESEndPath
 end_turn
@@ -127,7 +127,7 @@ Branch on counter > 1, target rnd 34
 	[0] ESGravity(50:11255) -> It huuurts!
 	Player -75% HP
 	[1] ESRandomSpawn(92:11256) -> Drown!
-	Spawn random 20 Mortal Poison orbs
+	Spawn 20 random Mortal Poison orbs
 
 #34: SkillSet:
 	[0] ESGravity(50:11255) -> It huuurts!
@@ -157,7 +157,7 @@ Branch on counter > 1, target rnd 40
 	[0] ESGravity(50:11260) -> It huuurts!
 	Player -99% HP
 	[1] ESAbsorbAttribute(53:11263) -> Is it over already?
-	Absorb Light, Dark damage for 99 turns
+	Absorb Light and Dark damage for 99 turns
 
 #41: ESEndPath(36:26) -> ESEndPath
 end_turn

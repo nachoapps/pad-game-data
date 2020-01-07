@@ -15,7 +15,7 @@ end_turn
 
 #4: ESDamageShield(74:13242) -> All right.
 Condition: One-time use (ai:100 rnd:0) (cost: 1)
-Reduce damage from all sources by 50% for 5 turns
+Reduce damage from all sources all_sources by 50% for 5 turns
 
 #5: ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 50, target rnd 10
@@ -30,7 +30,7 @@ Delay active skills by 2 turns, Deal 100% damage
 
 #8: ESRandomSpawn(92:13246) -> Be careful how you speak.
 Condition: 34% chance (ai:0 rnd:34)
-Spawn random 8 Jammer orbs, Deal 90% damage
+Spawn 8 random Jammer orbs, Deal 90% damage
 
 #9: ESEndPath(36:26) -> ESEndPath
 end_turn
@@ -42,7 +42,7 @@ Branch on flag & 1, target rnd 14
 flag SET 0b1
 
 #12: ESAbsorbCombo(67:13243) -> Weaklings.
-Absorb combos <= 5 damage for 10 turns
+Absorb damage when combos <= 5 for 10 turns
 
 #13: ESEndPath(36:26) -> ESEndPath
 end_turn

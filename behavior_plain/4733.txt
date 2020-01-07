@@ -41,9 +41,9 @@ Branch on hp < 50, target rnd 19
 #10: SkillSet:
 	Condition: One-time use (ai:0 rnd:20) (cost: 1)
 	[0] ESAbsorbThreshold(87:11082) -> Starvation
-	Absorb damage >= 20,000,000 damage for 1 turn
+	Absorb damage when damage >= 20,000,000 for 1 turn
 	[1] ESSkyfall(68:11083) -> Meteor Shower
-	Water, Wood skyfall +20% for 1 turn, Deal 105% damage
+	Water and Wood skyfall +20% for 1 turn, Deal 105% damage
 
 #11: SkillSet:
 	Condition: 4% chance (ai:0 rnd:4)
@@ -83,14 +83,14 @@ Branch on hp < 50, target rnd 19
 #16: SkillSet:
 	Condition: 20% chance (ai:0 rnd:20)
 	[0] ESAbsorbCombo(67:11094) -> Withering Hope
-	Absorb combos <= 8 damage for 1 turn
+	Absorb damage when combos <= 8 for 1 turn
 	[1] ESCloud(104:11289) -> Clouds of Yonder
 	Row of cloud appear for 1 turn at random location, Deal 100% damage
 
 #17: SkillSet:
 	Condition: 20% chance (ai:0 rnd:20)
 	[0] ESDamageShield(74:11290) -> Encasing Strongscales
-	Reduce damage from all sources by 75% for 1 turn
+	Reduce damage from all sources all_sources by 75% for 1 turn
 	[1] ESBoardChangeAttackBits(85:11291) -> Rapids of Life
 	Change all orbs to Heal, Deal 150% damage
 
@@ -126,7 +126,7 @@ counter + 1
 
 #26: SkillSet:
 	[0] ESChangeAttribute(46:11299) -> Morph Scales
-	Change own attribute to random one of Fire, Water, Wood, Light, Dark
+	Change own attribute to random one of Fire, Water, Wood, Light, or Dark
 	[1] ESAttackMultihit(15:11300) -> Frenzy of Absolute Power
 	Deal 1200% damage (4 hits, 300% each)
 

@@ -12,13 +12,13 @@ level: 1
  | Survive attacks with 1 HP when HP > 50%
  type: PREEMPT
  | (9910:83) Cloud Cluster + Protective Cloud Formation + Rainbow Fog
- | 6x2 cloud appear for 1 turn at 4th row, 1st column + Voids status ailments for 99 turns + Absorb combos <= 7 damage for 1 turn
+ | 6x2 cloud appear for 1 turn at 4th row, 1st column + Voids status ailments for 99 turns + Absorb damage when combos <= 7 for 1 turn
  group:
  | group:
    | group:
    | condition: turn 1 while HP > 49
      | (9914:83) Cloud Cluster + Prism Fog + Lightning Ball Strike
-     | 6x2 cloud appear for 1 turn at 1st row, 1st column + Absorb combos <= 4 damage for 5 turns + Deal 270% damage (9 hits, 30% each), Deal 270% damage (9 hits, 30% each)
+     | 6x2 cloud appear for 1 turn at 1st row, 1st column + Absorb damage when combos <= 4 for 5 turns + Deal 270% damage (9 hits, 30% each), Deal 270% damage (9 hits, 30% each)
    | group:
    | condition: turn 2 while HP > 49
      | (9918:83) Cloud Cluster + Moby Dick's Mighty Roar + Rising Flip
@@ -42,14 +42,14 @@ level: 1
      | (9933:108) Heaven's Breaching
      | Change Jammer to Light, Deal 260% damage
      | (9934:108) Dirty Cloud
-     | Change Light, Heal to Jammer, Deal 210% damage
+     | Change Light and Heal to Jammer, Deal 210% damage
      | (9935:48) Dirty Cloud
      | Change Random to Jammer, Deal 210% damage
    | group:
      | (9933:108) Heaven's Breaching
      | Change Jammer to Light, Deal 260% damage
      | (9934:108) Dirty Cloud
-     | Change Light, Heal to Jammer, Deal 210% damage
+     | Change Light and Heal to Jammer, Deal 210% damage
      | (9935:48) Dirty Cloud
      | Change Random to Jammer, Deal 210% damage
  | group:
@@ -57,11 +57,11 @@ level: 1
    | group:
    | condition: turn 1 while HP > 9
      | (9936:83) Colossal Cumulonimbus Cloud + Plasma Chain
-     | Reduce damage from all sources by 75% for 10 turns + Bind both leaders for 3 turns
+     | Reduce damage from all sources all_sources by 75% for 10 turns + Bind both leaders for 3 turns
    | group:
    | condition: execute repeatedly, turn 1 of 2
      | (9939:84) Grimy Cloud
-     | Change all orbs to Fire, Light, Heal, Jammer, Poison, Deal 246% damage
+     | Change all orbs to Fire, Light, Heal, Jammer, and Poison, Deal 246% damage
    | group:
    | condition: execute repeatedly, turn 2 of 2
      | (9940:65) Lightning Chain

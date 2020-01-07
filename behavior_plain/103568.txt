@@ -25,7 +25,7 @@ flag SET 0b1
 	[1] ESVoidShield(71:15328) -> エクスウォール
 	Void damage >= 25000000 for 999 turns
 	[2] ESAbsorbCombo(67:15329) -> アブソーブゼクス
-	Absorb combos <= 7 damage for 99 turns
+	Absorb damage when combos <= 7 for 99 turns
 	[3] ESOrbSealColumn(99:15330) -> ヒィイイイェアアア！！！
 	Seal the 1st and 6th columns for 1 turn, Deal 200% damage
 
@@ -52,9 +52,9 @@ flag SET 0b11
 
 #14: SkillSet:
 	[0] ESColumnSpawnMulti(77:8868) -> Double Sacrifice
-	Change 1st column to Poison orbs, 6th column to Jammer orbs, Deal 120% damage
+	Change the 1st column to Poison orbs, the 6th column to Jammer orbs, Deal 120% damage
 	[1] ESAttributeBlock(107:8869) -> Twin Protection
-	Unable to match Jammer, Poison orbs for 1 turn
+	Unable to match Jammer and Poison orbs for 1 turn
 
 #15: SkillSet:
 	Condition: One-time use (ai:50 rnd:0) (cost: 1)
@@ -82,10 +82,10 @@ Change Jammer to Fire, Deal 150% damage
 
 #19: ESColumnSpawnMulti(77:8877) -> Double Sacrifice
 Condition: 50% chance (ai:50 rnd:0)
-Change 1st column to Poison orbs, 6th column to Jammer orbs, Deal 120% damage
+Change the 1st column to Poison orbs, the 6th column to Jammer orbs, Deal 120% damage
 
 #20: ESColumnSpawnMulti(77:8878) -> Twin Strike
-Change 1st column to Dark orbs, 6th column to Fire orbs, Deal 140% damage
+Change the 1st column to Dark orbs, the 6th column to Fire orbs, Deal 140% damage
 
 #21: ESEndPath(36:26) -> ESEndPath
 end_turn
@@ -95,7 +95,7 @@ end_turn
 	[0] ESBlindStickyFixed(98:8879) -> Double Saber
 	Blind orbs in specific positions for 1 turn
 	[1] ESOrbLock(94:8880) -> X Field
-	Lock all Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs
+	Lock all Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, and Mortal Poison orbs
 	[2] ESAttackMultihit(15:8897) -> Hyah!!!
 	Deal 100% damage
 
@@ -116,11 +116,11 @@ Change Jammer to Fire, Deal 150% damage
 
 #26: ESRowSpawnMulti(79:8886) -> Double Sacrifice
 Condition: 33% chance (ai:33 rnd:0)
-Change 1st row to Poison orbs, 5th row to Jammer orbs, Deal 120% damage
+Change the 1st row to Poison orbs, the 5th row to Jammer orbs, Deal 120% damage
 
 #27: ESRowSpawnMulti(79:8887) -> Twin Strike
 Condition: 50% chance (ai:50 rnd:0)
-Change 1st row to Dark orbs, 5th row to Fire orbs, Deal 120% damage
+Change the 1st row to Dark orbs, the 5th row to Fire orbs, Deal 120% damage
 
 #28: ESAttackMultihit(15:8888) -> Cross Rush
 Deal 160% damage (4 hits, 40% each)
@@ -144,7 +144,7 @@ flag SET 0b111
 end_turn
 
 #34: ESBoardChangeAttackBits(85:8893) -> Twin Explosion
-Change all orbs to Fire, Dark, Deal 400% damage
+Change all orbs to Fire and Dark, Deal 400% damage
 
 #35: ESEndPath(36:26) -> ESEndPath
 end_turn
@@ -159,4 +159,4 @@ Change all orbs to Jammer, Deal 370% damage
 end_turn
 
 #39: ESTypeResist(118:8863) -> Machine Boss Resistance
-Reduce damage from Machine by 50%
+Reduce damage from Machine types by 50%

@@ -9,16 +9,16 @@ approved: False
 level: 1
  type: PREEMPT
  | (13716:83) Why do you fight? + I won't go easy on you. + Prepare yourself. + Iron DEF of Aegis
- | Delay active skills by 4~6 turns + Voids status ailments for 999 turns + Voids player buff effects + Absorb damage >= 4,000,000 damage for 99 turns
+ | Delay active skills by 4~6 turns + Voids status ailments for 999 turns + Voids player buff effects + Absorb damage when damage >= 4,000,000 for 99 turns
  group:
  | group:
    | group:
    | condition: execute repeatedly, turn 1 of 4
      | condition: 50% chance
      | (5150:77) C-Shining Spear
-     | Change 2nd column to Wood orbs, 5th column to Light orbs, Deal 380% damage
+     | Change the 2nd column to Wood orbs, the 5th column to Light orbs, Deal 380% damage
      | (5152:46) EB & Self Convert
-     | Change own attribute to random one of Wood, Light, Deal 380% damage
+     | Change own attribute to random one of Wood or Light, Deal 380% damage
    | group:
    | condition: execute repeatedly, turn 2 of 4
      | condition: 40% chance
@@ -30,15 +30,15 @@ level: 1
    | condition: execute repeatedly, turn 3-4 of 4
      | condition: 50% chance
      | (5150:77) C-Shining Spear
-     | Change 2nd column to Wood orbs, 5th column to Light orbs, Deal 380% damage
+     | Change the 2nd column to Wood orbs, the 5th column to Light orbs, Deal 380% damage
      | (5152:46) EB & Self Convert
-     | Change own attribute to random one of Wood, Light, Deal 380% damage
+     | Change own attribute to random one of Wood or Light, Deal 380% damage
  | group:
  | condition: hp <= 49
    | group:
    | condition: turn 1 while HP > 19
      | (5149:74) AS-Complete Protection
-     | Reduce damage from all sources by 99% for 2 turns
+     | Reduce damage from all sources all_sources by 99% for 2 turns
    | group:
    | condition: turn 2 while HP > 19
      | (5154:15) Storm Punisher FPE
@@ -54,9 +54,9 @@ level: 1
    | condition: execute repeatedly, turn 2-4 of 4
      | condition: 50% chance
      | (5150:77) C-Shining Spear
-     | Change 2nd column to Wood orbs, 5th column to Light orbs, Deal 380% damage
+     | Change the 2nd column to Wood orbs, the 5th column to Light orbs, Deal 380% damage
      | (5152:46) EB & Self Convert
-     | Change own attribute to random one of Wood, Light, Deal 380% damage
+     | Change own attribute to random one of Wood or Light, Deal 380% damage
  | group:
  | condition: hp <= 19
    | group:

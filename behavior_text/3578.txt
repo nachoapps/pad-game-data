@@ -9,16 +9,16 @@ approved: False
 level: 1
  type: PASSIVE
  | (7087:72) Dark damage halved
- | Reduce damage from Dark by 50%
+ | Reduce damage from Dark attrs by 50%
  type: PREEMPT
  | (7066:83) Battle Preparations + Guardian Dragon Formation + Armored Defense
- | Unable to match Fire, Water, Wood, Light, Dark orbs for 1 turn + Voids status ailments for 999 turns + Void damage >= 10000000 for 999 turns
+ | Unable to match Fire, Water, Wood, Light, and Dark orbs for 1 turn + Voids status ailments for 999 turns + Void damage >= 10000000 for 999 turns
  group:
  | group:
    | group:
    | condition: always turn 1
      | (7069:83) Simple Nine Seek + Storing energy...
-     | Absorb combos <= 8 damage for 1 turn + Increase damage to 900% for the next 1 turn
+     | Absorb damage when combos <= 8 for 1 turn + Increase damage to 900% for the next 1 turn
    | group:
    | condition: turn 2 while HP > 98
      | (7072:83) Passive Weakness + Deton Rhadiem
@@ -34,22 +34,22 @@ level: 1
      | Spawn locked Bomb orbs in the specified positions, Deal 380% damage
      | condition: 33% chance
      | (7078:102) Zelvarun
-     | Spawn random 3 Bomb orbs, Deal 390% damage
+     | Spawn 3 random Bomb orbs, Deal 390% damage
      | condition: 34% chance
      | (7079:94) Little Flash
-     | Lock 9 random Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs
+     | Lock 9 random Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, and Mortal Poison orbs
  | group:
  | condition: always turn 2, hp <= 98
    | (7075:83) Elemental Purge + Orb Flash
-   | Change Random to Jammer + Lock all Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs, Deal 50% damage
+   | Change Random to Jammer + Lock all Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, and Mortal Poison orbs, Deal 50% damage
  | group:
  | condition: turn 3 while HP > 8, hp <= 49
    | (7082:83) Orb Flash + Rubilushent
-   | Lock all Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs + Player -115% HP
+   | Lock all Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, and Mortal Poison orbs + Player -115% HP
  | group:
  | condition: turn 4 while HP > 8, hp <= 14
    | (7085:83) Nine Seek + Metal Armor
-   | Absorb combos <= 8 damage for 9 turns + Reduce damage from all sources by 50% for 9 turns
+   | Absorb damage when combos <= 8 for 9 turns + Reduce damage from all sources all_sources by 50% for 9 turns
  | group:
  | condition: hp <= 8
    | (7086:103) Void Burn

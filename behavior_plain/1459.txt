@@ -17,7 +17,7 @@ flag SET 0b1
 	[0] ESSkillDelay(89:8318) -> Echoing Howl
 	Delay active skills by 5 turns
 	[1] ESRandomSpawn(92:8319) -> Quinary Prism
-	Spawn random 5 Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs
+	Spawn 5 random Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, or Mortal Poison orbs
 
 #5: ESEndPath(36:26) -> ESEndPath
 end_turn
@@ -38,7 +38,7 @@ Branch on flag & 2, target rnd 13
 flag SET 0b11
 
 #11: ESDamageShield(74:8322) -> Crystallizing Force
-Reduce damage from all sources by 75% for 2 turns, Deal 100% damage
+Reduce damage from all sources all_sources by 75% for 2 turns, Deal 100% damage
 
 #12: ESEndPath(36:26) -> ESEndPath
 end_turn
@@ -79,7 +79,7 @@ flag UNSET 0b110
 	[0] ESSkillDelay(89:8318) -> Echoing Howl
 	Delay active skills by 5 turns
 	[1] ESBoardChangeAttackBits(85:8329) -> Linking Rays
-	Change all orbs to Fire, Water, Wood, Light, Dark, Heal, Jammer, Deal 150% damage
+	Change all orbs to Fire, Water, Wood, Light, Dark, Heal, and Jammer, Deal 150% damage
 
 #23: ESEndPath(36:26) -> ESEndPath
 end_turn

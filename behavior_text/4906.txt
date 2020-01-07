@@ -9,17 +9,17 @@ approved: False
 level: 1
  type: PASSIVE
  | (11577:72) Fire Water Halves
- | Reduce damage from Fire, Water by 50%
+ | Reduce damage from Fire and Water attrs by 50%
  type: PREEMPT
  | (11578:83) Wind Maker + Started making a whirlwind + Wind obstructs the strikes
- | Voids status ailments for 999 turns + Void damage >= 15000000 for 3 turns + Absorb combos <= 7 damage for 3 turns
+ | Voids status ailments for 999 turns + Void damage >= 15000000 for 3 turns + Absorb damage when combos <= 7 for 3 turns
  group:
  | group:
    | group:
    | condition: turn 1 while HP > 49
      | condition: 33% chance
      | (11583:83) Blazing Cyclone + Aero Feather
-     | Spawn random 5 Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs + Lock 15 random Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs, Deal 100% damage
+     | Spawn 5 random Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, or Mortal Poison orbs + Lock 15 random Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, and Mortal Poison orbs, Deal 100% damage
      | condition: 34% chance
      | (11589:83) Whirling Tornado + Burst Wing
      | Bind 3 random cards for 1 turn + Deal 111% damage (3 hits, 37% each), Deal 111% damage (3 hits, 37% each)
@@ -27,7 +27,7 @@ level: 1
    | condition: execute repeatedly, turn 1 of 6
      | condition: 33% chance
      | (11583:83) Blazing Cyclone + Aero Feather
-     | Spawn random 5 Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs + Lock 15 random Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs, Deal 100% damage
+     | Spawn 5 random Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, or Mortal Poison orbs + Lock 15 random Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, and Mortal Poison orbs, Deal 100% damage
      | condition: 33% chance
      | (11586:83) Stormy Hurricane + Storm Blast
      | Bind awoken skills for 1 turn + Player -99% HP
@@ -37,7 +37,7 @@ level: 1
    | group:
    | condition: execute repeatedly, turn 2 of 6
      | (11592:83) Wind Mischief + Wind Follower + The wind died down
-     | Leader changes to random sub for 3 turns + Reduce damage from all sources by 50% for 3 turns + Do nothing
+     | Leader changes to random sub for 3 turns + Reduce damage from all sources all_sources by 50% for 3 turns + Do nothing
    | group:
    | condition: execute repeatedly, turn 3-4 of 6
      | condition: 33% chance
@@ -45,19 +45,19 @@ level: 1
      | Change Random to Wood, Deal 100% damage
      | condition: 33% chance
      | (11596:92) Fire Storm
-     | Spawn random 4 Fire, Wood orbs, Deal 105% damage
+     | Spawn 4 random Fire or Wood orbs, Deal 105% damage
      | condition: 34% chance
      | (11597:15) Climatic Gale
      | Deal 105% damage (3 hits, 35% each)
    | group:
    | condition: execute repeatedly, turn 5 of 6
      | (11582:83) Started making a whirlwind + Wind obstructs the strikes
-     | Void damage >= 15000000 for 3 turns + Absorb combos <= 7 damage for 3 turns
+     | Void damage >= 15000000 for 3 turns + Absorb damage when combos <= 7 for 3 turns
    | group:
    | condition: execute repeatedly, turn 6 of 6
      | condition: 33% chance
      | (11583:83) Blazing Cyclone + Aero Feather
-     | Spawn random 5 Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs + Lock 15 random Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs, Deal 100% damage
+     | Spawn 5 random Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, or Mortal Poison orbs + Lock 15 random Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, and Mortal Poison orbs, Deal 100% damage
      | condition: 33% chance
      | (11586:83) Stormy Hurricane + Storm Blast
      | Bind awoken skills for 1 turn + Player -99% HP
@@ -76,4 +76,4 @@ level: 1
      | Movetime 50% for 10 turns + Increase damage to 200% for the next 999 turns
    | group:
      | (11604:83) Molting + Aero Burst End
-     | Change own attribute to random one of Fire, Water, Wood, Light, Dark + Deal 500% damage (5 hits, 100% each), Deal 500% damage (5 hits, 100% each)
+     | Change own attribute to random one of Fire, Water, Wood, Light, or Dark + Deal 500% damage (5 hits, 100% each), Deal 500% damage (5 hits, 100% each)

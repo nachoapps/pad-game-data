@@ -43,7 +43,7 @@ counter + 1
 
 #10: ESOrbLock(94:7977) -> Dead Judgment
 Condition: 50% chance (ai:50 rnd:0)
-Lock 1 random Poison, Mortal Poison orb, Deal 160% damage
+Lock 1 random Poison and Mortal Poison orb, Deal 160% damage
 
 #11: ESPoisonChangeRandomAttack(64:7978) -> Poison Thorn
 Change Random 6 to Poison, Deal 160% damage
@@ -64,7 +64,7 @@ Branch on counter > 2, target rnd 17
 	[0] ESRecoverEnemy(86:7971) -> Color of Life
 	Enemy recover 100% hp
 	[1] ESDamageShield(74:7972) -> Naglfar
-	Reduce damage from all sources by 75% for 10 turns
+	Reduce damage from all sources all_sources by 75% for 10 turns
 
 #17: SkillSet:
 	[0] ESGravity(50:7974) -> Color of Death
@@ -76,4 +76,4 @@ Branch on counter > 2, target rnd 17
 end_turn
 
 #19: ESAttributeResist(72:7980) -> Light Dark Halved
-Reduce damage from Light, Dark by 50%
+Reduce damage from Light and Dark attrs by 50%

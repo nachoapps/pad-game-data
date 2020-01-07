@@ -14,7 +14,7 @@ Branch on flag & 1, target rnd 6
 flag SET 0b1
 
 #4: ESRandomSpawn(92:3357) -> Law of Hell
-Spawn random 4 Poison orbs, Deal 150% damage
+Spawn 4 random Poison orbs, Deal 150% damage
 
 #5: ESEndPath(36:26) -> ESEndPath
 end_turn
@@ -31,11 +31,11 @@ Branch on hp < 50, target rnd 15
 
 #9: ESOrbLock(94:3359) -> Dead Judgment
 Condition: One-time use (ai:100 rnd:0) (cost: 2)
-Lock all Poison, Mortal Poison orbs, Deal 120% damage
+Lock all Poison and Mortal Poison orbs, Deal 120% damage
 
 #10: ESRandomSpawn(92:3360) -> Poison Nail
 Condition: 80% chance (ai:80 rnd:0)
-Spawn random 2 Mortal Poison orbs, Deal 120% damage
+Spawn 2 random Mortal Poison orbs, Deal 120% damage
 
 #11: ESEndPath(36:26) -> ESEndPath
 end_turn
@@ -60,7 +60,7 @@ flag SET 0b111
 
 #18: ESDamageShield(74:3358) -> Naglfar
 Condition: 33% chance (ai:0 rnd:33)
-Reduce damage from all sources by 50% for 1 turn
+Reduce damage from all sources all_sources by 50% for 1 turn
 
 #19: ESSkyfall(68:3361) -> Army of the Dead
 Condition: 33% chance (ai:0 rnd:33)
@@ -86,7 +86,7 @@ Branch on player_cards HAS [1423, 1925, 2179], target rnd 26
 	[0] ESBindTyping(3:3364) -> Glare of Garm
 	Bind God cards for 5 turns
 	[1] ESRandomSpawn(92:3377) -> Decay
-	Spawn random 4 Poison orbs
+	Spawn 4 random Poison orbs
 
 #26: ESBindTyping(3:3366) -> I won't forgive you
 Bind God cards for 5 turns

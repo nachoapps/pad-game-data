@@ -23,7 +23,7 @@ flag SET 0b1
 	[0] ESStatusShield(20:4489) -> Tell me your wish!
 	Voids status ailments for 5 turns
 	[1] ESBoardChangeAttackBits(85:4490) -> Shine Flare Ring
-	Change all orbs to Fire, Light, Heal, Deal 130% damage
+	Change all orbs to Fire, Light, and Heal, Deal 130% damage
 
 #7: ESEndPath(36:26) -> ESEndPath
 end_turn
@@ -54,14 +54,14 @@ flag SET 0b11
 	[0] ESRecoverEnemy(86:4502) -> Overcoming Will
 	Enemy recover 19% hp
 	[1] ESDamageShield(74:4508) -> Big Jump
-	Reduce damage from all sources by 75% for 1 turn
+	Reduce damage from all sources all_sources by 75% for 1 turn
 
 #16: SkillSet:
 	Condition: When < 20% hp (ai:100 rnd:0)
 	[0] ESAttackMultihit(15:4498) -> Shining Claw
 	Deal 185% damage (5 hits, 37% each)
 	[1] ESBoardChangeAttackBits(85:4490) -> Shine Flare Ring
-	Change all orbs to Fire, Light, Heal, Deal 130% damage
+	Change all orbs to Fire, Light, and Heal, Deal 130% damage
 
 #17: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 4, target rnd 19
@@ -71,11 +71,11 @@ Branch on hp < 50, target rnd 24
 
 #19: ESDamageShield(74:4503) -> Big Jump
 Condition: When < 50% hp , one-time use (ai:100 rnd:0) (cost: 1)
-Reduce damage from all sources by 75% for 1 turn
+Reduce damage from all sources all_sources by 75% for 1 turn
 
 #20: ESDamageShield(74:4495) -> Leap
 Condition: One-time use (ai:100 rnd:0) (cost: 1)
-Reduce damage from all sources by 50% for 1 turn
+Reduce damage from all sources all_sources by 50% for 1 turn
 
 #21: ESAttackMultihit(15:4498) -> Shining Claw
 Condition: 30% chance (ai:30 rnd:0)
@@ -83,10 +83,10 @@ Deal 185% damage (5 hits, 37% each)
 
 #22: ESColumnSpawnMulti(77:4496) -> Orange Light's Judging Spirit
 Condition: 50% chance (ai:50 rnd:0)
-Change 5th column to Light orbs, 6th column to Fire orbs, Deal 170% damage
+Change the 5th column to Light orbs, the 6th column to Fire orbs, Deal 170% damage
 
 #23: ESRandomSpawn(92:4497) -> Brightness Guidance
-Spawn random 8 Light orbs, Deal 170% damage
+Spawn 8 random Light orbs, Deal 170% damage
 
 #24: ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b111
@@ -95,10 +95,10 @@ flag SET 0b111
 	[0] ESAbsorbAttribute(53:4499) -> Gleaming Rabbit Dragon's Trial
 	Absorb Light damage for 1 turn
 	[1] ESColumnSpawnMulti(77:4500) -> Flower Piercing Light
-	Change 2nd, 5th column to Light orbs, Deal 100% damage
+	Change the 2nd, 5th column to Light orbs, Deal 100% damage
 
 #26: ESResolve(73:4220) -> Dragonbound's Resolve
 Survive attacks with 1 HP when HP > 50%
 
 #27: ESAttributeResist(72:4506) -> Dark Halven
-Reduce damage from Dark by 50%
+Reduce damage from Dark attrs by 50%

@@ -21,7 +21,7 @@ flag SET 0b1
 	[0] ESStatusShield(20:4280) -> Heaven's Armor
 	Voids status ailments for 999 turns
 	[1] ESDamageShield(74:4281) -> Limited Barrier
-	Reduce damage from all sources by 50% for 5 turns
+	Reduce damage from all sources all_sources by 50% for 5 turns
 	[2] ESSkyfall(96:4282) -> Electromagnetic Field
 	Locked random skyfall +15% for 10 turns
 
@@ -50,11 +50,11 @@ flag SET 0b11
 
 #12: ESOrbLock(94:4284) -> Shock Ray
 Condition: One-time use (ai:0 rnd:25) (cost: 1)
-Lock 3 random Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, Mortal Poison orbs, Deal 120% damage
+Lock 3 random Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, and Mortal Poison orbs, Deal 120% damage
 
 #13: ESRandomSpawn(92:4285) -> Flash Bomb
 Condition: One-time use (ai:0 rnd:25) (cost: 1)
-Spawn random 3 Light orbs, Deal 120% damage
+Spawn 3 random Light orbs, Deal 120% damage
 
 #14: ESDebuffMovetime(39:4286) -> Machine Glare
 Condition: One-time use (ai:0 rnd:25) (cost: 1)
@@ -83,7 +83,7 @@ Delay active skills by 3 turns, Deal 140% damage
 
 #21: ESAbsorbCombo(67:4289) -> Ordeal Section
 Condition: 25% chance (ai:0 rnd:25)
-Absorb combos <= 6 damage for 1 turn, Deal 140% damage
+Absorb damage when combos <= 6 for 1 turn, Deal 140% damage
 
 #22: ESSkyfall(68:4290) -> Jamming
 Condition: 25% chance (ai:0 rnd:25)
@@ -117,7 +117,7 @@ Branch on flag & 1, target rnd 10
 end_turn
 
 #31: ESAttributeResist(72:4477) -> Robot Dark Halven
-Reduce damage from Dark by 50%
+Reduce damage from Dark attrs by 50%
 
 #32: ESResolve(73:4480) -> Robot Resolve
 Survive attacks with 1 HP when HP > 50%

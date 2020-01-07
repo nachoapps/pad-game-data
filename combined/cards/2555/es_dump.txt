@@ -17,7 +17,7 @@ ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 15, target rnd 22
 
 ESBranchCounter(32:22) -> ESBranchCounter
-Branch on counter > 2, target rnd 11
+Branch on counter >= 2, target rnd 11
 
 ESSetCounter(26:16) -> ESSetCounter
 counter + 1
@@ -53,14 +53,14 @@ Condition: One-time use (ai:100 rnd:0) (cost: 2)
 Bind active skills for 3 turns
 
 ESBranchCounter(30:20) -> ESBranchCounter
-Branch on counter < 3, target rnd 5
+Branch on counter <= 3, target rnd 5
 
 ESSkillDelay(89:10969) -> You're in trouble now!
 Condition: One-time use (ai:100 rnd:0) (cost: 1)
 Delay active skills by 10 turns
 
 ESBranchCounter(32:22) -> ESBranchCounter
-Branch on counter > 4, target rnd 6
+Branch on counter >= 4, target rnd 6
 
 ESEndPath(36:26) -> ESEndPath
 end_turn

@@ -44,7 +44,7 @@ Condition: When < 40% hp , one-time use, when <= 1 enemies remain (ai:100 rnd:0)
 Increase damage to 150% for the next 99 turns
 
 ESBranchCounter(32:22) -> ESBranchCounter
-Branch on counter > 1, target rnd 16
+Branch on counter >= 1, target rnd 16
 
 ESSetCounter(26:16) -> ESSetCounter
 counter + 1
@@ -56,7 +56,7 @@ ESEndPath(36:26) -> ESEndPath
 end_turn
 
 ESBranchCounter(32:22) -> ESBranchCounter
-Branch on counter > 3, target rnd 20
+Branch on counter >= 3, target rnd 20
 
 ESSetCounter(26:16) -> ESSetCounter
 counter + 1

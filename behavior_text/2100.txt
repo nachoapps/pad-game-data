@@ -17,10 +17,14 @@ level: 1
  | Absorb damage when damage >= 1,000,000 for 10 turns
  group:
  | group:
-   | group:
-   | condition: always turn 1
-     | (9897:50) Sacred Burst
-     | Player -99% HP
+ | condition: always turn 1
+   | (9897:50) Sacred Burst
+   | Player -99% HP
+ | group:
+ | condition: always turn 10
+   | (9905:83) Holy Crimson Phantom + Holy Crimson Flame
+   | Increase damage to 150% for the next 99 turns + Reduce damage from all sources all_sources by 75% for 99 turns
+ | group:
    | group:
    | condition: turns 2-9 while HP > 49
      | condition: 33% chance
@@ -28,10 +32,6 @@ level: 1
      | Delay active skills by 1~2 turns + Enemy recover 10% hp
      | (9898:83) Jagged Flash + Multi Attack
      | Blind random 3 orbs for 2 turns + Deal 390% damage (3 hits, 130% each), Deal 390% damage (3 hits, 130% each)
-   | group:
-   | condition: always turn 10
-     | (9905:83) Holy Crimson Phantom + Holy Crimson Flame
-     | Increase damage to 150% for the next 99 turns + Reduce damage from all sources all_sources by 75% for 99 turns
    | group:
      | condition: 50% chance
      | (9898:83) Jagged Flash + Multi Attack

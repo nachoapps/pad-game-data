@@ -21,6 +21,19 @@
       group_type: STANDARD
       children {
         group {
+          condition {
+            trigger_turn: 5
+            always_trigger_above: 1
+          }
+          children {
+            behavior {
+              enemy_skill_id: 9536
+            }
+          }
+        }
+      }
+      children {
+        group {
           group_type: STANDARD
           condition {
             hp_threshold: 100
@@ -46,19 +59,6 @@
                     use_chance: 50
                   }
                   enemy_skill_id: 9537
-                }
-              }
-            }
-          }
-          children {
-            group {
-              condition {
-                trigger_turn: 5
-                always_trigger_above: 1
-              }
-              children {
-                behavior {
-                  enemy_skill_id: 9536
                 }
               }
             }

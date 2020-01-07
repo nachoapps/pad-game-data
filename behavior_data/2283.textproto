@@ -13,42 +13,38 @@
       group_type: STANDARD
       children {
         group {
+          condition {
+            trigger_turn: 1
+            always_trigger_above: 1
+          }
+          children {
+            behavior {
+              condition {
+                trigger_monsters: 1531
+                trigger_monsters: 1532
+              }
+              enemy_skill_id: 3149
+            }
+          }
+          children {
+            behavior {
+              enemy_skill_id: 3143
+            }
+          }
+        }
+      }
+      children {
+        group {
           group_type: STANDARD
           condition {
             hp_threshold: 100
           }
           children {
-            group {
+            behavior {
               condition {
-                trigger_turn: 1
-                always_trigger_above: 1
+                use_chance: 90
               }
-              children {
-                behavior {
-                  condition {
-                    trigger_monsters: 1531
-                    trigger_monsters: 1532
-                  }
-                  enemy_skill_id: 3149
-                }
-              }
-              children {
-                behavior {
-                  enemy_skill_id: 3143
-                }
-              }
-            }
-          }
-          children {
-            group {
-              children {
-                behavior {
-                  condition {
-                    use_chance: 90
-                  }
-                  enemy_skill_id: 3144
-                }
-              }
+              enemy_skill_id: 3144
             }
           }
         }

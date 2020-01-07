@@ -13,48 +13,44 @@
       group_type: STANDARD
       children {
         group {
+          condition {
+            trigger_turn: 1
+            always_trigger_above: 1
+          }
+          children {
+            behavior {
+              enemy_skill_id: 2016
+            }
+          }
+          children {
+            behavior {
+              enemy_skill_id: 2015
+            }
+          }
+        }
+      }
+      children {
+        group {
+          condition {
+            trigger_turn: 2
+            always_trigger_above: 1
+          }
+          children {
+            behavior {
+              enemy_skill_id: 2013
+            }
+          }
+        }
+      }
+      children {
+        group {
           group_type: STANDARD
           condition {
             hp_threshold: 100
           }
           children {
-            group {
-              condition {
-                trigger_turn: 1
-                always_trigger_above: 1
-              }
-              children {
-                behavior {
-                  enemy_skill_id: 2016
-                }
-              }
-              children {
-                behavior {
-                  enemy_skill_id: 2015
-                }
-              }
-            }
-          }
-          children {
-            group {
-              condition {
-                trigger_turn: 2
-                always_trigger_above: 1
-              }
-              children {
-                behavior {
-                  enemy_skill_id: 2013
-                }
-              }
-            }
-          }
-          children {
-            group {
-              children {
-                behavior {
-                  enemy_skill_id: 2017
-                }
-              }
+            behavior {
+              enemy_skill_id: 2017
             }
           }
         }

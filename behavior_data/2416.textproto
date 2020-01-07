@@ -32,49 +32,45 @@
       group_type: STANDARD
       children {
         group {
+          condition {
+            trigger_turn: 1
+            always_trigger_above: 1
+          }
+          children {
+            behavior {
+              enemy_skill_id: 9823
+            }
+          }
+        }
+      }
+      children {
+        group {
           group_type: STANDARD
           condition {
             hp_threshold: 100
           }
           children {
-            group {
+            behavior {
               condition {
-                trigger_turn: 1
-                always_trigger_above: 1
+                use_chance: 33
               }
-              children {
-                behavior {
-                  enemy_skill_id: 9823
-                }
-              }
+              enemy_skill_id: 9824
             }
           }
           children {
-            group {
-              children {
-                behavior {
-                  condition {
-                    use_chance: 33
-                  }
-                  enemy_skill_id: 9824
-                }
+            behavior {
+              condition {
+                use_chance: 33
               }
-              children {
-                behavior {
-                  condition {
-                    use_chance: 33
-                  }
-                  enemy_skill_id: 9825
-                }
+              enemy_skill_id: 9825
+            }
+          }
+          children {
+            behavior {
+              condition {
+                use_chance: 34
               }
-              children {
-                behavior {
-                  condition {
-                    use_chance: 34
-                  }
-                  enemy_skill_id: 9826
-                }
-              }
+              enemy_skill_id: 9826
             }
           }
         }

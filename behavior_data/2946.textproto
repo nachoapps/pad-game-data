@@ -13,38 +13,34 @@
       group_type: STANDARD
       children {
         group {
+          condition {
+            trigger_turn: 1
+            always_trigger_above: 1
+          }
+          children {
+            behavior {
+              enemy_skill_id: 8091
+            }
+          }
+        }
+      }
+      children {
+        group {
           group_type: STANDARD
           condition {
             hp_threshold: 100
           }
           children {
-            group {
+            behavior {
               condition {
-                trigger_turn: 1
-                always_trigger_above: 1
+                use_chance: 60
               }
-              children {
-                behavior {
-                  enemy_skill_id: 8091
-                }
-              }
+              enemy_skill_id: 8093
             }
           }
           children {
-            group {
-              children {
-                behavior {
-                  condition {
-                    use_chance: 60
-                  }
-                  enemy_skill_id: 8093
-                }
-              }
-              children {
-                behavior {
-                  enemy_skill_id: 8094
-                }
-              }
+            behavior {
+              enemy_skill_id: 8094
             }
           }
         }

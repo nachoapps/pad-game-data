@@ -42,54 +42,50 @@
       }
       children {
         group {
+          condition {
+            trigger_turn: 1
+            always_trigger_above: 1
+          }
+          children {
+            behavior {
+              enemy_skill_id: 2334
+            }
+          }
+        }
+      }
+      children {
+        group {
           group_type: STANDARD
           condition {
             hp_threshold: 100
           }
           children {
-            group {
-              condition {
-                trigger_turn: 1
-                always_trigger_above: 1
-              }
-              children {
-                behavior {
-                  enemy_skill_id: 2334
-                }
-              }
+            behavior {
+              enemy_skill_id: 2338
             }
           }
           children {
-            group {
-              children {
-                behavior {
-                  enemy_skill_id: 2338
-                }
+            behavior {
+              condition {
+                use_chance: 33
               }
-              children {
-                behavior {
-                  condition {
-                    use_chance: 33
-                  }
-                  enemy_skill_id: 2337
-                }
+              enemy_skill_id: 2337
+            }
+          }
+          children {
+            behavior {
+              condition {
+                use_chance: 33
               }
-              children {
-                behavior {
-                  condition {
-                    use_chance: 33
-                  }
-                  enemy_skill_id: 2339
-                }
+              enemy_skill_id: 2339
+            }
+          }
+          children {
+            behavior {
+              condition {
+                use_chance: 33
               }
-              children {
-                behavior {
-                  condition {
-                    use_chance: 33
-                  }
-                  enemy_skill_id: 2340
-                }
-              }
+              enemy_skill_id: 2340
             }
           }
         }

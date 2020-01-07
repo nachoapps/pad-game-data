@@ -13,47 +13,43 @@
       group_type: STANDARD
       children {
         group {
+          condition {
+            trigger_turn: 1
+            always_trigger_above: 1
+          }
+          children {
+            behavior {
+              enemy_skill_id: 8080
+            }
+          }
+        }
+      }
+      children {
+        group {
           group_type: STANDARD
           condition {
             hp_threshold: 100
           }
           children {
-            group {
+            behavior {
               condition {
-                trigger_turn: 1
-                always_trigger_above: 1
+                if_attributes_available: true
               }
-              children {
-                behavior {
-                  enemy_skill_id: 8080
-                }
-              }
+              enemy_skill_id: 8081
             }
           }
           children {
-            group {
-              children {
-                behavior {
-                  condition {
-                    if_attributes_available: true
-                  }
-                  enemy_skill_id: 8081
-                }
+            behavior {
+              condition {
+                use_chance: 80
+                if_attributes_available: true
               }
-              children {
-                behavior {
-                  condition {
-                    use_chance: 80
-                    if_attributes_available: true
-                  }
-                  enemy_skill_id: 8082
-                }
-              }
-              children {
-                behavior {
-                  enemy_skill_id: 8083
-                }
-              }
+              enemy_skill_id: 8082
+            }
+          }
+          children {
+            behavior {
+              enemy_skill_id: 8083
             }
           }
         }

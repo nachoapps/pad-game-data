@@ -22,57 +22,53 @@
       group_type: STANDARD
       children {
         group {
+          condition {
+            trigger_turn: 1
+            always_trigger_above: 1
+          }
+          children {
+            behavior {
+              enemy_skill_id: 13891
+            }
+          }
+        }
+      }
+      children {
+        group {
           group_type: STANDARD
           condition {
             hp_threshold: 100
           }
           children {
-            group {
+            behavior {
               condition {
-                trigger_turn: 1
-                always_trigger_above: 1
+                use_chance: 25
               }
-              children {
-                behavior {
-                  enemy_skill_id: 13891
-                }
-              }
+              enemy_skill_id: 13892
             }
           }
           children {
-            group {
-              children {
-                behavior {
-                  condition {
-                    use_chance: 25
-                  }
-                  enemy_skill_id: 13892
-                }
+            behavior {
+              condition {
+                use_chance: 25
               }
-              children {
-                behavior {
-                  condition {
-                    use_chance: 25
-                  }
-                  enemy_skill_id: 13893
-                }
+              enemy_skill_id: 13893
+            }
+          }
+          children {
+            behavior {
+              condition {
+                use_chance: 25
               }
-              children {
-                behavior {
-                  condition {
-                    use_chance: 25
-                  }
-                  enemy_skill_id: 13894
-                }
+              enemy_skill_id: 13894
+            }
+          }
+          children {
+            behavior {
+              condition {
+                use_chance: 25
               }
-              children {
-                behavior {
-                  condition {
-                    use_chance: 25
-                  }
-                  enemy_skill_id: 13895
-                }
-              }
+              enemy_skill_id: 13895
             }
           }
         }

@@ -15,10 +15,14 @@ level: 1
  | Reduce damage from all sources all_sources by 90% for 1 turn + Voids status ailments for 6 turns
  group:
  | group:
-   | group:
-   | condition: always turn 1
-     | (9524:83) Style Change + Fire Chain
-     | Change own attribute to Wood + Unable to match Fire orbs for 2 turns
+ | condition: always turn 1
+   | (9524:83) Style Change + Fire Chain
+   | Change own attribute to Wood + Unable to match Fire orbs for 2 turns
+ | group:
+ | condition: always turn 6
+   | (9529:83) Dance of Aggression + Axe Kick
+   | Absorb damage when damage >= 4,000,000 for 5 turns + Player -99% HP
+ | group:
    | group:
    | condition: turns 2-5 while HP > 39
      | condition: 50% chance
@@ -26,10 +30,6 @@ level: 1
      | Change the 1st column to Fire orbs, Deal 130% damage
      | (9526:92) Wind Sword
      | Spawn 5 random Wood orbs, Deal 130% damage
-   | group:
-   | condition: always turn 6
-     | (9529:83) Dance of Aggression + Axe Kick
-     | Absorb damage when damage >= 4,000,000 for 5 turns + Player -99% HP
    | group:
      | condition: 50% chance
      | (9525:77) Flame Sword

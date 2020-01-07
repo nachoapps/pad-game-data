@@ -35,9 +35,14 @@ level: 1
    | (12853:20) Fighting Spirit Enhancement
    | Voids status ailments for 999 turns
  | group:
- | condition: turn 1, hp <= 14
-   | (12854:83) Parrying Stance + Double-Edge Stance
-   | Bind awoken skills for 5 turns + Increase damage to 150% for the next 999 turns
+ | condition: hp <= 14
+   | group:
+   | condition: turn 1
+     | (12854:83) Parrying Stance + Double-Edge Stance
+     | Bind awoken skills for 5 turns + Increase damage to 150% for the next 999 turns
+   | group:
+     | (12857:15) Double-Edge of Creation
+     | Deal 240% damage (6 hits, 40% each)
  | group:
  | condition: hp <= 1
    | (12858:83) Mind Concentration + Mighty Roar

@@ -43,9 +43,26 @@ level: 1
    | (12941:15) Wild Flurry
    | Deal 105% damage (3 hits, 35% each)
  | group:
- | condition: turn 1 while HP > 9, hp <= 49
-   | (12943:83) Power Released + Fading Path of Retreat
-   | Increase damage to 150% for the next 999 turns + Specific orbs change every 2.0s for 10 turns
+ | condition: hp <= 49
+   | group:
+   | condition: turn 1 while HP > 9
+     | (12943:83) Power Released + Fading Path of Retreat
+     | Increase damage to 150% for the next 999 turns + Specific orbs change every 2.0s for 10 turns
+   | group:
+   | condition: execute repeatedly, turn 1 of 3
+     | (12942:98) Hell Strike
+     | Blind orbs in specific positions for 3 turns, Deal 100% damage
+   | group:
+   | condition: execute repeatedly, turn 2-3 of 3
+     | condition: 33% chance
+     | (12939:89) Savage Assault
+     | Delay active skills by 2 turns, Deal 95% damage
+     | condition: 33% chance
+     | (12940:94) Hold Tackle
+     | Lock 10 random Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, and Mortal Poison orbs, Deal 100% damage
+     | condition: 34% chance
+     | (12941:15) Wild Flurry
+     | Deal 105% damage (3 hits, 35% each)
  | group:
  | condition: hp <= 9
    | (12946:15) Purgatory Double-Edge

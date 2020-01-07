@@ -160,11 +160,26 @@
           group_type: STANDARD
           condition {
             hp_threshold: 9
-            trigger_turn: 1
           }
           children {
-            behavior {
-              enemy_skill_id: 9251
+            group {
+              condition {
+                trigger_turn: 1
+              }
+              children {
+                behavior {
+                  enemy_skill_id: 9251
+                }
+              }
+            }
+          }
+          children {
+            group {
+              children {
+                behavior {
+                  enemy_skill_id: 9266
+                }
+              }
             }
           }
         }

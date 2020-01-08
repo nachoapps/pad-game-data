@@ -61,17 +61,31 @@
           group_type: STANDARD
           condition {
             hp_threshold: 49
-            trigger_turn: 2
-            always_trigger_above: 19
           }
           children {
-            behavior {
-              enemy_skill_id: 13239
+            group {
+              condition {
+                trigger_turn: 2
+                always_trigger_above: 19
+              }
+              children {
+                behavior {
+                  enemy_skill_id: 13239
+                }
+              }
             }
           }
           children {
-            behavior {
-              enemy_skill_id: 13241
+            group {
+              condition {
+                trigger_turn: 3
+                always_trigger_above: 19
+              }
+              children {
+                behavior {
+                  enemy_skill_id: 13241
+                }
+              }
             }
           }
         }
@@ -83,13 +97,29 @@
             hp_threshold: 19
           }
           children {
-            behavior {
-              enemy_skill_id: 13239
+            group {
+              condition {
+                repeats_every: 2
+                trigger_turn: 1
+              }
+              children {
+                behavior {
+                  enemy_skill_id: 13239
+                }
+              }
             }
           }
           children {
-            behavior {
-              enemy_skill_id: 13240
+            group {
+              condition {
+                repeats_every: 2
+                trigger_turn: 2
+              }
+              children {
+                behavior {
+                  enemy_skill_id: 13240
+                }
+              }
             }
           }
         }

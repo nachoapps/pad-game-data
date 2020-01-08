@@ -12,27 +12,16 @@ level: 1
  | Absorb damage when damage >= 5,000,000 for 1 turn
  group:
  | group:
-   | group:
-   | condition: turn 1 while HP > 19
-     | (13190:88) Wind of Peace
-     | Bind awoken skills for 1 turn
-   | group:
-     | (13191:15) Animal Attack
-     | Deal 150% damage (3 hits, 50% each)
+ | condition: always turn 1
+   | (13190:88) Wind of Peace
+   | Bind awoken skills for 1 turn
+ | group:
+   | (13191:15) Animal Attack
+   | Deal 150% damage (3 hits, 50% each)
  | group:
  | condition: hp <= 19
    | group:
-   | condition: turn 1
-     | (13190:88) Wind of Peace
-     | Bind awoken skills for 1 turn
-     | (13192:17) Enhancing Earth
-     | Increase damage to 150% for the next 3 turns
-   | group:
-   | condition: turns 2-4
-     | (13193:77) Raging Earth
-     | Change the 3rd, 4th column to Jammer orbs, Deal 300% damage
-   | group:
-   | condition: turn 5
+   | condition: turn 2
      | (13192:17) Enhancing Earth
      | Increase damage to 150% for the next 3 turns
    | group:

@@ -8,7 +8,7 @@ counter increment: 0
 Enable preempt if level 1
 
 #2: ESBranchLevel(35:25) -> ESBranchLevel
-Branch on level > 4, target rnd 5
+Branch on level >= 4, target rnd 5
 
 #3: ESBranchLevel(33:23) -> ESBranchLevel
 Branch on level <= 3, target rnd 38
@@ -24,7 +24,7 @@ flag SET 0b1
 
 #7: SkillSet:
 	[0] ESDamageShield(74:9446) -> There's something missing in your eyes...
-	Reduce damage from all sources all_sources by 75% for 3 turns
+	Reduce damage from all sources by 75% for 3 turns
 	[1] ESDebuffMovetime(39:9447) -> ...and that something is fear.
 	Movetime -2s for 3 turns
 
@@ -71,7 +71,7 @@ flag SET 0b1111
 #21: SkillSet:
 	[0] ESRandomSpawn(92:9452) -> Remaining at top strength is demanding...
 	Spawn 6 random Jammer orbs
-	[1] ESRecoverEnemy(86:9453) -> ...and my body gets an impulse to devour.
+	[1] ESRecoverEnemy86(86:9453) -> ...and my body gets an impulse to devour.
 	Enemy recover 30% hp
 
 #22: ESEndPath(36:26) -> ESEndPath
@@ -112,7 +112,7 @@ Branch on flag & 32, target rnd 36
 #33: ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b111111
 
-#34: ESBlind(5:9457) -> This is the fight I hoped for!
+#34: ESBlind5(5:9457) -> This is the fight I hoped for!
 Blind all orbs on the board
 
 #35: ESEndPath(36:26) -> ESEndPath
@@ -131,9 +131,9 @@ Branch on flag & 1, target rnd 41
 flag SET 0b1
 
 #40: SkillSet:
-	[0] ESInactivity(66:9461) -> There's something missing in your eyes...
+	[0] ESInactivity66(66:9461) -> There's something missing in your eyes...
 	Do nothing
-	[1] ESInactivity(66:9462) -> ...and that something is fear.
+	[1] ESInactivity66(66:9462) -> ...and that something is fear.
 	Do nothing
 
 #41: ESEndPath(36:26) -> ESEndPath
@@ -141,5 +141,5 @@ end_turn
 
 #42: SkillSet:
 	Condition: On death (ai:0 rnd:0)
-	[0] ESInactivity(66:9459) -> When fighting for someone else, you can put out 120 percent of your power...
+	[0] ESInactivity66(66:9459) -> When fighting for someone else, you can put out 120 percent of your power...
 	Do nothing

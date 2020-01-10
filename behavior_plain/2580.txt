@@ -8,7 +8,7 @@ counter increment: 0
 Enable preempt if level 4
 
 #2: ESBranchLevel(35:25) -> ESBranchLevel
-Branch on level > 4, target rnd 4
+Branch on level >= 4, target rnd 4
 
 #3: ESEndPath(36:26) -> ESEndPath
 end_turn
@@ -25,7 +25,7 @@ Player -50% HP
 #7: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-#8: ESRecoverEnemy(86:3602) -> Longevity Invasion
+#8: ESRecoverEnemy86(86:3602) -> Longevity Invasion
 Condition: When < 1% hp (ai:100 rnd:0)
 Enemy recover 9% hp, Deal 160% damage
 
@@ -33,7 +33,7 @@ Enemy recover 9% hp, Deal 160% damage
 Condition: when <= 1 enemies remain (ai:100 rnd:0)
 Increase damage to 200% for the next 999 turns
 
-#10: ESBlind(62:3626) -> Attack from the Deep Sea
+#10: ESBlind62(62:3626) -> Attack from the Deep Sea
 Condition: When < 50% hp , one-time use (ai:100 rnd:0) (cost: 1)
 Blind all orbs on the board, Deal 150% damage
 
@@ -41,7 +41,7 @@ Blind all orbs on the board, Deal 150% damage
 Condition: When < 10% hp (ai:100 rnd:0)
 Deal 300% damage (3 hits, 100% each)
 
-#12: ESRecoverEnemy(86:3623) -> Longevity Attack
+#12: ESRecoverEnemy86(86:3623) -> Longevity Attack
 Condition: 40% chance (ai:0 rnd:40)
 Enemy recover 10% hp, Deal 90% damage
 

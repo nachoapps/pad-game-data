@@ -11,7 +11,7 @@ Branch on counter >= 3, target rnd 33
 counter + 1
 
 #3: ESBranchLevel(35:25) -> ESBranchLevel
-Branch on level > 4, target rnd 5
+Branch on level >= 4, target rnd 5
 
 #4: ESEndPath(36:26) -> ESEndPath
 end_turn
@@ -131,10 +131,10 @@ end_turn
 	Condition: When < 1% hp , one-time use (ai:100 rnd:0) (cost: 8)
 	[0] ESBindSkill(14:7257) -> 咆哮
 	Bind active skills for 3 turns
-	[1] ESRecoverEnemy(86:7326) -> 暴走状態へ移行
+	[1] ESRecoverEnemy86(86:7326) -> 暴走状態へ移行
 	Enemy recover 60% hp
 	[2] ESDamageShield(74:7259) -> 地中潜り
-	Reduce damage from all sources all_sources by 75% for 1 turn
+	Reduce damage from all sources by 75% for 1 turn
 
 #40: ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 90, target rnd 45
@@ -158,10 +158,10 @@ end_turn
 	Condition: One-time use (ai:100 rnd:0) (cost: 8)
 	[0] ESBindSkill(14:7257) -> 咆哮
 	Bind active skills for 3 turns
-	[1] ESInactivity(66:7258) -> 暴走状態へ移行
+	[1] ESInactivity66(66:7258) -> 暴走状態へ移行
 	Do nothing
 	[2] ESDamageShield(74:7259) -> 地中潜り
-	Reduce damage from all sources all_sources by 75% for 1 turn
+	Reduce damage from all sources by 75% for 1 turn
 
 #46: ESAttackMultihit(15:7261) -> 地中からの強急襲
 Condition: One-time use (ai:100 rnd:0) (cost: 4)
@@ -181,7 +181,7 @@ Branch on hp < 20, target rnd 60
 	Condition: 50% chance when < 40% hp (ai:50 rnd:0)
 	[0] ESAttackUPRemainingEnemies(17:7268) -> 怒り
 	Increase damage to 150% for the next 1 turn
-	[1] ESBlind(62:7263) -> 飛びかかり潜り
+	[1] ESBlind62(62:7263) -> 飛びかかり潜り
 	Blind all orbs on the board, Deal 1200% damage
 
 #50: SkillSet:
@@ -202,7 +202,7 @@ Branch on hp < 20, target rnd 60
 	Condition: 50% chance when < 60% hp (ai:50 rnd:0)
 	[0] ESAttackUPRemainingEnemies(17:7267) -> 怒り
 	Increase damage to 140% for the next 1 turn
-	[1] ESBlind(62:7263) -> 飛びかかり潜り
+	[1] ESBlind62(62:7263) -> 飛びかかり潜り
 	Blind all orbs on the board, Deal 1200% damage
 
 #53: SkillSet:
@@ -223,7 +223,7 @@ Branch on hp < 20, target rnd 60
 	Condition: 50% chance when < 70% hp (ai:50 rnd:0)
 	[0] ESAttackUPRemainingEnemies(17:7266) -> 怒り
 	Increase damage to 130% for the next 1 turn
-	[1] ESBlind(62:7263) -> 飛びかかり潜り
+	[1] ESBlind62(62:7263) -> 飛びかかり潜り
 	Blind all orbs on the board, Deal 1200% damage
 
 #56: SkillSet:
@@ -244,7 +244,7 @@ Branch on hp < 20, target rnd 60
 	Condition: 50% chance when < 90% hp (ai:50 rnd:0)
 	[0] ESAttackUPRemainingEnemies(17:7265) -> 怒り
 	Increase damage to 120% for the next 1 turn
-	[1] ESBlind(62:7263) -> 飛びかかり潜り
+	[1] ESBlind62(62:7263) -> 飛びかかり潜り
 	Blind all orbs on the board, Deal 1200% damage
 
 #59: SkillSet:
@@ -258,10 +258,10 @@ Branch on hp < 20, target rnd 60
 	Condition: One-time use (ai:100 rnd:0) (cost: 2)
 	[0] ESBindAwoken(88:7281) -> 咆哮
 	Bind awoken skills for 3 turns
-	[1] ESInactivity(66:7282) -> 狂暴走状態へ移行
+	[1] ESInactivity66(66:7282) -> 狂暴走状態へ移行
 	Do nothing
 	[2] ESDamageShield(74:7283) -> 地中潜り
-	Reduce damage from all sources all_sources by 75% for 1 turn
+	Reduce damage from all sources by 75% for 1 turn
 
 #61: SkillSet:
 	Condition: One-time use (ai:100 rnd:0) (cost: 1)

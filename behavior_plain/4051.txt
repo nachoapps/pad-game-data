@@ -10,7 +10,7 @@ Enable preempt if level 1
 #2: SkillSet:
 	Condition: One-time use (ai:100 rnd:0) (cost: 2)
 	[0] ESDamageShield(74:13839) -> Protective Star Wall
-	Reduce damage from all sources all_sources by 75% for 2 turns
+	Reduce damage from all sources by 75% for 2 turns
 	[1] ESRandomSpawn(92:13840) -> Multitude of Brilliance
 	Spawn 5 random Fire, Water, Wood, Light, Dark, or Heal orbs
 
@@ -24,7 +24,7 @@ Branch on hp < 50, target rnd 8
 Condition: One-time use, when <= 1 enemies remain (ai:100 rnd:0) (cost: 1)
 Increase damage to 500% for the next 1 turn
 
-#6: ESBlind(62:13845) -> Sama' Bani
+#6: ESBlind62(62:13845) -> Sama' Bani
 Blind all orbs on the board, Deal 100% damage
 
 #7: ESEndPath(36:26) -> ESEndPath
@@ -37,7 +37,7 @@ Branch on flag & 1, target rnd 6
 flag SET 0b1
 
 #10: SkillSet:
-	[0] ESSkyfall(96:13843) -> Starwake Shine
+	[0] ESSkyfallLocked(96:13843) -> Starwake Shine
 	Locked random skyfall +100% for 10 turns
 	[1] ESNoSkyfall(127:13844) -> Brilliance of the Unchanging Skies
 	No skyfall for 10 turns

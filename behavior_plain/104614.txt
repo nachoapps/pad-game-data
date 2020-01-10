@@ -8,7 +8,7 @@ counter increment: 0
 Enable preempt if level 4
 
 #2: ESBranchLevel(35:25) -> ESBranchLevel
-Branch on level > 4, target rnd 4
+Branch on level >= 4, target rnd 4
 
 #3: ESEndPath(36:26) -> ESEndPath
 end_turn
@@ -47,7 +47,7 @@ Branch on counter >= 3, target rnd 16
 Condition: 50% chance (ai:50 rnd:0)
 Delay active skills by 1~2 turns, Deal 100% damage
 
-#14: ESRecoverEnemy(86:10294) -> Drain Life
+#14: ESRecoverEnemy86(86:10294) -> Drain Life
 Enemy recover 10% hp, Deal 150% damage
 
 #15: ESEndPath(36:26) -> ESEndPath
@@ -67,7 +67,7 @@ counter = 5
 
 #20: ESDamageShield(74:10296) -> Rite of Belzenlok I
 Condition: One-time use (ai:100 rnd:0) (cost: 8)
-Reduce damage from all sources all_sources by 50% for 4 turns
+Reduce damage from all sources by 50% for 4 turns
 
 #21: ESBindRandom(1:10297) -> Rite of Belzenlok II
 Condition: One-time use (ai:100 rnd:0) (cost: 4)

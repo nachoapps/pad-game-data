@@ -8,7 +8,7 @@ counter increment: 1
 Enable preempt if level 4
 
 #2: ESBranchLevel(35:25) -> ESBranchLevel
-Branch on level > 4, target rnd 4
+Branch on level >= 4, target rnd 4
 
 #3: ESEndPath(36:26) -> ESEndPath
 end_turn
@@ -50,7 +50,7 @@ Delay active skills by 3 turns
 end_turn
 
 #15: ESBindTarget(54:5681) -> Converging Flash
-Bind 1 player leader for 2 turns
+Bind player leader for 2 turns
 
 #16: ESEndPath(36:26) -> ESEndPath
 end_turn
@@ -73,7 +73,7 @@ end_turn
 flag SET 0b111
 
 #22: SkillSet:
-	[0] ESRecoverEnemy(86:5683) -> Crisis Wisdom
+	[0] ESRecoverEnemy86(86:5683) -> Crisis Wisdom
 	Enemy recover 10% hp
 	[1] ESBindRandom(1:5684) -> Lightning strikes the field
 	Bind 6 random cards for 4 turns

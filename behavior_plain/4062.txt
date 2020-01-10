@@ -8,7 +8,7 @@ counter increment: 1
 Enable preempt if level 4
 
 #2: ESBranchLevel(35:25) -> ESBranchLevel
-Branch on level > 4, target rnd 4
+Branch on level >= 4, target rnd 4
 
 #3: ESEndPath(36:26) -> ESEndPath
 end_turn
@@ -39,7 +39,7 @@ counter + 1
 #10: ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 20, target rnd 30
 
-#11: ESInactivity(66:8891) -> Hold
+#11: ESInactivity66(66:8891) -> Hold
 Do nothing
 
 #12: ESOrbChangeAttack(48:8889) -> Sacrifice Saber
@@ -133,7 +133,7 @@ Branch on flag & 4, target rnd 34
 flag SET 0b111
 
 #32: SkillSet:
-	[0] ESRecoverEnemy(86:8894) -> Aaaahhhhhh! I won't forgive you!!
+	[0] ESRecoverEnemy86(86:8894) -> Aaaahhhhhh! I won't forgive you!!
 	Enemy recover 30% hp
 	[1] ESBindAwoken(88:8895) -> I'll weaken you!!
 	Bind awoken skills for 5 turns

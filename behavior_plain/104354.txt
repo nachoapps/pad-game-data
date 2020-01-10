@@ -8,7 +8,7 @@ counter increment: 1
 Enable preempt if level 4
 
 #2: ESBranchLevel(35:25) -> ESBranchLevel
-Branch on level > 4, target rnd 4
+Branch on level >= 4, target rnd 4
 
 #3: ESEndPath(36:26) -> ESEndPath
 end_turn
@@ -26,7 +26,7 @@ flag SET 0b1
 	Void damage >= 15000000 for 999 turns
 	[2] ESAbsorbCombo(67:9773) -> Grace of Mother Nature
 	Absorb damage when combos <= 6 for 999 turns
-	[3] ESSkyfall(96:9774) -> Spirit Mischief
+	[3] ESSkyfallLocked(96:9774) -> Spirit Mischief
 	Locked Poison skyfall +100% for 20 turns
 
 #7: ESEndPath(36:26) -> ESEndPath
@@ -204,7 +204,7 @@ flag SET 0b111
 
 #40: SkillSet:
 	[0] ESDamageShield(74:9811) -> Defenders of the Sacred Tree
-	Reduce damage from all sources all_sources by 50% for 99 turns
+	Reduce damage from all sources by 50% for 99 turns
 	[1] ESRowSpawnMulti(78:9812) -> Wrath of the Great Tree
 	Change the 1st, 3rd, 5th row to Poison orbs, the 2nd, 4th row to Wood orbs
 

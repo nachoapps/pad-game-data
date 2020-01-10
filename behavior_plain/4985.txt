@@ -8,7 +8,7 @@ counter increment: 1
 Enable preempt if level 4
 
 #2: ESBranchLevel(35:25) -> ESBranchLevel
-Branch on level > 4, target rnd 4
+Branch on level >= 4, target rnd 4
 
 #3: ESEndPath(36:26) -> ESEndPath
 end_turn
@@ -22,7 +22,7 @@ flag SET 0b1
 #6: SkillSet:
 	[0] ESStatusShield(20:11935) -> ギョロローン！
 	Voids status ailments for 10 turns
-	[1] ESSkyfall(96:11936) -> アツいゾッ　ヤケドするゾ～ッ！
+	[1] ESSkyfallLocked(96:11936) -> アツいゾッ　ヤケドするゾ～ッ！
 	Locked Fire skyfall +100% for 10 turns
 
 #7: ESEndPath(36:26) -> ESEndPath
@@ -57,5 +57,5 @@ end_turn
 
 #16: SkillSet:
 	Condition: On death (ai:0 rnd:0)
-	[0] ESInactivity(66:11941) -> ギョロローン！　やられたゾ…
+	[0] ESInactivity66(66:11941) -> ギョロローン！　やられたゾ…
 	Do nothing

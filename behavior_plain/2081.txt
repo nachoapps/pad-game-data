@@ -29,7 +29,7 @@ Branch on player_cards HAS [238, 239, 1114, 1115, 1955], target rnd 13
 	Condition: When < 50% hp , one-time use (ai:100 rnd:0) (cost: 1)
 	[0] ESBindAttack(63:2561) -> Shankha
 	Bind 5 random cards for 2 turns, Deal 70% damage
-	[1] ESRecoverEnemy(86:2562) -> Avatar
+	[1] ESRecoverEnemy86(86:2562) -> Avatar
 	Enemy recover 10% hp, Deal 10% damage
 
 #8: ESBranchHP(28:18) -> ESBranchHP
@@ -39,21 +39,21 @@ Branch on hp < 30, target rnd 17
 	Condition: 30% chance (ai:0 rnd:30)
 	[0] ESOrbChangeAttack(48:2558) -> Khakkhara of the Creation
 	Change Heal to Jammer, Deal 80% damage
-	[1] ESRecoverEnemy(86:2562) -> Avatar
+	[1] ESRecoverEnemy86(86:2562) -> Avatar
 	Enemy recover 10% hp, Deal 10% damage
 
 #10: SkillSet:
 	Condition: 30% chance (ai:0 rnd:30)
 	[0] ESAttackMultihit(15:2559) -> Chakram of Order
 	Deal 140% damage (4 hits, 35% each)
-	[1] ESRecoverEnemy(86:2562) -> Avatar
+	[1] ESRecoverEnemy86(86:2562) -> Avatar
 	Enemy recover 10% hp, Deal 10% damage
 
 #11: SkillSet:
 	Condition: 30% chance (ai:0 rnd:30)
 	[0] ESRowSpawnMulti(79:2560) -> Lotus Flower of Prosperity
 	Change the 1st row to Heal orbs, the 5th row to Wood orbs, Deal 120% damage
-	[1] ESRecoverEnemy(86:2562) -> Avatar
+	[1] ESRecoverEnemy86(86:2562) -> Avatar
 	Enemy recover 10% hp, Deal 10% damage
 
 #12: ESEndPath(36:26) -> ESEndPath
@@ -66,7 +66,7 @@ Branch on flag & 2, target rnd 7
 flag SET 0b11
 
 #15: SkillSet:
-	[0] ESInactivity(66:2556) -> hng...!
+	[0] ESInactivity66(66:2556) -> hng...!
 	Do nothing
 	[1] ESStatusShield(20:2557) -> Meditation
 	Voids status ailments for 999 turns
@@ -80,7 +80,7 @@ Branch on flag & 4, target rnd 21
 #18: ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b111
 
-#19: ESBlind(5:2563) -> Giant Form
+#19: ESBlind5(5:2563) -> Giant Form
 Condition: When < 30% hp (ai:100 rnd:0)
 Blind all orbs on the board
 

@@ -8,7 +8,7 @@ counter increment: 0
 Enable preempt if level 4
 
 #2: ESBranchLevel(35:25) -> ESBranchLevel
-Branch on level > 4, target rnd 4
+Branch on level >= 4, target rnd 4
 
 #3: ESEndPath(36:26) -> ESEndPath
 end_turn
@@ -20,7 +20,7 @@ Branch on flag & 1, target rnd 8
 flag SET 0b1
 
 #6: SkillSet:
-	[0] ESInactivity(66:3895) -> My time is almost up...
+	[0] ESInactivity66(66:3895) -> My time is almost up...
 	Do nothing
 	[1] ESStatusShield(20:3896) -> Reflect
 	Voids status ailments for 999 turns
@@ -28,7 +28,7 @@ flag SET 0b1
 #7: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-#8: ESRecoverEnemy(86:3901) -> Curaga
+#8: ESRecoverEnemy86(86:3901) -> Curaga
 Condition: When < 60% hp , one-time use (ai:40 rnd:0) (cost: 1)
 Enemy recover 100% hp
 
@@ -57,5 +57,5 @@ end_turn
 
 #16: SkillSet:
 	Condition: On death (ai:100 rnd:0)
-	[0] ESInactivity(66:3902) -> I'm not gonna die alone...
+	[0] ESInactivity66(66:3902) -> I'm not gonna die alone...
 	Do nothing

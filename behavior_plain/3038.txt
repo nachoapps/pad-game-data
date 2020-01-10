@@ -14,12 +14,12 @@ Branch on flag & 1, target rnd 7
 flag SET 0b1
 
 #4: ESBranchLevel(35:25) -> ESBranchLevel
-Branch on level > 4, target rnd 6
+Branch on level >= 4, target rnd 6
 
 #5: SkillSet:
-	[0] ESInactivity(66:5021) -> Neither of us has any reason to hold back.
+	[0] ESInactivity66(66:5021) -> Neither of us has any reason to hold back.
 	Do nothing
-	[1] ESInactivity(66:5022) -> There must be a winner!!
+	[1] ESInactivity66(66:5022) -> There must be a winner!!
 	Do nothing
 
 #6: SkillSet:
@@ -29,7 +29,7 @@ Branch on level > 4, target rnd 6
 	Change the 1st, 6th column to Fire orbs
 
 #7: ESBranchLevel(35:25) -> ESBranchLevel
-Branch on level > 4, target rnd 9
+Branch on level >= 4, target rnd 9
 
 #8: ESEndPath(36:26) -> ESEndPath
 end_turn
@@ -76,7 +76,7 @@ flag SET 0b111
 	[0] ESBindSkill(14:5014) -> In this world, the strong live...
 	Bind active skills for 1 turn
 	[1] ESDamageShield(74:5015) -> ...and the weak die.
-	Reduce damage from all sources all_sources by 30% for 2 turns
+	Reduce damage from all sources by 30% for 2 turns
 
 #21: ESEndPath(36:26) -> ESEndPath
 end_turn
@@ -92,5 +92,5 @@ Deal 140~210% damage (2~3 hits, 70% each)
 
 #25: SkillSet:
 	Condition: On death (ai:0 rnd:0)
-	[0] ESInactivity(66:4968) -> Feh! You disappoint me.
+	[0] ESInactivity66(66:4968) -> Feh! You disappoint me.
 	Do nothing

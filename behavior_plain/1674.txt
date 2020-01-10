@@ -8,7 +8,7 @@ counter increment: 0
 Enable preempt if level 4
 
 #2: ESBranchLevel(35:25) -> ESBranchLevel
-Branch on level > 4, target rnd 4
+Branch on level >= 4, target rnd 4
 
 #3: ESEndPath(36:26) -> ESEndPath
 end_turn
@@ -95,7 +95,7 @@ end_turn
 	[0] ESRowSpawnMulti(79:9289) -> Bifröst Obligation
 	Change the 1st row to Water orbs, the 5th row to Wood orbs, Deal 110% damage
 	[1] ESDamageShield(74:9290) -> Fighting Maiden's Protection
-	Reduce damage from all sources all_sources by 50% for 1 turn
+	Reduce damage from all sources by 50% for 1 turn
 
 #26: SkillSet:
 	Condition: 50% chance (ai:50 rnd:0)
@@ -132,7 +132,7 @@ Branch on flag & 4, target rnd 30
 flag SET 0b111
 
 #36: SkillSet:
-	[0] ESRecoverEnemy(86:9249) -> Healing Scratch
+	[0] ESRecoverEnemy86(86:9249) -> Healing Scratch
 	Enemy recover 50% hp
 	[1] ESStatusShield(20:9246) -> The cogs of fate are now in motion
 	Voids status ailments for 999 turns

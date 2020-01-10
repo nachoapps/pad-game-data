@@ -8,7 +8,7 @@ counter increment: 0
 Enable preempt if level 1
 
 #2: ESBranchLevel(35:25) -> ESBranchLevel
-Branch on level > 4, target rnd 5
+Branch on level >= 4, target rnd 5
 
 #3: ESBranchLevel(33:23) -> ESBranchLevel
 Branch on level <= 3, target rnd 25
@@ -25,7 +25,7 @@ flag SET 0b1
 #7: SkillSet:
 	[0] ESStatusShield(20:9414) -> Bang!
 	Voids status ailments for 5 turns
-	[1] ESInactivity(66:9415) -> I am curious as to why...
+	[1] ESInactivity66(66:9415) -> I am curious as to why...
 	Do nothing
 
 #8: ESEndPath(36:26) -> ESEndPath
@@ -38,9 +38,9 @@ Branch on flag & 2, target rnd 13
 flag SET 0b11
 
 #11: SkillSet:
-	[0] ESInactivity(66:9417) -> Like they say,
+	[0] ESInactivity66(66:9417) -> Like they say,
 	Do nothing
-	[1] ESInactivity(66:9418) -> I wouldn't want you to miss a single beat.
+	[1] ESInactivity66(66:9418) -> I wouldn't want you to miss a single beat.
 	Do nothing
 	[2] ESBombRandomSpawn(102:9419) -> Deleterious bomb!
 	Spawn 1 random Bomb orb
@@ -94,9 +94,9 @@ Branch on flag & 1, target rnd 28
 flag SET 0b1
 
 #27: SkillSet:
-	[0] ESInactivity(66:9428) -> Bang!
+	[0] ESInactivity66(66:9428) -> Bang!
 	Do nothing
-	[1] ESInactivity(66:9415) -> I am curious as to why...
+	[1] ESInactivity66(66:9415) -> I am curious as to why...
 	Do nothing
 
 #28: ESEndPath(36:26) -> ESEndPath
@@ -104,5 +104,5 @@ end_turn
 
 #29: SkillSet:
 	Condition: On death (ai:0 rnd:0)
-	[0] ESInactivity(66:9426) -> It can't be...
+	[0] ESInactivity66(66:9426) -> It can't be...
 	Do nothing

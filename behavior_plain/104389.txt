@@ -12,7 +12,7 @@ Condition: On death (ai:0 rnd:0)
 Show message: Even if I show a little of my true power|It will probably be good
 
 #3: ESBranchLevel(35:25) -> ESBranchLevel
-Branch on level > 4, target rnd 6
+Branch on level >= 4, target rnd 6
 
 #4: ESBranchLevel(33:23) -> ESBranchLevel
 Branch on level <= 3, target rnd 47
@@ -105,7 +105,7 @@ Branch on counter = 15, target rnd 31
 Branch on counter = 13, target rnd 31
 
 #30: SkillSet:
-	[0] ESBlind(62:9990) -> Psiodyne
+	[0] ESBlind62(62:9990) -> Psiodyne
 	Blind all orbs on the board, Deal 50% damage
 	[1] ESBindAwoken(88:9991) -> Freidyne
 	Bind awoken skills for 1 turn, Deal 50% damage
@@ -171,9 +171,9 @@ Branch on flag & 1, target rnd 49
 flag SET 0b1
 
 #48: SkillSet:
-	[0] ESInactivity(66:9997) -> Now... let's get started, Inmate!
+	[0] ESInactivity66(66:9997) -> Now... let's get started, Inmate!
 	Do nothing
-	[1] ESInactivity(66:9998) -> You needn't hold back.
+	[1] ESInactivity66(66:9998) -> You needn't hold back.
 	Do nothing
 
 #49: ESEndPath(36:26) -> ESEndPath

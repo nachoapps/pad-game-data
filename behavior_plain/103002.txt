@@ -8,7 +8,7 @@ counter increment: 1
 Enable preempt if level 4
 
 #2: ESBranchLevel(35:25) -> ESBranchLevel
-Branch on level > 4, target rnd 4
+Branch on level >= 4, target rnd 4
 
 #3: ESEndPath(36:26) -> ESEndPath
 end_turn
@@ -90,7 +90,7 @@ Branch on player_cards HAS [2145, 2146, 2972], target rnd 25
 	[1] ESBoardChangeAttackBits(85:5137) -> Sacred Grounds of the Green Earth
 	Change all orbs to Jammer, Deal 60% damage
 	[2] ESDamageShield(74:5139) -> Magatama of Yin and Yang
-	Reduce damage from all sources all_sources by 75% for 1 turn
+	Reduce damage from all sources by 75% for 1 turn
 
 #25: SkillSet:
 	[0] ESStatusShield(20:5136) -> Tranquility suits you well
@@ -98,7 +98,7 @@ Branch on player_cards HAS [2145, 2146, 2972], target rnd 25
 	[1] ESBoardChangeAttackBits(85:5137) -> Sacred Grounds of the Green Earth
 	Change all orbs to Jammer, Deal 60% damage
 	[2] ESDamageShield(74:5139) -> Magatama of Yin and Yang
-	Reduce damage from all sources all_sources by 75% for 1 turn
+	Reduce damage from all sources by 75% for 1 turn
 
 #26: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 8, target rnd 29
@@ -107,7 +107,7 @@ Branch on flag & 8, target rnd 29
 flag SET 0b1111
 
 #28: ESDamageShield(74:5139) -> Magatama of Yin and Yang
-Reduce damage from all sources all_sources by 75% for 1 turn
+Reduce damage from all sources by 75% for 1 turn
 
 #29: ESBoardChangeAttackBits(85:5140) -> Raging Wind of the Earth
 Condition: One-time use (ai:100 rnd:0) (cost: 1)

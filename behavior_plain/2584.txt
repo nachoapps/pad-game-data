@@ -8,7 +8,7 @@ counter increment: 1
 Enable preempt if level 4
 
 #2: ESBranchLevel(35:25) -> ESBranchLevel
-Branch on level > 4, target rnd 4
+Branch on level >= 4, target rnd 4
 
 #3: ESEndPath(36:26) -> ESEndPath
 end_turn
@@ -28,7 +28,7 @@ end_turn
 #8: ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 50, target rnd 14
 
-#9: ESBlind(62:3628) -> Exhaust Hit
+#9: ESBlind62(62:3628) -> Exhaust Hit
 Condition: 30% chance (ai:0 rnd:30)
 Blind all orbs on the board, Deal 90% damage
 
@@ -60,7 +60,7 @@ Bind 2 random subs for 3 turns
 Condition: When < 30% hp (ai:100 rnd:0)
 Deal 300% damage (6 hits, 50% each)
 
-#18: ESBlind(62:3628) -> Exhaust Hit
+#18: ESBlind62(62:3628) -> Exhaust Hit
 Condition: 30% chance (ai:0 rnd:30)
 Blind all orbs on the board, Deal 90% damage
 

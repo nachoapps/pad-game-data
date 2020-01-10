@@ -8,7 +8,7 @@ counter increment: 0
 Enable preempt if level 4
 
 #2: ESBranchLevel(35:25) -> ESBranchLevel
-Branch on level > 4, target rnd 4
+Branch on level >= 4, target rnd 4
 
 #3: ESEndPath(36:26) -> ESEndPath
 end_turn
@@ -23,9 +23,9 @@ Change Random to Water, Deal 100% damage
 
 #6: SkillSet:
 	Condition: When < 50% hp , one-time use (ai:100 rnd:0) (cost: 1)
-	[0] ESInactivity(66:8484) -> It's pointless!
+	[0] ESInactivity66(66:8484) -> It's pointless!
 	Do nothing
-	[1] ESRecoverEnemy(7:8485) -> It'll take more than that to kill me!
+	[1] ESRecoverEnemy7(7:8485) -> It'll take more than that to kill me!
 	Enemy recover 50% hp
 
 #7: ESAttackUPRemainingEnemies(17:8488) -> AAAAAAAAH!!!
@@ -41,5 +41,5 @@ end_turn
 
 #10: SkillSet:
 	Condition: On death (ai:0 rnd:0)
-	[0] ESInactivity(66:8489) -> You won.
+	[0] ESInactivity66(66:8489) -> You won.
 	Do nothing

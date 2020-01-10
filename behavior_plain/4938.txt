@@ -8,7 +8,7 @@ counter increment: 0
 Enable preempt if level 4
 
 #2: ESBranchLevel(35:25) -> ESBranchLevel
-Branch on level > 4, target rnd 4
+Branch on level >= 4, target rnd 4
 
 #3: ESEndPath(36:26) -> ESEndPath
 end_turn
@@ -29,7 +29,7 @@ Branch on hp < 15, target rnd 12
 
 #8: SkillSet:
 	Condition: 33% chance (ai:33 rnd:0)
-	[0] ESInactivity(66:11799) -> Sword Vent
+	[0] ESInactivity66(66:11799) -> Sword Vent
 	Do nothing
 	[1] ESAttackMultihit(15:11800) -> Veno Saber
 	Deal 120% damage (3 hits, 40% each)
@@ -45,7 +45,7 @@ Spawn 3 random Poison orbs, Deal 80% damage
 end_turn
 
 #12: SkillSet:
-	[0] ESInactivity(66:11802) -> Final Vent
+	[0] ESInactivity66(66:11802) -> Final Vent
 	Do nothing
 	[1] ESAttackMultihit(15:11803) -> Veno-crash
 	Deal 160% damage (4 hits, 40% each)

@@ -8,13 +8,13 @@ counter increment: 0
 Enable preempt if level 1
 
 #2: ESBranchLevel(35:25) -> ESBranchLevel
-Branch on level > 2, target rnd 5
+Branch on level >= 2, target rnd 5
 
 #3: SkillSet:
 	Condition: When < 1% hp (ai:100 rnd:0)
 	[0] ESAttackUPRemainingEnemies(17:13564) -> いてぇじゃねぇか！！
 	Increase damage to 200% for the next 999 turns
-	[1] ESRecoverEnemy(86:13565) -> まだ終わんねぇぞコラ！！
+	[1] ESRecoverEnemy86(86:13565) -> まだ終わんねぇぞコラ！！
 	Enemy recover 100% hp
 	[2] ESAttributeBlock(107:13566) -> 武神裸締め
 	Unable to match Heal orbs for 1 turn
@@ -78,7 +78,7 @@ Survive attacks with 1 HP when HP > 90%
 Condition: 20% chance, when <= 1 enemies remain (ai:0 rnd:20)
 Increase damage to 200% for the next 999 turns
 
-#20: ESRecoverEnemy(86:13565) -> まだ終わんねぇぞコラ！！
+#20: ESRecoverEnemy86(86:13565) -> まだ終わんねぇぞコラ！！
 Condition: 20% chance (ai:0 rnd:20)
 Enemy recover 100% hp
 

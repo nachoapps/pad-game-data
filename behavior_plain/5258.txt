@@ -8,7 +8,7 @@ counter increment: 0
 Enable preempt if level 4
 
 #2: ESBranchLevel(35:25) -> ESBranchLevel
-Branch on level > 4, target rnd 4
+Branch on level >= 4, target rnd 4
 
 #3: ESEndPath(36:26) -> ESEndPath
 end_turn
@@ -23,7 +23,7 @@ Branch on counter >= 2, target rnd 10
 #6: ESSetCounter(26:16) -> ESSetCounter
 counter + 1
 
-#7: ESBlind(62:13216) -> I am the Jaguar!
+#7: ESBlind62(62:13216) -> I am the Jaguar!
 Condition: 50% chance (ai:0 rnd:50)
 Blind all orbs on the board, Deal 100% damage
 
@@ -47,7 +47,7 @@ Delay active skills by 3 turns
 counter = 0
 
 #14: SkillSet:
-	[0] ESInactivity(66:13219) -> Over Soul
+	[0] ESInactivity66(66:13219) -> Over Soul
 	Do nothing
 	[1] ESRowSpawnMulti(79:13320) -> Ayers Rock!!!
 	Change the 4th, 5th row to Light orbs, Deal 250% damage

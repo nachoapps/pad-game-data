@@ -8,7 +8,7 @@ counter increment: 0
 Enable preempt if level 5
 
 #2: ESBranchLevel(35:25) -> ESBranchLevel
-Branch on level > 5, target rnd 4
+Branch on level >= 5, target rnd 4
 
 #3: ESEndPath(36:26) -> ESEndPath
 end_turn
@@ -25,15 +25,15 @@ Voids status ailments for 5 turns
 #7: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-#8: ESRecoverEnemy(86:2032) -> Guts!
+#8: ESRecoverEnemy86(86:2032) -> Guts!
 Condition: When < 1% hp (ai:100 rnd:0)
 Enemy recover 49% hp
 
 #9: SkillSet:
 	Condition: When < 50% hp , one-time use (ai:100 rnd:0) (cost: 1)
-	[0] ESInactivity(66:2039) -> Get 'em, boss!!
+	[0] ESInactivity66(66:2039) -> Get 'em, boss!!
 	Do nothing
-	[1] ESInactivity(66:2040) -> All RIGHT!!
+	[1] ESInactivity66(66:2040) -> All RIGHT!!
 	Do nothing
 
 #10: ESAttackMultihit(15:2033) -> I am the greatest!!!!

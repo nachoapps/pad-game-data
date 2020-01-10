@@ -8,7 +8,7 @@ counter increment: 1
 Enable preempt if level 4
 
 #2: ESBranchLevel(35:25) -> ESBranchLevel
-Branch on level > 4, target rnd 4
+Branch on level >= 4, target rnd 4
 
 #3: ESEndPath(36:26) -> ESEndPath
 end_turn
@@ -39,7 +39,7 @@ end_turn
 
 #12: ESDamageShield(74:15733) -> 永続罠「ウィジャ盤」
 Condition: One-time use (ai:100 rnd:0) (cost: 5)
-Reduce damage from all sources all_sources by 30% for 4 turns
+Reduce damage from all sources by 30% for 4 turns
 
 #13: ESBranchCounter(32:22) -> ESBranchCounter
 Branch on counter >= 1, target rnd 17
@@ -47,7 +47,7 @@ Branch on counter >= 1, target rnd 17
 #14: ESSetCounter(26:16) -> ESSetCounter
 counter + 1
 
-#15: ESInactivity(66:15734) -> 死のメッセージ「D」
+#15: ESInactivity66(66:15734) -> 死のメッセージ「D」
 Do nothing
 
 #16: ESEndPath(36:26) -> ESEndPath
@@ -59,7 +59,7 @@ Branch on counter >= 2, target rnd 21
 #18: ESSetCounter(26:16) -> ESSetCounter
 counter + 1
 
-#19: ESInactivity(66:15735) -> 死のメッセージ「E」
+#19: ESInactivity66(66:15735) -> 死のメッセージ「E」
 Do nothing
 
 #20: ESEndPath(36:26) -> ESEndPath
@@ -71,7 +71,7 @@ Branch on counter >= 3, target rnd 25
 #22: ESSetCounter(26:16) -> ESSetCounter
 counter + 1
 
-#23: ESInactivity(66:15736) -> 死のメッセージ「A」
+#23: ESInactivity66(66:15736) -> 死のメッセージ「A」
 Do nothing
 
 #24: ESEndPath(36:26) -> ESEndPath
@@ -83,7 +83,7 @@ Branch on counter >= 4, target rnd 29
 #26: ESSetCounter(26:16) -> ESSetCounter
 counter + 1
 
-#27: ESInactivity(66:15737) -> 死のメッセージ「T」
+#27: ESInactivity66(66:15737) -> 死のメッセージ「T」
 Do nothing
 
 #28: ESEndPath(36:26) -> ESEndPath
@@ -104,7 +104,7 @@ Branch on flag & 2, target rnd 9
 #33: ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b11
 
-#34: ESBlind(5:15731) -> ダーク・ネクロフィア召喚
+#34: ESBlind5(5:15731) -> ダーク・ネクロフィア召喚
 Blind all orbs on the board
 
 #35: ESEndPath(36:26) -> ESEndPath

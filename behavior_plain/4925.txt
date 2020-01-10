@@ -8,7 +8,7 @@ counter increment: 0
 Enable preempt if level 4
 
 #2: ESBranchLevel(35:25) -> ESBranchLevel
-Branch on level > 4, target rnd 4
+Branch on level >= 4, target rnd 4
 
 #3: ESEndPath(36:26) -> ESEndPath
 end_turn
@@ -35,7 +35,7 @@ Deal 100% damage
 #9: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-#10: ESRecoverEnemy(86:11744) -> Power of Amadam
+#10: ESRecoverEnemy86(86:11744) -> Power of Amadam
 Condition: One-time use (ai:100 rnd:0) (cost: 1)
 Enemy recover 100% hp
 
@@ -44,14 +44,14 @@ Branch on hp < 15, target rnd 15
 
 #12: SkillSet:
 	Condition: 50% chance (ai:0 rnd:50)
-	[0] ESInactivity(66:11747) -> Jump
+	[0] ESInactivity66(66:11747) -> Jump
 	Do nothing
 	[1] ESAttackMultihit(15:11742) -> Punch
 	Deal 90% damage (2 hits, 45% each)
 
 #13: SkillSet:
 	Condition: 50% chance (ai:0 rnd:50)
-	[0] ESInactivity(66:11747) -> Jump
+	[0] ESInactivity66(66:11747) -> Jump
 	Do nothing
 	[1] ESAttackMultihit(15:11743) -> Kick
 	Deal 100% damage

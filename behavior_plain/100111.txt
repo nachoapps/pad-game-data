@@ -8,7 +8,7 @@ counter increment: 0
 Enable preempt if level 4
 
 #2: ESBranchLevel(35:25) -> ESBranchLevel
-Branch on level > 10, target rnd 5
+Branch on level >= 10, target rnd 5
 
 #3: ESBranchLevel(34:24) -> ESBranchLevel
 Branch on level = 9, target rnd 18
@@ -22,7 +22,7 @@ Branch on flag & 1, target rnd 9
 #6: ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b1
 
-#7: ESBlind(5:9124) -> World of Darkness
+#7: ESBlind5(5:9124) -> World of Darkness
 Blind all orbs on the board
 
 #8: ESEndPath(36:26) -> ESEndPath
@@ -34,7 +34,7 @@ Branch on remaining enemies <= 1, target rnd 16
 #10: ESBranchRemainingEnemies(120:8595) -> ESBranchRemainingEnemies
 Branch on remaining enemies <= 2, target rnd 13
 
-#11: ESRecoverEnemy(86:9126) -> Bloody Stealing
+#11: ESRecoverEnemy86(86:9126) -> Bloody Stealing
 Condition: 50% chance (ai:50 rnd:0)
 Enemy recover 10% hp, Deal 70% damage
 
@@ -45,7 +45,7 @@ end_turn
 Condition: when <= 1 enemies remain (ai:100 rnd:0)
 Enemy ally recover 50% hp
 
-#14: ESRecoverEnemy(86:9126) -> Bloody Stealing
+#14: ESRecoverEnemy86(86:9126) -> Bloody Stealing
 Enemy recover 10% hp, Deal 70% damage
 
 #15: ESEndPath(36:26) -> ESEndPath
@@ -69,7 +69,7 @@ end_turn
 #21: ESBranchRemainingEnemies(120:8595) -> ESBranchRemainingEnemies
 Branch on remaining enemies <= 1, target rnd 16
 
-#22: ESRecoverEnemy(86:9126) -> Bloody Stealing
+#22: ESRecoverEnemy86(86:9126) -> Bloody Stealing
 Condition: 50% chance (ai:50 rnd:0)
 Enemy recover 10% hp, Deal 70% damage
 

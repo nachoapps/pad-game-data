@@ -8,7 +8,7 @@ counter increment: 0
 Enable preempt if level 4
 
 #2: ESBranchLevel(35:25) -> ESBranchLevel
-Branch on level > 4, target rnd 4
+Branch on level >= 4, target rnd 4
 
 #3: ESEndPath(36:26) -> ESEndPath
 end_turn
@@ -26,18 +26,18 @@ Branch on player_cards HAS [2675, 2676, 2677, 3353, 3354], target rnd 8
 
 #7: ESDamageShield(74:6142) -> All the more reason... why I can't let you pass...
 Condition: One-time use (ai:100 rnd:0) (cost: 2)
-Reduce damage from all sources all_sources by 50% for 1 turn
+Reduce damage from all sources by 50% for 1 turn
 
 #8: SkillSet:
 	Condition: One-time use (ai:100 rnd:0) (cost: 2)
-	[0] ESInactivity(66:6143) -> You're sure a funny kid.
+	[0] ESInactivity66(66:6143) -> You're sure a funny kid.
 	Do nothing
 	[1] ESDamageShield(74:6144) -> And you're not scared of me?
-	Reduce damage from all sources all_sources by 50% for 1 turn
+	Reduce damage from all sources by 50% for 1 turn
 
 #9: SkillSet:
 	Condition: One-time use (ai:100 rnd:0) (cost: 1)
-	[0] ESInactivity(66:6147) -> This is my Zanpakuto.
+	[0] ESInactivity66(66:6147) -> This is my Zanpakuto.
 	Do nothing
 	[1] ESGravity(50:6148) -> Shoot to kill, Shinso..
 	Player -99% HP

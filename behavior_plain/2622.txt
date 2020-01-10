@@ -8,7 +8,7 @@ counter increment: 0
 Enable preempt if level 4
 
 #2: ESBranchLevel(35:25) -> ESBranchLevel
-Branch on level > 4, target rnd 4
+Branch on level >= 4, target rnd 4
 
 #3: ESEndPath(36:26) -> ESEndPath
 end_turn
@@ -20,7 +20,7 @@ Branch on flag & 1, target rnd 8
 flag SET 0b1
 
 #6: SkillSet:
-	[0] ESInactivity(66:2688) -> もういい…
+	[0] ESInactivity66(66:2688) -> もういい…
 	Do nothing
 	[1] ESStatusShield(20:2674) -> 最後はオレがきっちりカタをつける
 	Voids status ailments for 999 turns
@@ -74,7 +74,7 @@ flag SET 0b11111
 	[0] ESAttackUPRemainingEnemies(17:2679) -> タイマンか それとも全員でふくろか…
 	Increase damage to 200% for the next 99 turns
 	[1] ESDamageShield(74:2680) -> 今日のオレはそう簡単にくたばんねーぞ
-	Reduce damage from all sources all_sources by 50% for 1 turn
+	Reduce damage from all sources by 50% for 1 turn
 
 #23: ESRandomSpawn(92:2687) -> 久しぶりだなパルコ
 Spawn 8 random Wood orbs

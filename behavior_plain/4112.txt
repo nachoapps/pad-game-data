@@ -8,10 +8,10 @@ counter increment: 1
 Enable preempt if level 1
 
 #2: ESBranchLevel(35:25) -> ESBranchLevel
-Branch on level > 4, target rnd 5
+Branch on level >= 4, target rnd 5
 
 #3: ESBranchLevel(35:25) -> ESBranchLevel
-Branch on level > 1, target rnd 22
+Branch on level >= 1, target rnd 22
 
 #4: ESEndPath(36:26) -> ESEndPath
 end_turn
@@ -26,7 +26,7 @@ flag SET 0b1
 	[0] ESStatusShield(20:8679) -> Ooowah!
 	Voids status ailments for 999 turns
 	[1] ESDamageShield(74:8680) -> Let's go!
-	Reduce damage from all sources all_sources by 50% for 3 turns
+	Reduce damage from all sources by 50% for 3 turns
 
 #8: ESEndPath(36:26) -> ESEndPath
 end_turn
@@ -85,9 +85,9 @@ Branch on flag & 1, target rnd 25
 flag SET 0b1
 
 #24: SkillSet:
-	[0] ESInactivity(66:8691) -> Ooowah!
+	[0] ESInactivity66(66:8691) -> Ooowah!
 	Do nothing
-	[1] ESInactivity(66:8692) -> Let's go!
+	[1] ESInactivity66(66:8692) -> Let's go!
 	Do nothing
 
 #25: ESEndPath(36:26) -> ESEndPath
@@ -95,5 +95,5 @@ end_turn
 
 #26: SkillSet:
 	Condition: On death (ai:0 rnd:0)
-	[0] ESInactivity(66:8689) -> HOAAAAAAAAAA!
+	[0] ESInactivity66(66:8689) -> HOAAAAAAAAAA!
 	Do nothing

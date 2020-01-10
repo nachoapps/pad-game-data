@@ -9,7 +9,7 @@ Enable preempt if level 1
 
 #2: SkillSet:
 	Condition: One-time use (ai:100 rnd:0) (cost: 2)
-	[0] ESInactivity(66:14066) -> 愚地流の空手というものを――
+	[0] ESInactivity66(66:14066) -> 愚地流の空手というものを――
 	Do nothing
 	[1] ESDebuffRCV(105:14067) -> キミタチにお見せしよう
 	Rcv 50% for 5 turns
@@ -22,10 +22,10 @@ Branch on hp < 20, target rnd 17
 
 #5: SkillSet:
 	Condition: One-time use (ai:100 rnd:0) (cost: 1)
-	[0] ESInactivity(66:14069) -> 三戦
+	[0] ESInactivity66(66:14069) -> 三戦
 	Do nothing
 	[1] ESDamageShield(74:14070) -> 呼ッ
-	Reduce damage from all sources all_sources by 50% for 3 turns
+	Reduce damage from all sources by 50% for 3 turns
 
 #6: ESBranchCounter(32:22) -> ESBranchCounter
 Branch on counter >= 2, target rnd 21
@@ -33,7 +33,7 @@ Branch on counter >= 2, target rnd 21
 #7: ESSetCounter(26:16) -> ESSetCounter
 counter + 1
 
-#8: ESBlind(62:14072) -> 虎口拳
+#8: ESBlind62(62:14072) -> 虎口拳
 Condition: 25% chance (ai:0 rnd:25)
 Blind all orbs on the board, Deal 100% damage
 
@@ -71,7 +71,7 @@ Branch on flag & 2, target rnd 5
 flag SET 0b11
 
 #19: SkillSet:
-	[0] ESInactivity(66:14078) -> 計算もクソもないッッ
+	[0] ESInactivity66(66:14078) -> 計算もクソもないッッ
 	Do nothing
 	[1] ESAttackUPRemainingEnemies(17:14079) -> 全てを肉体に委ねる
 	Increase damage to 150% for the next 99 turns
@@ -86,7 +86,7 @@ Branch on counter >= 3, target rnd 8
 counter + 1
 
 #23: ESDamageShield(74:14071) -> 前羽の構え
-Reduce damage from all sources all_sources by 75% for 2 turns
+Reduce damage from all sources by 75% for 2 turns
 
 #24: ESEndPath(36:26) -> ESEndPath
 end_turn

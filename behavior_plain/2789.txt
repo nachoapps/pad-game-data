@@ -8,7 +8,7 @@ counter increment: 0
 Enable preempt if level 4
 
 #2: ESBranchLevel(35:25) -> ESBranchLevel
-Branch on level > 4, target rnd 4
+Branch on level >= 4, target rnd 4
 
 #3: ESEndPath(36:26) -> ESEndPath
 end_turn
@@ -20,10 +20,10 @@ Branch on flag & 1, target rnd 8
 flag SET 0b1
 
 #6: SkillSet:
-	[0] ESInactivity(66:3922) -> Without power what future can you claim?
+	[0] ESInactivity66(66:3922) -> Without power what future can you claim?
 	Do nothing
 	[1] ESDamageShield(74:3923) -> Protect
-	Reduce damage from all sources all_sources by 50% for 3 turns
+	Reduce damage from all sources by 50% for 3 turns
 
 #7: ESEndPath(36:26) -> ESEndPath
 end_turn
@@ -62,7 +62,7 @@ Branch on flag & 8, target rnd 20
 flag SET 0b1111
 
 #19: SkillSet:
-	[0] ESInactivity(66:3930) -> Preen and strut as you like!
+	[0] ESInactivity66(66:3930) -> Preen and strut as you like!
 	Do nothing
 	[1] ESStatusShield(20:3932) -> Anti-Magick
 	Voids status ailments for 999 turns
@@ -79,5 +79,5 @@ end_turn
 
 #23: SkillSet:
 	Condition: On death (ai:100 rnd:0)
-	[0] ESInactivity(66:3931) -> You, too, would leave your debts unpaid?
+	[0] ESInactivity66(66:3931) -> You, too, would leave your debts unpaid?
 	Do nothing

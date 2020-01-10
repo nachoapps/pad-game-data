@@ -8,7 +8,7 @@ counter increment: 0
 Enable preempt if level 1
 
 #2: ESBranchLevel(35:25) -> ESBranchLevel
-Branch on level > 4, target rnd 4
+Branch on level >= 4, target rnd 4
 
 #3: ESBranchLevel(33:23) -> ESBranchLevel
 Branch on level <= 3, target rnd 15
@@ -46,7 +46,7 @@ Spawn 7 random Jammer orbs, Deal 100% damage
 
 #11: ESDamageShield(74:8528) -> Stationary Transmutation
 Condition: 20% chance (ai:0 rnd:20)
-Reduce damage from all sources all_sources by 75% for 1 turn, Deal 100% damage
+Reduce damage from all sources by 75% for 1 turn, Deal 100% damage
 
 #12: ESOrbLock(94:8529) -> Stationary Transmutation
 Condition: 20% chance (ai:0 rnd:20)
@@ -59,7 +59,7 @@ Spawn 4 random Poison orbs, Deal 100% damage
 #14: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-#15: ESInactivity(66:8596) -> I have to thank you for it, my friend.
+#15: ESInactivity66(66:8596) -> I have to thank you for it, my friend.
 Condition: One-time use (ai:100 rnd:0) (cost: 7)
 Do nothing
 
@@ -68,5 +68,5 @@ end_turn
 
 #17: SkillSet:
 	Condition: On death (ai:0 rnd:0)
-	[0] ESInactivity(66:8533) -> AAAAAAAAAAAAAAAAAAA
+	[0] ESInactivity66(66:8533) -> AAAAAAAAAAAAAAAAAAA
 	Do nothing

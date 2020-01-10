@@ -8,16 +8,16 @@ counter increment: 0
 Enable preempt if level 1
 
 #2: ESBranchLevel(35:25) -> ESBranchLevel
-Branch on level > 4, target rnd 7
+Branch on level >= 4, target rnd 7
 
 #3: ESBranchCard(90:11440) -> ESBranchCard
 Branch on player_cards HAS [4858, 4859], target rnd 5
 
-#4: ESInactivity(66:11436) -> Come on... Draw your sword.
+#4: ESInactivity66(66:11436) -> Come on... Draw your sword.
 Condition: One-time use (ai:100 rnd:0) (cost: 1)
 Do nothing
 
-#5: ESInactivity(66:11438) -> Hey, what's up? You next?
+#5: ESInactivity66(66:11438) -> Hey, what's up? You next?
 Condition: One-time use (ai:100 rnd:0) (cost: 1)
 Do nothing
 
@@ -94,5 +94,5 @@ end_turn
 
 #29: SkillSet:
 	Condition: On death (ai:0 rnd:0)
-	[0] ESInactivity(66:11654) -> I've totally seen enough to know you got what it takes.
+	[0] ESInactivity66(66:11654) -> I've totally seen enough to know you got what it takes.
 	Do nothing

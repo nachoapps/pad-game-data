@@ -8,7 +8,7 @@ counter increment: 0
 Enable preempt if level 5
 
 #2: ESBranchLevel(35:25) -> ESBranchLevel
-Branch on level > 5, target rnd 4
+Branch on level >= 5, target rnd 4
 
 #3: ESEndPath(36:26) -> ESEndPath
 end_turn
@@ -23,7 +23,7 @@ flag SET 0b1
 	[0] ESStatusShield(20:2332) -> Let's continue!
 	Voids status ailments for 999 turns
 	[1] ESDamageShield(74:2346) -> King of Zero
-	Reduce damage from all sources all_sources by 75% for 1 turn
+	Reduce damage from all sources by 75% for 1 turn
 
 #7: ESEndPath(36:26) -> ESEndPath
 end_turn
@@ -56,12 +56,12 @@ Change Poison to Mortal Poison, Deal 200% damage
 
 #16: SkillSet:
 	Condition: 33% chance (ai:0 rnd:33)
-	[0] ESRecoverEnemy(86:2335) -> Blue Sphere
+	[0] ESRecoverEnemy86(86:2335) -> Blue Sphere
 	Enemy recover 10% hp
 	[1] ESRandomSpawn(92:2336) -> Chaos Bolt
 	Spawn 4 random Poison orbs
 
-#17: ESBlind(62:2339) -> Dark Pulse
+#17: ESBlind62(62:2339) -> Dark Pulse
 Condition: 33% chance (ai:0 rnd:33)
 Blind all orbs on the board, Deal 120% damage
 
@@ -82,7 +82,7 @@ flag SET 0b111
 	Condition: When < 50% hp (ai:100 rnd:0)
 	[0] ESBindSkill(14:2341) -> King's Gaze
 	Bind active skills for 5 turns
-	[1] ESRecoverEnemy(86:2342) -> Re-Zero
+	[1] ESRecoverEnemy86(86:2342) -> Re-Zero
 	Enemy recover 100% hp
 
 #23: ESAttributeResist(72:2331) -> 王ゼロ闇半減

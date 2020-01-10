@@ -17,7 +17,7 @@ flag SET 0b1
 	[0] ESStatusShield(20:13324) -> Welcome to the new Era
 	Voids status ailments for 999 turns
 	[1] ESInvulnerableOn(119:13325) -> My name is Reiwa
-	Immune to damage from all sources all_sources for 999 turns
+	Immune to damage from all sources for 999 turns
 	[2] ESNoSkyfall(127:13326) -> I would be happy if you remember it...
 	No skyfall for 10 turns
 	[3] ESRandomSpawn(92:13352) -> Do your best and make some combos
@@ -27,7 +27,7 @@ flag SET 0b1
 end_turn
 
 #6: ESBranchLevel(35:25) -> ESBranchLevel
-Branch on level > 6, target rnd 15
+Branch on level >= 6, target rnd 15
 
 #7: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 2, target rnd 23
@@ -43,7 +43,7 @@ Branch on combo >= 7, target rnd 12
 
 #11: SkillSet:
 	[0] ESDamageShield(74:13400) -> How disappointing
-	Reduce damage from all sources all_sources by 50% for 5 turns
+	Reduce damage from all sources by 50% for 5 turns
 	[1] ESVoidShield(71:13390) -> Stability
 	Void damage >= 50000000 for 999 turns
 	[2] ESSpinnersRandom(109:13394) -> Time-Distortion
@@ -53,7 +53,7 @@ Branch on combo >= 7, target rnd 12
 
 #12: SkillSet:
 	[0] ESDamageShield(74:13399) -> That was close
-	Reduce damage from all sources all_sources by 50% for 5 turns
+	Reduce damage from all sources by 50% for 5 turns
 	[1] ESVoidShield(71:13390) -> Stability
 	Void damage >= 50000000 for 999 turns
 	[2] ESInvulnerableOff(121:13387) -> Okay, let's start
@@ -61,7 +61,7 @@ Branch on combo >= 7, target rnd 12
 
 #13: SkillSet:
 	[0] ESDamageShield(74:13388) -> You're...amazing
-	Reduce damage from all sources all_sources by 50% for 5 turns
+	Reduce damage from all sources by 50% for 5 turns
 	[1] ESInvulnerableOff(121:13387) -> Okay, let's start
 	Remove damage immunity effect
 
@@ -82,7 +82,7 @@ Branch on combo >= 8, target rnd 20
 
 #19: SkillSet:
 	[0] ESDamageShield(74:13400) -> How disappointing
-	Reduce damage from all sources all_sources by 50% for 5 turns
+	Reduce damage from all sources by 50% for 5 turns
 	[1] ESVoidShield(71:13390) -> Stability
 	Void damage >= 50000000 for 999 turns
 	[2] ESSpinnersRandom(109:13392) -> Time-Distortion
@@ -92,7 +92,7 @@ Branch on combo >= 8, target rnd 20
 
 #20: SkillSet:
 	[0] ESDamageShield(74:13399) -> That was close
-	Reduce damage from all sources all_sources by 50% for 5 turns
+	Reduce damage from all sources by 50% for 5 turns
 	[1] ESVoidShield(71:13390) -> Stability
 	Void damage >= 50000000 for 999 turns
 	[2] ESInvulnerableOff(121:13387) -> Okay, let's start
@@ -100,7 +100,7 @@ Branch on combo >= 8, target rnd 20
 
 #21: SkillSet:
 	[0] ESDamageShield(74:13388) -> You're...amazing
-	Reduce damage from all sources all_sources by 50% for 5 turns
+	Reduce damage from all sources by 50% for 5 turns
 	[1] ESInvulnerableOff(121:13387) -> Okay, let's start
 	Remove damage immunity effect
 
@@ -159,7 +159,7 @@ counter + 1
 
 #33: SkillSet:
 	Condition: 50% chance (ai:0 rnd:50)
-	[0] ESBlind(5:13347) -> Black Satisfaction
+	[0] ESBlind5(5:13347) -> Black Satisfaction
 	Blind all orbs on the board
 	[1] ESDebuffMovetime(39:13348) -> Time-Robbing
 	Movetime -3s for 2 turns, Deal 95% damage
@@ -244,7 +244,7 @@ No skyfall for 2 turns
 
 #50: SkillSet:
 	Condition: 33% chance (ai:0 rnd:33)
-	[0] ESBlind(5:13347) -> Black Satisfaction
+	[0] ESBlind5(5:13347) -> Black Satisfaction
 	Blind all orbs on the board
 	[1] ESDebuffMovetime(39:13348) -> Time-Robbing
 	Movetime -3s for 2 turns, Deal 95% damage

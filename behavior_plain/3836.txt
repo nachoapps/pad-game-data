@@ -8,7 +8,7 @@ counter increment: 0
 Enable preempt if level 4
 
 #2: ESBranchLevel(35:25) -> ESBranchLevel
-Branch on level > 4, target rnd 4
+Branch on level >= 4, target rnd 4
 
 #3: ESEndPath(36:26) -> ESEndPath
 end_turn
@@ -42,21 +42,21 @@ Movetime 25% for 1 turn, Deal 250% damage
 #10: SkillSet:
 	Condition: When < 20% hp (ai:100 rnd:0)
 	[0] ESDamageShield(74:7913) -> Ripple
-	Reduce damage from all sources all_sources by 75% for 1 turn
+	Reduce damage from all sources by 75% for 1 turn
 	[1] ESAttackMultihit(15:7914) -> Copious Dragon Fangs
 	Deal 90% damage (3 hits, 30% each)
 
 #11: SkillSet:
 	Condition: When < 30% hp (ai:100 rnd:0)
 	[0] ESDamageShield(74:7912) -> Ripple
-	Reduce damage from all sources all_sources by 50% for 1 turn
+	Reduce damage from all sources by 50% for 1 turn
 	[1] ESAttackMultihit(15:7914) -> Copious Dragon Fangs
 	Deal 90% damage (3 hits, 30% each)
 
 #12: SkillSet:
 	Condition: When < 40% hp (ai:100 rnd:0)
 	[0] ESDamageShield(74:7911) -> Ripple
-	Reduce damage from all sources all_sources by 35% for 1 turn
+	Reduce damage from all sources by 35% for 1 turn
 	[1] ESAttackMultihit(15:7914) -> Copious Dragon Fangs
 	Deal 90% damage (3 hits, 30% each)
 
@@ -64,7 +64,7 @@ Movetime 25% for 1 turn, Deal 250% damage
 Condition: 70% chance (ai:70 rnd:0)
 Change Wood to Water, Deal 70% damage
 
-#14: ESBlind(62:7906) -> Silent Sand
+#14: ESBlind62(62:7906) -> Silent Sand
 Blind all orbs on the board, Deal 70% damage
 
 #15: ESEndPath(36:26) -> ESEndPath

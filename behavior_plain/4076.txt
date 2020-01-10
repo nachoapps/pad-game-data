@@ -8,7 +8,7 @@ counter increment: 0
 Enable preempt if level 1
 
 #2: ESBranchLevel(35:25) -> ESBranchLevel
-Branch on level > 1, target rnd 4
+Branch on level >= 1, target rnd 4
 
 #3: ESEndPath(36:26) -> ESEndPath
 end_turn
@@ -25,15 +25,15 @@ Branch on player_cards HAS [4091, 4092, 4093], target rnd 9
 #7: ESBranchCard(90:8612) -> ESBranchCard
 Branch on player_cards HAS [4094, 4095], target rnd 10
 
-#8: ESInactivity(66:8626) -> Let's go!
+#8: ESInactivity66(66:8626) -> Let's go!
 Condition: One-time use (ai:100 rnd:0) (cost: 1)
 Do nothing
 
-#9: ESInactivity(66:8627) -> The flames are calling you!
+#9: ESInactivity66(66:8627) -> The flames are calling you!
 Condition: One-time use (ai:100 rnd:0) (cost: 1)
 Do nothing
 
-#10: ESInactivity(66:8628) -> Shall we fight, Benimaru?
+#10: ESInactivity66(66:8628) -> Shall we fight, Benimaru?
 Condition: One-time use (ai:100 rnd:0) (cost: 1)
 Do nothing
 
@@ -42,5 +42,5 @@ end_turn
 
 #12: SkillSet:
 	Condition: On death (ai:0 rnd:0)
-	[0] ESInactivity(66:8624) -> Aaaaaaaaah!
+	[0] ESInactivity66(66:8624) -> Aaaaaaaaah!
 	Do nothing

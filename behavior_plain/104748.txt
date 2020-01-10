@@ -8,7 +8,7 @@ counter increment: 0
 Enable preempt if level 1
 
 #2: ESBranchLevel(35:25) -> ESBranchLevel
-Branch on level > 4, target rnd 5
+Branch on level >= 4, target rnd 5
 
 #3: SkillSet:
 	Condition: One-time use (ai:100 rnd:0) (cost: 2)
@@ -27,7 +27,7 @@ end_turn
 	[1] ESStatusShield(20:11038) -> It still has a silver soul?!
 	Voids status ailments for 999 turns
 
-#6: ESRecoverEnemy(86:11040) -> Well, eating parfait calms me down
+#6: ESRecoverEnemy86(86:11040) -> Well, eating parfait calms me down
 Condition: When < 1% hp (ai:100 rnd:0)
 Enemy recover 50% hp
 
@@ -42,7 +42,7 @@ Enemy recover 50% hp
 	Condition: When < 10% hp (ai:100 rnd:0)
 	[0] ESOrbChangeAttack(48:11048) -> Even if I collab...
 	Change Random to Water, Deal 10% damage
-	[1] ESBlind(62:11049) -> Until my body is destroyed...
+	[1] ESBlind62(62:11049) -> Until my body is destroyed...
 	Blind all orbs on the board, Deal 10% damage
 	[2] ESAttackMultihit(15:11050) -> I'll stretch out my back muscles and live!!
 	Deal 250% damage (5 hits, 50% each)
@@ -72,7 +72,7 @@ counter + 1
 
 #16: ESDamageShield(74:11043) -> You won't bring me down so easily!
 Condition: 50% chance (ai:0 rnd:50)
-Reduce damage from all sources all_sources by 50% for 1 turn, Deal 105% damage
+Reduce damage from all sources by 50% for 1 turn, Deal 105% damage
 
 #17: ESRowSpawnMulti(79:11047) -> Don't mess with the Yorozuya Group!
 Condition: 50% chance (ai:0 rnd:50)

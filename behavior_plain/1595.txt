@@ -8,10 +8,10 @@ counter increment: 1
 Enable preempt if level 5
 
 #2: ESBranchLevel(35:25) -> ESBranchLevel
-Branch on level > 10, target rnd 9
+Branch on level >= 10, target rnd 9
 
 #3: ESBranchLevel(35:25) -> ESBranchLevel
-Branch on level > 5, target rnd 5
+Branch on level >= 5, target rnd 5
 
 #4: ESEndPath(36:26) -> ESEndPath
 end_turn
@@ -43,7 +43,7 @@ end_turn
 #13: ESBranchFlag(43:10) -> ESBranchFlag
 Branch on flag & 8, target rnd 27
 
-#14: ESBlind(62:1675) -> Silent Darkness
+#14: ESBlind62(62:1675) -> Silent Darkness
 Condition: One-time use (ai:100 rnd:0) (cost: 1)
 Blind all orbs on the board, Deal 25% damage
 

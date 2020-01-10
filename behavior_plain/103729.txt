@@ -8,7 +8,7 @@ counter increment: 0
 Enable preempt if level 4
 
 #2: ESBranchLevel(35:25) -> ESBranchLevel
-Branch on level > 4, target rnd 4
+Branch on level >= 4, target rnd 4
 
 #3: ESEndPath(36:26) -> ESEndPath
 end_turn
@@ -46,7 +46,7 @@ Branch on flag & 2, target rnd 16
 flag SET 0b11
 
 #14: ESDamageShield(74:7350) -> Shandian
-Reduce damage from all sources all_sources by 35% for 2 turns, Deal 80% damage
+Reduce damage from all sources by 35% for 2 turns, Deal 80% damage
 
 #15: ESEndPath(36:26) -> ESEndPath
 end_turn
@@ -66,7 +66,7 @@ end_turn
 #20: ESFlagOperation(24:14) -> ESFlagOperation
 flag UNSET 0b110
 
-#21: ESInactivity(66:7360) -> Jumping, jumping
+#21: ESInactivity66(66:7360) -> Jumping, jumping
 Do nothing
 
 #22: ESEndPath(36:26) -> ESEndPath

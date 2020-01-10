@@ -8,13 +8,13 @@ counter increment: 0
 Enable preempt if level 2
 
 #2: ESBranchLevel(35:25) -> ESBranchLevel
-Branch on level > 2, target rnd 4
+Branch on level >= 2, target rnd 4
 
 #3: ESEndPath(36:26) -> ESEndPath
 end_turn
 
 #4: ESBranchLevel(35:25) -> ESBranchLevel
-Branch on level > 4, target rnd 12
+Branch on level >= 4, target rnd 12
 
 #5: ESOrbLock(94:14111) -> こいつは俺が――ぶちのめす
 Condition: One-time use (ai:100 rnd:0) (cost: 2)
@@ -25,7 +25,7 @@ Branch on hp > 51, target rnd 8
 
 #7: SkillSet:
 	Condition: One-time use (ai:100 rnd:0) (cost: 1)
-	[0] ESRecoverEnemy(86:14113) -> 伝家の宝刀――復活!!
+	[0] ESRecoverEnemy86(86:14113) -> 伝家の宝刀――復活!!
 	Enemy recover 5% hp
 	[1] ESAttackUPRemainingEnemies(17:14114) -> 相当怒ってるぜ俺の右腕はよォ
 	Increase damage to 150% for the next 1 turn
@@ -54,7 +54,7 @@ Branch on hp > 51, target rnd 17
 
 #14: ESDamageShield(74:14135) -> 赤城直巳をなめんじゃねェ!!
 Condition: One-time use (ai:100 rnd:0) (cost: 1)
-Reduce damage from all sources all_sources by 50% for 5 turns
+Reduce damage from all sources by 50% for 5 turns
 
 #15: ESBranchHP(29:19) -> ESBranchHP
 Branch on hp > 21, target rnd 17

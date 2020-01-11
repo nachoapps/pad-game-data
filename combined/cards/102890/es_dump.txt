@@ -20,8 +20,8 @@ SkillSet:
 	[0] ESStatusShield(20:4280) -> Heaven's Armor
 	Voids status ailments for 999 turns
 	[1] ESDamageShield(74:4281) -> Limited Barrier
-	Reduce damage from all sources all_sources by 50% for 5 turns
-	[2] ESSkyfall(96:4282) -> Electromagnetic Field
+	Reduce damage from all sources by 50% for 5 turns
+	[2] ESSkyfallLocked(96:4282) -> Electromagnetic Field
 	Locked random skyfall +15% for 10 turns
 
 ESEndPath(36:26) -> ESEndPath
@@ -29,7 +29,7 @@ end_turn
 
 SkillSet:
 	Condition: When < 1% hp (ai:100 rnd:0)
-	[0] ESRecoverEnemy(86:4478) -> Holy Repair
+	[0] ESRecoverEnemy86(86:4478) -> Holy Repair
 	Enemy recover 19% hp
 	[1] ESAttackMultihit(15:4296) -> Limit Break
 	Deal 800% damage (2 hits, 400% each)
@@ -59,7 +59,7 @@ ESDebuffMovetime(39:4286) -> Machine Glare
 Condition: One-time use (ai:0 rnd:25) (cost: 1)
 Movetime -1s for 1 turn, Deal 120% damage
 
-ESInactivity(66:4287) -> Gathering magical power
+ESInactivity66(66:4287) -> Gathering magical power
 Condition: 25% chance (ai:0 rnd:25)
 Do nothing
 
@@ -72,7 +72,7 @@ Branch on flag & 4, target rnd 24
 ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b111
 
-ESInactivity(66:4291) -> Full Charge
+ESInactivity66(66:4291) -> Full Charge
 Condition: One-time use (ai:0 rnd:25) (cost: 1)
 Do nothing
 
